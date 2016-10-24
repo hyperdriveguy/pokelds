@@ -1,7 +1,8 @@
-	db SHELLDER ; 090
+	dw SHELLDER ; 090
 
 	db  30,  65, 100,  40,  45,  25
 	;   hp  atk  def  spd  sat  sdf
+	db 32 ; EV Yield
 
 	db WATER, WATER
 	db 190 ; catch rate
@@ -20,3 +21,4 @@
 	; tmhm
 	tmhm CURSE, TOXIC, HIDDEN_POWER, SNORE, BLIZZARD, ICY_WIND, PROTECT, RAIN_DANCE, ENDURE, FRUSTRATION, RETURN, DOUBLE_TEAM, SWAGGER, SLEEP_TALK, SWIFT, REST, ATTRACT, SURF, WHIRLPOOL, ICE_BEAM
 	; end
+

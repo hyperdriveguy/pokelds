@@ -1,7 +1,8 @@
-	db EEVEE ; 133
+	dw EEVEE ; 133
 
 	db  55,  55,  50,  55,  45,  65
 	;   hp  atk  def  spd  sat  sdf
+	db 8 ; EV Yield
 
 	db NORMAL, NORMAL
 	db 45 ; catch rate
@@ -20,3 +21,4 @@
 	; tmhm
 	tmhm HEADBUTT, CURSE, TOXIC, HIDDEN_POWER, SUNNY_DAY, SNORE, PROTECT, RAIN_DANCE, ENDURE, FRUSTRATION, IRON_TAIL, RETURN, SHADOW_BALL, MUD_SLAP, DOUBLE_TEAM, SWAGGER, SLEEP_TALK, SWIFT, DETECT, REST, ATTRACT
 	; end
+

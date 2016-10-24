@@ -466,6 +466,10 @@ ParkBall: ; e8a2
 	ld a, [EnemyMonDVs]
 	ld [hli], a
 	ld a, [EnemyMonDVs + 1]
+	ld [hli], a
+	ld a, [EnemyMonDVs + 2]
+	ld [hli], a
+	ld a, [EnemyMonDVs + 3]
 	ld [hl], a
 
 .load_data
@@ -1237,13 +1241,34 @@ Calcium: ; ee3d
 
 	ld a, MON_STAT_EXP
 	call GetPartyParamLocation
-
+	push hl
+	push bc
+	ld c, 6
+	ld de, $0000	;store EV total here
+.evtotal
+	ld a, [hli]
+	add e
+	ld e, a
+	jr nc, .continue1
+	inc d
+.continue1
+	dec c
+	jr nz, .evtotal
+	dec d
+	jr nc, .continue2
+	ld e, $F4 ;set the number so it gives 10 points
+.continue2
+	ld a, $FE
+	sub e
+	ld e, a		;the amount of points we can still add before hitting 510
+	pop bc
+	pop hl
 	add hl, bc
 	ld a, [hl]
 	cp 100
 	jr nc, NoEffectMessage
 
-	add 10
+	add e
 	ld [hl], a
 	call UpdateStatsAfterItem
 

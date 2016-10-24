@@ -1,7 +1,8 @@
-	db PONYTA ; 077
+	dw PONYTA ; 077
 
 	db  50,  85,  55,  90,  65,  65
 	;   hp  atk  def  spd  sat  sdf
+	db 4 ; EV Yield
 
 	db FIRE, FIRE
 	db 190 ; catch rate
@@ -20,3 +21,4 @@
 	; tmhm
 	tmhm HEADBUTT, CURSE, TOXIC, HIDDEN_POWER, SUNNY_DAY, SNORE, PROTECT, ENDURE, FRUSTRATION, IRON_TAIL, RETURN, DOUBLE_TEAM, SWAGGER, SLEEP_TALK, FIRE_BLAST, SWIFT, REST, ATTRACT, FLAMETHROWER
 	; end
+

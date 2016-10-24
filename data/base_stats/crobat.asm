@@ -1,7 +1,8 @@
-	db CROBAT ; 169
+	dw CROBAT ; 169
 
 	db  85,  90,  80, 130,  70,  80
 	;   hp  atk  def  spd  sat  sdf
+	db 7 ; EV Yield
 
 	db POISON, FLYING
 	db 90 ; catch rate
@@ -20,3 +21,4 @@
 	; tmhm
 	tmhm CURSE, TOXIC, HIDDEN_POWER, SUNNY_DAY, SNORE, HYPER_BEAM, PROTECT, GIGA_DRAIN, ENDURE, FRUSTRATION, RETURN, DOUBLE_TEAM, SWAGGER, SLEEP_TALK, SWIFT, DETECT, REST, ATTRACT, THIEF, STEEL_WING, FLY
 	; end
+

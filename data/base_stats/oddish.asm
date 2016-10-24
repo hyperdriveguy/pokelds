@@ -1,7 +1,8 @@
-	db ODDISH ; 043
+	dw ODDISH ; 043
 
 	db  45,  50,  55,  30,  75,  65
 	;   hp  atk  def  spd  sat  sdf
+	db 16 ; EV Yield
 
 	db GRASS, POISON
 	db 255 ; catch rate
@@ -20,3 +21,4 @@
 	; tmhm
 	tmhm CURSE, TOXIC, HIDDEN_POWER, SUNNY_DAY, SWEET_SCENT, SNORE, PROTECT, GIGA_DRAIN, ENDURE, FRUSTRATION, SOLARBEAM, RETURN, DOUBLE_TEAM, SWAGGER, SLEEP_TALK, SLUDGE_BOMB, REST, ATTRACT, CUT, FLASH
 	; end
+

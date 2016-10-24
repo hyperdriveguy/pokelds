@@ -58,6 +58,11 @@ dn: MACRO
 	endr
 	ENDM
 
+devy: MACRO
+	db ((\1) << 6) + ((\2) << 4) + ((\3) << 2) + (\4)
+	db ((\5) << 6) + ((\6) << 4)
+	ENDM
+
 dx: MACRO
 x = 8 * ((\1) - 1)
 	rept \1

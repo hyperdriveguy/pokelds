@@ -1,7 +1,8 @@
-	db TYROGUE ; 236
+	dw TYROGUE ; 236
 
 	db  35,  35,  35,  35,  35,  35
 	;   hp  atk  def  spd  sat  sdf
+	db 64 ; EV Yield
 
 	db FIGHTING, FIGHTING
 	db 75 ; catch rate
@@ -20,3 +21,4 @@
 	; tmhm
 	tmhm HEADBUTT, CURSE, TOXIC, ROCK_SMASH, HIDDEN_POWER, SUNNY_DAY, SNORE, PROTECT, ENDURE, FRUSTRATION, RETURN, MUD_SLAP, DOUBLE_TEAM, SWAGGER, SLEEP_TALK, SWIFT, DETECT, REST, ATTRACT, THIEF, STRENGTH
 	; end
+

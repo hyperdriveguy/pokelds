@@ -1,7 +1,8 @@
-	db SEEL ; 086
+	dw SEEL ; 086
 
 	db  65,  45,  55,  45,  45,  70
 	;   hp  atk  def  spd  sat  sdf
+	db 8 ; EV Yield
 
 	db WATER, WATER
 	db 190 ; catch rate
@@ -20,3 +21,4 @@
 	; tmhm
 	tmhm HEADBUTT, CURSE, TOXIC, HIDDEN_POWER, SNORE, BLIZZARD, ICY_WIND, PROTECT, RAIN_DANCE, ENDURE, FRUSTRATION, RETURN, DOUBLE_TEAM, SWAGGER, SLEEP_TALK, REST, ATTRACT, SURF, WHIRLPOOL, WATERFALL, ICE_BEAM
 	; end
+

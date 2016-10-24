@@ -1,7 +1,8 @@
-	db DODUO ; 084
+	dw DODUO ; 084
 
 	db  35,  85,  45,  75,  35,  35
 	;   hp  atk  def  spd  sat  sdf
+	db 64 ; EV Yield
 
 	db NORMAL, FLYING
 	db 190 ; catch rate
@@ -20,3 +21,4 @@
 	; tmhm
 	tmhm CURSE, TOXIC, HIDDEN_POWER, SUNNY_DAY, SNORE, PROTECT, ENDURE, FRUSTRATION, RETURN, MUD_SLAP, DOUBLE_TEAM, SWAGGER, SLEEP_TALK, SWIFT, REST, ATTRACT, THIEF, STEEL_WING, FLY
 	; end
+

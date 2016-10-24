@@ -1,7 +1,8 @@
-	db WEEPINBELL ; 070
+	dw WEEPINBELL ; 070
 
 	db  65,  90,  50,  55,  85,  45
 	;   hp  atk  def  spd  sat  sdf
+	db 96 ; EV Yield
 
 	db GRASS, POISON
 	db 120 ; catch rate
@@ -20,3 +21,4 @@
 	; tmhm
 	tmhm CURSE, TOXIC, HIDDEN_POWER, SUNNY_DAY, SWEET_SCENT, SNORE, PROTECT, GIGA_DRAIN, ENDURE, FRUSTRATION, SOLARBEAM, RETURN, DOUBLE_TEAM, SWAGGER, SLEEP_TALK, SLUDGE_BOMB, REST, ATTRACT, CUT, FLASH
 	; end
+

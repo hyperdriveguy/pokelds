@@ -1414,27 +1414,14 @@ CalcPkmnStatC: ; e17b
 	ld b, $0
 	add hl, bc
 	ld a, [hl]
-	ld e, a
+	ld e, a	;store base stat in e
 	pop hl
 	push hl
-	ld a, c
-	cp STAT_SDEF
-	jr nz, .not_spdef
-	dec hl
-	dec hl
-
-.not_spdef
-	sla c
 	ld a, d
 	and a
 	jr z, .no_stat_exp
 	add hl, bc
-	push de
-	ld a, [hld]
-	ld e, a
-	ld d, [hl]
-	callba GetSquareRoot
-	pop de
+	ld b, [hl]
 
 .no_stat_exp
 	srl c
@@ -1451,69 +1438,71 @@ CalcPkmnStatC: ; e17b
 	cp STAT_SPD
 	jr z, .Speed
 	cp STAT_SATK
-	jr z, .Special
+	jr z, .SpecialA
 	cp STAT_SDEF
-	jr z, .Special
-; DV_HP = (DV_ATK & 1) << 3 + (DV_DEF & 1) << 2 + (DV_SPD & 1) << 1 + (DV_SPC & 1)
-	push bc
+	jr z, .SpecialD
+; DV_HP = 00xx xxx0  0000 0000  0000 0000  0000 0000
 	ld a, [hl]
-	swap a
-	and $1
-	add a
-	add a
-	add a
-	ld b, a
+	srl a
+	jr .GotDV
+
+.Attack:;0000 000x  xxxx 0000  0000 0000  0000 0000
 	ld a, [hli]
-	and $1
-	add a
-	add a
-	add b
-	ld b, a
+	srl a
 	ld a, [hl]
-	swap a
-	and $1
-	add a
-	add b
-	ld b, a
-	ld a, [hl]
-	and $1
-	add b
-	pop bc
+	rrca
+	rrca
+	rrca
+	rrca
 	jr .GotDV
 
-.Attack:
+.Defense:;0000 0000  0000 xxxx  x000 0000  0000 0000
+	inc hl
+	inc hl
+	ld a, [hld]
+	sla a
 	ld a, [hl]
-	swap a
-	and $f
+	rla
 	jr .GotDV
 
-.Defense:
-	ld a, [hl]
-	and $f
-	jr .GotDV
-
-.Speed:
+.Speed:;0000 0000  0000 0000  0xxx xx00  0000 0000
+	inc hl
 	inc hl
 	ld a, [hl]
-	swap a
-	and $f
+	srl a
+	srl a
 	jr .GotDV
 
-.Special:
+.SpecialA:;0000 0000  0000 0000  0000 00xx  xxx0 0000
+	inc hl
+	inc hl
+	ld a, [hli]
+	and $03
+	ld d, a
+	ld a, [hl]
+	and $E0
+	or d
+	rlca
+	rlca
+	rlca
+
+.SpecialD:;0000 0000  0000 0000  0000 0000  000x xxxx
+	inc hl
+	inc hl
 	inc hl
 	ld a, [hl]
-	and $f
 
 .GotDV:
+	and $1f
 	ld d, 0
+	sla e
+	rl d	
 	add e
 	ld e, a
 	jr nc, .no_overflow_1
 	inc d
 
 .no_overflow_1
-	sla e
-	rl d
 	srl b
 	srl b
 	ld a, b

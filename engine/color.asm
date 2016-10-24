@@ -1,40 +1,38 @@
 PALPACKET_LENGTH EQU $10
 INCLUDE "predef/sgb.asm"
 
-SHINY_ATK_BIT EQU 5
-SHINY_DEF_VAL EQU 10
-SHINY_SPD_VAL EQU 10
-SHINY_SPC_VAL EQU 10
+SHINY_BYTE_1 EQU $39
+SHINY_BYTE_2 EQU $CE
+SHINY_BYTE_3 EQU $73
+SHINY_BYTE_4 EQU $9C
 
 CheckShininess:
-; Check if a mon is shiny by DVs at bc.
+; Check if a mon is shiny by DVs at bc and de.
 ; Return carry if shiny.
 
 	ld l, c
 	ld h, b
 
-; Attack
-	ld a, [hl]
-	and 1 << SHINY_ATK_BIT
-	jr z, .NotShiny
-
-; Defense
 	ld a, [hli]
-	and $f
-	cp  SHINY_DEF_VAL
+	and SHINY_BYTE_1
+	cp SHINY_BYTE_1
 	jr nz, .NotShiny
 
-; Speed
-	ld a, [hl]
-	and $f0
-	cp  SHINY_SPD_VAL << 4
+	ld a, [hli]
+	and SHINY_BYTE_2
+	cp SHINY_BYTE_2
 	jr nz, .NotShiny
 
-; Special
-	ld a, [hl]
-	and $f
-	cp  SHINY_SPC_VAL
+	ld a, [hli]
+	and SHINY_BYTE_3
+	cp SHINY_BYTE_3
 	jr nz, .NotShiny
+
+	ld a, [hl]
+	and SHINY_BYTE_4
+	cp SHINY_BYTE_4
+	jr nz, .NotShiny
+
 
 .Shiny:
 	scf

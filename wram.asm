@@ -624,7 +624,7 @@ wPayDayMoney:: ds 3 ; c6ec
 wSafariMonAngerCount:: ds 1
 wSafariMonEating:: ds 2
 wEnemyBackupDVs:: ; used when enemy is transformed
-	ds 2
+	ds 4
 AlreadyDisobeyed:: ; c6f4
 	ds 1
 
@@ -674,7 +674,6 @@ EnemyLightScreenCount:: ; c706
 	ds 1
 EnemyReflectCount:: ; c707
 	ds 1
-	ds 2
 Weather:: ; c70a
 ; 00 normal
 ; 01 rain
@@ -719,6 +718,7 @@ wPlayerFutureSightCount:: ds 1 ; c71d
 wEnemyFutureSightCount:: ds 1 ; c71e
 wGivingExperienceToExpShareHolders:: ds 1 ; c71f
 wBackupEnemyMonBaseStats:: ds 5 ; c720
+wBackupEnemyMonEVYield:: db ; c725
 wBackupEnemyMonCatchRate:: db ; c725
 wBackupEnemyMonBaseExp:: db ; c726
 wPlayerFutureSightDamage:: ds 2 ; c727
@@ -829,19 +829,19 @@ wCardFlipEnd::
 ; Dummy Game
 ; c6d0
 wDummyGame::
-wDummyGameCards:: ds 9 * 5
+wDummyGameCards::
 wDummyGameCardsEnd::
-wDummyGameLastCardPicked:: ds 1 ; c6fd
-wDummyGameCard1:: ds 1 ; c6fe
-wDummyGameCard2:: ds 1 ; c6ff
-wDummyGameCard1Location:: ds 1 ; c700
-wDummyGameCard2Location:: ds 1 ; c701
-wDummyGameNumberTriesRemaining:: ds 1 ; c702
-wDummyGameLastMatches:: ds 5 ; c703
-wDummyGameCounter:: ds 1 ; c708
-wDummyGameNumCardsMatched:: ds 1 ; c709
+wDummyGameLastCardPicked:: ; c6fd
+wDummyGameCard1:: ; c6fe
+wDummyGameCard2:: ; c6ff
+wDummyGameCard1Location:: ; c700
+wDummyGameCard2Location:: ; c701
+wDummyGameNumberTriesRemaining:: ; c702
+wDummyGameLastMatches:: ; c703
+wDummyGameCounter:: ; c708
+wDummyGameNumCardsMatched:: ; c709
 wDummyGameEnd::
-	ds wDummyGame - @
+
 ; Unown Puzzle
 wUnownPuzzle::
 wPuzzlePieces::
@@ -2072,6 +2072,7 @@ TempBattleMonSpecies:: ds 1 ; d205
 
 EnemyMon:: battle_struct EnemyMon ; d206
 EnemyMonBaseStats:: ds 5 ; d226
+EnemyMonEVYield:: db ; d226
 EnemyMonCatchRate:: db ; d22b
 EnemyMonBaseExp::   db ; d22c
 EnemyMonEnd::
@@ -2122,7 +2123,7 @@ wMoveSelectionMenuType:: ds 1
 
 CurBaseData:: ; d236
 BaseDexNo:: ; d236
-	ds 1
+	ds 2
 BaseStats:: ; d237
 BaseHP:: ; d237
 	ds 1
@@ -2136,6 +2137,10 @@ BaseSpecialAttack:: ; d23b
 	ds 1
 BaseSpecialDefense:: ; d23c
 	ds 1
+
+BaseEVYield:: ; d23c
+	ds 1
+	
 BaseType:: ; d23d
 BaseType1:: ; d23d
 	ds 1

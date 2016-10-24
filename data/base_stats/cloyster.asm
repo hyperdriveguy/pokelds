@@ -1,7 +1,8 @@
-	db CLOYSTER ; 091
+	dw CLOYSTER ; 091
 
 	db  50,  95, 180,  70,  85,  45
 	;   hp  atk  def  spd  sat  sdf
+	db 48 ; EV Yield
 
 	db WATER, ICE
 	db 60 ; catch rate
@@ -20,3 +21,4 @@
 	; tmhm
 	tmhm CURSE, TOXIC, HIDDEN_POWER, SNORE, BLIZZARD, HYPER_BEAM, ICY_WIND, PROTECT, RAIN_DANCE, ENDURE, FRUSTRATION, RETURN, DOUBLE_TEAM, SWAGGER, SLEEP_TALK, SWIFT, REST, ATTRACT, SURF, WHIRLPOOL, ICE_BEAM
 	; end
+

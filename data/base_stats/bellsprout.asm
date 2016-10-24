@@ -1,7 +1,8 @@
-	db BELLSPROUT ; 069
+	dw BELLSPROUT ; 069
 
 	db  50,  75,  35,  40,  70,  30
 	;   hp  atk  def  spd  sat  sdf
+	db 64 ; EV Yield
 
 	db GRASS, POISON
 	db 255 ; catch rate
@@ -20,3 +21,4 @@
 	; tmhm
 	tmhm CURSE, TOXIC, HIDDEN_POWER, SUNNY_DAY, SWEET_SCENT, SNORE, PROTECT, GIGA_DRAIN, ENDURE, FRUSTRATION, SOLARBEAM, RETURN, DOUBLE_TEAM, SWAGGER, SLEEP_TALK, SLUDGE_BOMB, REST, ATTRACT, CUT, FLASH
 	; end
+

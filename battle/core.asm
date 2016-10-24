@@ -4974,6 +4974,12 @@ DrawEnemyHUD: ; 3e043
 	ld a, [hli]
 	ld [de], a
 	inc de
+	ld a, [hli]
+	ld [de], a
+	inc de
+	ld a, [hli]
+	ld [de], a
+	inc de
 	ld a, [hl]
 	ld [de], a
 
@@ -6298,6 +6304,12 @@ LoadEnemyMon: ; 3e8eb
 	ld a, [hli]
 	ld [de], a
 	inc de
+	ld a, [hli]
+	ld [de], a
+	inc de
+	ld a, [hli]
+	ld [de], a
+	inc de
 	ld a, [hl]
 	ld [de], a
 	jp .Happiness
@@ -6334,6 +6346,12 @@ LoadEnemyMon: ; 3e8eb
 ; Grab DVs
 	call GetRoamMonDVs
 	inc hl
+	inc hl
+	inc hl
+	ld a, [hld]
+	ld e, a
+	ld a, [hld]
+	ld d, a
 	ld a, [hld]
 	ld c, a
 	ld b, [hl]
@@ -6347,6 +6365,14 @@ LoadEnemyMon: ; 3e8eb
 ; (HP is initialized at the end of the battle)
 	call GetRoamMonDVs
 	inc hl
+	inc hl
+	inc hl
+	call BattleRandom
+	ld [hld], a
+	ld e, a
+	call BattleRandom
+	ld [hld], a
+	ld d, a
 	call BattleRandom
 	ld [hld], a
 	ld c, a
@@ -6359,28 +6385,48 @@ LoadEnemyMon: ; 3e8eb
 .NotRoaming:
 ; Register a contains BattleType
 
-; Forced shiny battle type
-; Used by Red Gyarados at Lake of Rage
-	cp a, BATTLETYPE_SHINY
-	jr nz, .GenerateDVs
-
-	ld b, ATKDEFDV_SHINY ; $ea
-	ld c, SPDSPCDV_SHINY ; $aa
-	jr .UpdateDVs
-
 .GenerateDVs:
 ; Generate new random DVs
 	call BattleRandom
 	ld b, a
 	call BattleRandom
 	ld c, a
+	call BattleRandom
+	ld d, a
+	call BattleRandom
+	ld e, a
+
+; Forced shiny battle type
+; Used by Red Gyarados at Lake of Rage
+	cp a, BATTLETYPE_SHINY
+	jr nz, .UpdateDVs
+	ld a, SHINY_BYTE_1
+	or b
+	ld b, a
+	
+	ld a, SHINY_BYTE_2
+	or c
+	ld c, a
+	
+	ld a, SHINY_BYTE_3
+	or d
+	ld d, a
+	
+	ld a, SHINY_BYTE_4
+	or e
+	ld e, a
+	
 
 .UpdateDVs:
-; Input DVs in register bc
+; Input DVs in register bc and de
 	ld hl, EnemyMonDVs
 	ld a, b
 	ld [hli], a
-	ld [hl], c
+	ld a, c
+	ld [hli], a
+	ld a, d
+	ld [hli], a
+	ld [hl], e
 
 ; We've still got more to do if we're dealing with a wild monster
 	ld a, [wBattleMode]
@@ -6460,7 +6506,7 @@ LoadEnemyMon: ; 3e8eb
 ; Floor at length 1024
 	ld a, [MagikarpLength]
 	cp a, 1024 >> 8
-	jr c, .GenerateDVs ; try again
+	jp c, .GenerateDVs ; try again
 
 ; Finally done with DVs
 
@@ -6624,6 +6670,10 @@ LoadEnemyMon: ; 3e8eb
 	inc de
 	dec b
 	jr nz, .loop
+
+	ld a, [BaseEVYield]
+	ld [de], a
+	inc de
 
 	ld a, [BaseCatchRate]
 	ld [de], a
@@ -7344,59 +7394,68 @@ GiveExperiencePoints: ; 3ee3b
 	jp z, .skip_stats
 
 ; give stat exp
-	ld hl, MON_STAT_EXP + 1
+	ld hl, MON_STAT_EXP
 	add hl, bc
-	ld d, h
-	ld e, l
-	ld hl, EnemyMonBaseStats - 1
 	push bc
-	ld c, $5
+	ld c, 6
+	ld de, $0000	;store EV total here
+.evtotal
+	ld a, [hli]
+	add e
+	ld e, a
+	jr nc, .continue1
+	inc d
+.continue1
+	dec c
+	jr nz, .evtotal
+	dec d
+	jr nc, .continue2
+	ld e, $80 ;some number that will not reach the limit
+.continue2
+	ld a, $FE
+	sub e
+	ld e, a		;the amount of points we can still add before hitting 510
+	pop bc
+	ld hl, EnemyMonEVYield
+	ld a, [hl]
+	ld hl, MON_STAT_EXP
+	add hl, bc
+	push bc
+	inc e
+	dec e
+	jr z, .done1	;leave here if the EV's are 510
+	ld b, a
+	ld c, $6	;there are 6 stats
 .loop1
-	inc hl
-	ld a, [de]
-	add [hl]
-	ld [de], a
-	jr nc, .okay1
-	dec de
-	ld a, [de]
-	inc a
-	jr z, .next
-	ld [de], a
-	inc de
-
-.okay1
+	ld a, b ;load the current EV yield from b
+	sla a	;get the next bit
+	ld b, a	;store back in b
+	jr nc, .skip	;if the bit was 1, add an EV to the current stat, else move to the next stat
+	ld a, [hl]
+	cp 252			;check if this stat has 252 EVs already...
+	jr nc, .loop1	;...if so, don't add a point
+	inc [hl]
+	dec e			;a point was added, so the amount we can still add decreases
+	jr z, .done1	;stop adding EV's if we hit the 510 limit
 	push hl
-	push bc
 	ld a, MON_PKRUS
 	call GetPartyParamLocation
 	ld a, [hl]
 	and a
-	pop bc
 	pop hl
-	jr z, .skip
-	ld a, [de]
-	add [hl]
-	ld [de], a
-	jr nc, .skip
-	dec de
-	ld a, [de]
-	inc a
-	jr z, .next
-	ld [de], a
-	inc de
-	jr .skip
-
-.next
-	ld a, $ff
-	ld [de], a
-	inc de
-	ld [de], a
-
-.skip
-	inc de
-	inc de
+	jr z, .loop1		;do nothing if theres no pokerus, else add an additional point
+	ld a, [hl]
+	cp 252
+	jr nc, .loop1
+	inc [hl]
+	dec e
+	jr z, .done1
+	jr .loop1
+.skip ;next stat
+	inc hl
 	dec c
 	jr nz, .loop1
+.done1	
 	xor a
 	ld [hMultiplicand + 0], a
 	ld [hMultiplicand + 1], a

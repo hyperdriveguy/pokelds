@@ -1,7 +1,8 @@
-	db PIDGEOTTO ; 017
+	dw PIDGEOTTO ; 017
 
 	db  63,  60,  55,  71,  50,  50
 	;   hp  atk  def  spd  sat  sdf
+	db 6 ; EV Yield
 
 	db NORMAL, FLYING
 	db 120 ; catch rate
@@ -20,3 +21,4 @@
 	; tmhm
 	tmhm CURSE, TOXIC, HIDDEN_POWER, SUNNY_DAY, SNORE, PROTECT, ENDURE, FRUSTRATION, RETURN, MUD_SLAP, DOUBLE_TEAM, SWAGGER, SLEEP_TALK, SWIFT, DETECT, REST, ATTRACT, THIEF, STEEL_WING, FLY
 	; end
+

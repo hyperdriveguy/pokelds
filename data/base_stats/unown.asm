@@ -1,7 +1,8 @@
-	db UNOWN ; 201
+	dw UNOWN ; 201
 
 	db  48,  72,  48,  48,  72,  48
 	;   hp  atk  def  spd  sat  sdf
+	db 72 ; EV Yield
 
 	db PSYCHIC, PSYCHIC
 	db 225 ; catch rate
@@ -20,3 +21,4 @@
 	; tmhm
 	tmhm
 	; end
+

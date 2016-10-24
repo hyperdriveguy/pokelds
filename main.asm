@@ -4642,8 +4642,6 @@ _SwitchPartyMons:
 
 INCLUDE "gfx/load_pics.asm"
 INCLUDE "engine/move_mon_wo_mail.asm"
-BaseData::
-INCLUDE "data/base_stats.asm"
 
 PokemonNames::
 INCLUDE "data/pokemon_names.asm"
@@ -6085,10 +6083,5 @@ INCLUDE "data/odd_eggs.asm"
 
 SECTION "bank7F", ROMX, BANK[$7F]
 
-SECTION "stadium2", ROMX[$8000-$220], BANK[$7F]
-
-IF DEF(CRYSTAL11)
-INCBIN "misc/stadium2_2.bin"
-ELSE
-INCBIN "misc/stadium2_1.bin"
-ENDC
+BaseData::
+INCLUDE "data/base_stats.asm"
