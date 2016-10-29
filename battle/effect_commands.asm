@@ -1954,14 +1954,26 @@ BattleCommand_CheckHit: ; 34d32
 	ld a, 14
 	sub c
 	ld c, a
+	ld a, b
+	sub c
+	add b
+	cp 0
+	jr nz, .nextPart
+	inc a
+	jr .nextPart2
+.nextPart
+	cp 14
+	jr c, .nextPart2
+	ld a, 13
 	; store the base move accuracy for math ops
+.nextPart2
+	ld b, a
 	xor a
 	ld [hMultiplicand + 0], a
 	ld [hMultiplicand + 1], a
 	ld a, [hl]
 	ld [hMultiplicand + 2], a
 	push hl
-	ld d, 2 ; do this twice, once for the user's accuracy and once for the target's evasion
 
 .accuracy_loop
 	; look up the multiplier from the table
@@ -1993,11 +2005,6 @@ BattleCommand_CheckHit: ; 34d32
 	ld [hQuotient + 2], a
 
 .min_accuracy
-	; do the same thing to the target's evasion
-	ld b, c
-	dec d
-	jr nz, .accuracy_loop
-
 	; if the result is more than 2 bytes, max out at 100%
 	ld a, [hQuotient + 1]
 	and a
@@ -2011,18 +2018,18 @@ BattleCommand_CheckHit: ; 34d32
 	ret
 
 .AccProb:
-	db  33, 100 ;  33% -6
-	db  36, 100 ;  36% -5
-	db  43, 100 ;  43% -4
-	db  50, 100 ;  50% -3
-	db  60, 100 ;  60% -2
-	db  75, 100 ;  75% -1
+	db   1,   3 ;  33% -6
+	db   3,   8 ;  36% -5
+	db   3,   7 ;  43% -4
+	db   1,   2 ;  50% -3
+	db   3,   5 ;  60% -2
+	db   3,   4 ;  75% -1
 	db   1,   1 ; 100%  0
-	db 133, 100 ; 133% +1
-	db 166, 100 ; 166% +2
+	db   4,   3 ; 133% +1
+	db   5,   3 ; 166% +2
 	db   2,   1 ; 200% +3
-	db 233, 100 ; 233% +4
-	db 133,  50 ; 266% +5
+	db   7,   3 ; 233% +4
+	db   8,   3 ; 266% +5
 	db   3,   1 ; 300% +6
 
 ; 34ecc
@@ -6125,18 +6132,18 @@ GetStatName: ; 3648f
 
 
 StatLevelMultipliers: ; 364e6
-	db 25, 100 ; 0.25x
-	db 28, 100 ; 0.28x
-	db 33, 100 ; 0.33x
-	db 40, 100 ; 0.40x
-	db 50, 100 ; 0.50x
-	db 66, 100 ; 0.66x
+	db  1,   4 ; 0.25x
+	db  2,   7 ; 0.285x
+	db  1,   3 ; 0.33x
+	db  2,   5 ; 0.40x
+	db  1,   2 ; 0.50x
+	db  2,   3 ; 0.66x
 	db  1,   1 ; 1.00x
-	db 15,  10 ; 1.50x
+	db  3,   2 ; 1.50x
 	db  2,   1 ; 2.00x
-	db 25,  10 ; 2.50x
+	db  5,   2 ; 2.50x
 	db  3,   1 ; 3.00x
-	db 35,  10 ; 3.50x
+	db  7,   2 ; 3.50x
 	db  4,   1 ; 4.00x
 ; 36500
 
