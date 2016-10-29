@@ -4,7 +4,7 @@
 	;   hp  atk  def  spd  sat  sdf
 	db 192 ; EV Yield
 
-	db WATER, WATER
+	db WATER, FAIRY
 	db 190 ; catch rate
 	db 58 ; base exp
 	db NO_ITEM ; item 1
@@ -16,7 +16,7 @@
 	dn 5, 5 ; frontpic dimensions
 	db 0, 0, 0, 0 ; padding
 	db FAST ; growth rate
-	dn AMPHIBIAN, FAIRY ; egg groups
+	dn AMPHIBIAN, FAIRYEGG ; egg groups
 
 	; tmhm
 	tmhm DYNAMICPUNCH, HEADBUTT, CURSE, ROLLOUT, TOXIC, HIDDEN_POWER, SNORE, BLIZZARD, ICY_WIND, PROTECT, RAIN_DANCE, ENDURE, FRUSTRATION, IRON_TAIL, RETURN, MUD_SLAP, DOUBLE_TEAM, ICE_PUNCH, SWAGGER, SLEEP_TALK, SWIFT, DEFENSE_CURL, REST, ATTRACT, SURF, WHIRLPOOL, WATERFALL, ICE_BEAM

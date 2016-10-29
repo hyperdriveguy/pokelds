@@ -34,5 +34,6 @@ SPECIAL EQU const_value
 	const ICE
 	const DRAGON
 	const DARK
+	const FAIRY
 
 TYPES_END EQU const_value

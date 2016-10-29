@@ -4,7 +4,7 @@
 	;   hp  atk  def  spd  sat  sdf
 	db 8 ; EV Yield
 
-	db NORMAL, NORMAL
+	db FAIRY, FAIRY
 	db 190 ; catch rate
 	db 74 ; base exp
 	db NO_ITEM ; item 1

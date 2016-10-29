@@ -1442,7 +1442,6 @@ CalcPkmnStatC: ; e17b
 	ld b, [hl]
 
 .no_stat_exp
-	srl c
 	pop hl
 	push bc
 	ld bc, MON_DVS - MON_HP_EXP + 1
@@ -1503,6 +1502,7 @@ CalcPkmnStatC: ; e17b
 	rlca
 	rlca
 	rlca
+	jr .GotDV
 
 .SpecialD:;0000 0000  0000 0000  0000 0000  000x xxxx
 	inc hl
