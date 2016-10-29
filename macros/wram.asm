@@ -194,7 +194,7 @@ endm
 hof_mon: MACRO
 \1Species:: ds 1
 \1ID:: ds 2
-\1DVs:: ds 2
+\1DVs::
 \1Level:: ds 1
 \1Nickname:: ds PKMN_NAME_LENGTH +- 1
 \1End::

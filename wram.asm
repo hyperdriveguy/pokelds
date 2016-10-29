@@ -371,7 +371,6 @@ BattleMonNick:: ds PKMN_NAME_LENGTH ; c621
 
 BattleMon:: battle_struct BattleMon ; c62c
 
-	ds 2
 
 wWildMon:: ds 1 ; c64e
 	ds 1
@@ -906,44 +905,44 @@ OverworldMapEnd::
 	ds OverworldMap - @
 
 wGameboyPrinterRAM::
-wGameboyPrinterScreen:: ds SCREEN_HEIGHT * SCREEN_WIDTH ; c800
+wGameboyPrinterScreen:: ;ds SCREEN_HEIGHT * SCREEN_WIDTH ; c800
 wGameboyPrinterScreenEnd:: ; c968
-	ds wGameboyPrinterScreen - @
+	;ds wGameboyPrinterScreen - @
 wGameboyPrinter2bppSource::
-	ds 40 tiles
+	;ds 40 tiles
 wGameboyPrinter2bppSourceEnd::
 wca80:: ds 1
-wPrinterRowIndex:: ds 1
+wPrinterRowIndex:: ;ds 1
 
 ; Printer data header
 wca82:: ds 1
 wca83:: ds 1
 wca84:: ds 1
 wca85:: ds 1
-wPrinterChecksum:: dw ; ca86
-wPrinterHandshake:: ds 1
+wPrinterChecksum:: ;dw ; ca86
+wPrinterHandshake:: ;ds 1
 wPrinterStatusFlags::
 ; bit 7: set if error 1 (battery low)
 ; bit 6: set if error 4 (too hot or cold)
 ; bit 5: set if error 3 (paper jammed or empty)
 ; if this and the previous byte are both $ff: error 2 (connection error)
-	ds 1
+	;ds 1
 
-wHandshakeFrameDelay:: ds 1
-wPrinterSerialFrameDelay:: ds 1
-wPrinterSendByteOffset:: dw
-wPrinterSendByteCounter:: dw
+wHandshakeFrameDelay:: ;ds 1
+wPrinterSerialFrameDelay:: ;ds 1
+wPrinterSendByteOffset:: ;dw
+wPrinterSendByteCounter:: ;dw
 
 ; tilemap backup?
-wPrinterTileMapBuffer:: ds SCREEN_HEIGHT * SCREEN_WIDTH ; ca90
+wPrinterTileMapBuffer:: ;ds SCREEN_HEIGHT * SCREEN_WIDTH ; ca90
 wPrinterTileMapBufferEnd::
-wPrinterStatus:: ds 1 ; cbf8
-	ds 1
+wPrinterStatus:: ;ds 1 ; cbf8
+	;ds 1
 wcbfa:: ds 1
 wGBPrinterSettings:: ds 1
-	ds 16
+	;ds 16
 wGameboyPrinterRAMEnd::
-	ds wGameboyPrinterRAM - @
+	;ds wGameboyPrinterRAM - @
 
 wBillsPCPokemonList:: ; c800
 ; Pokemon, box number, list index
@@ -1027,7 +1026,7 @@ wMysteryGiftPartnerWhichItem:: ds 1
 wMysteryGiftPartnerWhichDeco:: ds 1
 wMysteryGiftPartnerBackupItem:: ds 2
 wMysteryGiftPartnerDataEnd::
-	ds 12
+	;ds 12
 wc920:: ds 16
 wc930:: ds 16
 wc940:: ds 16
@@ -1067,7 +1066,7 @@ wca50:: ds 16
 wca60:: ds 16
 wca70:: ds 16
 
-	ds 35
+	;ds 35
 
 wcaa3:: ds 2 ; caa3
 wcaa5:: ds 16
@@ -1087,7 +1086,7 @@ wBillsPC_BackupScrollPosition:: ds 1
 wBillsPC_BackupCursorPosition:: ds 1
 wBillsPC_BackupLoadedBox:: ds 1
 wBillsPC_MonHasMail:: ds 1
-	ds 18
+	;ds 18
 wcb45:: ds 20
 wcb59:: ds 20
 wcb6d:: ds 1
@@ -1096,7 +1095,7 @@ wcb84:: ds 100
 wcbe8:: dw
 wLinkOTPartyMonTypes::
 	ds 2 * PARTY_LENGTH
-	ds 84
+	;ds 84
 
 wcc4a:: ds 22
 wcc60:: ds 1

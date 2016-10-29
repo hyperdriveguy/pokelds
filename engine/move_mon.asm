@@ -148,7 +148,7 @@ endr
 	ld [de], a
 	inc de
 	xor a
-	ld b, $a
+	ld b, MON_DVS-MON_STAT_EXP
 .loop
 	ld [de], a
 	inc de
@@ -161,7 +161,7 @@ endr
 	jr z, .generateDVs
 	push hl
 	callba GetTrainerDVs
-	pop hl
+	push de
 	jr .initializetrainermonstats
 
 .generateDVs
@@ -183,14 +183,26 @@ endr
 	ld b, a
 	call Random
 	ld c, a
+	push hl
+	push de
+	call Random
+	ld d, a
+	call Random
+	ld e, a
 
 .initializetrainermonstats
+	pop hl
 	ld a, b
-	ld [de], a
-	inc de
+	ld [hli], a
 	ld a, c
-	ld [de], a
-	inc de
+	ld [hli], a
+	ld a, d
+	ld [hli], a
+	ld a, e
+	ld [hli], a
+	push hl
+	pop de
+	pop hl
 	push hl
 	push de
 	inc hl
@@ -238,6 +250,12 @@ endr
 	ld [de], a
 	inc de
 	ld a, [EnemyMonDVs + 1]
+	ld [de], a
+	inc de
+	ld a, [EnemyMonDVs + 2]
+	ld [de], a
+	inc de
+	ld a, [EnemyMonDVs + 3]
 	ld [de], a
 	inc de
 
