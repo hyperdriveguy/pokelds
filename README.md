@@ -1,19 +1,10 @@
-# Pokémon Crystal
+# Pokémon Crystal 20XX
 
-This is a disassembly of Pokémon Crystal.
-
-It builds the following roms:
-
-* Pokemon - Crystal Version (UE) (V1.0) [C][!].gbc `md5: 9f2922b235a5eeb78d65594e82ef5dde`
-* Pokemon - Crystal Version (UE) (V1.1) [C][!].gbc `md5: 301899b8087289a6436b0a241fbbb474`
-
-To set up the repository, see [**INSTALL.md**](INSTALL.md).
-
-
-## See also
-
-* Disassembly of [**Pokémon Red/Blue**][pokered]
-* irc: [**freenode#pret**][irc]
-
-[pokered]: https://github.com/iimarckus/pokered
-[irc]: https://kiwiirc.com/client/irc.freenode.net/?#pret
+This hack aims to modernize Pokemon Crystal with the following changes made thus far:
+-Modern EV/IV system
+-Fairy type added (updated gen 1/2 pokemon and moves to reflect this)
+-Type matchup updated to reflect gen 6+
+-Pokemon's ID in base stats increased to 2 bytes
+-Physical/Special Split
+-Moves updated to gen 6 accuracy/power/pp
+-Some moves have unchanged power or effects, like low kick and roar, however accuracy reflects 6 gen's

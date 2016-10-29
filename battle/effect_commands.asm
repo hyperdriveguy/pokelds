@@ -2812,8 +2812,9 @@ PlayerAttackDamage: ; 352e2
 	ret z
 
 	ld a, [hl]
-	cp SPECIAL
-	jr nc, .special
+	and %01100000
+	cp MOVE_SPECIAL
+	jr z, .special
 
 .physical
 	ld hl, EnemyMonDefense
@@ -2955,12 +2956,13 @@ GetDamageStats: ; 3537e
 	and a
 	jr nz, .enemy
 	ld a, [wPlayerMoveStructType]
-	cp SPECIAL
+	and %01100000
+	cp MOVE_SPECIAL
 ; special
 	ld a, [PlayerSAtkLevel]
 	ld b, a
 	ld a, [EnemySDefLevel]
-	jr nc, .end
+	jr z, .end
 ; physical
 	ld a, [PlayerAtkLevel]
 	ld b, a
@@ -2969,12 +2971,13 @@ GetDamageStats: ; 3537e
 
 .enemy
 	ld a, [wEnemyMoveStructType]
-	cp SPECIAL
+	and %01100000
+	cp MOVE_SPECIAL
 ; special
 	ld a, [EnemySAtkLevel]
 	ld b, a
 	ld a, [PlayerSDefLevel]
-	jr nc, .end
+	jr z, .end
 ; physical
 	ld a, [EnemyAtkLevel]
 	ld b, a
@@ -3078,8 +3081,9 @@ EnemyAttackDamage: ; 353f6
 	ret z
 
 	ld a, [hl]
-	cp SPECIAL
-	jr nc, .Special
+	and %01100000
+	cp MOVE_SPECIAL
+	jr z, .Special
 
 .physical
 	ld hl, BattleMonDefense
@@ -3427,11 +3431,7 @@ BattleCommand_DamageCalc: ; 35612
 	ld a, BATTLE_VARS_MOVE_EFFECT
 	call GetBattleVar
 
-; Selfdestruct and Explosion halve defense.
 	cp EFFECT_EXPLOSION
-	jr nz, .dont_explode
-
-	srl c
 	jr nz, .dont_explode
 	inc c
 
@@ -3878,8 +3878,9 @@ BattleCommand_Counter: ; 35813
 	ret z
 
 	ld a, [StringBuffer1 + 3]
-	cp SPECIAL
-	ret nc
+	and %01100000
+	cp MOVE_SPECIAL
+	ret z
 
 	ld hl, CurDamage
 	ld a, [hli]
@@ -4173,11 +4174,7 @@ BattleCommand_Conversion2: ; 359e6
 .loop
 	call BattleRandom
 	and $1f
-	cp UNUSED_TYPES
-	jr c, .okay
-	cp UNUSED_TYPES_END
-	jr c, .loop
-	cp TYPES_END
+	cp TYPES_END - 1;account for CURSE_T
 	jr nc, .loop
 .okay
 	ld [hli], a
@@ -9580,8 +9577,9 @@ BattleCommand_MirrorCoat: ; 37c95
 	ret z
 
 	ld a, [StringBuffer1 + 3]
-	cp SPECIAL
-	ret c
+	and %01100000
+	cp MOVE_SPECIAL
+	ret nz
 
 	ld hl, CurDamage
 	ld a, [hli]
