@@ -2,7 +2,7 @@
 
 	db  80,  92,  65,  68,  65,  80
 	;   hp  atk  def  spd  sat  sdf
-	db 96 ; EV Yield
+	db %01100000 ; EV Yield
 
 	db WATER, WATER
 	db 60 ; catch rate
@@ -21,4 +21,3 @@
 	; tmhm
 	tmhm CURSE, TOXIC, HIDDEN_POWER, SNORE, BLIZZARD, HYPER_BEAM, ICY_WIND, PROTECT, RAIN_DANCE, ENDURE, FRUSTRATION, RETURN, DOUBLE_TEAM, SWAGGER, SLEEP_TALK, SWIFT, REST, ATTRACT, SURF, WATERFALL, ICE_BEAM
 	; end
-

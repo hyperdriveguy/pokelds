@@ -2,7 +2,7 @@
 
 	db  65,  90,  65, 100,  61,  61
 	;   hp  atk  def  spd  sat  sdf
-	db 6 ; EV Yield
+	db %00011000 ; EV Yield
 
 	db NORMAL, FLYING
 	db 90 ; catch rate
@@ -21,4 +21,3 @@
 	; tmhm
 	tmhm CURSE, TOXIC, HIDDEN_POWER, SUNNY_DAY, SNORE, HYPER_BEAM, PROTECT, ENDURE, FRUSTRATION, RETURN, MUD_SLAP, DOUBLE_TEAM, SWAGGER, SLEEP_TALK, SWIFT, DETECT, REST, ATTRACT, THIEF, STEEL_WING, FLY
 	; end
-

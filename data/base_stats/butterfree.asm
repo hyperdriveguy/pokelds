@@ -2,7 +2,7 @@
 
 	db  60,  45,  50,  70,  90,  80
 	;   hp  atk  def  spd  sat  sdf
-	db 26 ; EV Yield
+	db %00001101 ; EV Yield
 
 	db BUG, FLYING
 	db 45 ; catch rate
@@ -21,4 +21,3 @@
 	; tmhm
 	tmhm CURSE, TOXIC, HIDDEN_POWER, SUNNY_DAY, SWEET_SCENT, SNORE, HYPER_BEAM, PROTECT, GIGA_DRAIN, ENDURE, FRUSTRATION, SOLARBEAM, RETURN, PSYCHIC, DOUBLE_TEAM, SWAGGER, SLEEP_TALK, SWIFT, REST, ATTRACT, NIGHTMARE, FLASH
 	; end
-

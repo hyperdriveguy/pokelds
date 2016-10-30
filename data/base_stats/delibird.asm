@@ -2,7 +2,7 @@
 
 	db  45,  55,  45,  75,  65,  45
 	;   hp  atk  def  spd  sat  sdf
-	db 4 ; EV Yield
+	db %00010000 ; EV Yield
 
 	db ICE, FLYING
 	db 45 ; catch rate
@@ -21,4 +21,3 @@
 	; tmhm
 	tmhm HEADBUTT, CURSE, TOXIC, HIDDEN_POWER, SNORE, BLIZZARD, ICY_WIND, PROTECT, RAIN_DANCE, ENDURE, FRUSTRATION, RETURN, MUD_SLAP, DOUBLE_TEAM, SWAGGER, SLEEP_TALK, SWIFT, DETECT, REST, ATTRACT, THIEF, FLY, ICE_BEAM
 	; end
-

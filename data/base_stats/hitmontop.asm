@@ -2,7 +2,7 @@
 
 	db  50,  95,  95,  70,  35, 110
 	;   hp  atk  def  spd  sat  sdf
-	db 12 ; EV Yield
+	db %00000110 ; EV Yield
 
 	db FIGHTING, FIGHTING
 	db 45 ; catch rate
@@ -21,4 +21,3 @@
 	; tmhm
 	tmhm HEADBUTT, CURSE, TOXIC, ROCK_SMASH, HIDDEN_POWER, SUNNY_DAY, SNORE, PROTECT, ENDURE, FRUSTRATION, RETURN, DIG, MUD_SLAP, DOUBLE_TEAM, SWAGGER, SLEEP_TALK, SWIFT, DETECT, REST, ATTRACT, THIEF, STRENGTH
 	; end
-

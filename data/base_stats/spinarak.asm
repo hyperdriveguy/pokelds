@@ -2,7 +2,7 @@
 
 	db  40,  60,  40,  30,  40,  40
 	;   hp  atk  def  spd  sat  sdf
-	db 64 ; EV Yield
+	db %01000000 ; EV Yield
 
 	db BUG, POISON
 	db 255 ; catch rate
@@ -21,4 +21,3 @@
 	; tmhm
 	tmhm CURSE, TOXIC, HIDDEN_POWER, SUNNY_DAY, SNORE, PROTECT, GIGA_DRAIN, ENDURE, FRUSTRATION, SOLARBEAM, RETURN, DIG, PSYCHIC, DOUBLE_TEAM, SWAGGER, SLEEP_TALK, SLUDGE_BOMB, REST, ATTRACT, THIEF, FLASH
 	; end
-

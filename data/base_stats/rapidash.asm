@@ -2,7 +2,7 @@
 
 	db  65, 100,  70, 105,  80,  80
 	;   hp  atk  def  spd  sat  sdf
-	db 6 ; EV Yield
+	db %00011000 ; EV Yield
 
 	db FIRE, FIRE
 	db 60 ; catch rate
@@ -21,4 +21,3 @@
 	; tmhm
 	tmhm HEADBUTT, CURSE, TOXIC, HIDDEN_POWER, SUNNY_DAY, SNORE, HYPER_BEAM, PROTECT, ENDURE, FRUSTRATION, IRON_TAIL, RETURN, DOUBLE_TEAM, SWAGGER, SLEEP_TALK, FIRE_BLAST, SWIFT, REST, ATTRACT, FLAMETHROWER
 	; end
-

@@ -2,7 +2,7 @@
 
 	db  48,  48,  48,  48,  48,  48
 	;   hp  atk  def  spd  sat  sdf
-	db 128 ; EV Yield
+	db %10000000 ; EV Yield
 
 	db NORMAL, NORMAL
 	db 35 ; catch rate
@@ -21,4 +21,3 @@
 	; tmhm
 	tmhm
 	; end
-

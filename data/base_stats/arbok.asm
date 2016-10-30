@@ -2,7 +2,7 @@
 
 	db  60,  85,  69,  80,  65,  79
 	;   hp  atk  def  spd  sat  sdf
-	db 96 ; EV Yield
+	db %01100000 ; EV Yield
 
 	db POISON, POISON
 	db 90 ; catch rate
@@ -21,4 +21,3 @@
 	; tmhm
 	tmhm HEADBUTT, CURSE, TOXIC, HIDDEN_POWER, SUNNY_DAY, SNORE, HYPER_BEAM, PROTECT, GIGA_DRAIN, ENDURE, FRUSTRATION, EARTHQUAKE, RETURN, DIG, DOUBLE_TEAM, SWAGGER, SLEEP_TALK, SLUDGE_BOMB, REST, ATTRACT, THIEF, STRENGTH
 	; end
-

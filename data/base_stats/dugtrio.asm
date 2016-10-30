@@ -2,7 +2,7 @@
 
 	db  35,  80,  50, 120,  50,  70
 	;   hp  atk  def  spd  sat  sdf
-	db 6 ; EV Yield
+	db %00011000 ; EV Yield
 
 	db GROUND, GROUND
 	db 50 ; catch rate
@@ -21,4 +21,3 @@
 	; tmhm
 	tmhm CURSE, TOXIC, ROCK_SMASH, HIDDEN_POWER, SUNNY_DAY, SNORE, HYPER_BEAM, PROTECT, ENDURE, FRUSTRATION, EARTHQUAKE, RETURN, DIG, MUD_SLAP, DOUBLE_TEAM, SWAGGER, SLEEP_TALK, SLUDGE_BOMB, REST, ATTRACT, THIEF, CUT
 	; end
-

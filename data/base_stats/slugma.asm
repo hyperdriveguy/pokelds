@@ -2,7 +2,7 @@
 
 	db  40,  40,  40,  20,  70,  40
 	;   hp  atk  def  spd  sat  sdf
-	db 16 ; EV Yield
+	db %00001000 ; EV Yield
 
 	db FIRE, FIRE
 	db 190 ; catch rate
@@ -21,4 +21,3 @@
 	; tmhm
 	tmhm CURSE, ROLLOUT, TOXIC, ROCK_SMASH, HIDDEN_POWER, SUNNY_DAY, SNORE, PROTECT, ENDURE, FRUSTRATION, RETURN, MUD_SLAP, DOUBLE_TEAM, SWAGGER, SLEEP_TALK, FIRE_BLAST, DEFENSE_CURL, REST, ATTRACT, FLAMETHROWER
 	; end
-

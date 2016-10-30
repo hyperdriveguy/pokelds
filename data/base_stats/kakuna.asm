@@ -2,7 +2,7 @@
 
 	db  45,  25,  50,  35,  25,  25
 	;   hp  atk  def  spd  sat  sdf
-	db 48 ; EV Yield
+	db %00110000 ; EV Yield
 
 	db BUG, POISON
 	db 120 ; catch rate
@@ -21,4 +21,3 @@
 	; tmhm
 	tmhm
 	; end
-

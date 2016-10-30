@@ -2,7 +2,7 @@
 
 	db  48,  72,  48,  48,  72,  48
 	;   hp  atk  def  spd  sat  sdf
-	db 72 ; EV Yield
+	db %01000100 ; EV Yield
 
 	db PSYCHIC, PSYCHIC
 	db 225 ; catch rate
@@ -21,4 +21,3 @@
 	; tmhm
 	tmhm
 	; end
-

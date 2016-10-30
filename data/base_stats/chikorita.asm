@@ -2,7 +2,7 @@
 
 	db  45,  49,  65,  45,  49,  65
 	;   hp  atk  def  spd  sat  sdf
-	db 8 ; EV Yield
+	db %00000100 ; EV Yield
 
 	db GRASS, GRASS
 	db 45 ; catch rate
@@ -21,4 +21,3 @@
 	; tmhm
 	tmhm HEADBUTT, CURSE, TOXIC, HIDDEN_POWER, SUNNY_DAY, SWEET_SCENT, SNORE, PROTECT, GIGA_DRAIN, ENDURE, FRUSTRATION, SOLARBEAM, IRON_TAIL, RETURN, MUD_SLAP, DOUBLE_TEAM, SWAGGER, SLEEP_TALK, DETECT, REST, ATTRACT, CUT, FLASH
 	; end
-

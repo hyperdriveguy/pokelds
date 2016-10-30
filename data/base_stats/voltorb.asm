@@ -2,7 +2,7 @@
 
 	db  40,  30,  50, 100,  55,  55
 	;   hp  atk  def  spd  sat  sdf
-	db 4 ; EV Yield
+	db %00010000 ; EV Yield
 
 	db ELECTRIC, ELECTRIC
 	db 190 ; catch rate
@@ -21,4 +21,3 @@
 	; tmhm
 	tmhm HEADBUTT, CURSE, ROLLOUT, TOXIC, ZAP_CANNON, HIDDEN_POWER, SNORE, PROTECT, RAIN_DANCE, ENDURE, FRUSTRATION, THUNDER, RETURN, DOUBLE_TEAM, SWAGGER, SLEEP_TALK, SWIFT, REST, FLASH, THUNDERBOLT
 	; end
-
