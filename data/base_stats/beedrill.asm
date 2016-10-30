@@ -1,6 +1,6 @@
 	dw BEEDRILL ; 015
 
-	db  65,  80,  40,  75,  45,  80
+	db  65,  90,  40,  75,  45,  80
 	;   hp  atk  def  spd  sat  sdf
 	db 98 ; EV Yield
 

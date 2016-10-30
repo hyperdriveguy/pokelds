@@ -1,6 +1,6 @@
 	dw WIGGLYTUFF ; 040
 
-	db 140,  70,  45,  45,  75,  50
+	db 140,  70,  45,  45,  85,  50
 	;   hp  atk  def  spd  sat  sdf
 	db 224 ; EV Yield
 

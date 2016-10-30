@@ -1,6 +1,6 @@
 	dw BUTTERFREE ; 012
 
-	db  60,  45,  50,  70,  80,  80
+	db  60,  45,  50,  70,  90,  80
 	;   hp  atk  def  spd  sat  sdf
 	db 26 ; EV Yield
 

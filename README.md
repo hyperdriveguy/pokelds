@@ -12,3 +12,4 @@ This hack aims to modernize Pokemon Crystal with the following changes made thus
 -Stat stage modifiers now reflect gen 3+ too. (minor difference)
 -Added music for shops, nugget bridge, cerulean city, and cinnabar island
 -Extended the Kanto trainer theme
+-Gen 6 base stats

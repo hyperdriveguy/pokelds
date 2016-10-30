@@ -1,6 +1,6 @@
 	dw AZUMARILL ; 184
 
-	db 100,  50,  80,  50,  50,  80
+	db 100,  50,  80,  50,  60,  80
 	;   hp  atk  def  spd  sat  sdf
 	db 224 ; EV Yield
 
