@@ -46,7 +46,6 @@ INCLUDE "audio/music/route1.asm"
 INCLUDE "audio/music/route3.asm"
 INCLUDE "audio/music/route12.asm"
 INCLUDE "audio/music/kantogymbattle.asm"
-INCLUDE "audio/music/kantotrainerbattle.asm"
 INCLUDE "audio/music/kantowildbattle.asm"
 INCLUDE "audio/music/pokemoncenter.asm"
 INCLUDE "audio/music/looklass.asm"
@@ -157,6 +156,7 @@ INCLUDE "audio/music/shop.asm"
 INCLUDE "audio/music/nuggetbridge.asm"
 INCLUDE "audio/music/cerulean.asm"
 INCLUDE "audio/music/cinnabar.asm"
+INCLUDE "audio/music/kantotrainerbattle.asm"
 
 
 SECTION "Sound Effects", ROMX, BANK[SOUND_EFFECTS]
