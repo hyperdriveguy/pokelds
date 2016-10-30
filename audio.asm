@@ -151,6 +151,12 @@ SECTION "Extra Songs 2", ROMX, BANK[EXTRA_SONGS_2]
 
 INCLUDE "audio/music/postcredits.asm"
 
+SECTION "Extra Songs 3", ROMX, BANK[EXTRA_SONGS_3]
+
+INCLUDE "audio/music/shop.asm"
+INCLUDE "audio/music/nuggetbridge.asm"
+INCLUDE "audio/music/cerulean.asm"
+INCLUDE "audio/music/cinnabar.asm"
 
 
 SECTION "Sound Effects", ROMX, BANK[SOUND_EFFECTS]

@@ -118,6 +118,7 @@ SONGS_5                   EQU $5E
 
 EXTRA_SONGS_1             EQU $7
 EXTRA_SONGS_2             EQU $33
+EXTRA_SONGS_3             EQU $6E
 
 SOUND_EFFECTS             EQU $3C
 CRYSTAL_SOUND_EFFECTS     EQU $5E
