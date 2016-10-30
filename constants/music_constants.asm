@@ -106,6 +106,6 @@
 	const MUSIC_SHOP                		 ; 67
 	const MUSIC_NUGGET_BRIDGE                ; 68
 	const MUSIC_CERULEAN                     ; 69
-	const MUSIC_CINNABAR                     ; 70
+	const MUSIC_CINNABAR                     ; 6a
 
 MUSIC_MAHOGANY_MART EQU $64 ; leftover from gold
