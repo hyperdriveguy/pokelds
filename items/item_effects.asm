@@ -462,7 +462,9 @@ ParkBall: ; e8a2
 
 .not_ditto
 	set SUBSTATUS_TRANSFORMED, [hl]
-	ld hl, wEnemyBackupDVs
+	ld hl, wEnemyBackupNature
+	ld a, [EnemyMonNature]
+	ld [hli], a
 	ld a, [EnemyMonDVs]
 	ld [hli], a
 	ld a, [EnemyMonDVs + 1]

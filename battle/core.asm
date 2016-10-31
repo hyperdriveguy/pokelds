@@ -4964,13 +4964,16 @@ DrawEnemyHUD: ; 3e043
 	ld l, c
 	dec hl
 
-	ld hl, EnemyMonDVs
-	ld de, TempMonDVs
+	ld hl, EnemyMonNature
+	ld de, TempMonNature
 	ld a, [EnemySubStatus5]
 	bit SUBSTATUS_TRANSFORMED, a
 	jr z, .ok
-	ld hl, wEnemyBackupDVs
+	ld hl, wEnemyBackupNature
 .ok
+	ld a, [hli]
+	ld [de], a
+	inc de
 	ld a, [hli]
 	ld [de], a
 	inc de
@@ -6299,8 +6302,11 @@ LoadEnemyMon: ; 3e8eb
 	jr z, .InitDVs
 
 ; Unknown
-	ld hl, wEnemyBackupDVs
-	ld de, EnemyMonDVs
+	ld hl, wEnemyBackupNature
+	ld de, EnemyMonNature
+	ld a, [hli]
+	ld [de], a
+	inc de
 	ld a, [hli]
 	ld [de], a
 	inc de
@@ -6324,13 +6330,15 @@ LoadEnemyMon: ; 3e8eb
 ; These are the DVs we'll use if we're actually in a trainer battle
 	ld a, [wBattleMode]
 	dec a
-	jr nz, .UpdateDVs
+	dec a ;so trainer mon will have a hardy nature
+	jr z, .UpdateDVs
 
 ; Wild DVs
 ; Here's where the fun starts
 
 ; Roaming monsters (Entei, Raikou) work differently
 ; They have their own structs, which are shorter than normal
+	
 	ld a, [BattleType]
 	cp a, BATTLETYPE_ROAMING
 	jr nz, .NotRoaming
@@ -6354,10 +6362,12 @@ LoadEnemyMon: ; 3e8eb
 	ld d, a
 	ld a, [hld]
 	ld c, a
-	ld b, [hl]
-
+	ld a, [hld]
+	ld b, a
+	ld l, [hl]
 ; Get back the result of our check
 	pop af
+	ld a, l;get the nature into a
 ; If the RoamMon struct has already been initialized, we're done
 	jr nz, .UpdateDVs
 
@@ -6377,8 +6387,14 @@ LoadEnemyMon: ; 3e8eb
 	ld [hld], a
 	ld c, a
 	call BattleRandom
-	ld [hl], a
+	ld [hld], a
 	ld b, a
+.reRoll
+	call BattleRandom;nature
+	and $1F
+	cp 25
+	jr nc, .reRoll
+	ld [hl], a
 ; We're done with DVs
 	jr .UpdateDVs
 
@@ -6399,7 +6415,15 @@ LoadEnemyMon: ; 3e8eb
 ; Forced shiny battle type
 ; Used by Red Gyarados at Lake of Rage
 	cp a, BATTLETYPE_SHINY
-	jr nz, .UpdateDVs
+	jr z, .continueHere
+.reRoll2
+	call BattleRandom;nature
+	and $1F
+	cp 25
+	jr nc, .reRoll2
+	jr .UpdateDVs
+
+.continueHere
 	ld a, SHINY_BYTE_1
 	or b
 	ld b, a
@@ -6416,10 +6440,16 @@ LoadEnemyMon: ; 3e8eb
 	or e
 	ld e, a
 	
+.reRoll3
+	call BattleRandom;nature
+	and $1F
+	cp 25
+	jr nc, .reRoll3
 
 .UpdateDVs:
-; Input DVs in register bc and de
-	ld hl, EnemyMonDVs
+; Input DVs in register bc and de and nature from reg a
+	ld hl, EnemyMonNature
+	ld [hli], a
 	ld a, b
 	ld [hli], a
 	ld a, c
@@ -6472,7 +6502,7 @@ LoadEnemyMon: ; 3e8eb
 ; Try again if > 1614
 	ld a, [MagikarpLength + 1]
 	cp a, $50
-	jr nc, .GenerateDVs
+	jp nc, .GenerateDVs
 
 ; 20% chance of skipping this check
 	call Random
@@ -6481,7 +6511,7 @@ LoadEnemyMon: ; 3e8eb
 ; Try again if > 1598
 	ld a, [MagikarpLength + 1]
 	cp a, $40
-	jr nc, .GenerateDVs
+	jp nc, .GenerateDVs
 
 .CheckMagikarpArea:
 ; The z checks are supposed to be nz

@@ -784,6 +784,22 @@ StatsScreen_LoadGFX: ; 4dfb6 (13:5fb6)
 	hlcoord 9, 13
 	ld [hl], a
 .done
+	ld de, NatureString
+	hlcoord 0, 15
+	call PlaceString
+	ld de, TempMonNature
+	ld a, [de]
+	add a
+	ld d, 0
+	ld e, a
+	ld hl, NatureNames
+	add de
+	ld a, [hli]
+	ld e, a
+	ld a, [hl]
+	ld d, a
+	hlcoord 1, 16
+	call PlaceString
 	ret
 ; 4e216 (13:6216)
 
@@ -800,6 +816,11 @@ IDNoString: ; 4e21e
 OTString: ; 4e222
 	db "OT/@"
 ; 4e226
+
+NatureString: ; 4e222
+	db "NATURE/@"
+
+INCLUDE "text/natures.asm"
 
 
 StatsScreen_PlaceFrontpic: ; 4e226 (13:6226)

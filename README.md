@@ -13,3 +13,5 @@ This hack aims to modernize Pokemon Crystal with the following changes made thus
 -Added music for shops, nugget bridge, cerulean city, and cinnabar island
 -Extended the Kanto trainer theme
 -Gen 6 base stats
+-Natures!
+-Pokemon now have a 1 in 4096 chance of being shiny (like gen 6)

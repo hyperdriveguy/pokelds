@@ -16,7 +16,8 @@ box_struct: MACRO
 \1SpdExp::         db
 \1SpcExp::         db
 \1SpdefExp::       db
-\1Padding::			ds 2
+\1Padding::		   ds 1
+\1Nature::		   ds 1
 \1DVs::            ds 4
 \1PP::             ds NUM_MOVES
 \1Happiness::      db
@@ -83,6 +84,7 @@ battle_struct: MACRO
 \1Item::      db
 \1Moves::     ds NUM_MOVES
 \1MovesEnd::
+\1Nature::	  ds 1
 \1DVs::       ds 4
 \1PP::        ds NUM_MOVES
 \1Happiness:: db
@@ -206,6 +208,7 @@ roam_struct: MACRO
 \1MapGroup::  db
 \1MapNumber:: db
 \1HP::        ds 1
+\1Nature::	  ds 1
 \1DVs::       ds 4
 ENDM
 

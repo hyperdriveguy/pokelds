@@ -380,7 +380,6 @@ wEnemyTrainerBaseReward:: ds 1 ; c652
 wEnemyTrainerAIFlags:: ds 3 ; c653
 OTClassName:: ds NAME_LENGTH ; c656
 
-	ds 2
 
 CurOTMon:: ; c663
 	ds 1
@@ -622,6 +621,8 @@ wPayDayMoney:: ds 3 ; c6ec
 
 wSafariMonAngerCount:: ds 1
 wSafariMonEating:: ds 2
+wEnemyBackupNature:: ; used when enemy is transformed
+	ds 1
 wEnemyBackupDVs:: ; used when enemy is transformed
 	ds 4
 AlreadyDisobeyed:: ; c6f4
@@ -2195,7 +2196,6 @@ wMonTriedToEvolve:: ds 1
 TimeOfDay:: ; d269
 	ds 1
 
-	ds 1
 
 SECTION "Enemy Party", WRAMX, BANK [1]
 wPokedexShowPointerAddr::
@@ -2835,9 +2835,6 @@ PartyMonOT:: ds NAME_LENGTH * PARTY_LENGTH ; ddff
 
 PartyMonNicknames:: ds PKMN_NAME_LENGTH * PARTY_LENGTH ; de41
 PartyMonNicknamesEnd::
-
-
-	ds 22
 
 
 PokedexCaught:: ; de99

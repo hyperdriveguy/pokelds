@@ -148,12 +148,15 @@ endr
 	ld [de], a
 	inc de
 	xor a
-	ld b, MON_DVS-MON_STAT_EXP
+	ld b, MON_PADDING-MON_STAT_EXP
 .loop
 	ld [de], a
 	inc de
 	dec b
 	jr nz, .loop
+	call Random
+	ld [de], a
+	inc de
 	pop hl
 	push hl
 	ld a, [MonType]
@@ -189,9 +192,16 @@ endr
 	ld d, a
 	call Random
 	ld e, a
+.natureLoop
+	call Random
+	and $1F
+	cp 25
+	jr nc, .natureLoop
 
 .initializetrainermonstats
 	pop hl
+	dec hl
+	ld [hli], a	
 	ld a, b
 	ld [hli], a
 	ld a, c
@@ -246,6 +256,9 @@ endr
 	jr .next2
 
 .copywildmonstats
+	ld a, [EnemyMonNature]
+	ld [de], a
+	inc de
 	ld a, [EnemyMonDVs]
 	ld [de], a
 	inc de
@@ -991,17 +1004,18 @@ SentPkmnIntoBox: ; de6e
 	ld [de], a
 	inc de
 
-	; Set all 5 Experience Values to 0
+	; Set all 6 Experience Values to 0
 	xor a
-	ld b, 2 * 5
+	ld b, 6
 .loop2
 	ld [de], a
 	inc de
 	dec b
 	jr nz, .loop2
 
-	ld hl, EnemyMonDVs
-	ld b, 2 + NUM_MOVES ; DVs and PP ; EnemyMonHappiness - EnemyMonDVs
+	ld hl, EnemyMonNature
+	ld b, 5 + NUM_MOVES ; padding, nature, DVs, and PP ; EnemyMonHappiness - EnemyMonDVs
+	inc de;skip padding
 .loop3
 	ld a, [hli]
 	ld [de], a
@@ -1444,9 +1458,12 @@ CalcPkmnStatC: ; e17b
 .no_stat_exp
 	pop hl
 	push bc
-	ld bc, MON_DVS - MON_HP_EXP + 1
+	ld bc, MON_NATURE - MON_HP_EXP + 1
 	add hl, bc
 	pop bc
+	ld d, [hl];store nature in d
+	push de
+	inc hl
 	ld a, c
 	cp STAT_ATK
 	jr z, .Attack
@@ -1592,12 +1609,90 @@ CalcPkmnStatC: ; e17b
 	ld [hMultiplicand + 2], a
 
 .stat_value_okay
+	pop de
 	pop bc
+	;check stat index and apply nature modification
+	ld a, c
+	cp 1
+	jr z, .doneNature;if the stat is hp
+	dec a
+	dec a
+	jr z, .natureATK
+	dec a
+	jr z, .natureDEF
+	dec a
+	jr z, .natureSPE
+	dec a
+	jr z, .natureSPA
+	ld hl, .natureModTableSPD
+	jr .natureCalc
+.natureATK
+	ld hl, .natureModTableATK
+	jr .natureCalc
+.natureDEF
+	ld hl, .natureModTableDEF
+	jr .natureCalc
+.natureSPE
+	ld hl, .natureModTableSPE
+	jr .natureCalc
+.natureSPA
+	ld hl, .natureModTableSPA
+.natureCalc
+	ld e, d ;nature moves to e
+	ld d, 0
+	add de
+	ld a, [hl];get modifier
+	ld [hMultiplier], a
+	xor a
+	ld [hMultiplicand + 0], a
+	call Multiply
+	ld b, 2
+	ld a, [hProduct + 2]
+	ld [hDividend + 0], a
+	ld a, [hProduct + 3]
+	ld [hDividend + 1], a
+	ld a, 10
+	ld [hDivisor], a
+	call Divide
+	ld a, [hQuotient + 2]
+	ld [hMultiplicand + 2], a
+	ld a, [hQuotient + 1]
+	ld [hMultiplicand + 1], a
+.doneNature
 	pop de
 	pop hl
 	ret
 ; e277
-
+.natureModTableATK
+	db 10,11,11,11,11
+	db 09,10,10,10,10
+	db 09,10,10,10,10
+	db 09,10,10,10,10
+	db 09,10,10,10,10
+.natureModTableDEF
+	db 10,09,10,10,10
+	db 11,10,11,11,11
+	db 10,09,10,10,10
+	db 10,09,10,10,10
+	db 10,09,10,10,10
+.natureModTableSPE
+	db 10,10,09,10,10
+	db 10,10,09,10,10
+	db 11,11,10,11,11
+	db 10,10,09,10,10
+	db 10,10,09,10,10
+.natureModTableSPA
+	db 10,10,10,09,10
+	db 10,10,10,09,10
+	db 10,10,10,09,10
+	db 11,11,11,10,11
+	db 10,10,10,09,10
+.natureModTableSPD
+	db 10,10,10,10,09
+	db 10,10,10,10,09
+	db 10,10,10,10,09
+	db 10,10,10,10,09
+	db 11,11,11,11,10
 GivePoke:: ; e277
 	push de
 	push bc
