@@ -56,7 +56,12 @@ PrintMoveType: ; 5093a
 	pop hl
 
 	ld b, a
-
+	dec hl
+	swap a
+	rrca
+	and $03
+	add $C8
+	ld [hli], a ;place physical/special icon
 
 PrintType: ; 50953
 ; Print type b at hl.

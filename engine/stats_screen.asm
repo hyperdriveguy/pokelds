@@ -805,6 +805,28 @@ StatsScreen_LoadGFX: ; 4dfb6 (13:5fb6)
 	ld d, 0
 	ld e, a
 	ld hl, .natureMods
+	add de
+	ld a, [hl]
+	and a
+	ret z
+	push af
+	swap a
+	and $F
+	hlcoord 19, 7
+	ld de, SCREEN_WIDTH*2
+.plusAdd
+	add de
+	dec a
+	jr nz, .plusAdd
+	ld [hl], $c6
+	hlcoord 19, 7
+	pop af
+	and $F
+.minusAdd
+	add de
+	dec a
+	jr nz, .minusAdd
+	ld [hl], $c7
 	ret
 ; 4e216 (13:6216)
 

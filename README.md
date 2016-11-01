@@ -15,3 +15,5 @@ This hack aims to modernize Pokemon Crystal with the following changes made thus
 -Gen 6 base stats
 -Natures!
 -Pokemon now have a 1 in 4096 chance of being shiny (like gen 6)
+-Stat screen shows what stats are modified by natures
+-Icons show if a move is Physical, Special, or Status
