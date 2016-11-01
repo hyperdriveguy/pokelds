@@ -3866,6 +3866,7 @@ PrintTempMonStats: ; 50b7b
 	add hl, bc
 	ld bc, SCREEN_WIDTH
 	add hl, bc
+	dec hl
 	ld de, TempMonAttack
 	lb bc, 2, 3
 	call .PrintStat

@@ -789,6 +789,7 @@ StatsScreen_LoadGFX: ; 4dfb6 (13:5fb6)
 	call PlaceString
 	ld de, TempMonNature
 	ld a, [de]
+	push af
 	add a
 	ld d, 0
 	ld e, a
@@ -800,9 +801,20 @@ StatsScreen_LoadGFX: ; 4dfb6 (13:5fb6)
 	ld d, a
 	hlcoord 1, 16
 	call PlaceString
+	pop af
+	ld d, 0
+	ld e, a
+	ld hl, .natureMods
 	ret
 ; 4e216 (13:6216)
 
+.natureMods:
+	db $00, $12, $13, $14, $15
+	db $21, $00, $23, $24, $25
+	db $31, $32, $00, $34, $35
+	db $41, $42, $43, $00, $45
+	db $51, $52, $53, $54, $00
+	
 .OTNamePointers: ; 4e216
 	dw PartyMonOT
 	dw OTPartyMonOT

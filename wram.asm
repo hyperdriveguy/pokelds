@@ -378,7 +378,7 @@ wEnemyTrainerItem1:: ds 1 ; c650
 wEnemyTrainerItem2:: ds 1 ; c651
 wEnemyTrainerBaseReward:: ds 1 ; c652
 wEnemyTrainerAIFlags:: ds 3 ; c653
-OTClassName:: ds NAME_LENGTH ; c656
+OTClassName:: ds NAME_LENGTH+2 ; c656
 
 
 CurOTMon:: ; c663
@@ -896,7 +896,7 @@ ENDC
 
 wMiscEnd::
 
-wc7e8:: ds 24 ; ????
+wc7e8:: ds 22 ; ????
 
 SECTION "Overworld Map", WRAM0 [$c800]
 
