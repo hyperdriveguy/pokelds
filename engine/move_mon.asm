@@ -200,7 +200,6 @@ endr
 
 .initializetrainermonstats
 	pop hl
-	dec hl
 	ld [hli], a	
 	ld a, b
 	ld [hli], a
