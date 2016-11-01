@@ -163,8 +163,10 @@ endr
 	and $f
 	jr z, .generateDVs
 	push hl
-	callba GetTrainerDVs
 	push de
+	callba GetTrainerDVs
+	pop hl
+	xor a ;hardy nature
 	jr .initializetrainermonstats
 
 .generateDVs
@@ -182,12 +184,13 @@ endr
 	ld a, [wBattleMode]
 	and a
 	jr nz, .copywildmonstats
+	push hl
+	push de
+	pop hl
 	call Random
 	ld b, a
 	call Random
 	ld c, a
-	push hl
-	push de
 	call Random
 	ld d, a
 	call Random
@@ -199,7 +202,6 @@ endr
 	jr nc, .natureLoop
 
 .initializetrainermonstats
-	pop hl
 	ld [hli], a	
 	ld a, b
 	ld [hli], a

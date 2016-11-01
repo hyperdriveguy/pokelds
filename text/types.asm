@@ -62,7 +62,7 @@ PrintType: ; 50953
 ; Print type b at hl.
 
 	ld a, b
-
+	and $1F ;so we ignore if the type contains physical special split data
 	push hl
 	add a
 	ld hl, TypeNames
