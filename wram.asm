@@ -1866,7 +1866,8 @@ wPlayerStepFlags:: ds 1     ; d150
 ; bit 6: Stop step
 ; bit 5: Doing step
 ; bit 4: In midair
-; bits 0-3: unused
+; bit 3: For running
+; bits 0-2: unused
 wPlayerStepDirection:: ds 1 ; d151
 
 wBGMapAnchor:: ds 2 ; d152

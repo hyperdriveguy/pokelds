@@ -36,6 +36,8 @@ DoPlayerMovement:: ; 80000
 	ld a, [PlayerState]
 	cp PLAYER_NORMAL
 	jr z, .Normal
+	cp PLAYER_RUN
+	jr z, .Normal
 	cp PLAYER_SURF
 	jr z, .Surf
 	cp PLAYER_SURF_PIKA
@@ -282,6 +284,8 @@ DoPlayerMovement:: ; 80000
 	jr nc, .ice
 
 ; Downhill riding is slower when not moving down.
+	call .RunCheck
+	jr z, .walk
 	call .BikeCheck
 	jr nz, .walk
 
@@ -342,7 +346,7 @@ DoPlayerMovement:: ; 80000
 	and a
 	jr nz, .ExitWater
 
-	ld a, STEP_WALK
+	ld a, STEP_BIKE
 	call .DoStep
 	scf
 	ret
@@ -380,6 +384,8 @@ DoPlayerMovement:: ; 80000
 
 	ld de, SFX_JUMP_OVER_LEDGE
 	call PlaySFX
+	ld a, PLAYER_NORMAL
+	ld [PlayerState], a
 	ld a, STEP_LEDGE
 	call .DoStep
 	ld a, 7
@@ -755,6 +761,30 @@ DoPlayerMovement:: ; 80000
 	ret
 ; 803d3
 
+.RunCheck:
+
+	ld a, [PlayerState]
+	cp PLAYER_NORMAL
+	jr nz, .running
+	ld a, [hJoypadDown]
+	and B_BUTTON
+	cp B_BUTTON
+	ret nz
+	ld a, PLAYER_RUN
+	ld [PlayerState], a
+	ret
+.running
+	ld a, [PlayerState]
+	cp PLAYER_RUN
+	ret nz
+	ld a, [hJoypadDown]
+	and B_BUTTON
+	cp B_BUTTON
+	ret z
+	ld a, PLAYER_NORMAL
+	ld [PlayerState], a
+	ret
+	
 .CheckWalkable: ; 803d3
 ; Return 0 if tile a is land. Otherwise, return carry.
 

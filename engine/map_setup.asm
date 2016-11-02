@@ -356,6 +356,8 @@ CheckReplaceKrisSprite: ; 154f7
 	ld a, [PlayerState]
 	cp PLAYER_NORMAL
 	jr z, .nope
+	cp PLAYER_RUN
+	jr z, .nope
 	cp PLAYER_SLIP
 	jr z, .nope
 	cp PLAYER_SURF

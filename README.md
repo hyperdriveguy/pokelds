@@ -1,4 +1,4 @@
-# PokÃ©mon Crystal 20XX
+# Pokémon Crystal 20XX
 
 This hack aims to modernize Pokemon Crystal with the following changes made thus far:
 -Modern EV/IV system
@@ -17,3 +17,4 @@ This hack aims to modernize Pokemon Crystal with the following changes made thus
 -Pokemon now have a 1 in 4096 chance of being shiny (like gen 6)
 -Stat screen shows what stats are modified by natures
 -Icons show if a move is Physical, Special, or Status
+-Run by holding B. This is faster than walking, but slower than biking. (thanks to VictoriaLacroix for their running code I borrowed and modified)

@@ -389,6 +389,24 @@ GetStepVectorSign: ; 4730
 UpdatePlayerStep: ; 4738
 	ld hl, OBJECT_DIRECTION_WALKING
 	add hl, bc
+	ld a, [PlayerState]
+	cp PLAYER_RUN
+	jr nz, .finish
+	ld a, [PlayerStepDuration]
+	cp 8
+	jr nz, .notFull
+	ld a, 5
+	ld [PlayerStepDuration], a
+.notFull
+	bit 0, a
+	jr z, .unset
+	set 3, [hl]
+	res 2, [hl]
+	jr .finish
+.unset
+	set 2, [hl]
+	res 3, [hl]
+.finish
 	ld a, [hl]
 	and %00000011
 	ld [wPlayerStepDirection], a
