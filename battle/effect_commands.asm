@@ -1380,6 +1380,7 @@ BattleCommand_Stab: ; 346d2
 .go
 	ld a, BATTLE_VARS_MOVE_TYPE
 	call GetBattleVarAddr
+	and $1F
 	ld [wTypeMatchup], a
 
 	push hl
@@ -1427,6 +1428,7 @@ BattleCommand_Stab: ; 346d2
 .SkipStab:
 	ld a, BATTLE_VARS_MOVE_TYPE
 	call GetBattleVar
+	and $1F
 	ld b, a
 	ld hl, TypeMatchup
 
@@ -1547,6 +1549,7 @@ CheckTypeMatchup: ; 347d3
 	push bc
 	ld a, BATTLE_VARS_MOVE_TYPE
 	call GetBattleVar
+	and $1F
 	ld d, a
 	ld b, [hl]
 	inc hl
@@ -3533,6 +3536,7 @@ BattleCommand_DamageCalc: ; 35612
 	ld b, a
 	ld a, BATTLE_VARS_MOVE_TYPE
 	call GetBattleVar
+	and $1F
 	cp b
 	jr nz, .DoneItem
 
@@ -7791,6 +7795,7 @@ CheckMoveTypeMatchesTarget: ; 36e5b
 
 	ld a, BATTLE_VARS_MOVE_TYPE
 	call GetBattleVar
+	and $1F
 	cp NORMAL
 	jr z, .normal
 
