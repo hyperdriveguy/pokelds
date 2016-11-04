@@ -6424,21 +6424,8 @@ LoadEnemyMon: ; 3e8eb
 	jr .UpdateDVs
 
 .continueHere
-	ld a, SHINY_BYTE_1
-	or b
-	ld b, a
-	
-	ld a, SHINY_BYTE_2
-	or c
-	ld c, a
-	
-	ld a, SHINY_BYTE_3
-	or d
-	ld d, a
-	
-	ld a, SHINY_BYTE_4
-	or e
-	ld e, a
+	ld bc, $FFFF
+	ld de, $FFFF
 	
 .reRoll3
 	call BattleRandom;nature
