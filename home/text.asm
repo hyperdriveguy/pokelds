@@ -66,6 +66,12 @@ TextBox:: ; fe8
 ; Places a border around the textbox,
 ; then switches the palette to the
 ; text black-and-white scheme.
+	ld a, [PlayerState]
+	cp a, PLAYER_RUN
+	jr nz, .continue
+	ld a, PLAYER_NORMAL
+	ld [PlayerState], a
+.continue
 	push bc
 	push hl
 	call TextBoxBorder
