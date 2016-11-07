@@ -583,7 +583,7 @@ Music_Route206_Ch2_loop:
 	note C_, 5
 	note D_, 5
 	notetype $4, $B7
-	pitchoffset 1, C_
+	pitchoffset 0, C_
 	octave 4
 	note B_, 12
 	intensity $91
