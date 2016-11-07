@@ -54,6 +54,7 @@ Route29Tutorial1:
 	yesorno
 	iffalse Script_RefusedTutorial1
 	closetext
+	callasm EndNuzlocke
 	follow ROUTE29_COOLTRAINER_M1, PLAYER
 	applymovement ROUTE29_COOLTRAINER_M1, DudeMovementData1b
 	stopfollow
@@ -66,6 +67,7 @@ Route29Tutorial1:
 	closetext
 	dotrigger $0
 	setevent EVENT_LEARNED_TO_CATCH_POKEMON
+	callasm StartNuzlocke
 	end
 
 Route29Tutorial2:
@@ -79,6 +81,7 @@ Route29Tutorial2:
 	yesorno
 	iffalse Script_RefusedTutorial2
 	closetext
+	callasm EndNuzlocke
 	follow ROUTE29_COOLTRAINER_M1, PLAYER
 	applymovement ROUTE29_COOLTRAINER_M1, DudeMovementData2b
 	stopfollow
@@ -91,6 +94,7 @@ Route29Tutorial2:
 	closetext
 	dotrigger $0
 	setevent EVENT_LEARNED_TO_CATCH_POKEMON
+	callasm StartNuzlocke
 	end
 
 Script_RefusedTutorial1:

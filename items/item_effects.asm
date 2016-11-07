@@ -211,7 +211,13 @@ ParkBall: ; e8a2
 	ld a, [wBattleMode]
 	dec a
 	jp nz, UseBallInTrainerBattle
-
+	ld a, [wCaughtMonHere]
+	dec a
+	jp nz, .notNuz
+	ld a, [wNuzlockeStarted]
+	dec a
+	jp z, NuzBall
+.notNuz
 	ld a, [PartyCount]
 	cp PARTY_LENGTH
 	jr nz, .room_in_party
@@ -592,10 +598,14 @@ ParkBall: ; e8a2
 	ld a, [CurPartySpecies]
 	ld [wd265], a
 	call GetPokemonName
+	ld a, [wNuzlockeMode]
+	cp 0
+	jr nz, .forcenickname
 
 	call YesNoBox
 	jp c, .return_from_capture
 
+.forcenickname
 	ld a, [PartyCount]
 	dec a
 	ld [CurPartyMon], a
@@ -1678,6 +1688,9 @@ MaxRevive: ; f0c8
 
 
 RevivePokemon: ; f0d6
+	ld a, [wNuzlockeMode]
+	cp 0
+	ret nz
 	call IsMonFainted
 	ld a, 1
 	ret nz
@@ -2987,6 +3000,24 @@ UseBallInTrainerBattle: ; f7a0
 	jr UseDisposableItem
 ; f7ca
 
+NuzBall: ; f7a0
+	call ReturnToBattle_UseBall
+	ld de, ANIM_THROW_POKE_BALL
+	ld a, e
+	ld [FXAnimIDLo], a
+	ld a, d
+	ld [FXAnimIDHi], a
+	xor a
+	ld [wBattleAnimParam], a
+	ld [hBattleTurn], a
+	ld [wNumHits], a
+	predef PlayBattleAnim
+	ld hl, NuzBallText1
+	call PrintText
+	ld hl, NuzBallText2
+	call PrintText
+	jr UseDisposableItem
+
 WontHaveAnyEffect_NotUsedMessage: ; f7ca
 	ld hl, WontHaveAnyEffectText
 	call PrintText
@@ -3078,9 +3109,21 @@ BlockedTheBallText: ; 0xf824
 	db "@"
 ; 0xf829
 
+NuzBallText1: ; 0xf824
+	; The trainer blocked the BALL!
+	text_jump NuzBallText1s
+	db "@"
+; 0xf829
+
 DontBeAThiefText: ; 0xf829
 	; Don't be a thief!
 	text_jump UnknownText_0x1c5def
+	db "@"
+; 0xf82e
+
+NuzBallText2: ; 0xf829
+	; Don't be a thief!
+	text_jump NuzBallText2s
 	db "@"
 ; 0xf82e
 

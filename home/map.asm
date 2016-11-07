@@ -2267,6 +2267,16 @@ GetAnyMapTileset:: ; 2ca7
 	ret
 ; 2caf
 
+GetThisMap::
+	ld a, [MapGroup]
+	ld b, a
+	ld a, [MapNumber]
+	ld c, a
+	ld de, 5 ; landmark
+	call GetAnyMapHeaderMember
+	ld a, c
+	ret
+	
 GetWorldMapLocation:: ; 0x2caf
 ; given a map group/id in bc, return its location on the Pokégear map.
 	push hl

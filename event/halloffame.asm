@@ -187,15 +187,6 @@ GetHallOfFameParty: ; 8653f
 	ld [de], a
 	inc de
 
-	ld hl, MON_DVS
-	add hl, bc
-	ld a, [hli]
-	ld [de], a
-	inc de
-	ld a, [hl]
-	ld [de], a
-	inc de
-
 	ld hl, MON_LEVEL
 	add hl, bc
 	ld a, [hl]

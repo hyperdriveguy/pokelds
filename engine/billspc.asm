@@ -2571,17 +2571,16 @@ BillsPC_ChangeBoxSubmenu: ; e36f9 (38:76f9)
 .MenuDataHeader: ; 0xe377b
 	db $40 ; flags
 	db 04, 11 ; start coords
-	db 13, 19 ; end coords
+	db 12, 19 ; end coords
 	dw .MenuData2
 	db 1 ; default option
 ; 0xe3783
 
 .MenuData2: ; 0xe3783
 	db $80 ; flags
-	db 4 ; items
+	db 3 ; items
 	db "SWITCH@"
 	db "NAME@"
-	db "PRINT@"
 	db "QUIT@"
 ; 0xe379c
 

@@ -8720,6 +8720,11 @@ ExitBattle: ; 3f69e
 	ret
 
 .not_linked
+	ld a, [InBattleTowerBattle]
+	bit 0, a
+	jr nz, .battle_tower
+	predef KillParty
+.battle_tower
 	ld a, [wBattleResult]
 	and $f
 	ret nz
@@ -9555,8 +9560,9 @@ BattleStartMessage: ; 3fc8b
 .wild
 	call BattleCheckEnemyShininess
 	jr nc, .not_shiny
-
+	
 	xor a
+	ld [wCaughtMonHere], a ;allow a shiny to be caught
 	ld [wNumHits], a
 	ld a, 1
 	ld [hBattleTurn], a

@@ -191,8 +191,8 @@ SpecialsPointers:: ; c029
 	add_special Special_InitialSetDSTFlag
 	add_special Special_InitialClearDSTFlag
 	add_special SpecialNone
-; c224
 
+; c224
 SpecialNone: ; c224
 	ret
 ; c225

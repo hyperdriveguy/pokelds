@@ -2439,6 +2439,13 @@ _PlayMusic:: ; e8b30
 	inc hl
 	ld [hl], d ; MusicIDHi (always $)
 	ld hl, Music
+	xor a
+	ld [rSVBK], a
+	ld a, [wNuzlockeMode]
+	cp 0
+	jr z, .normal
+	ld hl, Music2	
+.normal
 	add hl, de ; three
 	add hl, de ; byte
 	add hl, de ; pointer

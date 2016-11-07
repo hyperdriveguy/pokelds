@@ -1435,6 +1435,29 @@ PlayBattleMusic: ; 2ee6c
 	and a
 	jr nz, .trainermusic
 
+	ld a, [wNuzlockeMode]
+	cp 0
+	jr z, .notNuzMusic
+	call GetThisMap
+	ld hl, wCaughtMonLocation
+	add l
+	ld l, a
+	jr nc, .next
+	inc h
+.next
+	ld a, [hl]
+	ld [wCaughtMonHere], a
+	ld a, [wNuzlockeStarted]
+	and 1
+	ld [hl], a
+	cp 0
+	jr z, .notNuzMusic
+	ld a, [wCaughtMonHere]
+	and 1
+	jr nz, .notNuzMusic
+	ld de, MUSIC_SINNOH_WILD
+	jr .done
+.notNuzMusic
 	callba RegionCheck
 	ld a, e
 	and a
@@ -3106,6 +3129,9 @@ CheckPartyFullAfterContest: ; 4d9e5
 	ret
 
 GiveANickname_YesNo: ; 4db3b
+	ld a, [wNuzlockeMode]
+	cp 0
+	ret nz
 	ld hl, TextJump_GiveANickname
 	call PrintText
 	jp YesNoBox

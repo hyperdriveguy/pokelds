@@ -2651,7 +2651,10 @@ wKenjiFightCount::   ds 1 ; unused
 wParryFightCount::   ds 1
 wErinFightCount::    ds 1
 ; da0e
-	ds 100
+wNuzlockeMode:: ds 1 ;1 if in nuzlocke mode
+wNuzlockeStarted:: ds 1 ;1 if you have gotten your first pokeballs, 2 if you have beaten red
+wCaughtMonHere:: ds 1 ;1 if you cannot catch a pokemon this battle
+wCaughtMonLocation:: ds 97	;1(per map) if you have had your first encounter yet (this gets copied to wCaughtMonHere in the start of a wild battle, THEN set to 1)
 
 EventFlags:: ; da72
 	flag_array NUM_EVENTS
