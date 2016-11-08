@@ -679,7 +679,7 @@ OakSpeech: ; 0x5f99
 
 	ld de, MUSIC_ROUTE_30
 	ld a, [wNuzlockeMode]
-	cp 0
+	and a
 	jr z, .normal
 	ld de, MUSIC_NUGGET_BRIDGE
 .normal

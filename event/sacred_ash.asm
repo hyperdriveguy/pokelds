@@ -1,7 +1,7 @@
 
 _SacredAsh: ; 507e6
 	ld a, [wNuzlockeMode]
-	cp 0
+	and a
 	ret nz
 	ld a, $0
 	ld [wItemEffectSucceeded], a

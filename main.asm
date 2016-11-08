@@ -1436,7 +1436,7 @@ PlayBattleMusic: ; 2ee6c
 	jr nz, .trainermusic
 
 	ld a, [wNuzlockeMode]
-	cp 0
+	and a
 	jr z, .notNuzMusic
 	call GetThisMap
 	ld hl, wCaughtMonLocation
@@ -3130,7 +3130,7 @@ CheckPartyFullAfterContest: ; 4d9e5
 
 GiveANickname_YesNo: ; 4db3b
 	ld a, [wNuzlockeMode]
-	cp 0
+	and a
 	ret nz
 	ld hl, TextJump_GiveANickname
 	call PrintText

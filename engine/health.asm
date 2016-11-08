@@ -1,6 +1,6 @@
 KillParty: ; c658
 	ld a, [wNuzlockeMode]
-	cp 0
+	and a
 	ret z
 	xor a
 	ld b, a;this will be the number of pokemon that can fight still

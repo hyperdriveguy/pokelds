@@ -326,7 +326,7 @@ HatchEggs: ; 16f70 (5:6f70)
 	ld e, l
 	push de
 	ld a, [wNuzlockeMode]
-	cp 0
+	and a
 	jr nz, .forcenickname
 	ld hl, .Text_NicknameHatchling
 	call PrintText

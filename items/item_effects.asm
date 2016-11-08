@@ -599,7 +599,7 @@ ParkBall: ; e8a2
 	ld [wd265], a
 	call GetPokemonName
 	ld a, [wNuzlockeMode]
-	cp 0
+	and a
 	jr nz, .forcenickname
 
 	call YesNoBox
@@ -1689,7 +1689,7 @@ MaxRevive: ; f0c8
 
 RevivePokemon: ; f0d6
 	ld a, [wNuzlockeMode]
-	cp 0
+	and a
 	ret nz
 	call IsMonFainted
 	ld a, 1
