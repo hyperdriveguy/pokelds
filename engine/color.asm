@@ -1,7 +1,7 @@
 PALPACKET_LENGTH EQU $10
 INCLUDE "predef/sgb.asm"
 
-SHINY_BYTE_1 EQU $39
+SHINY_BYTE_1 EQU $31
 SHINY_BYTE_2 EQU $CE
 SHINY_BYTE_3 EQU $73
 SHINY_BYTE_4 EQU $9C
@@ -12,10 +12,9 @@ CheckShininess:
 
 	ld l, c
 	ld h, b
-	ld a, [wBattleMode]
-	cp 2
-	jr z, .NotShiny;no shinys for npc trainers
 	ld a, [hli]
+	bit 7, a ;first bit (unused for IV's) has to be 0
+	jr nz, .NotShiny
 	and SHINY_BYTE_1
 	cp SHINY_BYTE_1
 	jr nz, .NotShiny

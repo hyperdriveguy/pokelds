@@ -6424,7 +6424,7 @@ LoadEnemyMon: ; 3e8eb
 	jr .UpdateDVs
 
 .continueHere
-	ld bc, $FFFF
+	ld bc, $7FFF
 	ld de, $FFFF
 	
 .reRoll3

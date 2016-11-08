@@ -71,6 +71,9 @@ GetTrainerDVs: ; 270c4
 	sla a
 	ld e, a
 	pop hl
+	ld a, $C0;make shinies impossible for trainer npc's
+	or b
+	ld b, a
 	ret
 ; 270d6
 
