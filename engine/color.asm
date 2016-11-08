@@ -13,8 +13,8 @@ CheckShininess:
 	ld l, c
 	ld h, b
 	ld a, [wBattleMode]
-	dec a
-	jr nz, .NotShiny;no shinys for npc trainers
+	cp 2
+	jr z, .NotShiny;no shinys for npc trainers
 	ld a, [hli]
 	and SHINY_BYTE_1
 	cp SHINY_BYTE_1
