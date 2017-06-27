@@ -6110,6 +6110,9 @@ INCLUDE "data/odd_eggs.asm"
 
 SECTION "bank7F", ROMX
 
+BaseData::
+INCLUDE "data/base_stats.asm"
+
 SECTION "stadium2", ROMX
 
 IF DEF(CRYSTAL11)
@@ -6118,5 +6121,3 @@ ELSE
 INCBIN "misc/stadium2_1.bin"
 ENDC
 
-BaseData::
-INCLUDE "data/base_stats.asm"

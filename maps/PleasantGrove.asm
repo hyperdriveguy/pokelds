@@ -306,7 +306,7 @@ PleasantGrove_MapEventHeader:: db 0, 0
 .ObjectEvents: db 10
 	person_event SPRITE_YOUNGSTER, 40, 16, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, (1 << 3) | PAL_OW_GREEN, PERSONTYPE_SCRIPT, 0, ObjectEvent, -1
 	person_event SPRITE_BLACK_BELT, 32, 30, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, PleasantGroveCharcoalMasterScript, -1
-	person_event SPRITE_ROCKER, 33, 8, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, PleasantGroveHeadbuttGuyScript, -1
+	person_event SPRITE_ROCKER, 19, 39, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, PleasantGroveHeadbuttGuyScript, -1
 	person_event SPRITE_YOUNGSTER, 26, 5, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, ObjectEvent, -1
 	person_event SPRITE_LASS, 6, 0, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, (1 << 3) | PAL_OW_GREEN, PERSONTYPE_SCRIPT, 0, PleasantGroveLassScript, -1
 	person_event SPRITE_YOUNGSTER, 3, 18, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, (1 << 3) | PAL_OW_GREEN, PERSONTYPE_TRAINER, 0, PleasantGroveTrainerBug_catcherWayne, -1

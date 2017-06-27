@@ -81,7 +81,7 @@ IMPORTANT NOTE: Suggestions and Pull Requests may be turned down if I find them 
 
 ### Route 101
 
-* Add Pokémon Center at the end of Route 101
+* Add House for errand completion
 
 ### Pleasant Grove
 
