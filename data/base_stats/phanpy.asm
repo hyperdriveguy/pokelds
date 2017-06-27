@@ -1,7 +1,8 @@
-	db PHANPY ; 231
+	dw PHANPY ; 231
 
 	db  90,  60,  60,  40,  40,  40
 	;   hp  atk  def  spd  sat  sdf
+	db %10000000 ; EV Yield
 
 	db GROUND, GROUND
 	db 120 ; catch rate

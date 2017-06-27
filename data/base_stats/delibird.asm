@@ -1,7 +1,8 @@
-	db DELIBIRD ; 225
+	dw DELIBIRD ; 225
 
 	db  45,  55,  45,  75,  65,  45
 	;   hp  atk  def  spd  sat  sdf
+	db %00010000 ; EV Yield
 
 	db ICE, FLYING
 	db 45 ; catch rate

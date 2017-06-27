@@ -1,7 +1,8 @@
-	db DUNSPARCE ; 206
+	dw DUNSPARCE ; 206
 
 	db 100,  70,  70,  45,  65,  65
 	;   hp  atk  def  spd  sat  sdf
+	db %10000000 ; EV Yield
 
 	db NORMAL, NORMAL
 	db 190 ; catch rate

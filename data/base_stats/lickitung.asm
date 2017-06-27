@@ -1,7 +1,8 @@
-	db LICKITUNG ; 108
+	dw LICKITUNG ; 108
 
 	db  90,  55,  75,  30,  60,  75
 	;   hp  atk  def  spd  sat  sdf
+	db %11000000 ; EV Yield
 
 	db NORMAL, NORMAL
 	db 45 ; catch rate

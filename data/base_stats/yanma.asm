@@ -1,7 +1,8 @@
-	db YANMA ; 193
+	dw YANMA ; 193
 
 	db  65,  65,  45,  95,  75,  45
 	;   hp  atk  def  spd  sat  sdf
+	db %00010000 ; EV Yield
 
 	db BUG, FLYING
 	db 75 ; catch rate

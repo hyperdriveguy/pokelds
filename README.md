@@ -1,19 +1,37 @@
-# Pokémon Crystal
+# Pok�mon Crystal 20XX
 
-This is a disassembly of Pokémon Crystal.
+This hack aims to modernize Pokemon Crystal with the following changes made thus far:
 
-It builds the following roms:
+* Modern EV/IV system
 
-* Pokemon - Crystal Version (UE) (V1.0) [C][!].gbc `md5: 9f2922b235a5eeb78d65594e82ef5dde`
-* Pokemon - Crystal Version (UE) (V1.1) [C][!].gbc `md5: 301899b8087289a6436b0a241fbbb474`
+* Fairy type added (updated gen 1/2 pokemon and moves to reflect this)
 
-To set up the repository, see [**INSTALL.md**](INSTALL.md).
+* Type matchup updated to reflect gen 6+
 
+* Pokemon's ID in base stats increased to 2 bytes
 
-## See also
+* Physical/Special Split
 
-* Disassembly of [**Pokémon Red/Blue**][pokered]
-* irc: [**freenode#pret**][irc]
+* Moves updated to gen 6 accuracy/power/pp
 
-[pokered]: https://github.com/iimarckus/pokered
-[irc]: https://kiwiirc.com/client/irc.freenode.net/?#pret
+* Some moves have unchanged power or effects, like low kick and roar, however accuracy reflects 6 gen's
+
+* Accuracy/Evasion checks should now be calculated like Gen 3 and onward.
+
+* Stat stage modifiers now reflect gen 3+ too. (minor difference)
+
+* Added music for shops, nugget bridge, cerulean city, and cinnabar island
+
+* Extended the Kanto trainer theme
+
+* Gen 6 base stats
+
+* Natures!
+
+* Pokemon now have a 1 in 4096 chance of being shiny (like gen 6)
+
+* Stat screen shows what stats are modified by natures
+
+* Icons show if a move is Physical, Special, or Status
+
+* Run by holding B. This is faster than walking, but slower than biking. (thanks to VictoriaLacroix for their running code I borrowed and modified)

@@ -1,34 +1,22 @@
 GetUnownLetter: ; 51040
 ; Return Unown letter in UnownLetter based on DVs at hl
 
-; Take the middle 2 bits of each DV and place them in order:
-;	atk  def  spd  spc
-;	.ww..xx.  .yy..zz.
+; Take bits of DV's:
+; ......ww ....xx.. ..yy.... zz......
 
-	; atk
-	ld a, [hl]
-	and %01100000
-	sla a
-	ld b, a
-	; def
 	ld a, [hli]
-	and %00000110
-	swap a
-	srl a
+	and %00000011
+	ld b, a
+	ld a, [hli]
+	and %00001100
 	or b
 	ld b, a
-
-	; spd
-	ld a, [hl]
-	and %01100000
-	swap a
-	sla a
+	ld a, [hli]
+	and %00110000
 	or b
 	ld b, a
-	; spc
 	ld a, [hl]
-	and %00000110
-	srl a
+	and %11000000
 	or b
 
 ; Divide by 10 to get 0-25

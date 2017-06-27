@@ -1,7 +1,8 @@
-	db GEODUDE ; 074
+	dw GEODUDE ; 074
 
 	db  40,  80, 100,  20,  30,  30
 	;   hp  atk  def  spd  sat  sdf
+	db %00100000 ; EV Yield
 
 	db ROCK, GROUND
 	db 255 ; catch rate

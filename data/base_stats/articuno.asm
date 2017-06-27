@@ -1,7 +1,8 @@
-	db ARTICUNO ; 144
+	dw ARTICUNO ; 144
 
 	db  90,  85, 100,  85,  95, 125
 	;   hp  atk  def  spd  sat  sdf
+	db %00000111 ; EV Yield
 
 	db ICE, FLYING
 	db 3 ; catch rate

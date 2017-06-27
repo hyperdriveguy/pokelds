@@ -1,7 +1,8 @@
-	db SQUIRTLE ; 007
+	dw SQUIRTLE ; 007
 
 	db  44,  48,  65,  43,  50,  64
 	;   hp  atk  def  spd  sat  sdf
+	db %00100000 ; EV Yield
 
 	db WATER, WATER
 	db 45 ; catch rate

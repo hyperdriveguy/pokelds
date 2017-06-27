@@ -1,7 +1,8 @@
-	db SUDOWOODO ; 185
+	dw SUDOWOODO ; 185
 
 	db  70, 100, 115,  30,  30,  65
 	;   hp  atk  def  spd  sat  sdf
+	db %00110000 ; EV Yield
 
 	db ROCK, ROCK
 	db 65 ; catch rate

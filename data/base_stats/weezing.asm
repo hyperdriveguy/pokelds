@@ -1,7 +1,8 @@
-	db WEEZING ; 110
+	dw WEEZING ; 110
 
 	db  65,  90, 120,  60,  85,  70
 	;   hp  atk  def  spd  sat  sdf
+	db %00110000 ; EV Yield
 
 	db POISON, POISON
 	db 60 ; catch rate

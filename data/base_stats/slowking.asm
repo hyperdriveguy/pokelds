@@ -1,7 +1,8 @@
-	db SLOWKING ; 199
+	dw SLOWKING ; 199
 
 	db  95,  75,  80,  30, 100, 110
 	;   hp  atk  def  spd  sat  sdf
+	db %00000111 ; EV Yield
 
 	db WATER, PSYCHIC
 	db 70 ; catch rate

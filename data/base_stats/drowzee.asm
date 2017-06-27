@@ -1,7 +1,8 @@
-	db DROWZEE ; 096
+	dw DROWZEE ; 096
 
 	db  60,  48,  45,  42,  43,  90
 	;   hp  atk  def  spd  sat  sdf
+	db %00000100 ; EV Yield
 
 	db PSYCHIC, PSYCHIC
 	db 190 ; catch rate

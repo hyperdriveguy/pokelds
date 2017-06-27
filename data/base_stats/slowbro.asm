@@ -1,7 +1,8 @@
-	db SLOWBRO ; 080
+	dw SLOWBRO ; 080
 
 	db  95,  75, 110,  30, 100,  80
 	;   hp  atk  def  spd  sat  sdf
+	db %00110000 ; EV Yield
 
 	db WATER, PSYCHIC
 	db 75 ; catch rate

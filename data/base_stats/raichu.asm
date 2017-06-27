@@ -1,7 +1,8 @@
-	db RAICHU ; 026
+	dw RAICHU ; 026
 
-	db  60,  90,  55, 100,  90,  80
+	db  60,  90,  55, 110,  90,  80
 	;   hp  atk  def  spd  sat  sdf
+	db %00011100 ; EV Yield
 
 	db ELECTRIC, ELECTRIC
 	db 75 ; catch rate
@@ -15,7 +16,7 @@
 	dn 7, 7 ; frontpic dimensions
 	db 0, 0, 0, 0 ; padding
 	db MEDIUM_FAST ; growth rate
-	dn FIELD, FAIRY ; egg groups
+	dn FIELD, FAIRYEGG ; egg groups
 
 	; tmhm
 	tmhm DYNAMICPUNCH, HEADBUTT, CURSE, ROLLOUT, TOXIC, ZAP_CANNON, HIDDEN_POWER, SNORE, HYPER_BEAM, PROTECT, RAIN_DANCE, ENDURE, FRUSTRATION, IRON_TAIL, THUNDER, RETURN, MUD_SLAP, DOUBLE_TEAM, SWAGGER, SLEEP_TALK, SWIFT, DEFENSE_CURL, THUNDERPUNCH, DETECT, REST, ATTRACT, THIEF, STRENGTH, FLASH, THUNDERBOLT

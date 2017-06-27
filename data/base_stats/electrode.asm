@@ -1,7 +1,8 @@
-	db ELECTRODE ; 101
+	dw ELECTRODE ; 101
 
 	db  60,  50,  70, 140,  80,  80
 	;   hp  atk  def  spd  sat  sdf
+	db %00011000 ; EV Yield
 
 	db ELECTRIC, ELECTRIC
 	db 60 ; catch rate

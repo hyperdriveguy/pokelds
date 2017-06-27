@@ -1,7 +1,8 @@
-	db PUPITAR ; 247
+	dw PUPITAR ; 247
 
 	db  70,  84,  70,  51,  65,  70
 	;   hp  atk  def  spd  sat  sdf
+	db %01100000 ; EV Yield
 
 	db ROCK, GROUND
 	db 45 ; catch rate

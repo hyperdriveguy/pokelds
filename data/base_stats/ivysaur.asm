@@ -1,7 +1,8 @@
-	db IVYSAUR ; 002
+	dw IVYSAUR ; 002
 
 	db  60,  62,  63,  60,  80,  80
 	;   hp  atk  def  spd  sat  sdf
+	db %00001010 ; EV Yield
 
 	db GRASS, POISON
 	db 45 ; catch rate

@@ -1,7 +1,8 @@
-	db GENGAR ; 094
+	dw GENGAR ; 094
 
 	db  60,  65,  60, 110, 130,  75
 	;   hp  atk  def  spd  sat  sdf
+	db %00001110 ; EV Yield
 
 	db GHOST, POISON
 	db 45 ; catch rate

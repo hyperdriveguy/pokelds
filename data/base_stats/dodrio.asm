@@ -1,7 +1,8 @@
-	db DODRIO ; 085
+	dw DODRIO ; 085
 
 	db  60, 110,  70, 100,  60,  60
 	;   hp  atk  def  spd  sat  sdf
+	db %01100000 ; EV Yield
 
 	db NORMAL, FLYING
 	db 45 ; catch rate

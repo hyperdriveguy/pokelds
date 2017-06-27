@@ -1,7 +1,8 @@
-	db MACHOKE ; 067
+	dw MACHOKE ; 067
 
 	db  80, 100,  70,  45,  50,  60
 	;   hp  atk  def  spd  sat  sdf
+	db %01100000 ; EV Yield
 
 	db FIGHTING, FIGHTING
 	db 90 ; catch rate

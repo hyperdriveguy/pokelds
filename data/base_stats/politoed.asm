@@ -1,7 +1,8 @@
-	db POLITOED ; 186
+	dw POLITOED ; 186
 
 	db  90,  75,  75,  70,  90, 100
 	;   hp  atk  def  spd  sat  sdf
+	db %00000111 ; EV Yield
 
 	db WATER, WATER
 	db 45 ; catch rate

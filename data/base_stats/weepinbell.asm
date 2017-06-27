@@ -1,7 +1,8 @@
-	db WEEPINBELL ; 070
+	dw WEEPINBELL ; 070
 
 	db  65,  90,  50,  55,  85,  45
 	;   hp  atk  def  spd  sat  sdf
+	db %01100000 ; EV Yield
 
 	db GRASS, POISON
 	db 120 ; catch rate

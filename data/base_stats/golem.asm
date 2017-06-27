@@ -1,7 +1,8 @@
-	db GOLEM ; 076
+	dw GOLEM ; 076
 
-	db  80, 110, 130,  45,  55,  65
+	db  80, 120, 130,  45,  55,  65
 	;   hp  atk  def  spd  sat  sdf
+	db %00111000 ; EV Yield
 
 	db ROCK, GROUND
 	db 45 ; catch rate

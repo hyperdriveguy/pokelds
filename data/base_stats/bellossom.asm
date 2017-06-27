@@ -1,7 +1,8 @@
-	db BELLOSSOM ; 182
+	dw BELLOSSOM ; 182
 
-	db  75,  80,  85,  50,  90, 100
+	db  75,  80,  95,  50,  90, 100
 	;   hp  atk  def  spd  sat  sdf
+	db %00000111 ; EV Yield
 
 	db GRASS, GRASS
 	db 45 ; catch rate

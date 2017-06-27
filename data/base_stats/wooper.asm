@@ -1,7 +1,8 @@
-	db WOOPER ; 194
+	dw WOOPER ; 194
 
 	db  55,  45,  45,  15,  25,  25
 	;   hp  atk  def  spd  sat  sdf
+	db %10000000 ; EV Yield
 
 	db WATER, GROUND
 	db 255 ; catch rate

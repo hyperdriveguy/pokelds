@@ -1,7 +1,8 @@
-	db CLOYSTER ; 091
+	dw CLOYSTER ; 091
 
 	db  50,  95, 180,  70,  85,  45
 	;   hp  atk  def  spd  sat  sdf
+	db %00110000 ; EV Yield
 
 	db WATER, ICE
 	db 60 ; catch rate

@@ -1,7 +1,8 @@
-	db XATU ; 178
+	dw XATU ; 178
 
 	db  65,  75,  70,  95,  95,  70
 	;   hp  atk  def  spd  sat  sdf
+	db %00010100 ; EV Yield
 
 	db PSYCHIC, FLYING
 	db 75 ; catch rate

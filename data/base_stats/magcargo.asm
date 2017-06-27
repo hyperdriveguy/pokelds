@@ -1,7 +1,8 @@
-	db MAGCARGO ; 219
+	dw MAGCARGO ; 219
 
 	db  50,  50, 120,  30,  80,  80
 	;   hp  atk  def  spd  sat  sdf
+	db %00110000 ; EV Yield
 
 	db FIRE, ROCK
 	db 75 ; catch rate

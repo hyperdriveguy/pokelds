@@ -4964,13 +4964,22 @@ DrawEnemyHUD: ; 3e043
 	ld l, c
 	dec hl
 
-	ld hl, EnemyMonDVs
-	ld de, TempMonDVs
+	ld hl, EnemyMonNature
+	ld de, TempMonNature
 	ld a, [EnemySubStatus5]
 	bit SUBSTATUS_TRANSFORMED, a
 	jr z, .ok
-	ld hl, wEnemyBackupDVs
+	ld hl, wEnemyBackupNature
 .ok
+	ld a, [hli]
+	ld [de], a
+	inc de
+	ld a, [hli]
+	ld [de], a
+	inc de
+	ld a, [hli]
+	ld [de], a
+	inc de
 	ld a, [hli]
 	ld [de], a
 	inc de
@@ -6293,8 +6302,17 @@ LoadEnemyMon: ; 3e8eb
 	jr z, .InitDVs
 
 ; Unknown
-	ld hl, wEnemyBackupDVs
-	ld de, EnemyMonDVs
+	ld hl, wEnemyBackupNature
+	ld de, EnemyMonNature
+	ld a, [hli]
+	ld [de], a
+	inc de
+	ld a, [hli]
+	ld [de], a
+	inc de
+	ld a, [hli]
+	ld [de], a
+	inc de
 	ld a, [hli]
 	ld [de], a
 	inc de
@@ -6312,13 +6330,15 @@ LoadEnemyMon: ; 3e8eb
 ; These are the DVs we'll use if we're actually in a trainer battle
 	ld a, [wBattleMode]
 	dec a
-	jr nz, .UpdateDVs
+	dec a ;so trainer mon will have a hardy nature
+	jr z, .UpdateDVs
 
 ; Wild DVs
 ; Here's where the fun starts
 
 ; Roaming monsters (Entei, Raikou) work differently
 ; They have their own structs, which are shorter than normal
+	
 	ld a, [BattleType]
 	cp a, BATTLETYPE_ROAMING
 	jr nz, .NotRoaming
@@ -6334,12 +6354,20 @@ LoadEnemyMon: ; 3e8eb
 ; Grab DVs
 	call GetRoamMonDVs
 	inc hl
+	inc hl
+	inc hl
+	ld a, [hld]
+	ld e, a
+	ld a, [hld]
+	ld d, a
 	ld a, [hld]
 	ld c, a
-	ld b, [hl]
-
+	ld a, [hld]
+	ld b, a
+	ld l, [hl]
 ; Get back the result of our check
 	pop af
+	ld a, l;get the nature into a
 ; If the RoamMon struct has already been initialized, we're done
 	jr nz, .UpdateDVs
 
@@ -6347,26 +6375,31 @@ LoadEnemyMon: ; 3e8eb
 ; (HP is initialized at the end of the battle)
 	call GetRoamMonDVs
 	inc hl
+	inc hl
+	inc hl
+	call BattleRandom
+	ld [hld], a
+	ld e, a
+	call BattleRandom
+	ld [hld], a
+	ld d, a
 	call BattleRandom
 	ld [hld], a
 	ld c, a
 	call BattleRandom
-	ld [hl], a
+	ld [hld], a
 	ld b, a
+.reRoll
+	call BattleRandom;nature
+	and $1F
+	cp 25
+	jr nc, .reRoll
+	ld [hl], a
 ; We're done with DVs
 	jr .UpdateDVs
 
 .NotRoaming:
 ; Register a contains BattleType
-
-; Forced shiny battle type
-; Used by Red Gyarados at Lake of Rage
-	cp a, BATTLETYPE_SHINY
-	jr nz, .GenerateDVs
-
-	ld b, ATKDEFDV_SHINY ; $ea
-	ld c, SPDSPCDV_SHINY ; $aa
-	jr .UpdateDVs
 
 .GenerateDVs:
 ; Generate new random DVs
@@ -6374,13 +6407,43 @@ LoadEnemyMon: ; 3e8eb
 	ld b, a
 	call BattleRandom
 	ld c, a
+	call BattleRandom
+	ld d, a
+	call BattleRandom
+	ld e, a
+
+; Forced shiny battle type
+; Used by Red Gyarados at Lake of Rage
+	cp a, BATTLETYPE_SHINY
+	jr z, .continueHere
+.reRoll2
+	call BattleRandom;nature
+	and $1F
+	cp 25
+	jr nc, .reRoll2
+	jr .UpdateDVs
+
+.continueHere
+	ld bc, $7FFF
+	ld de, $FFFF
+	
+.reRoll3
+	call BattleRandom;nature
+	and $1F
+	cp 25
+	jr nc, .reRoll3
 
 .UpdateDVs:
-; Input DVs in register bc
-	ld hl, EnemyMonDVs
+; Input DVs in register bc and de and nature from reg a
+	ld hl, EnemyMonNature
+	ld [hli], a
 	ld a, b
 	ld [hli], a
-	ld [hl], c
+	ld a, c
+	ld [hli], a
+	ld a, d
+	ld [hli], a
+	ld [hl], e
 
 ; We've still got more to do if we're dealing with a wild monster
 	ld a, [wBattleMode]
@@ -6426,7 +6489,7 @@ LoadEnemyMon: ; 3e8eb
 ; Try again if > 1614
 	ld a, [MagikarpLength + 1]
 	cp a, $50
-	jr nc, .GenerateDVs
+	jp nc, .GenerateDVs
 
 ; 20% chance of skipping this check
 	call Random
@@ -6435,7 +6498,7 @@ LoadEnemyMon: ; 3e8eb
 ; Try again if > 1598
 	ld a, [MagikarpLength + 1]
 	cp a, $40
-	jr nc, .GenerateDVs
+	jp nc, .GenerateDVs
 
 .CheckMagikarpArea:
 ; The z checks are supposed to be nz
@@ -6460,7 +6523,7 @@ LoadEnemyMon: ; 3e8eb
 ; Floor at length 1024
 	ld a, [MagikarpLength]
 	cp a, 1024 >> 8
-	jr c, .GenerateDVs ; try again
+	jp c, .GenerateDVs ; try again
 
 ; Finally done with DVs
 
@@ -6624,6 +6687,10 @@ LoadEnemyMon: ; 3e8eb
 	inc de
 	dec b
 	jr nz, .loop
+
+	ld a, [BaseEVYield]
+	ld [de], a
+	inc de
 
 	ld a, [BaseCatchRate]
 	ld [de], a
@@ -7068,21 +7135,21 @@ ApplyStatLevelMultiplier: ; 3ecb7
 
 .StatLevelMultipliers:
 ;	      /
-	db 25, 100 ; 25%
-	db 28, 100 ; 28%
-	db 33, 100 ; 33%
-	db 40, 100 ; 40%
-	db 50, 100 ; 50%
-	db 66, 100 ; 66%
+	db 1, 4 ; 25%
+	db 2, 7 ; 28.5%
+	db 1, 3 ; 33%
+	db 2, 5 ; 40%
+	db 1, 2 ; 50%
+	db 2, 3 ; 66%
 
 	db  1,  1 ; 100%
 
-	db 15, 10 ; 150%
-	db  2,  1 ; 200%
-	db 25, 10 ; 250%
-	db  3,  1 ; 300%
-	db 35, 10 ; 350%
-	db  4,  1 ; 400%
+	db  3, 2 ; 150%
+	db  2, 1 ; 200%
+	db  5, 2 ; 250%
+	db  3, 1 ; 300%
+	db  7, 2 ; 350%
+	db  4, 1 ; 400%
 ; 3ed45
 
 BadgeStatBoosts: ; 3ed45
@@ -7344,59 +7411,68 @@ GiveExperiencePoints: ; 3ee3b
 	jp z, .skip_stats
 
 ; give stat exp
-	ld hl, MON_STAT_EXP + 1
+	ld hl, MON_STAT_EXP
 	add hl, bc
-	ld d, h
-	ld e, l
-	ld hl, EnemyMonBaseStats - 1
 	push bc
-	ld c, $5
+	ld c, 6
+	ld de, $0000	;store EV total here
+.evtotal
+	ld a, [hli]
+	add e
+	ld e, a
+	jr nc, .continue1
+	inc d
+.continue1
+	dec c
+	jr nz, .evtotal
+	dec d
+	jr nc, .continue2
+	ld e, $80 ;some number that will not reach the limit
+.continue2
+	ld a, $FE
+	sub e
+	ld e, a		;the amount of points we can still add before hitting 510
+	pop bc
+	ld hl, EnemyMonEVYield
+	ld a, [hl]
+	ld hl, MON_STAT_EXP
+	add hl, bc
+	push bc
+	inc e
+	dec e
+	jr z, .done1	;leave here if the EV's are 510
+	ld b, a
+	ld c, $6	;there are 6 stats
 .loop1
-	inc hl
-	ld a, [de]
-	add [hl]
-	ld [de], a
-	jr nc, .okay1
-	dec de
-	ld a, [de]
-	inc a
-	jr z, .next
-	ld [de], a
-	inc de
-
-.okay1
+	ld a, b ;load the current EV yield from b
+	sla a	;get the next bit
+	ld b, a	;store back in b
+	jr nc, .skip	;if the bit was 1, add an EV to the current stat, else move to the next stat
+	ld a, [hl]
+	cp 252			;check if this stat has 252 EVs already...
+	jr nc, .loop1	;...if so, don't add a point
+	inc [hl]
+	dec e			;a point was added, so the amount we can still add decreases
+	jr z, .done1	;stop adding EV's if we hit the 510 limit
 	push hl
-	push bc
 	ld a, MON_PKRUS
 	call GetPartyParamLocation
 	ld a, [hl]
 	and a
-	pop bc
 	pop hl
-	jr z, .skip
-	ld a, [de]
-	add [hl]
-	ld [de], a
-	jr nc, .skip
-	dec de
-	ld a, [de]
-	inc a
-	jr z, .next
-	ld [de], a
-	inc de
-	jr .skip
-
-.next
-	ld a, $ff
-	ld [de], a
-	inc de
-	ld [de], a
-
-.skip
-	inc de
-	inc de
+	jr z, .loop1		;do nothing if theres no pokerus, else add an additional point
+	ld a, [hl]
+	cp 252
+	jr nc, .loop1
+	inc [hl]
+	dec e
+	jr z, .done1
+	jr .loop1
+.skip ;next stat
+	inc hl
 	dec c
 	jr nz, .loop1
+.done1	
 	xor a
 	ld [hMultiplicand + 0], a
 	ld [hMultiplicand + 1], a
@@ -8644,6 +8720,11 @@ ExitBattle: ; 3f69e
 	ret
 
 .not_linked
+	ld a, [InBattleTowerBattle]
+	bit 0, a
+	jr nz, .battle_tower
+	predef KillParty
+.battle_tower
 	ld a, [wBattleResult]
 	and $f
 	ret nz
@@ -9479,8 +9560,9 @@ BattleStartMessage: ; 3fc8b
 .wild
 	call BattleCheckEnemyShininess
 	jr nc, .not_shiny
-
+	
 	xor a
+	ld [wCaughtMonHere], a ;allow a shiny to be caught
 	ld [wNumHits], a
 	ld a, 1
 	ld [hBattleTurn], a

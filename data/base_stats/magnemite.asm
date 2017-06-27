@@ -1,7 +1,8 @@
-	db MAGNEMITE ; 081
+	dw MAGNEMITE ; 081
 
 	db  25,  35,  70,  45,  95,  55
 	;   hp  atk  def  spd  sat  sdf
+	db %00001000 ; EV Yield
 
 	db ELECTRIC, STEEL
 	db 190 ; catch rate

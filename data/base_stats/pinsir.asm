@@ -1,7 +1,8 @@
-	db PINSIR ; 127
+	dw PINSIR ; 127
 
 	db  65, 125, 100,  85,  55,  70
 	;   hp  atk  def  spd  sat  sdf
+	db %01100000 ; EV Yield
 
 	db BUG, BUG
 	db 45 ; catch rate

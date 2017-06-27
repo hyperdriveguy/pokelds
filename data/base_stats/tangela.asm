@@ -1,7 +1,8 @@
-	db TANGELA ; 114
+	dw TANGELA ; 114
 
 	db  65,  55, 115,  60, 100,  40
 	;   hp  atk  def  spd  sat  sdf
+	db %00100000 ; EV Yield
 
 	db GRASS, GRASS
 	db 45 ; catch rate

@@ -1,7 +1,8 @@
-	db KABUTO ; 140
+	dw KABUTO ; 140
 
 	db  30,  80,  90,  55,  55,  45
 	;   hp  atk  def  spd  sat  sdf
+	db %00100000 ; EV Yield
 
 	db ROCK, WATER
 	db 45 ; catch rate

@@ -1,7 +1,8 @@
-	db TYPHLOSION ; 157
+	dw TYPHLOSION ; 157
 
 	db  78,  84,  78, 100, 109,  85
 	;   hp  atk  def  spd  sat  sdf
+	db %00001110 ; EV Yield
 
 	db FIRE, FIRE
 	db 45 ; catch rate

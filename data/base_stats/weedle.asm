@@ -1,7 +1,8 @@
-	db WEEDLE ; 013
+	dw WEEDLE ; 013
 
 	db  40,  35,  30,  50,  20,  20
 	;   hp  atk  def  spd  sat  sdf
+	db %00010000 ; EV Yield
 
 	db BUG, POISON
 	db 255 ; catch rate

@@ -1,7 +1,8 @@
-	db EXEGGCUTE ; 102
+	dw EXEGGCUTE ; 102
 
 	db  60,  40,  80,  40,  60,  45
 	;   hp  atk  def  spd  sat  sdf
+	db %00100000 ; EV Yield
 
 	db GRASS, PSYCHIC
 	db 90 ; catch rate

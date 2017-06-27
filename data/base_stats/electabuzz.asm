@@ -1,7 +1,8 @@
-	db ELECTABUZZ ; 125
+	dw ELECTABUZZ ; 125
 
 	db  65,  83,  57, 105,  95,  85
 	;   hp  atk  def  spd  sat  sdf
+	db %00011000 ; EV Yield
 
 	db ELECTRIC, ELECTRIC
 	db 45 ; catch rate

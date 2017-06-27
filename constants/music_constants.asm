@@ -103,5 +103,10 @@
 	const MUSIC_SUICUNE_BATTLE               ; 64
 	const MUSIC_BATTLE_TOWER_LOBBY           ; 65
 	const MUSIC_MOBILE_CENTER                ; 66
+	const MUSIC_SHOP                		 ; 67
+	const MUSIC_NUGGET_BRIDGE                ; 68
+	const MUSIC_CERULEAN                     ; 69
+	const MUSIC_CINNABAR                     ; 6a
+	const MUSIC_SINNOH_WILD                  ; 6b
 
 MUSIC_MAHOGANY_MART EQU $64 ; leftover from gold

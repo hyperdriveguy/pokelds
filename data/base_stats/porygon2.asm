@@ -1,7 +1,8 @@
-	db PORYGON2 ; 233
+	dw PORYGON2 ; 233
 
 	db  85,  80,  90,  60, 105,  95
 	;   hp  atk  def  spd  sat  sdf
+	db %00001100 ; EV Yield
 
 	db NORMAL, NORMAL
 	db 45 ; catch rate

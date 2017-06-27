@@ -1,7 +1,8 @@
-	db NOCTOWL ; 164
+	dw NOCTOWL ; 164
 
 	db 100,  50,  50,  70,  76,  96
 	;   hp  atk  def  spd  sat  sdf
+	db %11000000 ; EV Yield
 
 	db NORMAL, FLYING
 	db 90 ; catch rate

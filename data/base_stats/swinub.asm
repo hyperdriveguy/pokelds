@@ -1,7 +1,8 @@
-	db SWINUB ; 220
+	dw SWINUB ; 220
 
 	db  50,  50,  40,  50,  30,  30
 	;   hp  atk  def  spd  sat  sdf
+	db %01000000 ; EV Yield
 
 	db ICE, GROUND
 	db 225 ; catch rate

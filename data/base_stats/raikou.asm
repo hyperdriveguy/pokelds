@@ -1,7 +1,8 @@
-	db RAIKOU ; 243
+	dw RAIKOU ; 243
 
 	db  90,  85,  75, 115, 115, 100
 	;   hp  atk  def  spd  sat  sdf
+	db %00011010 ; EV Yield
 
 	db ELECTRIC, ELECTRIC
 	db 3 ; catch rate

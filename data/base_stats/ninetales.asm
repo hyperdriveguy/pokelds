@@ -1,7 +1,8 @@
-	db NINETALES ; 038
+	dw NINETALES ; 038
 
 	db  73,  76,  75, 100,  81, 100
 	;   hp  atk  def  spd  sat  sdf
+	db %00010010 ; EV Yield
 
 	db FIRE, FIRE
 	db 75 ; catch rate

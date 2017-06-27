@@ -1,7 +1,8 @@
-	db LEDYBA ; 165
+	dw LEDYBA ; 165
 
 	db  40,  20,  30,  55,  40,  80
 	;   hp  atk  def  spd  sat  sdf
+	db %00000100 ; EV Yield
 
 	db BUG, FLYING
 	db 255 ; catch rate

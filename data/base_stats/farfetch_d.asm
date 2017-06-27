@@ -1,7 +1,8 @@
-	db FARFETCH_D ; 083
+	dw FARFETCH_D ; 083
 
 	db  52,  65,  55,  60,  58,  62
 	;   hp  atk  def  spd  sat  sdf
+	db %01000000 ; EV Yield
 
 	db NORMAL, FLYING
 	db 45 ; catch rate

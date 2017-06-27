@@ -1,5 +1,5 @@
 GetTrainerDVs: ; 270c4
-; Return the DVs of OtherTrainerClass in bc
+; Return the DVs of OtherTrainerClass in bc and de
 
 	push hl
 	ld a, [OtherTrainerClass]
@@ -10,12 +10,70 @@ GetTrainerDVs: ; 270c4
 	ld hl, TrainerClassDVs
 	add hl, bc
 	add hl, bc
-
-	ld a, [hli]
+;convert the old DV format to modern IV format
+	ld a, [hl]
+	swap a
+	or $F
 	ld b, a
-	ld c, [hl]
-
+	ld a, [hli]
+	or $F
+	ld c, a
+	ld a, [hl]
+	swap a
+	or $F
+	ld d, a
+	ld a, [hl]
+	or $F
+	ld e, a
+	;byte 1
+	and %00001000
+	rrca
+	ld h, a
+	ld a, d
+	and %00001000
+	or h
+	ld h, a
+	ld a, c
+	and %00001000
+	rlca
+	or h
+	ld h, a
+	ld a, b
+	and %00001000
+	rlca
+	rlca
+	or h
+	ld h, a
+	ld a, b
+	and %00001000
+	rrca
+	rrca
+	rrca
+	or b
+	or h
+	ld h, a
+	swap b
+	ld a, b
+	or c
+	ld b, h
+	ld c, a
+	swap d
+	srl d
+	ld a, e
+	srl a
+	srl a
+	or d
+	ld d, a
+	ld a, e
+	swap a
+	sla a
+	or e
+	sla a
+	ld e, a
 	pop hl
+	ld a, $C0;make shinies impossible for trainer npc's
+	or b
+	ld b, a
 	ret
 ; 270d6
 

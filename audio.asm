@@ -13,6 +13,10 @@ INCLUDE "audio/music_pointers.asm"
 
 INCLUDE "audio/music/nothing.asm"
 
+Music2:
+INCLUDE "audio/music_pointers2.asm"
+
+
 Cries:
 INCLUDE "audio/cry_pointers.asm"
 
@@ -28,8 +32,6 @@ INCLUDE "audio/music/rivalbattle.asm"
 INCLUDE "audio/music/rocketbattle.asm"
 INCLUDE "audio/music/elmslab.asm"
 INCLUDE "audio/music/darkcave.asm"
-INCLUDE "audio/music/johtogymbattle.asm"
-INCLUDE "audio/music/championbattle.asm"
 INCLUDE "audio/music/ssaqua.asm"
 INCLUDE "audio/music/newbarktown.asm"
 INCLUDE "audio/music/goldenrodcity.asm"
@@ -46,7 +48,6 @@ INCLUDE "audio/music/route1.asm"
 INCLUDE "audio/music/route3.asm"
 INCLUDE "audio/music/route12.asm"
 INCLUDE "audio/music/kantogymbattle.asm"
-INCLUDE "audio/music/kantotrainerbattle.asm"
 INCLUDE "audio/music/kantowildbattle.asm"
 INCLUDE "audio/music/pokemoncenter.asm"
 INCLUDE "audio/music/looklass.asm"
@@ -151,6 +152,40 @@ SECTION "Extra Songs 2", ROMX
 
 INCLUDE "audio/music/postcredits.asm"
 
+SECTION "Extra Songs 3", ROMX, BANK[EXTRA_SONGS_3]
+
+INCLUDE "audio/music/shop.asm"
+INCLUDE "audio/music/nuggetbridge.asm"
+INCLUDE "audio/music/cerulean.asm"
+INCLUDE "audio/music/cinnabar.asm"
+INCLUDE "audio/music/kantotrainerbattle.asm"
+INCLUDE "audio/music/johtogymbattle.asm"
+INCLUDE "audio/music/championbattle.asm"
+INCLUDE "audio/music/010_WinPokeSinnoh.asm"
+INCLUDE "audio/music/021_WinTrainerSinnoh.asm"
+INCLUDE "audio/music/015_FollowMe.asm"
+
+SECTION "Extra Songs 4", ROMX, BANK[EXTRA_SONGS_4]
+
+INCLUDE "audio/music/050_Bike.asm"
+INCLUDE "audio/music/johtoGSC.asm"
+INCLUDE "audio/music/016_PokemonCenter.asm"
+INCLUDE "audio/music/088_Surfing.asm"
+
+SECTION "Extra Songs 5", ROMX, BANK[EXTRA_SONGS_5]
+
+INCLUDE "audio/music/009_WildBattle.asm"
+INCLUDE "audio/music/025_Route203.asm"
+INCLUDE "audio/music/039_Route205.asm"
+INCLUDE "audio/music/052_Route206.asm"
+INCLUDE "audio/music/054_Route209.asm"
+
+SECTION "Extra Songs 6", ROMX, BANK[EXTRA_SONGS_6]
+
+INCLUDE "audio/music/145_ChampionBattle.asm"
+INCLUDE "audio/music/058_Route210.asm"
+INCLUDE "audio/music/077_Route225.asm"
+INCLUDE "audio/music/131_Route228.asm"
 
 
 SECTION "Sound Effects", ROMX

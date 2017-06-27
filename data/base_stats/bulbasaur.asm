@@ -1,7 +1,8 @@
-	db BULBASAUR ; 001
+	dw BULBASAUR ; 001
 
 	db  45,  49,  49,  45,  65,  65
 	;   hp  atk  def  spd  sat  sdf
+	db %00001000 ; EV Yield
 
 	db GRASS, POISON
 	db 45 ; catch rate

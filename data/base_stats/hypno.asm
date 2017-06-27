@@ -1,7 +1,8 @@
-	db HYPNO ; 097
+	dw HYPNO ; 097
 
 	db  85,  73,  70,  67,  73, 115
 	;   hp  atk  def  spd  sat  sdf
+	db %00000110 ; EV Yield
 
 	db PSYCHIC, PSYCHIC
 	db 75 ; catch rate

@@ -1,7 +1,8 @@
-	db DRAGONAIR ; 148
+	dw DRAGONAIR ; 148
 
 	db  61,  84,  65,  70,  70,  70
 	;   hp  atk  def  spd  sat  sdf
+	db %01100000 ; EV Yield
 
 	db DRAGON, DRAGON
 	db 45 ; catch rate

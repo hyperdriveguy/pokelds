@@ -1,7 +1,8 @@
-	db QWILFISH ; 211
+	dw QWILFISH ; 211
 
 	db  65,  95,  75,  85,  55,  55
 	;   hp  atk  def  spd  sat  sdf
+	db %01000000 ; EV Yield
 
 	db WATER, POISON
 	db 45 ; catch rate

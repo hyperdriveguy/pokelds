@@ -1176,11 +1176,13 @@ AI_Smart_SpDefenseUp2: ; 38aed
 	ret nc
 
 	ld a, [BattleMonType1]
-	cp SPECIAL
-	jr nc, .asm_38b09
+	and %01100000
+	cp MOVE_SPECIAL
+	jr z, .asm_38b09
 	ld a, [BattleMonType2]
-	cp SPECIAL
-	ret c
+	and %01100000
+	cp MOVE_SPECIAL
+	ret nz
 
 .asm_38b09
 	call AI_80_20
@@ -1421,8 +1423,9 @@ AI_Smart_Counter: ; 38bf1
 	jr z, .asm_38c0e
 
 	ld a, [wEnemyMoveStruct + MOVE_TYPE]
-	cp SPECIAL
-	jr nc, .asm_38c0e
+	and %01100000
+	cp MOVE_SPECIAL
+	jr z, .asm_38c0e
 
 	inc b
 
@@ -1449,8 +1452,9 @@ AI_Smart_Counter: ; 38bf1
 	jr z, .asm_38c38
 
 	ld a, [wEnemyMoveStruct + MOVE_TYPE]
-	cp SPECIAL
-	jr nc, .asm_38c38
+	and %01100000
+	cp MOVE_SPECIAL
+	jr z, .asm_38c38
 
 
 .asm_38c30
@@ -1979,11 +1983,13 @@ AI_Smart_Curse: ; 38e5c
 	ld a, [BattleMonType1]
 	cp GHOST
 	jr z, .asm_38e92
-	cp SPECIAL
-	ret nc
+	and %01100000
+	cp MOVE_SPECIAL
+	ret z
 	ld a, [BattleMonType2]
-	cp SPECIAL
-	ret nc
+	and %01100000
+	cp MOVE_SPECIAL
+	ret z
 	call AI_80_20
 	ret c
 	dec [hl]
@@ -2724,8 +2730,9 @@ AI_Smart_MirrorCoat: ; 3918b
 	jr z, .asm_391a8
 
 	ld a, [wEnemyMoveStruct + MOVE_TYPE]
-	cp SPECIAL
-	jr c, .asm_391a8
+	and %01100000
+	cp MOVE_SPECIAL
+	jr nz, .asm_391a8
 
 	inc b
 
@@ -2752,8 +2759,9 @@ AI_Smart_MirrorCoat: ; 3918b
 	jr z, .asm_391d2
 
 	ld a, [wEnemyMoveStruct + MOVE_TYPE]
-	cp SPECIAL
-	jr c, .asm_391d2
+	and %01100000
+	cp MOVE_SPECIAL
+	jr nz, .asm_391d2
 
 
 .asm_391ca

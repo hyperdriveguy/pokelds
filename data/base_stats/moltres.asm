@@ -1,7 +1,8 @@
-	db MOLTRES ; 146
+	dw MOLTRES ; 146
 
 	db  90, 100,  90,  90, 125,  85
 	;   hp  atk  def  spd  sat  sdf
+	db %00001110 ; EV Yield
 
 	db FIRE, FLYING
 	db 3 ; catch rate

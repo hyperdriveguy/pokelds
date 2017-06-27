@@ -1,7 +1,8 @@
-	db MEW ; 151
+	dw MEW ; 151
 
 	db 100, 100, 100, 100, 100, 100
 	;   hp  atk  def  spd  sat  sdf
+	db %11100000 ; EV Yield
 
 	db PSYCHIC, PSYCHIC
 	db 45 ; catch rate

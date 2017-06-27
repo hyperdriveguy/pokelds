@@ -1,7 +1,8 @@
-	db KINGDRA ; 230
+	dw KINGDRA ; 230
 
 	db  75,  95,  95,  85,  95,  95
 	;   hp  atk  def  spd  sat  sdf
+	db %01000101 ; EV Yield
 
 	db WATER, DRAGON
 	db 45 ; catch rate

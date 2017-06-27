@@ -1,7 +1,8 @@
-	db LAPRAS ; 131
+	dw LAPRAS ; 131
 
 	db 130,  85,  80,  60,  85,  95
 	;   hp  atk  def  spd  sat  sdf
+	db %11000000 ; EV Yield
 
 	db WATER, ICE
 	db 45 ; catch rate

@@ -1,7 +1,8 @@
-	db PRIMEAPE ; 057
+	dw PRIMEAPE ; 057
 
 	db  65, 105,  60,  95,  60,  70
 	;   hp  atk  def  spd  sat  sdf
+	db %01100000 ; EV Yield
 
 	db FIGHTING, FIGHTING
 	db 75 ; catch rate

@@ -1,7 +1,8 @@
-	db SMEARGLE ; 235
+	dw SMEARGLE ; 235
 
 	db  55,  20,  35,  75,  20,  45
 	;   hp  atk  def  spd  sat  sdf
+	db %00010000 ; EV Yield
 
 	db NORMAL, NORMAL
 	db 45 ; catch rate

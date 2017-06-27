@@ -1,7 +1,8 @@
-	db HOUNDOOM ; 229
+	dw HOUNDOOM ; 229
 
 	db  75,  90,  50,  95, 110,  80
 	;   hp  atk  def  spd  sat  sdf
+	db %00001100 ; EV Yield
 
 	db DARK, FIRE
 	db 45 ; catch rate

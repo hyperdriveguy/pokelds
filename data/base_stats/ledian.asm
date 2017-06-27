@@ -1,7 +1,8 @@
-	db LEDIAN ; 166
+	dw LEDIAN ; 166
 
 	db  55,  35,  50,  85,  55, 110
 	;   hp  atk  def  spd  sat  sdf
+	db %00000110 ; EV Yield
 
 	db BUG, FLYING
 	db 90 ; catch rate

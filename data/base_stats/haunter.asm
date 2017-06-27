@@ -1,7 +1,8 @@
-	db HAUNTER ; 093
+	dw HAUNTER ; 093
 
 	db  45,  50,  45,  95, 115,  55
 	;   hp  atk  def  spd  sat  sdf
+	db %00001100 ; EV Yield
 
 	db GHOST, POISON
 	db 90 ; catch rate

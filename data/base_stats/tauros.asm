@@ -1,7 +1,8 @@
-	db TAUROS ; 128
+	dw TAUROS ; 128
 
 	db  75, 100,  95, 110,  40,  70
 	;   hp  atk  def  spd  sat  sdf
+	db %01001000 ; EV Yield
 
 	db NORMAL, NORMAL
 	db 45 ; catch rate

@@ -1,7 +1,8 @@
-	db TYRANITAR ; 248
+	dw TYRANITAR ; 248
 
 	db 100, 134, 110,  61,  95, 100
 	;   hp  atk  def  spd  sat  sdf
+	db %01110000 ; EV Yield
 
 	db ROCK, DARK
 	db 45 ; catch rate

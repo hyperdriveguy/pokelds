@@ -1,7 +1,8 @@
-	db RHYDON ; 112
+	dw RHYDON ; 112
 
 	db 105, 130, 120,  40,  45,  45
 	;   hp  atk  def  spd  sat  sdf
+	db %01100000 ; EV Yield
 
 	db GROUND, ROCK
 	db 60 ; catch rate

@@ -1,7 +1,8 @@
-	db GOLDEEN ; 118
+	dw GOLDEEN ; 118
 
 	db  45,  67,  60,  63,  35,  50
 	;   hp  atk  def  spd  sat  sdf
+	db %01000000 ; EV Yield
 
 	db WATER, WATER
 	db 225 ; catch rate

@@ -1,7 +1,8 @@
-	db ALAKAZAM ; 065
+	dw ALAKAZAM ; 065
 
-	db  55,  50,  45, 120, 135,  85
+	db  55,  50,  45, 120, 135,  95
 	;   hp  atk  def  spd  sat  sdf
+	db %00001110 ; EV Yield
 
 	db PSYCHIC, PSYCHIC
 	db 50 ; catch rate

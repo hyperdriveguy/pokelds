@@ -1,7 +1,8 @@
-	db BAYLEEF ; 153
+	dw BAYLEEF ; 153
 
 	db  60,  62,  80,  60,  63,  80
 	;   hp  atk  def  spd  sat  sdf
+	db %00100010 ; EV Yield
 
 	db GRASS, GRASS
 	db 45 ; catch rate

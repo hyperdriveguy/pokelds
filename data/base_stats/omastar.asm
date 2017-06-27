@@ -1,7 +1,8 @@
-	db OMASTAR ; 139
+	dw OMASTAR ; 139
 
 	db  70,  60, 125,  55, 115,  70
 	;   hp  atk  def  spd  sat  sdf
+	db %00110000 ; EV Yield
 
 	db ROCK, WATER
 	db 45 ; catch rate

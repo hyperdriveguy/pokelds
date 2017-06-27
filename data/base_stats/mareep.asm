@@ -1,7 +1,8 @@
-	db MAREEP ; 179
+	dw MAREEP ; 179
 
 	db  55,  40,  40,  35,  65,  45
 	;   hp  atk  def  spd  sat  sdf
+	db %00001000 ; EV Yield
 
 	db ELECTRIC, ELECTRIC
 	db 235 ; catch rate

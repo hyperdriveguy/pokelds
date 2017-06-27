@@ -1,7 +1,8 @@
-	db AIPOM ; 190
+	dw AIPOM ; 190
 
 	db  55,  70,  55,  85,  40,  55
 	;   hp  atk  def  spd  sat  sdf
+	db %00010000 ; EV Yield
 
 	db NORMAL, NORMAL
 	db 45 ; catch rate

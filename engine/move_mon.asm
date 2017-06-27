@@ -148,20 +148,25 @@ endr
 	ld [de], a
 	inc de
 	xor a
-	ld b, $a
+	ld b, MON_PADDING-MON_STAT_EXP
 .loop
 	ld [de], a
 	inc de
 	dec b
 	jr nz, .loop
+	call Random
+	ld [de], a
+	inc de
 	pop hl
 	push hl
 	ld a, [MonType]
 	and $f
 	jr z, .generateDVs
 	push hl
+	push de
 	callba GetTrainerDVs
 	pop hl
+	xor a ;hardy nature
 	jr .initializetrainermonstats
 
 .generateDVs
@@ -179,18 +184,36 @@ endr
 	ld a, [wBattleMode]
 	and a
 	jr nz, .copywildmonstats
+	push hl
+	push de
+	pop hl
 	call Random
 	ld b, a
 	call Random
 	ld c, a
+	call Random
+	ld d, a
+	call Random
+	ld e, a
+.natureLoop
+	call Random
+	and $1F
+	cp 25
+	jr nc, .natureLoop
 
 .initializetrainermonstats
+	ld [hli], a	
 	ld a, b
-	ld [de], a
-	inc de
+	ld [hli], a
 	ld a, c
-	ld [de], a
-	inc de
+	ld [hli], a
+	ld a, d
+	ld [hli], a
+	ld a, e
+	ld [hli], a
+	push hl
+	pop de
+	pop hl
 	push hl
 	push de
 	inc hl
@@ -234,10 +257,19 @@ endr
 	jr .next2
 
 .copywildmonstats
+	ld a, [EnemyMonNature]
+	ld [de], a
+	inc de
 	ld a, [EnemyMonDVs]
 	ld [de], a
 	inc de
 	ld a, [EnemyMonDVs + 1]
+	ld [de], a
+	inc de
+	ld a, [EnemyMonDVs + 2]
+	ld [de], a
+	inc de
+	ld a, [EnemyMonDVs + 3]
 	ld [de], a
 	inc de
 
@@ -973,17 +1005,18 @@ SentPkmnIntoBox: ; de6e
 	ld [de], a
 	inc de
 
-	; Set all 5 Experience Values to 0
+	; Set all 6 Experience Values to 0
 	xor a
-	ld b, 2 * 5
+	ld b, 6
 .loop2
 	ld [de], a
 	inc de
 	dec b
 	jr nz, .loop2
 
-	ld hl, EnemyMonDVs
-	ld b, 2 + NUM_MOVES ; DVs and PP ; EnemyMonHappiness - EnemyMonDVs
+	ld hl, EnemyMonNature
+	ld b, 5 + NUM_MOVES ; padding, nature, DVs, and PP ; EnemyMonHappiness - EnemyMonDVs
+	inc de;skip padding
 .loop3
 	ld a, [hli]
 	ld [de], a
@@ -1414,35 +1447,24 @@ CalcPkmnStatC: ; e17b
 	ld b, $0
 	add hl, bc
 	ld a, [hl]
-	ld e, a
+	ld e, a	;store base stat in e
 	pop hl
 	push hl
-	ld a, c
-	cp STAT_SDEF
-	jr nz, .not_spdef
-	dec hl
-	dec hl
-
-.not_spdef
-	sla c
 	ld a, d
 	and a
 	jr z, .no_stat_exp
 	add hl, bc
-	push de
-	ld a, [hld]
-	ld e, a
-	ld d, [hl]
-	callba GetSquareRoot
-	pop de
+	ld b, [hl]
 
 .no_stat_exp
-	srl c
 	pop hl
 	push bc
-	ld bc, MON_DVS - MON_HP_EXP + 1
+	ld bc, MON_NATURE - MON_HP_EXP + 1
 	add hl, bc
 	pop bc
+	ld d, [hl];store nature in d
+	push de
+	inc hl
 	ld a, c
 	cp STAT_ATK
 	jr z, .Attack
@@ -1451,69 +1473,72 @@ CalcPkmnStatC: ; e17b
 	cp STAT_SPD
 	jr z, .Speed
 	cp STAT_SATK
-	jr z, .Special
+	jr z, .SpecialA
 	cp STAT_SDEF
-	jr z, .Special
-; DV_HP = (DV_ATK & 1) << 3 + (DV_DEF & 1) << 2 + (DV_SPD & 1) << 1 + (DV_SPC & 1)
-	push bc
+	jr z, .SpecialD
+; DV_HP = 00xx xxx0  0000 0000  0000 0000  0000 0000
 	ld a, [hl]
-	swap a
-	and $1
-	add a
-	add a
-	add a
-	ld b, a
+	srl a
+	jr .GotDV
+
+.Attack:;0000 000x  xxxx 0000  0000 0000  0000 0000
 	ld a, [hli]
-	and $1
-	add a
-	add a
-	add b
-	ld b, a
+	srl a
 	ld a, [hl]
-	swap a
-	and $1
-	add a
-	add b
-	ld b, a
-	ld a, [hl]
-	and $1
-	add b
-	pop bc
+	rrca
+	rrca
+	rrca
+	rrca
 	jr .GotDV
 
-.Attack:
+.Defense:;0000 0000  0000 xxxx  x000 0000  0000 0000
+	inc hl
+	inc hl
+	ld a, [hld]
+	sla a
 	ld a, [hl]
-	swap a
-	and $f
+	rla
 	jr .GotDV
 
-.Defense:
-	ld a, [hl]
-	and $f
-	jr .GotDV
-
-.Speed:
+.Speed:;0000 0000  0000 0000  0xxx xx00  0000 0000
+	inc hl
 	inc hl
 	ld a, [hl]
-	swap a
-	and $f
+	srl a
+	srl a
 	jr .GotDV
 
-.Special:
+.SpecialA:;0000 0000  0000 0000  0000 00xx  xxx0 0000
+	inc hl
+	inc hl
+	ld a, [hli]
+	and $03
+	ld d, a
+	ld a, [hl]
+	and $E0
+	or d
+	rlca
+	rlca
+	rlca
+	jr .GotDV
+
+.SpecialD:;0000 0000  0000 0000  0000 0000  000x xxxx
+	inc hl
+	inc hl
 	inc hl
 	ld a, [hl]
-	and $f
 
 .GotDV:
+	and $1f
 	ld d, 0
+	sla e
+	rl d	
 	add e
 	ld e, a
 	jr nc, .no_overflow_1
 	inc d
 
 .no_overflow_1
-	sla e
-	rl d
 	srl b
 	srl b
 	ld a, b
@@ -1585,12 +1610,90 @@ CalcPkmnStatC: ; e17b
 	ld [hMultiplicand + 2], a
 
 .stat_value_okay
+	pop de
 	pop bc
+	;check stat index and apply nature modification
+	ld a, c
+	cp 1
+	jr z, .doneNature;if the stat is hp
+	dec a
+	dec a
+	jr z, .natureATK
+	dec a
+	jr z, .natureDEF
+	dec a
+	jr z, .natureSPE
+	dec a
+	jr z, .natureSPA
+	ld hl, .natureModTableSPD
+	jr .natureCalc
+.natureATK
+	ld hl, .natureModTableATK
+	jr .natureCalc
+.natureDEF
+	ld hl, .natureModTableDEF
+	jr .natureCalc
+.natureSPE
+	ld hl, .natureModTableSPE
+	jr .natureCalc
+.natureSPA
+	ld hl, .natureModTableSPA
+.natureCalc
+	ld e, d ;nature moves to e
+	ld d, 0
+	add de
+	ld a, [hl];get modifier
+	ld [hMultiplier], a
+	xor a
+	ld [hMultiplicand + 0], a
+	call Multiply
+	ld b, 2
+	ld a, [hProduct + 2]
+	ld [hDividend + 0], a
+	ld a, [hProduct + 3]
+	ld [hDividend + 1], a
+	ld a, 10
+	ld [hDivisor], a
+	call Divide
+	ld a, [hQuotient + 2]
+	ld [hMultiplicand + 2], a
+	ld a, [hQuotient + 1]
+	ld [hMultiplicand + 1], a
+.doneNature
 	pop de
 	pop hl
 	ret
 ; e277
-
+.natureModTableATK
+	db 10,11,11,11,11
+	db 09,10,10,10,10
+	db 09,10,10,10,10
+	db 09,10,10,10,10
+	db 09,10,10,10,10
+.natureModTableDEF
+	db 10,09,10,10,10
+	db 11,10,11,11,11
+	db 10,09,10,10,10
+	db 10,09,10,10,10
+	db 10,09,10,10,10
+.natureModTableSPE
+	db 10,10,09,10,10
+	db 10,10,09,10,10
+	db 11,11,10,11,11
+	db 10,10,09,10,10
+	db 10,10,09,10,10
+.natureModTableSPA
+	db 10,10,10,09,10
+	db 10,10,10,09,10
+	db 10,10,10,09,10
+	db 11,11,11,10,11
+	db 10,10,10,09,10
+.natureModTableSPD
+	db 10,10,10,10,09
+	db 10,10,10,10,09
+	db 10,10,10,10,09
+	db 10,10,10,10,09
+	db 11,11,11,11,10
 GivePoke:: ; e277
 	push de
 	push bc

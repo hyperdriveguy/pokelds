@@ -1,7 +1,8 @@
-	db DODUO ; 084
+	dw DODUO ; 084
 
 	db  35,  85,  45,  75,  35,  35
 	;   hp  atk  def  spd  sat  sdf
+	db %01000000 ; EV Yield
 
 	db NORMAL, FLYING
 	db 190 ; catch rate

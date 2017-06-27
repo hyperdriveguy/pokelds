@@ -1,7 +1,8 @@
-	db VICTREEBEL ; 071
+	dw VICTREEBEL ; 071
 
-	db  80, 105,  65,  70, 100,  60
+	db  80, 105,  65,  70, 100,  70
 	;   hp  atk  def  spd  sat  sdf
+	db %01110000 ; EV Yield
 
 	db GRASS, POISON
 	db 45 ; catch rate

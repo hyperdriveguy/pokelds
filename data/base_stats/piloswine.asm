@@ -1,7 +1,8 @@
-	db PILOSWINE ; 221
+	dw PILOSWINE ; 221
 
 	db 100, 100,  80,  50,  60,  60
 	;   hp  atk  def  spd  sat  sdf
+	db %10100000 ; EV Yield
 
 	db ICE, GROUND
 	db 75 ; catch rate

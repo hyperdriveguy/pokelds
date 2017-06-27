@@ -1,7 +1,8 @@
-	db SCYTHER ; 123
+	dw SCYTHER ; 123
 
 	db  70, 110,  80, 105,  55,  80
 	;   hp  atk  def  spd  sat  sdf
+	db %01000000 ; EV Yield
 
 	db BUG, FLYING
 	db 45 ; catch rate

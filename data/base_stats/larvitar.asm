@@ -1,7 +1,8 @@
-	db LARVITAR ; 246
+	dw LARVITAR ; 246
 
 	db  50,  64,  50,  41,  45,  50
 	;   hp  atk  def  spd  sat  sdf
+	db %01000000 ; EV Yield
 
 	db ROCK, GROUND
 	db 45 ; catch rate

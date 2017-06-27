@@ -1,7 +1,8 @@
-	db GROWLITHE ; 058
+	dw GROWLITHE ; 058
 
 	db  55,  70,  45,  60,  70,  50
 	;   hp  atk  def  spd  sat  sdf
+	db %01000000 ; EV Yield
 
 	db FIRE, FIRE
 	db 190 ; catch rate

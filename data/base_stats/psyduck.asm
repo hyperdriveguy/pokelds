@@ -1,7 +1,8 @@
-	db PSYDUCK ; 054
+	dw PSYDUCK ; 054
 
 	db  50,  52,  48,  55,  65,  50
 	;   hp  atk  def  spd  sat  sdf
+	db %00001000 ; EV Yield
 
 	db WATER, WATER
 	db 190 ; catch rate

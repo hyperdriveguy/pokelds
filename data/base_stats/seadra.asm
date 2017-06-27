@@ -1,7 +1,8 @@
-	db SEADRA ; 117
+	dw SEADRA ; 117
 
 	db  55,  65,  95,  85,  95,  45
 	;   hp  atk  def  spd  sat  sdf
+	db %00100100 ; EV Yield
 
 	db WATER, WATER
 	db 75 ; catch rate

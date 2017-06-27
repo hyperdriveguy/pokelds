@@ -1,7 +1,8 @@
-	db MEOWTH ; 052
+	dw MEOWTH ; 052
 
 	db  40,  45,  35,  90,  40,  40
 	;   hp  atk  def  spd  sat  sdf
+	db %00010000 ; EV Yield
 
 	db NORMAL, NORMAL
 	db 255 ; catch rate

@@ -1,7 +1,8 @@
-	db KRABBY ; 098
+	dw KRABBY ; 098
 
 	db  30, 105,  90,  50,  25,  25
 	;   hp  atk  def  spd  sat  sdf
+	db %01000000 ; EV Yield
 
 	db WATER, WATER
 	db 225 ; catch rate

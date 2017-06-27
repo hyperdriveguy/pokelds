@@ -1,7 +1,8 @@
-	db STARMIE ; 121
+	dw STARMIE ; 121
 
 	db  60,  75,  85, 115, 100,  85
 	;   hp  atk  def  spd  sat  sdf
+	db %00011000 ; EV Yield
 
 	db WATER, PSYCHIC
 	db 60 ; catch rate

@@ -1,7 +1,8 @@
-	db HERACROSS ; 214
+	dw HERACROSS ; 214
 
 	db  80, 125,  75,  85,  40,  95
 	;   hp  atk  def  spd  sat  sdf
+	db %01100000 ; EV Yield
 
 	db BUG, FIGHTING
 	db 45 ; catch rate

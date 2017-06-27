@@ -1,7 +1,8 @@
-	db TENTACRUEL ; 073
+	dw TENTACRUEL ; 073
 
 	db  80,  70,  65, 100,  80, 120
 	;   hp  atk  def  spd  sat  sdf
+	db %00000110 ; EV Yield
 
 	db WATER, POISON
 	db 60 ; catch rate

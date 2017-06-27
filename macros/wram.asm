@@ -10,12 +10,15 @@ box_struct: MACRO
 \1ID::             dw
 \1Exp::            ds 3
 \1StatExp::
-\1HPExp::          dw
-\1AtkExp::         dw
-\1DefExp::         dw
-\1SpdExp::         dw
-\1SpcExp::         dw
-\1DVs::            ds 2
+\1HPExp::          db
+\1AtkExp::         db
+\1DefExp::         db
+\1SpdExp::         db
+\1SpcExp::         db
+\1SpdefExp::       db
+\1Padding::		   ds 1
+\1Nature::		   ds 1
+\1DVs::            ds 4
 \1PP::             ds NUM_MOVES
 \1Happiness::      db
 \1PokerusStatus::  db
@@ -81,7 +84,8 @@ battle_struct: MACRO
 \1Item::      db
 \1Moves::     ds NUM_MOVES
 \1MovesEnd::
-\1DVs::       ds 2
+\1Nature::	  ds 1
+\1DVs::       ds 4
 \1PP::        ds NUM_MOVES
 \1Happiness:: db
 \1Level::     db
@@ -192,7 +196,7 @@ endm
 hof_mon: MACRO
 \1Species:: ds 1
 \1ID:: ds 2
-\1DVs:: ds 2
+\1DVs::
 \1Level:: ds 1
 \1Nickname:: ds PKMN_NAME_LENGTH +- 1
 \1End::
@@ -204,7 +208,8 @@ roam_struct: MACRO
 \1MapGroup::  db
 \1MapNumber:: db
 \1HP::        ds 1
-\1DVs::       ds 2
+\1Nature::	  ds 1
+\1DVs::       ds 4
 ENDM
 
 bugcontestwinner: macro
@@ -231,7 +236,7 @@ trademon: MACRO
 \1Nickname:: ds PKMN_NAME_LENGTH ; wc6dc | wc70e
 \1SenderName:: ds NAME_LENGTH ; wc6e7 | wc719
 \1OTName:: ds NAME_LENGTH ; wc6f2 | wc724
-\1DVs:: ds 2 ; wc6fd | wc72f
+\1DVs:: ds 4 ; wc6fd | wc72f
 \1ID:: ds 2 ; wc6ff | wc731
 \1CaughtData:: ds 1 ; wc701 | wc733
 \1End::

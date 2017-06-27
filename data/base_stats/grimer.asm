@@ -1,7 +1,8 @@
-	db GRIMER ; 088
+	dw GRIMER ; 088
 
 	db  80,  80,  50,  25,  40,  50
 	;   hp  atk  def  spd  sat  sdf
+	db %10000000 ; EV Yield
 
 	db POISON, POISON
 	db 190 ; catch rate

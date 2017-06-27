@@ -1,7 +1,8 @@
-	db SENTRET ; 161
+	dw SENTRET ; 161
 
 	db  35,  46,  34,  20,  35,  45
 	;   hp  atk  def  spd  sat  sdf
+	db %01000000 ; EV Yield
 
 	db NORMAL, NORMAL
 	db 255 ; catch rate

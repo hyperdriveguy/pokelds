@@ -1,7 +1,8 @@
-	db LUGIA ; 249
+	dw LUGIA ; 249
 
 	db 106,  90, 130, 110,  90, 154
 	;   hp  atk  def  spd  sat  sdf
+	db %00000111 ; EV Yield
 
 	db PSYCHIC, FLYING
 	db 3 ; catch rate

@@ -1,7 +1,8 @@
-	db RATTATA ; 019
+	dw RATTATA ; 019
 
 	db  30,  56,  35,  72,  25,  35
 	;   hp  atk  def  spd  sat  sdf
+	db %00010000 ; EV Yield
 
 	db NORMAL, NORMAL
 	db 255 ; catch rate

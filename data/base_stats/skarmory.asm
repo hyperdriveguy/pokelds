@@ -1,7 +1,8 @@
-	db SKARMORY ; 227
+	dw SKARMORY ; 227
 
 	db  65,  80, 140,  70,  40,  70
 	;   hp  atk  def  spd  sat  sdf
+	db %00110000 ; EV Yield
 
 	db STEEL, FLYING
 	db 25 ; catch rate

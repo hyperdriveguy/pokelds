@@ -1,7 +1,8 @@
-	db ELEKID ; 239
+	dw ELEKID ; 239
 
 	db  45,  63,  37,  95,  65,  55
 	;   hp  atk  def  spd  sat  sdf
+	db %00010000 ; EV Yield
 
 	db ELECTRIC, ELECTRIC
 	db 45 ; catch rate

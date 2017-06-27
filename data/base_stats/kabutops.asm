@@ -1,7 +1,8 @@
-	db KABUTOPS ; 141
+	dw KABUTOPS ; 141
 
 	db  60, 115, 105,  80,  65,  70
 	;   hp  atk  def  spd  sat  sdf
+	db %01100000 ; EV Yield
 
 	db ROCK, WATER
 	db 45 ; catch rate

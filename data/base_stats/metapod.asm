@@ -1,7 +1,8 @@
-	db METAPOD ; 011
+	dw METAPOD ; 011
 
 	db  50,  20,  55,  30,  25,  25
 	;   hp  atk  def  spd  sat  sdf
+	db %00110000 ; EV Yield
 
 	db BUG, BUG
 	db 120 ; catch rate

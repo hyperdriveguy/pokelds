@@ -1,7 +1,8 @@
-	db TOTODILE ; 158
+	dw TOTODILE ; 158
 
 	db  50,  65,  64,  43,  44,  48
 	;   hp  atk  def  spd  sat  sdf
+	db %01000000 ; EV Yield
 
 	db WATER, WATER
 	db 45 ; catch rate

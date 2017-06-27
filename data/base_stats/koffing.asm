@@ -1,7 +1,8 @@
-	db KOFFING ; 109
+	dw KOFFING ; 109
 
 	db  40,  65,  95,  35,  60,  45
 	;   hp  atk  def  spd  sat  sdf
+	db %00100000 ; EV Yield
 
 	db POISON, POISON
 	db 190 ; catch rate

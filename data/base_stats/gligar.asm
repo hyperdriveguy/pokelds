@@ -1,7 +1,8 @@
-	db GLIGAR ; 207
+	dw GLIGAR ; 207
 
 	db  65,  75, 105,  85,  35,  65
 	;   hp  atk  def  spd  sat  sdf
+	db %00100000 ; EV Yield
 
 	db GROUND, FLYING
 	db 60 ; catch rate

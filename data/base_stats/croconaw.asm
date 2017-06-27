@@ -1,7 +1,8 @@
-	db CROCONAW ; 159
+	dw CROCONAW ; 159
 
 	db  65,  80,  80,  58,  59,  63
 	;   hp  atk  def  spd  sat  sdf
+	db %01010000 ; EV Yield
 
 	db WATER, WATER
 	db 45 ; catch rate

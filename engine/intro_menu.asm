@@ -678,6 +678,11 @@ OakSpeech: ; 0x5f99
 	call ClearTileMap
 
 	ld de, MUSIC_ROUTE_30
+	ld a, [wNuzlockeMode]
+	and a
+	jr z, .normal
+	ld de, MUSIC_NUGGET_BRIDGE
+.normal
 	call PlayMusic
 
 	call RotateFourPalettesRight

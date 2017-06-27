@@ -2438,7 +2438,16 @@ _PlayMusic:: ; e8b30
 	ld [hl], e ; song number
 	inc hl
 	ld [hl], d ; MusicIDHi (always $)
+	ld hl, rSVBK
+	ld b, [hl] ;get current WRAM bank
+	ld [hl], 0 ;load first Wram bank
+	ld a, [wNuzlockeMode] ;are we in nuzlocke mode?
+	ld [hl], b ;restore old wram bank
 	ld hl, Music
+	and a
+	jr z, .normal
+	ld hl, Music2 ;load the secondary soundtrack
+.normal
 	add hl, de ; three
 	add hl, de ; byte
 	add hl, de ; pointer

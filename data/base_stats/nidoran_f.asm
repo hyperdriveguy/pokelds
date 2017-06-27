@@ -1,7 +1,8 @@
-	db NIDORAN_F ; 029
+	dw NIDORAN_F ; 029
 
 	db  55,  47,  52,  41,  40,  40
 	;   hp  atk  def  spd  sat  sdf
+	db %10000000 ; EV Yield
 
 	db POISON, POISON
 	db 235 ; catch rate

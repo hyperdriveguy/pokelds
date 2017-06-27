@@ -1,7 +1,8 @@
-	db OMANYTE ; 138
+	dw OMANYTE ; 138
 
 	db  35,  40, 100,  35,  90,  55
 	;   hp  atk  def  spd  sat  sdf
+	db %00100000 ; EV Yield
 
 	db ROCK, WATER
 	db 45 ; catch rate

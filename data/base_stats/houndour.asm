@@ -1,7 +1,8 @@
-	db HOUNDOUR ; 228
+	dw HOUNDOUR ; 228
 
 	db  45,  60,  30,  65,  80,  50
 	;   hp  atk  def  spd  sat  sdf
+	db %00001000 ; EV Yield
 
 	db DARK, FIRE
 	db 120 ; catch rate

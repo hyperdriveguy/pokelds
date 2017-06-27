@@ -1,7 +1,8 @@
-	db MEWTWO ; 150
+	dw MEWTWO ; 150
 
 	db 106, 110,  90, 130, 154,  90
 	;   hp  atk  def  spd  sat  sdf
+	db %00001110 ; EV Yield
 
 	db PSYCHIC, PSYCHIC
 	db 3 ; catch rate

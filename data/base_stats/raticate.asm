@@ -1,7 +1,8 @@
-	db RATICATE ; 020
+	dw RATICATE ; 020
 
 	db  55,  81,  60,  97,  50,  70
 	;   hp  atk  def  spd  sat  sdf
+	db %00011000 ; EV Yield
 
 	db NORMAL, NORMAL
 	db 90 ; catch rate

@@ -1,7 +1,8 @@
-	db RHYHORN ; 111
+	dw RHYHORN ; 111
 
 	db  80,  85,  95,  25,  30,  30
 	;   hp  atk  def  spd  sat  sdf
+	db %00100000 ; EV Yield
 
 	db GROUND, ROCK
 	db 120 ; catch rate

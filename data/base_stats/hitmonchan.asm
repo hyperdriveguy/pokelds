@@ -1,7 +1,8 @@
-	db HITMONCHAN ; 107
+	dw HITMONCHAN ; 107
 
 	db  50, 105,  79,  76,  35, 110
 	;   hp  atk  def  spd  sat  sdf
+	db %00000110 ; EV Yield
 
 	db FIGHTING, FIGHTING
 	db 45 ; catch rate

@@ -1,7 +1,8 @@
-	db CORSOLA ; 222
+	dw CORSOLA ; 222
 
 	db  55,  55,  85,  35,  65,  85
 	;   hp  atk  def  spd  sat  sdf
+	db %00100010 ; EV Yield
 
 	db WATER, ROCK
 	db 60 ; catch rate

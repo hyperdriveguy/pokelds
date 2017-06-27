@@ -1,7 +1,8 @@
-	db EXEGGUTOR ; 103
+	dw EXEGGUTOR ; 103
 
 	db  95,  95,  85,  55, 125,  65
 	;   hp  atk  def  spd  sat  sdf
+	db %00001100 ; EV Yield
 
 	db GRASS, PSYCHIC
 	db 45 ; catch rate

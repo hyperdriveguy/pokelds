@@ -1,7 +1,8 @@
-	db CUBONE ; 104
+	dw CUBONE ; 104
 
 	db  50,  50,  95,  35,  40,  50
 	;   hp  atk  def  spd  sat  sdf
+	db %00100000 ; EV Yield
 
 	db GROUND, GROUND
 	db 190 ; catch rate

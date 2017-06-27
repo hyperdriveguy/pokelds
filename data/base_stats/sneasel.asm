@@ -1,7 +1,8 @@
-	db SNEASEL ; 215
+	dw SNEASEL ; 215
 
 	db  55,  95,  55, 115,  35,  75
 	;   hp  atk  def  spd  sat  sdf
+	db %00010000 ; EV Yield
 
 	db DARK, ICE
 	db 60 ; catch rate

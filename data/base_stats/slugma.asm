@@ -1,7 +1,8 @@
-	db SLUGMA ; 218
+	dw SLUGMA ; 218
 
 	db  40,  40,  40,  20,  70,  40
 	;   hp  atk  def  spd  sat  sdf
+	db %00001000 ; EV Yield
 
 	db FIRE, FIRE
 	db 190 ; catch rate

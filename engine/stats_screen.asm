@@ -784,9 +784,59 @@ StatsScreen_LoadGFX: ; 4dfb6 (13:5fb6)
 	hlcoord 9, 13
 	ld [hl], a
 .done
+	ld de, NatureString
+	hlcoord 0, 15
+	call PlaceString
+	ld de, TempMonNature
+	ld a, [de]
+	push af
+	add a
+	ld d, 0
+	ld e, a
+	ld hl, NatureNames
+	add de
+	ld a, [hli]
+	ld e, a
+	ld a, [hl]
+	ld d, a
+	hlcoord 1, 16
+	call PlaceString
+	pop af
+	ld d, 0
+	ld e, a
+	ld hl, .natureMods
+	add de
+	ld a, [hl]
+	and a
+	ret z
+	push af
+	swap a
+	and $F
+	hlcoord 19, 7
+	ld de, SCREEN_WIDTH*2
+.plusAdd
+	add de
+	dec a
+	jr nz, .plusAdd
+	ld [hl], $c6
+	hlcoord 19, 7
+	pop af
+	and $F
+.minusAdd
+	add de
+	dec a
+	jr nz, .minusAdd
+	ld [hl], $c7
 	ret
 ; 4e216 (13:6216)
 
+.natureMods:
+	db $00, $12, $15, $13, $14
+	db $21, $00, $25, $23, $24
+	db $51, $52, $00, $53, $54
+	db $31, $32, $35, $00, $34
+	db $41, $42, $45, $43, $00
+	
 .OTNamePointers: ; 4e216
 	dw PartyMonOT
 	dw OTPartyMonOT
@@ -800,6 +850,11 @@ IDNoString: ; 4e21e
 OTString: ; 4e222
 	db "OT/@"
 ; 4e226
+
+NatureString: ; 4e222
+	db "NATURE/@"
+
+INCLUDE "text/natures.asm"
 
 
 StatsScreen_PlaceFrontpic: ; 4e226 (13:6226)

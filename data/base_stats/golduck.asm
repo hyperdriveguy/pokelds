@@ -1,7 +1,8 @@
-	db GOLDUCK ; 055
+	dw GOLDUCK ; 055
 
 	db  80,  82,  78,  85,  95,  80
 	;   hp  atk  def  spd  sat  sdf
+	db %00001100 ; EV Yield
 
 	db WATER, WATER
 	db 75 ; catch rate

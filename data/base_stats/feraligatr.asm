@@ -1,7 +1,8 @@
-	db FERALIGATR ; 160
+	dw FERALIGATR ; 160
 
 	db  85, 105, 100,  78,  79,  83
 	;   hp  atk  def  spd  sat  sdf
+	db %01101000 ; EV Yield
 
 	db WATER, WATER
 	db 45 ; catch rate

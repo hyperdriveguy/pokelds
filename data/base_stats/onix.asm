@@ -1,7 +1,8 @@
-	db ONIX ; 095
+	dw ONIX ; 095
 
 	db  35,  45, 160,  70,  30,  45
 	;   hp  atk  def  spd  sat  sdf
+	db %00100000 ; EV Yield
 
 	db ROCK, GROUND
 	db 45 ; catch rate

@@ -1,7 +1,8 @@
-	db STARYU ; 120
+	dw STARYU ; 120
 
 	db  30,  45,  55,  85,  70,  55
 	;   hp  atk  def  spd  sat  sdf
+	db %00010000 ; EV Yield
 
 	db WATER, WATER
 	db 225 ; catch rate

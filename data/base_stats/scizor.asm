@@ -1,7 +1,8 @@
-	db SCIZOR ; 212
+	dw SCIZOR ; 212
 
 	db  70, 130, 100,  65,  55,  80
 	;   hp  atk  def  spd  sat  sdf
+	db %01100000 ; EV Yield
 
 	db BUG, STEEL
 	db 25 ; catch rate

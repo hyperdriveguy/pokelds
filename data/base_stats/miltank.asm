@@ -1,7 +1,8 @@
-	db MILTANK ; 241
+	dw MILTANK ; 241
 
 	db  95,  80, 105, 100,  40,  70
 	;   hp  atk  def  spd  sat  sdf
+	db %00110000 ; EV Yield
 
 	db NORMAL, NORMAL
 	db 45 ; catch rate

@@ -492,6 +492,7 @@ AideScript_WalkBalls1:
 	spriteface PLAYER, DOWN
 	scall AideScript_GiveYouBalls
 	applymovement ELMSLAB_ELMS_AIDE, AideWalksLeft1
+	callasm StartNuzlocke
 	end
 
 AideScript_WalkBalls2:

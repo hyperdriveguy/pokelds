@@ -115,4 +115,11 @@
 	dba Music_SuicuneBattle ; 0x178b81
 	dba Music_BattleTowerLobby ; 0x17948b
 	dba Music_MobileCenter ; 0x17961d
+	
+;bonus songs
+	dba Music_Shop ; 0x17961d
+	dba Music_NuggetBridge ; 0x17961d
+	dba Music_CeruleanGSC ; 0x17961d
+	dba Music_CinnabarGSC ; 0x17961d
+	dba Music_SinnohWildBattle
 ; e91a3

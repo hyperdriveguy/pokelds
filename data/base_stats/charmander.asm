@@ -1,7 +1,8 @@
-	db CHARMANDER ; 004
+	dw CHARMANDER ; 004
 
 	db  39,  52,  43,  65,  60,  50
 	;   hp  atk  def  spd  sat  sdf
+	db %00010000 ; EV Yield
 
 	db FIRE, FIRE
 	db 45 ; catch rate

@@ -1,7 +1,8 @@
-	db CELEBI ; 251
+	dw CELEBI ; 251
 
 	db 100, 100, 100, 100, 100, 100
 	;   hp  atk  def  spd  sat  sdf
+	db %11100000 ; EV Yield
 
 	db PSYCHIC, GRASS
 	db 45 ; catch rate

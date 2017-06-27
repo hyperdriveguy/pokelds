@@ -1,7 +1,8 @@
-	db MANTINE ; 226
+	dw MANTINE ; 226
 
 	db  65,  40,  70,  70,  80, 140
 	;   hp  atk  def  spd  sat  sdf
+	db %00000110 ; EV Yield
 
 	db WATER, FLYING
 	db 25 ; catch rate

@@ -1,7 +1,8 @@
-	db ZAPDOS ; 145
+	dw ZAPDOS ; 145
 
 	db  90,  90,  85, 100, 125,  90
 	;   hp  atk  def  spd  sat  sdf
+	db %00001110 ; EV Yield
 
 	db ELECTRIC, FLYING
 	db 3 ; catch rate

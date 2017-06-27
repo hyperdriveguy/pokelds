@@ -1,7 +1,8 @@
-	db ENTEI ; 244
+	dw ENTEI ; 244
 
 	db 115, 115,  85, 100,  90,  75
 	;   hp  atk  def  spd  sat  sdf
+	db %10110000 ; EV Yield
 
 	db FIRE, FIRE
 	db 3 ; catch rate

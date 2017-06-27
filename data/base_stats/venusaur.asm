@@ -1,7 +1,8 @@
-	db VENUSAUR ; 003
+	dw VENUSAUR ; 003
 
 	db  80,  82,  83,  80, 100, 100
 	;   hp  atk  def  spd  sat  sdf
+	db %00001101 ; EV Yield
 
 	db GRASS, POISON
 	db 45 ; catch rate

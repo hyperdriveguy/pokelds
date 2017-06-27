@@ -1,7 +1,8 @@
-	db KADABRA ; 064
+	dw KADABRA ; 064
 
 	db  40,  35,  30, 105, 120,  70
 	;   hp  atk  def  spd  sat  sdf
+	db %00001100 ; EV Yield
 
 	db PSYCHIC, PSYCHIC
 	db 100 ; catch rate

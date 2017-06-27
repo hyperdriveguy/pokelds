@@ -1,7 +1,8 @@
-	db DRAGONITE ; 149
+	dw DRAGONITE ; 149
 
 	db  91, 134,  95,  80, 100, 100
 	;   hp  atk  def  spd  sat  sdf
+	db %01110000 ; EV Yield
 
 	db DRAGON, FLYING
 	db 45 ; catch rate

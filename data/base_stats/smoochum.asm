@@ -1,7 +1,8 @@
-	db SMOOCHUM ; 238
+	dw SMOOCHUM ; 238
 
 	db  45,  30,  15,  65,  85,  65
 	;   hp  atk  def  spd  sat  sdf
+	db %00001000 ; EV Yield
 
 	db ICE, PSYCHIC
 	db 45 ; catch rate

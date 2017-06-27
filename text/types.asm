@@ -56,13 +56,18 @@ PrintMoveType: ; 5093a
 	pop hl
 
 	ld b, a
-
+	dec hl
+	swap a
+	rrca
+	and $03
+	add $C8
+	ld [hli], a ;place physical/special icon
 
 PrintType: ; 50953
 ; Print type b at hl.
 
 	ld a, b
-
+	and $1F ;so we ignore if the type contains physical special split data
 	push hl
 	add a
 	ld hl, TypeNames
@@ -103,20 +108,9 @@ TypeNames: ; 5097b
 	dw Poison
 	dw Ground
 	dw Rock
-	dw Bird
 	dw Bug
 	dw Ghost
 	dw Steel
-	dw Normal
-	dw Normal
-	dw Normal
-	dw Normal
-	dw Normal
-	dw Normal
-	dw Normal
-	dw Normal
-	dw Normal
-	dw CurseType
 	dw Fire
 	dw Water
 	dw Grass
@@ -125,6 +119,8 @@ TypeNames: ; 5097b
 	dw Ice
 	dw Dragon
 	dw Dark
+	dw Fairy
+	dw CurseType
 
 Normal:    db "NORMAL@"
 Fighting:  db "FIGHTING@"
@@ -139,11 +135,11 @@ Psychic:   db "PSYCHIC@"
 Ice:       db "ICE@"
 Ground:    db "GROUND@"
 Rock:      db "ROCK@"
-Bird:      db "BIRD@"
 Bug:       db "BUG@"
 Ghost:     db "GHOST@"
 Steel:     db "STEEL@"
 Dragon:    db "DRAGON@"
 Dark:      db "DARK@"
+Fairy:      db "FAIRY@"
 
 ; 50a28

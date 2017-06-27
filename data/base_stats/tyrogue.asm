@@ -1,7 +1,8 @@
-	db TYROGUE ; 236
+	dw TYROGUE ; 236
 
 	db  35,  35,  35,  35,  35,  35
 	;   hp  atk  def  spd  sat  sdf
+	db %01000000 ; EV Yield
 
 	db FIGHTING, FIGHTING
 	db 75 ; catch rate

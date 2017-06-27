@@ -344,6 +344,11 @@ Text_AreYouABoyOrAreYouAGirl::
 	line "Or are you a girl?"
 	done
 
+Text_Nuzlocke::
+	text "How do you want to"
+	line "play this game?"
+	done
+
 UnknownText_0x1c0cc6::
 	text "<USER>'s"
 	line "@"

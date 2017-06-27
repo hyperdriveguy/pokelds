@@ -1,7 +1,8 @@
-	db PARASECT ; 047
+	dw PARASECT ; 047
 
 	db  60,  95,  80,  30,  60,  80
 	;   hp  atk  def  spd  sat  sdf
+	db %01101000 ; EV Yield
 
 	db BUG, GRASS
 	db 75 ; catch rate

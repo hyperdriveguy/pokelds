@@ -1,7 +1,8 @@
-	db BLASTOISE ; 009
+	dw BLASTOISE ; 009
 
 	db  79,  83, 100,  78,  85, 105
 	;   hp  atk  def  spd  sat  sdf
+	db %00000111 ; EV Yield
 
 	db WATER, WATER
 	db 45 ; catch rate

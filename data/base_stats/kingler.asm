@@ -1,7 +1,8 @@
-	db KINGLER ; 099
+	dw KINGLER ; 099
 
 	db  55, 130, 115,  75,  50,  50
 	;   hp  atk  def  spd  sat  sdf
+	db %01100000 ; EV Yield
 
 	db WATER, WATER
 	db 60 ; catch rate

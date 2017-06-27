@@ -1,7 +1,8 @@
-	db DEWGONG ; 087
+	dw DEWGONG ; 087
 
 	db  90,  70,  80,  70,  70,  95
 	;   hp  atk  def  spd  sat  sdf
+	db %00000110 ; EV Yield
 
 	db WATER, ICE
 	db 75 ; catch rate

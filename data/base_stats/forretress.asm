@@ -1,7 +1,8 @@
-	db FORRETRESS ; 205
+	dw FORRETRESS ; 205
 
 	db  75,  90, 140,  40,  60,  60
 	;   hp  atk  def  spd  sat  sdf
+	db %00110000 ; EV Yield
 
 	db BUG, STEEL
 	db 75 ; catch rate

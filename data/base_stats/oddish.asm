@@ -1,7 +1,8 @@
-	db ODDISH ; 043
+	dw ODDISH ; 043
 
 	db  45,  50,  55,  30,  75,  65
 	;   hp  atk  def  spd  sat  sdf
+	db %00001000 ; EV Yield
 
 	db GRASS, POISON
 	db 255 ; catch rate

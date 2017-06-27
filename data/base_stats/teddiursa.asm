@@ -1,7 +1,8 @@
-	db TEDDIURSA ; 216
+	dw TEDDIURSA ; 216
 
 	db  60,  80,  50,  40,  50,  50
 	;   hp  atk  def  spd  sat  sdf
+	db %01000000 ; EV Yield
 
 	db NORMAL, NORMAL
 	db 120 ; catch rate

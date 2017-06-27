@@ -1,7 +1,8 @@
-	db MAGMAR ; 126
+	dw MAGMAR ; 126
 
 	db  65,  95,  57,  93, 100,  85
 	;   hp  atk  def  spd  sat  sdf
+	db %00001100 ; EV Yield
 
 	db FIRE, FIRE
 	db 45 ; catch rate

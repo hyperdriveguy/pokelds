@@ -1,7 +1,8 @@
-	db NIDORINA ; 030
+	dw NIDORINA ; 030
 
 	db  70,  62,  67,  56,  55,  55
 	;   hp  atk  def  spd  sat  sdf
+	db %11000000 ; EV Yield
 
 	db POISON, POISON
 	db 120 ; catch rate

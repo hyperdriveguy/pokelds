@@ -1,7 +1,8 @@
-	db PIKACHU ; 025
+	dw PIKACHU ; 025
 
-	db  35,  55,  30,  90,  50,  40
+	db  35,  55,  40,  90,  50,  50
 	;   hp  atk  def  spd  sat  sdf
+	db %00011000 ; EV Yield
 
 	db ELECTRIC, ELECTRIC
 	db 190 ; catch rate
@@ -15,7 +16,7 @@
 	dn 5, 5 ; frontpic dimensions
 	db 0, 0, 0, 0 ; padding
 	db MEDIUM_FAST ; growth rate
-	dn FIELD, FAIRY ; egg groups
+	dn FIELD, FAIRYEGG ; egg groups
 
 	; tmhm
 	tmhm DYNAMICPUNCH, HEADBUTT, CURSE, ROLLOUT, TOXIC, ZAP_CANNON, HIDDEN_POWER, SNORE, PROTECT, RAIN_DANCE, ENDURE, FRUSTRATION, IRON_TAIL, THUNDER, RETURN, MUD_SLAP, DOUBLE_TEAM, SWAGGER, SLEEP_TALK, SWIFT, DEFENSE_CURL, THUNDERPUNCH, DETECT, REST, ATTRACT, STRENGTH, FLASH, THUNDERBOLT

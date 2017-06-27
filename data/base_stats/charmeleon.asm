@@ -1,7 +1,8 @@
-	db CHARMELEON ; 005
+	dw CHARMELEON ; 005
 
 	db  58,  64,  58,  80,  80,  65
 	;   hp  atk  def  spd  sat  sdf
+	db %00010100 ; EV Yield
 
 	db FIRE, FIRE
 	db 45 ; catch rate

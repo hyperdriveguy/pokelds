@@ -1,7 +1,8 @@
-	db SANDSHREW ; 027
+	dw SANDSHREW ; 027
 
 	db  50,  75,  85,  40,  20,  30
 	;   hp  atk  def  spd  sat  sdf
+	db %00100000 ; EV Yield
 
 	db GROUND, GROUND
 	db 255 ; catch rate

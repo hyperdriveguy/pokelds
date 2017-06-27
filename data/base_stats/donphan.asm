@@ -1,7 +1,8 @@
-	db DONPHAN ; 232
+	dw DONPHAN ; 232
 
 	db  90, 120, 120,  50,  60,  60
 	;   hp  atk  def  spd  sat  sdf
+	db %01010000 ; EV Yield
 
 	db GROUND, GROUND
 	db 60 ; catch rate

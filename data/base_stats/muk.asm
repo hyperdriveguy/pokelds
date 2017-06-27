@@ -1,7 +1,8 @@
-	db MUK ; 089
+	dw MUK ; 089
 
 	db 105, 105,  75,  50,  65, 100
 	;   hp  atk  def  spd  sat  sdf
+	db %10100000 ; EV Yield
 
 	db POISON, POISON
 	db 75 ; catch rate

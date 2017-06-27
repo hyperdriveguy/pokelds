@@ -1,7 +1,8 @@
-	db MISDREAVUS ; 200
+	dw MISDREAVUS ; 200
 
 	db  60,  60,  60,  85,  85,  85
 	;   hp  atk  def  spd  sat  sdf
+	db %00000100 ; EV Yield
 
 	db GHOST, GHOST
 	db 45 ; catch rate

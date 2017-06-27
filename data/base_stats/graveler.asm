@@ -1,7 +1,8 @@
-	db GRAVELER ; 075
+	dw GRAVELER ; 075
 
 	db  55,  95, 115,  35,  45,  45
 	;   hp  atk  def  spd  sat  sdf
+	db %00110000 ; EV Yield
 
 	db ROCK, GROUND
 	db 120 ; catch rate

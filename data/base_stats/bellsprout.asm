@@ -1,7 +1,8 @@
-	db BELLSPROUT ; 069
+	dw BELLSPROUT ; 069
 
 	db  50,  75,  35,  40,  70,  30
 	;   hp  atk  def  spd  sat  sdf
+	db %01000000 ; EV Yield
 
 	db GRASS, POISON
 	db 255 ; catch rate

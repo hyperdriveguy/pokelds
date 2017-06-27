@@ -1,7 +1,8 @@
-	db EEVEE ; 133
+	dw EEVEE ; 133
 
 	db  55,  55,  50,  55,  45,  65
 	;   hp  atk  def  spd  sat  sdf
+	db %00000100 ; EV Yield
 
 	db NORMAL, NORMAL
 	db 45 ; catch rate

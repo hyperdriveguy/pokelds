@@ -1,7 +1,8 @@
-	db CHARIZARD ; 006
+	dw CHARIZARD ; 006
 
 	db  78,  84,  78, 100, 109,  85
 	;   hp  atk  def  spd  sat  sdf
+	db %00001110 ; EV Yield
 
 	db FIRE, FLYING
 	db 45 ; catch rate

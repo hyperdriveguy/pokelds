@@ -1,7 +1,8 @@
-	db POLIWRATH ; 062
+	dw POLIWRATH ; 062
 
-	db  90,  85,  95,  70,  70,  90
+	db  90,  95,  95,  70,  70,  90
 	;   hp  atk  def  spd  sat  sdf
+	db %00111000 ; EV Yield
 
 	db WATER, FIGHTING
 	db 45 ; catch rate

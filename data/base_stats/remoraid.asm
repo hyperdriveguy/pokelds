@@ -1,7 +1,8 @@
-	db REMORAID ; 223
+	dw REMORAID ; 223
 
 	db  35,  65,  35,  65,  65,  35
 	;   hp  atk  def  spd  sat  sdf
+	db %00001000 ; EV Yield
 
 	db WATER, WATER
 	db 190 ; catch rate

@@ -11,56 +11,7 @@ HiddenPowerDamage: ; fbced
 
 ; Power:
 
-; Take the top bit from each stat
-
-	; Attack
-	ld a, [hl]
-	swap a
-	and 8
-
-	; Defense
-	ld b, a
-	ld a, [hli]
-	and 8
-	srl a
-	or b
-
-	; Speed
-	ld b, a
-	ld a, [hl]
-	swap a
-	and 8
-	srl a
-	srl a
-	or b
-
-	; Special
-	ld b, a
-	ld a, [hl]
-	and 8
-	srl a
-	srl a
-	srl a
-	or b
-
-; Multiply by 5
-	ld b, a
-	add a
-	add a
-	add b
-
-; Add Special & 3
-	ld b, a
-	ld a, [hld]
-	and 3
-	add b
-
-; Divide by 2 and add 30 + 1
-	srl a
-	add 30
-	inc a
-
-	ld d, a
+	ld d, 60
 
 
 ; Type:
@@ -80,16 +31,6 @@ HiddenPowerDamage: ; fbced
 
 ; Skip Normal
 	inc a
-
-; Skip Bird
-	cp BIRD
-	jr c, .done
-	inc a
-
-; Skip unused types
-	cp UNUSED_TYPES
-	jr c, .done
-	add SPECIAL - UNUSED_TYPES
 
 .done
 

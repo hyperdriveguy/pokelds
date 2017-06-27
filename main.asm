@@ -1435,6 +1435,29 @@ PlayBattleMusic: ; 2ee6c
 	and a
 	jr nz, .trainermusic
 
+	ld a, [wNuzlockeMode]
+	and a
+	jr z, .notNuzMusic
+	call GetThisMap
+	ld hl, wCaughtMonLocation
+	add l
+	ld l, a
+	jr nc, .next
+	inc h
+.next
+	ld a, [hl]
+	ld [wCaughtMonHere], a
+	ld a, [wNuzlockeStarted]
+	and 1
+	ld [hl], a
+	cp 0
+	jr z, .notNuzMusic
+	ld a, [wCaughtMonHere]
+	and 1
+	jr nz, .notNuzMusic
+	ld de, MUSIC_SINNOH_WILD
+	jr .done
+.notNuzMusic
 	callba RegionCheck
 	ld a, e
 	and a
@@ -3106,6 +3129,9 @@ CheckPartyFullAfterContest: ; 4d9e5
 	ret
 
 GiveANickname_YesNo: ; 4db3b
+	ld a, [wNuzlockeMode]
+	and a
+	ret nz
 	ld hl, TextJump_GiveANickname
 	call PrintText
 	jp YesNoBox
@@ -3866,6 +3892,7 @@ PrintTempMonStats: ; 50b7b
 	add hl, bc
 	ld bc, SCREEN_WIDTH
 	add hl, bc
+	dec hl
 	ld de, TempMonAttack
 	lb bc, 2, 3
 	call .PrintStat
@@ -4642,8 +4669,6 @@ _SwitchPartyMons:
 
 INCLUDE "gfx/load_pics.asm"
 INCLUDE "engine/move_mon_wo_mail.asm"
-BaseData::
-INCLUDE "data/base_stats.asm"
 
 PokemonNames::
 INCLUDE "data/pokemon_names.asm"
@@ -6092,3 +6117,6 @@ INCBIN "misc/stadium2_2.bin"
 ELSE
 INCBIN "misc/stadium2_1.bin"
 ENDC
+
+BaseData::
+INCLUDE "data/base_stats.asm"

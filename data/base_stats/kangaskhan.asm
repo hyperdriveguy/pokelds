@@ -1,7 +1,8 @@
-	db KANGASKHAN ; 115
+	dw KANGASKHAN ; 115
 
 	db 105,  95,  80,  90,  40,  80
 	;   hp  atk  def  spd  sat  sdf
+	db %11000000 ; EV Yield
 
 	db NORMAL, NORMAL
 	db 45 ; catch rate

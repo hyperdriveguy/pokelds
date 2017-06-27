@@ -1,7 +1,8 @@
-	db LANTURN ; 171
+	dw LANTURN ; 171
 
 	db 125,  58,  58,  67,  76,  76
 	;   hp  atk  def  spd  sat  sdf
+	db %11000000 ; EV Yield
 
 	db WATER, ELECTRIC
 	db 75 ; catch rate

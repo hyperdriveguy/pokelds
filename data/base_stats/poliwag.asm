@@ -1,7 +1,8 @@
-	db POLIWAG ; 060
+	dw POLIWAG ; 060
 
 	db  40,  50,  40,  90,  40,  40
 	;   hp  atk  def  spd  sat  sdf
+	db %00010000 ; EV Yield
 
 	db WATER, WATER
 	db 255 ; catch rate

@@ -1,7 +1,8 @@
-	db MAGNETON ; 082
+	dw MAGNETON ; 082
 
 	db  50,  60,  95,  70, 120,  70
 	;   hp  atk  def  spd  sat  sdf
+	db %00001100 ; EV Yield
 
 	db ELECTRIC, STEEL
 	db 60 ; catch rate

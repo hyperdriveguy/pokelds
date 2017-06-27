@@ -1,7 +1,8 @@
-	db AMPHAROS ; 181
+	dw AMPHAROS ; 181
 
-	db  90,  75,  75,  55, 115,  90
+	db  90,  75,  85,  55, 115,  90
 	;   hp  atk  def  spd  sat  sdf
+	db %00001110 ; EV Yield
 
 	db ELECTRIC, ELECTRIC
 	db 45 ; catch rate

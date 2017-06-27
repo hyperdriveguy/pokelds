@@ -1,7 +1,8 @@
-	db MEGANIUM ; 154
+	dw MEGANIUM ; 154
 
 	db  80,  82, 100,  80,  83, 100
 	;   hp  atk  def  spd  sat  sdf
+	db %00100011 ; EV Yield
 
 	db GRASS, GRASS
 	db 45 ; catch rate

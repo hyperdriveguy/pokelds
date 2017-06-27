@@ -1,7 +1,8 @@
-	db VILEPLUME ; 045
+	dw VILEPLUME ; 045
 
-	db  75,  80,  85,  50, 100,  90
+	db  75,  80,  85,  50, 110,  90
 	;   hp  atk  def  spd  sat  sdf
+	db %00001110 ; EV Yield
 
 	db GRASS, POISON
 	db 45 ; catch rate

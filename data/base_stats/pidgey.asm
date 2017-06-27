@@ -1,7 +1,8 @@
-	db PIDGEY ; 016
+	dw PIDGEY ; 016
 
 	db  40,  45,  40,  56,  35,  35
 	;   hp  atk  def  spd  sat  sdf
+	db %00010000 ; EV Yield
 
 	db NORMAL, FLYING
 	db 255 ; catch rate

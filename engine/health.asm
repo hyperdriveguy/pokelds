@@ -1,3 +1,78 @@
+KillParty: ; c658
+	ld a, [wNuzlockeMode]
+	and a
+	ret z
+	xor a
+	ld b, a;this will be the number of pokemon that can fight still
+	ld [CurPartyMon], a
+	ld hl, PartySpecies
+.loop
+	ld a, [hli]
+	cp -1
+	jr z, .done
+	cp EGG
+	jr z, .next
+	
+	push hl
+	call KillPartyMon
+	pop hl
+
+.next
+	ld a, [CurPartyMon]
+	inc a
+	ld [CurPartyMon], a
+	jr .loop
+
+.done
+	ld a, b
+	cp 0
+	ret nz
+	callba EmptyAllSRAMBanks
+	ld a, $11
+	jp Start
+
+KillPartyMon: ; c677
+	push bc
+	ld a, MON_SPECIES
+	call GetPartyParamLocation
+	ld d, h
+	ld e, l
+
+	ld hl, MON_MAXHP
+	add hl, de
+	dec hl
+	dec hl
+
+	pop bc
+	inc b
+	ld a, [hli]
+	or [hl]
+	ret nz
+	dec b
+	push bc
+	ld a, [PartyCount]
+	dec a
+	jr nz, .notgameover
+	ld [PartyCount], a
+	dec a
+	ld [PartyCount+1], a	
+	jr .finish
+.notgameover
+	xor a
+	ld [wPokemonWithdrawDepositParameter], a
+	callba RemoveMonFromPartyOrBox
+.finish
+	pop bc
+	pop de
+	pop hl
+	dec hl
+	push hl
+	push de
+	ld a, [CurPartyMon]
+	dec a
+	ld [CurPartyMon], a
+	ret
+
 HealParty: ; c658
 	xor a
 	ld [CurPartyMon], a

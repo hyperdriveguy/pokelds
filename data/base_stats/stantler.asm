@@ -1,7 +1,8 @@
-	db STANTLER ; 234
+	dw STANTLER ; 234
 
 	db  73,  95,  62,  85,  85,  65
 	;   hp  atk  def  spd  sat  sdf
+	db %01000000 ; EV Yield
 
 	db NORMAL, NORMAL
 	db 45 ; catch rate

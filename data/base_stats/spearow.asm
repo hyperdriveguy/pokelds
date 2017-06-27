@@ -1,7 +1,8 @@
-	db SPEAROW ; 021
+	dw SPEAROW ; 021
 
 	db  40,  60,  30,  70,  31,  31
 	;   hp  atk  def  spd  sat  sdf
+	db %00010000 ; EV Yield
 
 	db NORMAL, FLYING
 	db 255 ; catch rate

@@ -1,7 +1,8 @@
-	db GIRAFARIG ; 203
+	dw GIRAFARIG ; 203
 
 	db  70,  80,  65,  85,  90,  65
 	;   hp  atk  def  spd  sat  sdf
+	db %00001100 ; EV Yield
 
 	db NORMAL, PSYCHIC
 	db 60 ; catch rate

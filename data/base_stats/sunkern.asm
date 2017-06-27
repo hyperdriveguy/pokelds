@@ -1,7 +1,8 @@
-	db SUNKERN ; 191
+	dw SUNKERN ; 191
 
 	db  30,  30,  30,  30,  30,  30
 	;   hp  atk  def  spd  sat  sdf
+	db %00001000 ; EV Yield
 
 	db GRASS, GRASS
 	db 235 ; catch rate

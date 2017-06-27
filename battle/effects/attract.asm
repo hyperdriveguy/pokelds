@@ -54,8 +54,12 @@ CheckOppositeGender: ; 377f5
 .not_transformed
 	ld a, [hli]
 	ld [TempMonDVs], a
-	ld a, [hl]
+	ld a, [hli]
 	ld [TempMonDVs + 1], a
+	ld a, [hli]
+	ld [TempMonDVs + 2], a
+	ld a, [hl]
+	ld [TempMonDVs + 3], a
 	ld a, 3
 	ld [MonType], a
 	callba GetGender

@@ -1,7 +1,8 @@
-	db PICHU ; 172
+	dw PICHU ; 172
 
 	db  20,  40,  15,  60,  35,  35
 	;   hp  atk  def  spd  sat  sdf
+	db %00010000 ; EV Yield
 
 	db ELECTRIC, ELECTRIC
 	db 190 ; catch rate

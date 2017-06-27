@@ -1,7 +1,8 @@
-	db SUNFLORA ; 192
+	dw SUNFLORA ; 192
 
 	db  75,  75,  55,  30, 105,  85
 	;   hp  atk  def  spd  sat  sdf
+	db %00001100 ; EV Yield
 
 	db GRASS, GRASS
 	db 120 ; catch rate

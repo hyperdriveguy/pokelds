@@ -1,7 +1,8 @@
-	db URSARING ; 217
+	dw URSARING ; 217
 
 	db  90, 130,  75,  55,  75,  75
 	;   hp  atk  def  spd  sat  sdf
+	db %01100000 ; EV Yield
 
 	db NORMAL, NORMAL
 	db 60 ; catch rate

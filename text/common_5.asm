@@ -648,6 +648,15 @@ UnknownText_0x1c5def::
 	text "Don't be a thief!"
 	prompt
 
+NuzBallText1s::
+	text "You have already"
+	line "battled here!"
+	prompt
+	
+NuzBallText2s::
+	text "Look elsewhere!"
+	prompt
+
 UnknownText_0x1c5e01::
 	text "Cycling isn't"
 	line "allowed here."

@@ -1,7 +1,8 @@
-	db CHIKORITA ; 152
+	dw CHIKORITA ; 152
 
 	db  45,  49,  65,  45,  49,  65
 	;   hp  atk  def  spd  sat  sdf
+	db %00000100 ; EV Yield
 
 	db GRASS, GRASS
 	db 45 ; catch rate

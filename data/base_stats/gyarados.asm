@@ -1,7 +1,8 @@
-	db GYARADOS ; 130
+	dw GYARADOS ; 130
 
 	db  95, 125,  79,  81,  60, 100
 	;   hp  atk  def  spd  sat  sdf
+	db %01100000 ; EV Yield
 
 	db WATER, FLYING
 	db 45 ; catch rate

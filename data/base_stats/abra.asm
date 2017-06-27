@@ -1,7 +1,8 @@
-	db ABRA ; 063
+	dw ABRA ; 063
 
 	db  25,  20,  15,  90, 105,  55
 	;   hp  atk  def  spd  sat  sdf
+	db %00001000 ; EV Yield
 
 	db PSYCHIC, PSYCHIC
 	db 200 ; catch rate

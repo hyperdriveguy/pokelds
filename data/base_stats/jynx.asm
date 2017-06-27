@@ -1,7 +1,8 @@
-	db JYNX ; 124
+	dw JYNX ; 124
 
 	db  65,  50,  35,  95, 115,  95
 	;   hp  atk  def  spd  sat  sdf
+	db %00001100 ; EV Yield
 
 	db ICE, PSYCHIC
 	db 45 ; catch rate

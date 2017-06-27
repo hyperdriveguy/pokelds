@@ -1,7 +1,8 @@
-	db VAPOREON ; 134
+	dw VAPOREON ; 134
 
 	db 130,  65,  60,  65, 110,  95
 	;   hp  atk  def  spd  sat  sdf
+	db %11000000 ; EV Yield
 
 	db WATER, WATER
 	db 45 ; catch rate

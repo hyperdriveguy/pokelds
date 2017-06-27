@@ -1,7 +1,8 @@
-	db MANKEY ; 056
+	dw MANKEY ; 056
 
 	db  40,  80,  35,  70,  35,  45
 	;   hp  atk  def  spd  sat  sdf
+	db %01000000 ; EV Yield
 
 	db FIGHTING, FIGHTING
 	db 190 ; catch rate

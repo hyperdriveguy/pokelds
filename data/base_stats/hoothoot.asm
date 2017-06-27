@@ -1,7 +1,8 @@
-	db HOOTHOOT ; 163
+	dw HOOTHOOT ; 163
 
 	db  60,  30,  30,  50,  36,  56
 	;   hp  atk  def  spd  sat  sdf
+	db %10000000 ; EV Yield
 
 	db NORMAL, FLYING
 	db 255 ; catch rate
