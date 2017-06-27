@@ -290,7 +290,7 @@ endr
 	jp PrintRadioLine
 
 .routes
-	map ROUTE_29
+	map ROUTE_101
 	map ROUTE_46
 	map ROUTE_30
 	map ROUTE_32
@@ -1362,7 +1362,6 @@ PeoplePlaces6: ; Places
 	map ROUTE_11
 	map ROUTE_16
 	map ROUTE_14
-	map CINNABAR_POKECENTER_2F_BETA
 
 PnP_Text5:
 	; @ @

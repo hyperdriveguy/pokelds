@@ -33,8 +33,7 @@ UnknownScript_0xbcedf: ; 0xbcedf
 
 UnknownScript_0xbcee7: ; 0xbcee7
 	checkcode VAR_MAPGROUP
-	if_equal GROUP_NEW_BARK_TOWN, .newbark
-	if_equal GROUP_CHERRYGROVE_CITY, .cherrygrove
+	if_equal GROUP_BOUNTIFUL_TOWN, .bountiful
 	if_equal GROUP_VIOLET_CITY, .violet
 	if_equal GROUP_AZALEA_TOWN, .azalea
 	if_equal GROUP_GOLDENROD_CITY, .goldenrod
@@ -42,16 +41,10 @@ UnknownScript_0xbcee7: ; 0xbcee7
 	buttonsound
 	jump UnknownScript_0xbcf37
 
-.newbark ; 0xbcf05
-	farwritetext MomPhoneNewBarkText
+.bountiful ; 0xbcf05
+	farwritetext MomPhoneBountifulText
 	buttonsound
 	jump UnknownScript_0xbcf37
-
-.cherrygrove ; 0xbcf0d
-	farwritetext MomPhoneCherrygroveText
-	buttonsound
-	jump UnknownScript_0xbcf37
-
 .violet ; 0xbcf15
 	landmarktotext SPROUT_TOWER, 1
 	jump UnknownScript_0xbcedf

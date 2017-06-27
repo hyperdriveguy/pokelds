@@ -165,7 +165,7 @@ TeleportGuyScript:
 	playsound SFX_WARP_TO
 	special FadeOutPalettes
 	waitsfx
-	warp NEW_BARK_TOWN, $d, $6
+	warp BOUNTIFUL_TOWN, 12, 11
 	end
 
 .No:

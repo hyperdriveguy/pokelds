@@ -46,9 +46,7 @@ CherrygroveEvolutionSpeechHouse_MapEventHeader:
 	db 0, 0
 
 .Warps:
-	db 2
-	warp_def $7, $2, 5, CHERRYGROVE_CITY
-	warp_def $7, $3, 5, CHERRYGROVE_CITY
+	db 0
 
 .XYTriggers:
 	db 0

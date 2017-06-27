@@ -49,9 +49,7 @@ CherrygroveGymSpeechHouse_MapEventHeader:
 	db 0, 0
 
 .Warps:
-	db 2
-	warp_def $7, $2, 3, CHERRYGROVE_CITY
-	warp_def $7, $3, 3, CHERRYGROVE_CITY
+	db 0
 
 .XYTriggers:
 	db 0

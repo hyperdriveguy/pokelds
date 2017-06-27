@@ -1188,7 +1188,7 @@
 	db 23, GOLBAT
 	db 23, GOLBAT
 
-	map ROUTE_29
+	map ROUTE_101
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 2, PIDGEY
@@ -1196,7 +1196,7 @@
 	db 3, PIDGEY
 	db 3, SENTRET
 	db 2, RATTATA
-	db 3, HOPPIP
+	db 3, SENTRET
 	db 3, HOPPIP
 	; day
 	db 2, PIDGEY
@@ -1214,6 +1214,33 @@
 	db 2, RATTATA
 	db 3, HOOTHOOT
 	db 3, HOOTHOOT
+
+	map PLEASANT_GROVE
+	db 10 percent, 5 percent, 20 percent ; encounter rates: morn/day/nite
+	; morn
+	db 3, LEDYBA
+	db 3, CATERPIE
+	db 4, CATERPIE
+	db 4, PIDGEY
+	db 3, WEEDLE
+	db 4, HOPPIP
+	db 4, ODDISH
+	; day
+	db 3, PIDGEY
+	db 3, CATERPIE
+	db 4, SENTRET
+	db 4, PIDGEY
+	db 3, WEEDLE
+	db 4, HOPPIP
+	db 4, YANMA
+	; nite
+	db 3, SPINARAK
+	db 3, HOOTHOOT
+	db 4, POLIWAG
+	db 4, ZUBAT
+	db 3, ZUBAT
+	db 4, RATTATA
+	db 4, EKANS
 
 	map ROUTE_30
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite

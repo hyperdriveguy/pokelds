@@ -98,25 +98,20 @@ KrisNeighborRadioText4:
 	line "#MON CHANNEL…"
 	done
 
-KrissNeighborsHouse_MapEventHeader:
-	; filler
-	db 0, 0
+KrissNeighborsHouse_MapEventHeader:: db 0, 0
 
-.Warps:
-	db 2
-	warp_def $7, $2, 3, NEW_BARK_TOWN
-	warp_def $7, $3, 3, NEW_BARK_TOWN
+.Warps: db 2
+	warp_def 7, 2, 3, BOUNTIFUL_TOWN
+	warp_def 7, 3, 3, BOUNTIFUL_TOWN
 
-.XYTriggers:
-	db 0
+.CoordEvents: db 0
 
-.Signposts:
-	db 3
+.BGEvents: db 3
 	signpost 1, 0, SIGNPOST_READ, KrissNeighborsHouseBookshelf
 	signpost 1, 1, SIGNPOST_READ, KrissNeighborsHouseBookshelf
 	signpost 1, 7, SIGNPOST_READ, KrissNeighborsHouseRadio
 
-.PersonEvents:
-	db 2
+.ObjectEvents: db 2
 	person_event SPRITE_COOLTRAINER_F, 3, 2, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, (1 << 3) | PAL_OW_RED, PERSONTYPE_SCRIPT, 0, KrissNeighborsDaughter, -1
 	person_event SPRITE_POKEFAN_F, 3, 5, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, (1 << 3) | PAL_OW_RED, PERSONTYPE_SCRIPT, 0, KrissNeighbor, EVENT_KRISS_NEIGHBORS_HOUSE_NEIGHBOR
+

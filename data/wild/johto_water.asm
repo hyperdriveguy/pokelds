@@ -108,6 +108,12 @@
 	db 15, TENTACOOL
 	db 20, TENTACRUEL
 
+	map ROUTE_101
+	db 2 percent ; encounter rate
+	db 20, POLIWAG
+	db 15, POLIWAG
+	db 20, POLIWHIRL
+
 	map ROUTE_30
 	db 2 percent ; encounter rate
 	db 20, POLIWAG
@@ -174,17 +180,23 @@
 	db 15, MAGIKARP
 	db 5, MAGIKARP
 
-	map NEW_BARK_TOWN
+	map BOUNTIFUL_TOWN
 	db 6 percent ; encounter rate
 	db 20, TENTACOOL
 	db 15, TENTACOOL
 	db 20, TENTACRUEL
-
-	map CHERRYGROVE_CITY
-	db 6 percent ; encounter rate
-	db 20, TENTACOOL
-	db 15, TENTACOOL
-	db 20, TENTACRUEL
+	
+	map ROUTE_101
+	db 10 percent ; encounter rate
+	db 10, PSYDUCK
+	db 10, POLIWHIRL
+	db 15, MAGIKARP
+	
+	map PLEASANT_GROVE
+	db 20 percent ; encounter rate
+	db 15, PSYDUCK
+	db 10, POLIWHIRL
+	db 19, MAGIKARP
 
 	map VIOLET_CITY
 	db 2 percent ; encounter rate

@@ -280,7 +280,7 @@ ElmDirectionsScript:
 	setevent EVENT_GOT_A_POKEMON_FROM_ELM
 	setevent EVENT_RIVAL_CHERRYGROVE_CITY
 	dotrigger $5
-	domaptrigger NEW_BARK_TOWN, $1
+	domaptrigger BOUNTIFUL_TOWN, $1
 	end
 
 ElmDescribesMrPokemonScript:
@@ -346,7 +346,7 @@ ElmAfterTheftScript:
 	buttonsound
 	setevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
 	setflag ENGINE_BUG_CONTEST_ON
-	domaptrigger ROUTE_29, $1
+	domaptrigger ROUTE_101, $1
 	clearevent EVENT_ROUTE_30_YOUNGSTER_JOEY
 	setevent EVENT_ROUTE_30_BATTLE
 	writetext ElmAfterTheftText6
@@ -1375,28 +1375,23 @@ ElmsLabPCText:
 	line "screen…"
 	done
 
-ElmsLab_MapEventHeader:
-	; filler
-	db 0, 0
+ElmsLab_MapEventHeader:: db 0, 0
 
-.Warps:
-	db 2
-	warp_def $b, $4, 1, NEW_BARK_TOWN
-	warp_def $b, $5, 1, NEW_BARK_TOWN
+.Warps: db 2
+	warp_def 11, 4, 1, BOUNTIFUL_TOWN
+	warp_def 11, 5, 1, BOUNTIFUL_TOWN
 
-.XYTriggers:
-	db 8
-	xy_trigger 1, $6, $4, $0, LabTryToLeaveScript, $0, $0
-	xy_trigger 1, $6, $5, $0, LabTryToLeaveScript, $0, $0
-	xy_trigger 3, $5, $4, $0, MeetCopScript, $0, $0
-	xy_trigger 3, $5, $5, $0, MeetCopScript2, $0, $0
-	xy_trigger 5, $8, $4, $0, AideScript_WalkPotions1, $0, $0
-	xy_trigger 5, $8, $5, $0, AideScript_WalkPotions2, $0, $0
-	xy_trigger 6, $8, $4, $0, AideScript_WalkBalls1, $0, $0
-	xy_trigger 6, $8, $5, $0, AideScript_WalkBalls2, $0, $0
+.CoordEvents: db 8
+	xy_trigger 1, 6, 4, 0, LabTryToLeaveScript, 0, 0
+	xy_trigger 1, 6, 5, 0, LabTryToLeaveScript, 0, 0
+	xy_trigger 3, 5, 4, 0, MeetCopScript, 0, 0
+	xy_trigger 3, 5, 5, 0, MeetCopScript2, 0, 0
+	xy_trigger 5, 8, 4, 0, AideScript_WalkPotions1, 0, 0
+	xy_trigger 5, 8, 5, 0, AideScript_WalkPotions2, 0, 0
+	xy_trigger 6, 8, 4, 0, AideScript_WalkBalls1, 0, 0
+	xy_trigger 6, 8, 5, 0, AideScript_WalkBalls2, 0, 0
 
-.Signposts:
-	db 16
+.BGEvents: db 16
 	signpost 1, 2, SIGNPOST_READ, ElmsLabHealingMachine
 	signpost 1, 6, SIGNPOST_READ, ElmsLabBookshelf
 	signpost 1, 7, SIGNPOST_READ, ElmsLabBookshelf
@@ -1414,11 +1409,11 @@ ElmsLab_MapEventHeader:
 	signpost 0, 5, SIGNPOST_READ, ElmsLabWindow
 	signpost 5, 3, SIGNPOST_DOWN, ElmsLabPC
 
-.PersonEvents:
-	db 6
+.ObjectEvents: db 6
 	person_event SPRITE_ELM, 2, 5, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, ProfElmScript, -1
 	person_event SPRITE_SCIENTIST, 9, 2, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, (1 << 3) | PAL_OW_BLUE, PERSONTYPE_SCRIPT, 0, ElmsAideScript, EVENT_ELMS_AIDE_IN_LAB
 	person_event SPRITE_POKE_BALL, 3, 6, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, CyndaquilPokeBallScript, EVENT_CYNDAQUIL_POKEBALL_IN_ELMS_LAB
 	person_event SPRITE_POKE_BALL, 3, 7, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, TotodilePokeBallScript, EVENT_TOTODILE_POKEBALL_IN_ELMS_LAB
 	person_event SPRITE_POKE_BALL, 3, 8, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, ChikoritaPokeBallScript, EVENT_CHIKORITA_POKEBALL_IN_ELMS_LAB
 	person_event SPRITE_OFFICER, 3, 5, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, (1 << 3) | PAL_OW_BLUE, PERSONTYPE_SCRIPT, 0, CopScript, EVENT_COP_IN_ELMS_LAB
+

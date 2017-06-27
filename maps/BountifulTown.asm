@@ -1,9 +1,9 @@
 const_value set 2
-	const NEWBARKTOWN_TEACHER
-	const NEWBARKTOWN_FISHER
-	const NEWBARKTOWN_SILVER
+	const BOUNTIFULTOWN_TEACHER
+	const BOUNTIFULTOWN_FISHER
+	const BOUNTIFULTOWN_SILVER
 
-NewBarkTown_MapScriptHeader:
+BountifulTown_MapScriptHeader:
 .MapTriggers:
 	db 2
 
@@ -28,22 +28,23 @@ NewBarkTown_MapScriptHeader:
 	clearevent EVENT_FIRST_TIME_BANKING_WITH_MOM
 	return
 
-NewBarkTown_TeacherStopsYouTrigger1:
+BountifulTown_TeacherStopsYouTrigger1:
 	playmusic MUSIC_MOM
-	spriteface NEWBARKTOWN_TEACHER, LEFT
+	spriteface BOUNTIFULTOWN_TEACHER, UP
 	opentext
 	writetext Text_WaitPlayer
 	waitbutton
 	closetext
-	spriteface PLAYER, RIGHT
-	applymovement NEWBARKTOWN_TEACHER, Movement_TeacherRunsToYou1_NBT
+	spriteface PLAYER, DOWN
+	applymovement BOUNTIFULTOWN_TEACHER, Movement_TeacherRunsToYou1_NBT
 	opentext
 	writetext Text_WhatDoYouThinkYoureDoing
 	waitbutton
 	closetext
-	follow NEWBARKTOWN_TEACHER, PLAYER
-	applymovement NEWBARKTOWN_TEACHER, Movement_TeacherBringsYouBack1_NBT
+	follow BOUNTIFULTOWN_TEACHER, PLAYER
+	applymovement BOUNTIFULTOWN_TEACHER, Movement_TeacherBringsYouBack1_NBT
 	stopfollow
+	spriteface BOUNTIFULTOWN_TEACHER, UP
 	opentext
 	writetext Text_ItsDangerousToGoAlone
 	waitbutton
@@ -51,23 +52,24 @@ NewBarkTown_TeacherStopsYouTrigger1:
 	special RestartMapMusic
 	end
 
-NewBarkTown_TeacherStopsYouTrigger2:
+BountifulTown_TeacherStopsYouTrigger2:
 	playmusic MUSIC_MOM
-	spriteface NEWBARKTOWN_TEACHER, LEFT
+	spriteface BOUNTIFULTOWN_TEACHER, UP
 	opentext
 	writetext Text_WaitPlayer
 	waitbutton
 	closetext
-	spriteface PLAYER, RIGHT
-	applymovement NEWBARKTOWN_TEACHER, Movement_TeacherRunsToYou2_NBT
-	spriteface PLAYER, UP
+	spriteface PLAYER, DOWN
+	applymovement BOUNTIFULTOWN_TEACHER, Movement_TeacherRunsToYou2_NBT
+	spriteface PLAYER, LEFT
 	opentext
 	writetext Text_WhatDoYouThinkYoureDoing
 	waitbutton
 	closetext
-	follow NEWBARKTOWN_TEACHER, PLAYER
-	applymovement NEWBARKTOWN_TEACHER, Movement_TeacherBringsYouBack2_NBT
+	follow BOUNTIFULTOWN_TEACHER, PLAYER
+	applymovement BOUNTIFULTOWN_TEACHER, Movement_TeacherBringsYouBack2_NBT
 	stopfollow
+	spriteface BOUNTIFULTOWN_TEACHER, UP
 	opentext
 	writetext Text_ItsDangerousToGoAlone
 	waitbutton
@@ -75,7 +77,7 @@ NewBarkTown_TeacherStopsYouTrigger2:
 	special RestartMapMusic
 	end
 
-NewBarkTownTeacherScript:
+BountifulTownTeacherScript:
 	faceplayer
 	opentext
 	checkevent EVENT_TALKED_TO_MOM_AFTER_MYSTERY_EGG_QUEST
@@ -107,73 +109,67 @@ NewBarkTownTeacherScript:
 	closetext
 	end
 
-NewBarkTownFisherScript:
+BountifulTownFisherScript:
 	jumptextfaceplayer Text_ElmDiscoveredNewMon
 
-NewBarkTownSilverScript:
+BountifulTownSilverScript:
 	opentext
-	writetext NewBarkTownRivalText1
+	writetext BountifulTownRivalText1
 	waitbutton
 	closetext
-	spriteface NEWBARKTOWN_SILVER, LEFT
+	spriteface BOUNTIFULTOWN_SILVER, LEFT
 	opentext
-	writetext NewBarkTownRivalText2
+	writetext BountifulTownRivalText2
 	waitbutton
 	closetext
-	follow PLAYER, NEWBARKTOWN_SILVER
+	follow PLAYER, BOUNTIFULTOWN_SILVER
 	applymovement PLAYER, Movement_SilverPushesYouAway_NBT
 	stopfollow
 	pause 5
-	spriteface NEWBARKTOWN_SILVER, DOWN
+	spriteface BOUNTIFULTOWN_SILVER, DOWN
 	pause 5
 	playsound SFX_TACKLE
 	applymovement PLAYER, Movement_SilverShovesYouOut_NBT
-	applymovement NEWBARKTOWN_SILVER, Movement_SilverReturnsToTheShadows_NBT
+	applymovement BOUNTIFULTOWN_SILVER, Movement_SilverReturnsToTheShadows_NBT
 	end
 
-NewBarkTownSign:
-	jumptext NewBarkTownSignText
+BountifulTownSign:
+	jumptext BountifulTownSignText
 
-MapNewBarkTownSignpost1Script:
+MapBountifulTownPlayersHouseSignScript:
 	jumptext PlayersHouseSignText
 
-MapNewBarkTownSignpost2Script:
+MapBountifulTownElmsLabSignScript:
 	jumptext ElmsLabSignText
 
-MapNewBarkTownSignpost3Script:
+MapBountifulTownElmsHouseSignScript:
 	jumptext ElmsHouseSignText
 
 Movement_TeacherRunsToYou1_NBT:
-	step LEFT
-	step LEFT
-	step LEFT
-	step LEFT
+	step UP
+	step UP
+	step UP
 	step_end
 
 Movement_TeacherRunsToYou2_NBT:
-	step LEFT
-	step LEFT
-	step LEFT
-	step LEFT
-	step LEFT
-	turn_head DOWN
+	step UP
+	step UP
+	step UP
+	step UP
+	turn_head RIGHT
 	step_end
 
 Movement_TeacherBringsYouBack1_NBT:
-	step RIGHT
-	step RIGHT
-	step RIGHT
-	step RIGHT
-	turn_head LEFT
+	step DOWN
+	step DOWN
+	step DOWN
 	step_end
 
 Movement_TeacherBringsYouBack2_NBT:
-	step RIGHT
-	step RIGHT
-	step RIGHT
-	step RIGHT
-	step RIGHT
-	turn_head LEFT
+	step DOWN
+	step DOWN
+	step DOWN
+	step DOWN
 	step_end
 
 Movement_SilverPushesYouAway_NBT:
@@ -252,7 +248,7 @@ Text_ElmDiscoveredNewMon:
 	cont "new #MON."
 	done
 
-NewBarkTownRivalText1:
+BountifulTownRivalText1:
 	text "<......>"
 
 	para "So this is the"
@@ -260,17 +256,16 @@ NewBarkTownRivalText1:
 	cont "LAB…"
 	done
 
-NewBarkTownRivalText2:
+BountifulTownRivalText2:
 	text "…What are you"
 	line "staring at?"
 	done
 
-NewBarkTownSignText:
-	text "NEW BARK TOWN"
+BountifulTownSignText:
+	text "BOUNTIFUL TOWN"
 
-	para "The Town Where the"
-	line "Winds of a New"
-	cont "Beginning Blow"
+	para "The Humble Town of"
+	line "Plenty"
 	done
 
 PlayersHouseSignText:
@@ -285,31 +280,26 @@ ElmsHouseSignText:
 	text "ELM'S HOUSE"
 	done
 
-NewBarkTown_MapEventHeader:
-	; filler
-	db 0, 0
+BountifulTown_MapEventHeader:: db 0, 0
 
-.Warps:
-	db 4
-	warp_def $3, $6, 1, ELMS_LAB
-	warp_def $5, $d, 1, KRISS_HOUSE_1F
-	warp_def $b, $3, 1, KRISS_NEIGHBORS_HOUSE
-	warp_def $d, $b, 1, ELMS_HOUSE
+.Warps: db 4
+	warp_def 23, 14, 1, ELMS_LAB
+	warp_def 11, 11, 1, KRISS_HOUSE_1F
+	warp_def 9, 21, 1, KRISS_NEIGHBORS_HOUSE
+	warp_def 17, 23, 1, ELMS_HOUSE
 
-.XYTriggers:
-	db 2
-	xy_trigger 0, $8, $1, $0, NewBarkTown_TeacherStopsYouTrigger1, $0, $0
-	xy_trigger 0, $9, $1, $0, NewBarkTown_TeacherStopsYouTrigger2, $0, $0
+.CoordEvents: db 2
+	xy_trigger 0, 0, 26, 0, BountifulTown_TeacherStopsYouTrigger1, 0, 0
+	xy_trigger 0, 0, 27, 0, BountifulTown_TeacherStopsYouTrigger2, 0, 0
 
-.Signposts:
-	db 4
-	signpost 8, 8, SIGNPOST_READ, NewBarkTownSign
-	signpost 5, 11, SIGNPOST_READ, MapNewBarkTownSignpost1Script
-	signpost 3, 3, SIGNPOST_READ, MapNewBarkTownSignpost2Script
-	signpost 13, 9, SIGNPOST_READ, MapNewBarkTownSignpost3Script
+.BGEvents: db 4
+	signpost 15, 17, SIGNPOST_READ, BountifulTownSign
+	signpost 11, 9, SIGNPOST_READ, MapBountifulTownPlayersHouseSignScript
+	signpost 23, 11, SIGNPOST_READ, MapBountifulTownElmsLabSignScript
+	signpost 17, 21, SIGNPOST_READ, MapBountifulTownElmsHouseSignScript
 
-.PersonEvents:
-	db 3
-	person_event SPRITE_TEACHER, 8, 6, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 1, -1, -1, 0, PERSONTYPE_SCRIPT, 0, NewBarkTownTeacherScript, -1
-	person_event SPRITE_FISHER, 9, 12, SPRITEMOVEDATA_WALK_UP_DOWN, 1, 0, -1, -1, (1 << 3) | PAL_OW_GREEN, PERSONTYPE_SCRIPT, 0, NewBarkTownFisherScript, -1
-	person_event SPRITE_SILVER, 2, 3, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, NewBarkTownSilverScript, EVENT_RIVAL_NEW_BARK_TOWN
+.ObjectEvents: db 3
+	person_event SPRITE_TEACHER, 4, 26, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 1, -1, -1, 0, PERSONTYPE_SCRIPT, 0, BountifulTownTeacherScript, -1
+	person_event SPRITE_FISHER, 14, 15, SPRITEMOVEDATA_WALK_UP_DOWN, 1, 0, -1, -1, (1 << 3) | PAL_OW_GREEN, PERSONTYPE_SCRIPT, 0, BountifulTownFisherScript, -1
+	person_event SPRITE_SILVER, 22, 11, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, BountifulTownSilverScript, EVENT_RIVAL_NEW_BARK_TOWN
+

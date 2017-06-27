@@ -803,8 +803,8 @@ RoamMaps: ; 2a40f
 ; and possible maps they can jump to.
 ; Notably missing are Route 40 and
 ; Route 41, which are water routes.
-	roam_map ROUTE_29, 2, ROUTE_30, ROUTE_46
-	roam_map ROUTE_30, 2, ROUTE_29, ROUTE_31
+	roam_map ROUTE_101, 2, ROUTE_30, ROUTE_46
+	roam_map ROUTE_30, 2, ROUTE_101, ROUTE_31
 	roam_map ROUTE_31, 3, ROUTE_30, ROUTE_32, ROUTE_36
 	roam_map ROUTE_32, 3, ROUTE_36, ROUTE_31, ROUTE_33
 	roam_map ROUTE_33, 2, ROUTE_32, ROUTE_34
@@ -818,7 +818,7 @@ RoamMaps: ; 2a40f
 	roam_map ROUTE_43, 2, ROUTE_42, ROUTE_44
 	roam_map ROUTE_44, 3, ROUTE_42, ROUTE_43, ROUTE_45
 	roam_map ROUTE_45, 2, ROUTE_44, ROUTE_46
-	roam_map ROUTE_46, 2, ROUTE_45, ROUTE_29
+	roam_map ROUTE_46, 2, ROUTE_45, ROUTE_101
 	db -1
 ; 2a4a0
 

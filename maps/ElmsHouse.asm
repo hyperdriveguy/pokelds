@@ -83,25 +83,20 @@ ElmsHousePCText:
 	cont "search papers."
 	done
 
-ElmsHouse_MapEventHeader:
-	; filler
-	db 0, 0
+ElmsHouse_MapEventHeader:: db 0, 0
 
-.Warps:
-	db 2
-	warp_def $7, $2, 4, NEW_BARK_TOWN
-	warp_def $7, $3, 4, NEW_BARK_TOWN
+.Warps: db 2
+	warp_def 7, 2, 4, BOUNTIFUL_TOWN
+	warp_def 7, 3, 4, BOUNTIFUL_TOWN
 
-.XYTriggers:
-	db 0
+.CoordEvents: db 0
 
-.Signposts:
-	db 3
+.BGEvents: db 3
 	signpost 1, 0, SIGNPOST_READ, ElmsHousePC
 	signpost 1, 6, SIGNPOST_READ, ElmsHouseBookshelf
 	signpost 1, 7, SIGNPOST_READ, ElmsHouseBookshelf
 
-.PersonEvents:
-	db 2
+.ObjectEvents: db 2
 	person_event SPRITE_TEACHER, 5, 1, SPRITEMOVEDATA_WALK_UP_DOWN, 1, 0, -1, -1, (1 << 3) | PAL_OW_GREEN, PERSONTYPE_SCRIPT, 0, ElmsWife, -1
 	person_event SPRITE_BUG_CATCHER, 4, 5, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, ElmsSon, -1
+

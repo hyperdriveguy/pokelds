@@ -255,9 +255,7 @@ Route46_MapEventHeader:
 	db 0, 0
 
 .Warps:
-	db 3
-	warp_def $21, $7, 1, ROUTE_29_46_GATE
-	warp_def $21, $8, 2, ROUTE_29_46_GATE
+	db 1
 	warp_def $5, $e, 3, DARK_CAVE_VIOLET_ENTRANCE
 
 .XYTriggers:

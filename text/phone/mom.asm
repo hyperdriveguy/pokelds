@@ -30,7 +30,7 @@ MomPhoneGenericAreaText: ; 0x1b406b
 	cont "of neat, <PLAYER>."
 	done
 
-MomPhoneNewBarkText: ; 0x1b40b1
+MomPhoneBountifulText: ; 0x1b40b1
 	text "What? You're in"
 	line "@"
 	text_from_ram StringBuffer3

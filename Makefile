@@ -33,7 +33,7 @@ crystal: pokecrystal.gbc
 crystal11: pokecrystal11.gbc
 
 clean:
-	rm -f $(roms) $(crystal_obj) $(crystal11_obj) $(roms:.gbc=.map) $(roms:.gbc=.sym)
+	rm -f $(roms) $(crystal_obj) $(crystal11_obj) $(roms:.gbc=.map) $(roms:.gbc=.sym) $(roms:.gbc=.sav)
 
 compare: $(roms)
 	@$(MD5) roms.md5
@@ -51,11 +51,11 @@ tools:
 
 pokecrystal11.gbc: $(crystal11_obj)
 	rgblink -n pokecrystal11.sym -m pokecrystal11.map -l pokecrystal.ld -o $@ $^
-	rgbfix -Cjv -i BYTE -k 01 -l 0x33 -m 0x10 -n 1 -p 0 -r 3 -t PM_CRYSTAL $@
+	rgbfix -Cjv -i BYTE -k 01 -l 0x33 -m 0x10 -n 1 -p 0 -r 3 -t PM_MORMON $@
 
 pokecrystal.gbc: $(crystal_obj)
 	rgblink -n pokecrystal.sym -m pokecrystal.map -l pokecrystal.ld -o $@ $^
-	rgbfix -Cjv -i BYTE -k 01 -l 0x33 -m 0x10 -p 0 -r 3 -t PM_CRYSTAL $@
+	rgbfix -Cjv -i BYTE -k 01 -l 0x33 -m 0x10 -p 0 -r 3 -t PM_MORMON $@
 
 
 define LOUD

@@ -205,7 +205,7 @@ TownMap_InitCursorAndPlayerIconPositions: ; 90d70 (24:4d70)
 
 .FastShip:
 	ld [wPokegearMapPlayerIconLandmark], a
-	ld a, NEW_BARK_TOWN
+	ld a, BOUNTIFUL_TOWN
 	ld [wPokegearMapCursorLandmark], a
 	ret
 
@@ -567,7 +567,7 @@ PokegearMap_KantoMap: ; 90fe9 (24:4fe9)
 
 PokegearMap_JohtoMap: ; 90fee (24:4fee)
 	ld d, SILVER_CAVE
-	ld e, NEW_BARK_TOWN
+	ld e, BOUNTIFUL_TOWN
 PokegearMap_ContinueMap: ; 90ff2 (24:4ff2)
 	ld hl, hJoyLast
 	ld a, [hl]
@@ -2346,8 +2346,7 @@ flypoint: MACRO
 	db \2, SPAWN_\1
 ENDM
 ; Johto
-	flypoint NEW_BARK,    NEW_BARK_TOWN
-	flypoint CHERRYGROVE, CHERRYGROVE_CITY
+	flypoint BOUNTIFUL,   BOUNTIFUL_TOWN
 	flypoint VIOLET,      VIOLET_CITY
 	flypoint AZALEA,      AZALEA_TOWN
 	flypoint GOLDENROD,   GOLDENROD_CITY
@@ -2405,10 +2404,10 @@ FlyMap: ; 91c90
 .JohtoFlyMap:
 ; Note that .NoKanto should be modified in tandem with this branch
 	push af
-; Start from New Bark Town
-	ld a, FLY_NEW_BARK
+; Start from Bountiful Town
+	ld a, FLY_BOUNTIFUL
 	ld [wd002], a
-; Flypoints begin at New Bark Town...
+; Flypoints begin at Bountiful Town...
 	ld [StartFlypoint], a
 ; ..and end at Silver Cave
 	ld a, FLY_MT_SILVER
@@ -2460,10 +2459,10 @@ FlyMap: ; 91c90
 .NoKanto:
 ; If Indigo Plateau hasn't been visited, we use Johto's map instead
 
-; Start from New Bark Town
-	ld a, FLY_NEW_BARK
+; Start from Bountiful Town
+	ld a, FLY_BOUNTIFUL
 	ld [wd002], a
-; Flypoints begin at New Bark Town...
+; Flypoints begin at Bountiful Town...
 	ld [StartFlypoint], a
 ; ..and end at Silver Cave
 	ld a, FLY_MT_SILVER

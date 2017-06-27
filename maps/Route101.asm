@@ -1,14 +1,14 @@
 const_value set 2
-	const ROUTE29_COOLTRAINER_M1
-	const ROUTE29_YOUNGSTER
-	const ROUTE29_TEACHER1
-	const ROUTE29_FRUIT_TREE
-	const ROUTE29_FISHER
-	const ROUTE29_COOLTRAINER_M2
-	const ROUTE29_TUSCANY
-	const ROUTE29_POKE_BALL
+	const ROUTE101_COOLTRAINER_M1
+	const ROUTE101_YOUNGSTER
+	const ROUTE101_TEACHER1
+	const ROUTE101_FRUIT_TREE
+	const ROUTE101_FISHER
+	const ROUTE101_COOLTRAINER_M2
+	const ROUTE101_TUSCANY
+	const ROUTE101_POKE_BALL
 
-Route29_MapScriptHeader:
+Route101_MapScriptHeader:
 .MapTriggers:
 	db 2
 
@@ -34,19 +34,19 @@ Route29_MapScriptHeader:
 	iftrue .DoesTuscanyAppear
 
 .TuscanyDisappears:
-	disappear ROUTE29_TUSCANY
+	disappear ROUTE101_TUSCANY
 	return
 
 .DoesTuscanyAppear:
 	checkcode VAR_WEEKDAY
 	if_not_equal TUESDAY, .TuscanyDisappears
-	appear ROUTE29_TUSCANY
+	appear ROUTE101_TUSCANY
 	return
 
-Route29Tutorial1:
-	spriteface ROUTE29_COOLTRAINER_M1, UP
-	showemote EMOTE_SHOCK, ROUTE29_COOLTRAINER_M1, 15
-	applymovement ROUTE29_COOLTRAINER_M1, DudeMovementData1a
+Route101Tutorial1:
+	spriteface ROUTE101_COOLTRAINER_M1, UP
+	showemote EMOTE_SHOCK, ROUTE101_COOLTRAINER_M1, 15
+	applymovement ROUTE101_COOLTRAINER_M1, DudeMovementData1a
 	spriteface PLAYER, LEFT
 	setevent EVENT_DUDE_TALKED_TO_YOU
 	opentext
@@ -54,12 +54,12 @@ Route29Tutorial1:
 	yesorno
 	iffalse Script_RefusedTutorial1
 	closetext
-	follow ROUTE29_COOLTRAINER_M1, PLAYER
-	applymovement ROUTE29_COOLTRAINER_M1, DudeMovementData1b
+	follow ROUTE101_COOLTRAINER_M1, PLAYER
+	applymovement ROUTE101_COOLTRAINER_M1, DudeMovementData1b
 	stopfollow
 	loadwildmon RATTATA, 5
 	catchtutorial BATTLETYPE_TUTORIAL
-	spriteface ROUTE29_COOLTRAINER_M1, UP
+	spriteface ROUTE101_COOLTRAINER_M1, UP
 	opentext
 	writetext CatchingTutorialDebriefText
 	waitbutton
@@ -68,10 +68,10 @@ Route29Tutorial1:
 	setevent EVENT_LEARNED_TO_CATCH_POKEMON
 	end
 
-Route29Tutorial2:
-	spriteface ROUTE29_COOLTRAINER_M1, UP
-	showemote EMOTE_SHOCK, ROUTE29_COOLTRAINER_M1, 15
-	applymovement ROUTE29_COOLTRAINER_M1, DudeMovementData2a
+Route101Tutorial2:
+	spriteface ROUTE101_COOLTRAINER_M1, UP
+	showemote EMOTE_SHOCK, ROUTE101_COOLTRAINER_M1, 15
+	applymovement ROUTE101_COOLTRAINER_M1, DudeMovementData2a
 	spriteface PLAYER, LEFT
 	setevent EVENT_DUDE_TALKED_TO_YOU
 	opentext
@@ -79,12 +79,12 @@ Route29Tutorial2:
 	yesorno
 	iffalse Script_RefusedTutorial2
 	closetext
-	follow ROUTE29_COOLTRAINER_M1, PLAYER
-	applymovement ROUTE29_COOLTRAINER_M1, DudeMovementData2b
+	follow ROUTE101_COOLTRAINER_M1, PLAYER
+	applymovement ROUTE101_COOLTRAINER_M1, DudeMovementData2b
 	stopfollow
 	loadwildmon RATTATA, 5
 	catchtutorial BATTLETYPE_TUTORIAL
-	spriteface ROUTE29_COOLTRAINER_M1, UP
+	spriteface ROUTE101_COOLTRAINER_M1, UP
 	opentext
 	writetext CatchingTutorialDebriefText
 	waitbutton
@@ -97,7 +97,7 @@ Script_RefusedTutorial1:
 	writetext CatchingTutorialDeclinedText
 	waitbutton
 	closetext
-	applymovement ROUTE29_COOLTRAINER_M1, DudeMovementData1b
+	applymovement ROUTE101_COOLTRAINER_M1, DudeMovementData1b
 	dotrigger $0
 	end
 
@@ -105,7 +105,7 @@ Script_RefusedTutorial2:
 	writetext CatchingTutorialDeclinedText
 	waitbutton
 	closetext
-	applymovement ROUTE29_COOLTRAINER_M1, DudeMovementData2b
+	applymovement ROUTE101_COOLTRAINER_M1, DudeMovementData2b
 	dotrigger $0
 	end
 
@@ -143,14 +143,14 @@ CatchingTutorialDudeScript:
 	closetext
 	end
 
-Route29YoungsterScript:
-	jumptextfaceplayer Route29YoungsterText
+Route101YoungsterScript:
+	jumptextfaceplayer Route101YoungsterText
 
-Route29TeacherScript:
-	jumptextfaceplayer Route29TeacherText
+Route101TeacherScript:
+	jumptextfaceplayer Route101TeacherText
 
-Route29FisherScript:
-	jumptextfaceplayer Route29FisherText
+Route101FisherScript:
+	jumptextfaceplayer Route101FisherText
 
 CooltrainerMScript_0x1a1031:
 	faceplayer
@@ -207,16 +207,16 @@ TuscanyNotTuesdayScript:
 	closetext
 	end
 
-Route29Sign1:
-	jumptext Route29Sign1Text
+Route101Sign1:
+	jumptext Route101SignText
 
-Route29Sign2:
-	jumptext Route29Sign2Text
+Route101Sign2:
+	jumptext Route101SignText
 
-Route29FruitTree:
+Route101FruitTree:
 	fruittree FRUITTREE_ROUTE_29
 
-Route29Potion:
+Route101Potion:
 	itemball POTION
 
 DudeMovementData1a:
@@ -298,7 +298,7 @@ CatchingTutorialRepeatText:
 	cont "catch #MON?"
 	done
 
-Route29YoungsterText:
+Route101YoungsterText:
 	text "Yo. How are your"
 	line "#MON?"
 
@@ -309,7 +309,7 @@ Route29YoungsterText:
 	line "of the grass."
 	done
 
-Route29TeacherText:
+Route101TeacherText:
 	text "See those ledges?"
 	line "It's scary to jump"
 	cont "off them."
@@ -321,7 +321,7 @@ Route29TeacherText:
 	line "the grass."
 	done
 
-Route29FisherText:
+Route101FisherText:
 	text "I wanted to take a"
 	line "break, so I saved"
 
@@ -406,45 +406,33 @@ TuscanyNotTuesdayText:
 	cont "is unfortunate…"
 	done
 
-Route29Sign1Text:
-	text "ROUTE 29"
+Route101SignText:
+	text "ROUTE 101"
 
-	para "CHERRYGROVE CITY -"
-	line "NEW BARK TOWN"
+	para "BOUNTIUFL TOWN -"
+	line "PLEASANT GROVE"
 	done
 
-Route29Sign2Text:
-	text "ROUTE 29"
+Route101_MapEventHeader:: db 0, 0
 
-	para "CHERRYGROVE CITY -"
-	line "NEW BARK TOWN"
-	done
+.Warps: db 1
+	warp_def 3, 19, 3, ROUTE_101_PLEASANT_GATE
 
-Route29_MapEventHeader:
-	; filler
-	db 0, 0
+.CoordEvents: db 2
+	xy_trigger 1, 45, 18, 0, Route101Tutorial1, 0, 0
+	xy_trigger 1, 45, 19, 0, Route101Tutorial2, 0, 0
 
-.Warps:
-	db 1
-	warp_def $1, $1b, 3, ROUTE_29_46_GATE
+.BGEvents: db 2
+	signpost 41, 17, SIGNPOST_READ, Route101Sign1
+	signpost 6, 20, SIGNPOST_READ, Route101Sign2
 
-.XYTriggers:
-	db 2
-	xy_trigger 1, $8, $35, $0, Route29Tutorial1, $0, $0
-	xy_trigger 1, $9, $35, $0, Route29Tutorial2, $0, $0
+.ObjectEvents: db 8
+	person_event SPRITE_COOLTRAINER_M, 42, 20, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, (1 << 3) | PAL_OW_RED, PERSONTYPE_SCRIPT, 0, CatchingTutorialDudeScript, -1
+	person_event SPRITE_YOUNGSTER, 23, 11, SPRITEMOVEDATA_WALK_UP_DOWN, 1, 0, -1, -1, (1 << 3) | PAL_OW_GREEN, PERSONTYPE_SCRIPT, 0, Route101YoungsterScript, -1
+	person_event SPRITE_TEACHER, 38, 15, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, (1 << 3) | PAL_OW_GREEN, PERSONTYPE_SCRIPT, 0, Route101TeacherScript, -1
+	person_event SPRITE_FRUIT_TREE, 53, 6, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, Route101FruitTree, -1
+	person_event SPRITE_FISHER, 13, 14, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, (1 << 3) | PAL_OW_BLUE, PERSONTYPE_SCRIPT, 0, Route101FisherScript, -1
+	person_event SPRITE_COOLTRAINER_M, 7, 26, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, (1 << 3) | PAL_OW_RED, PERSONTYPE_SCRIPT, 0, CooltrainerMScript_0x1a1031, -1
+	person_event SPRITE_TEACHER, 4, 22, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, TuscanyScript, EVENT_ROUTE_29_TUSCANY_OF_TUESDAY
+	person_event SPRITE_POKE_BALL, 19, 7, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, Route101Potion, EVENT_ROUTE_29_POTION
 
-.Signposts:
-	db 2
-	signpost 7, 51, SIGNPOST_READ, Route29Sign1
-	signpost 5, 3, SIGNPOST_READ, Route29Sign2
-
-.PersonEvents:
-	db 8
-	person_event SPRITE_COOLTRAINER_M, 12, 50, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, (1 << 3) | PAL_OW_RED, PERSONTYPE_SCRIPT, 0, CatchingTutorialDudeScript, -1
-	person_event SPRITE_YOUNGSTER, 16, 27, SPRITEMOVEDATA_WALK_UP_DOWN, 1, 0, -1, -1, (1 << 3) | PAL_OW_GREEN, PERSONTYPE_SCRIPT, 0, Route29YoungsterScript, -1
-	person_event SPRITE_TEACHER, 11, 15, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, (1 << 3) | PAL_OW_GREEN, PERSONTYPE_SCRIPT, 0, Route29TeacherScript, -1
-	person_event SPRITE_FRUIT_TREE, 2, 12, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, Route29FruitTree, -1
-	person_event SPRITE_FISHER, 3, 25, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, (1 << 3) | PAL_OW_BLUE, PERSONTYPE_SCRIPT, 0, Route29FisherScript, -1
-	person_event SPRITE_COOLTRAINER_M, 4, 13, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, (1 << 3) | PAL_OW_RED, PERSONTYPE_SCRIPT, 0, CooltrainerMScript_0x1a1031, -1
-	person_event SPRITE_TEACHER, 12, 29, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, TuscanyScript, EVENT_ROUTE_29_TUSCANY_OF_TUESDAY
-	person_event SPRITE_POKE_BALL, 2, 48, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, Route29Potion, EVENT_ROUTE_29_POTION

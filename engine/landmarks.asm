@@ -55,9 +55,9 @@ landmark: MACRO
 ENDM
 
 	landmark   0,   0, SpecialMapName
-	landmark 148, 116, NewBarkTownName
-	landmark 136, 116, Route29Name
-	landmark 108, 116, CherrygroveCityName
+	landmark  25, 110, BountifulTownName
+	landmark 136, 116, Route101Name
+	landmark 108, 116, PleasantGroveName
 	landmark 108,  96, Route30Name
 	landmark 104,  76, Route31Name
 	landmark  92,  76, VioletCityName
@@ -152,8 +152,8 @@ ENDM
 	landmark 148, 132, FastShipName
 
 
-NewBarkTownName:     db "NEW BARK¯TOWN@"
-CherrygroveCityName: db "CHERRYGROVE¯CITY@"
+BountifulTownName:   db "BOUNTIFUL¯TOWN@"
+PleasantGroveName:   db "PLEASANT¯GROVE@"
 VioletCityName:      db "VIOLET CITY@"
 AzaleaTownName:      db "AZALEA TOWN@"
 GoldenrodCityName:   db "GOLDENROD¯CITY@"
@@ -198,6 +198,7 @@ SafariZoneName:      db "SAFARI ZONE@"
 SeafoamIslandsName:  db "SEAFOAM¯ISLANDS@"
 PokemonMansionName:  db "#MON¯MANSION@"
 CeruleanCaveNane:    db "CERULEAN¯CAVE@"
+Route101Name:        db "ROUTE 101@"
 Route1Name:          db "ROUTE 1@"
 Route2Name:          db "ROUTE 2@"
 Route3Name:          db "ROUTE 3@"
@@ -226,7 +227,6 @@ Route25Name:         db "ROUTE 25@"
 Route26Name:         db "ROUTE 26@"
 Route27Name:         db "ROUTE 27@"
 Route28Name:         db "ROUTE 28@"
-Route29Name:         db "ROUTE 29@"
 Route30Name:         db "ROUTE 30@"
 Route31Name:         db "ROUTE 31@"
 Route32Name:         db "ROUTE 32@"
@@ -253,7 +253,7 @@ DiglettsCaveName:    db "DIGLETT'S¯CAVE@"
 TohjoFallsName:      db "TOHJO FALLS@"
 UndergroundName:     db "UNDERGROUND@"
 BattleTowerName:     db "BATTLE¯TOWER@"
-SpecialMapName:      db "SPECIAL@"
+SpecialMapName:      db "???@"
 
 
 RegionCheck: ; 0x1caea1

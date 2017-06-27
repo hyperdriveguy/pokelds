@@ -38,7 +38,6 @@ MrPokemonsHouse_MapScriptHeader:
 	waitsfx
 	itemnotify
 	setevent EVENT_GOT_MYSTERY_EGG_FROM_MR_POKEMON
-	blackoutmod CHERRYGROVE_CITY
 	writetext MrPokemonIntroText3
 	buttonsound
 	spriteface MRPOKEMONSHOUSE_GENTLEMAN, RIGHT
@@ -128,7 +127,6 @@ MrPokemonsHouse_OakScript:
 	setevent EVENT_KRISS_HOUSE_1F_NEIGHBOR
 	clearevent EVENT_KRISS_NEIGHBORS_HOUSE_NEIGHBOR
 	dotrigger $1
-	domaptrigger CHERRYGROVE_CITY, $1
 	domaptrigger ELMS_LAB, $3
 	specialphonecall SPECIALCALL_ROBBED
 	clearevent EVENT_COP_IN_ELMS_LAB

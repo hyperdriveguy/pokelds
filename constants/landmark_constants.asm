@@ -2,9 +2,9 @@
 	const_def
 
 	const SPECIAL_MAP       ; 00
-	const NEW_BARK_TOWN     ; 01
-	const ROUTE_29          ; 02
-	const CHERRYGROVE_CITY  ; 03
+	const BOUNTIFUL_TOWN    ; 01
+	const ROUTE_101         ; 02
+	const PLEASANT_GROVE    ; 03
 	const ROUTE_30          ; 04
 	const ROUTE_31          ; 05
 	const VIOLET_CITY       ; 06

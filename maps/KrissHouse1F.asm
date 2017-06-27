@@ -387,32 +387,27 @@ TVText:
 	line "rolling too!"
 	done
 
-KrissHouse1F_MapEventHeader:
-	; filler
-	db 0, 0
+KrissHouse1F_MapEventHeader:: db 0, 0
 
-.Warps:
-	db 3
-	warp_def $7, $6, 2, NEW_BARK_TOWN
-	warp_def $7, $7, 2, NEW_BARK_TOWN
-	warp_def $0, $9, 1, KRISS_HOUSE_2F
+.Warps: db 3
+	warp_def 7, 6, 2, BOUNTIFUL_TOWN
+	warp_def 7, 7, 2, BOUNTIFUL_TOWN
+	warp_def 0, 9, 1, KRISS_HOUSE_2F
 
-.XYTriggers:
-	db 2
-	xy_trigger 0, $4, $8, $0, UnknownScript_0x7a4d8, $0, $0
-	xy_trigger 0, $4, $9, $0, UnknownScript_0x7a4db, $0, $0
+.CoordEvents: db 2
+	xy_trigger 0, 4, 8, 0, UnknownScript_0x7a4d8, 0, 0
+	xy_trigger 0, 4, 9, 0, UnknownScript_0x7a4db, 0, 0
 
-.Signposts:
-	db 4
+.BGEvents: db 4
 	signpost 1, 0, SIGNPOST_READ, StoveScript
 	signpost 1, 1, SIGNPOST_READ, SinkScript
 	signpost 1, 2, SIGNPOST_READ, FridgeScript
 	signpost 1, 4, SIGNPOST_READ, TVScript
 
-.PersonEvents:
-	db 5
+.ObjectEvents: db 5
 	person_event SPRITE_MOM, 4, 7, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, MomScript_0x7a582, EVENT_KRISS_HOUSE_MOM_1
 	person_event SPRITE_MOM, 2, 2, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, 1, 0, PERSONTYPE_SCRIPT, 0, MomScript_0x7a582, EVENT_KRISS_HOUSE_MOM_2
 	person_event SPRITE_MOM, 4, 7, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, 2, 0, PERSONTYPE_SCRIPT, 0, MomScript_0x7a582, EVENT_KRISS_HOUSE_MOM_2
 	person_event SPRITE_MOM, 2, 0, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, 4, 0, PERSONTYPE_SCRIPT, 0, MomScript_0x7a582, EVENT_KRISS_HOUSE_MOM_2
 	person_event SPRITE_POKEFAN_F, 4, 4, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, (1 << 3) | PAL_OW_RED, PERSONTYPE_SCRIPT, 0, NeighborScript, EVENT_KRISS_HOUSE_1F_NEIGHBOR
+

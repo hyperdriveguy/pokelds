@@ -73,9 +73,7 @@ CherrygrovePokeCenter1F_MapEventHeader:
 	db 0, 0
 
 .Warps:
-	db 3
-	warp_def $7, $3, 2, CHERRYGROVE_CITY
-	warp_def $7, $4, 2, CHERRYGROVE_CITY
+	db 1
 	warp_def $7, $0, 1, POKECENTER_2F
 
 .XYTriggers:

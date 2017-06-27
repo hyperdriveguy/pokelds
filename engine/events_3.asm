@@ -463,7 +463,7 @@ endm
 	treemon_map ROUTE_26, 4
 	treemon_map ROUTE_27, 4
 	treemon_map ROUTE_28, 0
-	treemon_map ROUTE_29, 3
+	treemon_map ROUTE_101, 3
 	treemon_map ROUTE_30, 3
 	treemon_map ROUTE_31, 3
 	treemon_map ROUTE_32, 4
@@ -481,8 +481,8 @@ endm
 	treemon_map ROUTE_44, 1
 	treemon_map ROUTE_45, 1
 	treemon_map ROUTE_46, 1
-	treemon_map NEW_BARK_TOWN, 0
-	treemon_map CHERRYGROVE_CITY, 0
+	treemon_map BOUNTIFUL_TOWN, 0
+	treemon_map PLEASANT_GROVE, 6
 	treemon_map VIOLET_CITY, 0
 	treemon_map AZALEA_TOWN, 2
 	treemon_map CIANWOOD_CITY, 0
