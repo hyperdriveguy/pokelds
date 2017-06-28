@@ -94,6 +94,7 @@ IMPORTANT NOTE: Suggestions and Pull Requests may be turned down if I find them 
 - [ ] Book of Mormon Time like, Temple Square, meetinghouse, and desert tilesets
 - [ ] Make new Reworked Professor Character, Nephite, Lamanite, MissionaryM, and MissionaryF overworld sprites
 - [ ] Make Elder, Sister, Deacon, Teacher, Priest, High Priest, Beehive, Miamaid, Laurel, Nephite, Lamanite, Ammonite, and Apostate trainer sprites
+- [ ] Custom title screen
 
 # Feature backport from other hacks (Like Polished Crystal)
 
