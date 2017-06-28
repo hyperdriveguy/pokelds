@@ -1,11 +1,11 @@
 .SUFFIXES:
-.PHONY: all clean tools compare crystal crystal11
+.PHONY: all clean tools lds lds11
 .SECONDEXPANSION:
 .PRECIOUS:
 .SECONDARY:
 
 
-crystal_obj := \
+lds_obj := \
 wram.o \
 main.o \
 lib/mobile/main.o \
@@ -21,17 +21,17 @@ misc/crystal_misc.o \
 text/common_text.o \
 gfx/pics.o
 
-crystal11_obj := $(crystal_obj:.o=11.o)
+lds11_obj := $(lds_obj:.o=11.o)
 
 
-roms := pokecrystal.gbc pokecrystal11.gbc
+roms := pokelds.gbc pokelds11.gbc
 
-all: crystal
-crystal: pokecrystal.gbc
-crystal11: pokecrystal11.gbc
+all: lds
+lds: pokelds.gbc
+lds11: pokelds11.gbc
 
 clean:
-	rm -f $(roms) $(crystal_obj) $(crystal11_obj) $(roms:.gbc=.map) $(roms:.gbc=.sym) $(roms:.gbc=.sav)
+	rm -f $(roms) $(lds_obj) $(lds11_obj) $(roms:.gbc=.map) $(roms:.gbc=.sym) $(roms:.gbc=.sav)
 
 tools:
 	make -C tools/
@@ -44,12 +44,12 @@ tools:
 %.o: %.asm $$(dep)
 	rgbasm -o $@ $<
 
-pokecrystal11.gbc: $(crystal11_obj)
-	rgblink -n pokecrystal11.sym -m pokecrystal11.map -l pokecrystal.ld -o $@ $^
+pokelds11.gbc: $(lds11_obj)
+	rgblink -n pokelds11.sym -m pokelds11.map -l pokelds.ld -o $@ $^
 	rgbfix -Cjv -i BYTE -k 01 -l 0x33 -m 0x10 -n 1 -p 0 -r 3 -t PM_MORMON $@
 
-pokecrystal.gbc: $(crystal_obj)
-	rgblink -n pokecrystal.sym -m pokecrystal.map -l pokecrystal.ld -o $@ $^
+pokelds.gbc: $(lds_obj)
+	rgblink -n pokelds.sym -m pokelds.map -l pokelds.ld -o $@ $^
 	rgbfix -Cjv -i BYTE -k 01 -l 0x33 -m 0x10 -p 0 -r 3 -t PM_MORMON $@
 
 
