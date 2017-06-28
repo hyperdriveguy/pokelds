@@ -46,7 +46,7 @@ IMPORTANT NOTE: Suggestions and Pull Requests may be turned down if I find them 
 - [ ] Replace Rival with a friendly Missionary/Mission President
 - [ ] Book of Mormon people mixed with modern day people
 - [ ] Story involving Korihor (See Alma Chapter 30)
-- [ ] Lamanites (Replaces Team Rocket)
+- [ ] Gadianton Robbers (Replaces Team Rocket)
 - [ ] Rescue kidnapped missionaries
 - [ ] Leaders to battle in each city (Replacing Gym Leaders, may replace with an Area authority or Book of Mormon Prophet)
 - [ ] Preach!
@@ -142,7 +142,7 @@ IMPORTANT NOTE: Suggestions and Pull Requests may be turned down if I find them 
 
 ## Graphics
 
-- [ ] New Poké Ball sprite
+- [x] New Poké Ball sprite
 - [ ] Make color-coded starter Poké Balls.
 - [ ] Make item balls for TMs are blue.
 

@@ -42,6 +42,7 @@ UnknownScript_0x7a4f6:
 	buttonsound
 	stringtotext GearName, $1
 	scall UnknownScript_0x7a57e
+	giveitem BICYCLE
 	setflag ENGINE_POKEGEAR
 	setflag ENGINE_PHONE_CARD
 	addcellnum PHONE_MOM
