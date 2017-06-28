@@ -42,3 +42,6 @@ pokecrystal.txt
 *.animated.tilemap
 gfx/pics/*/bitmask.asm
 gfx/pics/*/frames.asm
+
+# Crowdmap conflict
+crowdmap
