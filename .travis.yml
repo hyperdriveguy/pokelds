@@ -20,5 +20,5 @@ before_script:
     }
 script:
   - make tools
-  - make lds lds11\
+  - make lds lds11
 # - check_status
