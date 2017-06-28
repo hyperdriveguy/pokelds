@@ -1,5 +1,3 @@
-MD5 := md5sum -c
-
 .SUFFIXES:
 .PHONY: all clean tools compare crystal crystal11
 .SECONDEXPANSION:
@@ -34,9 +32,6 @@ crystal11: pokecrystal11.gbc
 
 clean:
 	rm -f $(roms) $(crystal_obj) $(crystal11_obj) $(roms:.gbc=.map) $(roms:.gbc=.sym) $(roms:.gbc=.sav)
-
-compare: $(roms)
-	@$(MD5) roms.md5
 
 tools:
 	make -C tools/
