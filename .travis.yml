@@ -1,3 +1,4 @@
+dist: "trusty"
 language: c
 install:
   - |-
@@ -19,6 +20,5 @@ before_script:
     }
 script:
   - make tools
-  - make crystal crystal11\
-#  - check_status
-
+  - make lds lds11\
+# - check_status
