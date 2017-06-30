@@ -42,7 +42,7 @@ IMPORTANT NOTE: Suggestions and Pull Requests may be turned down if I find them 
 
 - [ ] Errand from the local Professor/Reworked Character
 - [ ] Mission Call
-- [ ] Make a new Professor or completely rework character (Bishop? Mission President? Book of Mormon Prophet?)
+- [x] Make Bishop in Bountiful Town
 - [ ] Replace Rival with a friendly Missionary/Mission President
 - [ ] Book of Mormon people mixed with modern day people
 - [ ] Story involving Korihor (See Alma Chapter 30)
