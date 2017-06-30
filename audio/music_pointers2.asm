@@ -8,6 +8,8 @@
 ; 	Songs IV
 ; 	Songs V
 
+; These Songs are for Nuzelocke mode.
+
 ; e906e
 	dba Music_Nothing ; 0xe91a3
 	dba Music_TitleScreen ; 0xeb808
