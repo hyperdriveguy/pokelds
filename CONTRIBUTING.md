@@ -22,18 +22,19 @@ and make sure your contributions are helpful.
 * PokéGear improvements
 * Debugging
 * An IRC channel
+* Anything you think could be useful (Open an enhancement request first)
 
 ## This project is **not** looking for the following contributions
 
 * Things that have already been done in the [TODO](https://github.com/hyperdriveguy/pokelds/blob/master/TODO.md)
-* Modifications to the TODO list (Won't always reject, just very low priority)
+* Modifications to the TODO list (Won't always reject, it's just a very
+  low priority. Use the issues page instead.)
 * Opening issues asking for how to do something in the game
 * Things that make a Travis-CI test fail (eg. a real buggy contribution)
 
 # Behavioral Expectations
 
 See the [Code of Conduct](https://github.com/hyperdriveguy/pokelds/blob/master/CODE_OF_CONDUCT.md)
-*(Link currently broken)*
 
 # Code Style
 
@@ -42,6 +43,25 @@ See the [Code of Conduct](https://github.com/hyperdriveguy/pokelds/blob/master/C
 * Code should be well commented to explain what it does
 * Avoid binary blobs
 * Avoid regressions
+* Add yourself to the [CREDITS.md](https://github.com/hyperdriveguy/pokelds/blob/master/CREDITS.md) file
+
+## If You Do Not Want Your Changes to Assume the MIT License
+
+### Code
+
+If you have added a whole file or more than 200 lines of code:
+
+```assembly
+; Made by <your name>
+; Changes licensed under <Custom license>
+; Custom license text if applicable
+```
+
+This is not nessecary for smaller contributions (<200 LoC)
+
+### All Other Changes
+
+Follow the instructions in [CREDITS.md](https://github.com/hyperdriveguy/pokelds/blob/master/CREDITS.md)
 
 # Submitting a Contribution
 
@@ -51,8 +71,10 @@ See the [Code of Conduct](https://github.com/hyperdriveguy/pokelds/blob/master/C
 2. Do the changes in your fork
 3. Create a Pull Request on Github
     * Make sure to follow the [Code Style](#code-style)
-    * By default, your changes will assume the MIT license.
-    * If you don't want them to, follow the instructions under the code style.
+    * By default, your changes will assume the MIT license. See the
+      [License](https://github.com/hyperdriveguy/pokelds/blob/master/LICENSE.md) for more details.
+    * If you don't want them to, follow the instructions under the
+      [Code Style](#code-style)
     * Make sure to follow the behavioral expectations
     * Make sure it passes the Travis-CI test
 4. Pull Request will be accepted or rejected accordingly
@@ -120,15 +142,16 @@ you have made a community, open an issue so I can link to it here.
 
 # Core Developers
 
-Currently only consisting of @hyperdriveguy
+Currently only consisting of [@hyperdriveguy](https://github.com/hyperdriveguy)
 
-If you wish to become a core developer, email @hyperdriveguy with the 
-following (or something like it):
+If you wish to become a core developer, email [@hyperdriveguy](https://github.com/hyperdriveguy)
+with the following (or something like it):
 
 > Hello,
 >
 > I am interested in becoming a core developer for Pokémon LDS!
-> I can help with (Code, Maps, Music, etc. Whatever you specialize in)
+> I can help with (Code, Maps, Music, etc. Whatever you specialize in.)
+> I have also read the Code of Conduct and agree to it's terms.
 > 
 > -- Github User Name or What you wish to be called
 
