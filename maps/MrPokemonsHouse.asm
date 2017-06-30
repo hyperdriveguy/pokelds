@@ -372,27 +372,22 @@ MrPokemonsHouse_StrangeCoinsText:
 	line "another country…"
 	done
 
-MrPokemonsHouse_MapEventHeader:
-	; filler
-	db 0, 0
+MrPokemonsHouse_MapEventHeader:: db 0, 0
 
-.Warps:
-	db 2
-	warp_def $7, $2, 2, ROUTE_30
-	warp_def $7, $3, 2, ROUTE_30
+.Warps: db 2
+	warp_def 7, 2, 2, ROUTE_30
+	warp_def 7, 3, 2, ROUTE_30
 
-.XYTriggers:
-	db 0
+.CoordEvents: db 0
 
-.Signposts:
-	db 5
+.BGEvents: db 5
 	signpost 1, 0, SIGNPOST_READ, MapMrPokemonsHouseSignpost1Script
 	signpost 1, 1, SIGNPOST_READ, MapMrPokemonsHouseSignpost1Script
 	signpost 1, 6, SIGNPOST_READ, MapMrPokemonsHouseSignpost3Script
 	signpost 1, 7, SIGNPOST_READ, MapMrPokemonsHouseSignpost3Script
 	signpost 4, 6, SIGNPOST_READ, MapMrPokemonsHouseSignpost4Script
 
-.PersonEvents:
-	db 2
+.ObjectEvents: db 2
 	person_event SPRITE_GENTLEMAN, 5, 3, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, MrPokemonsHouse_MrPokemonScript, -1
 	person_event SPRITE_OAK, 5, 6, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, ObjectEvent, EVENT_MR_POKEMONS_HOUSE_OAK
+

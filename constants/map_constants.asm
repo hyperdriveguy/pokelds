@@ -418,7 +418,7 @@ MAP_NONE   EQU 0
 	mapgroup ROUTE_27,                              9, 40 ;  2
 	mapgroup ROUTE_101, 30, 14
 	mapgroup BOUNTIFUL_TOWN,                             15, 14 ;  4
-	mapgroup ELMS_LAB,                                    6,  5 ;  5
+	mapgroup ELMS_LAB, 6, 5
 	mapgroup KRISS_HOUSE_1F,                              4,  5 ;  6
 	mapgroup KRISS_HOUSE_2F,                              3,  4 ;  7
 	mapgroup KRISS_NEIGHBORS_HOUSE,                       4,  4 ;  8
@@ -456,7 +456,7 @@ MAP_NONE   EQU 0
 	mapgroup GUIDE_GENTS_HOUSE,                           4,  4 ;  7
 	mapgroup CHERRYGROVE_EVOLUTION_SPEECH_HOUSE,          4,  4 ;  8
 	mapgroup ROUTE_30_BERRY_SPEECH_HOUSE,                 4,  4 ;  9
-	mapgroup MR_POKEMONS_HOUSE,                           4,  4 ; 10
+	mapgroup MR_POKEMONS_HOUSE, 4, 4
 	mapgroup ROUTE_31_VIOLET_GATE,                        4,  5 ; 11
 
 
