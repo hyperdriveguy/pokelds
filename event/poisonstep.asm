@@ -49,7 +49,6 @@ DoPoisonStep:: ; 505da
 	ld a, BANK(.Script_MonFaintedToPoison)
 	ld hl, .Script_MonFaintedToPoison
 	call CallScript
-	predef KillParty
 	scf
 	ret
 

@@ -1,8 +1,5 @@
 
 _SacredAsh: ; 507e6
-	ld a, [wNuzlockeMode]
-	and a
-	ret nz
 	ld a, $0
 	ld [wItemEffectSucceeded], a
 	call CheckAnyFaintedMon

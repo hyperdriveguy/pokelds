@@ -28,18 +28,6 @@ InitGender: ; 48dcb (12:4dcb)
 	call LoadGenderScreenLightBlueTile
 	call WaitBGMap2
 	call SetPalettes
-	ld hl, TextJump_Nuzlocke
-	call PrintText
-	ld hl, .MenuDataHeader2
-	call LoadMenuDataHeader
-	call WaitBGMap2
-	call VerticalMenu
-	call CloseWindow
-	ld a, [wMenuCursorY]
-	dec a
-	ld [wNuzlockeMode], a
-	ld c, 10
-	call DelayFrames
 	ld hl, TextJump_AreYouABoyOrAreYouAGirl
 	call PrintText
 	ld hl, .MenuDataHeader
@@ -63,32 +51,12 @@ InitGender: ; 48dcb (12:4dcb)
 	db 1 ; default option
 ; 0x48e04
 
-.MenuDataHeader2: ; 0x48dfc
-	db $40 ; flags
-	db 04, 04 ; start coords
-	db 09, 14 ; end coords
-	dw .MenuData3
-	db 1 ; default option
-; 0x48e04
-
 .MenuData2: ; 0x48e04
 	db $a1 ; flags
 	db 2 ; items
 	db "Boy@"
 	db "Girl@"
 ; 0x48e0f
-.MenuData3: ; 0x48e04
-	db $a1 ; flags
-	db 2 ; items
-	db "Normal@"
-	db "Nuzlocke@"
-; 0x48e0f
-
-TextJump_Nuzlocke: ; 0x48e0f
-	; Are you a boy? Or are you a girl?
-	text_jump Text_Nuzlocke
-	db "@"
-; 0x48e14
 
 TextJump_AreYouABoyOrAreYouAGirl: ; 0x48e0f
 	; Are you a boy? Or are you a girl?

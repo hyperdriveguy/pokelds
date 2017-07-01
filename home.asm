@@ -1962,13 +1962,4 @@ ReinitSpriteAnimFrame:: ; 3b3c
 
 INCLUDE "home/audio.asm"
 INCLUDE "home/mobile.asm"
-EndNuzlocke::
-	ld a, 2
-	ld [wNuzlockeStarted], a
-	ret
-	
-StartNuzlocke::
-	ld a, 1
-	ld [wNuzlockeStarted], a
-	ret
 	

@@ -1,7 +1,7 @@
 ## Bugs
 
 - [ ] The Town Map still uses Johto's layout, rather than the new region's layout.
-- [ ] Burn/Poison/Paralyze don't improve catch rate.
+- [x] Burn/Poison/Paralyze don't improve catch rate. (Fixed)
 - [ ] Experience underflow at level 1.
 - [ ] HP bar does not lower at the same speed for high HP.
 See the [Issues](issues/) page for things not listed here.  
@@ -88,6 +88,7 @@ IMPORTANT NOTE: Suggestions and Pull Requests may be turned down if I find them 
 - [ ] "For the Strength of the Hills" for route music
 - [ ] "How Firm a Foundation" for route music
 - [ ] "Book of Mormon Stories" for Zarahemla
+    * Basic groudwork done, but it needs to support multiple channels
 - [ ] Port other popular Hymns to the audio engine
 
 ## Graphics

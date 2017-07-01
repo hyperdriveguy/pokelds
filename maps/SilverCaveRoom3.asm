@@ -32,7 +32,6 @@ Red:
 	special Special_FadeInQuickly
 	pause 30
 	special HealParty
-	callasm EndNuzlocke
 	refreshscreen $0
 	credits
 	end

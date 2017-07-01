@@ -325,27 +325,11 @@ HatchEggs: ; 16f70 (5:6f70)
 	ld d, h
 	ld e, l
 	push de
-	ld a, [wNuzlockeMode]
-	and a
-	jr nz, .forcenickname
 	ld hl, .Text_NicknameHatchling
 	call PrintText
 	call YesNoBox
 	pop de
 	jr c, .nonickname
-
-.forcenickname
-	ld a, $1
-	ld [wd26b], a
-	xor a
-	ld [MonType], a
-	push de
-	ld b, $0
-	callba NamingScreen
-	pop hl
-	ld de, StringBuffer1
-	call InitName
-	jr .next
 
 .nonickname
 	ld hl, StringBuffer1
