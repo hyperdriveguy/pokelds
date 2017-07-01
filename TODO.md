@@ -74,7 +74,7 @@ IMPORTANT NOTE: Suggestions and Pull Requests may be turned down if I find them 
 - [ ] Populate Church Meetinghouses on Sundays and Wednesdays, otherwise they're locked
 - [ ] Show walking animation faster when running
 - [ ] Add Elder, Sister, Deacon, Teacher, Priest, High Priest, Beehive, Miamaid, Laurel, Nephite, Lamanite, Ammonite, and Apostate trainer classes
-- [ ] Get rid of Nuzlocke mode
+- [x] Get rid of Nuzlocke mode
 
 ## Music (Much help needed)
 
