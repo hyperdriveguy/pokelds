@@ -153,4 +153,4 @@ IMPORTANT NOTE: Suggestions and Pull Requests may be turned down if I find them 
 - [ ] Make move stats include type, category, power, and accuracy.
 - [ ] Make new Berry names
 - [ ] Wonder trades
-
+- [ ] Polished Crystal Utilities

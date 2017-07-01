@@ -186,7 +186,7 @@ INCLUDE "audio/music/145_ChampionBattle.asm"
 INCLUDE "audio/music/058_Route210.asm"
 INCLUDE "audio/music/077_Route225.asm"
 INCLUDE "audio/music/131_Route228.asm"
-
+INCLUDE "audio/music/custom/bookofmormonstories.asm"
 
 SECTION "Sound Effects", ROMX
 

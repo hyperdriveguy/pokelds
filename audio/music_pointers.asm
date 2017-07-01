@@ -116,10 +116,11 @@
 	dba Music_BattleTowerLobby ; 0x17948b
 	dba Music_MobileCenter ; 0x17961d
 	
-;bonus songs
+; Crystal 20XX adds the following songs:
 	dba Music_Shop ; 0x17961d
 	dba Music_NuggetBridge ; 0x17961d
 	dba Music_CeruleanGSC ; 0x17961d
 	dba Music_CinnabarGSC ; 0x17961d
 	dba Music_SinnohWildBattle
+	dba Music_BookOfMormonStories
 ; e91a3

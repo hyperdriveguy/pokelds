@@ -110,5 +110,7 @@
 	const MUSIC_CERULEAN                     ; 69
 	const MUSIC_CINNABAR                     ; 6a
 	const MUSIC_SINNOH_WILD                  ; 6b
+	
+	const MUSIC_BOOK_OF_MORMON_STORIES
 
 MUSIC_MAHOGANY_MART EQU $64 ; leftover from gold

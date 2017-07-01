@@ -119,27 +119,22 @@ KrisRadioText4:
 	line "#MON CHANNEL…"
 	done
 
-KrissHouse2F_MapEventHeader:
-	; filler
-	db 0, 0
+KrissHouse2F_MapEventHeader:: db 0, 0
 
-.Warps:
-	db 1
-	warp_def $0, $7, 3, KRISS_HOUSE_1F
+.Warps: db 1
+	warp_def 0, 7, 3, KRISS_HOUSE_1F
 
-.XYTriggers:
-	db 0
+.CoordEvents: db 0
 
-.Signposts:
-	db 4
+.BGEvents: db 4
 	signpost 1, 2, SIGNPOST_UP, KrissHousePC
 	signpost 1, 3, SIGNPOST_READ, KrissHouseRadio
 	signpost 1, 5, SIGNPOST_READ, KrissHouseBookshelf
 	signpost 0, 6, SIGNPOST_IFSET, KrissHousePoster
 
-.PersonEvents:
-	db 4
+.ObjectEvents: db 4
 	person_event SPRITE_CONSOLE, 2, 4, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, GameConsole, EVENT_KRISS_HOUSE_2F_CONSOLE
 	person_event SPRITE_DOLL_1, 4, 4, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, Doll1, EVENT_KRISS_HOUSE_2F_DOLL_1
 	person_event SPRITE_DOLL_2, 4, 5, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, Doll2, EVENT_KRISS_HOUSE_2F_DOLL_2
 	person_event SPRITE_BIG_DOLL, 1, 0, SPRITEMOVEDATA_BIGDOLL, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, BigDoll, EVENT_KRISS_HOUSE_2F_BIG_DOLL
+
