@@ -616,14 +616,12 @@ ReadObjectEvents:: ; 241f
 	ld a, NUM_OBJECTS ; - 1
 	sub c
 	jr z, .skip
-	; jr c, .skip
+	jr c, .skip
 
-; stupid waste of time and space
+; waste of time and space
 	ld bc, 1
 	add hl, bc
-; Fill the remaining sprite IDs and y coords with 0 and -1, respectively.
-; Bleeds into wObjectMasks due to a bug.  Uncomment the above subtraction
-; to fix.
+	; Fixed Bug here
 	ld bc, OBJECT_LENGTH
 .loop
 	ld [hl],  0

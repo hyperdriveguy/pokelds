@@ -5,10 +5,10 @@ Music_JohtoWildBattleNight: ; f605c
 ; f6065
 
 Music_JohtoWildBattleNight_Ch1: ; f6065
-	tempo 107
+	tempo 115
 	volume $77
 	dutycycle $3
-	tone $0002
+	tone $0003
 	vibrato $10, $25
 	loopchannel 0, Music_JohtoWildBattleNight_branch_f5ddb
 ; f6076
@@ -16,7 +16,7 @@ Music_JohtoWildBattleNight_Ch1: ; f6065
 Music_JohtoWildBattleNight_Ch2: ; f6076
 	dutycycle $3
 	vibrato $20, $36
-	tone $0001
+	tone $0002
 	callchannel Music_JohtoWildBattleNight_branch_f5f5d
 	notetype $c, $c2
 	octave 4

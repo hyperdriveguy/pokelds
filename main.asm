@@ -1455,6 +1455,8 @@ PlayBattleMusic: ; 2ee6c
 	ld de, MUSIC_CHAMPION_BATTLE
 	cp CHAMPION
 	jr z, .done
+	
+	ld de, MUSIC_CHAMPION_BATTLE_SINNOH
 	cp RED
 	jr z, .done
 
@@ -1498,6 +1500,10 @@ PlayBattleMusic: ; 2ee6c
 
 .johtotrainer
 	ld de, MUSIC_JOHTO_TRAINER_BATTLE
+	ld a, [TimeOfDay]
+	cp NITE
+	jr nz, .done
+	ld de, MUSIC_JOHTO_TRAINER_BATTLE_NIGHT
 	jr .done
 
 .kantotrainer

@@ -3,7 +3,7 @@
 - [ ] The Town Map still uses Johto's layout, rather than the new region's layout.
 - [x] Burn/Poison/Paralyze don't improve catch rate. (Fixed)
 - [ ] Experience underflow at level 1.
-- [ ] HP bar does not lower at the same speed for high HP.
+- [x] HP bar does not lower at the same speed for high HP. (Fixed)
 See the [Issues](issues/) page for things not listed here.  
 As far as I know, it also inherits all the bugs not listed here from vanilla Pokémon Crystal.
 

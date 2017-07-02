@@ -331,11 +331,10 @@ ParkBall: ; e8a2
 	jr nz, .statuscheck
 	ld a, 1
 .statuscheck
-; This routine is buggy. It was intended that SLP and FRZ provide a higher
+; This routine was buggy. It was intended that SLP and FRZ provide a higher
 ; catch rate than BRN/PSN/PAR, which in turn provide a higher catch rate than
-; no status effect at all. But instead, it makes BRN/PSN/PAR provide no
-; benefit.
-; Uncomment the line below to fix this.
+; no status effect at all. But instead, it made BRN/PSN/PAR provide no benefit.
+; Fixed.
 	ld b, a
 	ld a, [EnemyMonStatus]
 	and 1 << FRZ | SLP
@@ -363,7 +362,7 @@ ParkBall: ; e8a2
 	; the HELD_CATCH_CHANCE effect
 	; is never used.
 
-	; Uncomment the line below to fix.
+	; Fixed.
 
 	ld a, [BattleMonItem]
 	ld b, a
@@ -951,7 +950,7 @@ GLOBAL EvosAttacksPointers
 	push bc
 	ld a, BANK(EvosAttacks)
 	call GetFarByte
-	cp MOON_STONE_RED ; BURN_HEAL
+	cp MOON_STONE ; Attempt to fix bug here
 	pop bc
 	ret nz
 
@@ -965,7 +964,7 @@ GLOBAL EvosAttacksPointers
 	ret
 
 LoveBallMultiplier:
-; This function is buggy.
+; This function was buggy.
 ; Intent:  multiply catch rate by 8 if mons are of same species, different sex
 ; Reality: multiply catch rate by 8 if mons are of same species, same sex
 
@@ -1010,7 +1009,7 @@ LoveBallMultiplier:
 	pop de
 	cp d
 	pop bc
-	ret nz ; for the intended effect, this should be “ret z”
+	ret z ; for the intended effect, this should be “ret z” not "ret nz"
 
 	sla b
 	jr c, .max
@@ -1030,7 +1029,7 @@ LoveBallMultiplier:
 	ret
 
 FastBallMultiplier:
-; This function is buggy.
+; This function was buggy.
 ; Intent:  multiply catch rate by 4 if enemy mon is in one of the three
 ;          FleeMons tables.
 ; Reality: multiply catch rate by 4 if enemy mon is one of the first three in
@@ -1048,7 +1047,7 @@ FastBallMultiplier:
 	cp -1
 	jr z, .next
 	cp c
-	jr nz, .next ; for the intended effect, this should be “jr nz, .loop”
+	jr nz, .loop ; for the intended effect, this should be “jr nz, .loop” not "jr nz, .next"
 	sla b
 	jr c, .max
 

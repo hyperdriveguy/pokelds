@@ -117,10 +117,28 @@
 	dba Music_MobileCenter ; 0x17961d
 	
 ; Crystal 20XX adds the following songs:
-	dba Music_Shop ; 0x17961d
-	dba Music_NuggetBridge ; 0x17961d
-	dba Music_CeruleanGSC ; 0x17961d
-	dba Music_CinnabarGSC ; 0x17961d
+	dba Music_Shop
+	dba Music_NuggetBridge
+	dba Music_CeruleanGSC
+	dba Music_CinnabarGSC
 	dba Music_SinnohWildBattle
+	dba Music_Route225
+	dba Music_Route228
+	dba Music_PokemonCenterSinnoh
+	dba Music_FollowMe
+	dba Music_SinnohBike
+	dba Music_WinTrainerSinnoh
+	dba Music_WinPokeSinnoh
+	dba Music_SinnohSurfing
+	dba Music_JohtoGSC
+	dba Music_Route205
+	dba Music_ChampionBattleSinnoh
+	dba Music_Route203
+	dba Music_Route209
+	dba Music_Route206
+	dba Music_CatchPokeSinnoh
+	dba Music_Route210
+	
+; Pokemon LDS adds the following songs:
 	dba Music_BookOfMormonStories
 ; e91a3

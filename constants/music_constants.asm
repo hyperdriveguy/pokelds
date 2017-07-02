@@ -93,6 +93,7 @@
 	const MUSIC_LAKE_OF_RAGE_ROCKET_RADIO    ; 5a
 	const MUSIC_PRINTER                      ; 5b
 	const MUSIC_POST_CREDITS                 ; 5c
+	
 ; Songs added in Crystal
 	const MUSIC_CLAIR                        ; 5d
 	const MUSIC_MOBILE_ADAPTER_MENU          ; 5e
@@ -104,13 +105,31 @@
 	const MUSIC_SUICUNE_BATTLE               ; 64
 	const MUSIC_BATTLE_TOWER_LOBBY           ; 65
 	const MUSIC_MOBILE_CENTER                ; 66
+	
 ; Songs added by FroggestSpirit
 	const MUSIC_SHOP                		 ; 67
 	const MUSIC_NUGGET_BRIDGE                ; 68
 	const MUSIC_CERULEAN                     ; 69
 	const MUSIC_CINNABAR                     ; 6a
 	const MUSIC_SINNOH_WILD                  ; 6b
-	
-	const MUSIC_BOOK_OF_MORMON_STORIES
+	const MUSIC_ROUTE_225                    ; 6c
+	const MUSIC_ROUTE_228                    ; 6d
+	const MUSIC_POKEMON_CENTER_SINNOH        ; 6e        
+	const MUSIC_FOLLOW_ME                    ; 6f
+	const MUSIC_SINNOH_BIKE                  ; 70
+	const MUSIC_WIN_TRAINER_SINNOH           ; 71   
+	const MUSIC_WIN_POKE_SINNOH              ; 72
+	const MUSIC_SINNOH_SURFING               ; 73
+	const MUSIC_JOHTO_TRAINER_BATTLE_NIGHT   ; 74           
+	const MUSIC_ROUTE_205                    ; 75
+	const MUSIC_CHAMPION_BATTLE_SINNOH       ; 76       
+	const MUSIC_ROUTE_203                    ; 77
+	const MUSIC_ROUTE_209                    ; 78
+	const MUSIC_ROUTE_206                    ; 79
+	const MUSIC_CATCH_POKE_SINNOH            ; 7a  
+	const MUSIC_ROUTE_210                    ; 7b
+
+; Songs added by Hyperdriveguy	
+	const MUSIC_BOOK_OF_MORMON_STORIES       ; 7c
 
 MUSIC_MAHOGANY_MART EQU $64 ; leftover from gold
