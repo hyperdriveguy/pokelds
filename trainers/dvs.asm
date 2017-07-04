@@ -147,4 +147,5 @@ TrainerClassDVs: ; 270d6
 	db $98, $88 ; officer
 	db $7E, $A8 ; gruntf
 	db $98, $88 ; mysticalman
+	db $98, $88 ; missionarym
 ; 2715c

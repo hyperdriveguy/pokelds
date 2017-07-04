@@ -163,7 +163,7 @@ TwinSprite: ; 14814
 ; 1481a
 
 YoungsterSprite: ; 1481a
-	sprite_header YoungsterSpriteGFX, 3, WALKING_SPRITE, PAL_OW_BLUE
+	sprite_header YoungsterSpriteGFX, 3, WALKING_SPRITE, PAL_OW_RED
 ; 14820
 
 LassSprite: ; 14820
@@ -414,6 +414,6 @@ RaikouSprite: ; 1498e
 	sprite_header RaikouSpriteGFX, 1, STILL_SPRITE, PAL_OW_RED
 ; 14994
 
-StandingYoungsterSprite: ; 14994
-	sprite_header StandingYoungsterSpriteGFX, 3, STANDING_SPRITE, PAL_OW_BLUE
+StandingMissionarySprite: ; 14994
+	sprite_header StandingMissionarySpriteGFX, 3, STANDING_SPRITE, PAL_OW_BLUE
 ; 1499a

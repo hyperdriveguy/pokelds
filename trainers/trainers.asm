@@ -8827,3 +8827,29 @@ MysticalmanGroup:
 
 ; ================
 ; ================================
+
+MissionaryMGroup:
+; ================================
+; ================
+	; Elder (1)
+	db "Knight@"
+	db 0 ; species
+	
+	; party
+	
+	db 6, PONYTA
+	db 7, WEEDLE
+	
+; ================
+
+	; Elder (2)
+	db "Howard@"
+	db 0 ; species
+	
+	; party
+	
+	db 6, GROWLITHE
+	db 7, CATERPIE
+
+; ================
+; ================================

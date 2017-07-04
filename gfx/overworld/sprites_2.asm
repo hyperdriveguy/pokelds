@@ -55,4 +55,4 @@ KurtOutsideSpriteGFX:         INCBIN "gfx/overworld/097.2bpp" ; c7d40
 SuicuneSpriteGFX:             INCBIN "gfx/overworld/098.2bpp" ; c7e00
 EnteiSpriteGFX:               INCBIN "gfx/overworld/099.2bpp" ; c7e40
 RaikouSpriteGFX:              INCBIN "gfx/overworld/100.2bpp" ; c7e80
-StandingYoungsterSpriteGFX:   INCBIN "gfx/overworld/101.2bpp" ; c7ec0
+StandingMissionarySpriteGFX:  INCBIN "gfx/overworld/101.2bpp" ; c7ec0
