@@ -52,6 +52,7 @@ IMPORTANT NOTE: Suggestions and Pull Requests may be turned down if I find them 
 - [ ] Preach!
 - [ ] Final battles on Mt. Zion (Replacing the Elite Four and Champion)
 - [ ] Post Story?
+- [ ] Better method to obtain money?
 
 ## Battle Mechanics
 
@@ -73,12 +74,14 @@ IMPORTANT NOTE: Suggestions and Pull Requests may be turned down if I find them 
 - [ ] Make Pokemarts and Pokecenters close on Sundays (Pokecenters only take emergencies, like whiteouts)
 - [ ] Populate Church Meetinghouses on Sundays and Wednesdays, otherwise they're locked
 - [ ] Show walking animation faster when running
-- [ ] Add Elder, Sister, Deacon, Teacher, Priest, High Priest, Beehive, Miamaid, Laurel, Nephite, Lamanite, Ammonite, and Apostate trainer classes
+- [ ] Add Sister, Deacon, Teacher, Priest, High Priest, Beehive, Miamaid, Laurel, Nephite, Lamanite, Ammonite, and Apostate trainer classes
+- [x] Added Elder trainer class
 - [x] Get rid of Nuzlocke mode
 
 ## Music (Much help needed)
 
 - [ ] "I Hope They Call Me On a Mission" for the intro music
+    * Channels are out of sync
 - [ ] "Called to Serve" for Missionary Trainer encounter
 - [ ] "High on the Mountain Top" for Mt. Zion theme
 - [ ] "True to the Faith" for the ending theme
@@ -88,17 +91,18 @@ IMPORTANT NOTE: Suggestions and Pull Requests may be turned down if I find them 
 - [ ] "For the Strength of the Hills" for route music
 - [ ] "How Firm a Foundation" for route music
 - [ ] "Book of Mormon Stories" for Zarahemla
-    * Basic groudwork done, but it needs to support multiple channels
+    * Basic groudwork done, and it supports multiple channels, but needs improvement
 - [ ] Port other popular Hymns to the audio engine
 
 ## Graphics
 
 - [ ] Book of Mormon Time like, Temple Square, meetinghouse, and desert tilesets
 - [ ] Make new Reworked Professor Character, Nephite, Lamanite, MissionaryM, and MissionaryF overworld sprites
-- [ ] Make Elder, Sister, Deacon, Teacher, Priest, High Priest, Beehive, Miamaid, Laurel, Nephite, Lamanite, Ammonite, and Apostate trainer sprites
+- [ ] Make Sister, Deacon, Teacher, Priest, High Priest, Beehive, Miamaid, Laurel, Nephite, Lamanite, Ammonite, and Apostate trainer sprites
+- [x] Made Elder overworld and trainer sprites
 - [ ] Custom title screen
 
-# Feature backport from other hacks (Like Polished Crystal)
+# Feature backport from other hacks (Like Polished Crystal) - These aren't as high priority, but may be easier to implement.
 
 ## Overworld Mechanics
 
@@ -117,10 +121,11 @@ IMPORTANT NOTE: Suggestions and Pull Requests may be turned down if I find them 
 
 - [x] A Physical/Special/Status split.
 - [ ] Add Abilities
+    * Last priority
 - [x] Natures
 - [x] EV and IV system
 - [ ] Gain experience from catching Pokémon.
-- [ ] Use money loss formula from Gen V.
+- [x] Use money loss formula from Gen V.
 - [ ] Make type-enhancing items raise by 20%, not 10%.
 - [ ] Make critical hits do 150% damage, not 200%, and make them more likely.
 - [ ] Make electric-type Pokémon are immune to paralysis, even from Tri Attack.
@@ -129,7 +134,6 @@ IMPORTANT NOTE: Suggestions and Pull Requests may be turned down if I find them 
 - [ ] Make steel-type Pokémon are immune to poisoning.
 - [ ] Make Roar, Whirlwind, and Struggle unaffected by accuracy or evasion, like Swift.
 - [ ] Make Growth raise Attack and Special Attack, by two stages in sunlight.
-- [ ] Make Hidden Power 70 power.
 - [ ] Make wild Pokémon have more common held items (50% chance for a common one and 5% for a rare one). Also make it so giving an Amulet Coin to your lead Pokémon increases this to 60% and 10%.
 - [ ] Make X Accuracy boost accuracy, not ignore accuracy checks entirely.
 - [ ] Port critical captures from Prism
@@ -138,8 +142,6 @@ IMPORTANT NOTE: Suggestions and Pull Requests may be turned down if I find them 
 ## Difficulty
 
 - [ ] Make Set battle style default.
-- [ ] Make enemy AI not fail an extra 25% of the time with sleep or poison-inducing moves, or 40% of the time with stat drops.
-- [ ] Make AI improvements, such as not trying to paralyze Electric types or burn Fire types.
 
 ## Graphics
 

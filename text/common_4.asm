@@ -15,10 +15,7 @@ _OakText7::
 	line "times and tough"
 	cont "challenges."
 
-	para "A world of dreams"
-	line "and adventures"
-
-	para "with #MON"
+	para "The land of Nephi"
 	line "awaits! Let's go!"
 
 	para "I'll be seeing you"

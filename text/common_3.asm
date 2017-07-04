@@ -215,11 +215,45 @@ UnknownText_0x1c0a2c::
 	cont "items."
 	done
 
-UnknownText_0x1c0a4e::
+WhiteoutText::
 	text "<PLAYER> is out of"
-	line "useable #MON!"
+	line "useable #mon!"
 
-	para "<PLAYER> whited"
+	para "<PLAYER> blacked"
+	line "out!"
+	done
+
+WhiteoutToWildText::
+	text "<PLAYER> is out of"
+	line "useable #mon!"
+
+	para "<PLAYER> panicked"
+	line "and dropped"
+	cont "¥@"
+	deciram hMoneyTemp, 3, 7
+	text "…"
+
+	para "………………"
+	line "………………"
+
+	para "<PLAYER> blacked"
+	line "out!"
+	done
+
+WhiteoutToTrainerText::
+	text "<PLAYER> is out of"
+	line "useable #mon!"
+
+	para "<PLAYER> paid"
+	line "¥@"
+	deciram hMoneyTemp, 3, 7
+	text " to the"
+	cont "winner…"
+
+	para "………………"
+	line "………………"
+
+	para "<PLAYER> blacked"
 	line "out!"
 	done
 
@@ -1181,12 +1215,16 @@ _OakText1::
 	line "keep you waiting!"
 
 	para "Welcome to the"
-	line "world of #MON!"
+	line "land of Nephi!"
 
-	para "My name is OAK."
+	para "My name is Bishop"
+	line "Johnson. I'm the"
+	
+	para "Bishop for the"
+	line "Bountiful ward."
 
-	para "People call me the"
-	line "#MON PROF."
+	para "I study #MON"
+	line "for a living."
 	prompt
 
 _OakText2::
@@ -1200,15 +1238,14 @@ _OakText3::
 	db "@@"
 
 _OakText4::
-	text "People and #MON"
-	line "live together by"
-
-	para "supporting each"
-	line "other."
-
-	para "Some people play"
+	text "Some people play"
 	line "with #MON, some"
 	cont "battle with them."
+	
+	para "Missionaries even"
+	line "have #MON for"
+	cont "travel, defense,"
+	cont "and other things."
 	prompt
 
 _OakText5::
@@ -1221,5 +1258,5 @@ _OakText5::
 	cont "solve."
 
 	para "That's why I study"
-	line "#MON every day."
+	line "#MON!"
 	prompt

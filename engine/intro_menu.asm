@@ -310,7 +310,7 @@ InitializeNPCNames: ; 5ce9
 	call CopyBytes
 	ret
 
-.Rival:  db "???@"
+.Rival:  db "AARON@"
 .Red:    db "RED@"
 .Green:  db "GREEN@"
 .Mom:    db "MOM@"
@@ -565,7 +565,7 @@ Continue_LoadMenuHeader: ; 5ebf
 .MenuData2_Dex: ; 5ee1
 	db $00 ; flags
 	db 4 ; items
-	db "PLAYER@"
+	db "ELDER <PLAYER>@"
 	db "BADGES@"
 	db "#DEX@"
 	db "TIME@"
@@ -677,7 +677,7 @@ OakSpeech: ; 0x5f99
 	call RotateFourPalettesLeft
 	call ClearTileMap
 
-	ld de, MUSIC_NUGGET_BRIDGE
+	ld de, MUSIC_I_HOPE_THEY_CALL_ME
 	call PlayMusic
 
 	call RotateFourPalettesRight
@@ -824,9 +824,9 @@ NamePlayer: ; 0x6074
 	ret
 
 .Chris:
-	db "CHRIS@@@@@@"
+	db "AMMON@@@@@@"
 .Kris:
-	db "KRIS@@@@@@@"
+	db "SARIAH@@@@@"
 ; 60e9
 
 Function60e9: ; Unreferenced
