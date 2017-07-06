@@ -1207,6 +1207,15 @@
 	db 3, HOPPIP
 	db 3, HOPPIP
 	; nite
+IF DEF(DEBUG)
+	db 2, GIRAFARIG
+	db 3, DEWGONG
+	db 3, LUGIA
+	db 2, GIRAFARIG
+	db 3, DEWGONG
+	db 3, LUGIA
+	db 3, LUGIA
+ELSE
 	db 2, HOOTHOOT
 	db 2, RATTATA
 	db 3, HOOTHOOT
@@ -1214,6 +1223,7 @@
 	db 2, RATTATA
 	db 3, HOOTHOOT
 	db 3, HOOTHOOT
+ENDC
 
 	map PLEASANT_GROVE
 	db 10 percent, 5 percent, 20 percent ; encounter rates: morn/day/nite

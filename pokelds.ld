@@ -249,7 +249,7 @@ ROMX $43
 	"bank43"
 ROMX $44
 	org $4000
-	"Main"
+	"Adapter"
 ROMX $45
 	org $4000
 	"bank45"

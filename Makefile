@@ -1,5 +1,5 @@
 .SUFFIXES:
-.PHONY: all clean tools lds lds11
+.PHONY: all clean tools lds lds11 debug bankfree
 .SECONDEXPANSION:
 .PRECIOUS:
 .SECONDARY:
@@ -21,36 +21,68 @@ misc/crystal_misc.o \
 text/common_text.o \
 gfx/pics.o
 
-lds11_obj := $(lds_obj:.o=11.o)
+lds-11_obj := $(lds_obj:.o=-11.o)
 
+lds-debug_obj := $(lds_obj:.o=-debug.o)
 
-roms := pokelds.gbc pokelds11.gbc
+NAME := pokelds
+VERSION := git
+TITLE := PM_MORMON
+MCODE := PLDS
+ROMVERSION := 0x00
+FILLER = 0x00
+
+roms := $(NAME)-$(VERSION).gbc $(NAME)-$(VERSION)-11.gbc $(NAME)-$(VERSION)-debug.gbc $(NAME)-$(VERSION)-bankfree.gbc
 
 all: lds
-lds: pokelds.gbc
-lds11: pokelds11.gbc
+
+lds: $(NAME)-$(VERSION).gbc
+
+lds11: $(NAME)-$(VERSION)-11.gbc
+
+debug: $(NAME)-$(VERSION)-debug.gbc
+
+bankfree: $(NAME)-$(VERSION)-bankfree.gbc
 
 clean:
-	rm -f $(roms) $(lds_obj) $(lds11_obj) $(roms:.gbc=.map) $(roms:.gbc=.sym) $(roms:.gbc=.sav)
+	rm -f $(roms) $(lds_obj) $(lds-11_obj) $(lds-debug_obj)
+	rm -If *.map *.sym *.sav
 
 tools:
 	make -C tools/
 
-%11.o: dep = $(shell tools/scan_includes $(@D)/$*.asm)
+cleantools:
+	rm -f tools/*.elf
+
+freespace: lds bankfree ; python2 utils/bank-ends.py > utils/bank-ends.txt
+
+%-debug.o: dep = $(shell tools/scan_includes.elf $(@D)/$*.asm)
+%-debug.o: %.asm $$(dep)
+	rgbasm -D DEBUG -o $@ $<
+
+%11.o: dep = $(shell tools/scan_includes.elf $(@D)/$*.asm)
 %11.o: %.asm $$(dep)
 	rgbasm -D CRYSTAL11 -o $@ $<
 
-%.o: dep = $(shell tools/scan_includes $(@D)/$*.asm)
+%.o: dep = $(shell tools/scan_includes.elf $(@D)/$*.asm)
 %.o: %.asm $$(dep)
 	rgbasm -o $@ $<
 
-pokelds11.gbc: $(lds11_obj)
-	rgblink -n pokelds11.sym -m pokelds11.map -l pokelds.ld -o $@ $^
-	rgbfix -Cjv -i BYTE -k 01 -l 0x33 -m 0x10 -n 1 -p 0 -r 3 -t PM_MORMON $@
+$(NAME)-$(VERSION)-bankfree.gbc: $(lds_obj)
+	rgblink -n $(NAME)-bankfree.sym -m $(NAME)-bankfree.map -l $(NAME).ld -p $(FILLER) -o $@ $^
+	rgbfix -Cjv -i $(MCODE) -n $(ROMVERSION) -p 0xff -t $(TITLE) -k 01 -l 0x33 -m 0x10 -r 3 $@
+	
+$(NAME)-$(VERSION)-debug.gbc: $(lds-debug_obj)
+	rgblink -n $(NAME)-debug.sym -m $(NAME)-debug.map -l $(NAME).ld -p $(FILLER) -o $@ $^
+	rgbfix -Cjv -i $(MCODE) -n $(ROMVERSION) -p 0x00 -t $(TITLE) -k 01 -l 0x33 -m 0x10 -r 3 $@
 
-pokelds.gbc: $(lds_obj)
-	rgblink -n pokelds.sym -m pokelds.map -l pokelds.ld -o $@ $^
-	rgbfix -Cjv -i BYTE -k 01 -l 0x33 -m 0x10 -p 0 -r 3 -t PM_MORMON $@
+$(NAME)-$(VERSION)-11.gbc: $(lds-11_obj)
+	rgblink -n $(NAME)-11.sym -m $(NAME)-11.map -l $(NAME).ld -p $(FILLER) -o $@ $^
+	rgbfix -Cjv -i $(MCODE) -n $(ROMVERSION) -p 0x00 -t $(TITLE) -k 01 -l 0x33 -m 0x10 -r 3 $@
+
+$(NAME)-$(VERSION).gbc: $(lds_obj)
+	rgblink -n $(NAME).sym -m $(NAME).map -l $(NAME).ld -p $(FILLER) -o $@ $^
+	rgbfix -Cjv -i $(MCODE) -n $(ROMVERSION) -p 0x00 -t $(TITLE) -k 01 -l 0x33 -m 0x10 -r 3 $@
 
 
 define LOUD
@@ -67,27 +99,27 @@ endef
 	@if [ -f $(filename) ]; then \
 		$(call LOUD, cp $(filename) $@); \
 	else \
-		$(call LOUD, tools/lzcomp $< $@); \
+		$(call LOUD, tools/lzcomp.elf $< $@); \
 	fi
 
 # Terrible hacks to match animations. Delete these rules if you don't care about matching.
 
 # Dewgong has an unused tile id in its last frame. The tile itself is missing.
 gfx/pics/dewgong/frames.asm: gfx/pics/dewgong/front.animated.tilemap gfx/pics/dewgong/front.dimensions
-	tools/pokemon_animation -f $^ > $@
+	tools/pokemon_animation.elf -f $^ > $@
 	echo "	db \$$4d" >> $@
 
 # Lugia has two unused tile ids in its last frame. The tiles themselves are missing.
 gfx/pics/lugia/frames.asm: gfx/pics/lugia/front.animated.tilemap gfx/pics/lugia/front.dimensions
-	tools/pokemon_animation -f $^ > $@
+	tools/pokemon_animation.elf -f $^ > $@
 	echo "	db \$$5e, \$$59" >> $@
 
 # Girafarig has a redundant tile after the end. It is used in two frames, so it must be injected into the generated graphics.
 # This is more involved, so it's hacked into pokemon_animation_graphics.
 gfx/pics/girafarig/front.animated.2bpp: gfx/pics/girafarig/front.2bpp gfx/pics/girafarig/front.dimensions
-	tools/pokemon_animation_graphics --girafarig -o $@ $^
+	tools/pokemon_animation_graphics.elf --girafarig -o $@ $^
 gfx/pics/girafarig/front.animated.tilemap: gfx/pics/girafarig/front.2bpp gfx/pics/girafarig/front.dimensions
-	tools/pokemon_animation_graphics --girafarig -t $@ $^
+	tools/pokemon_animation_graphics.elf --girafarig -t $@ $^
 
 
 # Pokemon pic graphics rules
@@ -95,17 +127,17 @@ gfx/pics/girafarig/front.animated.tilemap: gfx/pics/girafarig/front.2bpp gfx/pic
 gfx/pics/%/normal.gbcpal: gfx/pics/%/front.png
 	rgbgfx -p $@ $<
 gfx/pics/%/normal.pal: gfx/pics/%/normal.gbcpal
-	tools/palette -p $< > $@
+	tools/palette.elf -p $< > $@
 gfx/pics/%/back.2bpp: gfx/pics/%/back.png
 	rgbgfx -h -o $@ $<
 gfx/pics/%/bitmask.asm: gfx/pics/%/front.animated.tilemap gfx/pics/%/front.dimensions
-	tools/pokemon_animation -b $^ > $@
+	tools/pokemon_animation.elf -b $^ > $@
 gfx/pics/%/frames.asm: gfx/pics/%/front.animated.tilemap gfx/pics/%/front.dimensions
-	tools/pokemon_animation -f $^ > $@
+	tools/pokemon_animation.elf -f $^ > $@
 gfx/pics/%/front.animated.2bpp: gfx/pics/%/front.2bpp gfx/pics/%/front.dimensions
-	tools/pokemon_animation_graphics -o $@ $^
+	tools/pokemon_animation_graphics.elf -o $@ $^
 gfx/pics/%/front.animated.tilemap: gfx/pics/%/front.2bpp gfx/pics/%/front.dimensions
-	tools/pokemon_animation_graphics -t $@ $^
+	tools/pokemon_animation_graphics.elf -t $@ $^
 # Don't use -h, pokemon_animation_graphics takes care of it
 #gfx/pics/%/front.2bpp: gfx/pics/%/front.png
 #	rgbgfx -o $@ $<
@@ -132,6 +164,6 @@ gfx/trainers/%.2bpp: gfx/trainers/%.png
 %.gbcpal: %.png
 	rgbgfx -p $@ $<
 %.pal: %.gbcpal
-	tools/palette $< > $@
+	tools/palette.elf $< > $@
 %.dimensions: %.png
-	tools/png_dimensions $< $@
+	tools/png_dimensions.elf $< $@

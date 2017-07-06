@@ -8,6 +8,7 @@
 
 # no binaries
 *.exe
+*.elf
 
 # roms
 *.gbc
