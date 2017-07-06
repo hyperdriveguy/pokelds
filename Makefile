@@ -60,8 +60,8 @@ freespace: lds bankfree ; python2 utils/bank-ends.py > utils/bank-ends.txt
 %-debug.o: %.asm $$(dep)
 	rgbasm -D DEBUG -o $@ $<
 
-%11.o: dep = $(shell tools/scan_includes.elf $(@D)/$*.asm)
-%11.o: %.asm $$(dep)
+%-11.o: dep = $(shell tools/scan_includes.elf $(@D)/$*.asm)
+%-11.o: %.asm $$(dep)
 	rgbasm -D CRYSTAL11 -o $@ $<
 
 %.o: dep = $(shell tools/scan_includes.elf $(@D)/$*.asm)
