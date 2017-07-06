@@ -24,7 +24,7 @@ and make sure your contributions are helpful.
 * An IRC channel
 * Anything you think could be useful (Open an enhancement request first)
 
-## This project is **not** looking for the following contributions
+## This project is NOT looking for the following contributions
 
 * Things that have already been done in the [TODO](https://github.com/hyperdriveguy/pokelds/blob/master/TODO.md)
 * Modifications to the TODO list (Won't always reject, it's just a very
@@ -39,7 +39,8 @@ See the [Code of Conduct](https://github.com/hyperdriveguy/pokelds/blob/master/C
 # Code Style
 
 * Hex for numbers is preferred in most places
-    * Exceptions are the file which are edited by Crowdmap.
+    * Exceptions are the files which are edited by Crowdmap
+    * Audio files do not have to use hex either
 * Code should be well commented to explain what it does
 * Avoid binary blobs
 * Avoid regressions
@@ -117,8 +118,8 @@ Make sure to use the "bug" label on your issue.
 
 The goal of Pokémon LDS is to create an amazing game full of excitement,
 challenges, puzzles, and of course, references to Utah, LDS culture, and
-the Book of Mormon (Along with other scripture), while keeping most of
-the Pokémon mechanics (eg. battles) the same.
+the Book of Mormon (Along with other scripture), while keeping some of
+the Pokémon concepts (eg. battles) the same.
 
 Keep this in mind when suggesting a feature or enhancement.
 
