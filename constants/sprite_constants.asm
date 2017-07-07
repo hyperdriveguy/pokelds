@@ -17,7 +17,7 @@
 	const SPRITE_BLAINE ; 0d
 	const SPRITE_REDS_MOM ; 0e
 	const SPRITE_DAISY ; 0f
-	const SPRITE_ELM ; 10
+	const SPRITE_BISHOP ; 10
 	const SPRITE_WILL ; 11
 	const SPRITE_FALKNER ; 12
 	const SPRITE_WHITNEY ; 13
