@@ -59,7 +59,7 @@
 	dba Music_ChampionBattle ; 0xea9c1
 	dba Music_RivalBattle ; 0xe974f
 	dba Music_RocketBattle ; 0xe9b6f
-	dba Music_ElmsLab ; 0xea040
+	dba Music_BishopsLab ; 0xea040
 	dba Music_DarkCave ; 0xea2be
 	dba Music_Route29 ; 0xf0386
 	dba Music_Route36 ; 0xe94e9

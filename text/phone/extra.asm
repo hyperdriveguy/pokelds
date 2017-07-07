@@ -756,7 +756,7 @@ UnknownText_0x654ea: ; 0x654ea
 
 UnknownText_0x65555: ; 0x65555
 	text "Everyone's talking"
-	line "about PROF.ELM."
+	line "about Bishop."
 
 	para "He used to be an"
 	line "assistant to the"

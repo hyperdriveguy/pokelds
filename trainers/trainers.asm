@@ -8828,7 +8828,7 @@ MysticalmanGroup:
 ; ================
 ; ================================
 
-MissionaryMGroup:
+MissionaryGroup:
 ; ================================
 ; ================
 	; Elder (1)
@@ -8838,18 +8838,22 @@ MissionaryMGroup:
 	; party
 	
 	db 6, PONYTA
-	db 7, WEEDLE
+	db 7, WEEDLfE
+
+	db $ff ; end
 	
 ; ================
 
 	; Elder (2)
 	db "Howard@"
 	db 0 ; species
-	
+
 	; party
-	
+
 	db 6, GROWLITHE
 	db 7, CATERPIE
+
+	db $ff ; end
 
 ; ================
 ; ================================

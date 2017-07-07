@@ -13,7 +13,7 @@ MomSpriteGFX:          INCBIN "gfx/overworld/011.2bpp" ; c0fc0
 BlaineSpriteGFX:       INCBIN "gfx/overworld/012.2bpp" ; c1140
 RedsMomSpriteGFX:      INCBIN "gfx/overworld/013.2bpp" ; c12c0
 DaisySpriteGFX:        INCBIN "gfx/overworld/014.2bpp" ; c1440
-ElmSpriteGFX:          INCBIN "gfx/overworld/015.2bpp" ; c15c0
+BishopSpriteGFX:          INCBIN "gfx/overworld/015.2bpp" ; c15c0
 WillSpriteGFX:         INCBIN "gfx/overworld/016.2bpp" ; c1740
 FalknerSpriteGFX:      INCBIN "gfx/overworld/017.2bpp" ; c1800
 WhitneySpriteGFX:      INCBIN "gfx/overworld/018.2bpp" ; c1980

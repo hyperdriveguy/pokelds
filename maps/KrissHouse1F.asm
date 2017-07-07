@@ -56,7 +56,7 @@ EndMomIntro:
 	end
 
 MomIntroText1:
-	text "Oh, <PLAYER>!"
+	text "Mom: Oh, <PLAYER>!"
 
 	para "Bishop Johnson was"
 	line "looking for you."
@@ -210,6 +210,83 @@ DoGreatThingsText:
 	cont "great things!"
 	done
 
+NeighborScript:
+	faceplayer
+	opentext
+	writetext HelloPlayerText
+	waitbutton
+	closetext
+	spriteface KRISSHOUSE1F_NEIGHBOR, RIGHT
+	end
+
+HelloPlayerText:
+	text "Hello <PLAYER>!"
+	line "I'm visiting!"
+	
+	para "Your Mom and I are"
+	line "great friends."
+	done
+
+; Object Scripts
+StoveScript:
+	opentext
+	writetext StoveText
+	waitbutton
+	closetext
+	end
+SinkScript:
+	opentext
+	writetext SinkText
+	waitbutton
+	closetext
+	end
+FridgeScript:
+	opentext
+	writetext FridgeText
+	waitbutton
+	closetext
+	end
+TvScript:
+	opentext
+	writetext TvText
+	waitbutton
+	closetext
+	end
+
+StoveText:
+	text "Mom's specialties!"
+	line "Jello, Jello"
+	
+	para "Salad, Jello on a"
+	line "stick…"
+	done
+
+SinkText:
+	text "The sink is spot-"
+	line "less. Mom likes it"
+	cont "clean."
+	done
+
+FridgeText:
+	text "What's in the"
+	line "fridge?"
+
+	para "…"
+	
+	para "Jello, of course!"
+	done
+
+TvText:
+	text "There's a movie on:"
+	line "An islander trader"
+	
+	para "bargains cows for"
+	line "his wife…"
+
+	para "It looks like an"
+	line "old movie…"
+	done
+
 KrissHouse1F_MapEventHeader:: db 0, 0
 
 .Warps: db 3
@@ -221,12 +298,12 @@ KrissHouse1F_MapEventHeader:: db 0, 0
 	xy_trigger 0, 1, 11, 0, MomIntroScript, 0, 0
 
 .BGEvents: db 4
-	signpost 1, 2, SIGNPOST_READ, ObjectEvent
-	signpost 1, 3, SIGNPOST_READ, ObjectEvent
-	signpost 1, 4, SIGNPOST_READ, ObjectEvent
-	signpost 1, 6, SIGNPOST_READ, ObjectEvent
+	signpost 1, 2, SIGNPOST_READ, StoveScript
+	signpost 1, 3, SIGNPOST_READ, SinkScript
+	signpost 1, 4, SIGNPOST_READ, FridgeScript
+	signpost 1, 6, SIGNPOST_READ, TvScript
 
 .ObjectEvents: db 2
 	person_event SPRITE_MOM, 4, 9, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, MomScript, -1
-	person_event SPRITE_POKEFAN_F, 4, 6, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, (1 << 3) | PAL_OW_RED, PERSONTYPE_SCRIPT, 0, ObjectEvent, -1
+	person_event SPRITE_POKEFAN_F, 4, 6, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, (1 << 3) | PAL_OW_RED, PERSONTYPE_SCRIPT, 0, NeighborScript, -1
 

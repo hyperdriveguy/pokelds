@@ -545,11 +545,11 @@
 	map_header_2 Route2NuggetSpeechHouse, ROUTE_2_NUGGET_SPEECH_HOUSE, $0, 0
 	map_header_2 Route2Gate, ROUTE_2_GATE, $0, 0
 	map_header_2 VictoryRoadGate, VICTORY_ROAD_GATE, $0, 0
-	map_header_2 ElmsLab, ELMS_LAB, 0, 0
+	map_header_2 BishopsLab, BISHOPS_LAB, 0, 0
 	map_header_2 KrissHouse1F, KRISS_HOUSE_1F, 0, 0
 	map_header_2 KrissHouse2F, KRISS_HOUSE_2F, 0, 0
 	map_header_2 KrissNeighborsHouse, KRISS_NEIGHBORS_HOUSE, 0, 0
-	map_header_2 ElmsHouse, ELMS_HOUSE, 0, 0
+	map_header_2 BishopsHouse, BISHOPS_HOUSE, 0, 0
 	map_header_2 Route26HealSpeechHouse, ROUTE_26_HEAL_SPEECH_HOUSE, $0, 0
 	map_header_2 Route26DayofWeekSiblingsHouse, ROUTE_26_DAY_OF_WEEK_SIBLINGS_HOUSE, $0, 0
 	map_header_2 Route27SandstormHouse, ROUTE_27_SANDSTORM_HOUSE, $0, 0

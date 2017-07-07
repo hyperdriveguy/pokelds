@@ -11,7 +11,7 @@ MomPhoneScript: ; 0xbceaa
 	iftrue MomPhoneLectureScript
 	checkevent EVENT_FINISHED_BISHOPS_ERRAND
 	iftrue MomPhoneNoGymQuestScript
-	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
+	checkevent EVENT_GOT_A_POKEMON_FROM_BISHOP
 	iftrue MomPhoneNoPokedexScript
 	jump MomPhoneNoPokemonScript
 
@@ -184,107 +184,107 @@ BillPhoneScript2: ; 0xbd007
 	waitbutton
 	end
 
-; Elm
+; Bishop
 
-ElmPhoneScript1: ; 0xbd00d
+BishopPhoneScript1: ; 0xbd00d
 	checkcode VAR_SPECIALPHONECALL
 	if_equal $1, .pokerus
-	checkevent EVENT_SHOWED_TOGEPI_TO_ELM
+	checkevent EVENT_SHOWED_TOGEPI_TO_BISHOP
 	iftrue .discovery
-	checkevent EVENT_GOT_TOGEPI_EGG_FROM_ELMS_AIDE
+	checkevent EVENT_GOT_TOGEPI_EGG_FROM_BISHOPS_AIDE
 	iffalse .next
 	checkevent EVENT_TOGEPI_HATCHED
 	iftrue .egghatched
 .next
-	checkevent EVENT_GOT_TOGEPI_EGG_FROM_ELMS_AIDE
+	checkevent EVENT_GOT_TOGEPI_EGG_FROM_BISHOPS_AIDE
 	iftrue .eggunhatched
-	checkevent EVENT_ELMS_AIDE_IN_LAB
+	checkevent EVENT_BISHOPS_AIDE_IN_LAB
 	iftrue .assistant
 	checkevent EVENT_FINISHED_BISHOPS_ERRAND
 	iftrue .checkingegg
-	checkevent EVENT_ELM_CALLED_ABOUT_STOLEN_POKEMON
+	checkevent EVENT_BISHOP_CALLED_ABOUT_STOLEN_POKEMON
 	iftrue .stolen
 	checkevent EVENT_GOT_PACKAGE_FROM_WARD_CLERK
 	iftrue .sawmrpokemon
-	farwritetext ElmPhoneStartText
+	farwritetext BishopPhoneStartText
 	end
 
 .sawmrpokemon ; 0xbd048
-	farwritetext ElmPhoneSawMrPokemonText
+	farwritetext BishopPhoneSawMrPokemonText
 	end
 
 .stolen ; 0xbd04d
-	farwritetext ElmPhonePokemonStolenText
+	farwritetext BishopPhonePokemonStolenText
 	end
 
 .checkingegg ; 0xbd052
-	farwritetext ElmPhoneCheckingEggText
+	farwritetext BishopPhoneCheckingEggText
 	end
 
 .assistant ; 0xbd057
-	farwritetext ElmPhoneAssistantText
+	farwritetext BishopPhoneAssistantText
 	end
 
 .eggunhatched ; 0xbd05c
-	farwritetext ElmPhoneEggUnhatchedText
+	farwritetext BishopPhoneEggUnhatchedText
 	end
 
 .egghatched ; 0xbd061
-	farwritetext ElmPhoneEggHatchedText
-	setevent EVENT_TOLD_ELM_ABOUT_TOGEPI_OVER_THE_PHONE
+	farwritetext BishopPhoneEggHatchedText
+	setevent EVENT_TOLD_BISHOP_ABOUT_TOGEPI_OVER_THE_PHONE
 	end
 
 .discovery ; 0xbd069
 	random $2
 	if_equal $0, .nextdiscovery
-	farwritetext ElmPhoneDiscovery1Text
+	farwritetext BishopPhoneDiscovery1Text
 	end
 
 .nextdiscovery ; 0xbd074
-	farwritetext ElmPhoneDiscovery2Text
+	farwritetext BishopPhoneDiscovery2Text
 	end
 
 .pokerus ; 0xbd079
-	farwritetext ElmPhonePokerusText
+	farwritetext BishopPhonePokerusText
 	specialphonecall SPECIALCALL_NONE
 	end
 
-ElmPhoneScript2: ; 0xbd081
+BishopPhoneScript2: ; 0xbd081
 	checkcode VAR_SPECIALPHONECALL
 	if_equal $2, .disaster
 	if_equal $3, .assistant
 	if_equal $4, .rocket
 	if_equal $5, .gift
 	if_equal $8, .gift
-	farwritetext ElmPhonePokerusText
+	farwritetext BishopPhonePokerusText
 	specialphonecall SPECIALCALL_NONE
 	end
 
 .disaster ; 0xbd09f
-	farwritetext ElmPhoneDisasterText
+	farwritetext BishopPhoneDisasterText
 	specialphonecall SPECIALCALL_NONE
-	setevent EVENT_ELM_CALLED_ABOUT_STOLEN_POKEMON
+	setevent EVENT_BISHOP_CALLED_ABOUT_STOLEN_POKEMON
 	end
 
 .assistant ; 0xbd0aa
-	farwritetext ElmPhoneEggAssistantText
+	farwritetext BishopPhoneEggAssistantText
 	specialphonecall SPECIALCALL_NONE
-	clearevent EVENT_ELMS_AIDE_IN_VIOLET_POKEMON_CENTER
-	setevent EVENT_ELMS_AIDE_IN_LAB
+	clearevent EVENT_BISHOPS_AIDE_IN_VIOLET_POKEMON_CENTER
+	setevent EVENT_BISHOPS_AIDE_IN_LAB
 	end
 
 .rocket ; 0xbd0b8
-	farwritetext ElmPhoneRocketText
+	farwritetext BishopPhoneRocketText
 	specialphonecall SPECIALCALL_NONE
 	end
 
 .gift ; 0xbd0c0
-	farwritetext ElmPhoneGiftText
+	farwritetext BishopPhoneGiftText
 	specialphonecall SPECIALCALL_NONE
 	end
 
 .unused ; 0xbd0c8
-	farwritetext ElmPhoneUnusedText
+	farwritetext BishopPhoneUnusedText
 	specialphonecall SPECIALCALL_NONE
 	end
 ; bd0d0

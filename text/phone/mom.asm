@@ -124,7 +124,7 @@ MomPhoneNoPokemonText: ; 0x1b42ea
 	text "Hello?"
 
 	para "Oh, hi, <PLAYER>!"
-	line "Wasn't PROF.ELM"
+	line "Wasn't Bishop"
 	cont "waiting for you?"
 	done
 
@@ -135,7 +135,7 @@ MomPhoneNoPokedexText: ; 0x1b431d
 	line "You're on a big"
 
 	para "mission for PROF."
-	line "ELM? Be good!"
+	line "BISHOP? Be good!"
 	done
 
 MomPhoneNoGymQuestText: ; 0x1b435f
@@ -154,7 +154,7 @@ MomPhoneLectureText: ; 0x1b43a1
 	para "…… <PLAYER>?"
 	line "I heard from PROF."
 
-	para "ELM that you went"
+	para "BISHOP that you went"
 	line "on a long trip."
 
 	para "I wish you would"

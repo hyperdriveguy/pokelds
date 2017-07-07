@@ -29,7 +29,7 @@ ENDM
 	trigger_def HALL_OF_FAME,                           wHallOfFameTrigger
 	trigger_def ROUTE_27,                               wRoute27Trigger
 	trigger_def BOUNTIFUL_TOWN,                         wBountifulTownTrigger
-	trigger_def ELMS_LAB,                               wElmsLabTrigger
+	trigger_def BISHOPS_LAB,                               wBishopsLabTrigger
 	trigger_def KRISS_HOUSE_1F,                         wKrissHouse1FTrigger
 	trigger_def ROUTE_101,                              wRoute101Trigger
 	trigger_def PLEASANT_GROVE,                         wPleasantGroveTrigger

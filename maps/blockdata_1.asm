@@ -22,8 +22,8 @@ SaffronCity_BlockData:
 Route2_BlockData:
 	INCBIN "maps/Route2.blk"
 
-ElmsHouse_BlockData:
-	INCBIN "maps/ElmsHouse.blk"
+BishopsHouse_BlockData:
+	INCBIN "maps/BishopsHouse.blk"
 
 Route11_BlockData:
 	INCBIN "maps/Route11.blk"
@@ -217,8 +217,8 @@ Route31VioletGate_BlockData:
 VermilionCity_BlockData:
 	INCBIN "maps/VermilionCity.blk"
 
-ElmsLab_BlockData:
-	INCBIN "maps/ElmsLab.blk"
+BishopsLab_BlockData:
+	INCBIN "maps/BishopsLab.blk"
 
 CeruleanCity_BlockData:
 	INCBIN "maps/CeruleanCity.blk"

@@ -70,8 +70,8 @@ DaisySprite: ; 1478a
 	sprite_header DaisySpriteGFX, 3, WALKING_SPRITE, PAL_OW_BLUE
 ; 14790
 
-ElmSprite: ; 14790
-	sprite_header ElmSpriteGFX, 3, WALKING_SPRITE, PAL_OW_BROWN
+BishopSprite: ; 14790
+	sprite_header BishopSpriteGFX, 3, WALKING_SPRITE, PAL_OW_BROWN
 ; 14796
 
 WillSprite: ; 14796

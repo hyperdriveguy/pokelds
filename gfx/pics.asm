@@ -526,7 +526,8 @@ SnubbullBackpic:     INCBIN "gfx/pics/snubbull/back.2bpp.lz"
 KinglerBackpic:      INCBIN "gfx/pics/kingler/back.2bpp.lz"
 GengarBackpic:       INCBIN "gfx/pics/gengar/back.2bpp.lz"
 RattataBackpic:      INCBIN "gfx/pics/rattata/back.2bpp.lz"
-YoungsterPic:        INCBIN "gfx/trainers/youngster.2bpp.lz"
+;YoungsterPic:        INCBIN "gfx/trainers/youngster.2bpp.lz"
+YoungsterPic:        INCBIN "gfx/trainers/missionary.2bpp.lz"
 WillPic:             INCBIN "gfx/trainers/will.2bpp.lz"
 SchoolboyPic:        INCBIN "gfx/trainers/schoolboy.2bpp.lz"
 MagnemiteFrontpic:   INCBIN "gfx/pics/magnemite/front.animated.2bpp.lz"
@@ -727,4 +728,4 @@ UnownRBackpic:       INCBIN "gfx/pics/unown_r/back.2bpp.lz"
 
 SECTION "Pics 19", ROMX
 
-;MissionaryMPic:      INCBIN "gfx/trainers/missionarym.2bpp.lz"
+MissionaryPic:      INCBIN "gfx/trainers/missionary.2bpp.lz"

@@ -5,7 +5,7 @@ HealMachineAnim: ; 12324
 	ret z
 	; The location of the healing machine relative to the player is stored in ScriptVar.
 	; 0: Up and left (Pokemon Center)
-	; 1: Left (Elm's Lab)
+	; 1: Left (Bishop's Lab)
 	; 2: Up (Hall of Fame)
 	ld a, [ScriptVar]
 	ld [Buffer1], a
@@ -48,13 +48,13 @@ HealMachineAnim: ; 12324
 
 .Pointers: ; 12365
 	dw .Pokecenter
-	dw .ElmLab
+	dw .BishopLab
 	dw .HallOfFame
 ; 1236b
 
 .Pokecenter: ; 1236b
 	db 0, 1, 3, 5
-.ElmLab: ; 1236f
+.BishopLab: ; 1236f
 	db 0, 1, 3, 5
 .HallOfFame: ; 12373
 	db 0, 2, 4, 5
@@ -80,7 +80,7 @@ HealMachineAnim: ; 12324
 
 .PC_LoadBallsOntoMachine: ; 12393
 	ld hl, Sprites + $80
-	ld de, .PC_ElmsLab_OAM
+	ld de, .PC_BishopsLab_OAM
 	call .PlaceHealingMachineTile
 	call .PlaceHealingMachineTile
 	jr .LoadBallsOntoMachine
@@ -125,7 +125,7 @@ HealMachineAnim: ; 12324
 	ret
 ; 123dc
 
-.PC_ElmsLab_OAM: ; 123dc
+.PC_BishopsLab_OAM: ; 123dc
 	dsprite   4, 0,   4, 2, $7c, $16
 	dsprite   4, 0,   4, 6, $7c, $16
 	dsprite   4, 6,   4, 0, $7d, $16
@@ -241,7 +241,7 @@ INCBIN "gfx/unknown/0123fc.2bpp"
 	push bc
 	ld a, [Buffer1]
 	bcpixel 2, 4
-	cp $1 ; ElmsLab
+	cp $1 ; BishopsLab
 	jr z, .okay
 	bcpixel 0, 0
 

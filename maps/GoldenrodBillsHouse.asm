@@ -148,7 +148,7 @@ UnknownText_0x54dae:
 	done
 
 UnknownText_0x54dc1:
-	text "BILL: PROF.ELM"
+	text "BILL: Bishop"
 	line "claims EEVEE may"
 
 	para "evolve in new and"

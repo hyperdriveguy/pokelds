@@ -149,7 +149,7 @@ UnknownText_0x5a230:
 
 	para "I might even be-"
 	line "come famous like"
-	cont "PROF.ELM."
+	cont "Bishop."
 	done
 
 UnionCaveB1F_MapEventHeader:

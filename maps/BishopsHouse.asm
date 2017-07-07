@@ -1,27 +1,27 @@
 const_value set 2
-	const ELMSHOUSE_ELMS_WIFE
-	const ELMSHOUSE_ELMS_SON
+	const BISHOPSHOUSE_BISHOPS_WIFE
+	const BISHOPSHOUSE_BISHOPS_SON
 
-ElmsHouse_MapScriptHeader:
+BishopsHouse_MapScriptHeader:
 .MapTriggers:
 	db 0
 
 .MapCallbacks:
 	db 0
 
-ElmsWife:
-	jumptextfaceplayer ElmsWifeText
+BishopsWife:
+	jumptextfaceplayer BishopsWifeText
 
-ElmsSon:
-	jumptextfaceplayer ElmsSonText
+BishopsSon:
+	jumptextfaceplayer BishopsSonText
 
-ElmsHousePC:
-	jumptext ElmsHousePCText
+BishopsHousePC:
+	jumptext BishopsHousePCText
 
-ElmsHouseBookshelf:
+BishopsHouseBookshelf:
 	jumpstd difficultbookshelf
 
-ElmsWifeText:
+BishopsWifeText:
 	text "Hi, <PLAY_G>! My"
 	line "husband's always"
 
@@ -35,7 +35,7 @@ ElmsWifeText:
 	line "forgets to eat."
 	done
 
-ElmsSonText:
+BishopsSonText:
 	text "When I grow up,"
 	line "I'm going to help"
 	cont "my dad!"
@@ -45,21 +45,21 @@ ElmsSonText:
 	cont "professor!"
 	done
 
-ElmsHouseLabFoodText:
+BishopsHouseLabFoodText:
 ; unused
 	text "There's some food"
 	line "here. It must be"
 	cont "for the LAB."
 	done
 
-ElmsHousePokemonFoodText:
+BishopsHousePokemonFoodText:
 ; unused
 	text "There's some food"
 	line "here. This must be"
 	cont "for #MON."
 	done
 
-ElmsHousePCText:
+BishopsHousePCText:
 	text "#MON. Where do"
 	line "they come from? "
 
@@ -79,11 +79,11 @@ ElmsHousePCText:
 	para "…"
 
 	para "It's a part of"
-	line "PROF.ELM's re-"
+	line "Bishop's re-"
 	cont "search papers."
 	done
 
-ElmsHouse_MapEventHeader:: db 0, 0
+BishopsHouse_MapEventHeader:: db 0, 0
 
 .Warps: db 2
 	warp_def 7, 2, 4, BOUNTIFUL_TOWN
@@ -92,11 +92,11 @@ ElmsHouse_MapEventHeader:: db 0, 0
 .CoordEvents: db 0
 
 .BGEvents: db 3
-	signpost 1, 0, SIGNPOST_READ, ElmsHousePC
-	signpost 1, 6, SIGNPOST_READ, ElmsHouseBookshelf
-	signpost 1, 7, SIGNPOST_READ, ElmsHouseBookshelf
+	signpost 1, 0, SIGNPOST_READ, BishopsHousePC
+	signpost 1, 6, SIGNPOST_READ, BishopsHouseBookshelf
+	signpost 1, 7, SIGNPOST_READ, BishopsHouseBookshelf
 
 .ObjectEvents: db 2
-	person_event SPRITE_TEACHER, 5, 1, SPRITEMOVEDATA_WALK_UP_DOWN, 1, 0, -1, -1, (1 << 3) | PAL_OW_GREEN, PERSONTYPE_SCRIPT, 0, ElmsWife, -1
-	person_event SPRITE_BUG_CATCHER, 4, 5, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, ElmsSon, -1
+	person_event SPRITE_TEACHER, 5, 1, SPRITEMOVEDATA_WALK_UP_DOWN, 1, 0, -1, -1, (1 << 3) | PAL_OW_GREEN, PERSONTYPE_SCRIPT, 0, BishopsWife, -1
+	person_event SPRITE_BUG_CATCHER, 4, 5, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, BishopsSon, -1
 

@@ -5,7 +5,7 @@ CHRIS EQU __enum__
 	const PHONECONTACT_MOM
 	const PHONECONTACT_BIKESHOP
 	const PHONECONTACT_BILL
-	const PHONECONTACT_ELM
+	const PHONECONTACT_BISHOP
 	const PHONECONTACT_BUENA
 
 KRIS EQU __enum__
@@ -614,6 +614,10 @@ KRIS EQU __enum__
 
 	trainerclass MYSTICALMAN ; 43
 	const EUSINE
+
+	trainerclass MISSIONARY ; 44
+	const KNIGHT
+	const HOWARD
 
 NUM_TRAINER_CLASSES EQU __enum__
 

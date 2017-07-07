@@ -173,11 +173,11 @@ INCLUDE "maps/TinTowerRoof.asm"
 SECTION "Map Scripts 9", ROMX
 
 INCLUDE "maps/Route34.asm"
-INCLUDE "maps/ElmsLab.asm"
+INCLUDE "maps/BishopsLab.asm"
 INCLUDE "maps/KrissHouse1F.asm"
 INCLUDE "maps/KrissHouse2F.asm"
 INCLUDE "maps/KrissNeighborsHouse.asm"
-INCLUDE "maps/ElmsHouse.asm"
+INCLUDE "maps/BishopsHouse.asm"
 INCLUDE "maps/Route26HealSpeechHouse.asm"
 INCLUDE "maps/Route26DayofWeekSiblingsHouse.asm"
 INCLUDE "maps/Route27SandstormHouse.asm"

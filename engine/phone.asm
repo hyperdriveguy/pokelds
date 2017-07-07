@@ -99,7 +99,7 @@ GetRemainingSpaceInPhoneList: ; 90040
 ; 90066
 
 PermanentNumbers: ; 90066
-	db PHONECONTACT_MOM, PHONECONTACT_ELM, -1
+	db PHONECONTACT_MOM, PHONECONTACT_BISHOP, -1
 ; 90069
 
 
@@ -459,12 +459,12 @@ Script_SpecialBillCall:: ; 0x90255
 ; 90261
 
 UnknownScript_0x90261: ; 0x90261
-	callasm .LoadElmScript
+	callasm .LoadBishopScript
 	pause 30
 	jump Script_ReceivePhoneCall
 
-.LoadElmScript:
-	ld e, PHONE_ELM
+.LoadBishopScript:
+	ld e, PHONE_BISHOP
 	jp LoadCallerScript
 ; 9026f
 
@@ -654,7 +654,7 @@ CheckCanDeletePhoneNumber: ; 9038a (24:438a)
 	ld a, b
 	cp PHONECONTACT_MOM
 	ret z
-	cp PHONECONTACT_ELM
+	cp PHONECONTACT_BISHOP
 	ret z
 	ld c, $1
 	ret
@@ -717,7 +717,7 @@ NonTrainerCallerNames: ; 903d6
 .none db "----------@"
 .mom db "MOM:@"
 .bill db "BILL:@"
-.elm db "PROF.ELM:@"
+.elm db "Bishop:@"
 .bikeshop db "BIKE SHOP:@"
 .buena db "BUENA:", $22, "   DISC JOCKEY@"
 ; 90423
@@ -774,7 +774,7 @@ ENDM
 	phone TRAINER_NONE, PHONECONTACT_MOM,      KRISS_HOUSE_1F,            7, MomPhoneScript,      0, UnusedPhoneScript
 	phone TRAINER_NONE, PHONECONTACT_BIKESHOP, OAKS_LAB,                  0, UnusedPhoneScript,   0, UnusedPhoneScript
 	phone TRAINER_NONE, PHONECONTACT_BILL,     N_A,                       7, BillPhoneScript1,    0, BillPhoneScript2
-	phone TRAINER_NONE, PHONECONTACT_ELM,      ELMS_LAB,                  7, ElmPhoneScript1,     0, ElmPhoneScript2
+	phone TRAINER_NONE, PHONECONTACT_BISHOP,      BISHOPS_LAB,                  7, BishopPhoneScript1,     0, BishopPhoneScript2
 	phone SCHOOLBOY,    JACK1,                 NATIONAL_PARK,             7, JackPhoneScript1,    7, JackPhoneScript2
 	phone POKEFANF,     BEVERLY1,              NATIONAL_PARK,             7, BeverlyPhoneScript1, 7, BeverlyPhoneScript2
 	phone SAILOR,       HUEY1,                 OLIVINE_LIGHTHOUSE_2F,     7, HueyPhoneScript1,    7, HueyPhoneScript2
@@ -812,24 +812,24 @@ ENDM
 
 SpecialPhoneCallList: ; 90627
 	dw SpecialCallOnlyWhenOutside
-	db PHONE_ELM
-	dba ElmPhoneScript2
+	db PHONE_BISHOP
+	dba BishopPhoneScript2
 
 	dw SpecialCallOnlyWhenOutside
-	db PHONE_ELM
-	dba ElmPhoneScript2
+	db PHONE_BISHOP
+	dba BishopPhoneScript2
 
 	dw SpecialCallOnlyWhenOutside
-	db PHONE_ELM
-	dba ElmPhoneScript2
+	db PHONE_BISHOP
+	dba BishopPhoneScript2
 
 	dw SpecialCallOnlyWhenOutside
-	db PHONE_ELM
-	dba ElmPhoneScript2
+	db PHONE_BISHOP
+	dba BishopPhoneScript2
 
 	dw SpecialCallWhereverYouAre
-	db PHONE_ELM
-	dba ElmPhoneScript2
+	db PHONE_BISHOP
+	dba BishopPhoneScript2
 
 	dw SpecialCallWhereverYouAre
 	db PHONE_OAK ; ????????
@@ -840,8 +840,8 @@ SpecialPhoneCallList: ; 90627
 	dba MomPhoneLectureScript
 
 	dw SpecialCallOnlyWhenOutside
-	db PHONE_ELM
-	dba ElmPhoneScript2
+	db PHONE_BISHOP
+	dba BishopPhoneScript2
 ; 90657
 
 UnknownScript_0x90657: ; 0x90657

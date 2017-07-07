@@ -2559,7 +2559,7 @@ wLancesRoomTrigger::                         ds 1 ; d983
 wHallOfFameTrigger::                         ds 1 ; d984
 wRoute27Trigger::                            ds 1 ; d985
 wBountifulTownTrigger::                      ds 1 ; d986
-wElmsLabTrigger::                            ds 1 ; d987
+wBishopsLabTrigger::                            ds 1 ; d987
 wKrissHouse1FTrigger::                       ds 1 ; d988
 wRoute101Trigger::                           ds 1 ; d989
 wPleasantGroveTrigger::                      ds 1 ; d98a

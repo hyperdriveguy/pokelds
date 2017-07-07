@@ -68,4 +68,4 @@ TrainerGroups: ; 0x39999
 	dw OfficerGroup
 	dw GruntFGroup
 	dw MysticalmanGroup
-	dw MissionaryMGroup
+	dw MissionaryGroup

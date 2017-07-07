@@ -79,5 +79,5 @@ BluePalette:         INCLUDE "gfx/trainers/blue.pal"
 OfficerPalette:      INCLUDE "gfx/trainers/officer.pal"
 GruntfPalette:       INCLUDE "gfx/trainers/grunt_f.pal"
 MysticalmanPalette:  INCLUDE "gfx/trainers/mysticalman.pal"
-;MissionaryMPalette:  INCLUDE "gfx/trainers/missionarym.pal"
+MissionaryPalette:  INCLUDE "gfx/trainers/missionary.pal"
 ; b1de

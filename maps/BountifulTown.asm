@@ -84,7 +84,7 @@ BountifulTownTeacherScript:
 	iftrue .CallMom
 	checkevent EVENT_FINISHED_BISHOPS_ERRAND
 	iftrue .TellMomYoureLeaving
-	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
+	checkevent EVENT_GOT_A_POKEMON_FROM_BISHOP
 	iftrue .MonIsAdorable
 	writetext Text_GearIsImpressive
 	waitbutton
@@ -110,7 +110,7 @@ BountifulTownTeacherScript:
 	end
 
 BountifulTownFisherScript:
-	jumptextfaceplayer Text_ElmDiscoveredNewMon
+	jumptextfaceplayer Text_BishopDiscoveredNewMon
 
 BountifulTownSilverScript:
 	opentext
@@ -139,11 +139,11 @@ BountifulTownSign:
 MapBountifulTownPlayersHouseSignScript:
 	jumptext PlayersHouseSignText
 
-MapBountifulTownElmsLabSignScript:
-	jumptext ElmsLabSignText
+MapBountifulTownBishopsLabSignScript:
+	jumptext BishopsLabSignText
 
-MapBountifulTownElmsHouseSignScript:
-	jumptext ElmsHouseSignText
+MapBountifulTownBishopsHouseSignScript:
+	jumptext BishopsHouseSignText
 
 Movement_TeacherRunsToYou1_NBT:
 	step UP
@@ -240,10 +240,10 @@ Text_CallMomOnGear:
 	line "you're doing."
 	done
 
-Text_ElmDiscoveredNewMon:
+Text_BishopDiscoveredNewMon:
 	text "Yo, <PLAYER>!"
 
-	para "I hear PROF.ELM"
+	para "I hear Bishop"
 	line "discovered some"
 	cont "new #MON."
 	done
@@ -252,7 +252,7 @@ BountifulTownRivalText1:
 	text "<......>"
 
 	para "So this is the"
-	line "famous ELM #MON"
+	line "famous BISHOP #MON"
 	cont "LAB…"
 	done
 
@@ -272,21 +272,21 @@ PlayersHouseSignText:
 	text "<PLAYER>'s House"
 	done
 
-ElmsLabSignText:
-	text "ELM #MON LAB"
+BishopsLabSignText:
+	text "BISHOP #MON LAB"
 	done
 
-ElmsHouseSignText:
-	text "ELM'S HOUSE"
+BishopsHouseSignText:
+	text "BISHOP'S HOUSE"
 	done
 
 BountifulTown_MapEventHeader:: db 0, 0
 
 .Warps: db 4
-	warp_def 23, 14, 1, ELMS_LAB
+	warp_def 23, 14, 1, BISHOPS_LAB
 	warp_def 11, 11, 1, KRISS_HOUSE_1F
 	warp_def 9, 21, 1, KRISS_NEIGHBORS_HOUSE
-	warp_def 17, 23, 1, ELMS_HOUSE
+	warp_def 17, 23, 1, BISHOPS_HOUSE
 
 .CoordEvents: db 2
 	xy_trigger 0, 0, 26, 0, BountifulTown_TeacherStopsYouTrigger1, 0, 0
@@ -295,8 +295,8 @@ BountifulTown_MapEventHeader:: db 0, 0
 .BGEvents: db 4
 	signpost 15, 17, SIGNPOST_READ, BountifulTownSign
 	signpost 11, 9, SIGNPOST_READ, MapBountifulTownPlayersHouseSignScript
-	signpost 23, 11, SIGNPOST_READ, MapBountifulTownElmsLabSignScript
-	signpost 17, 21, SIGNPOST_READ, MapBountifulTownElmsHouseSignScript
+	signpost 23, 11, SIGNPOST_READ, MapBountifulTownBishopsLabSignScript
+	signpost 17, 21, SIGNPOST_READ, MapBountifulTownBishopsHouseSignScript
 
 .ObjectEvents: db 3
 	person_event SPRITE_TEACHER, 4, 26, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 1, -1, -1, 0, PERSONTYPE_SCRIPT, 0, BountifulTownTeacherScript, -1

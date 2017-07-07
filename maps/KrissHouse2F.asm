@@ -57,7 +57,7 @@ KrissHousePoster:
 	describedecoration 0
 
 KrissHouseRadio:
-	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
+	checkevent EVENT_GOT_A_POKEMON_FROM_BISHOP
 	iftrue .NormalRadio
 	checkevent EVENT_LISTENED_TO_INITIAL_RADIO
 	iftrue .AbbreviatedRadio

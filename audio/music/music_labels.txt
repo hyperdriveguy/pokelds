@@ -48,7 +48,7 @@ Music_JohtoGymLeaderBattle
 Music_ChampionBattle
 Music_RivalBattle
 Music_RocketBattle
-Music_ElmsLab
+Music_BishopsLab
 Music_DarkCave
 Music_Route29
 Music_Route36

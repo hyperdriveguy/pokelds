@@ -15,10 +15,10 @@ VioletPokeCenter1F_MapScriptHeader:
 VioletPokeCenterNurse:
 	jumpstd pokecenternurse
 
-VioletPokeCenter1F_ElmsAideScript:
+VioletPokeCenter1F_BishopsAideScript:
 	faceplayer
 	opentext
-	checkevent EVENT_REFUSED_TO_TAKE_EGG_FROM_ELMS_AIDE
+	checkevent EVENT_REFUSED_TO_TAKE_EGG_FROM_BISHOPS_AIDE
 	iftrue .SecondTimeAsking
 	writetext UnknownText_0x69555
 .AskTakeEgg:
@@ -29,8 +29,8 @@ VioletPokeCenter1F_ElmsAideScript:
 	giveegg TOGEPI, 5
 	stringtotext .eggname, $1
 	scall .AideGivesEgg
-	setevent EVENT_GOT_TOGEPI_EGG_FROM_ELMS_AIDE
-	clearevent EVENT_ELMS_AIDE_IN_LAB
+	setevent EVENT_GOT_TOGEPI_EGG_FROM_BISHOPS_AIDE
+	clearevent EVENT_BISHOPS_AIDE_IN_LAB
 	clearevent EVENT_TOGEPI_HATCHED
 	domaptrigger ROUTE_32, $1
 	writetext UnknownText_0x695c5
@@ -71,7 +71,7 @@ VioletPokeCenter1F_ElmsAideScript:
 	writetext UnknownText_0x696f2
 	waitbutton
 	closetext
-	setevent EVENT_REFUSED_TO_TAKE_EGG_FROM_ELMS_AIDE
+	setevent EVENT_REFUSED_TO_TAKE_EGG_FROM_BISHOPS_AIDE
 	end
 
 .SecondTimeAsking:
@@ -109,7 +109,7 @@ UnknownText_0x69555:
 	text "<PLAY_G>, long"
 	line "time, no see."
 
-	para "PROF.ELM asked me"
+	para "Bishop asked me"
 	line "to find you."
 
 	para "He has another"
@@ -135,7 +135,7 @@ UnknownText_0x695c5:
 	cont "we can rely on."
 
 	para "Please call PROF."
-	line "ELM when that EGG"
+	line "BISHOP when that EGG"
 	cont "hatches!"
 	done
 
@@ -150,7 +150,7 @@ UnknownText_0x69693:
 	done
 
 UnknownText_0x696f2:
-	text "B-but… PROF.ELM"
+	text "B-but… Bishop"
 	line "asked for you…"
 	done
 
@@ -237,4 +237,4 @@ VioletPokeCenter1F_MapEventHeader:
 	person_event SPRITE_GAMEBOY_KID, 6, 7, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, (1 << 3) | PAL_OW_GREEN, PERSONTYPE_SCRIPT, 0, GameboyKidScript_0x69540, -1
 	person_event SPRITE_GENTLEMAN, 4, 1, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, GentlemanScript_0x69543, -1
 	person_event SPRITE_YOUNGSTER, 1, 8, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, (1 << 3) | PAL_OW_RED, PERSONTYPE_SCRIPT, 0, YoungsterScript_0x69546, -1
-	person_event SPRITE_SCIENTIST, 3, 4, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, (1 << 3) | PAL_OW_BLUE, PERSONTYPE_SCRIPT, 0, VioletPokeCenter1F_ElmsAideScript, EVENT_ELMS_AIDE_IN_VIOLET_POKEMON_CENTER
+	person_event SPRITE_SCIENTIST, 3, 4, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, (1 << 3) | PAL_OW_BLUE, PERSONTYPE_SCRIPT, 0, VioletPokeCenter1F_BishopsAideScript, EVENT_BISHOPS_AIDE_IN_VIOLET_POKEMON_CENTER

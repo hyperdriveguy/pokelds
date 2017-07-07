@@ -17,7 +17,7 @@ UnknownText_0x9cbda:
 
 	para "NEW BARK TOWN?"
 
-	para "PROF.ELM lives"
+	para "Bishop lives"
 	line "over there, right?"
 
 	para "You've come a long"

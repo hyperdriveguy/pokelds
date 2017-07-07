@@ -3444,6 +3444,7 @@ MaleTrainers: ; 4e95d
 	db SAGE
 	db BIKER
 	db SCIENTIST
+	db MISSIONARY
 MaleTrainersEnd:
 
 FemaleTrainers: ; 4e976

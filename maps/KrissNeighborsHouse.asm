@@ -19,7 +19,7 @@ KrissNeighborsHouseBookshelf:
 	jumpstd magazinebookshelf
 
 KrissNeighborsHouseRadio:
-	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
+	checkevent EVENT_GOT_A_POKEMON_FROM_BISHOP
 	iftrue .NormalRadio
 	checkevent EVENT_LISTENED_TO_INITIAL_RADIO
 	iftrue .AbbreviatedRadio
@@ -51,7 +51,7 @@ KrissNeighborsDaughterText:
 	line "evolved #MON."
 
 	para "I was amazed by"
-	line "PROF.ELM's find-"
+	line "Bishop's find-"
 	cont "ings."
 
 	para "He's so famous for"
@@ -70,7 +70,7 @@ KrissNeighborText:
 	line "adamant about"
 
 	para "becoming PROF."
-	line "ELM's assistant."
+	line "BISHOP's assistant."
 
 	para "She really loves"
 	line "#MON!"

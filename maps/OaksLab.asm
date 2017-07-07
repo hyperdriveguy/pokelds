@@ -252,7 +252,7 @@ OaksLabPCText:
 	para "I'm delighted to"
 	line "hear that."
 
-	para "ELM in NEW BARK"
+	para "BISHOP in NEW BARK"
 	line "TOWN 8-)"
 	done
 

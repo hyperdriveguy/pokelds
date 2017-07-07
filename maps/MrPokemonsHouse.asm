@@ -127,22 +127,22 @@ MrPokemonsHouse_OakScript:
 	setevent EVENT_KRISS_HOUSE_1F_NEIGHBOR
 	clearevent EVENT_KRISS_NEIGHBORS_HOUSE_NEIGHBOR
 	dotrigger $1
-	domaptrigger ELMS_LAB, $3
+	domaptrigger BISHOPS_LAB, $3
 	specialphonecall SPECIALCALL_ROBBED
-	clearevent EVENT_COP_IN_ELMS_LAB
-	checkevent EVENT_GOT_TOTODILE_FROM_ELM
+	clearevent EVENT_COP_IN_BISHOPS_LAB
+	checkevent EVENT_GOT_TOTODILE_FROM_BISHOP
 	iftrue .RivalTakesChikorita
-	checkevent EVENT_GOT_CHIKORITA_FROM_ELM
+	checkevent EVENT_GOT_CHIKORITA_FROM_BISHOP
 	iftrue .RivalTakesCyndaquil
-	setevent EVENT_TOTODILE_POKEBALL_IN_ELMS_LAB
+	setevent EVENT_TOTODILE_POKEBALL_IN_BISHOPS_LAB
 	end
 
 .RivalTakesChikorita:
-	setevent EVENT_CHIKORITA_POKEBALL_IN_ELMS_LAB
+	setevent EVENT_CHIKORITA_POKEBALL_IN_BISHOPS_LAB
 	end
 
 .RivalTakesCyndaquil:
-	setevent EVENT_CYNDAQUIL_POKEBALL_IN_ELMS_LAB
+	setevent EVENT_CYNDAQUIL_POKEBALL_IN_BISHOPS_LAB
 	end
 
 MapMrPokemonsHouseSignpost1Script:
@@ -176,13 +176,13 @@ MrPokemonIntroText1:
 	text "Hello, hello! You"
 	line "must be <PLAY_G>."
 
-	para "PROF.ELM said that"
+	para "Bishop said that"
 	line "you would visit."
 	done
 
 MrPokemonIntroText2:
 	text "This is what I"
-	line "want PROF.ELM to"
+	line "want Bishop to"
 	cont "examine."
 	done
 
@@ -201,10 +201,10 @@ MrPokemonIntroText3:
 
 	para "I was intrigued,"
 	line "so I sent mail to"
-	cont "PROF.ELM."
+	cont "Bishop."
 
 	para "For #MON evolu-"
-	line "tion, PROF.ELM is"
+	line "tion, Bishop is"
 	cont "the authority."
 	done
 
@@ -216,12 +216,12 @@ MrPokemonIntroText4:
 MrPokemonIntroText5:
 	text "If my assumption"
 	line "is correct, PROF."
-	cont "ELM will know it."
+	cont "BISHOP will know it."
 	done
 
 MrPokemonsHouse_MrPokemonHealText:
 	text "You are returning"
-	line "to PROF.ELM?"
+	line "to Bishop?"
 
 	para "Here. Your #MON"
 	line "should have some"
@@ -255,7 +255,7 @@ MrPokemonsHouse_OakText1:
 	para "I heard you were"
 	line "running an errand"
 
-	para "for PROF.ELM, so I"
+	para "for Bishop, so I"
 	line "waited here."
 
 	para "Oh! What's this?"
@@ -266,13 +266,13 @@ MrPokemonsHouse_OakText1:
 	para "Hm, I see!"
 
 	para "I understand why"
-	line "PROF.ELM gave you"
+	line "Bishop gave you"
 
 	para "a #MON for this"
 	line "errand."
 
 	para "To researchers"
-	line "like PROF.ELM and"
+	line "like Bishop and"
 
 	para "I, #MON are our"
 	line "friends."
