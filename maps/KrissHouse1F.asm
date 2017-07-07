@@ -155,17 +155,20 @@ MomScript:
 	writetext DoGreatThingsText
 	waitbutton
 	closetext
+	spriteface KRISSHOUSE1F_MOM, LEFT
 	end
 MomGoCompleteErrandScript:
 	writetext MomGoCompleteErrandText
 	waitbutton
 	closetext
+	spriteface KRISSHOUSE1F_MOM, LEFT
 	end
 MomJourneyScript:
 	writetext MomJourneyText
 	waitbutton
 	closetext
 	setevent EVENT_TALKED_TO_MOM_BEFORE_JOURNEY
+	spriteface KRISSHOUSE1F_MOM, LEFT
 	end
 
 MomGoCompleteErrandText:
