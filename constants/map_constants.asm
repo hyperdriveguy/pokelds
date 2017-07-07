@@ -419,7 +419,7 @@ MAP_NONE   EQU 0
 	mapgroup ROUTE_101, 30, 14
 	mapgroup BOUNTIFUL_TOWN,                             15, 14 ;  4
 	mapgroup ELMS_LAB, 6, 5
-	mapgroup KRISS_HOUSE_1F,                              4,  5 ;  6
+	mapgroup KRISS_HOUSE_1F, 4, 6
 	mapgroup KRISS_HOUSE_2F, 3, 4
 	mapgroup KRISS_NEIGHBORS_HOUSE,                       4,  4 ;  8
 	mapgroup ELMS_HOUSE,                                  4,  4 ;  9

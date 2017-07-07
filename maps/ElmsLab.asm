@@ -143,9 +143,9 @@ ElmCheckGotEggAgain:
 	iftrue ElmWaitingEggHatchScript
 	checkflag ENGINE_ZEPHYRBADGE
 	iftrue ElmAideHasEggScript
-	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
+	checkevent EVENT_FINISHED_BISHOPS_ERRAND
 	iftrue ElmStudyingEggScript
-	checkevent EVENT_GOT_MYSTERY_EGG_FROM_MR_POKEMON
+	checkevent EVENT_GOT_PACKAGE_FROM_WARD_CLERK
 	iftrue ElmAfterTheftScript
 	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
 	iftrue ElmDescribesMrPokemonScript
@@ -345,7 +345,7 @@ ElmAfterTheftScript:
 	buttonsound
 	writetext ElmAfterTheftText5
 	buttonsound
-	setevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
+	setevent EVENT_FINISHED_BISHOPS_ERRAND
 	setflag ENGINE_BUG_CONTEST_ON
 	domaptrigger ROUTE_101, $1
 	clearevent EVENT_ROUTE_30_YOUNGSTER_JOEY
@@ -525,9 +525,9 @@ ElmsAideScript:
 	opentext
 	checkevent EVENT_GOT_TOGEPI_EGG_FROM_ELMS_AIDE
 	iftrue AideScript_AfterTheft
-	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
+	checkevent EVENT_FINISHED_BISHOPS_ERRAND
 	iftrue AideScript_ExplainBalls
-	checkevent EVENT_GOT_MYSTERY_EGG_FROM_MR_POKEMON
+	checkevent EVENT_GOT_PACKAGE_FROM_WARD_CLERK
 	iftrue AideScript_TheftTestimony
 	writetext AideText_AlwaysBusy
 	waitbutton

@@ -12,7 +12,7 @@ CherrygroveMart_MapScriptHeader:
 
 ClerkScript_0x19680a:
 	opentext
-	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
+	checkevent EVENT_FINISHED_BISHOPS_ERRAND
 	iftrue UnknownScript_0x196817
 	pokemart MARTTYPE_STANDARD, MART_CHERRYGROVE
 	closetext
@@ -26,7 +26,7 @@ UnknownScript_0x196817:
 CooltrainerMScript_0x19681d:
 	faceplayer
 	opentext
-	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
+	checkevent EVENT_FINISHED_BISHOPS_ERRAND
 	iftrue UnknownScript_0x19682b
 	writetext UnknownText_0x196834
 	waitbutton

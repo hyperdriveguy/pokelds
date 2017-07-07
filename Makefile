@@ -34,7 +34,7 @@ FILLER = 0x00
 
 roms := $(NAME)-$(VERSION).gbc $(NAME)-$(VERSION)-11.gbc $(NAME)-$(VERSION)-debug.gbc $(NAME)-$(VERSION)-bankfree.gbc
 
-all: lds
+all: lds freespace
 
 lds: $(NAME)-$(VERSION).gbc
 

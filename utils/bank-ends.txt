@@ -1,0 +1,259 @@
+Bank $00: $4000 ($0000)
+Bank $01: $8000 ($0000)
+Bank $02: $8000 ($0000)
+Bank $03: $8000 ($0000)
+Bank $04: $8000 ($0000)
+Bank $05: $8000 ($0000)
+Bank $06: $8000 ($0000)
+Bank $07: $8000 ($0000)
+Bank $08: $8000 ($0000)
+Bank $09: $8000 ($0000)
+Bank $0a: $8000 ($0000)
+Bank $0b: $8000 ($0000)
+Bank $0c: $8000 ($0000)
+Bank $0d: $8000 ($0000)
+Bank $0e: $8000 ($0000)
+Bank $0f: $8000 ($0000)
+Bank $10: $8000 ($0000)
+Bank $11: $8000 ($0000)
+Bank $12: $8000 ($0000)
+Bank $13: $8000 ($0000)
+Bank $14: $8000 ($0000)
+Bank $15: $8000 ($0000)
+Bank $16: $8000 ($0000)
+Bank $17: $8000 ($0000)
+Bank $18: $8000 ($0000)
+Bank $19: $8000 ($0000)
+Bank $1a: $8000 ($0000)
+Bank $1b: $8000 ($0000)
+Bank $1c: $8000 ($0000)
+Bank $1d: $8000 ($0000)
+Bank $1e: $8000 ($0000)
+Bank $1f: $8000 ($0000)
+Bank $20: $8000 ($0000)
+Bank $21: $8000 ($0000)
+Bank $22: $8000 ($0000)
+Bank $23: $8000 ($0000)
+Bank $24: $8000 ($0000)
+Bank $25: $8000 ($0000)
+Bank $26: $8000 ($0000)
+Bank $27: $8000 ($0000)
+Bank $28: $8000 ($0000)
+Bank $29: $8000 ($0000)
+Bank $2a: $8000 ($0000)
+Bank $2b: $8000 ($0000)
+Bank $2c: $8000 ($0000)
+Bank $2d: $8000 ($0000)
+Bank $2e: $8000 ($0000)
+Bank $2f: $8000 ($0000)
+Bank $30: $8000 ($0000)
+Bank $31: $8000 ($0000)
+Bank $32: $8000 ($0000)
+Bank $33: $8000 ($0000)
+Bank $34: $8000 ($0000)
+Bank $35: $8000 ($0000)
+Bank $36: $8000 ($0000)
+Bank $37: $8000 ($0000)
+Bank $38: $8000 ($0000)
+Bank $39: $8000 ($0000)
+Bank $3a: $8000 ($0000)
+Bank $3b: $8000 ($0000)
+Bank $3c: $8000 ($0000)
+Bank $3d: $8000 ($0000)
+Bank $3e: $8000 ($0000)
+Bank $3f: $8000 ($0000)
+Bank $40: $8000 ($0000)
+Bank $41: $8000 ($0000)
+Bank $42: $8000 ($0000)
+Bank $43: $8000 ($0000)
+Bank $44: $8000 ($0000)
+Bank $45: $8000 ($0000)
+Bank $46: $8000 ($0000)
+Bank $47: $8000 ($0000)
+Bank $48: $8000 ($0000)
+Bank $49: $8000 ($0000)
+Bank $4a: $8000 ($0000)
+Bank $4b: $8000 ($0000)
+Bank $4c: $8000 ($0000)
+Bank $4d: $8000 ($0000)
+Bank $4e: $8000 ($0000)
+Bank $4f: $8000 ($0000)
+Bank $50: $8000 ($0000)
+Bank $51: $8000 ($0000)
+Bank $52: $8000 ($0000)
+Bank $53: $8000 ($0000)
+Bank $54: $8000 ($0000)
+Bank $55: $8000 ($0000)
+Bank $56: $8000 ($0000)
+Bank $57: $8000 ($0000)
+Bank $58: $8000 ($0000)
+Bank $59: $8000 ($0000)
+Bank $5a: $8000 ($0000)
+Bank $5b: $8000 ($0000)
+Bank $5c: $8000 ($0000)
+Bank $5d: $8000 ($0000)
+Bank $5e: $8000 ($0000)
+Bank $5f: $8000 ($0000)
+Bank $60: $8000 ($0000)
+Bank $61: $8000 ($0000)
+Bank $62: $8000 ($0000)
+Bank $63: $8000 ($0000)
+Bank $64: $8000 ($0000)
+Bank $65: $8000 ($0000)
+Bank $66: $8000 ($0000)
+Bank $67: $8000 ($0000)
+Bank $68: $8000 ($0000)
+Bank $69: $8000 ($0000)
+Bank $6a: $8000 ($0000)
+Bank $6b: $8000 ($0000)
+Bank $6c: $8000 ($0000)
+Bank $6d: $8000 ($0000)
+Bank $6e: $8000 ($0000)
+Bank $6f: $8000 ($0000)
+Bank $70: $8000 ($0000)
+Bank $71: $8000 ($0000)
+Bank $72: $8000 ($0000)
+Bank $73: $8000 ($0000)
+Bank $74: $8000 ($0000)
+Bank $75: $8000 ($0000)
+Bank $76: $8000 ($0000)
+Bank $77: $8000 ($0000)
+Bank $78: $8000 ($0000)
+Bank $79: $8000 ($0000)
+Bank $7a: $8000 ($0000)
+Bank $7b: $8000 ($0000)
+Bank $7c: $8000 ($0000)
+Bank $7d: $8000 ($0000)
+Bank $7e: $8000 ($0000)
+Bank $7f: $8000 ($0000)
+
+Bank $00 has $0000 bytes of free space
+Bank $01 has $0000 bytes of free space
+Bank $02 has $0000 bytes of free space
+Bank $03 has $0000 bytes of free space
+Bank $04 has $0000 bytes of free space
+Bank $05 has $0000 bytes of free space
+Bank $06 has $0000 bytes of free space
+Bank $07 has $0000 bytes of free space
+Bank $08 has $0000 bytes of free space
+Bank $09 has $0000 bytes of free space
+Bank $0a has $0000 bytes of free space
+Bank $0b has $0000 bytes of free space
+Bank $0c has $0000 bytes of free space
+Bank $0d has $0000 bytes of free space
+Bank $0e has $0000 bytes of free space
+Bank $0f has $0000 bytes of free space
+Bank $10 has $0000 bytes of free space
+Bank $11 has $0000 bytes of free space
+Bank $12 has $0000 bytes of free space
+Bank $13 has $0000 bytes of free space
+Bank $14 has $0000 bytes of free space
+Bank $15 has $0000 bytes of free space
+Bank $16 has $0000 bytes of free space
+Bank $17 has $0000 bytes of free space
+Bank $18 has $0000 bytes of free space
+Bank $19 has $0000 bytes of free space
+Bank $1a has $0000 bytes of free space
+Bank $1b has $0000 bytes of free space
+Bank $1c has $0000 bytes of free space
+Bank $1d has $0000 bytes of free space
+Bank $1e has $0000 bytes of free space
+Bank $1f has $0000 bytes of free space
+Bank $20 has $0000 bytes of free space
+Bank $21 has $0000 bytes of free space
+Bank $22 has $0000 bytes of free space
+Bank $23 has $0000 bytes of free space
+Bank $24 has $0000 bytes of free space
+Bank $25 has $0000 bytes of free space
+Bank $26 has $0000 bytes of free space
+Bank $27 has $0000 bytes of free space
+Bank $28 has $0000 bytes of free space
+Bank $29 has $0000 bytes of free space
+Bank $2a has $0000 bytes of free space
+Bank $2b has $0000 bytes of free space
+Bank $2c has $0000 bytes of free space
+Bank $2d has $0000 bytes of free space
+Bank $2e has $0000 bytes of free space
+Bank $2f has $0000 bytes of free space
+Bank $30 has $0000 bytes of free space
+Bank $31 has $0000 bytes of free space
+Bank $32 has $0000 bytes of free space
+Bank $33 has $0000 bytes of free space
+Bank $34 has $0000 bytes of free space
+Bank $35 has $0000 bytes of free space
+Bank $36 has $0000 bytes of free space
+Bank $37 has $0000 bytes of free space
+Bank $38 has $0000 bytes of free space
+Bank $39 has $0000 bytes of free space
+Bank $3a has $0000 bytes of free space
+Bank $3b has $0000 bytes of free space
+Bank $3c has $0000 bytes of free space
+Bank $3d has $0000 bytes of free space
+Bank $3e has $0000 bytes of free space
+Bank $3f has $0000 bytes of free space
+Bank $40 has $0000 bytes of free space
+Bank $41 has $0000 bytes of free space
+Bank $42 has $0000 bytes of free space
+Bank $43 has $0000 bytes of free space
+Bank $44 has $0000 bytes of free space
+Bank $45 has $0000 bytes of free space
+Bank $46 has $0000 bytes of free space
+Bank $47 has $0000 bytes of free space
+Bank $48 has $0000 bytes of free space
+Bank $49 has $0000 bytes of free space
+Bank $4a has $0000 bytes of free space
+Bank $4b has $0000 bytes of free space
+Bank $4c has $0000 bytes of free space
+Bank $4d has $0000 bytes of free space
+Bank $4e has $0000 bytes of free space
+Bank $4f has $0000 bytes of free space
+Bank $50 has $0000 bytes of free space
+Bank $51 has $0000 bytes of free space
+Bank $52 has $0000 bytes of free space
+Bank $53 has $0000 bytes of free space
+Bank $54 has $0000 bytes of free space
+Bank $55 has $0000 bytes of free space
+Bank $56 has $0000 bytes of free space
+Bank $57 has $0000 bytes of free space
+Bank $58 has $0000 bytes of free space
+Bank $59 has $0000 bytes of free space
+Bank $5a has $0000 bytes of free space
+Bank $5b has $0000 bytes of free space
+Bank $5c has $0000 bytes of free space
+Bank $5d has $0000 bytes of free space
+Bank $5e has $0000 bytes of free space
+Bank $5f has $0000 bytes of free space
+Bank $60 has $0000 bytes of free space
+Bank $61 has $0000 bytes of free space
+Bank $62 has $0000 bytes of free space
+Bank $63 has $0000 bytes of free space
+Bank $64 has $0000 bytes of free space
+Bank $65 has $0000 bytes of free space
+Bank $66 has $0000 bytes of free space
+Bank $67 has $0000 bytes of free space
+Bank $68 has $0000 bytes of free space
+Bank $69 has $0000 bytes of free space
+Bank $6a has $0000 bytes of free space
+Bank $6b has $0000 bytes of free space
+Bank $6c has $0000 bytes of free space
+Bank $6d has $0000 bytes of free space
+Bank $6e has $0000 bytes of free space
+Bank $6f has $0000 bytes of free space
+Bank $70 has $0000 bytes of free space
+Bank $71 has $0000 bytes of free space
+Bank $72 has $0000 bytes of free space
+Bank $73 has $0000 bytes of free space
+Bank $74 has $0000 bytes of free space
+Bank $75 has $0000 bytes of free space
+Bank $76 has $0000 bytes of free space
+Bank $77 has $0000 bytes of free space
+Bank $78 has $0000 bytes of free space
+Bank $79 has $0000 bytes of free space
+Bank $7a has $0000 bytes of free space
+Bank $7b has $0000 bytes of free space
+Bank $7c has $0000 bytes of free space
+Bank $7d has $0000 bytes of free space
+Bank $7e has $0000 bytes of free space
+Bank $7f has $0000 bytes of free space
+
+Free space: 0/2097152 (0.00%)

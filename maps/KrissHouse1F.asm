@@ -1,247 +1,86 @@
 const_value set 2
-	const KRISSHOUSE1F_MOM1
-	const KRISSHOUSE1F_MOM2
-	const KRISSHOUSE1F_MOM3
-	const KRISSHOUSE1F_MOM4
-	const KRISSHOUSE1F_POKEFAN_F
+	const KRISSHOUSE1F_MOM
+	const KRISSHOUSE1F_NEIGHBOR
 
 KrissHouse1F_MapScriptHeader:
 .MapTriggers:
-	db 2
-
-	; triggers
-	dw UnknownScript_0x7a4d6, 0
-	dw UnknownScript_0x7a4d7, 0
+	db 0
 
 .MapCallbacks:
 	db 0
 
-UnknownScript_0x7a4d6:
-	end
-
-UnknownScript_0x7a4d7:
-	end
-
-UnknownScript_0x7a4d8:
-	setevent EVENT_GAVE_KURT_APRICORNS
-
-UnknownScript_0x7a4db:
+; Start Mom's introduction
+MomIntroScript:
 	playmusic MUSIC_MOM
-	showemote EMOTE_SHOCK, KRISSHOUSE1F_MOM1, 15
-	spriteface PLAYER, LEFT
-	checkevent EVENT_GAVE_KURT_APRICORNS
-	iffalse UnknownScript_0x7a4f2
-	applymovement KRISSHOUSE1F_MOM1, MovementData_0x7a5fc
-	jump UnknownScript_0x7a4f6
-
-UnknownScript_0x7a4f2:
-	applymovement KRISSHOUSE1F_MOM1, MovementData_0x7a5fe
-UnknownScript_0x7a4f6:
+	showemote EMOTE_SHOCK, KRISSHOUSE1F_MOM, 15
+	applymovement PLAYER, GoToMomMovement
+	spriteface KRISSHOUSE1F_MOM, RIGHT
 	opentext
-	writetext UnknownText_0x7a604
+	writetext MomIntroText1
 	buttonsound
 	stringtotext GearName, $1
-	scall UnknownScript_0x7a57e
-	giveitem BICYCLE
+	scall RecievePokegear
 	setflag ENGINE_POKEGEAR
 	setflag ENGINE_PHONE_CARD
 	addcellnum PHONE_MOM
 	dotrigger $1
-	setevent EVENT_KRISS_HOUSE_MOM_1
-	clearevent EVENT_KRISS_HOUSE_MOM_2
-	writetext UnknownText_0x7a6bd
+	setevent EVENT_MOM_INTRO
+	writetext MomIntroText2
 	buttonsound
 	special Special_SetDayOfWeek
-UnknownScript_0x7a519:
-	writetext UnknownText_0x7a742
+SetDstScript:
+	writetext IsItDst
 	yesorno
-	iffalse UnknownScript_0x7a52a
+	iffalse NoDstScript
 	special Special_InitialSetDSTFlag
 	yesorno
-	iffalse UnknownScript_0x7a519
-	jump UnknownScript_0x7a531
-
-UnknownScript_0x7a52a:
+	iffalse SetDstScript
+	jump ContMomIntroScript
+NoDstScript:
 	special Special_InitialClearDSTFlag
 	yesorno
-	iffalse UnknownScript_0x7a519
-UnknownScript_0x7a531:
-	writetext UnknownText_0x7a763
+	iffalse SetDstScript
+ContMomIntroScript:
+	writetext MomIntroText3
 	yesorno
-	iffalse UnknownScript_0x7a542
-	jump UnknownScript_0x7a53b
-
-UnknownScript_0x7a53b:
-	writetext UnknownText_0x7a7cb
-	buttonsound
-	jump UnknownScript_0x7a549
-
-UnknownScript_0x7a542:
-	writetext UnknownText_0x7a807
-	buttonsound
-	jump UnknownScript_0x7a549
-
-UnknownScript_0x7a549:
-	writetext UnknownText_0x7a850
+	iffalse PhoneIntstructionsScript
+	writetext NoInstructionsText
+	jump EndMomIntro
+PhoneIntstructionsScript:
+	writetext PhoneInstructionsText
+EndMomIntro:
 	waitbutton
 	closetext
-	checkevent EVENT_GAVE_KURT_APRICORNS
-	iftrue UnknownScript_0x7a55d
-	checkevent EVENT_RECEIVED_BALLS_FROM_KURT
-	iffalse UnknownScript_0x7a564
-	jump UnknownScript_0x7a56b
-
-UnknownScript_0x7a55d:
-	applymovement KRISSHOUSE1F_MOM1, MovementData_0x7a600
-	jump UnknownScript_0x7a56b
-
-UnknownScript_0x7a564:
-	applymovement KRISSHOUSE1F_MOM1, MovementData_0x7a602
-	jump UnknownScript_0x7a56b
-
-UnknownScript_0x7a56b:
 	special RestartMapMusic
-	spriteface KRISSHOUSE1F_MOM1, LEFT
+	spriteface KRISSHOUSE1F_MOM, LEFT
 	end
 
-UnknownScript_0x7a572:
-	playmusic MUSIC_MOM
-	jump UnknownScript_0x7a4f6
+MomIntroText1:
+	text "Oh, <PLAYER>!"
 
-GearName:
-	db "#GEAR@"
-
-UnknownScript_0x7a57e:
-	jumpstd receiveitem
-	end
-
-MomScript_0x7a582:
-	faceplayer
-	setevent EVENT_RECEIVED_BALLS_FROM_KURT
-	checktriggers
-	iffalse UnknownScript_0x7a572
-	opentext
-	checkevent EVENT_FIRST_TIME_BANKING_WITH_MOM
-	iftrue UnknownScript_0x7a5af
-	checkevent EVENT_TALKED_TO_MOM_AFTER_MYSTERY_EGG_QUEST
-	iftrue UnknownScript_0x7a5b8
-	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
-	iftrue UnknownScript_0x7a5b5
-	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
-	iftrue UnknownScript_0x7a5a9
-	writetext UnknownText_0x7a8b5
-	waitbutton
-	closetext
-	end
-
-UnknownScript_0x7a5a9:
-	writetext UnknownText_0x7a8e5
-	waitbutton
-	closetext
-	end
-
-UnknownScript_0x7a5af:
-	writetext UnknownText_0x7a957
-	waitbutton
-	closetext
-	end
-
-UnknownScript_0x7a5b5:
-	setevent EVENT_FIRST_TIME_BANKING_WITH_MOM
-UnknownScript_0x7a5b8:
-	setevent EVENT_TALKED_TO_MOM_AFTER_MYSTERY_EGG_QUEST
-	special Special_BankOfMom
-	waitbutton
-	closetext
-	end
-
-NeighborScript:
-	faceplayer
-	opentext
-	checkmorn
-	iftrue .MornScript
-	checkday
-	iftrue .DayScript
-	checknite
-	iftrue .NiteScript
-
-.MornScript:
-	writetext NeighborMornIntroText
-	buttonsound
-	jump .Main
-
-.DayScript:
-	writetext NeighborDayIntroText
-	buttonsound
-	jump .Main
-
-.NiteScript:
-	writetext NeighborNiteIntroText
-	buttonsound
-	jump .Main
-
-.Main:
-	writetext NeighborText
-	waitbutton
-	closetext
-	spriteface KRISSHOUSE1F_POKEFAN_F, RIGHT
-	end
-
-TVScript:
-	jumptext TVText
-
-StoveScript:
-	jumptext StoveText
-
-SinkScript:
-	jumptext SinkText
-
-FridgeScript:
-	jumptext FridgeText
-
-MovementData_0x7a5fc:
-	turn_head RIGHT
-	step_end
-
-MovementData_0x7a5fe:
-	slow_step RIGHT
-	step_end
-
-MovementData_0x7a600:
-	turn_head LEFT
-	step_end
-
-MovementData_0x7a602:
-	slow_step LEFT
-	step_end
-
-UnknownText_0x7a604:
-	text "Oh, <PLAYER>…! Our"
-	line "neighbor, PROF."
-
-	para "ELM, was looking"
-	line "for you."
+	para "Bishop Johnson was"
+	line "looking for you."
 
 	para "He said he wanted"
 	line "you to do some-"
 	cont "thing for him."
 
 	para "Oh! I almost for-"
-	line "got! Your #MON"
+	line "got! Your #mon"
 
-	para "GEAR is back from"
+	para "Gear is back from"
 	line "the repair shop."
 
 	para "Here you go!"
 	done
 
-UnknownText_0x7a6bd:
-	text "#MON GEAR, or"
-	line "just #GEAR."
+MomIntroText2:
+	text "#mon Gear, or"
+	line "just #Gear."
 
-	para "It's essential if"
-	line "you want to be a"
-	cont "good trainer."
+	para "It's a neccessity"
+	line "for keeping in"
+	cont "touch."
 
 	para "Oh, the day of the"
 	line "week isn't set."
@@ -250,12 +89,13 @@ UnknownText_0x7a6bd:
 	line "that!"
 	done
 
-UnknownText_0x7a742:
+; Set DST
+IsItDst:
 	text "Is it Daylight"
 	line "Saving Time now?"
 	done
 
-UnknownText_0x7a763:
+MomIntroText3:
 	text "Come home to"
 	line "adjust your clock"
 
@@ -264,28 +104,18 @@ UnknownText_0x7a763:
 
 	para "By the way, do you"
 	line "know how to use"
-	cont "the PHONE?"
+	cont "the Phone?"
 	done
 
-UnknownText_0x7a7cb:
-	text "Don't you just"
-	line "turn the #GEAR"
-
-	para "on and select the"
-	line "PHONE icon?"
-	done
-
-UnknownText_0x7a807:
+PhoneInstructionsText:
 	text "I'll read the"
 	line "instructions."
 
-	para "Turn the #GEAR"
+	para "Turn the #Gear"
 	line "on and select the"
-	cont "PHONE icon."
-	done
+	cont "Phone icon."
 
-UnknownText_0x7a850:
-	text "Phone numbers are"
+	para "Phone numbers are"
 	line "stored in memory."
 
 	para "Just choose a name"
@@ -295,97 +125,86 @@ UnknownText_0x7a850:
 	line "convenient?"
 	done
 
-UnknownText_0x7a8b5:
-	text "PROF.ELM is wait-"
-	line "ing for you."
-
-	para "Hurry up, baby!"
+NoInstructionsText:
+	text "Okay. Good luck"
+	line "<PLAYER>!"
 	done
 
-UnknownText_0x7a8e5:
-	text "So, what was PROF."
-	line "ELM's errand?"
+GearName:
+	db "#Gear@"
 
+RecievePokegear:
+	jumpstd receiveitem
+	end
+
+GoToMomMovement:
+rept 3
+	step DOWN
+endr
+	step LEFT
+	step_end
+
+; People Scripts and Text
+MomScript:
+	faceplayer
+	opentext
+	checkevent EVENT_FINISHED_BISHOPS_ERRAND
+	iffalse MomGoCompleteErrandScript
+	checkevent EVENT_TALKED_TO_MOM_BEFORE_JOURNEY
+	iffalse MomJourneyScript
+	writetext DoGreatThingsText
+	waitbutton
+	closetext
+	end
+MomGoCompleteErrandScript:
+	writetext MomGoCompleteErrandText
+	waitbutton
+	closetext
+	end
+MomJourneyScript:
+	writetext MomJourneyText
+	waitbutton
+	closetext
+	setevent EVENT_TALKED_TO_MOM_BEFORE_JOURNEY
+	end
+
+MomGoCompleteErrandText:
+	text "Bishop is waiting"
+	line "for you."
+	
+	para "You should probab-"
+	line "ly hurry, it may"
+	cont "be important."
+	done
+
+MomJourneyText:
+	text "So how was that"
+	line "errand?"
+	
 	para "…"
-
-	para "That does sound"
-	line "challenging."
-
-	para "But, you should be"
-	line "proud that people"
-	cont "rely on you."
+	
+	para "So you want to go"
+	line "on an adventure…"
+	
+	para "…"
+	
+	para "Okay. You can go,"
+	line "but be careful."
+	
+	para "And come visit so"
+	line "that I know you're"
+	cont "okay."
 	done
 
-UnknownText_0x7a957:
-	text "<PLAYER>, do it!"
-
-	para "I'm behind you all"
-	line "the way!"
-	done
-
-NeighborMornIntroText:
-	text "Good morning,"
-	line "<PLAY_G>!"
-
-	para "I'm visiting!"
-	done
-
-NeighborDayIntroText:
-	text "Hello, <PLAY_G>!"
-	line "I'm visiting!"
-	done
-
-NeighborNiteIntroText:
-	text "Good evening,"
-	line "<PLAY_G>!"
-
-	para "I'm visiting!"
-	done
-
-NeighborText:
-	text "<PLAY_G>, have you"
-	line "heard?"
-
-	para "My daughter is"
-	line "adamant about"
-
-	para "becoming PROF."
-	line "ELM's assistant."
-
-	para "She really loves"
-	line "#MON!"
-	done
-
-StoveText:
-	text "Mom's specialty!"
-
-	para "CINNABAR VOLCANO"
-	line "BURGER!"
-	done
-
-SinkText:
-	text "The sink is spot-"
-	line "less. Mom likes it"
-	cont "clean."
-	done
-
-FridgeText:
-	text "Let's see what's"
-	line "in the fridge…"
-
-	para "FRESH WATER and"
-	line "tasty LEMONADE!"
-	done
-
-TVText:
-	text "There's a movie on"
-	line "TV: Stars dot the"
-
-	para "sky as two boys"
-	line "ride on a train…"
-
-	para "I'd better get"
-	line "rolling too!"
+DoGreatThingsText:
+	text "Are you having fun"
+	line "on your journey?"
+	
+	para "…"
+	
+	para "Good. Now go on."
+	line "I know you'll do"
+	cont "great things!"
 	done
 
 KrissHouse1F_MapEventHeader:: db 0, 0
@@ -393,22 +212,18 @@ KrissHouse1F_MapEventHeader:: db 0, 0
 .Warps: db 3
 	warp_def 7, 6, 2, BOUNTIFUL_TOWN
 	warp_def 7, 7, 2, BOUNTIFUL_TOWN
-	warp_def 0, 9, 1, KRISS_HOUSE_2F
+	warp_def 0, 11, 1, KRISS_HOUSE_2F
 
-.CoordEvents: db 2
-	xy_trigger 0, 4, 8, 0, UnknownScript_0x7a4d8, 0, 0
-	xy_trigger 0, 4, 9, 0, UnknownScript_0x7a4db, 0, 0
+.CoordEvents: db 1
+	xy_trigger 0, 1, 11, 0, MomIntroScript, 0, 0
 
 .BGEvents: db 4
-	signpost 1, 0, SIGNPOST_READ, StoveScript
-	signpost 1, 1, SIGNPOST_READ, SinkScript
-	signpost 1, 2, SIGNPOST_READ, FridgeScript
-	signpost 1, 4, SIGNPOST_READ, TVScript
+	signpost 1, 2, SIGNPOST_READ, ObjectEvent
+	signpost 1, 3, SIGNPOST_READ, ObjectEvent
+	signpost 1, 4, SIGNPOST_READ, ObjectEvent
+	signpost 1, 6, SIGNPOST_READ, ObjectEvent
 
-.ObjectEvents: db 5
-	person_event SPRITE_MOM, 4, 7, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, MomScript_0x7a582, EVENT_KRISS_HOUSE_MOM_1
-	person_event SPRITE_MOM, 2, 2, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, 1, 0, PERSONTYPE_SCRIPT, 0, MomScript_0x7a582, EVENT_KRISS_HOUSE_MOM_2
-	person_event SPRITE_MOM, 4, 7, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, 2, 0, PERSONTYPE_SCRIPT, 0, MomScript_0x7a582, EVENT_KRISS_HOUSE_MOM_2
-	person_event SPRITE_MOM, 2, 0, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, 4, 0, PERSONTYPE_SCRIPT, 0, MomScript_0x7a582, EVENT_KRISS_HOUSE_MOM_2
-	person_event SPRITE_POKEFAN_F, 4, 4, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, (1 << 3) | PAL_OW_RED, PERSONTYPE_SCRIPT, 0, NeighborScript, EVENT_KRISS_HOUSE_1F_NEIGHBOR
+.ObjectEvents: db 2
+	person_event SPRITE_MOM, 4, 9, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, MomScript, -1
+	person_event SPRITE_POKEFAN_F, 4, 6, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, (1 << 3) | PAL_OW_RED, PERSONTYPE_SCRIPT, 0, ObjectEvent, -1
 

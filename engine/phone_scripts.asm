@@ -5,11 +5,11 @@ UnusedPhoneScript: ; 0xbcea5
 ; Mom
 
 MomPhoneScript: ; 0xbceaa
-	checkevent EVENT_TALKED_TO_MOM_AFTER_MYSTERY_EGG_QUEST
+	checkevent EVENT_TALKED_TO_MOM_BEFORE_JOURNEY
 	iftrue .bcec5
 	checkevent EVENT_DUDE_TALKED_TO_YOU
 	iftrue MomPhoneLectureScript
-	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
+	checkevent EVENT_FINISHED_BISHOPS_ERRAND
 	iftrue MomPhoneNoGymQuestScript
 	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
 	iftrue MomPhoneNoPokedexScript
@@ -132,7 +132,7 @@ MomPhoneNoGymQuestScript: ; 0xbcfac
 	end
 
 MomPhoneLectureScript: ; 0xbcfb1
-	setevent EVENT_TALKED_TO_MOM_AFTER_MYSTERY_EGG_QUEST
+	setevent EVENT_TALKED_TO_MOM_BEFORE_JOURNEY
 	setflag ENGINE_DST
 	specialphonecall SPECIALCALL_NONE
 	farwritetext MomPhoneLectureText
@@ -200,11 +200,11 @@ ElmPhoneScript1: ; 0xbd00d
 	iftrue .eggunhatched
 	checkevent EVENT_ELMS_AIDE_IN_LAB
 	iftrue .assistant
-	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
+	checkevent EVENT_FINISHED_BISHOPS_ERRAND
 	iftrue .checkingegg
 	checkevent EVENT_ELM_CALLED_ABOUT_STOLEN_POKEMON
 	iftrue .stolen
-	checkevent EVENT_GOT_MYSTERY_EGG_FROM_MR_POKEMON
+	checkevent EVENT_GOT_PACKAGE_FROM_WARD_CLERK
 	iftrue .sawmrpokemon
 	farwritetext ElmPhoneStartText
 	end

@@ -80,9 +80,9 @@ BountifulTown_TeacherStopsYouTrigger2:
 BountifulTownTeacherScript:
 	faceplayer
 	opentext
-	checkevent EVENT_TALKED_TO_MOM_AFTER_MYSTERY_EGG_QUEST
+	checkevent EVENT_TALKED_TO_MOM_BEFORE_JOURNEY
 	iftrue .CallMom
-	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
+	checkevent EVENT_FINISHED_BISHOPS_ERRAND
 	iftrue .TellMomYoureLeaving
 	checkevent EVENT_GOT_A_POKEMON_FROM_ELM
 	iftrue .MonIsAdorable

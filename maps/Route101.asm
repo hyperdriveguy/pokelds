@@ -116,7 +116,7 @@ CatchingTutorialDudeScript:
 	if_equal $0, .BoxFull
 	checkevent EVENT_LEARNED_TO_CATCH_POKEMON
 	iftrue .BoxFull
-	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
+	checkevent EVENT_FINISHED_BISHOPS_ERRAND
 	iffalse .BoxFull
 	writetext CatchingTutorialRepeatText
 	yesorno

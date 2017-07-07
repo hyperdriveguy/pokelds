@@ -37,7 +37,7 @@ MrPokemonsHouse_MapScriptHeader:
 	playsound SFX_KEY_ITEM
 	waitsfx
 	itemnotify
-	setevent EVENT_GOT_MYSTERY_EGG_FROM_MR_POKEMON
+	setevent EVENT_GOT_PACKAGE_FROM_WARD_CLERK
 	writetext MrPokemonIntroText3
 	buttonsound
 	spriteface MRPOKEMONSHOUSE_GENTLEMAN, RIGHT
@@ -55,7 +55,7 @@ MrPokemonsHouse_MrPokemonScript:
 	opentext
 	checkitem RED_SCALE
 	iftrue .RedScale
-	checkevent EVENT_GAVE_MYSTERY_EGG_TO_ELM
+	checkevent EVENT_FINISHED_BISHOPS_ERRAND
 	iftrue .AlwaysNewDiscoveries
 	writetext MrPokemonText_ImDependingOnYou
 	waitbutton
