@@ -427,7 +427,7 @@ BattleTestScript:
 	waitbutton
 	closetext
 	winlosstext BishopHowsTheJourneyText, BishopHowsTheJourneyText
-	loadtrainer MISSIONARY, KNIGHT
+	loadtrainer YOUNGSTER, MIKEY
 	startbattle
 	reloadmapafterbattle
 	closetext
