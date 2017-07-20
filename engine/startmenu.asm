@@ -183,17 +183,17 @@ StartMenu:: ; 125cd
 	dw StartMenu_Pokegear, .PokegearString, .PokegearDesc
 	dw StartMenu_Quit,     .QuitString,     .QuitDesc
 
-.PokedexString: 	db "#DEX@"
-.PartyString:   	db "#MON@"
-.PackString:    	db "PACK@"
+.PokedexString: 	db "#dex@"
+.PartyString:   	db "#mon@"
+.PackString:    	db "Bag@"
 .StatusString:  	db "<PLAYER>@"
-.SaveString:    	db "SAVE@"
-.OptionString:  	db "OPTION@"
-.ExitString:    	db "EXIT@"
-.PokegearString:	db $24, "GEAR@"
-.QuitString:    	db "QUIT@"
+.SaveString:    	db "Save@"
+.OptionString:  	db "Option@"
+.ExitString:    	db "Exit@"
+.PokegearString:	db $24, "gear@"
+.QuitString:    	db "Quit@"
 
-.PokedexDesc:  db   "#MON"
+.PokedexDesc:  db   "#mon"
 	next "database@"
 
 .PartyDesc:    db   "Party ", $4a
@@ -985,8 +985,8 @@ GiveTakeItemMenuData: ; 12c9b
 .Items:
 	db %10000000 ; x padding
 	db 2 ; # items
-	db "GIVE@"
-	db "TAKE@"
+	db "Give@"
+	db "Take@"
 ; 12caf
 
 
@@ -1175,9 +1175,9 @@ MonMailAction: ; 12d45
 .MenuData2:
 	db $80 ; flags
 	db 3 ; items
-	db "READ@"
-	db "TAKE@"
-	db "QUIT@"
+	db "Read@"
+	db "Take@"
+	db "Quit@"
 ; 0x12de2
 
 
