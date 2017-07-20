@@ -408,6 +408,7 @@ BishopsLabHealingMachine_HealParty:
 	end
 
 BishopsLabBookshelfScript:
+	opentext
 	writetext BishopsLabBookshelfText
 	waitbutton
 	closetext
