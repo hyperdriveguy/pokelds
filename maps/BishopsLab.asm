@@ -350,7 +350,7 @@ PlayerComeBackMovement:
 	step_end
 ; Event End
 
-; Non Event
+; Non Event Scripts
 BishopScript:
 	faceplayer
 	opentext
@@ -380,6 +380,34 @@ BishopScript:
 	closetext
 	end
 
+BishopsLabHealingMachine:
+	opentext
+	checkevent EVENT_GOT_A_POKEMON_FROM_BISHOP
+	iftrue .CanHeal
+	writetext BishopsLabHealingMachineText1
+	waitbutton
+	closetext
+	end
+
+.CanHeal:
+	writetext BishopsLabHealingMachineText2
+	yesorno
+	iftrue BishopsLabHealingMachine_HealParty
+	closetext
+	end
+
+BishopsLabHealingMachine_HealParty:
+	special TrainerRankings_Healings
+	special HealParty
+	playmusic MUSIC_NONE
+	writebyte 1 ; Machine is in Bishop's Lab
+	special HealMachineAnim
+	pause 30
+	special RestartMapMusic
+	closetext
+	end
+
+; Non Event Text
 BishopChooseOneText:
 	text "Bishop: Go Ahead"
 	line "and choose one"
@@ -417,6 +445,16 @@ BishopHowsTheJourneyText:
 	cont "ney going?"
 	done
 
+BishopsLabHealingMachineText1:
+	text "I wonder what this"
+	line "does?"
+	done
+
+BishopsLabHealingMachineText2:
+	text "Would you like to"
+	line "heal your #mon?"
+	done
+
 IF DEF(DEBUG)
 ; Debugging stuff
 BattleTestScript:
@@ -444,7 +482,8 @@ BishopsLab_MapEventHeader:: db 0, 0
 	xy_trigger 1, 6, 4, 0, LabTryToLeaveScript, 0, 0
 	xy_trigger 1, 6, 5, 0, LabTryToLeaveScript, 0, 0
 
-.BGEvents: db 0
+.BGEvents: db 1
+	signpost 1, 2, SIGNPOST_READ, BishopsLabHealingMachine
 
 .ObjectEvents: db 7
 	person_event SPRITE_BISHOP, 2, 5, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, (1 << 3) | PAL_OW_BROWN, PERSONTYPE_SCRIPT, 0, BishopScript, -1
