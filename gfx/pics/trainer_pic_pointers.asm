@@ -66,5 +66,3 @@
 	add_pic OfficerPic
 	add_pic GruntfPic
 	add_pic MysticalmanPic
-;	add_pic MissionaryMPic
-	

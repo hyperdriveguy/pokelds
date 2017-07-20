@@ -8838,7 +8838,7 @@ MissionaryGroup:
 	; party
 	
 	db 6, PONYTA
-	db 7, WEEDLfE
+	db 7, WEEDLE
 
 	db $ff ; end
 	
