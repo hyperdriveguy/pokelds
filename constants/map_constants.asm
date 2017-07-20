@@ -417,7 +417,7 @@ MAP_NONE   EQU 0
 	mapgroup ROUTE_26,                                   54, 10 ;  1
 	mapgroup ROUTE_27,                              9, 40 ;  2
 	mapgroup ROUTE_101, 30, 14
-	mapgroup BOUNTIFUL_TOWN,                             15, 14 ;  4
+	mapgroup BOUNTIFUL_TOWN, 15, 14
 	mapgroup BISHOPS_LAB, 6, 5
 	mapgroup KRISS_HOUSE_1F, 4, 6
 	mapgroup KRISS_HOUSE_2F, 3, 4

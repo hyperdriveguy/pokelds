@@ -289,8 +289,8 @@ BountifulTown_MapEventHeader:: db 0, 0
 	warp_def 17, 23, 1, BISHOPS_HOUSE
 
 .CoordEvents: db 2
-	xy_trigger 0, 0, 26, 0, BountifulTown_TeacherStopsYouTrigger1, 0, 0
-	xy_trigger 0, 0, 27, 0, BountifulTown_TeacherStopsYouTrigger2, 0, 0
+	xy_trigger 0, 1, 26, 0, BountifulTown_TeacherStopsYouTrigger1, 0, 0
+	xy_trigger 0, 1, 27, 0, BountifulTown_TeacherStopsYouTrigger2, 0, 0
 
 .BGEvents: db 4
 	signpost 15, 17, SIGNPOST_READ, BountifulTownSign
@@ -299,7 +299,7 @@ BountifulTown_MapEventHeader:: db 0, 0
 	signpost 17, 21, SIGNPOST_READ, MapBountifulTownBishopsHouseSignScript
 
 .ObjectEvents: db 3
-	person_event SPRITE_TEACHER, 4, 26, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 1, -1, -1, 0, PERSONTYPE_SCRIPT, 0, BountifulTownTeacherScript, -1
+	person_event SPRITE_TEACHER, 5, 26, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 1, -1, -1, 0, PERSONTYPE_SCRIPT, 0, BountifulTownTeacherScript, -1
 	person_event SPRITE_FISHER, 14, 15, SPRITEMOVEDATA_WALK_UP_DOWN, 1, 0, -1, -1, (1 << 3) | PAL_OW_GREEN, PERSONTYPE_SCRIPT, 0, BountifulTownFisherScript, -1
 	person_event SPRITE_SILVER, 22, 11, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, BountifulTownSilverScript, EVENT_RIVAL_NEW_BARK_TOWN
 
