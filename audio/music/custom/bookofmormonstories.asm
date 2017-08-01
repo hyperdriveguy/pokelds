@@ -1,15 +1,18 @@
 Music_BookOfMormonStories:
-	dbw $C0, Music_BookOfMormonStories_Ch1
-	dbw $01, Music_BookOfMormonStories_Ch2
+	musicheader 3, 1, Music_BookOfMormonStories_Ch1
+	musicheader 1, 2, Music_BookOfMormonStories_Ch2
+	musicheader 1, 3, Music_BookOfMormonStories_Ch3
 	
 Music_BookOfMormonStories_Ch1:
 	tempo 400
 	volume $70
-	dutycycle $2
+	dutycycle $1
 	tone $0002
 	stereopanning $7f
-	notetype $c, $87
+	vibrato $12, $24
+	notetype $c, $b7
 	intensity $89
+Music_BookOfMormonStories_Ch1_Main:
 	; Measure 1
 	octave 4
 	note B_, 1
@@ -96,7 +99,7 @@ Music_BookOfMormonStories_Ch1:
 	; Measure 16
 	note E_, 4
 	
-	loopchannel 0, Music_BookOfMormonStories_Ch1
+	loopchannel 0, Music_BookOfMormonStories_Ch1_Main
 
 Music_BookOfMormonStories_Ch2:
 	volume $77
@@ -164,3 +167,10 @@ Music_BookOfMormonStories_Ch2:
 	note B_, 4
 	
 	loopchannel 0, Music_BookOfMormonStories_Ch2
+
+Music_BookOfMormonStories_Ch3:
+	stereopanning $ff
+	vibrato $12, $24
+	notetype $c, $b7
+	tone $0002
+	loopchannel 0, Music_BookOfMormonStories_Ch1_Main
