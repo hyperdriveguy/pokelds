@@ -4,9 +4,6 @@ const_value set 2
 	const BISHOPSLAB_POKE_BALL1
 	const BISHOPSLAB_POKE_BALL2
 	const BISHOPSLAB_POKE_BALL3
-IF DEF(DEBUG)
-	const BATTLE_TEST
-ENDC
 
 BishopsLab_MapScriptHeader:
 .MapTriggers:
@@ -105,7 +102,11 @@ CyndaquilPokeBallScript:
 	playsound SFX_CAUGHT_MON
 	waitsfx
 	buttonsound
+IF DEF(DEBUG)
+	givepoke CYNDAQUIL, 100, BERRY
+ELSE
 	givepoke CYNDAQUIL, 5, BERRY
+ENDC
 	closetext
 	checkcode VAR_FACING
 	if_equal RIGHT, BishopDirectionsScript
@@ -135,7 +136,11 @@ TotodilePokeBallScript:
 	playsound SFX_CAUGHT_MON
 	waitsfx
 	buttonsound
+IF DEF(DEBUG)
+	givepoke TOTODILE, 100, BERRY
+ELSE
 	givepoke TOTODILE, 5, BERRY
+ENDC
 	closetext
 	applymovement PLAYER, AfterTotodileMovement
 	jump BishopDirectionsScript
@@ -163,7 +168,11 @@ ChikoritaPokeBallScript:
 	playsound SFX_CAUGHT_MON
 	waitsfx
 	buttonsound
+IF DEF(DEBUG)
+	givepoke CHIKORITA, 100, BERRY
+ELSE
 	givepoke CHIKORITA, 5, BERRY
+ENDC
 	closetext
 	applymovement PLAYER, AfterChikoritaMovement
 	jump BishopDirectionsScript
@@ -380,6 +389,14 @@ BishopScript:
 	closetext
 	end
 
+BishopsLabAideScript:
+	faceplayer
+	opentext
+	writetext BishopsLabAideText
+	waitbutton
+	closetext
+	end
+
 BishopsLabHealingMachine:
 	opentext
 	checkevent EVENT_GOT_A_POKEMON_FROM_BISHOP
@@ -452,6 +469,15 @@ BishopHowsTheJourneyText:
 	cont "ney going?"
 	done
 
+BishopsLabAideText:
+	text "Hi there! I'm"
+	line "Bishop's aide."
+
+	para "I assist him with"
+	line "his #mon"
+	cont "studies."
+	done
+
 BishopsLabHealingMachineText1:
 	text "I wonder what this"
 	line "does?"
@@ -468,23 +494,6 @@ BishopsLabBookshelfText:
 	cont "search here!"
 	done
 
-IF DEF(DEBUG)
-; Debugging stuff
-BattleTestScript:
-	faceplayer
-	opentext
-	playmusic MUSIC_CHAMPION_BATTLE_SINNOH
-	writetext BishopHowsTheJourneyText
-	waitbutton
-	closetext
-	winlosstext BishopHowsTheJourneyText, BishopHowsTheJourneyText
-	loadtrainer YOUNGSTER, MIKEY
-	startbattle
-	reloadmapafterbattle
-	closetext
-	end
-ENDC
-
 BishopsLab_MapEventHeader:: db 0, 0
 
 .Warps: db 2
@@ -495,7 +504,7 @@ BishopsLab_MapEventHeader:: db 0, 0
 	xy_trigger 1, 6, 4, 0, LabTryToLeaveScript, 0, 0
 	xy_trigger 1, 6, 5, 0, LabTryToLeaveScript, 0, 0
 
-.BGEvents: db 9
+.BGEvents: db 10
 	signpost 1, 2, SIGNPOST_READ, BishopsLabHealingMachine
 	signpost 7, 3, SIGNPOST_READ, BishopsLabBookshelfScript
 	signpost 7, 2, SIGNPOST_READ, BishopsLabBookshelfScript
@@ -505,13 +514,12 @@ BishopsLab_MapEventHeader:: db 0, 0
 	signpost 7, 8, SIGNPOST_READ, BishopsLabBookshelfScript
 	signpost 7, 7, SIGNPOST_READ, BishopsLabBookshelfScript
 	signpost 7, 6, SIGNPOST_READ, BishopsLabBookshelfScript
+	signpost 1, 6, SIGNPOST_READ, BishopsLabBookshelfScript
 
-.ObjectEvents: db 6
+.ObjectEvents: db 5
 	person_event SPRITE_BISHOP, 2, 5, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, (1 << 3) | PAL_OW_BROWN, PERSONTYPE_SCRIPT, 0, BishopScript, -1
-	person_event SPRITE_SCIENTIST, 9, 2, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, (1 << 3) | PAL_OW_BLUE, PERSONTYPE_SCRIPT, 0, ObjectEvent, EVENT_BISHOPS_AIDE_IN_LAB
+	person_event SPRITE_SCIENTIST, 9, 2, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, (1 << 3) | PAL_OW_BLUE, PERSONTYPE_SCRIPT, 0, BishopsLabAideScript, EVENT_BISHOPS_AIDE_IN_LAB
 	person_event SPRITE_POKE_BALL, 3, 6, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, CyndaquilPokeBallScript, EVENT_CYNDAQUIL_POKEBALL_IN_BISHOPS_LAB
 	person_event SPRITE_POKE_BALL, 3, 7, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, (1 << 3) | PAL_OW_BLUE, PERSONTYPE_SCRIPT, 0, TotodilePokeBallScript, EVENT_TOTODILE_POKEBALL_IN_BISHOPS_LAB
 	person_event SPRITE_POKE_BALL, 3, 8, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, (1 << 3) | PAL_OW_GREEN, PERSONTYPE_SCRIPT, 0, ChikoritaPokeBallScript, EVENT_CHIKORITA_POKEBALL_IN_BISHOPS_LAB
-IF DEF(DEBUG)
-	person_event SPRITE_YOUNGSTER, 8, 0, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, (1 << 3) | PAL_OW_BLUE, PERSONTYPE_SCRIPT, 0, BattleTestScript, -1
-ENDC
+

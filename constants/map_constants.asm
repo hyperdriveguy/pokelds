@@ -655,7 +655,7 @@ EMOTE_OBJECT EQU 7
 
 ; fruit trees
 const_value SET 1
-	const FRUITTREE_ROUTE_29      ; 01
+	const FRUITTREE_ROUTE_101      ; 01
 	const FRUITTREE_ROUTE_30_1    ; 02
 	const FRUITTREE_ROUTE_38      ; 03
 	const FRUITTREE_ROUTE_46_1    ; 04

@@ -52,7 +52,7 @@
 	const MUSIC_ROCKET_BATTLE                ; 31
 	const MUSIC_Bishop                     ; 32
 	const MUSIC_DARK_CAVE                    ; 33
-	const MUSIC_ROUTE_29                     ; 34
+	const MUSIC_ROUTE_101                     ; 34
 	const MUSIC_ROUTE_36                     ; 35
 	const MUSIC_SS_AQUA                      ; 36
 	const MUSIC_YOUNGSTER_ENCOUNTER          ; 37

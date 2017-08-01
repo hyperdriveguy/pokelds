@@ -25,7 +25,6 @@ BountifulTown_MapScriptHeader:
 
 .FlyPoint:
 	setflag ENGINE_FLYPOINT_NEW_BARK
-	clearevent EVENT_FIRST_TIME_BANKING_WITH_MOM
 	return
 
 BountifulTown_TeacherStopsYouTrigger1:
@@ -134,6 +133,7 @@ BountifulTownSilverScript:
 	end
 
 BountifulTownSign:
+;	changeblock $1, $D, $10
 	jumptext BountifulTownSignText
 
 MapBountifulTownPlayersHouseSignScript:
