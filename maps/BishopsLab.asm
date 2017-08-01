@@ -379,12 +379,20 @@ BishopScript:
 	closetext
 	end
 .GoFinishErrandScript
+	writetext BishopDidYouForgetText
+	yesorno
+	iffalse .CountingOnYou
 	writetext BishopInstructionsAgainText
 	waitbutton
 	closetext
 	end
 .GoTalkToMomScript
 	writetext BishopTalkToYourMomText
+	waitbutton
+	closetext
+	end
+.CountingOnYou
+	writetext BishopCountingOnYouText
 	waitbutton
 	closetext
 	end
@@ -438,12 +446,16 @@ BishopChooseOneText:
 	cont "<PLAYER>!"
 	done
 
+BishopDidYouForgetText:
+	text "Bishop: Did you"
+	line "forget what I had"
+	cont "asked you to do?"
+	done
+
 BishopInstructionsAgainText:
-	text "Bishop: You don't"
-	line "remember where"
-	
-	para "Brother Jones"
-	line "lives? He lives on"
+	text "I asked to go to"
+	line "Brother Jones'"
+	cont "House. He lives on"
 	
 	para "Route 101, between"
 	line "a bunch of trees."

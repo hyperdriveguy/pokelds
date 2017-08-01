@@ -5,7 +5,6 @@ const_value set 2
 	const ROUTE101_FRUIT_TREE
 	const ROUTE101_FISHER
 	const ROUTE101_COOLTRAINER_M2
-	const ROUTE101_TUSCANY
 	const ROUTE101_POKE_BALL
 
 Route101_MapScriptHeader:
@@ -17,11 +16,7 @@ Route101_MapScriptHeader:
 	maptrigger .Trigger2
 
 .MapCallbacks:
-	db 1
-
-	; callbacks
-
-	dbw MAPCALLBACK_OBJECTS, .Tuscany
+	db 0
 
 .Trigger0:
 	end
@@ -31,20 +26,6 @@ Route101_MapScriptHeader:
 
 .Trigger2:
 	end
-
-.Tuscany:
-	checkflag ENGINE_ZEPHYRBADGE
-	iftrue .DoesTuscanyAppear
-
-.TuscanyDisappears:
-	disappear ROUTE101_TUSCANY
-	return
-
-.DoesTuscanyAppear:
-	checkcode VAR_WEEKDAY
-	if_not_equal TUESDAY, .TuscanyDisappears
-	appear ROUTE101_TUSCANY
-	return
 
 Route101Tutorial1:
 	spriteface ROUTE101_COOLTRAINER_M1, UP
@@ -135,7 +116,7 @@ CatchingTutorialDudeScript:
 	end
 
 .BoxFull:
-	writetext UnknownText_0x1a10a7
+	writetext TutorialDudeText
 	waitbutton
 	closetext
 	end
@@ -170,42 +151,6 @@ CooltrainerMScript_0x1a1031:
 
 .nite
 	writetext Text_WaitingForMorning
-	waitbutton
-	closetext
-	end
-
-TuscanyScript:
-	faceplayer
-	opentext
-	checkevent EVENT_GOT_PINK_BOW_FROM_TUSCANY
-	iftrue TuscanyTuesdayScript
-	checkcode VAR_WEEKDAY
-	if_not_equal TUESDAY, TuscanyNotTuesdayScript
-	checkevent EVENT_MET_TUSCANY_OF_TUESDAY
-	iftrue .MetTuscany
-	writetext MeetTuscanyText
-	buttonsound
-	setevent EVENT_MET_TUSCANY_OF_TUESDAY
-.MetTuscany:
-	writetext TuscanyGivesGiftText
-	buttonsound
-	verbosegiveitem PINK_BOW
-	iffalse TuscanyDoneScript
-	setevent EVENT_GOT_PINK_BOW_FROM_TUSCANY
-	writetext TuscanyGaveGiftText
-	waitbutton
-	closetext
-	end
-
-TuscanyTuesdayScript:
-	writetext TuscanyTuesdayText
-	waitbutton
-TuscanyDoneScript:
-	closetext
-	end
-
-TuscanyNotTuesdayScript:
-	writetext TuscanyNotTuesdayText
 	waitbutton
 	closetext
 	end
@@ -268,7 +213,7 @@ AwayFromPleasantGateMovement:
 	step DOWN
 	step_end
 
-UnknownText_0x1a10a7:
+TutorialDudeText:
 	text "#mon hide in"
 	line "the grass. Who"
 
@@ -369,58 +314,6 @@ Text_WaitingForMorning:
 	line "morning."
 	done
 
-MeetTuscanyText:
-	text "TUSCANY: I do be-"
-	line "lieve that this is"
-
-	para "the first time"
-	line "we've met?"
-
-	para "Please allow me to"
-	line "introduce myself."
-
-	para "I am TUSCANY of"
-	line "Tuesday."
-	done
-
-TuscanyGivesGiftText:
-	text "By way of intro-"
-	line "duction, please"
-
-	para "accept this gift,"
-	line "a PINK BOW."
-	done
-
-TuscanyGaveGiftText:
-	text "TUSCANY: Wouldn't"
-	line "you agree that it"
-	cont "is most adorable?"
-
-	para "It strengthens"
-	line "normal-type moves."
-
-	para "I am certain it"
-	line "will be of use."
-	done
-
-TuscanyTuesdayText:
-	text "TUSCANY: Have you"
-	line "met MONICA, my"
-	cont "older sister?"
-
-	para "Or my younger"
-	line "brother, WESLEY?"
-
-	para "I am the second of"
-	line "seven children."
-	done
-
-TuscanyNotTuesdayText:
-	text "TUSCANY: Today is"
-	line "not Tuesday. That"
-	cont "is unfortunate…"
-	done
-
 MissedWardClerksHouseText:
 	text "I think I missed"
 	line "Brother Jones'"
@@ -455,6 +348,5 @@ Route101_MapEventHeader:: db 0, 0
 	person_event SPRITE_FRUIT_TREE, 53, 6, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, Route101FruitTree, -1
 	person_event SPRITE_FISHER, 13, 14, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, (1 << 3) | PAL_OW_BLUE, PERSONTYPE_SCRIPT, 0, Route101FisherScript, -1
 	person_event SPRITE_COOLTRAINER_M, 7, 26, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, (1 << 3) | PAL_OW_RED, PERSONTYPE_SCRIPT, 0, CooltrainerMScript_0x1a1031, -1
-	person_event SPRITE_TEACHER, 4, 22, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, TuscanyScript, EVENT_ROUTE_101_TUSCANY_OF_TUESDAY
 	person_event SPRITE_POKE_BALL, 20, 6, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, Route101Potion, EVENT_ROUTE_101_POTION
 
