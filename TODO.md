@@ -41,7 +41,6 @@ IMPORTANT NOTE: Suggestions and Pull Requests may be turned down if I find them 
 ## Story - Warning! Spoilers!
 
 - [ ] Errand from the local Professor/Reworked Character
-- [ ] Mission Call
 - [x] Make Bishop in Bountiful Town
 - [ ] Replace Rival with a friendly Missionary/Mission President
 - [ ] Book of Mormon people mixed with modern day people
@@ -49,9 +48,9 @@ IMPORTANT NOTE: Suggestions and Pull Requests may be turned down if I find them 
 - [ ] Gadianton Robbers (Replaces Team Rocket)
 - [ ] Rescue kidnapped missionaries
 - [ ] Leaders to battle in each city (Replacing Gym Leaders, may replace with an Area authority or Book of Mormon Prophet)
-- [ ] Preach!
+- [ ] Preach?
 - [ ] Final battles on Mt. Zion (Replacing the Elite Four and Champion)
-- [ ] Post Story?
+- [ ] Post Story? (Mission Call)
 - [ ] Better method to obtain money?
 
 ## Battle Mechanics
@@ -75,7 +74,7 @@ IMPORTANT NOTE: Suggestions and Pull Requests may be turned down if I find them 
 - [ ] Populate Church Meetinghouses on Sundays and Wednesdays, otherwise they're locked
 - [ ] Show walking animation faster when running
 - [ ] Add Sister, Deacon, Teacher, Priest, High Priest, Beehive, Miamaid, Laurel, Nephite, Lamanite, Ammonite, and Apostate trainer classes
-- [x] Added Elder trainer class
+- [ ] Added Elder trainer class (Broken)
 - [x] Get rid of Nuzlocke mode
 
 ## Music (Much help needed)
@@ -146,7 +145,7 @@ IMPORTANT NOTE: Suggestions and Pull Requests may be turned down if I find them 
 ## Graphics
 
 - [x] New Poké Ball sprite
-- [ ] Make color-coded starter Poké Balls.
+- [x] Make color-coded starter Poké Balls.
 - [ ] Make item balls for TMs are blue.
 
 ## Other
@@ -156,4 +155,4 @@ IMPORTANT NOTE: Suggestions and Pull Requests may be turned down if I find them 
 - [ ] Make move stats include type, category, power, and accuracy.
 - [ ] Make new Berry names
 - [ ] Wonder trades
-- [ ] Polished Crystal Utilities
+- [x] Polished Crystal Utilities
