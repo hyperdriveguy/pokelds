@@ -1,9 +1,10 @@
 Music_IHopeTheyCallMeOnAMission:
-	dbw $C0, Music_IHopeTheyCallMeOnAMission_Ch1
-	dbw $01, Music_IHopeTheyCallMeOnAMission_Ch2
+	musicheader 3, 1, Music_IHopeTheyCallMeOnAMission_Ch1
+	musicheader 1, 2, Music_IHopeTheyCallMeOnAMission_Ch2
+	musicheader 1, 3, Music_IHopeTheyCallMeOnAMission_Ch3
 
 Music_IHopeTheyCallMeOnAMission_Ch1:
-	tempo 100
+	tempo 130
 	volume $77
 	dutycycle $2
 	tone $0001
@@ -12,13 +13,9 @@ Music_IHopeTheyCallMeOnAMission_Ch1:
 	callchannel Music_IHopeTheyCallMeOnAMission_Ch1_part
 	callchannel Music_IHopeTheyCallMeOnAMission_Ch1_part
 Music_IHopeTheyCallMeOnAMission_Ch1_main:
+rept 7
 	callchannel Music_IHopeTheyCallMeOnAMission_Ch1_part
-	callchannel Music_IHopeTheyCallMeOnAMission_Ch1_part
-	callchannel Music_IHopeTheyCallMeOnAMission_Ch1_part
-	callchannel Music_IHopeTheyCallMeOnAMission_Ch1_part
-	callchannel Music_IHopeTheyCallMeOnAMission_Ch1_part
-	callchannel Music_IHopeTheyCallMeOnAMission_Ch1_part
-	callchannel Music_IHopeTheyCallMeOnAMission_Ch1_part
+endr
 	octave 2
 	note F_, 3
 	octave 3
@@ -53,7 +50,6 @@ Music_IHopeTheyCallMeOnAMission_Ch1_part:
 	endchannel
 	
 Music_IHopeTheyCallMeOnAMission_Ch2:
-	tempo 100
 	volume $77
 	dutycycle $1
 	tone $0001
@@ -62,9 +58,9 @@ Music_IHopeTheyCallMeOnAMission_Ch2:
 	;intensity $89
 	; A little rest
 Music_IHopeTheyCallMeOnAMission_Ch2_main:
+rept 5
 	callchannel Music_IHopeTheyCallMeOnAMission_Ch2_filler
-	callchannel Music_IHopeTheyCallMeOnAMission_Ch2_filler
-	callchannel Music_IHopeTheyCallMeOnAMission_Ch2_filler
+endr
 	octave 4
 	note C_, 4
 	note A_, 7
@@ -129,3 +125,6 @@ Music_IHopeTheyCallMeOnAMission_Ch2_filler:
 	note D_, 4
 	note A_, 4
 	endchannel
+
+Music_IHopeTheyCallMeOnAMission_Ch3:
+	loopchannel 0, Music_IHopeTheyCallMeOnAMission_Ch1_main

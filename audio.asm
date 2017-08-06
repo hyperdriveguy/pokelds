@@ -176,6 +176,10 @@ INCLUDE "audio/music/131_Route228.asm"
 INCLUDE "audio/music/custom/bookofmormonstories.asm"
 INCLUDE "audio/music/custom/ihopetheycallmeonamission.asm"
 
+SECTION "Extra Songs 7", ROMX
+
+INCLUDE "audio/music/custom/loveathome.asm"
+
 SECTION "Sound Effects", ROMX
 
 INCLUDE "audio/sfx.asm"

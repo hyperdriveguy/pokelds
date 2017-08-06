@@ -11,7 +11,7 @@ Music_BookOfMormonStories_Ch1:
 	stereopanning $7f
 	vibrato $12, $24
 	notetype $c, $b7
-	intensity $89
+	intensity $8a
 Music_BookOfMormonStories_Ch1_Main:
 	; Measure 1
 	octave 4

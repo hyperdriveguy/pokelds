@@ -77,20 +77,19 @@ IMPORTANT NOTE: Suggestions and Pull Requests may be turned down if I find them 
 - [ ] Added Elder trainer class (Broken)
 - [x] Get rid of Nuzlocke mode
 
-## Music (Much help needed)
+## Music (Much help needed, improvements are welcomd)
 
 - [ ] "I Hope They Call Me On a Mission" for the intro music
-    * Channels are out of sync
+    * Channels are out of sync, probably needs to be completely redone
 - [ ] "Called to Serve" for Missionary Trainer encounter
 - [ ] "High on the Mountain Top" for Mt. Zion theme
 - [ ] "True to the Faith" for the ending theme
 - [ ] "I Love to See the Temple" for Temple Square
-- [ ] "Love at Home" for Bountiful Town
+- [x] "Love at Home" for Bountiful Town
 - [ ] "The Spirit of God" for the final road to Mt. Zion
 - [ ] "For the Strength of the Hills" for route music
 - [ ] "How Firm a Foundation" for route music
-- [ ] "Book of Mormon Stories" for Zarahemla
-    * Basic groudwork done, and it supports multiple channels, but needs improvement
+- [x] "Book of Mormon Stories" for Zarahemla
 - [ ] Port other popular Hymns to the audio engine
 
 ## Graphics
@@ -154,5 +153,6 @@ IMPORTANT NOTE: Suggestions and Pull Requests may be turned down if I find them 
 - [ ] Make stereo sound default.
 - [ ] Make move stats include type, category, power, and accuracy.
 - [ ] Make new Berry names
+- [ ] No more all caps words (unless yelling)
 - [ ] Wonder trades
 - [x] Polished Crystal Utilities

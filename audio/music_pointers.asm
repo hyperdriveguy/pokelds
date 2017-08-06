@@ -142,4 +142,5 @@
 ; Pokemon LDS adds the following songs:
 	dba Music_BookOfMormonStories
 	dba Music_IHopeTheyCallMeOnAMission
+	dba Music_LoveAtHome
 ; e91a3

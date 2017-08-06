@@ -132,5 +132,6 @@
 ; Songs added by Hyperdriveguy	
 	const MUSIC_BOOK_OF_MORMON_STORIES       ; 7c
 	const MUSIC_I_HOPE_THEY_CALL_ME          ; 7d
+	const MUSIC_LOVE_AT_HOME                 ; 7e
 
 MUSIC_MAHOGANY_MART EQU $64 ; leftover from gold
