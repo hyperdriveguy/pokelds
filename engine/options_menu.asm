@@ -62,21 +62,21 @@ _OptionsMenu: ; e41d0
 ; e4241
 
 StringOptions: ; e4241
-	db "TEXT SPEED<LNBRK>"
+	db "Text Speed<LNBRK>"
 	db "        :<LNBRK>"
-	db "BATTLE SCENE<LNBRK>"
+	db "Battle Scene<LNBRK>"
 	db "        :<LNBRK>"
-	db "BATTLE STYLE<LNBRK>"
+	db "Battle Style<LNBRK>"
 	db "        :<LNBRK>"
-	db "SOUND<LNBRK>"
+	db "Sound<LNBRK>"
 	db "        :<LNBRK>"
-	db "PRINT<LNBRK>"
+	db "Print<LNBRK>"
 	db "        :<LNBRK>"
-	db "MENU ACCOUNT<LNBRK>"
+	db "Menu Help<LNBRK>"
 	db "        :<LNBRK>"
-	db "FRAME<LNBRK>"
+	db "Frame<LNBRK>"
 	db "        :TYPE<LNBRK>"
-	db "CANCEL@"
+	db "Exit@"
 ; e42d6
 
 
@@ -113,7 +113,7 @@ Options_TextSpeed: ; e42f5
 	bit D_RIGHT_F, a
 	jr z, .NonePressed
 	ld a, c ; right pressed
-	cp SLOW_TEXT
+	cp INST_TEXT
 	jr c, .Increase
 	ld c, FAST_TEXT +- 1
 
@@ -126,7 +126,7 @@ Options_TextSpeed: ; e42f5
 	ld a, c
 	and a
 	jr nz, .Decrease
-	ld c, SLOW_TEXT + 1
+	ld c, INST_TEXT + 1
 
 .Decrease:
 	dec c
@@ -142,8 +142,9 @@ Options_TextSpeed: ; e42f5
 .NonePressed:
 	ld b, 0
 	ld hl, .Strings
+rept 2
 	add hl, bc
-	add hl, bc
+endr
 	ld e, [hl]
 	inc hl
 	ld d, [hl]
@@ -155,37 +156,52 @@ Options_TextSpeed: ; e42f5
 
 .Strings:
 	dw .Fast
-	dw .Mid
+	dw .Medium
 	dw .Slow
+	dw .Instant
 
 .Fast:
-	db "FAST@"
-.Mid:
-	db "MID @"
+	db "Fast   @"
+.Medium:
+	db "Medium @"
 .Slow:
-	db "SLOW@"
+	db "Slow   @"
+.Instant:
+	db "Instant@"
 ; e4346
 
+
+INST_RATE EQU 0
+FAST_RATE EQU 1
+MED_RATE  EQU 3
+SLOW_RATE EQU 5
 
 GetTextSpeed: ; e4346
 	ld a, [Options] ; This converts the number of frames, to 0, 1, 2 representing speed
 	and 7
-	cp 5 ; 5 frames of delay is slow
+	cp SLOW_RATE
 	jr z, .slow
-	cp 1 ; 1 frame of delay is fast
+	cp MED_RATE
+	jr z, .medium
+	cp FAST_RATE
 	jr z, .fast
-	ld c, MED_TEXT ; set it to mid if not one of the above
-	lb de, 1, 5
+	ld c, INST_TEXT
+	lb de, SLOW_RATE, FAST_RATE
 	ret
 
 .slow
 	ld c, SLOW_TEXT
-	lb de, 3, 1
+	lb de, MED_RATE, INST_RATE
+	ret
+
+.medium
+	ld c, MED_TEXT
+	lb de, FAST_RATE, SLOW_RATE
 	ret
 
 .fast
 	ld c, FAST_TEXT
-	lb de, 5, 3
+	lb de, INST_RATE, MED_RATE
 	ret
 ; e4365
 
@@ -228,9 +244,9 @@ Options_BattleScene: ; e4365
 ; e4398
 
 .On:
-	db "ON @"
+	db "On @"
 .Off:
-	db "OFF@"
+	db "Off@"
 ; e43a0
 
 
@@ -271,49 +287,36 @@ Options_BattleStyle: ; e43a0
 ; e43d1
 
 .Shift:
-	db "SHIFT@"
+	db "Switch@"
 .Set:
-	db "SET  @"
+	db "Set   @"
 ; e43dd
 
 
 Options_Sound: ; e43dd
 	ld hl, Options
 	ld a, [hJoyPressed]
-	bit D_LEFT_F, a
-	jr nz, .LeftPressed
-	bit D_RIGHT_F, a
-	jr z, .NonePressed
+	and D_LEFT | D_RIGHT
+	jr nz, .Toggle
 	bit STEREO, [hl]
-	jr nz, .SetMono
+	jr z, .SetMono
 	jr .SetStereo
-
-.LeftPressed:
+.Toggle
 	bit STEREO, [hl]
 	jr z, .SetStereo
-	jr .SetMono
-
-.NonePressed:
-	bit STEREO, [hl]
-	jr nz, .ToggleStereo
-	jr .ToggleMono
-
 .SetMono:
 	res STEREO, [hl]
-	call RestartMapMusic
-
-.ToggleMono:
 	ld de, .Mono
 	jr .Display
-
 .SetStereo:
 	set STEREO, [hl]
-	call RestartMapMusic
-
-.ToggleStereo:
 	ld de, .Stereo
-
 .Display:
+	ld a, [hJoyPressed]
+	and D_LEFT | D_RIGHT
+	jr z, .DontRestartMapMusic
+	call RestartMapMusic
+.DontRestartMapMusic
 	hlcoord 11, 9
 	call PlaceString
 	and a
@@ -321,9 +324,9 @@ Options_Sound: ; e43dd
 ; e4416
 
 .Mono:
-	db "MONO  @"
+	db "Mono  @"
 .Stereo:
-	db "STEREO@"
+	db "Stereo@"
 ; e4424
 
 
@@ -380,15 +383,15 @@ Options_Print: ; e4424
 	dw .Darkest
 
 .Lightest:
-	db "LIGHTEST@"
+	db "Lightest@"
 .Lighter:
-	db "LIGHTER @"
+	db "Lighter @"
 .Normal:
-	db "NORMAL  @"
+	db "Normal  @"
 .Darker:
-	db "DARKER  @"
+	db "Darker  @"
 .Darkest:
-	db "DARKEST @"
+	db "Darkest @"
 ; e4491
 
 
@@ -464,9 +467,9 @@ Options_MenuAccount: ; e44c1
 ; e44f2
 
 .Off:
-	db "OFF@"
+	db "Off@"
 .On:
-	db "ON @"
+	db "On @"
 ; e44fa
 
 
