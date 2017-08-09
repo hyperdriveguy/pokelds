@@ -303,7 +303,7 @@ InitPokegearTilemap: ; 90da8 (24:4da8)
 ; 90e36 (24:4e36)
 
 .switch
-	db " SWITCH▶@"
+	db " Switch▶@"
 ; 90e3f
 
 .Map: ; 90e3f

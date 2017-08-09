@@ -31,13 +31,13 @@ PrintDayOfWeek: ; 5b05
 ; 5b1c
 
 .Days: ; 5b1c
-	db "SUN@"
-	db "MON@"
-	db "TUES@"
-	db "WEDNES@"
-	db "THURS@"
-	db "FRI@"
-	db "SATUR@"
+	db "Sun@"
+	db "Mon@"
+	db "Tues@"
+	db "Wednes@"
+	db "Thurs@"
+	db "Fri@"
+	db "Satur@"
 ; 5b40
 
 .Day: ; 5b40
@@ -271,7 +271,7 @@ SetDefaultBoxNames: ; 5ca6
 	ret
 
 .Box:
-	db "BOX@"
+	db "Box@"
 ; 5cd3
 
 InitializeMagikarpHouse: ; 5cd3
@@ -286,7 +286,7 @@ InitializeMagikarpHouse: ; 5cd3
 ; 5ce3
 
 .Ralph: ; 5ce3
-	db "RALPH@"
+	db "Ralph@"
 ; 5ce9
 
 InitializeNPCNames: ; 5ce9
@@ -310,10 +310,10 @@ InitializeNPCNames: ; 5ce9
 	call CopyBytes
 	ret
 
-.Rival:  db "AARON@"
-.Red:    db "RED@"
-.Green:  db "GREEN@"
-.Mom:    db "MOM@"
+.Rival:  db "Aaron@"
+.Red:    db "Red@"
+.Green:  db "Green@"
+.Mom:    db "Mom@"
 ; 5d23
 
 InitializeWorld: ; 5d23
@@ -565,10 +565,10 @@ Continue_LoadMenuHeader: ; 5ebf
 .MenuData2_Dex: ; 5ee1
 	db $00 ; flags
 	db 4 ; items
-	db "ELDER <PLAYER>@"
-	db "BADGES@"
-	db "#DEX@"
-	db "TIME@"
+	db "Player <PLAYER>@"
+	db "Badges@"
+	db "#Dex@"
+	db "Time@"
 ; 5efb
 
 .MenuDataHeader_NoDex: ; 5efb
@@ -582,10 +582,10 @@ Continue_LoadMenuHeader: ; 5ebf
 .MenuData2_NoDex: ; 5f03
 	db $00 ; flags
 	db 4 ; items
-	db "PLAYER <PLAYER>@"
-	db "BADGES@"
+	db "Player <PLAYER>@"
+	db "Badges@"
 	db " @"
-	db "TIME@"
+	db "Time@"
 ; 5f1c
 
 
@@ -824,9 +824,9 @@ NamePlayer: ; 0x6074
 	ret
 
 .Chris:
-	db "AMMON@@@@@@"
+	db "Ammon@@@@@@"
 .Kris:
-	db "SARIAH@@@@@"
+	db "Sariah@@@@@"
 ; 60e9
 
 Function60e9: ; Unreferenced
