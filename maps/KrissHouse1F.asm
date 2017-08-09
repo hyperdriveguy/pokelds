@@ -21,6 +21,9 @@ MomIntroScript:
 	stringtotext GearName, $1
 	scall RecievePokegear
 	setflag ENGINE_POKEGEAR
+IF DEF(DEBUG)
+	setflag ENGINE_MAP_CARD
+ENDC
 	setflag ENGINE_PHONE_CARD
 	addcellnum PHONE_MOM
 	dotrigger $1
