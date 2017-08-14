@@ -24,8 +24,8 @@ _TitleScreen: ; 10ed67
 	ld [rVBK], a
 
 
-; Decompress running Suicune gfx
-	ld hl, TitleSuicuneGFX
+; Decompress dancing Moroni gfx
+	ld hl, TitleMoroniGFX
 	ld de, VTiles1
 	call Decompress
 
@@ -79,13 +79,13 @@ _TitleScreen: ; 10ed67
 	call ByteFill
 
 
-; 'CRYSTAL VERSION'
+; 'LDS VERSION'
 	hlbgcoord 5, 9
 	ld bc, NAME_LENGTH ; length of version text
 	ld a, 1
 	call ByteFill
 
-; Suicune gfx
+; Moroni gfx
 	hlbgcoord 0, 12
 	ld bc, 6 bgrows ; the rest of the screen
 	ld a, 8
@@ -102,8 +102,8 @@ _TitleScreen: ; 10ed67
 	ld de, VTiles1
 	call Decompress
 
-; Decompress background crystal
-	ld hl, TitleCrystalGFX
+; Decompress background liahona
+	ld hl, TitleLiahonaGFX
 	ld de, VTiles0
 	call Decompress
 
@@ -128,11 +128,11 @@ _TitleScreen: ; 10ed67
 	ld e, $10
 	call DrawTitleGraphic
 
-; Initialize running Suicune?
+; Initialize dancing Moroni?
 	ld d, $0
-	call LoadSuicuneFrame
+	call LoadMoroniFrame
 
-; Initialize background crystal
+; Initialize background liahona
 	call InitializeBackground
 
 ; Save WRAM bank
@@ -230,7 +230,7 @@ _TitleScreen: ; 10ed67
 	ret
 ; 10eea7
 
-SuicuneFrameIterator: ; 10eea7
+MoroniFrameIterator: ; 10eea7
 	ld hl, UnknBGPals + 2
 	ld a, [hl]
 	ld c, a
@@ -251,7 +251,7 @@ SuicuneFrameIterator: ; 10eea7
 	ld d, [hl]
 	xor a
 	ld [hBGMapMode], a
-	call LoadSuicuneFrame
+	call LoadMoroniFrame
 	ld a, $1
 	ld [hBGMapMode], a
 	ld a, $3
@@ -267,7 +267,7 @@ SuicuneFrameIterator: ; 10eea7
 ; 10eed2
 
 
-LoadSuicuneFrame: ; 10eed2
+LoadMoroniFrame: ; 10eed2
 	hlcoord 6, 12
 	ld b, 6
 .bgrows
@@ -361,8 +361,8 @@ InitializeBackground: ; 10ef06
 ; 10ef32
 
 
-AnimateTitleCrystal: ; 10ef32
-; Move the title screen crystal downward until it's fully visible
+AnimateTitleLiahona: ; 10ef32
+; Move the title screen liahona downward until it's fully visible
 
 ; Stop at y=6
 ; y is really from the bottom of the sprite, which is two tiles high
@@ -371,7 +371,7 @@ AnimateTitleCrystal: ; 10ef32
 	cp 6 + $10
 	ret z
 
-; Move all 30 parts of the crystal down by 2
+; Move all 30 parts of the liahona down by 2
 	ld c, 30
 .loop
 	ld a, [hl]
@@ -386,24 +386,24 @@ AnimateTitleCrystal: ; 10ef32
 	ret
 ; 10ef46
 
-TitleSuicuneGFX: ; 10ef46
-INCBIN "gfx/title/suicune.w128.2bpp.lz"
+TitleMoroniGFX: ; 10ef46
+INCBIN "gfx/title/moroni.w128.2bpp.lz"
 ; 10f326
 
 TitleLogoGFX: ; 10f326
 INCBIN "gfx/title/logo.w160.t4.2bpp.lz"
 ; 10fcee
 
-TitleCrystalGFX: ; 10fcee
-INCBIN "gfx/title/crystal.w48.interleave.2bpp.lz"
+TitleLiahonaGFX: ; 10fcee
+INCBIN "gfx/title/liahona.w48.interleave.2bpp.lz"
 ; 10fede
 
 TitleScreenPalettes:
 ; BG
 	RGB 00, 00, 00
-	RGB 19, 00, 00
-	RGB 15, 08, 31
-	RGB 15, 08, 31
+	RGB 20, 20, 00
+	RGB 31, 31, 00
+	RGB 31, 31, 00
 
 	RGB 00, 00, 00
 	RGB 31, 31, 31
@@ -442,9 +442,9 @@ TitleScreenPalettes:
 
 ; OBJ
 	RGB 00, 00, 00
-	RGB 10, 00, 15
-	RGB 17, 05, 22
-	RGB 19, 09, 31
+	RGB 19, 19, 00
+	RGB 25, 25, 00
+	RGB 25, 25, 00
 
 	RGB 31, 31, 31
 	RGB 00, 00, 00

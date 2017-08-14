@@ -1,7 +1,6 @@
 const_value set 2
 	const BOUNTIFULTOWN_TEACHER
 	const BOUNTIFULTOWN_FISHER
-	const BOUNTIFULTOWN_SILVER
 
 BountifulTown_MapScriptHeader:
 .MapTriggers:
@@ -24,7 +23,7 @@ BountifulTown_MapScriptHeader:
 	end
 
 .FlyPoint:
-	setflag ENGINE_FLYPOINT_NEW_BARK
+	setflag ENGINE_FLYPOINT_BOUNTIFUL
 	return
 
 BountifulTown_TeacherStopsYouTrigger1:
@@ -111,29 +110,7 @@ BountifulTownTeacherScript:
 BountifulTownFisherScript:
 	jumptextfaceplayer Text_BishopDiscoveredNewMon
 
-BountifulTownSilverScript:
-	opentext
-	writetext BountifulTownRivalText1
-	waitbutton
-	closetext
-	spriteface BOUNTIFULTOWN_SILVER, LEFT
-	opentext
-	writetext BountifulTownRivalText2
-	waitbutton
-	closetext
-	follow PLAYER, BOUNTIFULTOWN_SILVER
-	applymovement PLAYER, Movement_SilverPushesYouAway_NBT
-	stopfollow
-	pause 5
-	spriteface BOUNTIFULTOWN_SILVER, DOWN
-	pause 5
-	playsound SFX_TACKLE
-	applymovement PLAYER, Movement_SilverShovesYouOut_NBT
-	applymovement BOUNTIFULTOWN_SILVER, Movement_SilverReturnsToTheShadows_NBT
-	end
-
 BountifulTownSign:
-;	changeblock $1, $D, $10
 	jumptext BountifulTownSignText
 
 MapBountifulTownPlayersHouseSignScript:
@@ -189,7 +166,7 @@ Movement_SilverReturnsToTheShadows_NBT:
 	step_end
 
 Text_GearIsImpressive:
-	text "Wow, your #GEAR"
+	text "Wow, your #Gear"
 	line "is impressive!"
 
 	para "Did your mom get"
@@ -208,9 +185,9 @@ Text_WhatDoYouThinkYoureDoing:
 Text_ItsDangerousToGoAlone:
 	text "It's dangerous to"
 	line "go out without a"
-	cont "#MON!"
+	cont "#mon!"
 
-	para "Wild #MON"
+	para "Wild #mon"
 	line "jump out of the"
 
 	para "grass on the way"
@@ -218,7 +195,7 @@ Text_ItsDangerousToGoAlone:
 	done
 
 Text_YourMonIsAdorable:
-	text "Oh! Your #MON"
+	text "Oh! Your #mon"
 	line "is adorable!"
 	cont "I wish I had one!"
 	done
@@ -234,7 +211,7 @@ Text_TellMomIfLeaving:
 
 Text_CallMomOnGear:
 	text "Call your mom on"
-	line "your #GEAR to"
+	line "your #Gear to"
 
 	para "let her know how"
 	line "you're doing."
@@ -245,24 +222,11 @@ Text_BishopDiscoveredNewMon:
 
 	para "I hear Bishop"
 	line "discovered some"
-	cont "new #MON."
-	done
-
-BountifulTownRivalText1:
-	text "<......>"
-
-	para "So this is the"
-	line "famous BISHOP #MON"
-	cont "LAB…"
-	done
-
-BountifulTownRivalText2:
-	text "…What are you"
-	line "staring at?"
+	cont "new #mon."
 	done
 
 BountifulTownSignText:
-	text "BOUNTIFUL TOWN"
+	text "Bountiful Town"
 
 	para "The Humble Town of"
 	line "Plenty"
@@ -273,11 +237,12 @@ PlayersHouseSignText:
 	done
 
 BishopsLabSignText:
-	text "BISHOP #MON LAB"
+	text "Johnson"
+	line "#mon Lab"
 	done
 
 BishopsHouseSignText:
-	text "BISHOP'S HOUSE"
+	text "The Johnson Home"
 	done
 
 BountifulTown_MapEventHeader:: db 0, 0
@@ -301,5 +266,3 @@ BountifulTown_MapEventHeader:: db 0, 0
 .ObjectEvents: db 3
 	person_event SPRITE_TEACHER, 5, 26, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 1, -1, -1, 0, PERSONTYPE_SCRIPT, 0, BountifulTownTeacherScript, -1
 	person_event SPRITE_FISHER, 14, 15, SPRITEMOVEDATA_WALK_UP_DOWN, 1, 0, -1, -1, (1 << 3) | PAL_OW_GREEN, PERSONTYPE_SCRIPT, 0, BountifulTownFisherScript, -1
-	person_event SPRITE_SILVER, 22, 11, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, BountifulTownSilverScript, EVENT_RIVAL_NEW_BARK_TOWN
-

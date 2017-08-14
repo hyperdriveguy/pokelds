@@ -37,7 +37,7 @@ CooltrainerFScript_0x188bee:
 	jumptextfaceplayer UnknownText_0x188d0c
 
 UnknownText_0x188bf1:
-	text "A #MON CENTER"
+	text "A #mon CENTER"
 	line "near a cave?"
 
 	para "That's mighty"
@@ -86,8 +86,8 @@ Route10PokeCenter1F_MapEventHeader:
 
 .Warps:
 	db 3
-	warp_def $7, $3, 1, ROUTE_10_NORTH
-	warp_def $7, $4, 1, ROUTE_10_NORTH
+	warp_def $7, $3, 1, ROUTE_10_NoRTH
+	warp_def $7, $4, 1, ROUTE_10_NoRTH
 	warp_def $7, $0, 1, POKECENTER_2F
 
 .XYTriggers:

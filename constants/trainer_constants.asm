@@ -1,7 +1,7 @@
 ; trainer groups
 	enum_start
 CHRIS EQU __enum__
-	trainerclass TRAINER_NONE ; 0
+	trainerclass TRAINER_NoNE ; 0
 	const PHONECONTACT_MOM
 	const PHONECONTACT_BIKESHOP
 	const PHONECONTACT_BILL
@@ -51,7 +51,7 @@ KRIS EQU __enum__
 	const CAL2
 	const CAL3
 
-	trainerclass BRUNO ; d
+	trainerclass BRUNo ; d
 
 	trainerclass KAREN ; e
 
@@ -146,7 +146,7 @@ KRIS EQU __enum__
 	const CONNIE1
 	const LINDA
 	const LAURA
-	const SHANNON
+	const SHANNoN
 	const MICHELLE
 	const DANA1
 	const ELLEN
@@ -284,7 +284,7 @@ KRIS EQU __enum__
 	trainerclass FISHER ; 25
 	const JUSTIN
 	const RALPH1
-	const ARNOLD
+	const ARNoLD
 	const KYLE
 	const HENRY
 	const MARVIN
@@ -379,7 +379,7 @@ KRIS EQU __enum__
 	const SHAWN
 	const TERU
 	const RUSS
-	const NORTON
+	const NoRTON
 	const HUGH
 	const MARKUS
 
@@ -403,7 +403,7 @@ KRIS EQU __enum__
 	const BAILEY
 	const ANTHONY3
 	const TIM
-	const NOLAND
+	const NoLAND
 	const SIDNEY
 	const KENNY
 	const JIM
@@ -454,7 +454,7 @@ KRIS EQU __enum__
 	const YOSHI
 	const KENJI2
 	const LAO
-	const NOB
+	const NoB
 	const KIYO
 	const LUNG
 	const KENJI3
@@ -468,7 +468,7 @@ KRIS EQU __enum__
 	const HERMAN
 	const FIDEL
 	const GREG
-	const NORMAN
+	const NoRMAN
 	const MARK
 	const PHIL
 	const RICHARD
@@ -574,7 +574,7 @@ KRIS EQU __enum__
 	const REX
 	const ALLAN
 
-	trainerclass KIMONO_GIRL ; 3c
+	trainerclass KIMONo_GIRL ; 3c
 	const NAOKO1
 	const NAOKO2
 	const SAYO
@@ -622,7 +622,7 @@ KRIS EQU __enum__
 NUM_TRAINER_CLASSES EQU __enum__
 
 	const_def
-	const       NO_AI
+	const       No_AI
 const_value = 0
 	shift_const AI_BASIC
 	shift_const AI_SETUP

@@ -56,7 +56,7 @@ ChuckScript_0x9d60f:
 	iftrue .AlreadyGotTM
 	setevent EVENT_BEAT_BLACKBELT_YOSHI
 	setevent EVENT_BEAT_BLACKBELT_LAO
-	setevent EVENT_BEAT_BLACKBELT_NOB
+	setevent EVENT_BEAT_BLACKBELT_NoB
 	setevent EVENT_BEAT_BLACKBELT_LUNG
 	writetext ChuckExplainBadgeText
 	buttonsound
@@ -109,7 +109,7 @@ TrainerBlackbeltLao:
 	end
 
 TrainerBlackbeltNob:
-	trainer EVENT_BEAT_BLACKBELT_NOB, BLACKBELT_T, NOB, BlackbeltNobSeenText, BlackbeltNobBeatenText, 0, .Script
+	trainer EVENT_BEAT_BLACKBELT_NoB, BLACKBELT_T, NoB, BlackbeltNobSeenText, BlackbeltNobBeatenText, 0, .Script
 
 .Script:
 	end_if_just_battled
@@ -158,7 +158,7 @@ ChuckIntroText1:
 	para "Let me tell you,"
 	line "I'm tough!"
 
-	para "My #MON will"
+	para "My #mon will"
 	line "crush stones and"
 	cont "shatter bones!"
 
@@ -179,7 +179,7 @@ ChuckIntroText3:
 	para "What?"
 	line "It has nothing to"
 
-	para "do with #MON?"
+	para "do with #mon?"
 	line "That's true!"
 
 	para "Come on. We shall"
@@ -202,13 +202,13 @@ GetStormBadgeText:
 
 ChuckExplainBadgeText:
 	text "STORMBADGE makes"
-	line "all #MON up to"
+	line "all #mon up to"
 
 	para "L70 obey, even"
 	line "traded ones."
 
 	para "It also lets your"
-	line "#MON use FLY"
+	line "#mon use FLY"
 
 	para "when you're not in"
 	line "a battle."
@@ -241,7 +241,7 @@ ChuckAfterText:
 	done
 
 BlackbeltYoshiSeenText:
-	text "My #MON and I"
+	text "My #mon and I"
 	line "are bound togeth-"
 	cont "er by friendship."
 
@@ -256,7 +256,7 @@ BlackbeltYoshiBeatenText:
 BlackbeltYoshiAfterText:
 	text "You seem to have a"
 	line "strong bond with"
-	cont "your #MON too!"
+	cont "your #mon too!"
 	done
 
 BlackbeltLaoSeenText:
@@ -269,7 +269,7 @@ BlackbeltLaoBeatenText:
 	done
 
 BlackbeltLaoAfterText:
-	text "Fighting #MON"
+	text "Fighting #mon"
 	line "are afraid of psy-"
 	cont "chics…"
 	done
@@ -292,7 +292,7 @@ BlackbeltNobAfterText:
 BlackbeltLungSeenText:
 	text "My raging fists"
 	line "will shatter your"
-	cont "#MON!"
+	cont "#mon!"
 	done
 
 BlackbeltLungBeatenText:
@@ -300,7 +300,7 @@ BlackbeltLungBeatenText:
 	done
 
 BlackbeltLungAfterText:
-	text "My #MON lost…"
+	text "My #mon lost…"
 	line "My… my pride is"
 	cont "shattered…"
 	done

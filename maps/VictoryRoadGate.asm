@@ -84,12 +84,12 @@ UnknownText_0x9baf1:
 	line "MT.SILVER."
 
 	para "You'll see scary-"
-	line "strong #MON out"
+	line "strong #mon out"
 	cont "there."
 	done
 
 UnknownText_0x9bb37:
-	text "Off to the #MON"
+	text "Off to the #mon"
 	line "LEAGUE, are you?"
 
 	para "The ELITE FOUR are"
@@ -125,4 +125,4 @@ VictoryRoadGate_MapEventHeader:
 	db 3
 	person_event SPRITE_OFFICER, 11, 8, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, OfficerScript_0x9ba03, -1
 	person_event SPRITE_BLACK_BELT, 5, 7, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, BlackBeltScript_0x9ba21, EVENT_OPENED_MT_SILVER
-	person_event SPRITE_BLACK_BELT, 5, 12, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, BlackBeltScript_0x9ba24, EVENT_FOUGHT_SNORLAX
+	person_event SPRITE_BLACK_BELT, 5, 12, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, BlackBeltScript_0x9ba24, EVENT_FOUGHT_SNoRLAX

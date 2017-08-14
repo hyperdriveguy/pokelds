@@ -8,7 +8,7 @@
 	const LETS_ALL_SING          ; $06
 	const ROCKET_RADIO           ; $07
 	const POKE_FLUTE_RADIO       ; $08
-	const UNOWN_RADIO            ; $09
+	const UNoWN_RADIO            ; $09
 	const EVOLUTION_RADIO        ; $0a
 	const OAKS_POKEMON_TALK_2    ; $0b
 	const OAKS_POKEMON_TALK_3    ; $0c
@@ -94,7 +94,7 @@
 	const MAPRADIO_POKEDEX_SHOW
 	const MAPRADIO_PKMN_MUSIC
 	const MAPRADIO_LUCKY_CHANNEL
-	const MAPRADIO_UNOWN
+	const MAPRADIO_UNoWN
 	const MAPRADIO_PLACES_PEOPLE
 	const MAPRADIO_LETS_ALL_SING
 	const MAPRADIO_ROCKET

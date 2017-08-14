@@ -39,7 +39,7 @@ UnknownText_0x73592:
 	line "job seriously."
 
 	para "Hey! You have a"
-	line "#DEX."
+	line "#Dex."
 
 	para "OK. You can go"
 	line "through."

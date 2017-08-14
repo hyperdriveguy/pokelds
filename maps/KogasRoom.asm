@@ -107,7 +107,7 @@ UnknownText_0x180793:
 
 	para "Fwahahahaha!"
 
-	para "#MON is not"
+	para "#mon is not"
 	line "merely about brute"
 
 	para "force--you shall"
@@ -142,8 +142,8 @@ KogasRoom_MapEventHeader:
 	db 4
 	warp_def $11, $4, 2, WILLS_ROOM
 	warp_def $11, $5, 3, WILLS_ROOM
-	warp_def $2, $4, 1, BRUNOS_ROOM
-	warp_def $2, $5, 2, BRUNOS_ROOM
+	warp_def $2, $4, 1, BRUNoS_ROOM
+	warp_def $2, $5, 2, BRUNoS_ROOM
 
 .XYTriggers:
 	db 0

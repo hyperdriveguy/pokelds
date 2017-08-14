@@ -46,12 +46,12 @@ MainMenu: ; 49cdc
 ; 49d20
 
 .Strings: ; 49d24
-	db "CONTINUE@"
-	db "NEW GAME@"
-	db "OPTION@"
-	db "MYSTERY GIFT@"
-	db "MOBILE@"
-	db "MOBILE STUDIUM@"
+	db "Continue@"
+	db "New Game@"
+	db "Options@"
+	db "Mystery Gift@"
+	db "Mobile@"
+	db "Mobile Stadium@"
 
 .Jumptable: ; 0x49d60
 
@@ -230,7 +230,7 @@ MainMenu_PrintCurrentTimeAndDay: ; 49e09
 	ld hl, Options
 	ld a, [hl]
 	push af
-	set NO_TEXT_SCROLL, [hl]
+	set No_TEXT_SCROLL, [hl]
 	call .PlaceTime
 	pop af
 	ld [Options], a
@@ -292,7 +292,7 @@ MainMenu_PrintCurrentTimeAndDay: ; 49e09
 ; 49e7f
 
 .TimeNotSet: ; 49e7f
-	db "TIME NOT SET@"
+	db "Time not set@"
 ; 49e8c
 
 .UnusedText: ; 49e8c
@@ -318,15 +318,15 @@ MainMenu_PrintCurrentTimeAndDay: ; 49e09
 ; 49ea8
 
 .Days:
-	db "SUN@"
-	db "MON@"
-	db "TUES@"
-	db "WEDNES@"
-	db "THURS@"
-	db "FRI@"
-	db "SATUR@"
+	db "Sun@"
+	db "Mon@"
+	db "Tues@"
+	db "Wednes@"
+	db "Thurs@"
+	db "Fri@"
+	db "Satur@"
 .Day:
-	db "DAY@"
+	db "day@"
 ; 49ed0
 
 Function49ed0: ; 49ed0

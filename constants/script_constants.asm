@@ -17,7 +17,7 @@ LAST_TALKED EQU -2
 	const VAR_WEEKDAY          ; 0b
 	const VAR_MAPGROUP         ; 0c
 	const VAR_MAPNUMBER        ; 0d
-	const VAR_UNOWNCOUNT       ; 0e
+	const VAR_UNoWNCOUNT       ; 0e
 	const VAR_ROOFPALETTE      ; 0f
 	const VAR_BOXSPACE         ; 10
 	const VAR_CONTESTMINUTES   ; 11
@@ -38,7 +38,7 @@ RETVAR_EXECUTE EQU (2 << 6)
 
 const_value SET -1
 	const PLAYEREVENT_MAPSCRIPT
-	const PLAYEREVENT_NONE
+	const PLAYEREVENT_NoNE
 	const PLAYEREVENT_SEENBYTRAINER
 	const PLAYEREVENT_TALKTOTRAINER
 	const PLAYEREVENT_ITEMBALL

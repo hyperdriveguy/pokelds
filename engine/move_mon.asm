@@ -336,7 +336,7 @@ endr
 	and $f
 	jr nz, .done
 	ld a, [CurPartySpecies]
-	cp UNOWN
+	cp UNoWN
 	jr nz, .done
 	ld hl, PartyMon1DVs
 	ld a, [PartyCount]
@@ -447,7 +447,7 @@ AddTempmonToParty: ; da96
 .egg
 
 	ld a, [CurPartySpecies]
-	cp UNOWN
+	cp UNoWN
 	jr nz, .done
 	ld hl, PartyMon1DVs
 	ld a, [PartyCount]
@@ -1040,7 +1040,7 @@ SentPkmnIntoBox: ; de6e
 	dec a
 	call SetSeenAndCaughtMon
 	ld a, [CurPartySpecies]
-	cp UNOWN
+	cp UNoWN
 	jr nz, .not_unown
 	ld hl, sBoxMon1DVs
 	predef GetUnownLetter

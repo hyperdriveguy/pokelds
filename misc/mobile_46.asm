@@ -4743,11 +4743,11 @@ Function11a235: ; 11a235
 ; 11a2cf
 
 String_11a2cf: ; 11a2cf
-	db "YES@"
+	db "Yes@"
 ; 11a2d3
 
 String_11a2d3: ; 11a2d3
-	db "NO@"
+	db "No@"
 ; 11a2d6
 
 MenuDataHeader_11a2d6: ; 11a2d6
@@ -5658,7 +5658,7 @@ Text_BattleRoomVisitLimit: ; 0x11aacc
 ; 0x11aaf0
 
 Text_PartyMonTopsThisLevel: ; 0x11aaf0
-	text "A party #MON"
+	text "A party #mon"
 	line "tops this level."
 	done
 ; 0x11ab0f
@@ -5681,7 +5681,7 @@ Text_CancelBattleRoomChallenge: ; 0x11ab4a
 
 Text_ExitGymLeaderHonorRoll: ; 0x11ab6e
 	text "Exit GYM LEADER"
-	line "HONOR ROLL?"
+	line "HONoR ROLL?"
 	done
 ; 0x11ab8b
 

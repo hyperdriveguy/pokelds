@@ -362,7 +362,7 @@ PlacePartyMonTMHMCompatibility: ; 501e0
 ; 50226
 
 .string_not_able ; 50226
-	db "NOT ABLE@"
+	db "NoT ABLE@"
 ; 5022f
 
 
@@ -446,7 +446,7 @@ PlacePartyMonEvoStoneCompatibility: ; 5022f
 	db "ABLE@"
 ; 502a8
 .string_not_able ; 502a8
-	db "NOT ABLE@"
+	db "NoT ABLE@"
 ; 502b1
 
 
@@ -499,7 +499,7 @@ PlacePartyMonGender: ; 502b1
 ; 502fe
 
 .unknown ; 502fe
-	db "…UNKNOWN@"
+	db "…UNKNoWN@"
 ; 50307
 
 
@@ -816,7 +816,7 @@ PartyMenuStrings: ; 0x504d2
 	dw ToWhichPKMNString
 
 ChooseAMonString: ; 0x504e4
-	db "Choose a #MON.@"
+	db "Choose a #mon.@"
 UseOnWhichPKMNString: ; 0x504f3
 	db "Use on which <PK><MN>?@"
 WhichPKMNString: ; 0x50504
@@ -931,7 +931,7 @@ PrintPartyMenuActionText: ; 50566
 	ld l, a
 	ld a, [Options]
 	push af
-	set NO_TEXT_SCROLL, a
+	set No_TEXT_SCROLL, a
 	ld [Options], a
 	call PrintText
 	pop af

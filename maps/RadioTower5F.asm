@@ -114,7 +114,7 @@ RadioTower5FRocketBossTrigger:
 	clearevent EVENT_GOLDENROD_CITY_CIVILIANS
 	clearevent EVENT_RADIO_TOWER_CIVILIANS_AFTER
 	setevent EVENT_BLACKTHORN_CITY_SUPER_NERD_BLOCKS_GYM
-	clearevent EVENT_BLACKTHORN_CITY_SUPER_NERD_DOES_NOT_BLOCK_GYM
+	clearevent EVENT_BLACKTHORN_CITY_SUPER_NERD_DOES_NoT_BLOCK_GYM
 	special PlayMapMusic
 	disappear RADIOTOWER5F_DIRECTOR
 	moveperson RADIOTOWER5F_DIRECTOR, $c, $0
@@ -331,7 +331,7 @@ RadioTower5FDirectorThankYouText:
 	para "Your courageous"
 	line "actions have saved"
 
-	para "#MON nation-"
+	para "#mon nation-"
 	line "wide."
 
 	para "I know it's not"
@@ -356,7 +356,7 @@ RadioTower5FDirectorDescribeClearBellText:
 	cont "construction."
 
 	para "I heard that all"
-	line "sorts of #MON"
+	line "sorts of #mon"
 
 	para "lived in GOLDENROD"
 	line "in the past."
@@ -395,13 +395,13 @@ RadioTower5FDirectorText:
 	line "<PLAY_G>!"
 
 	para "You know, I love"
-	line "#MON."
+	line "#mon."
 
 	para "I built this RADIO"
 	line "TOWER so I could"
 
 	para "express my love"
-	line "of #MON."
+	line "of #mon."
 
 	para "It would be nice"
 	line "if people enjoyed"

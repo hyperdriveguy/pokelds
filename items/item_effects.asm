@@ -230,7 +230,7 @@ ParkBall: ; e8a2
 	call nz, ReturnToBattle_UseBall
 
 	ld hl, Options
-	res NO_TEXT_SCROLL, [hl]
+	res No_TEXT_SCROLL, [hl]
 	ld hl, UsedItemText
 	call PrintText
 
@@ -1095,19 +1095,19 @@ LevelBallMultiplier:
 ; They are not used in gen 2, and are dummied out.
 
 Text_RBY_CatchMarowak: ; 0xedab
-	; It dodged the thrown BALL! This #MON can't be caught!
+	; It dodged the thrown BALL! This #mon can't be caught!
 	text_jump UnknownText_0x1c5a5a
 	db "@"
 ; 0xedb0
 
 Text_RBY_NoShake: ; 0xedb0
-	; You missed the #MON!
+	; You missed the #mon!
 	text_jump UnknownText_0x1c5a90
 	db "@"
 ; 0xedb5
 
 Text_NoShake: ; 0xedb5
-	; Oh no! The #MON broke free!
+	; Oh no! The #mon broke free!
 	text_jump UnknownText_0x1c5aa6
 	db "@"
 ; 0xedba
@@ -1159,7 +1159,7 @@ Text_SentToBillsPC: ; 0xedeb
 ; 0xedf0
 
 Text_AddedToPokedex: ; 0xedf0
-	; 's data was newly added to the #DEX.@ @
+	; 's data was newly added to the #Dex.@ @
 	text_jump UnknownText_0x1c5b53
 	db "@"
 ; 0xedf5
@@ -2244,7 +2244,7 @@ Softboiled_MilkDrinkFunction: ; f3df (3:73df)
 ; f44a (3:744a)
 
 .Text_CantBeUsed: ; 0xf44a
-	; That can't be used on this #MON.
+	; That can't be used on this #mon.
 	text_jump UnknownText_0x1c5bac
 	db "@"
 ; 0xf44f
@@ -2458,7 +2458,7 @@ PokeFlute: ; f50c
 ; 0xf571
 
 .AllSleepingMonWokeUp: ; 0xf571
-	; All sleeping #MON woke up.
+	; All sleeping #mon woke up.
 	text_jump UnknownText_0x1c5c28
 	db "@"
 ; 0xf576
@@ -3094,7 +3094,7 @@ CantGetOnYourBikeText: ; 0xf833
 ; 0xf838
 
 Ball_BoxIsFullText: ; 0xf838
-	; The #MON BOX is full. That can't be used now.
+	; The #mon BOX is full. That can't be used now.
 	text_jump UnknownText_0x1c5e3a
 	db "@"
 ; 0xf83d

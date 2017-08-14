@@ -427,7 +427,7 @@ LoadCallerScript: ; 9020d (24:420d)
 ; 90233 (24:4233)
 
 WrongNumber: ; 90233
-	db TRAINER_NONE, PHONE_00
+	db TRAINER_NoNE, PHONE_00
 	dba .script
 .script
 	writetext .text
@@ -533,7 +533,7 @@ Phone_CallerTextboxWithName2: ; 902c9
 
 
 Phone_NoSignal: ; 902e3 (24:42e3)
-	ld de, SFX_NO_SIGNAL
+	ld de, SFX_No_SIGNAL
 	call PlaySFX
 	jr Phone_CallEnd
 
@@ -770,17 +770,17 @@ phone: MACRO
 	dba \7 ; script 2
 ENDM
 
-	phone TRAINER_NONE, PHONE_00,              N_A,                       0, UnusedPhoneScript,   0, UnusedPhoneScript
-	phone TRAINER_NONE, PHONECONTACT_MOM,      KRISS_HOUSE_1F,            7, MomPhoneScript,      0, UnusedPhoneScript
-	phone TRAINER_NONE, PHONECONTACT_BIKESHOP, OAKS_LAB,                  0, UnusedPhoneScript,   0, UnusedPhoneScript
-	phone TRAINER_NONE, PHONECONTACT_BILL,     N_A,                       7, BillPhoneScript1,    0, BillPhoneScript2
-	phone TRAINER_NONE, PHONECONTACT_BISHOP,      BISHOPS_LAB,                  7, BishopPhoneScript1,     0, BishopPhoneScript2
+	phone TRAINER_NoNE, PHONE_00,              N_A,                       0, UnusedPhoneScript,   0, UnusedPhoneScript
+	phone TRAINER_NoNE, PHONECONTACT_MOM,      KRISS_HOUSE_1F,            7, MomPhoneScript,      0, UnusedPhoneScript
+	phone TRAINER_NoNE, PHONECONTACT_BIKESHOP, OAKS_LAB,                  0, UnusedPhoneScript,   0, UnusedPhoneScript
+	phone TRAINER_NoNE, PHONECONTACT_BILL,     N_A,                       7, BillPhoneScript1,    0, BillPhoneScript2
+	phone TRAINER_NoNE, PHONECONTACT_BISHOP,      BISHOPS_LAB,                  7, BishopPhoneScript1,     0, BishopPhoneScript2
 	phone SCHOOLBOY,    JACK1,                 NATIONAL_PARK,             7, JackPhoneScript1,    7, JackPhoneScript2
 	phone POKEFANF,     BEVERLY1,              NATIONAL_PARK,             7, BeverlyPhoneScript1, 7, BeverlyPhoneScript2
 	phone SAILOR,       HUEY1,                 OLIVINE_LIGHTHOUSE_2F,     7, HueyPhoneScript1,    7, HueyPhoneScript2
-	phone TRAINER_NONE, PHONE_00,              N_A,                       0, UnusedPhoneScript,   0, UnusedPhoneScript
-	phone TRAINER_NONE, PHONE_00,              N_A,                       0, UnusedPhoneScript,   0, UnusedPhoneScript
-	phone TRAINER_NONE, PHONE_00,              N_A,                       0, UnusedPhoneScript,   0, UnusedPhoneScript
+	phone TRAINER_NoNE, PHONE_00,              N_A,                       0, UnusedPhoneScript,   0, UnusedPhoneScript
+	phone TRAINER_NoNE, PHONE_00,              N_A,                       0, UnusedPhoneScript,   0, UnusedPhoneScript
+	phone TRAINER_NoNE, PHONE_00,              N_A,                       0, UnusedPhoneScript,   0, UnusedPhoneScript
 	phone COOLTRAINERM, GAVEN3,                ROUTE_26,                  7, GavenPhoneScript1,   7, GavenPhoneScript2
 	phone COOLTRAINERF, BETH1,                 ROUTE_26,                  7, BethPhoneScript1,    7, BethPhoneScript2
 	phone BIRD_KEEPER,  JOSE2,                 ROUTE_27,                  7, JosePhoneScript1,    7, JosePhoneScript2
@@ -795,7 +795,7 @@ ENDM
 	phone JUGGLER,      IRWIN1,                ROUTE_35,                  7, IrwinPhoneScript1,   7, IrwinPhoneScript2
 	phone BUG_CATCHER,  ARNIE1,                ROUTE_35,                  7, ArniePhoneScript1,   7, ArniePhoneScript2
 	phone SCHOOLBOY,    ALAN1,                 ROUTE_36,                  7, AlanPhoneScript1,    7, AlanPhoneScript2
-	phone TRAINER_NONE, PHONE_00,              N_A,                       0, UnusedPhoneScript,   0, UnusedPhoneScript
+	phone TRAINER_NoNE, PHONE_00,              N_A,                       0, UnusedPhoneScript,   0, UnusedPhoneScript
 	phone LASS,         DANA1,                 ROUTE_38,                  7, DanaPhoneScript1,    7, DanaPhoneScript2
 	phone SCHOOLBOY,    CHAD1,                 ROUTE_38,                  7, ChadPhoneScript1,    7, ChadPhoneScript2
 	phone POKEFANM,     DEREK1,                ROUTE_39,                  7, DerekPhoneScript1,   7, DerekPhoneScript2
@@ -807,7 +807,7 @@ ENDM
 	phone BLACKBELT_T,  KENJI3,                ROUTE_45,                  7, KenjiPhoneScript1,   7, KenjiPhoneScript2
 	phone HIKER,        PARRY1,                ROUTE_45,                  7, ParryPhoneScript1,   7, ParryPhoneScript2
 	phone PICNICKER,    ERIN1,                 ROUTE_46,                  7, ErinPhoneScript1,    7, ErinPhoneScript2
-	phone TRAINER_NONE, PHONECONTACT_BUENA,    GOLDENROD_DEPT_STORE_ROOF, 7, BuenaPhoneScript1,   7, BuenaPhoneScript2
+	phone TRAINER_NoNE, PHONECONTACT_BUENA,    GOLDENROD_DEPT_STORE_ROOF, 7, BuenaPhoneScript1,   7, BuenaPhoneScript2
 ; 90627
 
 SpecialPhoneCallList: ; 90627

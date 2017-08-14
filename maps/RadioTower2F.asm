@@ -230,7 +230,7 @@ UnknownScript_0x5d86b:
 	closetext
 	checkcellnum PHONE_BUENA
 	iftrue UnknownScript_0x5d87b
-	checkevent EVENT_BUENA_OFFERED_HER_PHONE_NUMBER_NO_BLUE_CARD
+	checkevent EVENT_BUENA_OFFERED_HER_PHONE_NUMBER_No_BLUE_CARD
 	iftrue UnknownScript_0x5d8cc
 UnknownScript_0x5d87b:
 	spriteface RADIOTOWER2F_BUENA, RIGHT
@@ -242,7 +242,7 @@ UnknownScript_0x5d87f:
 	closetext
 	checkcellnum PHONE_BUENA
 	iftrue UnknownScript_0x5d88f
-	checkevent EVENT_BUENA_OFFERED_HER_PHONE_NUMBER_NO_BLUE_CARD
+	checkevent EVENT_BUENA_OFFERED_HER_PHONE_NUMBER_No_BLUE_CARD
 	iftrue UnknownScript_0x5d8cc
 UnknownScript_0x5d88f:
 	spriteface RADIOTOWER2F_BUENA, RIGHT
@@ -267,10 +267,10 @@ UnknownScript_0x5d8a4:
 	pause 15
 	spriteface PLAYER, UP
 	pause 15
-	checkevent EVENT_BUENA_OFFERED_HER_PHONE_NUMBER_NO_BLUE_CARD
+	checkevent EVENT_BUENA_OFFERED_HER_PHONE_NUMBER_No_BLUE_CARD
 	iftrue UnknownScript_0x5d8cc
 	showemote EMOTE_SHOCK, RADIOTOWER2F_BUENA, 15
-	setevent EVENT_BUENA_OFFERED_HER_PHONE_NUMBER_NO_BLUE_CARD
+	setevent EVENT_BUENA_OFFERED_HER_PHONE_NUMBER_No_BLUE_CARD
 	setevent EVENT_BUENA_OFFERED_HER_PHONE_NUMBER
 	opentext
 	writetext UnknownText_0x5e1ee
@@ -352,7 +352,7 @@ UnknownText_0x5d924:
 UnknownText_0x5d956:
 	text "Lullabies on the"
 	line "radio may make"
-	cont "#MON sleep."
+	cont "#mon sleep."
 	done
 
 UnknownText_0x5d983:
@@ -411,7 +411,7 @@ UnknownText_0x5db07:
 GruntM5SeenText:
 	text "We're TEAM ROCKET,"
 	line "the exploiters of"
-	cont "#MON!"
+	cont "#mon!"
 
 	para "We love being"
 	line "evil! Scared?"
@@ -698,7 +698,7 @@ UnknownText_0x5e426:
 	done
 
 UnknownText_0x5e430:
-	text "PROF.OAK'S #MON"
+	text "PROF.OAK'S #mon"
 	line "TALK"
 
 	para "The Hottest Show"
@@ -707,7 +707,7 @@ UnknownText_0x5e430:
 
 UnknownText_0x5e463:
 	text "Anywhere, Anytime"
-	line "#MON Radio"
+	line "#mon Radio"
 	done
 
 RadioTower2F_MapEventHeader:

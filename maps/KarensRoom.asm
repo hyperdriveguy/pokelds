@@ -93,7 +93,7 @@ UnknownText_0x180c27:
 	line "How amusing."
 
 	para "I love dark-type"
-	line "#MON."
+	line "#mon."
 
 	para "I find their wild,"
 	line "tough image to be"
@@ -115,9 +115,9 @@ UnknownText_0x180cf8:
 	done
 
 UnknownText_0x180d29:
-	text "Strong #MON."
+	text "Strong #mon."
 
-	para "Weak #MON."
+	para "Weak #mon."
 
 	para "That is only the"
 	line "selfish perception"
@@ -143,8 +143,8 @@ KarensRoom_MapEventHeader:
 
 .Warps:
 	db 4
-	warp_def $11, $4, 3, BRUNOS_ROOM
-	warp_def $11, $5, 4, BRUNOS_ROOM
+	warp_def $11, $4, 3, BRUNoS_ROOM
+	warp_def $11, $5, 4, BRUNoS_ROOM
 	warp_def $2, $4, 1, LANCES_ROOM
 	warp_def $2, $5, 2, LANCES_ROOM
 

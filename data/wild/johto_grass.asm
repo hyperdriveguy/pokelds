@@ -347,9 +347,9 @@
 	db 13, HOOTHOOT
 	db 14, SPINARAK
 	db 15, HOOTHOOT
-	db 10, VENONAT
-	db 12, VENONAT
-	db 12, VENONAT
+	db 10, VENoNAT
+	db 12, VENoNAT
+	db 12, VENoNAT
 
 	map RUINS_OF_ALPH_OUTSIDE
 	db 4 percent, 4 percent, 4 percent ; encounter rates: morn/day/nite
@@ -381,29 +381,29 @@
 	map RUINS_OF_ALPH_INNER_CHAMBER
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
-	db 5, UNOWN
-	db 5, UNOWN
-	db 5, UNOWN
-	db 5, UNOWN
-	db 5, UNOWN
-	db 5, UNOWN
-	db 5, UNOWN
+	db 5, UNoWN
+	db 5, UNoWN
+	db 5, UNoWN
+	db 5, UNoWN
+	db 5, UNoWN
+	db 5, UNoWN
+	db 5, UNoWN
 	; day
-	db 5, UNOWN
-	db 5, UNOWN
-	db 5, UNOWN
-	db 5, UNOWN
-	db 5, UNOWN
-	db 5, UNOWN
-	db 5, UNOWN
+	db 5, UNoWN
+	db 5, UNoWN
+	db 5, UNoWN
+	db 5, UNoWN
+	db 5, UNoWN
+	db 5, UNoWN
+	db 5, UNoWN
 	; nite
-	db 5, UNOWN
-	db 5, UNOWN
-	db 5, UNOWN
-	db 5, UNOWN
-	db 5, UNOWN
-	db 5, UNOWN
-	db 5, UNOWN
+	db 5, UNoWN
+	db 5, UNoWN
+	db 5, UNoWN
+	db 5, UNoWN
+	db 5, UNoWN
+	db 5, UNoWN
+	db 5, UNoWN
 
 	map UNION_CAVE_1F
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
@@ -560,7 +560,7 @@
 	db 6, PARAS
 	; nite
 	db 5, ODDISH
-	db 5, VENONAT
+	db 5, VENoNAT
 	db 7, ODDISH
 	db 7, PSYDUCK
 	db 7, HOOTHOOT
@@ -1464,7 +1464,7 @@ ENDC
 	db 14, STANTLER
 	db 15, HOOTHOOT
 	db 16, STANTLER
-	db 15, NOCTOWL
+	db 15, NoCTOWL
 	db 15, ARIADOS
 	db 15, ARIADOS
 
@@ -1490,7 +1490,7 @@ ENDC
 	db 16, MEOWTH
 	db 16, RATICATE
 	db 16, MAGNEMITE
-	db 16, NOCTOWL
+	db 16, NoCTOWL
 	db 16, MEOWTH
 	db 16, MEOWTH
 	db 16, MEOWTH
@@ -1517,7 +1517,7 @@ ENDC
 	db 16, MEOWTH
 	db 16, RATICATE
 	db 16, MAGNEMITE
-	db 16, NOCTOWL
+	db 16, NoCTOWL
 	db 18, MEOWTH
 	db 18, MEOWTH
 	db 18, MEOWTH
@@ -1568,13 +1568,13 @@ ENDC
 	db 17, FURRET
 	db 17, FURRET
 	; nite
-	db 15, VENONAT
-	db 16, NOCTOWL
+	db 15, VENoNAT
+	db 16, NoCTOWL
 	db 16, RATICATE
-	db 17, VENONAT
+	db 17, VENoNAT
 	db 17, RATICATE
-	db 17, VENOMOTH
-	db 17, VENOMOTH
+	db 17, VENoMOTH
+	db 17, VENoMOTH
 
 	map ROUTE_44
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite

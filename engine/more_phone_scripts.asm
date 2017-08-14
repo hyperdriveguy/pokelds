@@ -1221,7 +1221,7 @@ UnknownScript_0xa0840:
 UnknownScript_0xa0848:
 	checkevent EVENT_OPENED_MT_SILVER
 	iftrue UnknownScript_0xa08e0
-	checkevent EVENT_FOUGHT_SNORLAX
+	checkevent EVENT_FOUGHT_SNoRLAX
 	iftrue UnknownScript_0xa08d8
 	checkevent EVENT_GOT_PASS_FROM_COPYCAT
 	iftrue UnknownScript_0xa08d0
@@ -1656,5 +1656,5 @@ UnknownScript_0xa0b04:
 BikeShopPhoneScript:
 	farwritetext UnknownText_0x174000
 	clearflag ENGINE_BIKE_SHOP_CALL_ENABLED
-	specialphonecall SPECIALCALL_NONE
+	specialphonecall SPECIALCALL_NoNE
 	end

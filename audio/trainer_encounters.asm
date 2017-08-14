@@ -82,7 +82,7 @@ TrainerEncounterMusic: ; e9027
 	db MUSIC_SAGE_ENCOUNTER			; medium
 	db MUSIC_HIKER_ENCOUNTER		; boarder
 	db MUSIC_HIKER_ENCOUNTER		; pokefanm
-	db MUSIC_KIMONO_ENCOUNTER		; kimono_girl
+	db MUSIC_KIMONo_ENCOUNTER		; kimono_girl
 	db MUSIC_LASS_ENCOUNTER			; twins
 	db MUSIC_BEAUTY_ENCOUNTER		; pokefanf
 	db MUSIC_HIKER_ENCOUNTER		; red

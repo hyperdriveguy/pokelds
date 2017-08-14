@@ -12,7 +12,7 @@ AnimateMon_Slow_Normal: ; d0000
 	ret
 
 .wild
-	ld e, ANIM_MON_NORMAL
+	ld e, ANIM_MON_NoRMAL
 	ld d, $0
 	call AnimateFrontpic
 	ret
@@ -497,7 +497,7 @@ PokeAnim_StopWaitAnim: ; d02e4
 
 PokeAnim_IsUnown: ; d02ec
 	ld a, [wPokeAnimSpecies]
-	cp UNOWN
+	cp UNoWN
 	ret
 ; d02f2
 

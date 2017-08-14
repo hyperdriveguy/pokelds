@@ -257,7 +257,7 @@ GotBishopsNumberText:
 	done
 
 BishopHealHereText:
-	text "If your #MON is"
+	text "If your #mon is"
 	line "hurt, you should"
 
 	para "heal it with this"
@@ -315,7 +315,7 @@ ReceivedStarterText:
 
 BishopPokeBallText:
 	text "It contains a"
-	line "#MON caught by"
+	line "#mon caught by"
 	cont "Bishop."
 	done
 

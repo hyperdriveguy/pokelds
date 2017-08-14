@@ -112,7 +112,7 @@ NidoranMEggMoves:
 
 VulpixEggMoves:
 	db FAINT_ATTACK
-	db HYPNOSIS
+	db HYPNoSIS
 	db FLAIL
 	db SPITE
 	db DISABLE
@@ -166,13 +166,13 @@ DiglettEggMoves:
 MeowthEggMoves:
 	db SPITE
 	db CHARM
-	db HYPNOSIS
+	db HYPNoSIS
 	db AMNESIA
 	db $ff
 
 PsyduckEggMoves:
 	db ICE_BEAM
-	db HYPNOSIS
+	db HYPNoSIS
 	db PSYBEAM
 	db FORESIGHT
 	db LIGHT_SCREEN
@@ -246,7 +246,7 @@ PonytaEggMoves:
 	db FLAME_WHEEL
 	db THRASH
 	db DOUBLE_KICK
-	db HYPNOSIS
+	db HYPNoSIS
 	db CHARM
 	db QUICK_ATTACK
 	db $ff
@@ -370,7 +370,7 @@ RhyhornEggMoves:
 
 ChanseyEggMoves:
 	db PRESENT
-	db METRONOME
+	db METRONoME
 	db HEAL_BELL
 	db $ff
 
@@ -415,7 +415,7 @@ endc
 
 MrMimeEggMoves:
 	db FUTURE_SIGHT
-	db HYPNOSIS
+	db HYPNoSIS
 	db MIMIC
 	db $ff
 
@@ -560,7 +560,7 @@ PichuEggMoves:
 
 CleffaEggMoves:
 	db PRESENT
-	db METRONOME
+	db METRONoME
 	db AMNESIA
 	db BELLY_DRUM
 	db SPLASH
@@ -693,7 +693,7 @@ GligarEggMoves:
 	db $ff
 
 SnubbullEggMoves:
-	db METRONOME
+	db METRONoME
 	db FAINT_ATTACK
 	db REFLECT
 	db PRESENT
