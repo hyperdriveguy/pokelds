@@ -144,7 +144,7 @@ CeruleanGymStatue1:
 	checkevent EVENT_TRAINERS_IN_CERULEAN_GYM
 	iffalse CeruleanGymStatue
 	opentext
-	writetext CeruleanGymNote1
+	writetext CeruleanGymNOte1
 	waitbutton
 	closetext
 	end
@@ -153,7 +153,7 @@ CeruleanGymStatue2:
 	checkevent EVENT_TRAINERS_IN_CERULEAN_GYM
 	iffalse CeruleanGymStatue
 	opentext
-	writetext CeruleanGymNote2
+	writetext CeruleanGymNOte2
 	waitbutton
 	closetext
 	end
@@ -206,8 +206,8 @@ UnknownText_0x1884fb:
 	cont "okay?"
 
 	para "I very busy."
-	line "No time for talk-"
-	cont "ing with you. Not"
+	line "NO time for talk-"
+	cont "ing with you. NOt"
 	cont "good for me if"
 	cont "seen by somebody."
 	done
@@ -226,18 +226,18 @@ UnknownText_0x1885a5:
 	line "know nothing,"
 
 	para "okay?"
-	line "Bye, kid! Nothing!"
+	line "Bye, kid! NOthing!"
 
 	para "Bye-bye a go-go!"
 	done
 
-CeruleanGymNote1:
+CeruleanGymNOte1:
 	text "Sorry, I'll be out"
 	line "for a while."
 	cont "MISTY, GYM LEADER"
 	done
 
-CeruleanGymNote2:
+CeruleanGymNOte2:
 	text "Since MISTY's out,"
 	line "we'll be away too."
 	cont "GYM TRAINERS"

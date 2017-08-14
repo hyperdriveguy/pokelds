@@ -13,7 +13,7 @@ BattleCommand_Spikes: ; 37683
 	bit SCREENS_SPIKES, [hl]
 	jr nz, .failed
 
-; Nothing else stops it from working.
+; NOthing else stops it from working.
 
 	set SCREENS_SPIKES, [hl]
 

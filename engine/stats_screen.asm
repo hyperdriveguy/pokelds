@@ -377,7 +377,7 @@ StatsScreen_InitUpperHalf: ; 4deea (13:5eea)
 	call .PlaceHPBar
 	xor a
 	ld [hBGMapMode], a
-	ld a, [CurBaseData] ; wd236 (aliases: BaseDexNo)
+	ld a, [CurBaseData] ; wd236 (aliases: BaseDexNO)
 	ld [wd265], a
 	ld [CurSpecies], a
 	hlcoord 8, 0
@@ -401,7 +401,7 @@ StatsScreen_InitUpperHalf: ; 4deea (13:5eea)
 	hlcoord 9, 4
 	ld a, "/"
 	ld [hli], a
-	ld a, [CurBaseData] ; wd236 (aliases: BaseDexNo)
+	ld a, [CurBaseData] ; wd236 (aliases: BaseDexNO)
 	ld [wd265], a
 	call GetPokemonName
 	call PlaceString
@@ -487,7 +487,7 @@ StatsScreen_PlaceShinyIcon: ; 4dfa6 (13:5fa6)
 	ret
 
 StatsScreen_LoadGFX: ; 4dfb6 (13:5fb6)
-	ld a, [BaseDexNo] ; wd236 (aliases: BaseDexNo)
+	ld a, [BaseDexNO] ; wd236 (aliases: BaseDexNO)
 	ld [wd265], a
 	ld [CurSpecies], a
 	xor a
@@ -555,10 +555,10 @@ StatsScreen_LoadGFX: ; 4dfb6 (13:5fb6)
 	jr nz, .HasPokerus
 	ld a, b
 	and $f0
-	jr z, .NotImmuneToPkrs
+	jr z, .NOtImmuneToPkrs
 	hlcoord 8, 8
 	ld [hl], "."
-.NotImmuneToPkrs:
+.NOtImmuneToPkrs:
 	ld a, [MonType]
 	cp BOXMON
 	jr z, .StatusOK
@@ -755,7 +755,7 @@ StatsScreen_LoadGFX: ; 4dfb6 (13:5fb6)
 	ret
 
 .PlaceOTInfo: ; 4e1cc (13:61cc)
-	ld de, IDNoString
+	ld de, IDNOString
 	hlcoord 0, 9
 	call PlaceString
 	ld de, OTString
@@ -844,7 +844,7 @@ StatsScreen_LoadGFX: ; 4dfb6 (13:5fb6)
 	dw wBufferMonOT
 ; 4e21e
 
-IDNoString: ; 4e21e
+IDNOString: ; 4e21e
 	db "<ID>№.@"
 
 OTString: ; 4e222
@@ -887,7 +887,7 @@ StatsScreen_PlaceFrontpic: ; 4e226 (13:6226)
 	ld hl, wcf64
 	set 5, [hl]
 	ld a, [CurPartySpecies]
-	cp UNoWN
+	cp UNOWN
 	jr z, .unown
 	hlcoord 0, 0
 	call PrepMonFrontpic
@@ -902,7 +902,7 @@ StatsScreen_PlaceFrontpic: ; 4e226 (13:6226)
 
 .AnimateEgg: ; 4e271 (13:6271)
 	ld a, [CurPartySpecies]
-	cp UNoWN
+	cp UNOWN
 	jr z, .unownegg
 	ld a, TRUE
 	ld [wBoxAlignment], a
@@ -1036,7 +1036,7 @@ EggStatsScreen: ; 4e33a
 	ld de, EggString
 	hlcoord 8, 1
 	call PlaceString
-	ld de, IDNoString
+	ld de, IDNOString
 	hlcoord 8, 3
 	call PlaceString
 	ld de, OTString

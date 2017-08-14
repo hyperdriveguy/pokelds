@@ -1,7 +1,7 @@
 ItemFinder: ; 12580
 	callba CheckForHiddenItems
 	jr c, .found_something
-	ld hl, .Script_FoundNothing
+	ld hl, .Script_FoundNOthing
 	jr .resume
 
 .found_something
@@ -37,10 +37,10 @@ ItemFinder: ; 12580
 	end
 ; 0x125ba
 
-.Script_FoundNothing: ; 0x125ba
+.Script_FoundNOthing: ; 0x125ba
 	reloadmappart
 	special UpdateTimePals
-	writetext .Text_FoundNothing
+	writetext .Text_FoundNOthing
 	closetext
 	end
 ; 0x125c3
@@ -51,8 +51,8 @@ ItemFinder: ; 12580
 	db "@"
 ; 0x125c8
 
-.Text_FoundNothing: ; 0x125c8
-	; Nope! ITEMFINDER isn't responding.
+.Text_FoundNOthing: ; 0x125c8
+	; NOpe! ITEMFINDER isn't responding.
 	text_jump UnknownText_0x1c0aa9
 	db "@"
 ; 0x125cd

@@ -124,18 +124,18 @@ AcademyBlackboard:
 	db "FRZ@"
 	db "QUIT@"
 
-AcademyNotebook:
+AcademyNOtebook:
 	opentext
-	writetext AcademyNotebookText
+	writetext AcademyNOtebookText
 	yesorno
 	iffalse .Done
-	writetext AcademyNotebookText1
+	writetext AcademyNOtebookText1
 	yesorno
 	iffalse .Done
-	writetext AcademyNotebookText2
+	writetext AcademyNOtebookText2
 	yesorno
 	iffalse .Done
-	writetext AcademyNotebookText3
+	writetext AcademyNOtebookText3
 	waitbutton
 .Done:
 	closetext
@@ -224,7 +224,7 @@ UnknownText_0x68c7b:
 
 UnknownText_0x68d31:
 	text "Oh! Smart student"
-	line "you are! Nothing"
+	line "you are! NOthing"
 	cont "more do I teach!"
 
 	para "Good to #mon"
@@ -343,7 +343,7 @@ AcademyFreezeText:
 	line "an ICE HEAL."
 	done
 
-AcademyNotebookText:
+AcademyNOtebookText:
 	text "It's this kid's"
 	line "notebook…"
 
@@ -356,7 +356,7 @@ AcademyNotebookText:
 	para "Keep reading?"
 	done
 
-AcademyNotebookText1:
+AcademyNOtebookText1:
 	text "Before throwing a"
 	line "# BALL, weaken"
 	cont "the target first."
@@ -368,7 +368,7 @@ AcademyNotebookText1:
 	para "Keep reading?"
 	done
 
-AcademyNotebookText2:
+AcademyNOtebookText2:
 	text "Some moves may"
 	line "cause confusion."
 
@@ -383,7 +383,7 @@ AcademyNotebookText2:
 	para "Keep reading?"
 	done
 
-AcademyNotebookText3:
+AcademyNOtebookText3:
 	text "People who catch"
 	line "and use #mon"
 
@@ -438,4 +438,4 @@ EarlsPokemonAcademy_MapEventHeader:
 	person_event SPRITE_GAMEBOY_KID, 11, 3, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, GameboyKidScript_0x68a86, -1
 	person_event SPRITE_GAMEBOY_KID, 11, 4, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, (1 << 3) | PAL_OW_RED, PERSONTYPE_SCRIPT, 0, GameboyKidScript_0x68a91, -1
 	person_event SPRITE_YOUNGSTER, 7, 4, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, YoungsterScript_0x68a9c, -1
-	person_event SPRITE_POKEDEX, 4, 2, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, AcademyNotebook, -1
+	person_event SPRITE_POKEDEX, 4, 2, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, AcademyNOtebook, -1

@@ -8,7 +8,7 @@ _ResetClock: ; 4d3b1
 	call PlayMusic
 	ld hl, .text_askreset
 	call PrintText
-	ld hl, .NoYes_MenuDataHeader
+	ld hl, .NOYes_MenuDataHeader
 	call CopyMenuDataHeader
 	call VerticalMenu
 	ret c
@@ -46,14 +46,14 @@ _ResetClock: ; 4d3b1
 	text_jump UnknownText_0x1c561c
 	db "@"
 
-.NoYes_MenuDataHeader: ; 0x4d40d
+.NOYes_MenuDataHeader: ; 0x4d40d
 	db $00 ; flags
 	db 07, 14 ; start coords
 	db 11, 19 ; end coords
-	dw .NoYes_MenuData2
+	dw .NOYes_MenuData2
 	db 1 ; default option
 
-.NoYes_MenuData2: ; 0x4d415
+.NOYes_MenuData2: ; 0x4d415
 	db $c0 ; flags
 	db 2 ; items
 	db "No@"
@@ -269,7 +269,7 @@ _DeleteSaveData: ; 4d54c
 	call PlayMusic
 	ld hl, .Text_ClearAllSaveData
 	call PrintText
-	ld hl, .NoYesMenuDataHeader
+	ld hl, .NOYesMenuDataHeader
 	call CopyMenuDataHeader
 	call VerticalMenu
 	ret c
@@ -284,7 +284,7 @@ _DeleteSaveData: ; 4d54c
 	text_jump UnknownText_0x1c564a
 	db "@"
 
-.NoYesMenuDataHeader: ; 0x4d585
+.NOYesMenuDataHeader: ; 0x4d585
 	db $00 ; flags
 	db 07, 14 ; start coords
 	db 11, 19 ; end coords

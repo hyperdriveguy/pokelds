@@ -2,7 +2,7 @@
 ProfOaksPC: ; 0x265d3
 	ld hl, OakPCText1
 	call MenuTextBox
-	call YesNoBox
+	call YesNOBox
 	jr c, .shutdown
 	call ProfOaksPCBoot ; player chose "yes"?
 .shutdown

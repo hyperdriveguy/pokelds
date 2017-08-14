@@ -99,7 +99,7 @@ UnusedMissingDaughterText:
 	para "My daughter is"
 	line "missing."
 
-	para "No… She couldn't"
+	para "NO… She couldn't"
 	line "have gone to the"
 	cont "BURNED TOWER."
 
@@ -126,7 +126,7 @@ UnknownText_0x1a4147:
 	line "Have you learned"
 
 	para "to dance like the"
-	line "KIMONo GIRLS?"
+	line "KIMONO GIRLS?"
 
 	para "If you go to their"
 	line "DANCE THEATER, an"

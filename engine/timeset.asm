@@ -73,7 +73,7 @@ InitClock: ; 90672 (24:4672)
 	call .ClearScreen
 	ld hl, Text_WhatHrs
 	call PrintText
-	call YesNoBox
+	call YesNOBox
 	jr nc, .HourIsSet
 	call .ClearScreen
 	jr .loop
@@ -103,7 +103,7 @@ InitClock: ; 90672 (24:4672)
 	call .ClearScreen
 	ld hl, Text_WhoaMins
 	call PrintText
-	call YesNoBox
+	call YesNOBox
 	jr nc, .MinutesAreSet
 	call .ClearScreen
 	jr .HourIsSet
@@ -391,7 +391,7 @@ OakText_ResponseToSetTime: ; 0x908b8
 ; 0x908f6
 
 .sodark ; 0x908f6
-	; ! No wonder it's so dark!
+	; ! NO wonder it's so dark!
 	text_jump UnknownText_0x1bc34f
 	db "@"
 ; 0x908fb
@@ -447,7 +447,7 @@ Special_SetDayOfWeek: ; 90913
 	call UpdateSprites
 	ld hl, .ConfirmWeekdayText
 	call PrintText
-	call YesNoBox
+	call YesNOBox
 	jr c, .loop
 	ld a, [wTempDayOfWeek]
 	ld [StringBuffer2], a
@@ -688,12 +688,12 @@ DebugDisplayTime: ; 90abc
 	inc hl
 
 .done
-	ld hl, .NowOnDebug
+	ld hl, .NOwOnDebug
 	ret
 ; 90b13
 
-.NowOnDebug: ; 0x90b13
-	text "<PARA>Now on DEBUG…"
+.NOwOnDebug: ; 0x90b13
+	text "<PARA>NOw on DEBUG…"
 	prompt
 ; 0x90b23
 

@@ -27,7 +27,7 @@ _BillsPC: ; e3fd
 	ld hl, Options
 	ld a, [hl]
 	push af
-	set No_TEXT_SCROLL, [hl]
+	set NO_TEXT_SCROLL, [hl]
 	ld hl, .Text_What
 	call PrintText
 	pop af
@@ -153,7 +153,7 @@ Functione512: ; unused
 	ret
 
 .no_pkmn
-	ld hl, .Text_NoPKMN
+	ld hl, .Text_NOPKMN
 	call MenuTextBoxBackup
 	scf
 	ret
@@ -164,7 +164,7 @@ Functione512: ; unused
 	scf
 	ret
 
-.Text_NoPKMN: ; 0xe52e
+.Text_NOPKMN: ; 0xe52e
 	; You don't have a single #mon!
 	text_jump UnknownText_0x1c1062
 	db "@"

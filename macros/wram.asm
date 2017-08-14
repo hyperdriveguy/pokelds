@@ -129,7 +129,7 @@ channel_struct: MACRO
 \1MusicAddress::      dw
 \1LastMusicAddress::  dw
                       dw
-\1NoteFlags::         db ; 5:rest
+\1NOteFlags::         db ; 5:rest
 \1Condition::         db ; conditional jumps
 \1DutyCycle::         db ; bits 6-7 (0:12.5% 1:25% 2:50% 3:75%)
 \1Intensity::         db ; hi:pressure lo:velocity
@@ -139,7 +139,7 @@ channel_struct: MACRO
 \1Pitch::             db ; 0:rest 1-c:note
 \1Octave::            db ; 7-0 (0 is highest)
 \1PitchOffset::    db ; raises existing octaves (to repeat phrases)
-\1NoteDuration::      db ; frames remaining for the current note
+\1NOteDuration::      db ; frames remaining for the current note
 \1Field0x16::         ds 1 ; c117
                       ds 1 ; c118
 \1LoopCount::         db
@@ -159,7 +159,7 @@ channel_struct: MACRO
 \1Field0x29::         ds 1
 \1Field0x2a::         ds 2
 \1Field0x2c::         ds 1
-\1NoteLength::        db ; frames per 16th note
+\1NOteLength::        db ; frames per 16th note
 \1Field0x2e::         ds 1 ; c12f
 \1Field0x2f::         ds 1 ; c130
 \1Field0x30::         ds 1 ; c131

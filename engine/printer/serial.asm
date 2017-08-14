@@ -473,7 +473,7 @@ _PrinterReceive:: ; 842db
 
 
 .Jumptable: ; 842ea (21:42ea)
-	dw Printer_DoNothing ; 00
+	dw Printer_DoNOthing ; 00
 
 	dw Printer_Send0x33 ; 01
 	dw Printer_Sendwca82 ; 02
@@ -515,7 +515,7 @@ Printer_NextInstruction: ; 8432a (21:432a)
 	inc [hl]
 	ret
 
-Printer_DoNothing: ; 8432f (21:432f)
+Printer_DoNOthing: ; 8432f (21:432f)
 	ret
 
 Printer_Send0x33: ; 84330 (21:4330)

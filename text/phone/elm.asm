@@ -176,7 +176,7 @@ BishopPhoneRocketText: ; 0x1b4c06
 	cont "about it?"
 
 	para "Maybe TEAM ROCKET"
-	line "has returned. No,"
+	line "has returned. NO,"
 
 	para "that just can't"
 	line "be true."

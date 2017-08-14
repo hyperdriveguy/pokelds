@@ -65,7 +65,7 @@ MoveTutor:
 	yesorno
 	iffalse .Refused2
 	checkcoins 4000
-	if_equal $2, .NotEnoughMoney
+	if_equal $2, .NOtEnoughMoney
 	writetext UnknownText_0x1990ce
 	loadmenudata .MoveMenuDataHeader
 	verticalmenu
@@ -156,7 +156,7 @@ MoveTutor:
 	closetext
 	end
 
-.NotEnoughMoney:
+.NOtEnoughMoney:
 	writetext UnknownText_0x1991ac
 	waitbutton
 	closetext
@@ -262,8 +262,8 @@ GoldenrodCityGameCornerSign:
 GoldenrodCityNameRaterSign:
 	jumptext GoldenrodCityNameRaterSignText
 
-GoldenrodCityUndergroundSignNorth:
-	jumptext GoldenrodCityUndergroundSignNorthText
+GoldenrodCityUndergroundSignNOrth:
+	jumptext GoldenrodCityUndergroundSignNOrthText
 
 GoldenrodCityUndergroundSignSouth:
 	jumptext GoldenrodCityUndergroundSignSouthText
@@ -473,7 +473,7 @@ GoldenrodCityNameRaterSignText:
 	line "Nicknames Rated"
 	done
 
-GoldenrodCityUndergroundSignNorthText:
+GoldenrodCityUndergroundSignNOrthText:
 	text "UNDERGROUND"
 	line "ENTRANCE"
 	done
@@ -591,7 +591,7 @@ GoldenrodCity_MapEventHeader:
 	signpost 30, 28, SIGNPOST_READ, GoldenrodCityBikeShopSign
 	signpost 22, 16, SIGNPOST_READ, GoldenrodCityGameCornerSign
 	signpost 7, 12, SIGNPOST_READ, GoldenrodCityNameRaterSign
-	signpost 6, 8, SIGNPOST_READ, GoldenrodCityUndergroundSignNorth
+	signpost 6, 8, SIGNPOST_READ, GoldenrodCityUndergroundSignNOrth
 	signpost 30, 12, SIGNPOST_READ, GoldenrodCityUndergroundSignSouth
 	signpost 27, 16, SIGNPOST_UP, GoldenrodCityPokeCenterSign
 	signpost 6, 30, SIGNPOST_READ, GoldenrodCityFlowerShopSign

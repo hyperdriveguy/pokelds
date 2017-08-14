@@ -55,7 +55,7 @@ WhitneyGroup:
 		db DOUBLESLAP
 		db MIMIC
 		db ENCORE
-		db METRONoME
+		db METRONOME
 
 	db 20, MILTANK
 		db ROLLOUT
@@ -120,13 +120,13 @@ MortyGroup:
 		db CURSE
 
 	db 21, HAUNTER
-		db HYPNoSIS
+		db HYPNOSIS
 		db MIMIC
 		db CURSE
 		db NIGHT_SHADE
 
 	db 25, GENGAR
-		db HYPNoSIS
+		db HYPNOSIS
 		db SHADOW_BALL
 		db MEAN_LOOK
 		db DREAM_EATER
@@ -228,7 +228,7 @@ ChuckGroup:
 		db FURY_SWIPES
 
 	db 30, POLIWRATH
-		db HYPNoSIS
+		db HYPNOSIS
 		db MIND_READER
 		db SURF
 		db DYNAMICPUNCH
@@ -818,7 +818,7 @@ BrunoGroup:
 ; ================================
 ; ================
 
-	; BRUNo (1)
+	; BRUNO (1)
 	db "BRUNo@"
 	db 1 ; moves
 
@@ -922,7 +922,7 @@ KogaGroup:
 		db BATON_PASS
 		db GIGA_DRAIN
 
-	db 41, VENoMOTH
+	db 41, VENOMOTH
 		db SUPERSONIC
 		db GUST
 		db PSYCHIC_M
@@ -1030,7 +1030,7 @@ BrockGroup:
 		db BITE
 		db SURF
 		db PROTECT
-		db SPIKE_CANNoN
+		db SPIKE_CANNON
 
 	db 44, ONIX
 		db BIND
@@ -1116,7 +1116,7 @@ LtSurgeGroup:
 		db LOCK_ON
 		db DOUBLE_TEAM
 		db SWIFT
-		db ZAP_CANNoN
+		db ZAP_CANNON
 
 	db 40, ELECTRODE
 		db SCREECH
@@ -1769,7 +1769,7 @@ SchoolboyGroup:
 		db ENCORE
 
 	db 38, MAGNETON
-		db ZAP_CANNoN
+		db ZAP_CANNON
 		db THUNDER_WAVE
 		db LOCK_ON
 		db SWIFT
@@ -1914,7 +1914,7 @@ BirdKeeperGroup:
 	db 0 ; normal
 
 	; party
-	db 34, NoCTOWL
+	db 34, NOCTOWL
 
 	db $ff ; end
 
@@ -2126,7 +2126,7 @@ LassGroup:
 ; ================
 
 	; LASS (8)
-	db "SHANNoN@"
+	db "SHANNON@"
 	db 0 ; normal
 
 	; party
@@ -2331,7 +2331,7 @@ JanineGroup:
 		db STRING_SHOT
 		db NIGHT_SHADE
 
-	db 39, VENoMOTH
+	db 39, VENOMOTH
 		db FORESIGHT
 		db DOUBLE_TEAM
 		db GUST
@@ -2458,7 +2458,7 @@ CooltrainerMGroup:
 
 	; party
 
-	db 39, VICTREEBEL, No_ITEM
+	db 39, VICTREEBEL, NO_ITEM
 		db GIGA_DRAIN
 		db TOXIC
 		db SLUDGE_BOMB
@@ -2470,7 +2470,7 @@ CooltrainerMGroup:
 		db GUILLOTINE
 		db BLIZZARD
 
-	db 39, FLAREON, No_ITEM
+	db 39, FLAREON, NO_ITEM
 		db FLAMETHROWER
 		db QUICK_ATTACK
 		db BITE
@@ -3008,7 +3008,7 @@ CooltrainerFGroup:
 
 	; party
 
-	db 38, STARMIE, No_ITEM
+	db 38, STARMIE, NO_ITEM
 		db DOUBLE_TEAM
 		db PSYCHIC_M
 		db WATERFALL
@@ -3020,7 +3020,7 @@ CooltrainerFGroup:
 		db TOXIC
 		db BODY_SLAM
 
-	db 38, STARMIE, No_ITEM
+	db 38, STARMIE, NO_ITEM
 		db BLIZZARD
 		db PSYCHIC_M
 		db WATERFALL
@@ -3326,7 +3326,7 @@ PokemaniacGroup:
 
 	; party
 	db 16, NIDORINA
-	db 16, NIDORINo
+	db 16, NIDORINO
 
 	db $ff ; end
 
@@ -3705,8 +3705,8 @@ GruntMGroup:
 	db 0 ; normal
 
 	; party
-	db 18, VENoNAT
-	db 18, VENoNAT
+	db 18, VENONAT
+	db 18, VENONAT
 
 	db $ff ; end
 
@@ -3910,7 +3910,7 @@ GentlemanGroup:
 	db 0 ; normal
 
 	; party
-	db 20, NoCTOWL
+	db 20, NOCTOWL
 
 	db $ff ; end
 
@@ -4116,7 +4116,7 @@ BugCatcherGroup:
 	db 0 ; normal
 
 	; party
-	db 15, VENoNAT
+	db 15, VENONAT
 
 	db $ff ; end
 
@@ -4178,7 +4178,7 @@ BugCatcherGroup:
 	db 0 ; normal
 
 	; party
-	db 19, VENoNAT
+	db 19, VENONAT
 
 	db $ff ; end
 
@@ -4190,7 +4190,7 @@ BugCatcherGroup:
 
 	; party
 
-	db 28, VENoMOTH
+	db 28, VENOMOTH
 		db DISABLE
 		db SUPERSONIC
 		db CONFUSION
@@ -4274,7 +4274,7 @@ BugCatcherGroup:
 
 	; party
 
-	db 36, VENoMOTH
+	db 36, VENOMOTH
 		db GUST
 		db SUPERSONIC
 		db PSYBEAM
@@ -4290,7 +4290,7 @@ BugCatcherGroup:
 
 	; party
 
-	db 40, VENoMOTH
+	db 40, VENOMOTH
 		db GUST
 		db SUPERSONIC
 		db PSYCHIC_M
@@ -4344,7 +4344,7 @@ FisherGroup:
 ; ================
 
 	; FISHER (3)
-	db "ARNoLD@"
+	db "ARNOLD@"
 	db 0 ; normal
 
 	; party
@@ -5526,7 +5526,7 @@ SuperNerdGroup:
 ; ================
 
 	; SUPER_NERD (12)
-	db "NoRTON@"
+	db "NORTON@"
 	db 1 ; moves
 
 	; party
@@ -6069,7 +6069,7 @@ HikerGroup:
 ; ================
 
 	; HIKER (14)
-	db "NoLAND@"
+	db "NOLAND@"
 	db 0 ; normal
 
 	; party
@@ -6694,7 +6694,7 @@ BlackbeltGroup:
 ; ================
 
 	; BLACKBELT_T (5)
-	db "NoB@"
+	db "NOB@"
 	db 1 ; moves
 
 	; party
@@ -6932,7 +6932,7 @@ PsychicGroup:
 	; party
 
 	db 17, DROWZEE
-		db HYPNoSIS
+		db HYPNOSIS
 		db DISABLE
 		db DREAM_EATER
 		db 0
@@ -6942,7 +6942,7 @@ PsychicGroup:
 ; ================
 
 	; PSYCHIC_T (6)
-	db "NoRMAN@"
+	db "NORMAN@"
 	db 1 ; moves
 
 	; party
@@ -7056,7 +7056,7 @@ PsychicGroup:
 
 	; party
 	db 29, DROWZEE
-	db 33, HYPNo
+	db 33, HYPNO
 
 	db $ff ; end
 
@@ -7207,7 +7207,7 @@ PicnickerGroup:
 
 	; party
 	db 19, WEEPINBELL
-	db 19, NIDORINo
+	db 19, NIDORINO
 	db 21, NIDOQUEEN
 
 	db $ff ; end
@@ -7277,7 +7277,7 @@ PicnickerGroup:
 		db ENCORE
 		db DOUBLESLAP
 		db MINIMIZE
-		db METRONoME
+		db METRONOME
 
 	db $ff ; end
 
@@ -7356,7 +7356,7 @@ PicnickerGroup:
 
 	; party
 	db 24, WEEPINBELL
-	db 26, NIDORINo
+	db 26, NIDORINO
 	db 26, NIDOQUEEN
 
 	db $ff ; end
@@ -7439,7 +7439,7 @@ PicnickerGroup:
 	; party
 
 	db 43, CLEFAIRY
-		db METRONoME
+		db METRONOME
 		db ENCORE
 		db MOONLIGHT
 		db MINIMIZE
@@ -7553,7 +7553,7 @@ CamperGroup:
 	db 0 ; normal
 
 	; party
-	db 15, NIDORINo
+	db 15, NIDORINO
 
 	db $ff ; end
 
@@ -7564,7 +7564,7 @@ CamperGroup:
 	db 0 ; normal
 
 	; party
-	db 15, NIDORINo
+	db 15, NIDORINO
 
 	db $ff ; end
 
@@ -7933,7 +7933,7 @@ SageGroup:
 	db 0 ; normal
 
 	; party
-	db 32, NoCTOWL
+	db 32, NOCTOWL
 	db 32, FLAREON
 
 	db $ff ; end
@@ -7945,7 +7945,7 @@ SageGroup:
 	db 0 ; normal
 
 	; party
-	db 32, NoCTOWL
+	db 32, NOCTOWL
 	db 32, JOLTEON
 
 	db $ff ; end
@@ -7957,7 +7957,7 @@ SageGroup:
 	db 0 ; normal
 
 	; party
-	db 32, NoCTOWL
+	db 32, NOCTOWL
 	db 32, VAPOREON
 
 	db $ff ; end
@@ -8034,7 +8034,7 @@ MediumGroup:
 
 	; party
 	db 35, DROWZEE
-	db 35, HYPNo
+	db 35, HYPNO
 
 	db $ff ; end
 
@@ -8273,7 +8273,7 @@ KimonoGirlGroup:
 ; ================================
 ; ================
 
-	; KIMONo_GIRL (1)
+	; KIMONO_GIRL (1)
 	db "NAOKO@"
 	db 0 ; normal
 
@@ -8286,7 +8286,7 @@ KimonoGirlGroup:
 
 ; ================
 
-	; KIMONo_GIRL (2)
+	; KIMONO_GIRL (2)
 	db "NAOKO@"
 	db 0 ; normal
 
@@ -8297,7 +8297,7 @@ KimonoGirlGroup:
 
 ; ================
 
-	; KIMONo_GIRL (3)
+	; KIMONO_GIRL (3)
 	db "SAYO@"
 	db 0 ; normal
 
@@ -8308,7 +8308,7 @@ KimonoGirlGroup:
 
 ; ================
 
-	; KIMONo_GIRL (4)
+	; KIMONO_GIRL (4)
 	db "ZUKI@"
 	db 0 ; normal
 
@@ -8319,7 +8319,7 @@ KimonoGirlGroup:
 
 ; ================
 
-	; KIMONo_GIRL (5)
+	; KIMONO_GIRL (5)
 	db "KUNI@"
 	db 0 ; normal
 
@@ -8330,7 +8330,7 @@ KimonoGirlGroup:
 
 ; ================
 
-	; KIMONo_GIRL (6)
+	; KIMONO_GIRL (6)
 	db "MIKI@"
 	db 0 ; normal
 
@@ -8369,7 +8369,7 @@ TwinsGroup:
 		db GROWL
 		db ENCORE
 		db DOUBLESLAP
-		db METRONoME
+		db METRONOME
 
 	db 16, JIGGLYPUFF
 		db SING
@@ -8397,7 +8397,7 @@ TwinsGroup:
 		db GROWL
 		db ENCORE
 		db DOUBLESLAP
-		db METRONoME
+		db METRONOME
 
 	db $ff ; end
 
@@ -8607,9 +8607,9 @@ RedGroup:
 		db SWIFT
 		db PSYCHIC_M
 
-	db 75, SNoRLAX
+	db 75, SNORLAX
 		db AMNESIA
-		db SNoRE
+		db SNORE
 		db REST
 		db BODY_SLAM
 
@@ -8807,13 +8807,13 @@ MysticalmanGroup:
 
 	db 23, DROWZEE
 		db DREAM_EATER
-		db HYPNoSIS
+		db HYPNOSIS
 		db DISABLE
 		db CONFUSION
 
 	db 23, HAUNTER
 		db LICK
-		db HYPNoSIS
+		db HYPNOSIS
 		db MEAN_LOOK
 		db CURSE
 

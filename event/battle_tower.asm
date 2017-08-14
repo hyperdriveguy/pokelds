@@ -14,13 +14,13 @@ CheckForMobileBattleRules: ; 8b1e1
 
 .Functions: ; 8b1f2
 	dw BattleTower_CheckPartyLengthIs3
-	dw BattleTower_CheckPartyHasThreeMonsThatAreNotEggs
+	dw BattleTower_CheckPartyHasThreeMonsThatAreNOtEggs
 ; 8b1f6
 
 .TextPointers: ; 8b1f6
 	dw .ExcuseMeText
 	dw JumpText_NeedAtLeastThreeMon
-	dw JumpText_EggDoesNotQualify
+	dw JumpText_EggDoesNOtQualify
 ; 8b1fc
 
 .ExcuseMeText: ; 0x8b1fc
@@ -55,16 +55,16 @@ CheckForBattleTowerRules: ; 8b201
 ; 8b222
 
 .TextPointers: ; 8b222
-	dw JumpText_ExcuseMeYoureNotReady
+	dw JumpText_ExcuseMeYoureNOtReady
 	dw JumpText_OnlyThreePkmnMayBeEntered
 	dw JumpText_ThePkmnMustAllBeDifferentKinds
-	dw JumpText_ThePkmnMustNotHoldTheSameItems
+	dw JumpText_ThePkmnMustNOtHoldTheSameItems
 	dw JumpText_YouCantTakeAnEgg
 ; 8b22c
 
-JumpText_ExcuseMeYoureNotReady: ; 0x8b22c
+JumpText_ExcuseMeYoureNOtReady: ; 0x8b22c
 	; Excuse me. You're not ready.
-	text_jump Text_ExcuseMeYoureNotReady
+	text_jump Text_ExcuseMeYoureNOtReady
 	db "@"
 ; 0x8b231
 
@@ -86,7 +86,7 @@ JumpText_NeedAtLeastThreeMon: ; 0x8b23d
 	db "@"
 ; 0x8b242
 
-JumpText_EggDoesNotQualify: ; 0x8b242
+JumpText_EggDoesNOtQualify: ; 0x8b242
 	; Sorry, an EGG doesn't qualify.
 	text_jump UnknownText_0x1c59a3
 	db "@"
@@ -104,9 +104,9 @@ JumpText_ThePkmnMustAllBeDifferentKinds: ; 0x8b24c
 	db "@"
 ; 0x8b251
 
-JumpText_ThePkmnMustNotHoldTheSameItems: ; 0x8b251
+JumpText_ThePkmnMustNOtHoldTheSameItems: ; 0x8b251
 	; The @  #mon must not hold the same items.
-	text_jump Text_ThePkmnMustNotHoldTheSameItems
+	text_jump Text_ThePkmnMustNOtHoldTheSameItems
 	db "@"
 ; 0x8b256
 
@@ -217,7 +217,7 @@ BattleTower_CheckPartyLengthIs3: ; 8b2bb
 	ret
 ; 8b2c1
 
-BattleTower_CheckPartyHasThreeMonsThatAreNotEggs: ; 8b2c1
+BattleTower_CheckPartyHasThreeMonsThatAreNOtEggs: ; 8b2c1
 	ld hl, PartyCount
 	ld a, [hli]
 	ld b, $0

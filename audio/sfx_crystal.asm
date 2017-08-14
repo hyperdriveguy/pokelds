@@ -224,13 +224,13 @@ Sfx_TwoPcBeeps_Ch5: ; 17997f
 	endchannel
 ; 179992
 
-Sfx_4NoteDitty: ; 179992
-	musicheader 3, 5, Sfx_4NoteDitty_Ch5
-	musicheader 1, 6, Sfx_4NoteDitty_Ch6
-	musicheader 1, 7, Sfx_4NoteDitty_Ch7
+Sfx_4NOteDitty: ; 179992
+	musicheader 3, 5, Sfx_4NOteDitty_Ch5
+	musicheader 1, 6, Sfx_4NOteDitty_Ch6
+	musicheader 1, 7, Sfx_4NOteDitty_Ch7
 ; 17999b
 
-Sfx_4NoteDitty_Ch5: ; 17999b
+Sfx_4NOteDitty_Ch5: ; 17999b
 	togglesfx
 	dutycycle $2
 	notetype $2, $e8
@@ -256,7 +256,7 @@ Sfx_4NoteDitty_Ch5: ; 17999b
 	endchannel
 ; 1799bd
 
-Sfx_4NoteDitty_Ch6: ; 1799bd
+Sfx_4NOteDitty_Ch6: ; 1799bd
 	togglesfx
 	notetype $2, $b8
 	note __, 9
@@ -264,7 +264,7 @@ Sfx_4NoteDitty_Ch6: ; 1799bd
 	endchannel
 ; 1799c4
 
-Sfx_4NoteDitty_Ch7: ; 1799c4
+Sfx_4NOteDitty_Ch7: ; 1799c4
 	togglesfx
 	notetype $2, $b8
 	note __, 9

@@ -221,7 +221,7 @@ BattleTowerTrainers: ; 1f814e
 	db "ALEXANDER@", HIKER
 	db "KAWAKAMI@@", TEACHER
 	db "BICKETT@@@", POKEFANM
-	db "SAITO@@@@@", KIMONo_GIRL
+	db "SAITO@@@@@", KIMONO_GIRL
 	db "CRAWFORD@@", BOARDER
 	db "DIAZ@@@@@@", PICNICKER
 	db "ERICKSON@@", BIKER
@@ -251,7 +251,7 @@ BattleTowerTrainers: ; 1f814e
 	db "BUCKMAN@@@", SAGE
 	db "COBB@@@@@@", SCHOOLBOY
 	db "HUGHES@@@@", FISHER
-	db "ARITA@@@@@", KIMONo_GIRL
+	db "ARITA@@@@@", KIMONO_GIRL
 	db "EASTON@@@@", PSYCHIC_T
 	db "FREEMAN@@@", CAMPER
 	db "GIESE@@@@@", LASS
@@ -694,9 +694,9 @@ BattleTowerMons1:
 	db "HAPINASU@@@"
 
 
-	db SNoRLAX
+	db SNORLAX
 	db MIRACLEBERRY
-	db HEADBUTT, PROTECT, SNoRE, SURF
+	db HEADBUTT, PROTECT, SNORE, SURF
 	dw 0 ; OT ID
 	dt 1000 ; Exp
 	; Stat exp
@@ -775,7 +775,7 @@ BattleTowerMons1:
 	db "HERAKUROSU@"
 
 
-	db UNoWN
+	db UNOWN
 	db BERRY
 	db HIDDEN_POWER, 0, 0, 0
 	dw 0 ; OT ID
@@ -799,7 +799,7 @@ BattleTowerMons1:
 	bigdw 21 ; Spd
 	bigdw 26 ; SAtk
 	bigdw 21 ; SDef
-	db "ANNo-N@@@@@"
+	db "ANNO-N@@@@@"
 
 
 	db TAUROS
@@ -2056,7 +2056,7 @@ BattleTowerMons4:
 	db "KINGUDORA@@"
 
 
-	db SNoRLAX
+	db SNORLAX
 	db QUICK_CLAW
 	db ATTRACT, BODY_SLAM, PSYCH_UP, EARTHQUAKE
 	dw 0 ; OT ID
@@ -2327,7 +2327,7 @@ BattleTowerMons4:
 
 
 	db PORYGON2
-	db No_ITEM
+	db NO_ITEM
 	db CONVERSION2, CONVERSION, PSYBEAM, THIEF
 	dw 0 ; OT ID
 	dt 64000 ; Exp
@@ -2488,7 +2488,7 @@ BattleTowerMons4:
 	db "NAtuSI-@@@@"
 
 
-	db HYPNo
+	db HYPNO
 	db BRIGHTPOWDER
 	db CONFUSION, THUNDERPUNCH, HEADBUTT, DISABLE
 	dw 0 ; OT ID
@@ -2544,7 +2544,7 @@ BattleTowerMons4:
 
 	db ELECTABUZZ
 	db KINGS_ROCK
-	db LIGHT_SCREEN, THUNDERPUNCH, SWIFT, SNoRE
+	db LIGHT_SCREEN, THUNDERPUNCH, SWIFT, SNORE
 	dw 0 ; OT ID
 	dt 64000 ; Exp
 	; Stat exp
@@ -2654,7 +2654,7 @@ BattleTowerMons5:
 	db "TUBOTUBO@@@"
 
 
-	db SNoRLAX
+	db SNORLAX
 	db LEFTOVERS
 	db HYPER_BEAM, EARTHQUAKE, SURF, PSYCH_UP
 	dw 0 ; OT ID
@@ -3088,7 +3088,7 @@ BattleTowerMons5:
 
 	db GYARADOS
 	db MIRACLEBERRY
-	db HYPER_BEAM, SURF, RAIN_DANCE, ZAP_CANNoN
+	db HYPER_BEAM, SURF, RAIN_DANCE, ZAP_CANNON
 	dw 0 ; OT ID
 	dt 125000 ; Exp
 	; Stat exp
@@ -3113,7 +3113,7 @@ BattleTowerMons5:
 	db "GIyaRADOSU@"
 
 
-	db ARTICUNo
+	db ARTICUNO
 	db GOLD_BERRY
 	db BLIZZARD, HYPER_BEAM, ROAR, ICY_WIND
 	dw 0 ; OT ID
@@ -3495,7 +3495,7 @@ BattleTowerMons6:
 	db "HAPINASU@@@"
 
 
-	db SNoRLAX
+	db SNORLAX
 	db PINK_BOW
 	db ROCK_SLIDE, SURF, BODY_SLAM, EARTHQUAKE
 	dw 0 ; OT ID
@@ -3632,7 +3632,7 @@ BattleTowerMons6:
 
 	db SANDSLASH
 	db SCOPE_LENS
-	db EARTHQUAKE, SLASH, HYPER_BEAM, SNoRE
+	db EARTHQUAKE, SLASH, HYPER_BEAM, SNORE
 	dw 0 ; OT ID
 	dt 216000 ; Exp
 	; Stat exp
@@ -3823,7 +3823,7 @@ BattleTowerMons7:
 	db "HAPINASU@@@"
 
 
-	db SNoRLAX
+	db SNORLAX
 	db LEFTOVERS
 	db ROCK_SLIDE, EARTHQUAKE, BLIZZARD, SHADOW_BALL
 	dw 0 ; OT ID
@@ -4313,9 +4313,9 @@ BattleTowerMons8:
 	db "SANDA-SU@@@"
 
 
-	db SNoRLAX
+	db SNORLAX
 	db LEFTOVERS
-	db REST, BELLY_DRUM, SNoRE, EARTHQUAKE
+	db REST, BELLY_DRUM, SNORE, EARTHQUAKE
 	dw 0 ; OT ID
 	dt 512000 ; Exp
 	; Stat exp
@@ -4449,7 +4449,7 @@ BattleTowerMons8:
 
 
 	db GENGAR
-	db No_ITEM
+	db NO_ITEM
 	db THUNDERBOLT, SHADOW_BALL, CONFUSE_RAY, THIEF
 	dw 0 ; OT ID
 	dt 512000 ; Exp
@@ -5154,7 +5154,7 @@ BattleTowerMons9:
 	db "KAIRIKI-@@@"
 
 
-	db SNoRLAX
+	db SNORLAX
 	db MIRACLEBERRY
 	db FIRE_BLAST, SURF, EARTHQUAKE, HYPER_BEAM
 	dw 0 ; OT ID
@@ -5857,7 +5857,7 @@ BattleTowerMons10:
 	bigdw 190 ; Spd
 	bigdw 194 ; SAtk
 	bigdw 194 ; SDef
-	db "INoMU-@@@@@"
+	db "INOMU-@@@@@"
 
 
 	db EXEGGUTOR
@@ -5970,7 +5970,7 @@ BattleTowerMons10:
 
 	db LANTURN
 	db QUICK_CLAW
-	db SURF, RAIN_DANCE, ZAP_CANNoN, CONFUSE_RAY
+	db SURF, RAIN_DANCE, ZAP_CANNON, CONFUSE_RAY
 	dw 0 ; OT ID
 	dt 1000000 ; Exp
 	; Stat exp

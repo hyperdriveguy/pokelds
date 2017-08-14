@@ -319,7 +319,7 @@ ret_d90:: ; d90
 ; d91
 
 
-Special_ReloadSpritesNoPalettes:: ; d91
+Special_ReloadSpritesNOPalettes:: ; d91
 	ld a, [hCGB]
 	and a
 	ret z

@@ -284,7 +284,7 @@ OlivineLighthouseSignText:
 
 OlivineCityBattleTowerSignText:
 	text "BATTLE TOWER AHEAD"
-	line "Opening Now!"
+	line "Opening NOw!"
 	done
 
 UnknownText_0x1a8cba:

@@ -146,7 +146,7 @@ RunTradeAnimScript: ; 28fa1
 	callab ClearSpriteAnims
 	ld a, [hCGB]
 	and a
-	jr z, .NotCGB
+	jr z, .NOtCGB
 	ld a, $1
 	ld [rVBK], a
 	ld hl, VTiles0
@@ -156,7 +156,7 @@ RunTradeAnimScript: ; 28fa1
 	ld a, $0
 	ld [rVBK], a
 
-.NotCGB:
+.NOtCGB:
 	hlbgcoord 0, 0
 	ld bc, sScratch - VBGMap0
 	ld a, " "
@@ -198,7 +198,7 @@ RunTradeAnimScript: ; 28fa1
 	ld a, [wOTTrademonSpecies]
 	ld de, wOTTrademonSpeciesName
 	call TradeAnim_GetNickname
-	call TradeAnim_NormalPals
+	call TradeAnim_NOrmalPals
 	ret
 
 ; 29082
@@ -499,7 +499,7 @@ TradeAnim_TubeToPlayer8: ; 29229
 	call EnableLCD
 	call LoadTradeBallAndCableGFX
 	call WaitBGMap
-	call TradeAnim_NormalPals
+	call TradeAnim_NOrmalPals
 	call TradeAnim_AdvanceScriptPointer
 	ret
 
@@ -1447,7 +1447,7 @@ TradeAnim_CopyBoxFromDEtoHL: ; 297db
 
 ; 297ed
 
-TradeAnim_NormalPals: ; 297ed
+TradeAnim_NOrmalPals: ; 297ed
 	ld a, [hSGB]
 	and a
 	ld a, %11100100 ; 3,2,1,0

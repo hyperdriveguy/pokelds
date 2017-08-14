@@ -60,7 +60,7 @@ GentlemanScript_0x5cd3d:
 	if_equal 1, .FirstPlace
 	if_equal 2, .SecondPlace
 	if_equal 3, .ThirdPlace
-	jump .NoPrize
+	jump .NOPrize
 
 .GameOver:
 	writetext UnknownText_0x5cf7e
@@ -101,7 +101,7 @@ GentlemanScript_0x5cd3d:
 	setflag ENGINE_LUCKY_NUMBER_SHOW
 	jump .GameOver
 
-.NoPrize:
+.NOPrize:
 	writetext UnknownText_0x5d0c0
 	waitbutton
 	closetext
@@ -291,7 +291,7 @@ UnknownText_0x5d076:
 	done
 
 UnknownText_0x5d0c0:
-	text "Nope, none of your"
+	text "NOpe, none of your"
 	line "ID numbers match."
 	done
 
@@ -427,7 +427,7 @@ GruntM3SeenText:
 	line "taken over the"
 	cont "RADIO TOWER!"
 
-	para "Now everyone will"
+	para "NOw everyone will"
 	line "get to experience"
 
 	para "the true terror of"

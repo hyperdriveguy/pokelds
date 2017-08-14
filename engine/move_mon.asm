@@ -31,7 +31,7 @@ TryAddMonToParty: ; d88c
 	inc de
 	ld a, -1
 	ld [de], a
-	; Now let's load the OT name.
+	; NOw let's load the OT name.
 	ld hl, PartyMonOT
 	ld a, [MonType]
 	and $f
@@ -82,7 +82,7 @@ GeneratePartyMonStats: ; d906
 	ld a, [CurPartySpecies]
 	ld [CurSpecies], a
 	call GetBaseData
-	ld a, [BaseDexNo]
+	ld a, [BaseDexNO]
 	ld [de], a
 	inc de
 	ld a, [wBattleMode]
@@ -336,7 +336,7 @@ endr
 	and $f
 	jr nz, .done
 	ld a, [CurPartySpecies]
-	cp UNoWN
+	cp UNOWN
 	jr nz, .done
 	ld hl, PartyMon1DVs
 	ld a, [PartyCount]
@@ -447,7 +447,7 @@ AddTempmonToParty: ; da96
 .egg
 
 	ld a, [CurPartySpecies]
-	cp UNoWN
+	cp UNOWN
 	jr nz, .done
 	ld hl, PartyMon1DVs
 	ld a, [PartyCount]
@@ -1040,7 +1040,7 @@ SentPkmnIntoBox: ; de6e
 	dec a
 	call SetSeenAndCaughtMon
 	ld a, [CurPartySpecies]
-	cp UNoWN
+	cp UNOWN
 	jr nz, .not_unown
 	ld hl, sBoxMon1DVs
 	predef GetUnownLetter
@@ -1850,7 +1850,7 @@ GivePoke:: ; e277
 .party
 	callba SetCaughtData
 .set_caught_data
-	callba GiveANickname_YesNo
+	callba GiveANickname_YesNO
 	pop de
 	jr c, .skip_nickname
 	call InitNickname

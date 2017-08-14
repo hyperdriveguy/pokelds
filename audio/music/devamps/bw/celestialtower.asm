@@ -3,19 +3,19 @@
 ; https://pastebin.com/GbzJ6dUH
 ; https://hax.iimarck.us/topic/6777/9/
 
-Music_CelestialTowerBW_NoIntro:
-	musicheader 4, 1, Music_CelestialTowerBW_NoIntro_Ch1
-	musicheader 1, 2, Music_CelestialTowerBW_NoIntro_Ch2
-	musicheader 1, 3, Music_CelestialTowerBW_NoIntro_Ch3
-	musicheader 1, 4, Music_CelestialTowerBW_NoIntro_Ch4
+Music_CelestialTowerBW_NOIntro:
+	musicheader 4, 1, Music_CelestialTowerBW_NOIntro_Ch1
+	musicheader 1, 2, Music_CelestialTowerBW_NOIntro_Ch2
+	musicheader 1, 3, Music_CelestialTowerBW_NOIntro_Ch3
+	musicheader 1, 4, Music_CelestialTowerBW_NOIntro_Ch4
 
-Music_CelestialTowerBW_NoIntro_Ch1:
+Music_CelestialTowerBW_NOIntro_Ch1:
 	tempo 232
 	dutycycle $2
 	vibrato $12, $15
 	tone $0001
 	notetype $6, $85
-Music_CelestialTowerBW_NoIntro_Ch1_loop_1:
+Music_CelestialTowerBW_NOIntro_Ch1_loop_1:
 	octave 4
 	note A#, 2
 	note D_, 2
@@ -77,7 +77,7 @@ Music_CelestialTowerBW_NoIntro_Ch1_loop_1:
 	note B_, 2
 	octave 4
 	note F#, 2
-	loopchannel 2, Music_CelestialTowerBW_NoIntro_Ch1_loop_1
+	loopchannel 2, Music_CelestialTowerBW_NOIntro_Ch1_loop_1
 	note F_, 2
 	octave 3
 	note A#, 2
@@ -202,14 +202,14 @@ Music_CelestialTowerBW_NoIntro_Ch1_loop_1:
 	note F_, 16
 	intensity $77
 	note F_, 15
-	loopchannel 0, Music_CelestialTowerBW_NoIntro_Ch1
+	loopchannel 0, Music_CelestialTowerBW_NOIntro_Ch1
 
-Music_CelestialTowerBW_NoIntro_Ch2:
+Music_CelestialTowerBW_NOIntro_Ch2:
 	dutycycle $3
 	vibrato $12, $15
 	tone $0001
 	notetype $6, $67
-Music_CelestialTowerBW_NoIntro_Ch2_loop_1:
+Music_CelestialTowerBW_NOIntro_Ch2_loop_1:
 	octave 2
 	note G_, 2
 	octave 3
@@ -258,7 +258,7 @@ Music_CelestialTowerBW_NoIntro_Ch2_loop_1:
 	note B_, 2
 	octave 3
 	note F#, 10
-	loopchannel 2, Music_CelestialTowerBW_NoIntro_Ch2_loop_1
+	loopchannel 2, Music_CelestialTowerBW_NOIntro_Ch2_loop_1
 	octave 2
 	note D_, 2
 	note A_, 2
@@ -392,9 +392,9 @@ Music_CelestialTowerBW_NoIntro_Ch2_loop_1:
 	note A#, 8
 	intensity $67
 	note A#, 8
-	loopchannel 0, Music_CelestialTowerBW_NoIntro_Ch2
+	loopchannel 0, Music_CelestialTowerBW_NOIntro_Ch2
 
-Music_CelestialTowerBW_NoIntro_Ch3:
+Music_CelestialTowerBW_NOIntro_Ch3:
 	vibrato $0, $0
 	notetype $c, $20
 	octave 3
@@ -533,9 +533,9 @@ Music_CelestialTowerBW_NoIntro_Ch3:
 	note D_, 8
 	intensity $30
 	note D_, 8
-	loopchannel 0, Music_CelestialTowerBW_NoIntro_Ch3
+	loopchannel 0, Music_CelestialTowerBW_NOIntro_Ch3
 
-Music_CelestialTowerBW_NoIntro_Ch4:
+Music_CelestialTowerBW_NOIntro_Ch4:
 	togglenoise $4
 	notetype $c
 	note __, 16
@@ -543,15 +543,15 @@ Music_CelestialTowerBW_NoIntro_Ch4:
 	note __, 16
 	note __, 16
 	notetype $6
-	callchannel Music_CelestialTowerBW_NoIntro_Ch4_branch_1
-	callchannel Music_CelestialTowerBW_NoIntro_Ch4_branch_1
-	callchannel Music_CelestialTowerBW_NoIntro_Ch4_branch_2
-	callchannel Music_CelestialTowerBW_NoIntro_Ch4_branch_2
-	callchannel Music_CelestialTowerBW_NoIntro_Ch4_branch_1
-	callchannel Music_CelestialTowerBW_NoIntro_Ch4_branch_1
-	callchannel Music_CelestialTowerBW_NoIntro_Ch4_branch_2
-	callchannel Music_CelestialTowerBW_NoIntro_Ch4_branch_1
-Music_CelestialTowerBW_NoIntro_Ch4_loop_1:
+	callchannel Music_CelestialTowerBW_NOIntro_Ch4_branch_1
+	callchannel Music_CelestialTowerBW_NOIntro_Ch4_branch_1
+	callchannel Music_CelestialTowerBW_NOIntro_Ch4_branch_2
+	callchannel Music_CelestialTowerBW_NOIntro_Ch4_branch_2
+	callchannel Music_CelestialTowerBW_NOIntro_Ch4_branch_1
+	callchannel Music_CelestialTowerBW_NOIntro_Ch4_branch_1
+	callchannel Music_CelestialTowerBW_NOIntro_Ch4_branch_2
+	callchannel Music_CelestialTowerBW_NOIntro_Ch4_branch_1
+Music_CelestialTowerBW_NOIntro_Ch4_loop_1:
 	note C#, 1
 	note G#, 1
 	note C#, 1
@@ -563,11 +563,11 @@ Music_CelestialTowerBW_NoIntro_Ch4_loop_1:
 	note G#, 2
 	note G#, 6
 	note __, 16
-	loopchannel 4, Music_CelestialTowerBW_NoIntro_Ch4_loop_1
+	loopchannel 4, Music_CelestialTowerBW_NOIntro_Ch4_loop_1
 	note __, 16
-	loopchannel 0, Music_CelestialTowerBW_NoIntro_Ch4
+	loopchannel 0, Music_CelestialTowerBW_NOIntro_Ch4
 
-Music_CelestialTowerBW_NoIntro_Ch4_branch_1:
+Music_CelestialTowerBW_NOIntro_Ch4_branch_1:
 	note C#, 1
 	note G#, 1
 	note C#, 1
@@ -585,7 +585,7 @@ Music_CelestialTowerBW_NoIntro_Ch4_branch_1:
 	note __, 16
 	endchannel
 
-Music_CelestialTowerBW_NoIntro_Ch4_branch_2:
+Music_CelestialTowerBW_NOIntro_Ch4_branch_2:
 	note C#, 1
 	note G#, 1
 	note C#, 1

@@ -44,7 +44,7 @@ BugsyScript:
 	writetext BugsyText_HiveBadgeSpeech
 	buttonsound
 	verbosegiveitem TM_FURY_CUTTER
-	iffalse .NoRoomForFuryCutter
+	iffalse .NORoomForFuryCutter
 	setevent EVENT_GOT_TM49_FURY_CUTTER
 	writetext BugsyText_FuryCutterSpeech
 	waitbutton
@@ -54,7 +54,7 @@ BugsyScript:
 .GotFuryCutter:
 	writetext BugsyText_BugMonsAreDeep
 	waitbutton
-.NoRoomForFuryCutter:
+.NORoomForFuryCutter:
 	closetext
 	end
 
@@ -297,7 +297,7 @@ Bug_catcherJoshAfterBattleText:
 TwinsAmyandmay1SeenText:
 	text "AMY: Hi! Are you"
 	line "challenging the"
-	cont "LEADER? No way!"
+	cont "LEADER? NO way!"
 	done
 
 TwinsAmyandmay1BeatenText:

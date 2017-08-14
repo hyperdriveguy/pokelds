@@ -1282,7 +1282,7 @@ MenuDataHeader_0x48a9c: ; 0x48a9c
 	db 13, 19 ; end coord
 
 String_48aa1: ; 48aa1
-	db   "Tell Now"
+	db   "Tell NOw"
 	next "Tell Later@"
 ; 48ab5
 

@@ -120,7 +120,7 @@ MomPhoneHangUpText: ; 0x1b42c0
 	cont "for you, baby!"
 	done
 
-MomPhoneNoPokemonText: ; 0x1b42ea
+MomPhoneNOPokemonText: ; 0x1b42ea
 	text "Hello?"
 
 	para "Oh, hi, <PLAYER>!"
@@ -128,7 +128,7 @@ MomPhoneNoPokemonText: ; 0x1b42ea
 	cont "waiting for you?"
 	done
 
-MomPhoneNoPokedexText: ; 0x1b431d
+MomPhoneNOPokedexText: ; 0x1b431d
 	text "Hello?"
 
 	para "Oh, hi, <PLAYER>!"
@@ -138,7 +138,7 @@ MomPhoneNoPokedexText: ; 0x1b431d
 	line "BISHOP? Be good!"
 	done
 
-MomPhoneNoGymQuestText: ; 0x1b435f
+MomPhoneNOGymQuestText: ; 0x1b435f
 	text "Hello?"
 
 	para "Hi, <PLAYER>! If"

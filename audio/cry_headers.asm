@@ -47,8 +47,8 @@ GloomCryHeader:       cry_header CRY_ODDISH,      $0aa,  $0c0
 VileplumeCryHeader:   cry_header CRY_VILEPLUME,   $022,  $17f
 ParasCryHeader:       cry_header CRY_PARAS,       $020,  $160
 ParasectCryHeader:    cry_header CRY_PARAS,       $042,  $17f
-VenonatCryHeader:     cry_header CRY_VENoNAT,     $044,  $0c0
-VenomothCryHeader:    cry_header CRY_VENoNAT,     $029,  $100
+VenonatCryHeader:     cry_header CRY_VENONAT,     $044,  $0c0
+VenomothCryHeader:    cry_header CRY_VENONAT,     $029,  $100
 DiglettCryHeader:     cry_header CRY_DIGLETT,     $0aa,  $081
 DugtrioCryHeader:     cry_header CRY_DIGLETT,     $02a,  $090
 MeowthCryHeader:      cry_header CRY_CLEFAIRY,    $077,  $090
@@ -71,8 +71,8 @@ MachampCryHeader:     cry_header CRY_GROWLITHE,   $008,  $140
 BellsproutCryHeader:  cry_header CRY_PSYDUCK,     $055,  $081
 WeepinbellCryHeader:  cry_header CRY_WEEPINBELL,  $044,  $0a0
 VictreebelCryHeader:  cry_header CRY_WEEPINBELL,  $066,  $14c
-TentacoolCryHeader:   cry_header CRY_VENoNAT,     $000,  $100
-TentacruelCryHeader:  cry_header CRY_VENoNAT,     $0ee,  $17f
+TentacoolCryHeader:   cry_header CRY_VENONAT,     $000,  $100
+TentacruelCryHeader:  cry_header CRY_VENONAT,     $0ee,  $17f
 GeodudeCryHeader:     cry_header CRY_VULPIX,      $0f0,  $090
 GravelerCryHeader:    cry_header CRY_VULPIX,      $000,  $100
 GolemCryHeader:       cry_header CRY_GOLEM,       $0e0,  $0c0
@@ -132,10 +132,10 @@ MagikarpCryHeader:    cry_header CRY_EKANS,       $080,  $080
 GyaradosCryHeader:    cry_header CRY_EKANS,       $000,  $100
 LaprasCryHeader:      cry_header CRY_LAPRAS,      $000,  $100
 DittoCryHeader:       cry_header CRY_PIDGEY,      $0ff,  $17f
-EeveeCryHeader:       cry_header CRY_VENoNAT,     $088,  $0e0
-VaporeonCryHeader:    cry_header CRY_VENoNAT,     $0aa,  $17f
-JolteonCryHeader:     cry_header CRY_VENoNAT,     $03d,  $100
-FlareonCryHeader:     cry_header CRY_VENoNAT,     $010,  $0a0
+EeveeCryHeader:       cry_header CRY_VENONAT,     $088,  $0e0
+VaporeonCryHeader:    cry_header CRY_VENONAT,     $0aa,  $17f
+JolteonCryHeader:     cry_header CRY_VENONAT,     $03d,  $100
+FlareonCryHeader:     cry_header CRY_VENONAT,     $010,  $0a0
 PorygonCryHeader:     cry_header CRY_WEEPINBELL,  $0aa,  $17f
 OmanyteCryHeader:     cry_header CRY_GROWLITHE,   $0f0,  $081
 OmastarCryHeader:     cry_header CRY_GROWLITHE,   $0ff,  $0c0
@@ -163,7 +163,7 @@ FeraligatrCryHeader:  cry_header CRY_TOTODILE,    $3fc,  $180
 SentretCryHeader:     cry_header CRY_SENTRET,     $08a,  $0b8
 FurretCryHeader:      cry_header CRY_SENTRET,     $06b,  $102
 HoothootCryHeader:    cry_header CRY_HOOTHOOT,    $091,  $0d8
-NoctowlCryHeader:     cry_header CRY_HOOTHOOT,    $000,  $1a0
+NOctowlCryHeader:     cry_header CRY_HOOTHOOT,    $000,  $1a0
 LedybaCryHeader:      cry_header CRY_LEDYBA,      $000,  $0de
 LedianCryHeader:      cry_header CRY_LEDYBA,     -$096,  $138
 SpinarakCryHeader:    cry_header CRY_SPINARAK,    $011,  $200
@@ -196,7 +196,7 @@ YanmaCryHeader:       cry_header CRY_TOTODILE,    $031,  $0c8
 WooperCryHeader:      cry_header CRY_WOOPER,      $093,  $0af
 QuagsireCryHeader:    cry_header CRY_WOOPER,     -$0c6,  $140
 EspeonCryHeader:      cry_header CRY_AIPOM,       $0a2,  $140
-UmbreonCryHeader:     cry_header CRY_VENoNAT,    -$0e9,  $0f0
+UmbreonCryHeader:     cry_header CRY_VENONAT,    -$0e9,  $0f0
 MurkrowCryHeader:     cry_header CRY_MARILL,     -$01f,  $180
 SlowkingCryHeader:    cry_header CRY_SLOWKING,    $104,  $200
 MisdreavusCryHeader:  cry_header CRY_HOOTHOOT,    $130,  $0e8

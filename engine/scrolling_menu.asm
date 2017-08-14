@@ -47,7 +47,7 @@ ScrollingMenu_InitDisplay: ; 245f1
 	ld hl, Options
 	ld a, [hl]
 	push af
-	set No_TEXT_SCROLL, [hl]
+	set NO_TEXT_SCROLL, [hl]
 	call ScrollingMenu_UpdateDisplay
 	call ScrollingMenu_PlaceCursor
 	call ScrollingMenu_CheckCallFunction3

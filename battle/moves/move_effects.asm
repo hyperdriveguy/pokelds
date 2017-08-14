@@ -33,7 +33,7 @@ HiJumpKick:
 QuickAttack:
 MachPunch:
 Extremespeed:
-NormalHit:
+NOrmalHit:
 	checkobedience
 	usedmovetext
 	doturn

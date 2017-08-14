@@ -170,7 +170,7 @@ PleasantGroveText_CharcoalMasterIntro:
 
 	para "Thanks, kid!"
 
-	para "Now, how can I"
+	para "NOw, how can I"
 	line "thank you…"
 
 	para "I know! Here, take"

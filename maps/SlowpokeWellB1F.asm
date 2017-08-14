@@ -39,7 +39,7 @@ GruntM1Script:
 	waitbutton
 	closetext
 	special Special_FadeBlackQuickly
-	special Special_ReloadSpritesNoPalettes
+	special Special_ReloadSpritesNOPalettes
 	disappear SLOWPOKEWELLB1F_ROCKET1
 	disappear SLOWPOKEWELLB1F_ROCKET2
 	disappear SLOWPOKEWELLB1F_ROCKET3
@@ -203,7 +203,7 @@ GruntM29SeenText:
 	done
 
 GruntM29BeatenText:
-	text "Arrgh! This is NoT"
+	text "Arrgh! This is NOT"
 	line "my day!"
 	done
 
@@ -247,7 +247,7 @@ TrainerGruntM1WhenTalkText:
 	line "our activities"
 	cont "underground."
 
-	para "Now you can have"
+	para "NOw you can have"
 	line "fun watching us"
 	cont "stir up trouble!"
 	done

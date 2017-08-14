@@ -427,7 +427,7 @@ UnknownText_0x6e511:
 	done
 
 UnknownText_0x6e548:
-	text "No, I can't let"
+	text "NO, I can't let"
 	line "this affect me."
 
 	para "I have to inform"
@@ -590,8 +590,8 @@ TeamRocketBaseB3F_MapEventHeader:
 
 .Signposts:
 	db 10
-	signpost 9, 10, SIGNPOST_IFNoTSET, BossDoor
-	signpost 9, 11, SIGNPOST_IFNoTSET, BossDoor
+	signpost 9, 10, SIGNPOST_IFNOTSET, BossDoor
+	signpost 9, 11, SIGNPOST_IFNOTSET, BossDoor
 	signpost 1, 10, SIGNPOST_READ, MapTeamRocketBaseB3FSignpost9Script
 	signpost 1, 11, SIGNPOST_READ, MapTeamRocketBaseB3FSignpost9Script
 	signpost 1, 12, SIGNPOST_READ, MapTeamRocketBaseB3FSignpost9Script

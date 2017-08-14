@@ -86,7 +86,7 @@ NewGame: ; 5b6b
 ; 5b8f
 
 AreYouABoyOrAreYouAGirl: ; 5b8f
-	callba Mobile_AlwaysReturnNotCarry ; some mobile stuff
+	callba Mobile_AlwaysReturnNOtCarry ; some mobile stuff
 	jr c, .ok
 	callba InitGender
 	ret
@@ -418,7 +418,7 @@ PostCreditsSpawn: ; 5de7
 ; 5df0
 
 Continue_MobileAdapterMenu: ; 5df0
-	callba Mobile_AlwaysReturnNotCarry ; mobile check
+	callba Mobile_AlwaysReturnNOtCarry ; mobile check
 	ret nc
 
 ; the rest of this stuff is never reached because
@@ -511,16 +511,16 @@ DisplaySaveInfoOnContinue: ; 5e85
 
 .clock_ok
 	lb de, 4, 8
-	call DisplayNormalContinueData
+	call DisplayNOrmalContinueData
 	ret
 ; 5e9a
 
 DisplaySaveInfoOnSave: ; 5e9a
 	lb de, 4, 0
-	jr DisplayNormalContinueData
+	jr DisplayNOrmalContinueData
 ; 5e9f
 
-DisplayNormalContinueData: ; 5e9f
+DisplayNOrmalContinueData: ; 5e9f
 	call Continue_LoadMenuHeader
 	call Continue_DisplayBadgesDexPlayerName
 	call Continue_PrintGameTime
@@ -545,7 +545,7 @@ Continue_LoadMenuHeader: ; 5ebf
 	ld a, [StatusFlags]
 	bit 0, a ; pokedex
 	jr nz, .pokedex_header
-	ld hl, .MenuDataHeader_NoDex
+	ld hl, .MenuDataHeader_NODex
 
 .pokedex_header
 	call _OffsetMenuDataHeader
@@ -571,15 +571,15 @@ Continue_LoadMenuHeader: ; 5ebf
 	db "Time@"
 ; 5efb
 
-.MenuDataHeader_NoDex: ; 5efb
+.MenuDataHeader_NODex: ; 5efb
 	db $40 ; flags
 	db 00, 00 ; start coords
 	db 09, 15 ; end coords
-	dw .MenuData2_NoDex
+	dw .MenuData2_NODex
 	db 1 ; default option
 ; 5f03
 
-.MenuData2_NoDex: ; 5f03
+.MenuData2_NODex: ; 5f03
 	db $00 ; flags
 	db 4 ; items
 	db "Player <PLAYER>@"

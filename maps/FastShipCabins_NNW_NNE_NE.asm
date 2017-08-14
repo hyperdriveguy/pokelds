@@ -47,10 +47,10 @@ PokemaniacEthanScript:
 	closetext
 	end
 
-TrainerHikerNoland:
-	trainer EVENT_BEAT_HIKER_NoLAND, HIKER, NoLAND, HikerNolandSeenText, HikerNolandBeatenText, 0, HikerNolandScript
+TrainerHikerNOland:
+	trainer EVENT_BEAT_HIKER_NOLAND, HIKER, NOLAND, HikerNOlandSeenText, HikerNOlandBeatenText, 0, HikerNOlandScript
 
-HikerNolandScript:
+HikerNOlandScript:
 	end_if_just_battled
 	opentext
 	writetext UnknownText_0x757d4
@@ -184,12 +184,12 @@ UnknownText_0x7574b:
 	cont "programs!"
 	done
 
-HikerNolandSeenText:
+HikerNOlandSeenText:
 	text "Are you alone?"
 	line "Then let's battle!"
 	done
 
-HikerNolandBeatenText:
+HikerNOlandBeatenText:
 	text "That's too much to"
 	line "handle!"
 	done
@@ -290,7 +290,7 @@ FastShipCabins_NNW_NNE_NE_MapEventHeader:
 	person_event SPRITE_COOLTRAINER_M, 3, 4, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, (1 << 3) | PAL_OW_RED, PERSONTYPE_TRAINER, 2, TrainerCooltrainermSean, EVENT_FAST_SHIP_PASSENGERS_EASTBOUND
 	person_event SPRITE_COOLTRAINER_F, 5, 1, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, (1 << 3) | PAL_OW_RED, PERSONTYPE_TRAINER, 3, TrainerCooltrainerfCarol, EVENT_FAST_SHIP_PASSENGERS_EASTBOUND
 	person_event SPRITE_SUPER_NERD, 5, 1, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, (1 << 3) | PAL_OW_BLUE, PERSONTYPE_TRAINER, 3, TrainerPokemaniacEthan, EVENT_FAST_SHIP_PASSENGERS_WESTBOUND
-	person_event SPRITE_POKEFAN_M, 17, 4, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, (1 << 3) | PAL_OW_BROWN, PERSONTYPE_TRAINER, 3, TrainerHikerNoland, EVENT_FAST_SHIP_PASSENGERS_FIRST_TRIP
+	person_event SPRITE_POKEFAN_M, 17, 4, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, (1 << 3) | PAL_OW_BROWN, PERSONTYPE_TRAINER, 3, TrainerHikerNOland, EVENT_FAST_SHIP_PASSENGERS_FIRST_TRIP
 	person_event SPRITE_SAILOR, 26, 4, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, (1 << 3) | PAL_OW_BLUE, PERSONTYPE_SCRIPT, 0, SailorScript_0x755f1, EVENT_FAST_SHIP_CABINS_NNW_NNE_NE_SAILOR
 	person_event SPRITE_GENTLEMAN, 30, 7, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, (1 << 3) | PAL_OW_BLUE, PERSONTYPE_TRAINER, 1, TrainerGentlemanEdward, EVENT_FAST_SHIP_PASSENGERS_EASTBOUND
 	person_event SPRITE_PHARMACIST, 30, 2, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, (1 << 3) | PAL_OW_GREEN, PERSONTYPE_TRAINER, 4, TrainerBurglarCorey, EVENT_FAST_SHIP_PASSENGERS_WESTBOUND

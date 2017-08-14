@@ -280,7 +280,7 @@ BattleText_EnemySentOut: ; 0x80af8
 	done
 ; 0x80b0b
 
-BattleText_TheresNoWillToBattle: ; 0x80b0b
+BattleText_TheresNOWillToBattle: ; 0x80b0b
 	text "There's no will to"
 	line "battle!"
 	prompt
@@ -297,8 +297,8 @@ BattleText_CantEscape2: ; 0x80b3b
 	prompt
 ; 0x80b49
 
-BattleText_TheresNoEscapeFromTrainerBattle: ; 0x80b49
-	text "No! There's no"
+BattleText_TheresNOEscapeFromTrainerBattle: ; 0x80b49
+	text "NO! There's no"
 	line "running from a"
 	cont "trainer battle!"
 	prompt
@@ -365,7 +365,7 @@ BattleText_PkmnCantBeRecalled: ; 0x80c22
 	prompt
 ; 0x80c39
 
-BattleText_TheresNoPPLeftForThisMove: ; 0x80c39
+BattleText_TheresNOPPLeftForThisMove: ; 0x80c39
 	text "There's no PP left"
 	line "for this move!"
 	prompt
@@ -377,7 +377,7 @@ BattleText_TheMoveIsDisabled: ; 0x80c5b
 	prompt
 ; 0x80c72
 
-BattleText_PkmnHasNoMovesLeft: ; 0x80c72
+BattleText_PkmnHasNOMovesLeft: ; 0x80c72
 	text_from_ram BattleMonNick
 	text ""
 	line "has no moves left!"
@@ -446,7 +446,7 @@ MustRechargeText: ; 0x80d27
 	prompt
 ; 0x80d39
 
-DisabledNoMoreText: ; 0x80d39
+DisabledNOMoreText: ; 0x80d39
 	text "<USER>'s"
 	line "disabled no more!"
 	prompt
@@ -464,7 +464,7 @@ HurtItselfText: ; 0x80d5f
 	prompt
 ; 0x80d81
 
-ConfusedNoMoreText: ; 0x80d81
+ConfusedNOMoreText: ; 0x80d81
 	text "<USER>'s"
 	line "confused no more!"
 	prompt
@@ -634,13 +634,13 @@ IgnoredSleepingText: ; 0x80f7b
 	prompt
 ; 0x80f99
 
-NoPPLeftText: ; 0x80f99
+NOPPLeftText: ; 0x80f99
 	text "But no PP is left"
 	line "for the move!"
 	prompt
 ; 0x80fba
 
-HasNoPPLeftText: ; 0x80fba
+HasNOPPLeftText: ; 0x80fba
 	text "<USER>"
 	line "has no PP left for"
 	cont "@"
@@ -715,7 +715,7 @@ SuperEffectiveText: ; 0x810aa
 	prompt
 ; 0x810c1
 
-NotVeryEffectiveText: ; 0x810c1
+NOtVeryEffectiveText: ; 0x810c1
 	text "It's not very"
 	line "effective…"
 	prompt
@@ -1023,7 +1023,7 @@ ReflectEffectText: ; 0x814c7
 	prompt
 ; 0x814d9
 
-NothingHappenedText: ; 0x814d9
+NOthingHappenedText: ; 0x814d9
 	text "But nothing"
 	line "happened."
 	prompt
@@ -1106,7 +1106,7 @@ StoleText: ; 0x815da
 	prompt
 ; 0x815f7
 
-CantEscapeNowText: ; 0x815f7
+CantEscapeNOwText: ; 0x815f7
 	text "<TARGET>"
 	line "can't escape now!"
 	prompt

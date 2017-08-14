@@ -328,7 +328,7 @@ UnknownText_0x1a05c3:
 	text "You're amazing,"
 	line "<PLAYER>!"
 
-	para "No wonder #mon"
+	para "NO wonder #mon"
 	line "gravitate to you."
 
 	para "I get it now."

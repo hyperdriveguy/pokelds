@@ -6,13 +6,13 @@ EvolutionAnimation: ; 4e5e1
 	push af
 	ld a, [rOBP0]
 	push af
-	ld a, [BaseDexNo]
+	ld a, [BaseDexNO]
 	push af
 
 	call .EvolutionAnimation
 
 	pop af
-	ld [BaseDexNo], a
+	ld [BaseDexNO], a
 	pop af
 	ld [rOBP0], a
 	pop af

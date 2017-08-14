@@ -80,7 +80,7 @@ SwimmerfLoriSeenText:
 	done
 
 SwimmerfLoriBeatenText:
-	text "No!"
+	text "NO!"
 	done
 
 UnknownText_0x1ace15:

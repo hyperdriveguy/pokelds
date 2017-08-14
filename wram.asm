@@ -34,7 +34,7 @@ wCurTrackDuty:: ds 1
 wCurTrackIntensity:: ds 1
 wCurTrackFrequency:: dw
 wc296:: ds 1 ; BCD value, dummied out
-wCurNoteDuration:: ds 1 ; used in MusicE0 and LoadNote
+wCurNOteDuration:: ds 1 ; used in MusicE0 and LoadNOte
 
 CurMusicByte:: ; c298
 	ds 1
@@ -69,18 +69,18 @@ MusicIDHi:: ; c29e
 	ds 1
 MusicBank:: ; c29f
 	ds 1
-NoiseSampleAddress::
-NoiseSampleAddressLo:: ; c2a0
+NOiseSampleAddress::
+NOiseSampleAddressLo:: ; c2a0
 	ds 1
-NoiseSampleAddressHi:: ; c2a1
+NOiseSampleAddressHi:: ; c2a1
 	ds 1
-wNoiseSampleDelay:: ; noise delay? ; c2a2
+wNOiseSampleDelay:: ; noise delay? ; c2a2
 	ds 1
 ; c2a3
 	ds 1
-MusicNoiseSampleSet:: ; c2a4
+MusicNOiseSampleSet:: ; c2a4
 	ds 1
-SFXNoiseSampleSet:: ; c2a5
+SFXNOiseSampleSet:: ; c2a5
 	ds 1
 Danger:: ; c2a6
 ; bit 7: on/off
@@ -384,7 +384,7 @@ OTClassName:: ds NAME_LENGTH+2 ; c656
 CurOTMon:: ; c663
 	ds 1
 
-wBattleParticipantsNotFainted::
+wBattleParticipantsNOtFainted::
 ; Bit array.  Bits 0 - 5 correspond to party members 1 - 6.
 ; Bit set if the mon appears in battle.
 ; Bit cleared if the mon faints.
@@ -1855,8 +1855,8 @@ wPrevMapGroup:: ds 1
 wPrevMapNumber:: ds 1
 ; d14c
 
-wPlayerBGMapOffsetX:: ds 1 ; used in FollowNotExact; unit is pixels
-wPlayerBGMapOffsetY:: ds 1 ; used in FollowNotExact; unit is pixels
+wPlayerBGMapOffsetX:: ds 1 ; used in FollowNOtExact; unit is pixels
+wPlayerBGMapOffsetY:: ds 1 ; used in FollowNOtExact; unit is pixels
 
 ; Player movement
 wPlayerStepVectorX:: ds 1   ; d14e
@@ -1917,24 +1917,24 @@ MapEventHeaderPointer:: ; d1a6
 ; bit set
 MapConnections:: ; d1a8
 	ds 1
-NorthMapConnection:: ; d1a9
-NorthConnectedMapGroup:: ; d1a9
+NOrthMapConnection:: ; d1a9
+NOrthConnectedMapGroup:: ; d1a9
 	ds 1
-NorthConnectedMapNumber:: ; d1aa
+NOrthConnectedMapNumber:: ; d1aa
 	ds 1
-NorthConnectionStripPointer:: ; d1ab
+NOrthConnectionStripPointer:: ; d1ab
 	ds 2
-NorthConnectionStripLocation:: ; d1ad
+NOrthConnectionStripLocation:: ; d1ad
 	ds 2
-NorthConnectionStripLength:: ; d1af
+NOrthConnectionStripLength:: ; d1af
 	ds 1
-NorthConnectedMapWidth:: ; d1b0
+NOrthConnectedMapWidth:: ; d1b0
 	ds 1
-NorthConnectionStripYOffset:: ; d1b1
+NOrthConnectionStripYOffset:: ; d1b1
 	ds 1
-NorthConnectionStripXOffset:: ; d1b2
+NOrthConnectionStripXOffset:: ; d1b2
 	ds 1
-NorthConnectionWindow:: ; d1b3
+NOrthConnectionWindow:: ; d1b3
 	ds 2
 
 SouthMapConnection:: ; d1b5
@@ -2123,7 +2123,7 @@ UnownLetter:: ; d234
 wMoveSelectionMenuType:: ds 1
 
 CurBaseData:: ; d236
-BaseDexNo:: ; d236
+BaseDexNO:: ; d236
 	ds 2
 BaseStats:: ; d237
 BaseHP:: ; d237
@@ -2874,7 +2874,7 @@ wDaycareLady:: ; df2c
 
 wStepsToEgg:: ; df2d
 	ds 1
-wBreedMotherOrNonDitto:: ; df2e
+wBreedMotherOrNOnDitto:: ; df2e
 ;  z: yes
 ; nz: no
 	ds 1

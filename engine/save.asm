@@ -42,7 +42,7 @@ ChangeBoxSaveGame: ; 14a83 (5:4a83)
 	push de
 	ld hl, Text_SaveOnBoxSwitch
 	call MenuTextBox
-	call YesNoBox
+	call YesNOBox
 	call ExitMenu
 	jr c, .refused
 	call AskOverwriteSaveFile
@@ -122,7 +122,7 @@ MovePkmnWOMail_InsertMon_SaveGame: ; 14ad5
 StartMovePkmnWOMail_SaveGame: ; 14b34
 	ld hl, Text_SaveOnMovePkmnWOMail
 	call MenuTextBox
-	call YesNoBox
+	call YesNOBox
 	call ExitMenu
 	jr c, .refused
 	call AskOverwriteSaveFile
@@ -212,7 +212,7 @@ SaveTheGame_yesorno: ; 14baf
 	call MapTextbox
 	call LoadMenuTextBox
 	lb bc, 0, 7
-	call PlaceYesNoBox
+	call PlaceYesNOBox
 	ld a, [wMenuCursorY]
 	dec a
 	call CloseWindow
@@ -517,7 +517,7 @@ SaveOptions: ; 14dbb
 	ld bc, OptionsEnd - Options
 	call CopyBytes
 	ld a, [Options]
-	and $ff ^ (1 << No_TEXT_SCROLL)
+	and $ff ^ (1 << NO_TEXT_SCROLL)
 	ld [sOptions], a
 	jp CloseSRAM
 ; 14dd7
@@ -667,7 +667,7 @@ TryLoadSaveFile: ; 14ea5 (5:4ea5)
 .corrupt
 	ld a, [Options]
 	push af
-	set No_TEXT_SCROLL, a
+	set NO_TEXT_SCROLL, a
 	ld [Options], a
 	ld hl, Text_SaveFileCorrupted
 	call PrintText

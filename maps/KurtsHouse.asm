@@ -74,7 +74,7 @@ KurtScript_0x18e178:
 	writetext UnknownText_0x18e615
 	buttonsound
 	verbosegiveitem LURE_BALL
-	iffalse .NoRoomForBall
+	iffalse .NORoomForBall
 	setevent EVENT_KURT_GAVE_YOU_LURE_BALL
 .GotLureBall:
 	checkevent EVENT_GAVE_KURT_APRICORNS
@@ -95,7 +95,7 @@ KurtScript_0x18e178:
 	iftrue .GiveLoveBall
 	checkevent EVENT_CAN_GIVE_GS_BALL_TO_KURT
 	iftrue .CanGiveGSBallToKurt
-.NoGSBall:
+.NOGSBall:
 	checkevent EVENT_RECEIVED_BALLS_FROM_KURT
 	iftrue .CheckApricorns
 	checkevent EVENT_DRAGON_SHRINE_QUESTION_2
@@ -190,7 +190,7 @@ KurtScript_0x18e178:
 .ThatTurnedOutGreat:
 	writetext UnknownText_0x18e82a
 	waitbutton
-.NoRoomForBall:
+.NORoomForBall:
 	closetext
 	end
 
@@ -200,7 +200,7 @@ KurtScript_0x18e178:
 	writetext UnknownText_0x18e7fb
 	buttonsound
 	verbosegiveitem2 LEVEL_BALL, VAR_KURT_APRICORNS
-	iffalse .NoRoomForBall
+	iffalse .NORoomForBall
 	clearevent EVENT_GAVE_KURT_RED_APRICORN
 	jump ._ThatTurnedOutGreat
 
@@ -210,7 +210,7 @@ KurtScript_0x18e178:
 	writetext UnknownText_0x18e7fb
 	buttonsound
 	verbosegiveitem2 LURE_BALL, VAR_KURT_APRICORNS
-	iffalse .NoRoomForBall
+	iffalse .NORoomForBall
 	clearevent EVENT_GAVE_KURT_BLU_APRICORN
 	jump ._ThatTurnedOutGreat
 
@@ -220,7 +220,7 @@ KurtScript_0x18e178:
 	writetext UnknownText_0x18e7fb
 	buttonsound
 	verbosegiveitem2 MOON_BALL, VAR_KURT_APRICORNS
-	iffalse .NoRoomForBall
+	iffalse .NORoomForBall
 	clearevent EVENT_GAVE_KURT_YLW_APRICORN
 	jump ._ThatTurnedOutGreat
 
@@ -230,7 +230,7 @@ KurtScript_0x18e178:
 	writetext UnknownText_0x18e7fb
 	buttonsound
 	verbosegiveitem2 FRIEND_BALL, VAR_KURT_APRICORNS
-	iffalse .NoRoomForBall
+	iffalse .NORoomForBall
 	clearevent EVENT_GAVE_KURT_GRN_APRICORN
 	jump ._ThatTurnedOutGreat
 
@@ -240,7 +240,7 @@ KurtScript_0x18e178:
 	writetext UnknownText_0x18e7fb
 	buttonsound
 	verbosegiveitem2 FAST_BALL, VAR_KURT_APRICORNS
-	iffalse .NoRoomForBall
+	iffalse .NORoomForBall
 	clearevent EVENT_GAVE_KURT_WHT_APRICORN
 	jump ._ThatTurnedOutGreat
 
@@ -250,7 +250,7 @@ KurtScript_0x18e178:
 	writetext UnknownText_0x18e7fb
 	buttonsound
 	verbosegiveitem2 HEAVY_BALL, VAR_KURT_APRICORNS
-	iffalse .NoRoomForBall
+	iffalse .NORoomForBall
 	clearevent EVENT_GAVE_KURT_BLK_APRICORN
 	jump ._ThatTurnedOutGreat
 
@@ -260,7 +260,7 @@ KurtScript_0x18e178:
 	writetext UnknownText_0x18e7fb
 	buttonsound
 	verbosegiveitem2 LOVE_BALL, VAR_KURT_APRICORNS
-	iffalse .NoRoomForBall
+	iffalse .NORoomForBall
 	clearevent EVENT_GAVE_KURT_PNK_APRICORN
 	jump ._ThatTurnedOutGreat
 
@@ -268,7 +268,7 @@ KurtScript_0x18e178:
 	checkevent EVENT_GAVE_GS_BALL_TO_KURT
 	iftrue .GaveGSBallToKurt
 	checkitem GS_BALL
-	iffalse .NoGSBall
+	iffalse .NOGSBall
 	writetext UnknownText_0x18e8ab
 	waitbutton
 	closetext
@@ -279,7 +279,7 @@ KurtScript_0x18e178:
 
 .GaveGSBallToKurt:
 	checkflag ENGINE_KURT_MAKING_BALLS
-	iffalse .NotMakingBalls
+	iffalse .NOtMakingBalls
 	writetext UnknownText_0x18e934
 	waitbutton
 	writetext UnknownText_0x18e949
@@ -287,7 +287,7 @@ KurtScript_0x18e178:
 	closetext
 	end
 
-.NotMakingBalls:
+.NOtMakingBalls:
 	writetext UnknownText_0x18e95c
 	waitbutton
 	closetext
@@ -321,7 +321,7 @@ KurtScript_0x18e3bd:
 	faceplayer
 	opentext
 	checkevent EVENT_GAVE_GS_BALL_TO_KURT
-	iftrue KurtScript_ImCheckingItNow
+	iftrue KurtScript_ImCheckingItNOw
 KurtMakingBallsScript:
 	checkevent EVENT_BUGGING_KURT_TOO_MUCH
 	iffalse Script_FirstTimeBuggingKurt
@@ -339,7 +339,7 @@ Script_FirstTimeBuggingKurt:
 	setevent EVENT_BUGGING_KURT_TOO_MUCH
 	end
 
-KurtScript_ImCheckingItNow:
+KurtScript_ImCheckingItNOw:
 	writetext UnknownText_0x18e934
 	waitbutton
 	spriteface KURTSHOUSE_KURT2, UP
@@ -566,7 +566,7 @@ UnknownText_0x18e82a:
 	done
 
 UnknownText_0x18e863:
-	text "KURT: Now that my"
+	text "KURT: NOw that my"
 	line "granddaughter is"
 
 	para "helping me, I can"

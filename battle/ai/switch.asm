@@ -464,7 +464,7 @@ FindEnemyMonsWithASuperEffectiveMove: ; 34aa7
 	ld b, NUM_MOVES
 	ld c, 0
 .loop3
-	; if move is None: break
+	; if move is NOne: break
 	ld a, [hli]
 	and a
 	push hl

@@ -184,7 +184,7 @@ CheckOwnMon: ; 0x4a7ba
 
 ; inputs:
 ; hl, pointer to PartyMonNSpecies
-; bc, pointer to PartyMonNoT
+; bc, pointer to PartyMonNOT
 ; ScriptVar should contain the species we're looking for
 
 ; outputs:

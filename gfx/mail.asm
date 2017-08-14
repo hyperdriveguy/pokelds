@@ -589,10 +589,10 @@ LoadMusicMailGFX: ; b9710
 	xor a
 	ld bc, 1 tiles
 	call ByteFill
-	ld de, MusicMailLargeNoteGFX
+	ld de, MusicMailLargeNOteGFX
 	ld c, 3 * 8
 	call LoadMailGFX_Color1
-	ld de, MusicMailSmallNoteGFX
+	ld de, MusicMailSmallNOteGFX
 	ld c, 1 * 8
 	call LoadMailGFX_Color1
 
@@ -950,7 +950,7 @@ INCBIN "gfx/mail/0b9936.1bpp"
 MorphMailBorderCorner2GFX: ; b993e
 INCBIN "gfx/mail/0b993e.1bpp"
 
-MusicMailSmallNoteGFX: ; b9946
+MusicMailSmallNOteGFX: ; b9946
 INCBIN "gfx/mail/0b9946.1bpp"
 
 SurfMailWaveGFX: ; b994e
@@ -1032,7 +1032,7 @@ FlowerMailSmallFlowerGFX: ; b9cde
 ; indirectly referenced
 INCBIN "gfx/mail/0b9cde.1bpp"
 
-MusicMailLargeNoteGFX: ; b9cfe
+MusicMailLargeNOteGFX: ; b9cfe
 INCBIN "gfx/mail/0b9cfe.1bpp"
 
 MailCloudGFX: ; b9d16

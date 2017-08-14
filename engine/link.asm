@@ -92,7 +92,7 @@ TimeCapsule: ; 2805d
 	ld [rIE], a
 	call Link_CopyRandomNumbers
 	ld hl, OTPlayerName
-	call Link_FindFirstNonControlCharacter_SkipZero
+	call Link_FindFirstNOnControlCharacter_SkipZero
 	push hl
 	ld bc, NAME_LENGTH
 	add hl, bc
@@ -246,7 +246,7 @@ Gen2ToGen2LinkComms: ; 28177
 	call PlayMusic
 	call Link_CopyRandomNumbers
 	ld hl, OTPlayerName
-	call Link_FindFirstNonControlCharacter_SkipZero
+	call Link_FindFirstNOnControlCharacter_SkipZero
 	ld de, wLinkData
 	ld bc, $1b9
 	call Link_CopyOTData
@@ -837,7 +837,7 @@ Link_PrepPartyData_Gen2: ; 28595
 	call CopyBytes
 	; de = $c9bf
 
-; Okay, we did all that.  Now, are we in the trade center?
+; Okay, we did all that.  NOw, are we in the trade center?
 	ld a, [wLinkMode]
 	cp LINK_TRADECENTER
 	ret nz
@@ -1167,7 +1167,7 @@ Link_CopyRandomNumbers: ; 287ab
 	cp $2
 	ret z
 	ld hl, EnemyMonSpecies
-	call Link_FindFirstNonControlCharacter_AllowZero
+	call Link_FindFirstNOnControlCharacter_AllowZero
 	ld de, LinkBattleRNs
 	ld c, 10
 .loop
@@ -1183,7 +1183,7 @@ Link_CopyRandomNumbers: ; 287ab
 	ret
 ; 287ca
 
-Link_FindFirstNonControlCharacter_SkipZero: ; 287ca
+Link_FindFirstNOnControlCharacter_SkipZero: ; 287ca
 .loop
 	ld a, [hli]
 	and a
@@ -1196,7 +1196,7 @@ Link_FindFirstNonControlCharacter_SkipZero: ; 287ca
 	ret
 ; 287d8
 
-Link_FindFirstNonControlCharacter_AllowZero: ; 287d8
+Link_FindFirstNOnControlCharacter_AllowZero: ; 287d8
 .loop
 	ld a, [hli]
 	cp $fd

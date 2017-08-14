@@ -496,4 +496,4 @@ INCLUDE "maps/Route28FamousSpeechHouse.asm"
 SECTION "Map Scripts 25", ROMX
 
 INCLUDE "maps/SilverCaveOutside.asm"
-INCLUDE "maps/Route10North.asm"
+INCLUDE "maps/Route10NOrth.asm"

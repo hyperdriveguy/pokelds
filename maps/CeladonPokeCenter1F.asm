@@ -31,12 +31,12 @@ CeladonEusine:
 	buttonsound
 	writebyte SUICUNE
 	special SpecialMonCheck
-	iffalse .NoSuicune
+	iffalse .NOSuicune
 	special SpecialBeastsCheck
 	iftrue .HoOh
-	writetext NoBeastsText
+	writetext NOBeastsText
 	waitbutton
-.NoSuicune:
+.NOSuicune:
 	closetext
 	end
 
@@ -123,7 +123,7 @@ EusineLeavesCeladonText:
 	line "you, <PLAYER>!"
 	done
 
-NoBeastsText:
+NOBeastsText:
 	text "Oh, by the way,"
 	line "<PLAYER>."
 

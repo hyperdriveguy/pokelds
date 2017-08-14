@@ -72,9 +72,9 @@ WarehouseEntrance_MapScriptHeader:
 .Monday:
 	disappear WAREHOUSEENTRANCE_GRAMPS
 	checkmorn
-	iffalse .NotMondayMorning
+	iffalse .NOtMondayMorning
 	appear WAREHOUSEENTRANCE_GRAMPS
-.NotMondayMorning:
+.NOtMondayMorning:
 	disappear WAREHOUSEENTRANCE_SUPER_NERD5
 	disappear WAREHOUSEENTRANCE_SUPER_NERD6
 	disappear WAREHOUSEENTRANCE_GRANNY
@@ -202,7 +202,7 @@ OlderHaircutBrotherScript:
 	yesorno
 	iffalse .Refused
 	checkmoney $0, 500
-	if_equal $2, .NotEnoughMoney
+	if_equal $2, .NOtEnoughMoney
 	writetext UnknownText_0x7c69a
 	buttonsound
 	special Special_YoungerHaircutBrother
@@ -257,7 +257,7 @@ OlderHaircutBrotherScript:
 	closetext
 	end
 
-.NotEnoughMoney:
+.NOtEnoughMoney:
 	writetext UnknownText_0x7c709
 	waitbutton
 	closetext
@@ -285,7 +285,7 @@ YoungerHaircutBrotherScript:
 	yesorno
 	iffalse .Refused
 	checkmoney $0, 300
-	if_equal $2, .NotEnoughMoney
+	if_equal $2, .NOtEnoughMoney
 	writetext UnknownText_0x7c7f1
 	buttonsound
 	special Special_OlderHaircutBrother
@@ -340,7 +340,7 @@ YoungerHaircutBrotherScript:
 	closetext
 	end
 
-.NotEnoughMoney:
+.NOtEnoughMoney:
 	writetext UnknownText_0x7c85b
 	waitbutton
 	closetext
@@ -609,7 +609,7 @@ UnknownText_0x7c82a:
 	done
 
 UnknownText_0x7c842:
-	text "No? "
+	text "NO? "
 	line "How disappointing!"
 	done
 
@@ -650,7 +650,7 @@ UnknownText_0x7c904:
 	done
 
 UnknownText_0x7c91a:
-	text "No ENTRY BEYOND"
+	text "NO ENTRY BEYOND"
 	line "THIS POINT"
 	done
 

@@ -9,7 +9,7 @@
 ; 	Songs V
 
 ; e906e
-	dba Music_Nothing ; 0xe91a3
+	dba Music_NOthing ; 0xe91a3
 	dba Music_TitleScreen ; 0xeb808
 	dba Music_Route1 ; 0xec000
 	dba Music_Route3 ; 0xec2ca

@@ -166,7 +166,7 @@ EvosAttacksPointers:: ; 0x425b1
 	dw SentretEvosAttacks
 	dw FurretEvosAttacks
 	dw HoothootEvosAttacks
-	dw NoctowlEvosAttacks
+	dw NOctowlEvosAttacks
 	dw LedybaEvosAttacks
 	dw LedianEvosAttacks
 	dw SpinarakEvosAttacks

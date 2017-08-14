@@ -141,7 +141,7 @@ Bird_keeperBretSeenText:
 
 Bird_keeperBretBeatenText:
 	text "Shoot!"
-	line "Not good enough!"
+	line "NOt good enough!"
 	done
 
 UnknownText_0x1a2662:
@@ -180,12 +180,12 @@ Route13TrainerTipsText:
 Route13SignText:
 	text "ROUTE 13"
 
-	para "NoRTH TO SILENCE"
+	para "NORTH TO SILENCE"
 	line "BRIDGE"
 	done
 
 Route13DirectionsSignText:
-	text "NoRTH TO LAVENDER"
+	text "NORTH TO LAVENDER"
 	line "TOWN"
 
 	para "WEST TO FUCHSIA"

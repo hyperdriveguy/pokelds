@@ -102,7 +102,7 @@ GetTypeName: ; 50964
 
 
 TypeNames: ; 5097b
-	dw Normal
+	dw NOrmal
 	dw Fighting
 	dw Flying
 	dw Poison
@@ -122,7 +122,7 @@ TypeNames: ; 5097b
 	dw Fairy
 	dw CurseType
 
-Normal:    db "NoRMAL@"
+NOrmal:    db "NORMAL@"
 Fighting:  db "FIGHTING@"
 Flying:    db "FLYING@"
 Poison:    db "POISON@"

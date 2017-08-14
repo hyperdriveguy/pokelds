@@ -273,7 +273,7 @@ endr
 	ld de, wMonOrItemNameBuffer
 	ld bc, PKMN_NAME_LENGTH
 	call CopyBytes
-	; Now that we've chosen our wild Pokemon,
+	; NOw that we've chosen our wild Pokemon,
 	; let's recover the map index info and get its name.
 	pop bc
 	call GetWorldMapLocation
@@ -1203,7 +1203,7 @@ PeoplePlaces4: ; People
 	ld a, PLACES_AND_PEOPLE_5
 	jp NextRadioLine
 
-.E4Names:          db WILL, BRUNo, KAREN, KOGA, CHAMPION
+.E4Names:          db WILL, BRUNO, KAREN, KOGA, CHAMPION
 .KantoLeaderNames: db BROCK, MISTY, LT_SURGE, ERIKA, JANINE, SABRINA, BLAINE, BLUE
 .MiscNames:        db RIVAL1, POKEMON_PROF, CAL, RIVAL2, RED
                    db -1
@@ -1808,8 +1808,8 @@ BuenasPassword19:
 BuenasPassword20:
 	ld a, [hBGMapMode]
 	push af
-	callba NoRadioMusic
-	callba NoRadioName
+	callba NORadioMusic
+	callba NORadioName
 	pop af
 	ld [hBGMapMode], a
 	ld hl, WeeklyFlags

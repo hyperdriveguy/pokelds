@@ -98,7 +98,7 @@ RadioTower5FRocketBossTrigger:
 	waitbutton
 	closetext
 	special Special_FadeBlackQuickly
-	special Special_ReloadSpritesNoPalettes
+	special Special_ReloadSpritesNOPalettes
 	disappear RADIOTOWER5F_ROCKET
 	disappear RADIOTOWER5F_ROCKET_GIRL
 	pause 15
@@ -114,7 +114,7 @@ RadioTower5FRocketBossTrigger:
 	clearevent EVENT_GOLDENROD_CITY_CIVILIANS
 	clearevent EVENT_RADIO_TOWER_CIVILIANS_AFTER
 	setevent EVENT_BLACKTHORN_CITY_SUPER_NERD_BLOCKS_GYM
-	clearevent EVENT_BLACKTHORN_CITY_SUPER_NERD_DOES_NoT_BLOCK_GYM
+	clearevent EVENT_BLACKTHORN_CITY_SUPER_NERD_DOES_NOT_BLOCK_GYM
 	special PlayMapMusic
 	disappear RADIOTOWER5F_DIRECTOR
 	moveperson RADIOTOWER5F_DIRECTOR, $c, $0
@@ -302,7 +302,7 @@ RadioTower5FRocketBossBeforeText:
 	done
 
 RadioTower5FRocketBossWinText:
-	text "No! Forgive me,"
+	text "NO! Forgive me,"
 	line "GIOVANNI!"
 	done
 

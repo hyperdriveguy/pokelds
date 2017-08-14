@@ -31,7 +31,7 @@ JOYPAD   EQU 4
 ; OAM attribute flags
 OAM_PALETTE   EQU %111
 OAM_TILE_BANK EQU 3
-OAM_OBP_NUM   EQU 4 ; Non CGB Mode Only
+OAM_OBP_NUM   EQU 4 ; NOn CGB Mode Only
 OAM_X_FLIP    EQU 5
 OAM_Y_FLIP    EQU 6
 OAM_PRIORITY  EQU 7 ; 0: OBJ above BG, 1: OBJ behind BG (colors 1-3)
@@ -100,9 +100,9 @@ rSCX        EQU $ff43 ; Scroll X (R/W)
 rLY         EQU $ff44 ; LCDC Y-Coordinate (R)
 rLYC        EQU $ff45 ; LY Compare (R/W)
 rDMA        EQU $ff46 ; DMA Transfer and Start Address (W)
-rBGP        EQU $ff47 ; BG Palette Data (R/W) - Non CGB Mode Only
-rOBP0       EQU $ff48 ; Object Palette 0 Data (R/W) - Non CGB Mode Only
-rOBP1       EQU $ff49 ; Object Palette 1 Data (R/W) - Non CGB Mode Only
+rBGP        EQU $ff47 ; BG Palette Data (R/W) - NOn CGB Mode Only
+rOBP0       EQU $ff48 ; Object Palette 0 Data (R/W) - NOn CGB Mode Only
+rOBP1       EQU $ff49 ; Object Palette 1 Data (R/W) - NOn CGB Mode Only
 rWY         EQU $ff4a ; Window Y Position (R/W)
 rWX         EQU $ff4b ; Window X Position minus 7 (R/W)
 rLCDMODE    EQU $ff4c
@@ -119,12 +119,12 @@ rBGPI       EQU $ff68 ; CGB Mode Only - Background Palette Index
 rBGPD       EQU $ff69 ; CGB Mode Only - Background Palette Data
 rOBPI       EQU $ff6a ; CGB Mode Only - Sprite Palette Index
 rOBPD       EQU $ff6b ; CGB Mode Only - Sprite Palette Data
-rUNKNoWN1   EQU $ff6c ; (FEh) Bit 0 (Read/Write) - CGB Mode Only
+rUNKNOWN1   EQU $ff6c ; (FEh) Bit 0 (Read/Write) - CGB Mode Only
 rSVBK       EQU $ff70 ; CGB Mode Only - WRAM Bank
-rUNKNoWN2   EQU $ff72 ; (00h) - Bit 0-7 (Read/Write)
-rUNKNoWN3   EQU $ff73 ; (00h) - Bit 0-7 (Read/Write)
-rUNKNoWN4   EQU $ff74 ; (00h) - Bit 0-7 (Read/Write) - CGB Mode Only
-rUNKNoWN5   EQU $ff75 ; (8Fh) - Bit 4-6 (Read/Write)
-rUNKNoWN6   EQU $ff76 ; (00h) - Always 00h (Read Only)
-rUNKNoWN7   EQU $ff77 ; (00h) - Always 00h (Read Only)
+rUNKNOWN2   EQU $ff72 ; (00h) - Bit 0-7 (Read/Write)
+rUNKNOWN3   EQU $ff73 ; (00h) - Bit 0-7 (Read/Write)
+rUNKNOWN4   EQU $ff74 ; (00h) - Bit 0-7 (Read/Write) - CGB Mode Only
+rUNKNOWN5   EQU $ff75 ; (8Fh) - Bit 4-6 (Read/Write)
+rUNKNOWN6   EQU $ff76 ; (00h) - Always 00h (Read Only)
+rUNKNOWN7   EQU $ff77 ; (00h) - Always 00h (Read Only)
 rIE         EQU $ffff ; Interrupt Enable (R/W)

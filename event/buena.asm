@@ -92,7 +92,7 @@ SpecialBuenaPrize: ; 8afd4
 	call GetItemName
 	ld hl, .Text_IsThatRight
 	call BuenaPrintText
-	call YesNoBox
+	call YesNOBox
 	jr c, .loop
 
 	ld a, [MenuSelectionQuantity]
@@ -122,11 +122,11 @@ SpecialBuenaPrize: ; 8afd4
 	jr .Purchase
 
 .InsufficientBalance:
-	ld hl, .Text_NotEnoughPoints
+	ld hl, .Text_NOtEnoughPoints
 	jr .print
 
 .BagFull:
-	ld hl, .Text_NoRoom
+	ld hl, .Text_NORoom
 	jr .print
 
 .Purchase:
@@ -165,13 +165,13 @@ SpecialBuenaPrize: ; 8afd4
 	db "@"
 ; 0x8b081
 
-.Text_NotEnoughPoints: ; 0x8b081
+.Text_NOtEnoughPoints: ; 0x8b081
 	; You don't have enough points.
 	text_jump UnknownText_0x1c58e0
 	db "@"
 ; 0x8b086
 
-.Text_NoRoom: ; 0x8b086
+.Text_NORoom: ; 0x8b086
 	; You have no room for it.
 	text_jump UnknownText_0x1c58ff
 	db "@"

@@ -39,7 +39,7 @@
 	const MUSIC_CREDITS                      ; 24
 	const MUSIC_AZALEA_TOWN                  ; 25
 	const MUSIC_CHERRYGROVE_CITY             ; 26
-	const MUSIC_KIMONo_ENCOUNTER             ; 27
+	const MUSIC_KIMONO_ENCOUNTER             ; 27
 	const MUSIC_UNION_CAVE                   ; 28
 	const MUSIC_JOHTO_WILD_BATTLE            ; 29
 	const MUSIC_JOHTO_TRAINER_BATTLE         ; 2a
@@ -111,22 +111,22 @@
 	const MUSIC_NUGGET_BRIDGE                ; 68
 	const MUSIC_CERULEAN                     ; 69
 	const MUSIC_CINNABAR                     ; 6a
-	const MUSIC_SINNoH_WILD                  ; 6b
+	const MUSIC_SINNOH_WILD                  ; 6b
 	const MUSIC_ROUTE_225                    ; 6c
 	const MUSIC_ROUTE_228                    ; 6d
-	const MUSIC_POKEMON_CENTER_SINNoH        ; 6e        
+	const MUSIC_POKEMON_CENTER_SINNOH        ; 6e        
 	const MUSIC_FOLLOW_ME                    ; 6f
-	const MUSIC_SINNoH_BIKE                  ; 70
-	const MUSIC_WIN_TRAINER_SINNoH           ; 71   
-	const MUSIC_WIN_POKE_SINNoH              ; 72
-	const MUSIC_SINNoH_SURFING               ; 73
+	const MUSIC_SINNOH_BIKE                  ; 70
+	const MUSIC_WIN_TRAINER_SINNOH           ; 71   
+	const MUSIC_WIN_POKE_SINNOH              ; 72
+	const MUSIC_SINNOH_SURFING               ; 73
 	const MUSIC_JOHTO_TRAINER_BATTLE_NIGHT   ; 74           
 	const MUSIC_ROUTE_205                    ; 75
-	const MUSIC_CHAMPION_BATTLE_SINNoH       ; 76       
+	const MUSIC_CHAMPION_BATTLE_SINNOH       ; 76       
 	const MUSIC_ROUTE_203                    ; 77
 	const MUSIC_ROUTE_209                    ; 78
 	const MUSIC_ROUTE_206                    ; 79
-	const MUSIC_CATCH_POKE_SINNoH            ; 7a  
+	const MUSIC_CATCH_POKE_SINNOH            ; 7a  
 	const MUSIC_ROUTE_210                    ; 7b
 
 ; Songs added by Hyperdriveguy	

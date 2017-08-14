@@ -95,7 +95,7 @@ endr
 	ld a, b
 	ld [hJoypadDown], a
 
-; Now that we have the input, we can do stuff with it.
+; NOw that we have the input, we can do stuff with it.
 
 ; For example, soft reset:
 	and A_BUTTON | B_BUTTON | SELECT | START
@@ -210,7 +210,7 @@ GetJoypad:: ; 984
 ; The current input is overwritten.
 	dec hl
 	dec hl
-	ld b, No_INPUT
+	ld b, NO_INPUT
 	jr .finishauto
 
 .next
@@ -223,7 +223,7 @@ GetJoypad:: ; 984
 
 .stopauto
 	call StopAutoInput
-	ld b, No_INPUT
+	ld b, NO_INPUT
 
 .finishauto
 	pop af

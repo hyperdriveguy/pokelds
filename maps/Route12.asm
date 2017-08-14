@@ -159,7 +159,7 @@ UnknownText_0x1a7238:
 Route12SignText:
 	text "ROUTE 12"
 
-	para "NoRTH TO LAVENDER"
+	para "NORTH TO LAVENDER"
 	line "TOWN"
 	done
 

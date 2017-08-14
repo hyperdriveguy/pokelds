@@ -104,10 +104,10 @@ LearnMove: ; 6508
 .cancel
 	ld hl, Text_StopLearning ; Stop learning <MOVE>?
 	call PrintText
-	call YesNoBox
+	call YesNOBox
 	jp c, .loop
 
-	ld hl, Text_DidNotLearn ; <MON> did not learn <MOVE>.
+	ld hl, Text_DidNOtLearn ; <MON> did not learn <MOVE>.
 	call PrintText
 	ld b, 0
 	ret
@@ -123,7 +123,7 @@ ForgetMove: ; 65d3
 	push hl
 	ld hl, Text_TryingToLearn
 	call PrintText
-	call YesNoBox
+	call YesNOBox
 	pop hl
 	ret c
 	ld bc, -NUM_MOVES
@@ -220,7 +220,7 @@ Text_StopLearning: ; 6675
 	db "@"
 ; 667a
 
-Text_DidNotLearn: ; 667a
+Text_DidNOtLearn: ; 667a
 ; <MON> did not learn <MOVE>.
 	text_jump UnknownText_0x1c56af
 	db "@"

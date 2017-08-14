@@ -8,7 +8,7 @@ SECTION "Credits", ROMX
 	const TETSUYA_WATANABE
 	const SHIGEKI_MORIMOTO
 	const SOUSUKE_TAMADA
-	const TAKENoRI_OOTA
+	const TAKENORI_OOTA
 	const KEN_SUGIMORI
 	const MOTOFUMI_FUJIWARA
 	const ATSUKO_NISHIDA
@@ -16,15 +16,15 @@ SECTION "Credits", ROMX
 	const SATOSHI_OOTA
 	const RENA_YOSHIKAWA
 	const JUN_OKUTANI
-	const HIRONoBU_YOSHIDA
+	const HIRONOBU_YOSHIDA
 	const ASUKA_IWASHITA
-	const GO_ICHINoSE
+	const GO_ICHINOSE
 	const MORIKAZU_AOKI
-	const KOHJI_NISHINo
+	const KOHJI_NISHINO
 	const KENJI_MATSUSHIMA
-	const TOSHINoBU_MATSUMIYA
+	const TOSHINOBU_MATSUMIYA
 	const SATORU_IWATA
-	const NoBUHIRO_SEYA
+	const NOBUHIRO_SEYA
 	const KAZUHITO_SEKINE
 	const TETSUJI_OOTA
 	const NCL_SUPER_MARIO_CLUB
@@ -32,7 +32,7 @@ SECTION "Credits", ROMX
 	const AKITO_MORI
 	const TAKAHIRO_HARADA
 	const TOHRU_HASHIMOTO
-	const NoBORU_MATSUMOTO
+	const NOBORU_MATSUMOTO
 	const TAKEHIRO_IZUSHI
 	const TAKASHI_KAWAGUCHI
 	const TSUNEKAZU_ISHIHARA
@@ -44,7 +44,7 @@ SECTION "Credits", ROMX
 	const KUNIMI_KAWAMURA
 	const HISASHI_SOGABE
 	const KEITA_KAGAYA
-	const YOSHINoRI_MATSUDA
+	const YOSHINORI_MATSUDA
 	const HITOMI_SATO
 	const TORU_OSAWA
 	const TAKAO_OHARA
@@ -54,16 +54,16 @@ SECTION "Credits", ROMX
 	const KEITA_NAKAMURA
 	const HIROTAKA_UEMURA
 	const HIROAKI_TAMURA
-	const NoRIAKI_SAKAGUCHI
+	const NORIAKI_SAKAGUCHI
 	const MIYUKI_SATO
-	const GAKUZI_NoMOTO
+	const GAKUZI_NOMOTO
 	const AI_MASHIMA
 	const MIKIHIRO_ISHIKAWA
 	const HIDEYUKI_HASHIMOTO
 	const SATOSHI_YAMATO
 	const SHIGERU_MIYAMOTO
 	const GAIL_TILDEN
-	const NoB_OGASAWARA
+	const NOB_OGASAWARA
 	const SETH_MCMAHILL
 	const HIROTO_ALEXANDER
 	const TERESA_LILLYGREN
@@ -74,7 +74,7 @@ SECTION "Credits", ROMX
 	const KAZUYOSHI_OSAWA
 	const KIMIKO_NAKAMICHI
 	const CREDIT_END
-	const CREDIT_UNKNoWN
+	const CREDIT_UNKNOWN
 	const STAFF
 	const DIRECTOR
 	const CODIRECTOR
@@ -834,14 +834,14 @@ CreditsScript: ; 10acb4
 	db       SOUSUKE_TAMADA, 1
 	db       HISASHI_SOGABE, 2
 	db         KEITA_KAGAYA, 3
-	db    YOSHINoRI_MATSUDA, 4
+	db    YOSHINORI_MATSUDA, 4
 
 	db CREDITS_WAIT, 12
 
 	db          PROGRAMMERS, 0
 	db     SHIGEKI_MORIMOTO, 1
 	db     TETSUYA_WATANABE, 2
-	db        TAKENoRI_OOTA, 3
+	db        TAKENORI_OOTA, 3
 
 	db CREDITS_WAIT, 12
 
@@ -854,7 +854,7 @@ CreditsScript: ; 10acb4
 	db         KEN_SUGIMORI, 1
 	db    MOTOFUMI_FUJIWARA, 2
 	db     SHIGEKI_MORIMOTO, 3
-	db     HIRONoBU_YOSHIDA, 4
+	db     HIRONOBU_YOSHIDA, 4
 	db         SATOSHI_OOTA, 5
 
 	db CREDITS_WAIT, 12
@@ -867,7 +867,7 @@ CreditsScript: ; 10acb4
 	db CREDITS_WAIT, 12
 
 	db    POKEMON_ANIMATION, 1
-	db     HIRONoBU_YOSHIDA, 2
+	db     HIRONOBU_YOSHIDA, 2
 	db          JUN_OKUTANI, 3
 
 	db CREDITS_WAIT, 12
@@ -881,7 +881,7 @@ CreditsScript: ; 10acb4
 	db CREDITS_SCENE, 1 ; Smoochum
 
 	db      GRAPHICS_DESIGN, 0
-	db     HIRONoBU_YOSHIDA, 1
+	db     HIRONOBU_YOSHIDA, 1
 	db          JUN_OKUTANI, 2
 	db       ASUKA_IWASHITA, 3
 	db     TETSUYA_WATANABE, 4
@@ -891,7 +891,7 @@ CreditsScript: ; 10acb4
 	db         CREDIT_MUSIC, 0
 	db       JUNICHI_MASUDA, 1
 	db        MORIKAZU_AOKI, 2
-	db          GO_ICHINoSE, 3
+	db          GO_ICHINOSE, 3
 
 	db CREDITS_WAIT, 12
 
@@ -905,7 +905,7 @@ CreditsScript: ; 10acb4
 	db          GAME_DESIGN, 0
 	db       JUNICHI_MASUDA, 1
 	db     SHIGEKI_MORIMOTO, 2
-	db        KOHJI_NISHINo, 3
+	db        KOHJI_NISHINO, 3
 
 	db CREDITS_WAIT, 12
 
@@ -918,25 +918,25 @@ CreditsScript: ; 10acb4
 
 	db        GAME_SCENARIO, 0
 	db       JUNICHI_MASUDA, 1
-	db        KOHJI_NISHINo, 2
-	db  TOSHINoBU_MATSUMIYA, 3
+	db        KOHJI_NISHINO, 2
+	db  TOSHINOBU_MATSUMIYA, 3
 	db     KENJI_MATSUSHIMA, 4
 
 	db CREDITS_WAIT, 12
 
 	db         POKEDEX_TEXT, 1
-	db  TOSHINoBU_MATSUMIYA, 2
+	db  TOSHINOBU_MATSUMIYA, 2
 
 	db CREDITS_WAIT, 12
 
 	db     TOOL_PROGRAMMING, 1
 	db       SOUSUKE_TAMADA, 2
-	db        TAKENoRI_OOTA, 3
+	db        TAKENORI_OOTA, 3
 
 	db CREDITS_WAIT, 12
 
 	db    PARAMETRIC_DESIGN, 1
-	db        KOHJI_NISHINo, 2
+	db        KOHJI_NISHINO, 2
 
 	db CREDITS_WAIT, 12
 
@@ -950,7 +950,7 @@ CreditsScript: ; 10acb4
 
 	db        SCRIPT_DESIGN, 1
 	db         TETSUJI_OOTA, 2
-	db        NoBUHIRO_SEYA, 3
+	db        NOBUHIRO_SEYA, 3
 
 	db CREDITS_WAIT, 12
 
@@ -962,8 +962,8 @@ CreditsScript: ; 10acb4
 
 	db           MAP_DESIGN, 0
 	db         TETSUJI_OOTA, 1
-	db        KOHJI_NISHINo, 2
-	db        NoBUHIRO_SEYA, 3
+	db        KOHJI_NISHINO, 2
+	db        NOBUHIRO_SEYA, 3
 
 	db CREDITS_WAIT, 12
 
@@ -1015,7 +1015,7 @@ CreditsScript: ; 10acb4
 	db CREDITS_WAIT, 12
 
 	db     TEXT_TRANSLATION, 1
-	db        NoB_OGASAWARA, 2
+	db        NOB_OGASAWARA, 2
 
 	db CREDITS_WAIT, 12
 
@@ -1040,7 +1040,7 @@ CreditsScript: ; 10acb4
 	db       KEITA_NAKAMURA, 1
 	db      HIROTAKA_UEMURA, 2
 	db       HIROAKI_TAMURA, 3
-	db    NoRIAKI_SAKAGUCHI, 4
+	db    NORIAKI_SAKAGUCHI, 4
 
 	db CREDITS_WAIT, 12
 
@@ -1059,7 +1059,7 @@ CreditsScript: ; 10acb4
 	db CREDITS_WAIT, 12
 
 	db       SPECIAL_THANKS, 0
-	db        GAKUZI_NoMOTO, 1
+	db        GAKUZI_NOMOTO, 1
 	db           AI_MASHIMA, 2
 	db      KUNIMI_KAWAMURA, 3
 
@@ -1111,7 +1111,7 @@ CreditsStrings:
 	dw .KenjiMatsushima
 	dw .ToshinobuMatsumiya
 	dw .SatoruIwata
-	dw .NobuhiroSeya
+	dw .NObuhiroSeya
 	dw .KazuhitoSekine
 	dw .TetsujiOota
 	dw .NclSuperMarioClub
@@ -1119,7 +1119,7 @@ CreditsStrings:
 	dw .AkitoMori
 	dw .TakahiroHarada
 	dw .TohruHashimoto
-	dw .NoboruMatsumoto
+	dw .NOboruMatsumoto
 	dw .TakehiroIzushi
 	dw .TakashiKawaguchi
 	dw .TsunekazuIshihara
@@ -1141,16 +1141,16 @@ CreditsStrings:
 	dw .KeitaNakamura
 	dw .HirotakaUemura
 	dw .HiroakiTamura
-	dw .NoriakiSakaguchi
+	dw .NOriakiSakaguchi
 	dw .MiyukiSato
-	dw .GakuziNomoto
+	dw .GakuziNOmoto
 	dw .AiMashima
 	dw .MikihiroIshikawa
 	dw .HideyukiHashimoto
 	dw .SatoshiYamato
 	dw .ShigeruMiyamoto
 	dw .GailTilden
-	dw .NobOgasawara
+	dw .NObOgasawara
 	dw .SethMcMahill
 	dw .HirotoAlexander
 	dw .TeresaLillygren
@@ -1199,7 +1199,7 @@ CreditsStrings:
 .TetsuyaWatanabe:     db "  TETSUYA WATANABE@"        ; "わたなべ てつや@"
 .ShigekiMorimoto:     db "  SHIGEKI MORIMOTO@"        ; "もりもと しげき@"
 .SousukeTamada:       db "   SOUSUKE TAMADA@"         ; "たまだ そうすけ@"
-.TakenoriOota:        db "   TAKENoRI OOTA@"          ; "おおた たけのり@"
+.TakenoriOota:        db "   TAKENORI OOTA@"          ; "おおた たけのり@"
 .KenSugimori:         db "    KEN SUGIMORI@"          ; "すぎもり けん@"
 .MotofumiFujiwara:    db " MOTOFUMI FUJIWARA@"        ; "ふじわら もとふみ@"
 .AtsukoNishida:       db "   ATSUKO NISHIDA@"         ; "にしだ あつこ@"
@@ -1207,15 +1207,15 @@ CreditsStrings:
 .SatoshiOota:         db "    SATOSHI OOTA@"          ; "おおた さとし@"
 .RenaYoshikawa:       db "   RENA YOSHIKAWA@"         ; "よしかわ れな@"
 .JunOkutani:          db "    JUN OKUTANI@"           ; "おくたに じゅん@"
-.HironobuYoshida:     db "  HIRONoBU YOSHIDA@"        ; "よしだ ひろのぶ@"
+.HironobuYoshida:     db "  HIRONOBU YOSHIDA@"        ; "よしだ ひろのぶ@"
 .AsukaIwashita:       db "   ASUKA IWASHITA@"         ; "いわした あすか@"
-.GoIchinose:          db "    GO ICHINoSE@"           ; "いちのせ ごう@"
+.GoIchinose:          db "    GO ICHINOSE@"           ; "いちのせ ごう@"
 .MorikazuAoki:        db "   MORIKAZU AOKI@"          ; "あおき もりかず@"
 .KohjiNishino:        db "   KOHJI NISHINo@"          ; "にしの こうじ@"
 .KenjiMatsushima:     db "  KENJI MATSUSHIMA@"        ; "まつしま けんじ@"
-.ToshinobuMatsumiya:  db "TOSHINoBU MATSUMIYA@"       ; "まつみや としのぶ@"
+.ToshinobuMatsumiya:  db "TOSHINOBU MATSUMIYA@"       ; "まつみや としのぶ@"
 .SatoruIwata:         db "    SATORU IWATA@"          ; "いわた さとる@"
-.NobuhiroSeya:        db "   NoBUHIRO SEYA@"          ; "せや のぶひろ@"
+.NObuhiroSeya:        db "   NOBUHIRO SEYA@"          ; "せや のぶひろ@"
 .KazuhitoSekine:      db "  KAZUHITO SEKINE@"         ; "せきね かずひと@"
 .TetsujiOota:         db "    TETSUJI OOTA@"          ; "おおた てつじ@"
 .NclSuperMarioClub:   db "NCL SUPER MARIO CLUB@"      ; "スーパーマりォクラブ@"
@@ -1223,7 +1223,7 @@ CreditsStrings:
 .AkitoMori:           db "     AKITO MORI@"           ; "もり あきと@"
 .TakahiroHarada:      db "  TAKAHIRO HARADA@"         ; "はらだ たかひろ@"
 .TohruHashimoto:      db "  TOHRU HASHIMOTO@"         ; "はしもと とおる@"
-.NoboruMatsumoto:     db "  NoBORU MATSUMOTO@"        ; "まつもと のぼる@"
+.NOboruMatsumoto:     db "  NOBORU MATSUMOTO@"        ; "まつもと のぼる@"
 .TakehiroIzushi:      db "  TAKEHIRO IZUSHI@"         ; "いずし たけひろ@"
 .TakashiKawaguchi:    db " TAKASHI KAWAGUCHI@"        ; "かわぐち たかし@"
 .TsunekazuIshihara:   db " TSUNEKAZU ISHIHARA@"       ; "いしはら つねかず@"
@@ -1235,7 +1235,7 @@ CreditsStrings:
 .KunimiKawamura:      db "  KUNIMI KAWAMURA@"         ; "かわむら くにみ@"
 .HisashiSogabe:       db "   HISASHI SOGABE@"         ; "そがべ ひさし@"
 .KeitaKagaya:         db "    KEITA KAGAYA@"          ; "かがや けいた@"
-.YoshinoriMatsuda:    db " YOSHINoRI MATSUDA@"        ; "まつだ よしのり@"
+.YoshinoriMatsuda:    db " YOSHINORI MATSUDA@"        ; "まつだ よしのり@"
 .HitomiSato:          db "    HITOMI SATO@"           ; "さとう ひとみ@"
 .ToruOsawa:           db "     TORU OSAWA@"           ; "おおさわ とおる@"
 .TakaoOhara:          db "    TAKAO OHARA@"           ; "おおはら たかお@"
@@ -1247,9 +1247,9 @@ CreditsStrings:
 .KeitaNakamura:       db "   KEITA NAKAMURA@"         ; "なかむら けいた@"
 .HirotakaUemura:      db "  HIROTAKA UEMURA@"         ; "うえむら ひろたか@"
 .HiroakiTamura:       db "   HIROAKI TAMURA@"         ; "たむら ひろあき@"
-.NoriakiSakaguchi:    db " NoRIAKI SAKAGUCHI@"        ; "さかぐち のりあき@"
+.NOriakiSakaguchi:    db " NORIAKI SAKAGUCHI@"        ; "さかぐち のりあき@"
 .MiyukiSato:          db "    MIYUKI SATO@"           ; "さとう みゆき@"
-.GakuziNomoto:        db "   GAKUZI NoMOTO@"          ; "のもと がくじ@"
+.GakuziNOmoto:        db "   GAKUZI NOMOTO@"          ; "のもと がくじ@"
 .AiMashima:           db "     AI MASHIMA@"           ; "ましま あい@"
 .MikihiroIshikawa:    db " MIKIHIRO ISHIKAWA@"        ; "いしかわ みきひろ@"
 .HideyukiHashimoto:   db " HIDEYUKI HASHIMOTO@"       ; "はしもと ひでゆき@"
@@ -1258,7 +1258,7 @@ CreditsStrings:
 .End:                 db "        END@"               ; "おしまい@"
 .Unknown:             db "      ????????@"            ; "????????@"
 .GailTilden:          db "    GAIL TILDEN@"
-.NobOgasawara:        db "   NoB OGASAWARA@"
+.NObOgasawara:        db "   NOB OGASAWARA@"
 .SethMcMahill:        db "   SETH McMAHILL@"
 .HirotoAlexander:     db "  HIROTO ALEXANDER@"
 .TeresaLillygren:     db "  TERESA LILLYGREN@"

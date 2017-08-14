@@ -433,7 +433,7 @@ Script_buttonsound:
 Script_yesorno:
 ; script command 0x4e
 
-	call YesNoBox
+	call YesNOBox
 	ld a, FALSE
 	jr c, .no
 	ld a, TRUE
@@ -745,7 +745,7 @@ Script_askforphonenumber:
 ; parameters:
 ;     number (SingleByteParam)
 
-	call YesNoBox
+	call YesNOBox
 	jr c, .refused
 	call GetScriptByte
 	ld c, a
@@ -1293,7 +1293,7 @@ Script_follownotexact:
 	call GetScriptByte
 	call GetScriptPerson
 	ld c, a
-	callba FollowNotExact
+	callba FollowNOtExact
 	ret
 
 Script_loademote:

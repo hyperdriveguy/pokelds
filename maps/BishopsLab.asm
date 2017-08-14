@@ -359,7 +359,7 @@ PlayerComeBackMovement:
 	step_end
 ; Event End
 
-; Non Event Scripts
+; NOn Event Scripts
 BishopScript:
 	faceplayer
 	opentext
@@ -439,7 +439,7 @@ BishopsLabBookshelfScript:
 	closetext
 	end
 
-; Non Event Text
+; NOn Event Text
 BishopChooseOneText:
 	text "Bishop: Go Ahead"
 	line "and choose one"

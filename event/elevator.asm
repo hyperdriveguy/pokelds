@@ -154,7 +154,7 @@ Elevator_GetCurrentFloorText: ; 13512
 	ld hl, Options
 	ld a, [hl]
 	push af
-	set No_TEXT_SCROLL, [hl]
+	set NO_TEXT_SCROLL, [hl]
 	hlcoord 0, 0
 	ld b, 4
 	ld c, 8
@@ -170,7 +170,7 @@ Elevator_GetCurrentFloorText: ; 13512
 ; 13537
 
 Elevator_CurrentFloorText: ; 13537
-	db "Now on:@"
+	db "NOw on:@"
 ; 1353f
 
 

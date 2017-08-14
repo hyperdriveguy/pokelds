@@ -101,7 +101,7 @@ DisableMobile: ; 1000a4
 	ld [hMobile], a
 	xor a
 	ld [hVBlank], a
-	call NormalSpeed
+	call NOrmalSpeed
 	xor a
 	ld [rIF], a
 	ld a, [BGMapBuffer]
@@ -1507,7 +1507,7 @@ Function100902: ; 100902
 	ld de, .string_10095a
 	hlcoord 4, 11
 	call PlaceString
-	ld de, SFX_4_NoTE_DITTY
+	ld de, SFX_4_NOTE_DITTY
 	call PlaySFX
 	callba ReloadMapPart
 	ld c, 120
@@ -1963,7 +1963,7 @@ MobileMoveSelectionScreen: ; 100b9f
 	jr .print_text
 
 .no_pp_left
-	ld hl, BattleText_TheresNoPPLeftForThisMove
+	ld hl, BattleText_TheresNOPPLeftForThisMove
 
 .print_text
 	call StdBattleTextBox
@@ -2520,7 +2520,7 @@ Function100f8d: ; 100f8d
 
 Unknown_100fc0: ; 100fc0
 	; first byte:
-	;     Bit 7 set: Not SRAM
+	;     Bit 7 set: NOt SRAM
 	;     Lower 7 bits: Bank
 	; Address, size (dw), address
 	dbwww $80, PlayerName, NAME_LENGTH, OTPlayerName
@@ -5035,7 +5035,7 @@ Function102142: ; 102142
 	call Function10219f
 	ld hl, UnknownText_0x1021d6
 	call MenuTextBox
-	call YesNoBox
+	call YesNOBox
 	call ExitMenu
 	jr c, .asm_10217c
 	call Function1021b8
@@ -6787,7 +6787,7 @@ Function102d48: ; 102d48
 
 .asm_102d6d
 	ld a, [wd265]
-	cp UNoWN
+	cp UNOWN
 	jr nz, .asm_102d98
 	ld a, [wcd4c]
 	dec a
@@ -7797,7 +7797,7 @@ MenuData2_103648: ; 103648
 ; 103654
 
 Function103654: ; 103654
-	callba Mobile_AlwaysReturnNotCarry
+	callba Mobile_AlwaysReturnNOtCarry
 	bit 7, c
 	jr nz, .asm_103666
 	ld hl, wcd2a
@@ -7813,12 +7813,12 @@ Function103654: ; 103654
 ; 10366e
 
 Mobile_SelectThreeMons: ; 10366e
-	callba Mobile_AlwaysReturnNotCarry
+	callba Mobile_AlwaysReturnNOtCarry
 	bit 7, c
 	jr z, .asm_10369b
 	ld hl, UnknownText_0x10375d
 	call PrintText
-	call YesNoBox
+	call YesNOBox
 	jr c, .asm_103696
 	callba CheckForMobileBattleRules
 	jr nc, .asm_103690
@@ -7842,7 +7842,7 @@ Mobile_SelectThreeMons: ; 10366e
 	jr nz, .asm_1036b5
 	ld hl, UnknownText_0x103762
 	call PrintText
-	call YesNoBox
+	call YesNOBox
 	jr c, .asm_1036b5
 	call Function1036f9
 	call JoyWaitAorB
@@ -8031,7 +8031,7 @@ Function1037c2: ; 1037c2
 	jr z, .nope
 	ld hl, UnknownText_0x1037e6
 	call PrintText
-	call YesNoBox
+	call YesNOBox
 	jr c, .nope
 	ld a, $01
 	ld [ScriptVar], a
@@ -8087,7 +8087,7 @@ UnknownText_0x10381e: ; 0x10381e
 ; 0x103823
 
 Function103823: ; 103823
-	callba Mobile_AlwaysReturnNotCarry
+	callba Mobile_AlwaysReturnNOtCarry
 	bit 7, c
 	jr nz, .asm_103838
 	callba Function1008a6
@@ -8138,7 +8138,7 @@ UnknownText_0x103876: ; 0x103876
 ; 0x10387b
 
 Function10387b: ; 10387b
-	callba Mobile_AlwaysReturnNotCarry
+	callba Mobile_AlwaysReturnNOtCarry
 	bit 7, c
 	ret nz
 	callba Function1008a6

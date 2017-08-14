@@ -107,7 +107,7 @@
 	dba Sfx_Metronome
 	dba Sfx_Call
 	dba Sfx_HangUp
-	dba Sfx_NoSignal
+	dba Sfx_NOSignal
 	dba Sfx_Sandstorm
 	dba Sfx_Elevator
 	dba Sfx_Protect
@@ -170,7 +170,7 @@
 	dba Sfx_GsIntroPokemonAppears
 	dba Sfx_Flash
 	dba Sfx_GameFreakLogoGs
-	dba Sfx_NotVeryEffective
+	dba Sfx_NOtVeryEffective
 	dba Sfx_Damage
 	dba Sfx_SuperEffective
 	dba Sfx_BallBounce
@@ -207,6 +207,6 @@
 	dba Sfx_Tingle
 	dba Sfx_UnknownCB
 	dba Sfx_TwoPcBeeps
-	dba Sfx_4NoteDitty
+	dba Sfx_4NOteDitty
 	dba Sfx_Twinkle
 ; e94e9

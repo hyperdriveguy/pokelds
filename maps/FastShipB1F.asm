@@ -268,7 +268,7 @@ UnknownText_0x7699d:
 	done
 
 SailorJeffSeenText:
-	text "Nothing beats a"
+	text "NOthing beats a"
 	line "battle when I'm"
 	cont "on my break."
 	done
@@ -313,7 +313,7 @@ JugglerFritzBeatenText:
 	done
 
 UnknownText_0x76b02:
-	text "No more ships for"
+	text "NO more ships for"
 	line "me. Next time,"
 
 	para "I'm taking the"
@@ -400,7 +400,7 @@ UnknownText_0x76d5f:
 	para "that you've beaten"
 	line "GYM LEADERS."
 
-	para "No wonder you're"
+	para "NO wonder you're"
 	line "so good!"
 	done
 

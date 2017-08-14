@@ -76,7 +76,7 @@ UnknownText_0x55c7b:
 	text "I got my ABRA at"
 	line "the GAME CORNER."
 
-	para "Now it's my best"
+	para "NOw it's my best"
 	line "partner."
 	done
 

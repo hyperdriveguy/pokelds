@@ -155,7 +155,7 @@ Init:: ; 17d
 	ld a, [hCGB]
 	and a
 	jr z, .no_double_speed
-	call NormalSpeed
+	call NOrmalSpeed
 .no_double_speed
 
 	xor a

@@ -1,4 +1,4 @@
-	dw NormalHit
+	dw NOrmalHit
 	dw DoSleep
 	dw PoisonHit
 	dw LeechHit
@@ -15,7 +15,7 @@
 	dw SpecialDefenseUp
 	dw AccuracyUp
 	dw EvasionUp
-	dw NormalHit
+	dw NOrmalHit
 	dw Growl
 	dw DefenseDown
 	dw StringShot
@@ -35,15 +35,15 @@
 	dw PayDay
 	dw LightScreen
 	dw TriAttack
-	dw NormalHit
+	dw NOrmalHit
 	dw OHKOHit
 	dw RazorWind
 	dw SuperFang
 	dw StaticDamage
 	dw Bind
-	dw NormalHit
+	dw NOrmalHit
 	dw MultiHit
-	dw NormalHit
+	dw NOrmalHit
 	dw Mist
 	dw FocusEnergy
 	dw RecoilHit
@@ -76,7 +76,7 @@
 	dw SkyAttack
 	dw ConfuseHit
 	dw Twineedle
-	dw NormalHit
+	dw NOrmalHit
 	dw Substitute
 	dw HyperBeam
 	dw Rage
@@ -101,14 +101,14 @@
 	dw Spite
 	dw FalseSwipe
 	dw HealBell
-	dw NormalHit
+	dw NOrmalHit
 	dw TripleKick
 	dw Thief
 	dw MeanLook
 	dw Nightmare
 	dw FlameWheel
 	dw Curse
-	dw NormalHit
+	dw NOrmalHit
 	dw Protect
 	dw Spikes
 	dw Foresight
@@ -128,8 +128,8 @@
 	dw BatonPass
 	dw Pursuit
 	dw RapidSpin
-	dw NormalHit
-	dw NormalHit
+	dw NOrmalHit
+	dw NOrmalHit
 	dw MorningSun
 	dw Synthesis
 	dw Moonlight

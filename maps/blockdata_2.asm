@@ -16,8 +16,8 @@ SaffronMart_BlockData:
 CherrygroveMart_BlockData:
 	INCBIN "maps/Mart.blk"
 
-Route10North_BlockData:
-	INCBIN "maps/Route10North.blk"
+Route10NOrth_BlockData:
+	INCBIN "maps/Route10NOrth.blk"
 
 OlivinePokeCenter1F_BlockData:
 MahoganyPokeCenter1F_BlockData:

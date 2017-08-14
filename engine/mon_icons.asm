@@ -193,7 +193,7 @@ SetPartyMonIconAnimSpeed: ; 8e936 (23:6936)
 	call .getspeed
 	ld a, b
 	pop bc
-	ld hl, SPRITEANIMSTRUCT_DURATIONoFFSET
+	ld hl, SPRITEANIMSTRUCT_DURATIONOFFSET
 	add hl, bc
 	ld [hl], a
 	rlca

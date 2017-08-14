@@ -462,7 +462,7 @@ FriedaScript:
 	checkevent EVENT_GOT_POISON_BARB_FROM_FRIEDA
 	iftrue .Friday
 	checkcode VAR_WEEKDAY
-	if_not_equal FRIDAY, .NotFriday
+	if_not_equal FRIDAY, .NOtFriday
 	checkevent EVENT_MET_FRIEDA_OF_FRIDAY
 	iftrue .MetFrieda
 	writetext MeetFriedaText
@@ -486,8 +486,8 @@ FriedaScript:
 	closetext
 	end
 
-.NotFriday:
-	writetext FriedaNotFridayText
+.NOtFriday:
+	writetext FriedaNOtFridayText
 	waitbutton
 	closetext
 	end
@@ -700,7 +700,7 @@ Route32UnusedFisher1SeenText:
 	done
 
 Route32UnusedFisher1BeatenText:
-	text "Nothing ever goes"
+	text "NOthing ever goes"
 	line "right for me now…"
 	done
 
@@ -859,7 +859,7 @@ Text_RoarIntro:
 	line "CAME LOOKING!"
 
 	para "THAT PLEASES ME!"
-	line "NoW TAKE THIS!"
+	line "NOW TAKE THIS!"
 	done
 
 Text_RoarOutro:
@@ -903,14 +903,14 @@ FriedaFridayText:
 	text "FRIEDA: Hiya! What"
 	line "day do you like?"
 
-	para "I love Friday. No"
+	para "I love Friday. NO"
 	line "doubt about it!"
 
 	para "Don't you think"
 	line "it's great too?"
 	done
 
-FriedaNotFridayText:
+FriedaNOtFridayText:
 	text "FRIEDA: Isn't it"
 	line "Friday today?"
 

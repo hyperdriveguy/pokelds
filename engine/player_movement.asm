@@ -34,20 +34,20 @@ DoPlayerMovement:: ; 80000
 
 .TranslateIntoMovement:
 	ld a, [PlayerState]
-	cp PLAYER_NoRMAL
-	jr z, .Normal
+	cp PLAYER_NORMAL
+	jr z, .NOrmal
 	cp PLAYER_RUN
-	jr z, .Normal
+	jr z, .NOrmal
 	cp PLAYER_SURF
 	jr z, .Surf
 	cp PLAYER_SURF_PIKA
 	jr z, .Surf
 	cp PLAYER_BIKE
-	jr z, .Normal
+	jr z, .NOrmal
 	cp PLAYER_SLIP
 	jr z, .Ice
 
-.Normal:
+.NOrmal:
 	call .CheckForced
 	call .GetAction
 	call .CheckTile
@@ -60,7 +60,7 @@ DoPlayerMovement:: ; 80000
 	ret c
 	call .CheckWarp
 	ret c
-	jr .NotMoving
+	jr .NOtMoving
 
 .Surf:
 	call .CheckForced
@@ -71,7 +71,7 @@ DoPlayerMovement:: ; 80000
 	ret c
 	call .TrySurf
 	ret c
-	jr .NotMoving
+	jr .NOtMoving
 
 .Ice:
 	call .CheckForced
@@ -95,7 +95,7 @@ DoPlayerMovement:: ; 80000
 	xor a
 	ret
 
-.NotMoving:
+.NOtMoving:
 	ld a, [WalkingDirection]
 	cp STANDING
 	jr z, .Standing
@@ -384,7 +384,7 @@ DoPlayerMovement:: ; 80000
 
 	ld de, SFX_JUMP_OVER_LEDGE
 	call PlaySFX
-	ld a, PLAYER_NoRMAL
+	ld a, PLAYER_NORMAL
 	ld [PlayerState], a
 	ld a, STEP_LEDGE
 	call .DoStep
@@ -481,7 +481,7 @@ DoPlayerMovement:: ; 80000
 
 .Steps:
 	dw .SlowStep
-	dw .NormalStep
+	dw .NOrmalStep
 	dw .FastStep
 	dw .JumpStep
 	dw .SlideStep
@@ -494,7 +494,7 @@ DoPlayerMovement:: ; 80000
 	slow_step UP
 	slow_step LEFT
 	slow_step RIGHT
-.NormalStep:
+.NOrmalStep:
 	step DOWN
 	step UP
 	step LEFT
@@ -716,16 +716,16 @@ DoPlayerMovement:: ; 80000
 	ld d, a
 	ld a, [FacingDirection]
 	and d
-	jr nz, .NotWalkable
+	jr nz, .NOtWalkable
 
 	ld a, [WalkingTile]
 	call .CheckWalkable
-	jr c, .NotWalkable
+	jr c, .NOtWalkable
 
 	xor a
 	ret
 
-.NotWalkable:
+.NOtWalkable:
 	scf
 	ret
 ; 803b4
@@ -738,16 +738,16 @@ DoPlayerMovement:: ; 80000
 	ld d, a
 	ld a, [FacingDirection]
 	and d
-	jr nz, .NotSurfable
+	jr nz, .NOtSurfable
 
 	ld a, [WalkingTile]
 	call .CheckSurfable
-	jr c, .NotSurfable
+	jr c, .NOtSurfable
 
 	and a
 	ret
 
-.NotSurfable:
+.NOtSurfable:
 	scf
 	ret
 ; 803ca
@@ -764,7 +764,7 @@ DoPlayerMovement:: ; 80000
 .RunCheck:
 
 	ld a, [PlayerState]
-	cp PLAYER_NoRMAL
+	cp PLAYER_NORMAL
 	jr nz, .running
 	ld a, [hJoypadDown]
 	and B_BUTTON
@@ -781,7 +781,7 @@ DoPlayerMovement:: ; 80000
 	and B_BUTTON
 	cp B_BUTTON
 	ret z
-	ld a, PLAYER_NoRMAL
+	ld a, PLAYER_NORMAL
 	ld [PlayerState], a
 	ret
 	
@@ -834,7 +834,7 @@ DoPlayerMovement:: ; 80000
 
 .GetOutOfWater: ; 803f9
 	push bc
-	ld a, PLAYER_NoRMAL
+	ld a, PLAYER_NORMAL
 	ld [PlayerState], a
 	call ReplaceKrisSprite ; UpdateSprites
 	pop bc

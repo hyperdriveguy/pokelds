@@ -25,27 +25,27 @@ GoldenrodVendingMachine:
 
 .FreshWater:
 	checkmoney $0, 200
-	if_equal $2, .NotEnoughMoney
+	if_equal $2, .NOtEnoughMoney
 	giveitem FRESH_WATER
-	iffalse .NotEnoughSpace
+	iffalse .NOtEnoughSpace
 	takemoney $0, 200
 	itemtotext FRESH_WATER, $0
 	jump .VendItem
 
 .SodaPop:
 	checkmoney $0, 300
-	if_equal $2, .NotEnoughMoney
+	if_equal $2, .NOtEnoughMoney
 	giveitem SODA_POP
-	iffalse .NotEnoughSpace
+	iffalse .NOtEnoughSpace
 	takemoney $0, 300
 	itemtotext SODA_POP, $0
 	jump .VendItem
 
 .Lemonade:
 	checkmoney $0, 350
-	if_equal $2, .NotEnoughMoney
+	if_equal $2, .NOtEnoughMoney
 	giveitem LEMONADE
-	iffalse .NotEnoughSpace
+	iffalse .NOtEnoughSpace
 	takemoney $0, 350
 	itemtotext LEMONADE, $0
 	jump .VendItem
@@ -58,13 +58,13 @@ GoldenrodVendingMachine:
 	itemnotify
 	jump .Start
 
-.NotEnoughMoney:
-	writetext GoldenrodVendingNoMoneyText
+.NOtEnoughMoney:
+	writetext GoldenrodVendingNOMoneyText
 	waitbutton
 	jump .Start
 
-.NotEnoughSpace:
-	writetext GoldenrodVendingNoSpaceText
+.NOtEnoughSpace:
+	writetext GoldenrodVendingNOSpaceText
 	waitbutton
 	jump .Start
 
@@ -109,12 +109,12 @@ GoldenrodClangText:
 	db "popped out!"
 	done
 
-GoldenrodVendingNoMoneyText:
+GoldenrodVendingNOMoneyText:
 	text "Oops, not enough"
 	line "money."
 	done
 
-GoldenrodVendingNoSpaceText:
+GoldenrodVendingNOSpaceText:
 	text "There's no more"
 	line "room for stuff."
 	done

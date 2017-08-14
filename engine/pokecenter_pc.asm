@@ -292,7 +292,7 @@ LOG_OFF       EQU 6
 PC_DisplayTextWaitMenu: ; 157bb
 	ld a, [Options]
 	push af
-	set No_TEXT_SCROLL, a
+	set NO_TEXT_SCROLL, a
 	ld [Options], a
 	call MenuTextBox
 	pop af
@@ -363,7 +363,7 @@ KrisWithdrawItemMenu: ; 0x157d1
 	ret
 
 .PackFull:
-	ld hl, .NoRoomText
+	ld hl, .NORoomText
 	call MenuTextBoxBackup
 	ret
 
@@ -378,8 +378,8 @@ KrisWithdrawItemMenu: ; 0x157d1
 	text_jump _KrissPCWithdrewItemsText
 	db "@"
 
-.NoRoomText: ; 0x1585a
-	text_jump _KrissPCNoRoomWithdrawText
+.NORoomText: ; 0x1585a
+	text_jump _KrissPCNORoomWithdrawText
 	db "@"
 
 KrisTossItemMenu: ; 0x1585f
@@ -436,15 +436,15 @@ KrisDepositItemMenu: ; 0x1588b
 	ret
 
 .CheckItemsInBag:
-	callba HasNoItems
+	callba HasNOItems
 	ret nc
-	ld hl, .NoItemsInBag
+	ld hl, .NOItemsInBag
 	call MenuTextBoxBackup
 	scf
 	ret
 
-.NoItemsInBag:
-	; No items here!
+.NOItemsInBag:
+	; NO items here!
 	text_jump UnknownText_0x1c13df
 	db "@"
 
@@ -511,7 +511,7 @@ KrisDepositItemMenu: ; 0x1588b
 	ld [Buffer2], a
 	ld hl, PCItems
 	call ReceiveItem
-	jr nc, .NoRoomInPC
+	jr nc, .NORoomInPC
 	ld a, [Buffer1]
 	ld [wItemQuantityChangeBuffer], a
 	ld a, [Buffer2]
@@ -523,8 +523,8 @@ KrisDepositItemMenu: ; 0x1588b
 	call PrintText
 	ret
 
-.NoRoomInPC:
-	ld hl, .NoRoomText
+.NORoomInPC:
+	ld hl, .NORoomText
 	call PrintText
 	ret
 
@@ -540,8 +540,8 @@ KrisDepositItemMenu: ; 0x1588b
 	text_jump _KrissPCDepositItemsText
 	db "@"
 
-.NoRoomText: ; 0x15978
-	text_jump _KrissPCNoRoomDepositText
+.NORoomText: ; 0x15978
+	text_jump _KrissPCNORoomDepositText
 	db "@"
 
 KrisMailBoxMenu: ; 0x1597d

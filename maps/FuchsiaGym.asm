@@ -293,7 +293,7 @@ UnknownText_0x1960e6:
 	para "I'm JANINE, the"
 	line "GYM LEADER!"
 
-	para "No, I'm not!"
+	para "NO, I'm not!"
 	line "Gotcha, sucker!"
 	done
 

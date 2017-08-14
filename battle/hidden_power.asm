@@ -29,7 +29,7 @@ HiddenPowerDamage: ; fbced
 	add a
 	or b
 
-; Skip Normal
+; Skip NOrmal
 	inc a
 
 .done

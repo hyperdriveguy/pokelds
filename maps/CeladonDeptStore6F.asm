@@ -39,27 +39,27 @@ CeladonVendingMachine:
 
 .FreshWater:
 	checkmoney $0, 200
-	if_equal $2, .NotEnoughMoney
+	if_equal $2, .NOtEnoughMoney
 	giveitem FRESH_WATER
-	iffalse .NotEnoughSpace
+	iffalse .NOtEnoughSpace
 	takemoney $0, 200
 	itemtotext FRESH_WATER, $0
 	jump .VendItem
 
 .SodaPop:
 	checkmoney $0, 300
-	if_equal $2, .NotEnoughMoney
+	if_equal $2, .NOtEnoughMoney
 	giveitem SODA_POP
-	iffalse .NotEnoughSpace
+	iffalse .NOtEnoughSpace
 	takemoney $0, 300
 	itemtotext SODA_POP, $0
 	jump .VendItem
 
 .Lemonade:
 	checkmoney $0, 350
-	if_equal $2, .NotEnoughMoney
+	if_equal $2, .NOtEnoughMoney
 	giveitem LEMONADE
-	iffalse .NotEnoughSpace
+	iffalse .NOtEnoughSpace
 	takemoney $0, 350
 	itemtotext LEMONADE, $0
 	jump .VendItem
@@ -72,13 +72,13 @@ CeladonVendingMachine:
 	itemnotify
 	jump .Start
 
-.NotEnoughMoney:
-	writetext CeladonVendingNoMoneyText
+.NOtEnoughMoney:
+	writetext CeladonVendingNOMoneyText
 	waitbutton
 	jump .Start
 
-.NotEnoughSpace:
-	writetext CeladonVendingNoSpaceText
+.NOtEnoughSpace:
+	writetext CeladonVendingNOSpaceText
 	waitbutton
 	jump .Start
 
@@ -118,12 +118,12 @@ CeladonClangText:
 	line "popped out."
 	done
 
-CeladonVendingNoMoneyText:
+CeladonVendingNOMoneyText:
 	text "Oops, not enough"
 	line "money…"
 	done
 
-CeladonVendingNoSpaceText:
+CeladonVendingNOSpaceText:
 	text "There's no more"
 	line "room for stuff…"
 	done

@@ -2,7 +2,7 @@ PokeGear: ; 90b8d (24:4b8d)
 	ld hl, Options
 	ld a, [hl]
 	push af
-	set No_TEXT_SCROLL, [hl]
+	set NO_TEXT_SCROLL, [hl]
 	ld a, [hInMenu]
 	push af
 	ld a, $1
@@ -901,7 +901,7 @@ PokegearPhone_MakePhoneCall: ; 911eb (24:51eb)
 	and a
 	jr nz, .no_service
 	ld hl, Options
-	res No_TEXT_SCROLL, [hl]
+	res NO_TEXT_SCROLL, [hl]
 	xor a
 	ld [hInMenu], a
 	ld de, SFX_CALL
@@ -920,7 +920,7 @@ PokegearPhone_MakePhoneCall: ; 911eb (24:51eb)
 	ld c, 10
 	call DelayFrames
 	ld hl, Options
-	set No_TEXT_SCROLL, [hl]
+	set NO_TEXT_SCROLL, [hl]
 	ld a, $1
 	ld [hInMenu], a
 	call PokegearPhone_UpdateCursor
@@ -929,7 +929,7 @@ PokegearPhone_MakePhoneCall: ; 911eb (24:51eb)
 	ret
 
 .no_service
-	callba Phone_NoSignal
+	callba Phone_NOSignal
 	ld hl, .OutOfServiceArea
 	call PrintText
 	ld a, $8
@@ -1230,7 +1230,7 @@ PokegearPhoneContactSubmenu: ; 91342 (24:5342)
 .Delete: ; 913f9
 	ld hl, PokegearText_DeleteStoredNumber
 	call MenuTextBox
-	call YesNoBox
+	call YesNOBox
 	call ExitMenu
 	jr c, .CancelDelete
 	call PokegearPhone_DeletePhoneNumber
@@ -1475,7 +1475,7 @@ UpdateRadioStation: ; 9166f (24:566f)
 	jr .loop
 
 .nostation
-	call NoRadioStation
+	call NORadioStation
 	ret
 
 .foundstation
@@ -1530,7 +1530,7 @@ RadioChannels:
 
 ; Oak's Pokémon Talk in the afternoon and evening
 	call .InJohto
-	jr nc, .NoSignal
+	jr nc, .NOSignal
 	ld a, [TimeOfDay]
 	and a
 	jp z, LoadStation_PokedexShow
@@ -1538,66 +1538,66 @@ RadioChannels:
 
 .PokemonMusic:
 	call .InJohto
-	jr nc, .NoSignal
+	jr nc, .NOSignal
 	jp LoadStation_PokemonMusic
 
 .LuckyChannel:
 	call .InJohto
-	jr nc, .NoSignal
+	jr nc, .NOSignal
 	jp LoadStation_LuckyChannel
 
 .BuenasPassword:
 	call .InJohto
-	jr nc, .NoSignal
+	jr nc, .NOSignal
 	jp LoadStation_BuenasPassword
 
 .RuinsOfAlphRadio:
 	ld a, [wPokegearMapPlayerIconLandmark]
 	cp RUINS_OF_ALPH
-	jr nz, .NoSignal
+	jr nz, .NOSignal
 	jp LoadStation_UnownRadio
 
 .PlacesAndPeople:
 	call .InJohto
-	jr c, .NoSignal
+	jr c, .NOSignal
 	ld a, [wPokegearFlags]
 	bit 3, a
-	jr z, .NoSignal
+	jr z, .NOSignal
 	jp LoadStation_PlacesAndPeople
 
 .LetsAllSing:
 	call .InJohto
-	jr c, .NoSignal
+	jr c, .NOSignal
 	ld a, [wPokegearFlags]
 	bit 3, a
-	jr z, .NoSignal
+	jr z, .NOSignal
 	jp LoadStation_LetsAllSing
 
 .PokeFluteRadio:
 	call .InJohto
-	jr c, .NoSignal
+	jr c, .NOSignal
 	ld a, [wPokegearFlags]
 	bit 3, a
-	jr z, .NoSignal
+	jr z, .NOSignal
 	jp LoadStation_PokeFluteRadio
 
 .EvolutionRadio:
 ; This station airs in the Lake of Rage area when Rocket are still in Mahogany.
 	ld a, [StatusFlags]
 	bit 4, a
-	jr z, .NoSignal
+	jr z, .NOSignal
 	ld a, [wPokegearMapPlayerIconLandmark]
 	cp MAHOGANY_TOWN
 	jr z, .ok
 	cp ROUTE_43
 	jr z, .ok
 	cp LAKE_OF_RAGE
-	jr nz, .NoSignal
+	jr nz, .NOSignal
 .ok
 	jp LoadStation_EvolutionRadio
 
-.NoSignal:
-	call NoRadioStation
+.NOSignal:
+	call NORadioStation
 	ret
 
 .InJohto:
@@ -1668,7 +1668,7 @@ LoadStation_BuenasPassword: ; 917a5 (24:57a5)
 	ld a, BANK(PlayRadioShow)
 	ld hl, PlayRadioShow
 	call Radio_BackUpFarCallParams
-	ld de, NotBuenasPasswordName
+	ld de, NOtBuenasPasswordName
 	ld a, [StatusFlags2]
 	bit 0, a
 	ret z
@@ -1678,10 +1678,10 @@ LoadStation_BuenasPassword: ; 917a5 (24:57a5)
 ; 917c3 (24:57c3)
 
 BuenasPasswordName:    db "BUENA'S PASSWORD@"
-NotBuenasPasswordName: db "@"
+NOtBuenasPasswordName: db "@"
 
 LoadStation_UnownRadio: ; 917d5 (24:57d5)
-	ld a, UNoWN_RADIO
+	ld a, UNOWN_RADIO
 	ld [wd002], a
 	xor a
 	ld [wd005], a
@@ -1786,9 +1786,9 @@ Radio_BackUpFarCallParams: ; 9187c (24:587c)
 	ld [wPokegearRadioChannelAddr + 1], a
 	ret
 
-NoRadioStation: ; 91888 (24:5888)
-	call NoRadioMusic
-	call NoRadioName
+NORadioStation: ; 91888 (24:5888)
+	call NORadioMusic
+	call NORadioName
 	xor a
 	ld [wPokegearRadioChannelBank], a
 	ld [wPokegearRadioChannelAddr], a
@@ -1797,14 +1797,14 @@ NoRadioStation: ; 91888 (24:5888)
 	ld [hBGMapMode], a
 	ret
 
-NoRadioMusic: ; 9189d (24:589d)
+NORadioMusic: ; 9189d (24:589d)
 	ld de, MUSIC_NONE
 	call PlayMusic
 	ld a, $ff
 	ld [wPokegearRadioMusicPlaying], a
 	ret
 
-NoRadioName: ; 918a9 (24:58a9)
+NORadioName: ; 918a9 (24:58a9)
 	xor a
 	ld [hBGMapMode], a
 	hlcoord 1, 8
@@ -1832,7 +1832,7 @@ _TownMap: ; 9191c
 	ld hl, Options
 	ld a, [hl]
 	push af
-	set No_TEXT_SCROLL, [hl]
+	set NO_TEXT_SCROLL, [hl]
 
 	ld a, [hInMenu]
 	push af
@@ -2189,11 +2189,11 @@ FlyMapScroll: ; 91b73
 	ld hl, wd002
 	ld a, [hl]
 	cp d
-	jr nz, .NotAtEndYet
+	jr nz, .NOtAtEndYet
 	ld a, e
 	dec a
 	ld [hl], a
-.NotAtEndYet:
+.NOtAtEndYet:
 	inc [hl]
 	call CheckIfVisitedFlypoint
 	jr z, .ScrollNext
@@ -2203,11 +2203,11 @@ FlyMapScroll: ; 91b73
 	ld hl, wd002
 	ld a, [hl]
 	cp e
-	jr nz, .NotAtStartYet
+	jr nz, .NOtAtStartYet
 	ld a, d
 	inc a
 	ld [hl], a
-.NotAtStartYet:
+.NOtAtStartYet:
 	dec [hl]
 	call CheckIfVisitedFlypoint
 	jr z, .ScrollPrev
@@ -2402,7 +2402,7 @@ FlyMap: ; 91c90
 	cp KANTO_LANDMARK
 	jr nc, .KantoFlyMap
 .JohtoFlyMap:
-; Note that .NoKanto should be modified in tandem with this branch
+; NOte that .NOKanto should be modified in tandem with this branch
 	push af
 ; Start from Bountiful Town
 	ld a, FLY_BOUNTIFUL
@@ -2436,7 +2436,7 @@ FlyMap: ; 91c90
 	ld c, SPAWN_INDIGO
 	call HasVisitedSpawn
 	and a
-	jr z, .NoKanto
+	jr z, .NOKanto
 ; Kanto's map is only loaded if we've visited Indigo Plateau
 
 ; Flypoints begin at Pallet Town...
@@ -2456,7 +2456,7 @@ FlyMap: ; 91c90
 	call TownMapPlayerIcon
 	ret
 
-.NoKanto:
+.NOKanto:
 ; If Indigo Plateau hasn't been visited, we use Johto's map instead
 
 ; Start from Bountiful Town

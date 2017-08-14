@@ -82,7 +82,7 @@ Route36NationalParkgate_MapScriptHeader:
 	waitbutton
 	closetext
 	special Special_FadeBlackQuickly
-	special Special_ReloadSpritesNoPalettes
+	special Special_ReloadSpritesNOPalettes
 	scall .CopyContestants
 	disappear ROUTE36NATIONALPARKGATE_OFFICER1
 	appear ROUTE36NATIONALPARKGATE_OFFICER2
@@ -104,54 +104,54 @@ Route36NationalParkgate_MapScriptHeader:
 
 .CopyContestants:
 	checkevent EVENT_BUG_CATCHING_CONTESTANT_1A
-	iftrue .Not1
+	iftrue .NOt1
 	appear ROUTE36NATIONALPARKGATE_YOUNGSTER1
-.Not1:
+.NOt1:
 	checkevent EVENT_BUG_CATCHING_CONTESTANT_2A
-	iftrue .Not2
+	iftrue .NOt2
 	appear ROUTE36NATIONALPARKGATE_YOUNGSTER2
-.Not2:
+.NOt2:
 	checkevent EVENT_BUG_CATCHING_CONTESTANT_3A
-	iftrue .Not3
+	iftrue .NOt3
 	appear ROUTE36NATIONALPARKGATE_ROCKER
-.Not3:
+.NOt3:
 	checkevent EVENT_BUG_CATCHING_CONTESTANT_4A
-	iftrue .Not4
+	iftrue .NOt4
 	appear ROUTE36NATIONALPARKGATE_POKEFAN_M
-.Not4:
+.NOt4:
 	checkevent EVENT_BUG_CATCHING_CONTESTANT_5A
-	iftrue .Not5
+	iftrue .NOt5
 	appear ROUTE36NATIONALPARKGATE_YOUNGSTER3
-.Not5:
+.NOt5:
 	checkevent EVENT_BUG_CATCHING_CONTESTANT_6A
-	iftrue .Not6
+	iftrue .NOt6
 	appear ROUTE36NATIONALPARKGATE_YOUNGSTER4
-.Not6:
+.NOt6:
 	checkevent EVENT_BUG_CATCHING_CONTESTANT_7A
-	iftrue .Not7
+	iftrue .NOt7
 	appear ROUTE36NATIONALPARKGATE_LASS
-.Not7:
+.NOt7:
 	checkevent EVENT_BUG_CATCHING_CONTESTANT_8A
-	iftrue .Not8
+	iftrue .NOt8
 	appear ROUTE36NATIONALPARKGATE_YOUNGSTER5
-.Not8:
+.NOt8:
 	checkevent EVENT_BUG_CATCHING_CONTESTANT_9A
-	iftrue .Not9
+	iftrue .NOt9
 	appear ROUTE36NATIONALPARKGATE_YOUNGSTER6
-.Not9:
+.NOt9:
 	checkevent EVENT_BUG_CATCHING_CONTESTANT_10A
-	iftrue .Not10
+	iftrue .NOt10
 	appear ROUTE36NATIONALPARKGATE_YOUNGSTER7
-.Not10:
+.NOt10:
 	special UpdateSprites
 	end
 
 Route36OfficerScriptContest:
 	checkcode VAR_WEEKDAY
-	if_equal SUNDAY, _ContestNotOn
-	if_equal MONDAY, _ContestNotOn
-	if_equal WEDNESDAY, _ContestNotOn
-	if_equal FRIDAY, _ContestNotOn
+	if_equal SUNDAY, _ContestNOtOn
+	if_equal MONDAY, _ContestNOtOn
+	if_equal WEDNESDAY, _ContestNOtOn
+	if_equal FRIDAY, _ContestNOtOn
 	faceplayer
 	opentext
 	checkflag ENGINE_DAILY_BUG_CONTEST
@@ -159,7 +159,7 @@ Route36OfficerScriptContest:
 	scall Route36Parkgate_DayToText
 	writetext UnknownText_0x6add5
 	yesorno
-	iffalse .DecidedNotToJoinContest
+	iffalse .DecidedNOtToJoinContest
 	checkcode VAR_PARTYCOUNT
 	if_greater_than $1, .LeaveMonsWithOfficer
 	special ContestDropOffMons
@@ -208,7 +208,7 @@ Route36OfficerScriptContest:
 	buttonsound
 	jump .ResumeStartingContest
 
-.DecidedNotToJoinContest:
+.DecidedNOtToJoinContest:
 	writetext UnknownText_0x6b0c6
 	waitbutton
 	closetext
@@ -294,7 +294,7 @@ Route36Officer_ContestHasConcluded:
 	closetext
 	end
 
-_ContestNotOn:
+_ContestNOtOn:
 	jumptextfaceplayer UnknownText_0x6b370
 
 OfficerScript_0x6acf4:
@@ -823,7 +823,7 @@ UnknownText_0x6b84c:
 	para "Tuesday, Thursday"
 	line "and Saturday."
 
-	para "Not only do you"
+	para "NOt only do you"
 	line "earn a prize just"
 
 	para "for participating,"
@@ -887,4 +887,4 @@ Route36NationalParkgate_MapEventHeader:
 	person_event SPRITE_YOUNGSTER, 7, 4, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, (1 << 3) | PAL_OW_RED, PERSONTYPE_SCRIPT, 0, YoungsterScript_0x6ad92, EVENT_BUG_CATCHING_CONTESTANT_8B
 	person_event SPRITE_YOUNGSTER, 7, 6, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, (1 << 3) | PAL_OW_GREEN, PERSONTYPE_SCRIPT, 0, YoungsterScript_0x6ada6, EVENT_BUG_CATCHING_CONTESTANT_9B
 	person_event SPRITE_YOUNGSTER, 6, 6, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, (1 << 3) | PAL_OW_BLUE, PERSONTYPE_SCRIPT, 0, YoungsterScript_0x6adba, EVENT_BUG_CATCHING_CONTESTANT_10B
-	person_event SPRITE_OFFICER, 2, 3, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, (1 << 3) | PAL_OW_GREEN, PERSONTYPE_SCRIPT, 0, OfficerScript_0x6acf4, EVENT_ROUTE_36_NATIONAL_PARK_GATE_OFFICER_NoT_CONTEST_DAY
+	person_event SPRITE_OFFICER, 2, 3, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, (1 << 3) | PAL_OW_GREEN, PERSONTYPE_SCRIPT, 0, OfficerScript_0x6acf4, EVENT_ROUTE_36_NATIONAL_PARK_GATE_OFFICER_NOT_CONTEST_DAY

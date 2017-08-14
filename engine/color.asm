@@ -14,32 +14,32 @@ CheckShininess:
 	ld h, b
 	ld a, [hli]
 	bit 7, a ;first bit (unused for IV's) has to be 0
-	jr nz, .NotShiny
+	jr nz, .NOtShiny
 	and SHINY_BYTE_1
 	cp SHINY_BYTE_1
-	jr nz, .NotShiny
+	jr nz, .NOtShiny
 
 	ld a, [hli]
 	and SHINY_BYTE_2
 	cp SHINY_BYTE_2
-	jr nz, .NotShiny
+	jr nz, .NOtShiny
 
 	ld a, [hli]
 	and SHINY_BYTE_3
 	cp SHINY_BYTE_3
-	jr nz, .NotShiny
+	jr nz, .NOtShiny
 
 	ld a, [hl]
 	and SHINY_BYTE_4
 	cp SHINY_BYTE_4
-	jr nz, .NotShiny
+	jr nz, .NOtShiny
 
 
 .Shiny:
 	scf
 	ret
 
-.NotShiny:
+.NOtShiny:
 	and a
 	ret
 
@@ -759,7 +759,7 @@ GetEnemyFrontpicPalettePointer:
 
 GetPlayerOrMonPalettePointer:
 	and a
-	jp nz, GetMonNormalOrShinyPalettePointer
+	jp nz, GetMonNOrmalOrShinyPalettePointer
 	ld a, [wPlayerSpriteSetupFlags]
 	bit 2, a ; transformed to male
 	jr nz, .male
@@ -775,7 +775,7 @@ GetPlayerOrMonPalettePointer:
 
 GetFrontpicPalettePointer:
 	and a
-	jp nz, GetMonNormalOrShinyPalettePointer
+	jp nz, GetMonNOrmalOrShinyPalettePointer
 	ld a, [TrainerClass]
 
 GetTrainerPalettePointer:
@@ -874,7 +874,7 @@ GetMonPalettePointer:
 	add hl, bc
 	ret
 
-GetMonNormalOrShinyPalettePointer:
+GetMonNOrmalOrShinyPalettePointer:
 	push bc
 	call GetMonPalettePointer
 	pop bc

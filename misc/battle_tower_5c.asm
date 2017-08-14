@@ -1110,7 +1110,7 @@ BattleTowerAction_SetByteToQuickSaveChallenge: ; 170799 (5c:4799) BattleTowerAct
 	jr asm_17079f
 
 BattleTowerAction_SetByteToCancelChallenge: ; 17079d (5c:479d) BattleTowerAction $04
-	ld c, BATTLETOWER_No_CHALLENGE
+	ld c, BATTLETOWER_NO_CHALLENGE
 asm_17079f: ; 17079f (5c:479f)
 	ld a, BANK(sBattleTowerChallengeState)
 	call GetSRAMBank
@@ -1455,8 +1455,8 @@ Function1709bb: ; 1709bb (5c:49bb) BattleTowerAction $10
 ; 1709e7 (5c:49e7)
 
 Jumptable_1709e7: ; 1709e7
-	dw .NoAction
-	dw .NoAction
+	dw .NOAction
+	dw .NOAction
 	dw .DoAction1
 	dw .DoAction1
 	dw .Action4
@@ -1470,7 +1470,7 @@ Jumptable_1709e7: ; 1709e7
 	ld [$a800], a
 	call CloseSRAM
 
-.NoAction: ; 170a00
+.NOAction: ; 170a00
 	ret
 ; 170a01
 
@@ -1698,7 +1698,7 @@ Function_LoadOpponentTrainerAndPokemonsWithOTSprite: ; 0x170b44
 	db SPRITE_OAK
 	db SPRITE_WILL
 	db SPRITE_CHRIS
-	db SPRITE_BRUNo
+	db SPRITE_BRUNO
 	db SPRITE_KAREN
 	db SPRITE_KOGA
 	db SPRITE_LANCE
@@ -1745,7 +1745,7 @@ Function_LoadOpponentTrainerAndPokemonsWithOTSprite: ; 0x170b44
 	db SPRITE_GRANNY
 	db SPRITE_ROCKER
 	db SPRITE_POKEFAN_M
-	db SPRITE_KIMONo_GIRL
+	db SPRITE_KIMONO_GIRL
 	db SPRITE_TWIN
 	db SPRITE_POKEFAN_F
 	db SPRITE_RED

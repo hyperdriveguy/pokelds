@@ -2,7 +2,7 @@
 
 ; Interfaces are in bank 0.
 
-; Notable functions:
+; NOtable functions:
 ; 	FadeMusic
 ; 	PlayStereoSFX
 
@@ -105,7 +105,7 @@ _UpdateSound:: ; e805c
 	bit SOUND_CHANNEL_ON, [hl]
 	jp z, .nextchannel
 	; check time left in the current note
-	ld hl, Channel1NoteDuration - Channel1
+	ld hl, Channel1NOteDuration - Channel1
 	add hl, bc
 	ld a, [hl]
 	cp $2 ; 1 or 0?
@@ -144,7 +144,7 @@ _UpdateSound:: ; e805c
 	ld [wCurTrackFrequency + 1], a
 	; vibrato, noise
 	call HandleTrackVibrato ; handle vibrato and other things
-	call HandleNoise
+	call HandleNOise
 	; turn off music when playing sfx?
 	ld a, [SFXPriority]
 	and a
@@ -168,9 +168,9 @@ _UpdateSound:: ; e805c
 	bit SOUND_CHANNEL_ON, [hl]
 	jr z, .next
 .restnote
-	ld hl, Channel1NoteFlags - Channel1
+	ld hl, Channel1NOteFlags - Channel1
 	add hl, bc
-	set NoTE_REST, [hl] ; Rest
+	set NOTE_REST, [hl] ; Rest
 .next
 	; are we in a sfx channel right now?
 	ld a, [CurChannel]
@@ -189,7 +189,7 @@ _UpdateSound:: ; e805c
 	ld [SoundOutput], a
 .sound_channel_on
 	; clear note flags
-	ld hl, Channel1NoteFlags - Channel1
+	ld hl, Channel1NOteFlags - Channel1
 	add hl, bc
 	xor a
 	ld [hl], a
@@ -248,21 +248,21 @@ UpdateChannels: ; e8125
 	bit 7, a
 	ret nz
 .Channel5:
-	ld hl, Channel1NoteFlags - Channel1
+	ld hl, Channel1NOteFlags - Channel1
 	add hl, bc
-	bit NoTE_UNKN_3, [hl]
+	bit NOTE_UNKN_3, [hl]
 	jr z, .asm_e8159
 	;
 	ld a, [SoundInput]
 	ld [rNR10], a
 .asm_e8159
-	bit NoTE_REST, [hl] ; rest
+	bit NOTE_REST, [hl] ; rest
 	jr nz, .ch1rest
-	bit NoTE_NoISE_SAMPLING, [hl]
+	bit NOTE_NOISE_SAMPLING, [hl]
 	jr nz, .asm_e81a2
-	bit NoTE_FREQ_OVERRIDE, [hl]
+	bit NOTE_FREQ_OVERRIDE, [hl]
 	jr nz, .frequency_override
-	bit NoTE_VIBRATO_OVERRIDE, [hl]
+	bit NOTE_VIBRATO_OVERRIDE, [hl]
 	jr nz, .asm_e8184
 	jr .check_duty_override
 
@@ -272,7 +272,7 @@ UpdateChannels: ; e8125
 	ld a, [wCurTrackFrequency + 1]
 	ld [rNR14], a
 .check_duty_override
-	bit NoTE_DUTY_OVERRIDE, [hl]
+	bit NOTE_DUTY_OVERRIDE, [hl]
 	ret z
 	ld a, [wCurTrackDuty]
 	ld d, a
@@ -317,15 +317,15 @@ UpdateChannels: ; e8125
 
 .Channel2:
 .Channel6:
-	ld hl, Channel1NoteFlags - Channel1
+	ld hl, Channel1NOteFlags - Channel1
 	add hl, bc
-	bit NoTE_REST, [hl] ; rest
+	bit NOTE_REST, [hl] ; rest
 	jr nz, .ch2rest
-	bit NoTE_NoISE_SAMPLING, [hl]
+	bit NOTE_NOISE_SAMPLING, [hl]
 	jr nz, .asm_e8204
-	bit NoTE_VIBRATO_OVERRIDE, [hl]
+	bit NOTE_VIBRATO_OVERRIDE, [hl]
 	jr nz, .asm_e81e6
-	bit NoTE_DUTY_OVERRIDE, [hl]
+	bit NOTE_DUTY_OVERRIDE, [hl]
 	ret z
 	ld a, [wCurTrackDuty]
 	ld d, a
@@ -377,13 +377,13 @@ UpdateChannels: ; e8125
 
 .Channel3:
 .Channel7:
-	ld hl, Channel1NoteFlags - Channel1
+	ld hl, Channel1NOteFlags - Channel1
 	add hl, bc
-	bit NoTE_REST, [hl] ; rest
+	bit NOTE_REST, [hl] ; rest
 	jr nz, .ch3rest
-	bit NoTE_NoISE_SAMPLING, [hl]
+	bit NOTE_NOISE_SAMPLING, [hl]
 	jr nz, .asm_e824d
-	bit NoTE_VIBRATO_OVERRIDE, [hl]
+	bit NOTE_VIBRATO_OVERRIDE, [hl]
 	jr nz, .asm_e823a
 	ret
 
@@ -478,11 +478,11 @@ endr
 
 .Channel4:
 .Channel8:
-	ld hl, Channel1NoteFlags - Channel1
+	ld hl, Channel1NOteFlags - Channel1
 	add hl, bc
-	bit NoTE_REST, [hl] ; rest
+	bit NOTE_REST, [hl] ; rest
 	jr nz, .ch4rest
-	bit NoTE_NoISE_SAMPLING, [hl]
+	bit NOTE_NOISE_SAMPLING, [hl]
 	jr nz, .asm_e82d4
 	ret
 
@@ -715,17 +715,17 @@ FadeMusic: ; e8358
 
 ; e83d1
 
-LoadNote: ; e83d1
+LoadNOte: ; e83d1
 	; wait for pitch wheel to finish
 	ld hl, Channel1Flags2 - Channel1
 	add hl, bc
 	bit SOUND_PITCH_WHEEL, [hl]
 	ret z
 	; get note duration
-	ld hl, Channel1NoteDuration - Channel1
+	ld hl, Channel1NOteDuration - Channel1
 	add hl, bc
 	ld a, [hl]
-	ld hl, wCurNoteDuration
+	ld hl, wCurNOteDuration
 	sub [hl]
 	jr nc, .ok
 	ld a, 1
@@ -800,11 +800,11 @@ LoadNote: ; e83d1
 	sub [hl]
 	ld d, a
 .resume
-	; de = x * [wCurNoteDuration] + y
+	; de = x * [wCurNOteDuration] + y
 	; x + 1 -> d
 	; y -> a
 	push bc
-	ld hl, wCurNoteDuration
+	ld hl, wCurNOteDuration
 	ld b, 0 ; quotient
 .loop
 	inc b
@@ -851,9 +851,9 @@ HandleTrackVibrato: ; e8466
 	ld [hl], a
 	and $c0
 	ld [wCurTrackDuty], a
-	ld hl, Channel1NoteFlags - Channel1
+	ld hl, Channel1NOteFlags - Channel1
 	add hl, bc
-	set NoTE_DUTY_OVERRIDE, [hl]
+	set NOTE_DUTY_OVERRIDE, [hl]
 .next
 	ld hl, Channel1Flags2 - Channel1
 	add hl, bc
@@ -948,9 +948,9 @@ HandleTrackVibrato: ; e8466
 .no_carry
 	ld [wCurTrackFrequency], a
 	;
-	ld hl, Channel1NoteFlags - Channel1
+	ld hl, Channel1NOteFlags - Channel1
 	add hl, bc
-	set NoTE_VIBRATO_OVERRIDE, [hl]
+	set NOTE_VIBRATO_OVERRIDE, [hl]
 .quit
 	ret
 
@@ -1065,19 +1065,19 @@ ApplyPitchWheel: ; e84f9
 	ld [hl], e
 	inc hl
 	ld [hl], d
-	ld hl, Channel1NoteFlags - Channel1
+	ld hl, Channel1NOteFlags - Channel1
 	add hl, bc
-	set NoTE_FREQ_OVERRIDE, [hl]
-	set NoTE_DUTY_OVERRIDE, [hl]
+	set NOTE_FREQ_OVERRIDE, [hl]
+	set NOTE_DUTY_OVERRIDE, [hl]
 	ret
 
 ; e858c
 
-HandleNoise: ; e858c
+HandleNOise: ; e858c
 	; is noise sampling on?
 	ld hl, Channel1Flags - Channel1
 	add hl, bc
-	bit SOUND_NoISE, [hl] ; noise sampling
+	bit SOUND_NOISE, [hl] ; noise sampling
 	ret z
 	; are we in a sfx channel?
 	ld a, [CurChannel]
@@ -1088,20 +1088,20 @@ HandleNoise: ; e858c
 	bit SOUND_CHANNEL_ON, [hl] ; on?
 	jr z, .next
 	; is ch8 playing noise?
-	bit SOUND_NoISE, [hl]
+	bit SOUND_NOISE, [hl]
 	ret nz ; quit if so
 	;
 .next
-	ld a, [wNoiseSampleDelay]
+	ld a, [wNOiseSampleDelay]
 	and a
-	jr z, ReadNoiseSample
+	jr z, ReadNOiseSample
 	dec a
-	ld [wNoiseSampleDelay], a
+	ld [wNOiseSampleDelay], a
 	ret
 
 ; e85af
 
-ReadNoiseSample: ; e85af
+ReadNOiseSample: ; e85af
 ; sample struct:
 ;	[wx] [yy] [zz]
 ;	w: ? either 2 or 3
@@ -1109,8 +1109,8 @@ ReadNoiseSample: ; e85af
 ;	zz: intensity
 ;       yy: frequency
 
-	; de = [NoiseSampleAddress]
-	ld hl, NoiseSampleAddress
+	; de = [NOiseSampleAddress]
+	ld hl, NOiseSampleAddress
 	ld e, [hl]
 	inc hl
 	ld d, [hl]
@@ -1128,7 +1128,7 @@ ReadNoiseSample: ; e85af
 
 	and $f
 	inc a
-	ld [wNoiseSampleDelay], a
+	ld [wNOiseSampleDelay], a
 	ld a, [de]
 	inc de
 	ld [wCurTrackIntensity], a
@@ -1138,14 +1138,14 @@ ReadNoiseSample: ; e85af
 	xor a
 	ld [wCurTrackFrequency + 1], a
 
-	ld hl, NoiseSampleAddress
+	ld hl, NOiseSampleAddress
 	ld [hl], e
 	inc hl
 	ld [hl], d
 
-	ld hl, Channel1NoteFlags - Channel1
+	ld hl, Channel1NOteFlags - Channel1
 	add hl, bc
-	set NoTE_NoISE_SAMPLING, [hl]
+	set NOTE_NOISE_SAMPLING, [hl]
 	ret
 
 .quit
@@ -1174,13 +1174,13 @@ ParseMusic: ; e85e1
 	jp nz, ParseSFXOrRest
 	bit SOUND_REST, [hl] ; rest
 	jp nz, ParseSFXOrRest
-	bit SOUND_NoISE, [hl] ; noise sample
-	jp nz, GetNoiseSample
+	bit SOUND_NOISE, [hl] ; noise sample
+	jp nz, GetNOiseSample
 ; normal note
 	; set note duration (bottom nybble)
 	ld a, [CurMusicByte]
 	and $f
-	call SetNoteDuration
+	call SetNOteDuration
 	; get note pitch (top nybble)
 	ld a, [CurMusicByte]
 	swap a
@@ -1204,16 +1204,16 @@ ParseMusic: ; e85e1
 	inc hl
 	ld [hl], d
 	; ????
-	ld hl, Channel1NoteFlags - Channel1
+	ld hl, Channel1NOteFlags - Channel1
 	add hl, bc
-	set NoTE_NoISE_SAMPLING, [hl]
-	jp LoadNote
+	set NOTE_NOISE_SAMPLING, [hl]
+	jp LoadNOte
 
 .rest
 ; note = rest
-	ld hl, Channel1NoteFlags - Channel1
+	ld hl, Channel1NOteFlags - Channel1
 	add hl, bc
-	set NoTE_REST, [hl] ; Rest
+	set NOTE_REST, [hl] ; Rest
 	ret
 
 .endchannel
@@ -1249,9 +1249,9 @@ ParseMusic: ; e85e1
 	add hl, bc
 	res SOUND_CHANNEL_ON, [hl]
 	; note = rest
-	ld hl, Channel1NoteFlags - Channel1
+	ld hl, Channel1NOteFlags - Channel1
 	add hl, bc
-	set NoTE_REST, [hl]
+	set NOTE_REST, [hl]
 	; clear music id & bank
 	ld hl, Channel1MusicID - Channel1
 	add hl, bc
@@ -1286,12 +1286,12 @@ RestoreVolume: ; e8679
 
 ParseSFXOrRest: ; e8698
 	; turn noise sampling on
-	ld hl, Channel1NoteFlags - Channel1
+	ld hl, Channel1NOteFlags - Channel1
 	add hl, bc
-	set NoTE_NoISE_SAMPLING, [hl] ; noise sample
+	set NOTE_NOISE_SAMPLING, [hl] ; noise sample
 	; update note duration
 	ld a, [CurMusicByte]
-	call SetNoteDuration ; top nybble doesnt matter?
+	call SetNOteDuration ; top nybble doesnt matter?
 	; update intensity from next param
 	call GetMusicByte
 	ld hl, Channel1Intensity - Channel1
@@ -1316,8 +1316,8 @@ ParseSFXOrRest: ; e8698
 
 ; e86c5
 
-GetNoiseSample: ; e86c5
-; load ptr to sample header in NoiseSampleAddress
+GetNOiseSample: ; e86c5
+; load ptr to sample header in NOiseSampleAddress
 	; are we on the last channel?
 	ld a, [CurChannel]
 	and $3
@@ -1327,7 +1327,7 @@ GetNoiseSample: ; e86c5
 	; update note duration
 	ld a, [CurMusicByte]
 	and $f
-	call SetNoteDuration
+	call SetNOteDuration
 	; check current channel
 	ld a, [CurChannel]
 	bit 2, a ; are we in a sfx channel?
@@ -1335,11 +1335,11 @@ GetNoiseSample: ; e86c5
 	ld hl, Channel8Flags
 	bit SOUND_CHANNEL_ON, [hl] ; is ch8 on? (noise)
 	ret nz
-	ld a, [MusicNoiseSampleSet]
+	ld a, [MusicNOiseSampleSet]
 	jr .next
 
 .sfx
-	ld a, [SFXNoiseSampleSet]
+	ld a, [SFXNOiseSampleSet]
 .next
 	; load noise sample set id into de
 	ld e, a
@@ -1362,14 +1362,14 @@ GetNoiseSample: ; e86c5
 	ld d, 0
 	add hl, de
 	add hl, de
-	; load sample pointer into NoiseSampleAddress
+	; load sample pointer into NOiseSampleAddress
 	ld a, [hli]
-	ld [NoiseSampleAddressLo], a
+	ld [NOiseSampleAddressLo], a
 	ld a, [hl]
-	ld [NoiseSampleAddressHi], a
+	ld [NOiseSampleAddressHi], a
 	; clear ????
 	xor a
-	ld [wNoiseSampleDelay], a
+	ld [wNOiseSampleDelay], a
 	ret
 
 ; e870f
@@ -1404,7 +1404,7 @@ MusicCommands: ; e8720
 	dw Music_Octave3 ; octave 3
 	dw Music_Octave2 ; octave 2
 	dw Music_Octave1 ; octave 1
-	dw Music_NoteType ; note length + intensity
+	dw Music_NOteType ; note length + intensity
 	dw Music_ForceOctave ; set starting octave
 	dw Music_Tempo ; tempo
 	dw Music_DutyCycle ; duty cycle
@@ -1415,7 +1415,7 @@ MusicCommands: ; e8720
 	dw Music_SlidePitchTo ; pitch wheel
 	dw Music_Vibrato ; vibrato
 	dw MusicE2 ; unused
-	dw Music_ToggleNoise ; music noise sampling
+	dw Music_ToggleNOise ; music noise sampling
 	dw Music_Panning ; force panning
 	dw Music_Volume ; volume
 	dw Music_Tone ; tone
@@ -1428,7 +1428,7 @@ MusicCommands: ; e8720
 	dw Music_SFXPriorityOff ; sfx priority off
 	dw MusicEE ; unused
 	dw Music_StereoPanning ; stereo panning
-	dw Music_SFXToggleNoise ; sfx noise sampling
+	dw Music_SFXToggleNOise ; sfx noise sampling
 	dw MusicF1 ; nothing
 	dw MusicF2 ; nothing
 	dw MusicF3 ; nothing
@@ -1800,7 +1800,7 @@ Music_SlidePitchTo: ; e88bd
 ; note duration
 ; target note
 	call GetMusicByte
-	ld [wCurNoteDuration], a
+	ld [wCurNOteDuration], a
 
 	call GetMusicByte
 	; pitch in e
@@ -1909,7 +1909,7 @@ Music_ToggleSFX: ; e892d
 
 ; e893b
 
-Music_ToggleNoise: ; e893b
+Music_ToggleNOise: ; e893b
 ; toggle music noise sampling
 ; can't be used as a straight toggle since the param is not read from on->off
 ; params:
@@ -1918,22 +1918,22 @@ Music_ToggleNoise: ; e893b
 	; check if noise sampling is on
 	ld hl, Channel1Flags - Channel1
 	add hl, bc
-	bit SOUND_NoISE, [hl]
+	bit SOUND_NOISE, [hl]
 	jr z, .on
 	; turn noise sampling off
-	res SOUND_NoISE, [hl]
+	res SOUND_NOISE, [hl]
 	ret
 
 .on
 	; turn noise sampling on
-	set SOUND_NoISE, [hl]
+	set SOUND_NOISE, [hl]
 	call GetMusicByte
-	ld [MusicNoiseSampleSet], a
+	ld [MusicNOiseSampleSet], a
 	ret
 
 ; e894f
 
-Music_SFXToggleNoise: ; e894f
+Music_SFXToggleNOise: ; e894f
 ; toggle sfx noise sampling
 ; params:
 ;	on: 1
@@ -1941,29 +1941,29 @@ Music_SFXToggleNoise: ; e894f
 	; check if noise sampling is on
 	ld hl, Channel1Flags - Channel1
 	add hl, bc
-	bit SOUND_NoISE, [hl]
+	bit SOUND_NOISE, [hl]
 	jr z, .on
 	; turn noise sampling off
-	res SOUND_NoISE, [hl]
+	res SOUND_NOISE, [hl]
 	ret
 
 .on
 	; turn noise sampling on
-	set SOUND_NoISE, [hl]
+	set SOUND_NOISE, [hl]
 	call GetMusicByte
-	ld [SFXNoiseSampleSet], a
+	ld [SFXNOiseSampleSet], a
 	ret
 
 ; e8963
 
-Music_NoteType: ; e8963
+Music_NOteType: ; e8963
 ; note length
 ;	# frames per 16th note
 ; intensity: see Music_Intensity
 ; params: 2
 	; note length
 	call GetMusicByte
-	ld hl, Channel1NoteLength - Channel1
+	ld hl, Channel1NOteLength - Channel1
 	add hl, bc
 	ld [hl], a
 	ld a, [CurChannel]
@@ -1981,9 +1981,9 @@ Music_SoundStatus: ; e8977
 ; params: 1
 	call GetMusicByte
 	ld [SoundInput], a
-	ld hl, Channel1NoteFlags - Channel1
+	ld hl, Channel1NOteFlags - Channel1
 	add hl, bc
-	set NoTE_UNKN_3, [hl]
+	set NOTE_UNKN_3, [hl]
 	ret
 
 ; e8984
@@ -2287,17 +2287,17 @@ GetFrequency: ; e8a5d
 
 ; e8a8d
 
-SetNoteDuration: ; e8a8d
+SetNOteDuration: ; e8a8d
 ; input: a = note duration in 16ths
 	; store delay units in de
 	inc a
 	ld e, a
 	ld d, 0
-	; store NoteLength in a
-	ld hl, Channel1NoteLength - Channel1
+	; store NOteLength in a
+	ld hl, Channel1NOteLength - Channel1
 	add hl, bc
 	ld a, [hl]
-	; multiply NoteLength by delay units
+	; multiply NOteLength by delay units
 	ld l, 0; just multiply
 	call .Multiply
 	ld a, l ; % $100
@@ -2311,7 +2311,7 @@ SetNoteDuration: ; e8a8d
 	ld hl, Channel1Field0x16 - Channel1
 	add hl, bc
 	ld l, [hl]
-	; multiply Tempo by last result (NoteLength * delay % $100)
+	; multiply Tempo by last result (NOteLength * delay % $100)
 	call .Multiply
 	; copy result to de
 	ld e, l
@@ -2320,8 +2320,8 @@ SetNoteDuration: ; e8a8d
 	ld hl, Channel1Field0x16 - Channel1
 	add hl, bc
 	ld [hl], e
-	; store result in NoteDuration
-	ld hl, Channel1NoteDuration - Channel1
+	; store result in NOteDuration
+	ld hl, Channel1NOteDuration - Channel1
 	add hl, bc
 	ld [hl], d
 	ret
@@ -2471,10 +2471,10 @@ _PlayMusic:: ; e8b30
 	ld [Channel2JumpCondition], a
 	ld [Channel3JumpCondition], a
 	ld [Channel4JumpCondition], a
-	ld [NoiseSampleAddressLo], a
-	ld [NoiseSampleAddressHi], a
-	ld [wNoiseSampleDelay], a
-	ld [MusicNoiseSampleSet], a
+	ld [NOiseSampleAddressLo], a
+	ld [NOiseSampleAddressHi], a
+	ld [wNOiseSampleDelay], a
+	ld [MusicNOiseSampleSet], a
 	call MusicOn
 	ret
 
@@ -2534,7 +2534,7 @@ _PlayCryHeader:: ; e8b79
 	ld a, [CryPitch + 1]
 	ld [hl], a
 
-; No tempo for channel 4
+; NO tempo for channel 4
 	ld a, [CurChannel]
 	and 3
 	cp 3
@@ -2652,8 +2652,8 @@ _PlaySFX:: ; e8c04
 	ld a, $80
 	ld [rNR44], a ; restart sound (freq hi = 0)
 	xor a
-	ld [NoiseSampleAddressLo], a
-	ld [NoiseSampleAddressHi], a
+	ld [NOiseSampleAddressLo], a
+	ld [NOiseSampleAddressHi], a
 .chscleared
 ; start reading sfx header for # chs
 	ld hl, MusicID
@@ -2867,7 +2867,7 @@ ChannelInit: ; e8d5b
 	inc a
 	ld [hl], a
 	; set note length to default ($1) (fast)
-	ld hl, Channel1NoteLength - Channel1
+	ld hl, Channel1NOteLength - Channel1
 	add hl, bc
 	ld [hl], a
 	pop de

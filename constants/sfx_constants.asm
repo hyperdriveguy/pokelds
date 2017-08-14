@@ -95,20 +95,20 @@
 	const SFX_SING                        ; 5c
 	const SFX_HYPER_BEAM                  ; 5d
 	const SFX_SHINE                       ; 5e
-	const SFX_UNKNoWN_5F                  ; 5f
-	const SFX_UNKNoWN_60                  ; 60
-	const SFX_UNKNoWN_61                  ; 61
+	const SFX_UNKNOWN_5F                  ; 5f
+	const SFX_UNKNOWN_60                  ; 60
+	const SFX_UNKNOWN_61                  ; 61
 	const SFX_SWITCH_POCKETS              ; 62
-	const SFX_UNKNoWN_63                  ; 63
+	const SFX_UNKNOWN_63                  ; 63
 	const SFX_BURN                        ; 64
 	const SFX_TITLE_SCREEN_ENTRANCE       ; 65
-	const SFX_UNKNoWN_66                  ; 66
+	const SFX_UNKNOWN_66                  ; 66
 	const SFX_GET_COIN_FROM_SLOTS         ; 67
 	const SFX_PAY_DAY                     ; 68
-	const SFX_METRONoME                   ; 69
+	const SFX_METRONOME                   ; 69
 	const SFX_CALL                        ; 6a
 	const SFX_HANG_UP                     ; 6b
-	const SFX_No_SIGNAL                   ; 6c
+	const SFX_NO_SIGNAL                   ; 6c
 	const SFX_SANDSTORM                   ; 6d
 	const SFX_ELEVATOR                    ; 6e
 	const SFX_PROTECT                     ; 6f
@@ -123,11 +123,11 @@
 	const SFX_SPIDER_WEB                  ; 78
 	const SFX_MIND_READER                 ; 79
 	const SFX_NIGHTMARE                   ; 7a
-	const SFX_SNoRE                       ; 7b
+	const SFX_SNORE                       ; 7b
 	const SFX_SWEET_KISS                  ; 7c
 	const SFX_SWEET_KISS_2                ; 7d
 	const SFX_BELLY_DRUM                  ; 7e
-	const SFX_UNKNoWN_7F                  ; 7f
+	const SFX_UNKNOWN_7F                  ; 7f
 	const SFX_SLUDGE_BOMB                 ; 80
 	const SFX_FORESIGHT                   ; 81
 	const SFX_SPITE                       ; 82
@@ -136,7 +136,7 @@
 	const SFX_GIGA_DRAIN                  ; 85
 	const SFX_ATTRACT                     ; 86
 	const SFX_KINESIS_2                   ; 87
-	const SFX_ZAP_CANNoN                  ; 88
+	const SFX_ZAP_CANNON                  ; 88
 	const SFX_MEAN_LOOK                   ; 89
 	const SFX_HEAL_BELL                   ; 8a
 	const SFX_RETURN                      ; 8b
@@ -171,7 +171,7 @@
 	const SFX_GS_INTRO_POKEMON_APPEARS    ; a8
 	const SFX_FLASH                       ; a9
 	const SFX_GAME_FREAK_LOGO_GS          ; aa
-	const SFX_NoT_VERY_EFFECTIVE          ; ab
+	const SFX_NOT_VERY_EFFECTIVE          ; ab
 	const SFX_DAMAGE                      ; ac
 	const SFX_SUPER_EFFECTIVE             ; ad
 	const SFX_BALL_BOUNCE                 ; ae
@@ -191,9 +191,9 @@
 	const SFX_GLASS_TING                  ; bc
 	const SFX_GLASS_TING_2                ; bd
 
-	const SFX_INTRO_UNoWN_1               ; be
-	const SFX_INTRO_UNoWN_2               ; bf
-	const SFX_INTRO_UNoWN_3               ; c0
+	const SFX_INTRO_UNOWN_1               ; be
+	const SFX_INTRO_UNOWN_2               ; bf
+	const SFX_INTRO_UNOWN_3               ; c0
 	const SFX_DITTO_POP_UP                ; c1
 	const SFX_DITTO_TRANSFORM             ; c2
 	const SFX_INTRO_SUICUNE_1             ; c3
@@ -204,7 +204,7 @@
 	const SFX_INTRO_SUICUNE_4             ; c8
 	const SFX_GAME_FREAK_PRESENTS         ; c9
 	const SFX_TINGLE                      ; ca
-	const SFX_UNKNoWN_CB                  ; cb
+	const SFX_UNKNOWN_CB                  ; cb
 	const SFX_TWO_PC_BEEPS                ; cc
-	const SFX_4_NoTE_DITTY                ; cd
+	const SFX_4_NOTE_DITTY                ; cd
 	const SFX_TWINKLE                     ; ce

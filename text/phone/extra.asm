@@ -170,7 +170,7 @@ UnknownText_0x6455b: ; 0x6455b
 	text "I saw, I saw!"
 
 	para "You waking up"
-	line "SNoRLAX!"
+	line "SNORLAX!"
 
 	para "I was watching you"
 	line "from afar, so I"
@@ -1111,7 +1111,7 @@ UnknownText_0x65ff2: ; 0x65ff2
 	text "Have I found"
 	line "anything good?"
 
-	para "Nope, not yet."
+	para "NOpe, not yet."
 
 	para "It's like fishing,"
 	line "you need patience."
@@ -1296,7 +1296,7 @@ UnknownText_0x664dd: ; 0x664dd
 	line "BILL's mother is"
 
 	para "said to have been"
-	line "a KIMONo GIRL."
+	line "a KIMONO GIRL."
 	done
 ; 0x6651e
 
@@ -1720,7 +1720,7 @@ UnknownText_0x66f52: ; 0x66f52
 	text "I rested up over"
 	line "my lunch break."
 
-	para "Now it's time to"
+	para "NOw it's time to"
 	line "resume training!"
 
 	para "Oooryaah!"
@@ -1728,7 +1728,7 @@ UnknownText_0x66f52: ; 0x66f52
 ; 0x66f9f
 
 UnknownText_0x66f9f: ; 0x66f9f
-	text "Nothing can match"
+	text "NOthing can match"
 	line "my @"
 	text_from_ram StringBuffer4
 	text " now."

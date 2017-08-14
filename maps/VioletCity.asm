@@ -256,7 +256,7 @@ VioletCitySignText:
 	text "VIOLET CITY"
 
 	para "The City of"
-	line "Nostalgic Scents"
+	line "NOstalgic Scents"
 	done
 
 VioletGymSignText:

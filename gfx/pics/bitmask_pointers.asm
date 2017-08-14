@@ -162,7 +162,7 @@ BitmasksPointers:
 	dw SentretBitmasks
 	dw FurretBitmasks
 	dw HoothootBitmasks
-	dw NoctowlBitmasks
+	dw NOctowlBitmasks
 	dw LedybaBitmasks
 	dw LedianBitmasks
 	dw SpinarakBitmasks

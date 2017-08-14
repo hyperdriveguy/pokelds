@@ -112,7 +112,7 @@ MrPokemonsHouse_OakScript:
 	waitbutton
 	closetext
 	special Special_FadeBlackQuickly
-	special Special_ReloadSpritesNoPalettes
+	special Special_ReloadSpritesNOPalettes
 	playmusic MUSIC_HEAL
 	special TrainerRankings_Healings
 	special HealParty

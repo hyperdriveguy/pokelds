@@ -449,7 +449,7 @@ MailboxPC: ; 0x44806
 .PutInPack: ; 0x44877
 	ld hl, .MessageLostText
 	call MenuTextBox
-	call YesNoBox
+	call YesNOBox
 	call ExitMenu
 	ret c
 	ld a, [MenuSelection]

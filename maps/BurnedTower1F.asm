@@ -180,11 +180,11 @@ BurnedTowerSilver_BeforeText:
 	para "But there's"
 	line "nothing here!"
 
-	para "Nothing after all"
+	para "NOthing after all"
 	line "the trouble of"
 
 	para "coming to this"
-	line "dump? No way!"
+	line "dump? NO way!"
 
 	para "It's all your"
 	line "fault!"

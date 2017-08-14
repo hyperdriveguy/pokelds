@@ -162,7 +162,7 @@ UnknownText_0x54e02:
 	done
 
 UnknownText_0x54e2d:
-	text "Oh… Now what to"
+	text "Oh… NOw what to"
 	line "do?"
 	done
 

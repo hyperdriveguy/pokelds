@@ -11,7 +11,7 @@ SpecialGiveShuckle: ; 7305
 	ld [CurPartyLevel], a
 
 	predef TryAddMonToParty
-	jr nc, .NotGiven
+	jr nc, .NOtGiven
 
 ; Caught data.
 	ld b, 0
@@ -60,7 +60,7 @@ SpecialGiveShuckle: ; 7305
 	ld [ScriptVar], a
 	ret
 
-.NotGiven:
+.NOtGiven:
 	xor a
 	ld [ScriptVar], a
 	ret

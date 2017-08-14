@@ -2,7 +2,7 @@ NameRater: ; fb6ed
 ; Introduce himself
 	ld hl, NameRaterIntroText
 	call PrintText
-	call YesNoBox
+	call YesNOBox
 	jp c, .cancel
 ; Select a Pokemon from your party
 	ld hl, NameRaterWhichMonText
@@ -20,7 +20,7 @@ NameRater: ; fb6ed
 ; This name is good, but we can do better.  How about it?
 	ld hl, NameRaterIsGoodText
 	call PrintText
-	call YesNoBox
+	call YesNOBox
 	jr c, .cancel
 ; What name shall I give it then?
 	ld hl, NameRaterWhichNameText

@@ -24,7 +24,7 @@ def recursive_read(filename):
     lines = recurse(filename)
     return ''.join(lines)
 
-base_stats = None
+base_stats = NOne
 def get_base_stats():
     global base_stats
     if not base_stats:
@@ -158,8 +158,8 @@ methods = {
     'unlz': decompress,
 }
 
-def main(method_name, filenames=None):
-    if filenames is None: filenames = []
+def main(method_name, filenames=NOne):
+    if filenames is NOne: filenames = []
     for filename in filenames:
         args = filepath_rules(filename)
         method = methods.get(method_name)

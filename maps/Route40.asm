@@ -101,7 +101,7 @@ MonicaScript:
 	checkevent EVENT_GOT_SHARP_BEAK_FROM_MONICA
 	iftrue MonicaMondayScript
 	checkcode VAR_WEEKDAY
-	if_not_equal MONDAY, MonicaNotMondayScript
+	if_not_equal MONDAY, MonicaNOtMondayScript
 	checkevent EVENT_MET_MONICA_OF_MONDAY
 	iftrue .MetMonica
 	writetext MeetMonicaText
@@ -125,8 +125,8 @@ MonicaDoneScript:
 	closetext
 	end
 
-MonicaNotMondayScript:
-	writetext MonicaNotMondayText
+MonicaNOtMondayScript:
+	writetext MonicaNOtMondayText
 	waitbutton
 	closetext
 	end
@@ -220,7 +220,7 @@ UnknownText_0x1a637b:
 	done
 
 SwimmerfPaulaSeenText:
-	text "No inner tube for"
+	text "NO inner tube for"
 	line "me."
 
 	para "I'm hanging on to"
@@ -327,7 +327,7 @@ MonicaMondayText:
 	line "find them all!"
 	done
 
-MonicaNotMondayText:
+MonicaNOtMondayText:
 	text "MONICA: I don't"
 	line "think today is"
 	cont "Monday. How sad…"

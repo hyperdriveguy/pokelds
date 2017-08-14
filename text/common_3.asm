@@ -127,7 +127,7 @@ UnknownText_0x1c0897::
 	prompt
 
 UnknownText_0x1c08ac::
-	text "Nope. Nothing…"
+	text "NOpe. NOthing…"
 	done
 
 UnknownText_0x1c08bc::
@@ -163,7 +163,7 @@ UnknownText_0x1c0958::
 	prompt
 
 UnknownText_0x1c0965::
-	text "Not even a nibble!"
+	text "NOt even a nibble!"
 	prompt
 
 UnknownText_0x1c0979::
@@ -264,7 +264,7 @@ UnknownText_0x1c0a77::
 	prompt
 
 UnknownText_0x1c0aa9::
-	text "Nope! ITEMFINDER"
+	text "NOpe! ITEMFINDER"
 	line "isn't responding."
 	prompt
 
@@ -312,7 +312,7 @@ Text_AnEGGCantHoldAnItem::
 	prompt
 
 UnknownText_0x1c0b9a::
-	text "No items."
+	text "NO items."
 	done
 
 UnknownText_0x1c0ba5::
@@ -596,7 +596,7 @@ UnknownText_0x1c0fb3::
 	prompt
 
 UnknownText_0x1c0fb8::
-	text "No"
+	text "NO"
 	prompt
 
 UnknownText_0x1c0fbc::
@@ -808,13 +808,13 @@ _KrissPCWithdrewItemsText::
 	text "(S)."
 	prompt
 
-_KrissPCNoRoomWithdrawText::
+_KrissPCNORoomWithdrawText::
 	text "There's no room"
 	line "for more items."
 	prompt
 
 UnknownText_0x1c13df::
-	text "No items here!"
+	text "NO items here!"
 	prompt
 
 _KrissPCHowManyDepositText::
@@ -831,7 +831,7 @@ _KrissPCDepositItemsText::
 	text "(S)."
 	prompt
 
-_KrissPCNoRoomDepositText::
+_KrissPCNORoomDepositText::
 	text "There's no room to"
 	line "store items."
 	prompt
@@ -1199,7 +1199,7 @@ UnknownText_0x1c1cc4::
 	prompt
 
 UnknownText_0x1c1ce3::
-	text "Not enough HP!"
+	text "NOt enough HP!"
 	prompt
 
 UnknownText_0x1c1cf3::

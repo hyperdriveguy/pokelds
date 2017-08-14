@@ -603,7 +603,7 @@ Special_SurfStartStep: ; 8379
 	slow_step LEFT
 	slow_step RIGHT
 
-FollowNotExact:: ; 839e
+FollowNOtExact:: ; 839e
 	push bc
 	ld a, c
 	call CheckObjectVisibility
@@ -684,7 +684,7 @@ FollowNotExact:: ; 839e
 	ld [hl], a
 	ld hl, OBJECT_MOVEMENTTYPE
 	add hl, de
-	ld [hl], SPRITEMOVEDATA_FOLLOWNoTEXACT
+	ld [hl], SPRITEMOVEDATA_FOLLOWNOTEXACT
 	ld hl, OBJECT_STEP_TYPE
 	add hl, de
 	ld [hl], STEP_TYPE_00

@@ -1,7 +1,7 @@
 ; Pic animation arrangement.
 
 
-AnimateMon_Slow_Normal: ; d0000
+AnimateMon_Slow_NOrmal: ; d0000
 	hlcoord 12, 0
 	ld a, [wBattleMode]
 	cp WILD_BATTLE
@@ -12,7 +12,7 @@ AnimateMon_Slow_Normal: ; d0000
 	ret
 
 .wild
-	ld e, ANIM_MON_NoRMAL
+	ld e, ANIM_MON_NORMAL
 	ld d, $0
 	call AnimateFrontpic
 	ret
@@ -72,7 +72,7 @@ ENDM
 
 PokeAnims: ; d0042
 	dw .Slow
-	dw .Normal
+	dw .NOrmal
 	dw .Menu
 	dw .Trade
 	dw .Evolve
@@ -82,12 +82,12 @@ PokeAnims: ; d0042
 	dw .Egg2
 
 .Slow:   POKEANIM StereoCry, Setup2, Play
-.Normal: POKEANIM StereoCry, Setup, Play
-.Menu:   POKEANIM CryNoWait, Setup, Play, SetWait, Wait, Extra, Play
+.NOrmal: POKEANIM StereoCry, Setup, Play
+.Menu:   POKEANIM CryNOWait, Setup, Play, SetWait, Wait, Extra, Play
 .Trade:  POKEANIM Extra, Play2, Extra, Play, SetWait, Wait, Cry, Setup, Play
-.Evolve: POKEANIM Extra, Play, SetWait, Wait, CryNoWait, Setup, Play
-.Hatch:  POKEANIM Extra, Play, CryNoWait, Setup, Play, SetWait, Wait, Extra, Play
-.Unused: POKEANIM CryNoWait, Setup, Play, SetWait, Wait, Extra, Play
+.Evolve: POKEANIM Extra, Play, SetWait, Wait, CryNOWait, Setup, Play
+.Hatch:  POKEANIM Extra, Play, CryNOWait, Setup, Play, SetWait, Wait, Extra, Play
+.Unused: POKEANIM CryNOWait, Setup, Play, SetWait, Wait, Extra, Play
 .Egg1:   POKEANIM Setup, Play
 .Egg2:   POKEANIM Extra, Play
 
@@ -161,7 +161,7 @@ endm
 	setup_command PokeAnim_Play
 	setup_command PokeAnim_Play2
 	setup_command PokeAnim_Cry
-	setup_command PokeAnim_CryNoWait
+	setup_command PokeAnim_CryNOWait
 	setup_command PokeAnim_StereoCry
 ; d00f2
 
@@ -262,7 +262,7 @@ PokeAnim_Cry: ; d017a
 	ret
 ; d0188
 
-PokeAnim_CryNoWait: ; d0188
+PokeAnim_CryNOWait: ; d0188
 	ld a, [wPokeAnimSpecies]
 	call PlayCry2
 	ld a, [wPokeAnimSceneIndex]
@@ -497,7 +497,7 @@ PokeAnim_StopWaitAnim: ; d02e4
 
 PokeAnim_IsUnown: ; d02ec
 	ld a, [wPokeAnimSpecies]
-	cp UNoWN
+	cp UNOWN
 	ret
 ; d02f2
 
