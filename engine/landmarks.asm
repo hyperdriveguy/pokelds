@@ -53,11 +53,15 @@ landmark: MACRO
 	db \1, \2
 	dw \3
 ENDM
-
+	; Dummy map
 	landmark   0,   0, SpecialMapName
-	landmark  25, 110, BountifulTownName
-	landmark 136, 116, Route101Name
-	landmark 108, 116, PleasantGroveName
+	; Land of Nephi
+	landmark  28, 124, BountifulTownName
+	landmark  28, 111, Route101Name
+	landmark  28, 100, PleasantGroveName
+	landmark  39, 100, Route102Name
+	landmark  52, 100, CityOfNephiName
+	; Place holder (Johto)
 	landmark 108,  96, Route30Name
 	landmark 104,  76, Route31Name
 	landmark  92,  76, VioletCityName
@@ -101,6 +105,7 @@ ENDM
 	landmark 120,  88, DarkCaveName
 	landmark 132, 104, Route46Name
 	landmark 156,  84, SilverCaveName
+	; Place holder (Kanto)
 	landmark  60, 124, PalletTownName
 	landmark  60, 108, Route1Name
 	landmark  60,  92, ViridianCityName
@@ -151,9 +156,15 @@ ENDM
 	landmark  28,  84, Route28Name
 	landmark 148, 132, FastShipName
 
-
-BountifulTownName:   db "BOUNTIFUL¯TOWN@"
-PleasantGroveName:   db "PLEASANT¯GROVE@"
+; Towns
+BountifulTownName:   db "Bountiful¯Town@"
+CityOfNephiName:     db "City of¯Nephi@"
+; Other landmarks
+PleasantGroveName:   db "Pleasant¯Grove@"
+; Routes
+Route101Name:        db "Route 101@"
+Route102Name:        db "Route 102@"
+; Max Char per line length reference
 VioletCityName:      db "VIOLET CITY@"
 AzaleaTownName:      db "AZALEA TOWN@"
 GoldenrodCityName:   db "GOLDENROD¯CITY@"
@@ -198,7 +209,6 @@ SafariZoneName:      db "SAFARI ZONE@"
 SeafoamIslandsName:  db "SEAFOAM¯ISLANDS@"
 PokemonMansionName:  db "#mon¯MANSION@"
 CeruleanCaveNane:    db "CERULEAN¯CAVE@"
-Route101Name:        db "ROUTE 101@"
 Route1Name:          db "ROUTE 1@"
 Route2Name:          db "ROUTE 2@"
 Route3Name:          db "ROUTE 3@"
