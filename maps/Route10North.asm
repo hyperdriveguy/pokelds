@@ -1,4 +1,4 @@
-Route10NOrth_MapScriptHeader:
+Route10North_MapScriptHeader:
 .MapTriggers:
 	db 0
 
@@ -15,7 +15,7 @@ PowerPlantSignText:
 	text "KANTO POWER PLANT"
 	done
 
-Route10NOrth_MapEventHeader:
+Route10North_MapEventHeader:
 	; filler
 	db 0, 0
 

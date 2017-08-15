@@ -262,8 +262,8 @@ GoldenrodCityGameCornerSign:
 GoldenrodCityNameRaterSign:
 	jumptext GoldenrodCityNameRaterSignText
 
-GoldenrodCityUndergroundSignNOrth:
-	jumptext GoldenrodCityUndergroundSignNOrthText
+GoldenrodCityUndergroundSignNorth:
+	jumptext GoldenrodCityUndergroundSignNorthText
 
 GoldenrodCityUndergroundSignSouth:
 	jumptext GoldenrodCityUndergroundSignSouthText
@@ -473,7 +473,7 @@ GoldenrodCityNameRaterSignText:
 	line "Nicknames Rated"
 	done
 
-GoldenrodCityUndergroundSignNOrthText:
+GoldenrodCityUndergroundSignNorthText:
 	text "UNDERGROUND"
 	line "ENTRANCE"
 	done
@@ -591,7 +591,7 @@ GoldenrodCity_MapEventHeader:
 	signpost 30, 28, SIGNPOST_READ, GoldenrodCityBikeShopSign
 	signpost 22, 16, SIGNPOST_READ, GoldenrodCityGameCornerSign
 	signpost 7, 12, SIGNPOST_READ, GoldenrodCityNameRaterSign
-	signpost 6, 8, SIGNPOST_READ, GoldenrodCityUndergroundSignNOrth
+	signpost 6, 8, SIGNPOST_READ, GoldenrodCityUndergroundSignNorth
 	signpost 30, 12, SIGNPOST_READ, GoldenrodCityUndergroundSignSouth
 	signpost 27, 16, SIGNPOST_UP, GoldenrodCityPokeCenterSign
 	signpost 6, 30, SIGNPOST_READ, GoldenrodCityFlowerShopSign

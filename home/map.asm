@@ -461,7 +461,7 @@ CopySecondMapHeader:: ; 235c
 
 GetMapConnections:: ; 2368
 	ld a, $ff
-	ld [NOrthConnectedMapGroup], a
+	ld [NorthConnectedMapGroup], a
 	ld [SouthConnectedMapGroup], a
 	ld [WestConnectedMapGroup], a
 	ld [EastConnectedMapGroup], a
@@ -471,7 +471,7 @@ GetMapConnections:: ; 2368
 
 	bit NORTH_F, b
 	jr z, .no_north
-	ld de, NOrthMapConnection
+	ld de, NorthMapConnection
 	call GetMapConnection
 .no_north
 
@@ -498,7 +498,7 @@ GetMapConnections:: ; 2368
 
 GetMapConnection:: ; 23a3
 ; Load map connection struct at hl into de.
-	ld c, SouthMapConnection - NOrthMapConnection
+	ld c, SouthMapConnection - NorthMapConnection
 .loop
 	ld a, [hli]
 	ld [de], a
@@ -790,28 +790,28 @@ ChangeMap:: ; 24e4
 
 FillMapConnections:: ; 2524
 
-; NOrth
-	ld a, [NOrthConnectedMapGroup]
+; North
+	ld a, [NorthConnectedMapGroup]
 	cp $ff
 	jr z, .South
 	ld b, a
-	ld a, [NOrthConnectedMapNumber]
+	ld a, [NorthConnectedMapNumber]
 	ld c, a
 	call GetAnyMapBlockdataBank
 
-	ld a, [NOrthConnectionStripPointer]
+	ld a, [NorthConnectionStripPointer]
 	ld l, a
-	ld a, [NOrthConnectionStripPointer + 1]
+	ld a, [NorthConnectionStripPointer + 1]
 	ld h, a
-	ld a, [NOrthConnectionStripLocation]
+	ld a, [NorthConnectionStripLocation]
 	ld e, a
-	ld a, [NOrthConnectionStripLocation + 1]
+	ld a, [NorthConnectionStripLocation + 1]
 	ld d, a
-	ld a, [NOrthConnectionStripLength]
+	ld a, [NorthConnectionStripLength]
 	ld [hConnectionStripLength], a
-	ld a, [NOrthConnectedMapWidth]
+	ld a, [NorthConnectedMapWidth]
 	ld [hConnectedMapWidth], a
-	call FillNOrthConnectionStrip
+	call FillNorthConnectionStrip
 
 .South:
 	ld a, [SouthConnectedMapGroup]
@@ -886,7 +886,7 @@ FillMapConnections:: ; 2524
 	ret
 ; 25d3
 
-FillNOrthConnectionStrip::
+FillNorthConnectionStrip::
 FillSouthConnectionStrip:: ; 25d3
 
 	ld c, 3

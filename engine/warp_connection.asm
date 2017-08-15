@@ -100,18 +100,18 @@ EnterMapConnection: ; 1045d6
 	jp .done
 
 .north
-	ld a, [NOrthConnectedMapGroup]
+	ld a, [NorthConnectedMapGroup]
 	ld [MapGroup], a
-	ld a, [NOrthConnectedMapNumber]
+	ld a, [NorthConnectedMapNumber]
 	ld [MapNumber], a
-	ld a, [NOrthConnectionStripYOffset]
+	ld a, [NorthConnectionStripYOffset]
 	ld [YCoord], a
-	ld a, [NOrthConnectionStripXOffset]
+	ld a, [NorthConnectionStripXOffset]
 	ld hl, XCoord
 	add [hl]
 	ld [hl], a
 	ld c, a
-	ld hl, NOrthConnectionWindow
+	ld hl, NorthConnectionWindow
 	ld a, [hli]
 	ld h, [hl]
 	ld l, a

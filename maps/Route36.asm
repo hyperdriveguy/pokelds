@@ -359,8 +359,8 @@ ArthurNOtThursdayScript:
 Route36Sign:
 	jumptext Route36SignText
 
-RuinsOfAlphNOrthSign:
-	jumptext RuinsOfAlphNOrthSignText
+RuinsOfAlphNorthSign:
+	jumptext RuinsOfAlphNorthSignText
 
 Route36TrainerTips1:
 	jumptext Route36TrainerTips1Text
@@ -628,7 +628,7 @@ Route36SignText:
 	text "ROUTE 36"
 	done
 
-RuinsOfAlphNOrthSignText:
+RuinsOfAlphNorthSignText:
 	text "RUINS OF ALPH"
 	line "NORTH ENTRANCE"
 	done
@@ -683,7 +683,7 @@ Route36_MapEventHeader:
 .Signposts:
 	db 4
 	signpost 1, 29, SIGNPOST_READ, Route36TrainerTips2
-	signpost 11, 45, SIGNPOST_READ, RuinsOfAlphNOrthSign
+	signpost 11, 45, SIGNPOST_READ, RuinsOfAlphNorthSign
 	signpost 7, 55, SIGNPOST_READ, Route36Sign
 	signpost 7, 21, SIGNPOST_READ, Route36TrainerTips1
 

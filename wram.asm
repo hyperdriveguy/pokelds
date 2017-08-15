@@ -1917,24 +1917,24 @@ MapEventHeaderPointer:: ; d1a6
 ; bit set
 MapConnections:: ; d1a8
 	ds 1
-NOrthMapConnection:: ; d1a9
-NOrthConnectedMapGroup:: ; d1a9
+NorthMapConnection:: ; d1a9
+NorthConnectedMapGroup:: ; d1a9
 	ds 1
-NOrthConnectedMapNumber:: ; d1aa
+NorthConnectedMapNumber:: ; d1aa
 	ds 1
-NOrthConnectionStripPointer:: ; d1ab
+NorthConnectionStripPointer:: ; d1ab
 	ds 2
-NOrthConnectionStripLocation:: ; d1ad
+NorthConnectionStripLocation:: ; d1ad
 	ds 2
-NOrthConnectionStripLength:: ; d1af
+NorthConnectionStripLength:: ; d1af
 	ds 1
-NOrthConnectedMapWidth:: ; d1b0
+NorthConnectedMapWidth:: ; d1b0
 	ds 1
-NOrthConnectionStripYOffset:: ; d1b1
+NorthConnectionStripYOffset:: ; d1b1
 	ds 1
-NOrthConnectionStripXOffset:: ; d1b2
+NorthConnectionStripXOffset:: ; d1b2
 	ds 1
-NOrthConnectionWindow:: ; d1b3
+NorthConnectionWindow:: ; d1b3
 	ds 2
 
 SouthMapConnection:: ; d1b5
