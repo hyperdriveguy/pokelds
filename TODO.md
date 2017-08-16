@@ -90,6 +90,8 @@ IMPORTANT NOTE: Suggestions and Pull Requests may be turned down if I find them 
 - [ ] "For the Strength of the Hills" for route music
 - [ ] "How Firm a Foundation" for route music
 - [x] "Book of Mormon Stories" for Zarahemla
+- [ ] "Redeemer of Israel" for title screen
+	* Basic groundwork done
 - [ ] Port other popular Hymns to the audio engine
 
 ## Graphics

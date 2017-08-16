@@ -1,7 +1,7 @@
 	const_def
 
 	const MUSIC_NONE                         ; 00
-	const MUSIC_TITLE                        ; 01
+	const MUSIC_OLD_TITLE                    ; 01
 	const MUSIC_ROUTE_1                      ; 02
 	const MUSIC_ROUTE_3                      ; 03
 	const MUSIC_ROUTE_12                     ; 04
@@ -60,7 +60,7 @@
 	const MUSIC_ROCKET_ENCOUNTER             ; 39
 	const MUSIC_POKEMANIAC_ENCOUNTER         ; 3a
 	const MUSIC_SAGE_ENCOUNTER               ; 3b
-	const MUSIC_BOUNTIFUL_TOWN                ; 3c
+	const MUSIC_BOUNTIFUL_TOWN               ; 3c
 	const MUSIC_GOLDENROD_CITY               ; 3d
 	const MUSIC_VERMILION_CITY               ; 3e
 	const MUSIC_POKEMON_CHANNEL              ; 3f
@@ -133,5 +133,6 @@
 	const MUSIC_BOOK_OF_MORMON_STORIES       ; 7c
 	const MUSIC_I_HOPE_THEY_CALL_ME          ; 7d
 	const MUSIC_LOVE_AT_HOME                 ; 7e
+	const MUSIC_TITLE                        ; 7f
 
 MUSIC_MAHOGANY_MART EQU $64 ; leftover from gold
