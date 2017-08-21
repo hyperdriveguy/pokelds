@@ -143,5 +143,4 @@
 	dba Music_BookOfMormonStories
 	dba Music_IHopeTheyCallMeOnAMission
 	dba Music_LoveAtHome
-	dba Music_RedeemerOfIsrael
 ; e91a3
