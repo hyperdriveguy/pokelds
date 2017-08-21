@@ -2631,7 +2631,7 @@ _Area: ; 91d11
 ; 91e16
 
 .String_SNest:
-	db "'s Nest@"
+	db "'S NEST@"
 ; 91e1e
 
 .GetAndPlaceNest: ; 91e1e
