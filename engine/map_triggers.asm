@@ -23,7 +23,7 @@ ENDM
 	trigger_def INDIGO_PLATEAU_POKECENTER_1F,           wIndigoPlateauPokecenter1FTrigger
 	trigger_def WILLS_ROOM,                             wWillsRoomTrigger
 	trigger_def KOGAS_ROOM,                             wKogasRoomTrigger
-	trigger_def BRUNoS_ROOM,                            wBrunosRoomTrigger
+	trigger_def BRUNOS_ROOM,                            wBrunosRoomTrigger
 	trigger_def KARENS_ROOM,                            wKarensRoomTrigger
 	trigger_def LANCES_ROOM,                            wLancesRoomTrigger
 	trigger_def HALL_OF_FAME,                           wHallOfFameTrigger

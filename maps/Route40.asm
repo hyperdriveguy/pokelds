@@ -188,7 +188,7 @@ SwimmermRandallSeenText:
 	line "and fit!"
 
 	para "Don't ride your"
-	line "#mon! Swim!"
+	line "#MON! Swim!"
 	done
 
 SwimmermRandallBeatenText:
@@ -224,7 +224,7 @@ SwimmerfPaulaSeenText:
 	line "me."
 
 	para "I'm hanging on to"
-	line "a sea #mon!"
+	line "a sea #MON!"
 	done
 
 SwimmerfPaulaBeatenText:
@@ -312,7 +312,7 @@ MonicaGaveGiftText:
 	line "ing-type moves."
 
 	para "You should equip a"
-	line "bird #mon with"
+	line "bird #MON with"
 	cont "that item."
 	done
 

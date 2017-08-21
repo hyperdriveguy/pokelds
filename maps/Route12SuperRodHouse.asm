@@ -70,7 +70,7 @@ UnknownText_0x7f57c:
 	para "Remember--you can"
 	line "catch different"
 
-	para "#mon using"
+	para "#MON using"
 	line "different RODS."
 	done
 

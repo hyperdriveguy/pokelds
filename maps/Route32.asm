@@ -546,7 +546,7 @@ Route32CooltrainerMText_AideIsWaiting:
 	para "See for yourself."
 	line "He's waiting for"
 
-	para "you at the #mon"
+	para "you at the #MON"
 	line "CENTER."
 	done
 
@@ -568,10 +568,10 @@ Route32CooltrainerMText_UnusedSproutTower:
 
 Route32CooltrainerMText_VioletGym:
 	text "Have you gone to"
-	line "the #mon GYM?"
+	line "the #MON GYM?"
 
 	para "You can test your"
-	line "#mon and your-"
+	line "#MON and your-"
 	cont "self there."
 
 	para "It's a rite of"
@@ -581,7 +581,7 @@ Route32CooltrainerMText_VioletGym:
 
 Route32CooltrainerMText_HaveThisSeed:
 	text "You have some good"
-	line "#mon there."
+	line "#MON there."
 
 	para "It must be from"
 	line "the training you"
@@ -658,7 +658,7 @@ FisherJustinAfterText:
 FisherRalph1SeenText:
 	text "I'm really good at"
 	line "both fishing and"
-	cont "#mon."
+	cont "#MON."
 
 	para "I'm not about to"
 	line "lose to any kid!"
@@ -673,7 +673,7 @@ FisherRalphAfterText:
 	text "Fishing is a life-"
 	line "long passion."
 
-	para "#mon are life-"
+	para "#MON are life-"
 	line "long friends!"
 	done
 
@@ -692,7 +692,7 @@ FisherRalphSwarmText:
 
 Route32UnusedFisher1SeenText:
 	text "I keep catching"
-	line "the same #mon…"
+	line "the same #MON…"
 
 	para "Maybe a battle"
 	line "will turn things"
@@ -707,7 +707,7 @@ Route32UnusedFisher1BeatenText:
 Route32UnusedFisher1AfterText:
 	text "How come the guy"
 	line "next to me catches"
-	cont "good #mon?"
+	cont "good #MON?"
 	done
 
 Route32UnusedFisher2SeenText:
@@ -726,13 +726,13 @@ Route32UnusedFisher2AfterText:
 	line "good ROD if you"
 
 	para "want to catch good"
-	line "#mon."
+	line "#MON."
 	done
 
 ; --- end a segment of possibly unused texts
 
 FisherHenrySeenText:
-	text "My #mon?"
+	text "My #MON?"
 	line "Freshly caught!"
 	done
 
@@ -742,7 +742,7 @@ FisherHenryBeatenText:
 
 FisherHenryAfterText:
 	text "Freshly caught"
-	line "#mon are no"
+	line "#MON are no"
 
 	para "match for properly"
 	line "raised ones."
@@ -766,13 +766,13 @@ YoungsterAlbertAfterText:
 	cont "with my favorites."
 
 	para "I'm not using the"
-	line "same tough #mon"
+	line "same tough #MON"
 	cont "as everyone else."
 	done
 
 YoungsterGordonSeenText:
 	text "I found some good"
-	line "#mon in the"
+	line "#MON in the"
 	cont "grass!"
 
 	para "I think they'll do"
@@ -859,14 +859,14 @@ Text_RoarIntro:
 	line "CAME LOOKING!"
 
 	para "THAT PLEASES ME!"
-	line "NoW TAKE THIS!"
+	line "NOW TAKE THIS!"
 	done
 
 Text_RoarOutro:
 	text "WROOOAR!"
 	line "IT'S ROAR!"
 
-	para "EVEN #mon RUN"
+	para "EVEN #MON RUN"
 	line "FROM A GOOD ROAR!"
 	done
 
@@ -887,7 +887,7 @@ FriedaGivesGiftText:
 
 FriedaGaveGiftText:
 	text "FRIEDA: Give it to"
-	line "a #mon that has"
+	line "a #MON that has"
 	cont "poison-type moves."
 
 	para "Oh!"

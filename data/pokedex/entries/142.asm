@@ -4,7 +4,7 @@
 
 	db   "In prehistoric"
 	next "times, this"
-	next "#mon flew"
+	next "#MON flew"
 	page "freely and"
 	next "fearlessly through"
 	next "the skies.@"

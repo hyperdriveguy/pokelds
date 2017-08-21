@@ -351,7 +351,7 @@ AI_Smart: ; 386be
 	dbw EFFECT_COUNTER,          AI_Smart_Counter
 	dbw EFFECT_ENCORE,           AI_Smart_Encore
 	dbw EFFECT_PAIN_SPLIT,       AI_Smart_PainSplit
-	dbw EFFECT_SNoRE,            AI_Smart_Snore
+	dbw EFFECT_SNORE,            AI_Smart_Snore
 	dbw EFFECT_CONVERSION2,      AI_Smart_Conversion2
 	dbw EFFECT_LOCK_ON,          AI_Smart_LockOn
 	dbw EFFECT_DEFROST_OPPONENT, AI_Smart_DefrostOpponent
@@ -1554,7 +1554,7 @@ AI_Smart_Encore: ; 38c3b
 	db FLAME_WHEEL
 	db AEROBLAST
 	db COTTON_SPORE
-	db POWDER_SNoW
+	db POWDER_SNOW
 	db $ff
 ; 38ca4
 
@@ -3125,7 +3125,7 @@ UsefulMoves: ; 39301
 	db EARTHQUAKE
 	db TOXIC
 	db PSYCHIC_M
-	db HYPNoSIS
+	db HYPNOSIS
 	db RECOVER
 	db FIRE_BLAST
 	db SOFTBOILED

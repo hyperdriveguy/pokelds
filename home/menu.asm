@@ -193,8 +193,8 @@ YesNoMenuDataHeader:: ; 1e1d
 .MenuData2: ; 1e25
 	db $c0 ; flags
 	db 2
-	db "Yes@"
-	db "No@"
+	db "YES@"
+	db "NO@"
 ; 1e2e
 
 OffsetMenuDataHeader:: ; 1e2e

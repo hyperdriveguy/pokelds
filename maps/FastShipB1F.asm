@@ -384,7 +384,7 @@ SailorKennethSeenText:
 	text "I'm a sailor man!"
 
 	para "But I'm training"
-	line "#mon, so I can"
+	line "#MON, so I can"
 	cont "become the CHAMP!"
 	done
 

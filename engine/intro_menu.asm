@@ -1086,7 +1086,7 @@ RunTitleScreen: ; 627b
 	bit 7, a
 	jr nz, .done_title
 	call TitleScreenScene
-	callba MoroniFrameIterator
+	callba SuicuneFrameIterator
 	call DelayFrame
 	and a
 	ret
@@ -1164,7 +1164,7 @@ TitleScreenEntrance: ; 62bc
 	dec b
 	jr nz, .loop
 
-	callba AnimateTitleLiahona
+	callba AnimateTitleCrystal
 	ret
 
 .done

@@ -174,7 +174,7 @@ BurnedTowerSilver_BeforeText:
 	para "I came looking for"
 	line "some legendary"
 
-	para "#mon that they"
+	para "#MON that they"
 	line "say roosts here."
 
 	para "But there's"
@@ -206,7 +206,7 @@ BurnedTowerSilver_AfterText1:
 	para "You would never be"
 	line "able to catch a"
 
-	para "legendary #mon"
+	para "legendary #MON"
 	line "anyway."
 	done
 
@@ -237,7 +237,7 @@ BurnedTower1FEusineIntroText:
 	line "EUSINE."
 
 	para "I'm on the trail"
-	line "of a #mon named"
+	line "of a #MON named"
 	cont "SUICUNE."
 
 	para "And you are…?"
@@ -273,7 +273,7 @@ BurnedTower1FMortyText:
 	para "study what are"
 	line "said to be the"
 
-	para "legendary #mon"
+	para "legendary #MON"
 	line "--SUICUNE, ENTEI"
 	cont "and RAIKOU."
 

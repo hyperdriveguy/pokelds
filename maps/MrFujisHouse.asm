@@ -2,7 +2,7 @@ const_value set 2
 	const MRFUJISHOUSE_SUPER_NERD
 	const MRFUJISHOUSE_LASS
 	const MRFUJISHOUSE_PSYDUCK
-	const MRFUJISHOUSE_NIDORINo
+	const MRFUJISHOUSE_NIDORINO
 	const MRFUJISHOUSE_PIDGEY
 
 MrFujisHouse_MapScriptHeader:
@@ -29,7 +29,7 @@ MrFujisPsyduck:
 MrFujisNidorino:
 	opentext
 	writetext MrFujisNidorinoText
-	cry NIDORINo
+	cry NIDORINO
 	waitbutton
 	closetext
 	end
@@ -58,12 +58,12 @@ UnknownText_0x7e8f1:
 UnknownText_0x7e940:
 	text "Some cold-hearted"
 	line "people stop caring"
-	cont "for their #mon."
+	cont "for their #MON."
 
 	para "Grandpa takes in"
 	line "the poor homeless"
 
-	para "#mon and takes"
+	para "#MON and takes"
 	line "care of them."
 	done
 
@@ -72,7 +72,7 @@ MrFujisPsyduckText:
 	done
 
 MrFujisNidorinoText:
-	text "NIDORINo: Gyun!"
+	text "NIDORINO: Gyun!"
 	done
 
 MrFujisPidgeyText:

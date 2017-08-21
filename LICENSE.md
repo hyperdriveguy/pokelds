@@ -23,7 +23,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 **Note that this only applies to the changes made to the software.**
-**To Prevent legal issues, I ask that you refrain from selling the software as a whole.**
+**To Prevent legal issues, I ask that you refrain from selling the software!**
 
 ## Original Work
 
@@ -35,7 +35,7 @@ This project was made in good faith, and the author believes use of the original
 work to make a modified work constitutes fair use. If you are a representative
 of the original copyright holders and find this work infringing, I ask you to
 please [email](mailto:hyperdriveguy@gmail.com) me with your grievances. If found
-needed, I will take down the repository until the problem is resolved. If
+nessecary, I will take down the repository until the problem is resolved. If
 trademarks are a concern, I am willing to replace them with something else.
 
 **All I ask is that you let this project live!**

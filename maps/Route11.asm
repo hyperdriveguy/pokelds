@@ -68,7 +68,7 @@ Route11HiddenRevive:
 
 YoungsterOwenSeenText:
 	text "There's no cheat-"
-	line "ing in #mon."
+	line "ing in #MON."
 
 	para "Let's keep it fair"
 	line "and square!"
@@ -102,7 +102,7 @@ YoungsterJasonBeatenText:
 
 UnknownText_0x6814a:
 	text "I'm going to catch"
-	line "more #mon in"
+	line "more #MON in"
 	cont "the grass."
 	done
 
@@ -139,7 +139,7 @@ UnknownText_0x681ec:
 
 	para "You're strong be-"
 	line "cause you believe"
-	cont "in your #mon."
+	cont "in your #MON."
 	done
 
 Route11SignText:

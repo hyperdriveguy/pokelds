@@ -186,13 +186,13 @@ UnknownText_0x99e65:
 	line "have come."
 
 	para "Here in ECRUTEAK,"
-	line "#mon have been"
+	line "#MON have been"
 	cont "revered."
 
 	para "It's said that a"
 	line "rainbow-colored"
 
-	para "#mon will come"
+	para "#MON will come"
 	line "down to appear"
 
 	para "before a truly"
@@ -214,7 +214,7 @@ UnknownText_0x99e65:
 	line "more, I could see"
 
 	para "a future in which"
-	line "I meet the #mon"
+	line "I meet the #MON"
 	cont "of rainbow colors."
 
 	para "You're going to"
@@ -237,12 +237,12 @@ UnknownText_0x9a043:
 
 UnknownText_0x9a059:
 	text "By having FOG-"
-	line "BADGE, #mon up"
+	line "BADGE, #MON up"
 
 	para "to L50 will obey"
 	line "you."
 
-	para "Also, #mon that"
+	para "Also, #MON that"
 	line "know SURF will be"
 
 	para "able to use that"
@@ -280,7 +280,7 @@ UnknownText_0x9a145:
 
 SageJeffreySeenText:
 	text "I spent the spring"
-	line "with my #mon."
+	line "with my #MON."
 
 	para "Then summer, fall"
 	line "and winter…"
@@ -298,14 +298,14 @@ SageJeffreyBeatenText:
 	done
 
 UnknownText_0x9a263:
-	text "Where did #mon"
+	text "Where did #MON"
 	line "come from?"
 	done
 
 SagePingSeenText:
 	text "Can you inflict"
 	line "any damage on our"
-	cont "#mon?"
+	cont "#MON?"
 	done
 
 SagePingBeatenText:
@@ -314,7 +314,7 @@ SagePingBeatenText:
 
 UnknownText_0x9a2b7:
 	text "We use only ghost-"
-	line "type #mon."
+	line "type #MON."
 
 	para "No normal-type"
 	line "attack can harm"

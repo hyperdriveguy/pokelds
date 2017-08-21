@@ -124,7 +124,7 @@ UnknownText_0x5654b:
 	line "LUCKY CHANNEL?"
 
 	para "If you want to"
-	line "win, trade #mon"
+	line "win, trade #MON"
 
 	para "with as many peo-"
 	line "ple as possible to"
@@ -138,7 +138,7 @@ UnknownText_0x565ca:
 	line "try the vending"
 	cont "machine's drinks."
 
-	para "Your #mon will"
+	para "Your #MON will"
 	line "love them too."
 	done
 

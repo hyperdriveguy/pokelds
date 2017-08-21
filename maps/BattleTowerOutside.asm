@@ -53,7 +53,7 @@ BattleTowerOutsideUnusedText2:
 	line "there must also be"
 
 	para "a wide variety of"
-	line "#mon."
+	line "#MON."
 	done
 
 BattleTowerOutsideYoungsterText:
@@ -61,7 +61,7 @@ BattleTowerOutsideYoungsterText:
 	line "TOWER is huge!"
 
 	para "There must be many"
-	line "kinds of #mon"
+	line "kinds of #MON"
 	cont "in there!"
 	done
 
@@ -73,12 +73,12 @@ BattleTowerOutsideUnusedText3:
 	line "anything, I guess"
 
 	para "it must be for"
-	line "#mon battles."
+	line "#MON battles."
 	done
 
 BattleTowerOutsideBuenaText:
 	text "You can use only"
-	line "three #mon."
+	line "three #MON."
 
 	para "It's so hard to"
 	line "decide which three"

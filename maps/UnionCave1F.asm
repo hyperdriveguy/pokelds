@@ -90,7 +90,7 @@ HikerRussellSeenText:
 	text "You're headed to"
 	line "AZALEA, are you?"
 
-	para "Let my #mon see"
+	para "Let my #MON see"
 	line "if you are good"
 	cont "enough to battle."
 	done
@@ -104,17 +104,17 @@ UnknownText_0x59c6c:
 	line "I've decided."
 
 	para "I'm not leaving"
-	line "until my #mon"
+	line "until my #MON"
 	cont "get tougher!"
 	done
 
 PokemaniacLarrySeenText:
 	text "I roam far and"
 	line "wide in search of"
-	cont "#mon."
+	cont "#MON."
 
 	para "Are you looking"
-	line "for #mon too?"
+	line "for #MON too?"
 
 	para "Then you're my"
 	line "collecting rival!"
@@ -127,7 +127,7 @@ PokemaniacLarryBeatenText:
 
 UnknownText_0x59d31:
 	text "Every Friday, you"
-	line "can hear #mon"
+	line "can hear #MON"
 
 	para "roars from deep"
 	line "inside the cave."
@@ -152,13 +152,13 @@ UnknownText_0x59dc9:
 	cont "TAIL."
 
 	para "I feel sorry for"
-	line "the poor #mon."
+	line "the poor #MON."
 	done
 
 FirebreatherBillSeenText:
 	text "ZUBAT's SUPERSONIC"
 	line "keeps confusing"
-	cont "my #mon."
+	cont "my #MON."
 
 	para "I'm seriously"
 	line "upset about that!"
@@ -181,7 +181,7 @@ FirebreatherRaySeenText:
 	line "cave isn't scary."
 
 	para "If you're strong,"
-	line "#mon aren't"
+	line "#MON aren't"
 	cont "scary."
 	done
 
@@ -190,7 +190,7 @@ FirebreatherRayBeatenText:
 	done
 
 UnknownText_0x59efc:
-	text "It's my #mon's"
+	text "It's my #MON's"
 	line "fire that lights"
 	cont "up this cave."
 	done

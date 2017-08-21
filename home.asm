@@ -295,7 +295,7 @@ PrintLetterDelay:: ; 313d
 ; Options[4] and TextBoxFlags[!1] disable the delay.
 
 	ld a, [Options]
-	bit No_TEXT_SCROLL, a
+	bit NO_TEXT_SCROLL, a
 	ret nz
 
 ; non-scrolling text?

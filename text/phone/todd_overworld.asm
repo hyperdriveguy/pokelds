@@ -54,7 +54,7 @@ ToddRematchText:
 	line "I even cut back my"
 
 	para "shopping to raise"
-	line "my #mon better!"
+	line "my #MON better!"
 	done
 
 UnusedText_0xa43ca:

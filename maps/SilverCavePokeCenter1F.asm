@@ -23,7 +23,7 @@ UnknownText_0x1ae5a0:
 	line "many dangers…"
 
 	para "With their trusted"
-	line "#mon, they must"
+	line "#MON, they must"
 
 	para "feel they can go"
 	line "anywhere…"

@@ -278,7 +278,7 @@ FruitTreeScript_0x19ca7e:
 
 CamperIvanSeenText:
 	text "I've been getting"
-	line "#mon data off"
+	line "#MON data off"
 
 	para "my radio. I think"
 	line "I'm good."
@@ -291,7 +291,7 @@ CamperIvanBeatenText:
 UnknownText_0x19cac4:
 	text "Music on the radio"
 	line "changes the moods"
-	cont "of wild #mon."
+	cont "of wild #MON."
 	done
 
 CamperElliotSeenText:
@@ -324,7 +324,7 @@ PicnickerBrookeBeatenText:
 
 UnknownText_0x19cbba:
 	text "I can count on my"
-	line "#mon more than"
+	line "#MON more than"
 	cont "my boyfriend."
 	done
 
@@ -355,7 +355,7 @@ Bird_keeperBryanBeatenText:
 	done
 
 UnknownText_0x19cc87:
-	text "Some #mon flee"
+	text "Some #MON flee"
 	line "right away."
 
 	para "Try catching them"
@@ -383,7 +383,7 @@ JugglerIrwin1BeatenText:
 UnknownText_0x19cd5a:
 	text "I was going to"
 	line "dazzle you with my"
-	cont "prize #mon."
+	cont "prize #MON."
 
 	para "But your prowess"
 	line "electrified me!"
@@ -391,7 +391,7 @@ UnknownText_0x19cd5a:
 
 Bug_catcherArnie1SeenText:
 	text "I'll go anywhere"
-	line "if bug #mon"
+	line "if bug #MON"
 	cont "appear there."
 	done
 
@@ -401,7 +401,7 @@ Bug_catcherArnie1BeatenText:
 	done
 
 UnknownText_0x19cdf6:
-	text "My VENoNAT won me"
+	text "My VENONAT won me"
 	line "the Bug-Catching"
 
 	para "Contest at the"
@@ -427,9 +427,9 @@ FirebreatherWaltBeatenText:
 	done
 
 UnknownText_0x19cebc:
-	text "The #mon March"
+	text "The #MON March"
 	line "on the radio lures"
-	cont "wild #mon."
+	cont "wild #MON."
 	done
 
 UnknownText_0x19ceea:
@@ -451,7 +451,7 @@ UnknownText_0x19cf0f:
 	done
 
 UnknownText_0x19cf56:
-	text "Your #mon look"
+	text "Your #MON look"
 	line "pretty tough."
 
 	para "You could go any-"

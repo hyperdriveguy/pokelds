@@ -9,7 +9,7 @@ VictoryRoadEntranceSign:
 	jumptext VictoryRoadEntranceSignText
 
 VictoryRoadEntranceSignText:
-	text "#mon LEAGUE"
+	text "#MON LEAGUE"
 
 	para "VICTORY ROAD"
 	line "ENTRANCE"

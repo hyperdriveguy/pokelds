@@ -362,16 +362,16 @@ RocketBaseRivalText:
 	line "the guy in the"
 
 	para "cape who used"
-	line "dragon #mon?"
+	line "dragon #MON?"
 
-	para "My #mon were no"
+	para "My #MON were no"
 	line "match at all."
 
 	para "I don't care that"
 	line "I lost. I can beat"
 
 	para "him by getting"
-	line "stronger #mon."
+	line "stronger #MON."
 
 	para "It's what he said"
 	line "that bothers me…"
@@ -379,7 +379,7 @@ RocketBaseRivalText:
 	para "He told me that"
 	line "I don't love and"
 
-	para "trust my #mon"
+	para "trust my #MON"
 	line "enough."
 
 	para "I'm furious that I"
@@ -534,7 +534,7 @@ UnknownText_0x6e822:
 
 ScientistMitchSeenText:
 	text "I don't care that"
-	line "#mon are hurt"
+	line "#MON are hurt"
 	cont "by our experiment."
 	done
 
@@ -590,8 +590,8 @@ TeamRocketBaseB3F_MapEventHeader:
 
 .Signposts:
 	db 10
-	signpost 9, 10, SIGNPOST_IFNoTSET, BossDoor
-	signpost 9, 11, SIGNPOST_IFNoTSET, BossDoor
+	signpost 9, 10, SIGNPOST_IFNOTSET, BossDoor
+	signpost 9, 11, SIGNPOST_IFNOTSET, BossDoor
 	signpost 1, 10, SIGNPOST_READ, MapTeamRocketBaseB3FSignpost9Script
 	signpost 1, 11, SIGNPOST_READ, MapTeamRocketBaseB3FSignpost9Script
 	signpost 1, 12, SIGNPOST_READ, MapTeamRocketBaseB3FSignpost9Script

@@ -3,7 +3,7 @@
 	dw 200, 170 ; height, width
 
 	db   "In truth, it is a"
-	next "cowardly #mon."
+	next "cowardly #MON."
 	next "It growls eagerly"
 	page "in order to hide"
 	next "its fear from its"

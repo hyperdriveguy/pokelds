@@ -307,7 +307,7 @@ EvolveAfterBattle_MasterLoop
 	call SetSeenAndCaughtMon
 
 	ld a, [wd265]
-	cp UNoWN
+	cp UNOWN
 	jr nz, .skip_unown
 
 	ld hl, TempMonDVs

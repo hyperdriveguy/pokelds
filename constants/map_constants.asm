@@ -1,8 +1,8 @@
 GROUP_N_A  EQU -1
 MAP_N_A    EQU -1
 
-GROUP_NoNE EQU 0
-MAP_NoNE   EQU 0
+GROUP_NONE EQU 0
+MAP_NONE   EQU 0
 
 ; map group ids
 	const_def
@@ -172,7 +172,7 @@ MAP_NoNE   EQU 0
 	mapgroup BILLS_HOUSE,                                 4,  4 ; 11
 	mapgroup ROUTE_4,                                     9, 20 ; 12
 	mapgroup ROUTE_9,                                     9, 30 ; 13
-	mapgroup ROUTE_10_NoRTH,                              9, 10 ; 14
+	mapgroup ROUTE_10_NORTH,                              9, 10 ; 14
 	mapgroup ROUTE_24,                                    9, 10 ; 15
 	mapgroup ROUTE_25,                                    9, 30 ; 16
 	mapgroup CERULEAN_CITY,                              18, 20 ; 17
@@ -275,7 +275,7 @@ MAP_NoNE   EQU 0
 	mapgroup PEWTER_GYM,                                  7,  5 ;  4
 	mapgroup PEWTER_MART,                                 4,  6 ;  5
 	mapgroup PEWTER_POKECENTER_1F,                        4,  5 ;  6
-	mapgroup PEWTER_SNoOZE_SPEECH_HOUSE,                  4,  4 ;  8
+	mapgroup PEWTER_SNOOZE_SPEECH_HOUSE,                  4,  4 ;  8
 
 	newgroup                                                    ; 15
 
@@ -298,7 +298,7 @@ MAP_NoNE   EQU 0
 	mapgroup INDIGO_PLATEAU_POKECENTER_1F,                7,  9 ;  2
 	mapgroup WILLS_ROOM,                                  9,  5 ;  3
 	mapgroup KOGAS_ROOM,                                  9,  5 ;  4
-	mapgroup BRUNoS_ROOM,                                 9,  5 ;  5
+	mapgroup BRUNOS_ROOM,                                 9,  5 ;  5
 	mapgroup KARENS_ROOM,                                 9,  5 ;  6
 	mapgroup LANCES_ROOM,                                12,  5 ;  7
 	mapgroup HALL_OF_FAME,                                7,  5 ;  8
@@ -485,13 +485,13 @@ MAP_NoNE   EQU 0
 	const EAST_F
 	const WEST_F
 	const SOUTH_F
-	const NoRTH_F
+	const NORTH_F
 
 	const_def
 	shift_const EAST
 	shift_const WEST
 	shift_const SOUTH
-	shift_const NoRTH
+	shift_const NORTH
 
 ; permissions
 const_value SET 1
@@ -590,7 +590,7 @@ EMOTE_MEM EQU -1
 	const SIGNPOST_RIGHT
 	const SIGNPOST_LEFT
 	const SIGNPOST_IFSET
-	const SIGNPOST_IFNoTSET
+	const SIGNPOST_IFNOTSET
 	const SIGNPOST_ITEM
 	const SIGNPOST_COPY
 

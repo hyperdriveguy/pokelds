@@ -87,7 +87,7 @@ CooltrainerfFranScript:
 CooltrainermCodySeenText:
 	text "It's not as if we"
 	line "all use dragon-"
-	cont "type #mon."
+	cont "type #MON."
 	done
 
 CooltrainermCodyBeatenText:
@@ -100,7 +100,7 @@ CooltrainermCodyAfterText:
 	line "dragon-user clan"
 
 	para "can use dragon"
-	line "#mon only after"
+	line "#MON only after"
 
 	para "our MASTER allows"
 	line "it."

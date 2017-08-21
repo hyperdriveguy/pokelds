@@ -27,7 +27,7 @@ OlivineHouseBetaBookshelf2:
 	jumpstd magazinebookshelf
 
 UnknownText_0x9c5a2:
-	text "When my #mon"
+	text "When my #MON"
 	line "got sick, the"
 
 	para "PHARMACIST in"

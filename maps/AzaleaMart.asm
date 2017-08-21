@@ -37,7 +37,7 @@ UnknownText_0x18e04d:
 UnknownText_0x18e0b6:
 	text "A GREAT BALL is"
 	line "better for catch-"
-	cont "ing #mon than a"
+	cont "ing #MON than a"
 	cont "# BALL."
 
 	para "But KURT's might"

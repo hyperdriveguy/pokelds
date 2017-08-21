@@ -682,7 +682,7 @@ PrintPCBox_Page1: ; 84817 (21:4817)
 ; 84865 (21:4865)
 
 .String_PokemonList:
-	db "#mon LIST@"
+	db "#MON LIST@"
 ; 8486f
 
 PrintPCBox_Page2: ; 8486f (21:486f)

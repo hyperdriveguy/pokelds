@@ -1,5 +1,5 @@
 	const_def
-	const No_ITEM      ; $00
+	const NO_ITEM      ; $00
 	const MASTER_BALL  ; $01
 	const ULTRA_BALL   ; $02
 	const BRIGHTPOWDER ; $03
@@ -166,7 +166,7 @@
 	const FRIEND_BALL  ; $A4
 	const MOON_BALL    ; $A5
 	const LOVE_BALL    ; $A6
-	const NoRMAL_BOX   ; $A7
+	const NORMAL_BOX   ; $A7
 	const GORGEOUS_BOX ; $A8
 	const SUN_STONE    ; $A9
 	const POLKADOT_BOW ; $AA
@@ -198,13 +198,13 @@
 	const ITEM_C3       ; $C3
 	add_tm ROAR         ; $C4
 	add_tm TOXIC        ; $C5
-	add_tm ZAP_CANNoN   ; $C6
+	add_tm ZAP_CANNON   ; $C6
 	add_tm ROCK_SMASH   ; $C7
 	add_tm PSYCH_UP     ; $C8
 	add_tm HIDDEN_POWER ; $C9
 	add_tm SUNNY_DAY    ; $CA
 	add_tm SWEET_SCENT  ; $CB
-	add_tm SNoRE        ; $CC
+	add_tm SNORE        ; $CC
 	add_tm BLIZZARD     ; $CD
 	add_tm HYPER_BEAM   ; $CE
 	add_tm ICY_WIND     ; $CF
@@ -282,7 +282,7 @@ CANT_TOSS   EQU 1 << 7
 ; held item effects
 	const_def
 
-	const HELD_NoNE
+	const HELD_NONE
 	const HELD_BERRY
 	const HELD_2
 	const HELD_LEFTOVERS
@@ -326,7 +326,7 @@ const_value SET 40
 	const HELD_METAL_POWDER
 
 const_value SET 50
-	const HELD_NoRMAL_BOOST
+	const HELD_NORMAL_BOOST
 	const HELD_FIGHTING_BOOST
 	const HELD_FLYING_BOOST
 	const HELD_POISON_BOOST
@@ -366,7 +366,7 @@ const_value SET 70
 	const ITEMATTR_HELP
 NUM_ITEMATTRS EQU const_value
 
-ITEMMENU_NoUSE              EQU 0
+ITEMMENU_NOUSE              EQU 0
 ITEMMENU_CURRENT            EQU 4
 ITEMMENU_PARTY              EQU 5
 ITEMMENU_CLOSE              EQU 6

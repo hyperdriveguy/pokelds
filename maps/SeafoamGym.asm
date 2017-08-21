@@ -18,7 +18,7 @@ UnknownScript_0x1ab4fa:
 BlaineScript_0x1ab4fb:
 	faceplayer
 	opentext
-	checkflag ENGINE_VOLCANoBADGE
+	checkflag ENGINE_VOLCANOBADGE
 	iftrue .FightDone
 	writetext UnknownText_0x1ab548
 	waitbutton
@@ -35,7 +35,7 @@ BlaineScript_0x1ab4fb:
 	writetext UnknownText_0x1ab683
 	playsound SFX_GET_BADGE
 	waitsfx
-	setflag ENGINE_VOLCANoBADGE
+	setflag ENGINE_VOLCANOBADGE
 	writetext UnknownText_0x1ab69d
 	waitbutton
 	closetext
@@ -71,7 +71,7 @@ UnknownText_0x1ab548:
 	line "burned down."
 
 	para "My fire-breathing"
-	line "#mon and I are"
+	line "#MON and I are"
 
 	para "homeless because"
 	line "of the volcano."
@@ -97,12 +97,12 @@ UnknownText_0x1ab646:
 	line "I've burned out…"
 
 	para "You've earned"
-	line "VOLCANoBADGE!"
+	line "VOLCANOBADGE!"
 	done
 
 UnknownText_0x1ab683:
 	text "<PLAYER> received"
-	line "VOLCANoBADGE."
+	line "VOLCANOBADGE."
 	done
 
 UnknownText_0x1ab69d:
@@ -121,7 +121,7 @@ UnknownText_0x1ab69d:
 
 UnknownText_0x1ab71c:
 	text "BLAINE: My fire"
-	line "#mon will be"
+	line "#MON will be"
 
 	para "even stronger."
 	line "Just you watch!"
@@ -149,7 +149,7 @@ SeafoamGymGuyWinText:
 	done
 
 SeafoamGymGuyWinText2:
-	text "A #mon GYM can"
+	text "A #MON GYM can"
 	line "be anywhere as"
 
 	para "long as the GYM"

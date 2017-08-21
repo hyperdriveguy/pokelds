@@ -27,7 +27,7 @@ CherrygroveEvolutionSpeechHouseBookshelf:
 	jumpstd magazinebookshelf
 
 UnknownText_0x196cc3:
-	text "#mon gain expe-"
+	text "#MON gain expe-"
 	line "rience in battle"
 
 	para "and change their"
@@ -35,7 +35,7 @@ UnknownText_0x196cc3:
 	done
 
 UnknownText_0x196cfc:
-	text "#mon change?"
+	text "#MON change?"
 
 	para "I would be shocked"
 	line "if one did that!"

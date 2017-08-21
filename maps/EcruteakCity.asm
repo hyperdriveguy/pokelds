@@ -126,7 +126,7 @@ UnknownText_0x1a4147:
 	line "Have you learned"
 
 	para "to dance like the"
-	line "KIMONo GIRLS?"
+	line "KIMONO GIRLS?"
 
 	para "If you go to their"
 	line "DANCE THEATER, an"
@@ -154,7 +154,7 @@ UnknownText_0x1a421a:
 	done
 
 UnknownText_0x1a4269:
-	text "Three big #mon"
+	text "Three big #MON"
 	line "ran off in differ-"
 	cont "ent directions."
 	cont "What were they?"
@@ -165,7 +165,7 @@ UnknownText_0x1a42ac:
 	line "about OLIVINE"
 	cont "LIGHTHOUSE."
 
-	para "The #mon that"
+	para "The #MON that"
 	line "serves as the"
 
 	para "beacon fell ill."
@@ -174,7 +174,7 @@ UnknownText_0x1a42ac:
 	done
 
 UnknownText_0x1a4325:
-	text "The #mon at"
+	text "The #MON at"
 	line "OLIVINE LIGHTHOUSE"
 	cont "has been cured."
 
@@ -184,7 +184,7 @@ UnknownText_0x1a4325:
 	done
 
 UnknownText_0x1a4386:
-	text "I hear #mon are"
+	text "I hear #MON are"
 	line "rampaging at the"
 
 	para "LAKE OF RAGE. I'd"
@@ -198,11 +198,11 @@ UnknownText_0x1a43cb:
 	para "This tower burned"
 	line "in a fire. Three"
 
-	para "nameless #mon"
+	para "nameless #MON"
 	line "perished in it."
 
 	para "A rainbow-colored"
-	line "#mon descended"
+	line "#MON descended"
 
 	para "from the sky and"
 	line "resurrected them…"
@@ -238,7 +238,7 @@ TinTowerSignText:
 
 EcruteakGymSignText:
 	text "ECRUTEAK CITY"
-	line "#mon GYM"
+	line "#MON GYM"
 	cont "LEADER: MORTY"
 
 	para "The Mystic Seer of"

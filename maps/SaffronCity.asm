@@ -167,7 +167,7 @@ UnknownText_0x1994fe:
 
 UnknownText_0x19958e:
 	text "This is SILPH CO.,"
-	line "famous for #mon"
+	line "famous for #MON"
 	cont "merchandise."
 
 	para "In the past, TEAM"
@@ -239,11 +239,11 @@ SaffronCitySignText:
 
 SaffronGymSignText:
 	text "SAFFRON CITY"
-	line "#mon GYM"
+	line "#MON GYM"
 	cont "LEADER: SABRINA"
 
 	para "The Master of"
-	line "Psychic #mon!"
+	line "Psychic #MON!"
 	done
 
 FightingDojoSignText:

@@ -56,7 +56,7 @@ UnknownText_0x9f716:
 
 UnknownText_0x9f783:
 	text "I'm going to train"
-	line "my #mon so I'll"
+	line "my #MON so I'll"
 
 	para "be all ready for"
 	line "the BATTLE TOWER."
@@ -64,7 +64,7 @@ UnknownText_0x9f783:
 
 UnknownText_0x9f7c8:
 	text "The levels of the"
-	line "#mon I want to"
+	line "#MON I want to"
 
 	para "use are all"
 	line "different."

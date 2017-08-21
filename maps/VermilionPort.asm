@@ -299,7 +299,7 @@ UnknownText_0x750a6:
 	line "JOHTO?"
 
 	para "I hear many rare"
-	line "#mon live over"
+	line "#MON live over"
 	cont "there."
 	done
 

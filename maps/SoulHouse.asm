@@ -29,20 +29,20 @@ MrFujiText:
 	para "Hmm… You appear to"
 	line "be raising your"
 
-	para "#mon in a kind"
+	para "#MON in a kind"
 	line "and loving manner."
 
-	para "#mon lovers"
+	para "#MON lovers"
 	line "come here to pay"
 
 	para "their respects to"
-	line "departed #mon."
+	line "departed #MON."
 
 	para "Please offer con-"
 	line "dolences for the"
 
 	para "souls of the de-"
-	line "parted #mon."
+	line "parted #MON."
 
 	para "I'm sure that will"
 	line "make them happy."
@@ -50,7 +50,7 @@ MrFujiText:
 
 UnknownText_0x7ed4d:
 	text "There are other"
-	line "graves of #mon"
+	line "graves of #MON"
 	cont "here, I think."
 
 	para "There are many"
@@ -60,12 +60,12 @@ UnknownText_0x7ed4d:
 
 UnknownText_0x7edb1:
 	text "I came with my mom"
-	line "to visit #mon"
+	line "to visit #MON"
 	cont "graves…"
 	done
 
 UnknownText_0x7eddb:
-	text "The #mon that"
+	text "The #MON that"
 	line "lived with me…"
 
 	para "I loved them like"

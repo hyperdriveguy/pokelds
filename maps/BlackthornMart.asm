@@ -27,7 +27,7 @@ UnknownText_0x195a6a:
 	line "REVIVE, but it"
 
 	para "fully restores a"
-	line "fainted #mon."
+	line "fainted #MON."
 
 	para "Beware--it won't"
 	line "restore PP, the"
@@ -38,7 +38,7 @@ UnknownText_0x195a6a:
 
 UnknownText_0x195ae9:
 	text "MAX REPEL keeps"
-	line "weak #mon away"
+	line "weak #MON away"
 	cont "from you."
 
 	para "It's the longest"

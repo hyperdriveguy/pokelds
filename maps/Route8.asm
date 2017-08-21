@@ -79,7 +79,7 @@ FruitTreeScript_0x6c06c:
 
 BikerDwayneSeenText:
 	text "We're the KANTO"
-	line "#mon FEDERATION"
+	line "#MON FEDERATION"
 	cont "trainer group."
 
 	para "We'll drive you"
@@ -91,7 +91,7 @@ BikerDwayneBeatenText:
 	done
 
 UnknownText_0x6c0c8:
-	text "The KANTO #mon"
+	text "The KANTO #MON"
 	line "FEDERATION will"
 	cont "never fall!"
 	done
@@ -115,7 +115,7 @@ UnknownText_0x6c143:
 
 BikerZekeSeenText:
 	text "We're the KANTO"
-	line "#mon FEDERA-"
+	line "#MON FEDERA-"
 	cont "TION!"
 	cont "Right on!"
 	done

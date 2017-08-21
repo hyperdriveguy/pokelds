@@ -119,12 +119,12 @@ rBGPI       EQU $ff68 ; CGB Mode Only - Background Palette Index
 rBGPD       EQU $ff69 ; CGB Mode Only - Background Palette Data
 rOBPI       EQU $ff6a ; CGB Mode Only - Sprite Palette Index
 rOBPD       EQU $ff6b ; CGB Mode Only - Sprite Palette Data
-rUNKNoWN1   EQU $ff6c ; (FEh) Bit 0 (Read/Write) - CGB Mode Only
+rUNKNOWN1   EQU $ff6c ; (FEh) Bit 0 (Read/Write) - CGB Mode Only
 rSVBK       EQU $ff70 ; CGB Mode Only - WRAM Bank
-rUNKNoWN2   EQU $ff72 ; (00h) - Bit 0-7 (Read/Write)
-rUNKNoWN3   EQU $ff73 ; (00h) - Bit 0-7 (Read/Write)
-rUNKNoWN4   EQU $ff74 ; (00h) - Bit 0-7 (Read/Write) - CGB Mode Only
-rUNKNoWN5   EQU $ff75 ; (8Fh) - Bit 4-6 (Read/Write)
-rUNKNoWN6   EQU $ff76 ; (00h) - Always 00h (Read Only)
-rUNKNoWN7   EQU $ff77 ; (00h) - Always 00h (Read Only)
+rUNKNOWN2   EQU $ff72 ; (00h) - Bit 0-7 (Read/Write)
+rUNKNOWN3   EQU $ff73 ; (00h) - Bit 0-7 (Read/Write)
+rUNKNOWN4   EQU $ff74 ; (00h) - Bit 0-7 (Read/Write) - CGB Mode Only
+rUNKNOWN5   EQU $ff75 ; (8Fh) - Bit 4-6 (Read/Write)
+rUNKNOWN6   EQU $ff76 ; (00h) - Always 00h (Read Only)
+rUNKNOWN7   EQU $ff77 ; (00h) - Always 00h (Read Only)
 rIE         EQU $ffff ; Interrupt Enable (R/W)

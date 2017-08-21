@@ -257,7 +257,7 @@ TrainerCard_PrintTopHalfOfCard: ; 25299 (9:5299)
 	next "MONEY@"
 
 .ID_No: ; 252f9
-	db $27, $28, $ff ; ID No
+	db $27, $28, $ff ; ID NO
 
 .HorizontalDivider: ; 252fc
 	db $25, $25, $25, $25, $25, $25, $25, $25, $25, $25, $25, $25, $26, $ff ; ____________>
@@ -290,7 +290,7 @@ TrainerCard_Page1_PrintDexCaught_GameTime: ; 2530a (9:530a)
 	ret
 
 .Dex_PlayTime:
-	db   "#Dex"
+	db   "#DEX"
 	next "PLAY TIME@@"
 
 .Badges:

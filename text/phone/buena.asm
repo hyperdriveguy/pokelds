@@ -368,13 +368,13 @@ UnknownText_0xa1717: ; 0xa1717
 
 UnknownText_0xa183d: ; 0xa183d
 	text "<PLAY_G>, what was"
-	line "the first #mon"
+	line "the first #MON"
 	cont "you ever caught?"
 
 	para "…Oh, really?"
 
 	para "I've seen lots of"
-	line "#mon around,"
+	line "#MON around,"
 
 	para "but I've never"
 	line "caught one."
@@ -383,7 +383,7 @@ UnknownText_0xa183d: ; 0xa183d
 	line "try sometime."
 
 	para "Did you know that"
-	line "the first #mon"
+	line "the first #MON"
 
 	para "MARY caught was a"
 	line "DROWZEE?"
@@ -401,7 +401,7 @@ UnknownText_0xa183d: ; 0xa183d
 	line "MEOWTH."
 
 	para "Let's chat about"
-	line "#mon again!"
+	line "#MON again!"
 
 	para "Bye-bye!"
 	done
@@ -443,7 +443,7 @@ UnknownText_0xa1ac0: ; 0xa1ac0
 	line "on the phone for"
 
 	para "hours about what"
-	line "#mon music they"
+	line "#MON music they"
 
 	para "should play on"
 	line "different days of"
@@ -510,7 +510,7 @@ UnknownText_0xa1c88: ; 0xa1c88
 
 UnknownText_0xa1d5f: ; 0xa1d5f
 	text "Hey, <PLAY_G>. You"
-	line "use your #Gear"
+	line "use your #GEAR"
 
 	para "to listen to the"
 	line "radio, right?"
@@ -519,12 +519,12 @@ UnknownText_0xa1d5f: ; 0xa1d5f
 	line "can even display"
 
 	para "town maps with"
-	line "#Gear."
+	line "#GEAR."
 
 	para "I have a bad sense"
 	line "of direction, so"
 
-	para "#Gear would be"
+	para "#GEAR would be"
 	line "handy…"
 
 	para "Anyway, thanks for"

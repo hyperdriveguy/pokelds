@@ -61,7 +61,7 @@ sMysteryGiftUnlocked:: ds 1
 sBackupMysteryGiftItem:: ds 1
 sNumDailyMysteryGiftPartnerIDs:: ds 1
 sDailyMysteryGiftPartnerIDs:: ds 5 * 2 ; maximum 5 per day, 2 bytes per ID
-sMysteryGiftDecorationsReceived:: flag_array NUM_NoN_TROPHY_DECOS
+sMysteryGiftDecorationsReceived:: flag_array NUM_NON_TROPHY_DECOS
 	ds 4
 sMysteryGiftTimer:: ds 1
 sMysteryGiftTimerStartDay:: ds 1

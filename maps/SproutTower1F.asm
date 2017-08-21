@@ -48,7 +48,7 @@ SageChowSeenText:
 
 	para "Here, we express"
 	line "our gratitude to"
-	cont "honor all #mon."
+	cont "honor all #MON."
 	done
 
 SageChowBeatenText:
@@ -75,7 +75,7 @@ UnknownText_0x18460a:
 	line "built long ago"
 
 	para "as a place for"
-	line "#mon training."
+	line "#MON training."
 	done
 
 UnknownText_0x184649:
@@ -96,7 +96,7 @@ UnknownText_0x18469d:
 	done
 
 UnknownText_0x1846d6:
-	text "A #mon statue…"
+	text "A #MON statue…"
 
 	para "It looks very"
 	line "distinguished."

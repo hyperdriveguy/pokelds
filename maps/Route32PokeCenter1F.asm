@@ -87,7 +87,7 @@ UnknownText_0x69c8d:
 
 UnknownText_0x69cac:
 	text "What should I make"
-	line "my #mon hold?"
+	line "my #MON hold?"
 
 	para "Maybe an item that"
 	line "increases ATTACK"

@@ -231,7 +231,7 @@ MovementData_0x1a9356:
 FisherTully1SeenText:
 	text "Let me demonstrate"
 	line "the power of the"
-	cont "#mon I caught!"
+	cont "#MON I caught!"
 	done
 
 FisherTully1BeatenText:
@@ -243,7 +243,7 @@ UnknownText_0x1a93ab:
 	text "I want to become"
 	line "the trainer CHAMP"
 
-	para "using the #mon"
+	para "using the #MON"
 	line "I caught."
 
 	para "That's the best"
@@ -283,11 +283,11 @@ PokemaniacShaneBeatenText:
 
 UnknownText_0x1a94d6:
 	text "You're working on"
-	line "a #Dex?"
+	line "a #DEX?"
 
 	para "Wow, you must know"
 	line "some pretty rare"
-	cont "#mon!"
+	cont "#MON!"
 
 	para "May I please see"
 	line "it. Please?"

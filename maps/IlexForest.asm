@@ -766,7 +766,7 @@ UnknownText_0x6f019:
 	text "Wow! Thanks a"
 	line "whole bunch!"
 
-	para "My boss's #mon"
+	para "My boss's #MON"
 	line "won't obey me be-"
 	cont "cause I don't have"
 	cont "a BADGE."
@@ -774,7 +774,7 @@ UnknownText_0x6f019:
 
 Text_ItsTheMissingPokemon:
 	text "It's the missing"
-	line "#mon!"
+	line "#MON!"
 	done
 
 Text_Kwaaaa:
@@ -806,7 +806,7 @@ Text_CharcoalMasterOutro:
 	text "That's the CUT HM."
 	line "Teach that to a"
 
-	para "#mon to clear"
+	para "#MON to clear"
 	line "small trees."
 
 	para "Of course, you"
@@ -841,7 +841,7 @@ Text_HeadbuttOutro:
 	text "Rattle trees with"
 	line "HEADBUTT. Some-"
 	cont "times, sleeping"
-	cont "#mon fall out."
+	cont "#MON fall out."
 	done
 
 Text_IlexForestLass:
@@ -921,16 +921,16 @@ Bug_catcherWayneSeenText:
 	line "me like that!"
 
 	para "You frightened a"
-	line "#mon away!"
+	line "#MON away!"
 	done
 
 Bug_catcherWayneBeatenText:
 	text "I hadn't seen that"
-	line "#mon before…"
+	line "#MON before…"
 	done
 
 Bug_catcherWayneAfterText:
-	text "A #mon I've"
+	text "A #MON I've"
 	line "never seen before"
 
 	para "fell out of the"

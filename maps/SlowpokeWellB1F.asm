@@ -161,7 +161,7 @@ UnknownText_0x5a6b5:
 	cont "so I can't move."
 
 	para "Rats! If I were"
-	line "fit, my #mon"
+	line "fit, my #MON"
 
 	para "would've punished"
 	line "them…"
@@ -203,7 +203,7 @@ GruntM29SeenText:
 	done
 
 GruntM29BeatenText:
-	text "Arrgh! This is NoT"
+	text "Arrgh! This is NOT"
 	line "my day!"
 	done
 

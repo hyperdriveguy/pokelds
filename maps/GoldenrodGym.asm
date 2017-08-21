@@ -190,10 +190,10 @@ UnknownText_0x54122:
 	text "Hi! I'm WHITNEY!"
 
 	para "Everyone was into"
-	line "#mon, so I got"
+	line "#MON, so I got"
 	cont "into it too!"
 
-	para "#mon are"
+	para "#MON are"
 	line "super-cute!"
 
 	para "You want to bat-"
@@ -239,13 +239,13 @@ UnknownText_0x54273:
 
 UnknownText_0x5428b:
 	text "PLAINBADGE lets"
-	line "your #mon use"
+	line "your #MON use"
 
 	para "STRENGTH outside"
 	line "of battle."
 
 	para "It also boosts"
-	line "your #mon's"
+	line "your #MON's"
 	cont "SPEED."
 
 	para "Oh, you can have"
@@ -256,7 +256,7 @@ UnknownText_0x54302:
 	text "It's ATTRACT!"
 	line "It makes full use"
 
-	para "of a #mon's"
+	para "of a #MON's"
 	line "charm."
 
 	para "Isn't it just per-"
@@ -274,7 +274,7 @@ UnknownText_0x54360:
 
 LassCarrieSeenText:
 	text "Don't let my"
-	line "#mon's cute"
+	line "#MON's cute"
 
 	para "looks fool you."
 	line "They can whip you!"
@@ -286,17 +286,17 @@ LassCarrieBeatenText:
 	done
 
 LassCarrieOWText:
-	text "Do my #mon"
+	text "Do my #MON"
 	line "think I'm cute?"
 	done
 
 LassBridgetSeenText:
 	text "I like cute #-"
 	line "MON better than"
-	cont "strong #mon."
+	cont "strong #MON."
 
 	para "But I have strong"
-	line "and cute #mon!"
+	line "and cute #MON!"
 	done
 
 LassBridgetBeatenText:
@@ -368,11 +368,11 @@ GoldenrodGymGuyText:
 
 	para "This GYM is home"
 	line "to normal-type"
-	cont "#mon trainers."
+	cont "#MON trainers."
 
 	para "I recommend you"
 	line "use fighting-type"
-	cont "#mon."
+	cont "#MON."
 	done
 
 GoldenrodGymGuyWinText:

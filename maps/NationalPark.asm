@@ -315,7 +315,7 @@ UnknownText_0x5c1d3:
 	para "I printed out my"
 	line "favorites from my"
 
-	para "#Dex and stuck"
+	para "#DEX and stuck"
 	line "them on my bag."
 	done
 
@@ -336,7 +336,7 @@ UnknownText_0x5c265:
 	line "time."
 
 	para "You must be a"
-	line "#mon trainer."
+	line "#MON trainer."
 
 	para "Since you're work-"
 	line "ing so hard, I"
@@ -346,7 +346,7 @@ UnknownText_0x5c265:
 	done
 
 UnknownText_0x5c30d:
-	text "Let a #mon hold"
+	text "Let a #MON hold"
 	line "that QUICK CLAW."
 
 	para "Sometimes it will"
@@ -357,12 +357,12 @@ UnknownText_0x5c30d:
 UnknownText_0x5c35d:
 	text "I'm playing with"
 	line "stickers I printed"
-	cont "from my #Dex."
+	cont "from my #DEX."
 	done
 
 UnknownText_0x5c38f:
 	text "I get the other"
-	line "guy's #Dex"
+	line "guy's #DEX"
 	cont "sticker if I win."
 	done
 
@@ -383,7 +383,7 @@ NationalParkPersianText:
 
 UnknownText_0x5c42a:
 	text "I'm printing out"
-	line "my #Dex."
+	line "my #DEX."
 
 	para "You can also print"
 	line "out stuff like"
@@ -394,7 +394,7 @@ UnknownText_0x5c42a:
 
 SchoolboyJack1SeenText:
 	text "The world of"
-	line "#mon is deep."
+	line "#MON is deep."
 
 	para "There are still"
 	line "lots of things we"
@@ -417,12 +417,12 @@ UnknownText_0x5c4f3:
 	para "There are 50 kinds"
 	line "of TMs."
 
-	para "Traded #mon"
+	para "Traded #MON"
 	line "level up faster."
 	done
 
 PokefanfBeverly1SeenText:
-	text "My #mon are"
+	text "My #MON are"
 	line "simply darling."
 
 	para "Let me tell you"
@@ -437,7 +437,7 @@ PokefanfBeverly1BeatenText:
 
 UnknownText_0x5c5bd:
 	text "I must say, your"
-	line "#mon are quite"
+	line "#MON are quite"
 	cont "cute, too."
 	done
 
@@ -451,12 +451,12 @@ PokefanmWilliamSeenText:
 	done
 
 PokefanmWilliamBeatenText:
-	text "M-my #mon!"
+	text "M-my #MON!"
 	done
 
 UnknownText_0x5c645:
 	text "I lost the battle,"
-	line "but my #mon win"
+	line "but my #MON win"
 
 	para "the prize for"
 	line "being most lovely."

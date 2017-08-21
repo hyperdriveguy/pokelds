@@ -47,7 +47,7 @@ UnknownText_0x1ac720:
 	line "incredible!"
 
 	para "You can now trade"
-	line "#mon across"
+	line "#MON across"
 	cont "time like e-mail."
 	done
 
@@ -63,7 +63,7 @@ RedsHouseSignText:
 	done
 
 OaksLabSignText:
-	text "OAK #mon"
+	text "OAK #MON"
 	line "RESEARCH LAB"
 	done
 

@@ -439,12 +439,12 @@ BugCatchingContestReturnToGateScript: ; 0x1360b
 	jumpstd bugcontestresultswarp
 
 BugCatchingContestText_BeeepTimesUp: ; 0x1360f
-	; ANNoUNCER: BEEEP! Time's up!
+	; ANNOUNCER: BEEEP! Time's up!
 	text_jump UnknownText_0x1bd2ca
 	db "@"
 
 BugCatchingContestText_ContestIsOver: ; 0x13614
-	; ANNoUNCER: The Contest is over!
+	; ANNOUNCER: The Contest is over!
 	text_jump UnknownText_0x1bd2e7
 	db "@"
 
@@ -862,7 +862,7 @@ Function24b8f: ; 24b8f
 	ld hl, Options
 	ld a, [hl]
 	push af
-	set No_TEXT_SCROLL, [hl]
+	set NO_TEXT_SCROLL, [hl]
 	hlcoord 0, 0
 	ld b, 3
 	ld c, 7
@@ -901,7 +901,7 @@ StartMenu_PrintBugContestStatus: ; 24be7
 	ld hl, Options
 	ld a, [hl]
 	push af
-	set No_TEXT_SCROLL, [hl]
+	set NO_TEXT_SCROLL, [hl]
 	call StartMenu_DrawBugContestStatusBox
 	hlcoord 1, 5
 	ld de, .Balls_EN
@@ -1456,7 +1456,7 @@ PlayBattleMusic: ; 2ee6c
 	cp CHAMPION
 	jr z, .done
 	
-	ld de, MUSIC_CHAMPION_BATTLE_SINNoH
+	ld de, MUSIC_CHAMPION_BATTLE_SINNOH
 	cp RED
 	jr z, .done
 
@@ -3289,7 +3289,7 @@ CatchTutorial:: ; 4e554
 	db "DUDE@"
 
 .AutoInput: ; 4e5df
-	db No_INPUT, $ff ; end
+	db NO_INPUT, $ff ; end
 
 INCLUDE "engine/evolution_animation.asm"
 
@@ -3455,7 +3455,7 @@ FemaleTrainers: ; 4e976
 	db TEACHER
 	db SWIMMERF
 	db PICNICKER
-	db KIMONo_GIRL
+	db KIMONO_GIRL
 	db POKEFANF
 	db COOLTRAINERF
 FemaleTrainersEnd:
@@ -5246,7 +5246,7 @@ DisplayCaughtContestMonStats: ; cc000
 	db " THIS ", $4a, "  @"
 
 SwitchMonText: ; cc0c2
-	; Switch #mon?
+	; Switch #MON?
 	text_jump UnknownText_0x1c10cf
 	db "@"
 
@@ -5848,29 +5848,29 @@ _DudeAutoInput: ; 1de299
 DudeAutoInputs:
 
 DudeAutoInput_A: ; 1de29f
-	db No_INPUT, $50
+	db NO_INPUT, $50
 	db A_BUTTON, $00
-	db No_INPUT, $ff ; end
+	db NO_INPUT, $ff ; end
 
 DudeAutoInput_RightA: ; 1de2a5
-	db No_INPUT, $08
+	db NO_INPUT, $08
 	db D_RIGHT,  $00
-	db No_INPUT, $08
+	db NO_INPUT, $08
 	db A_BUTTON, $00
-	db No_INPUT, $ff ; end
+	db NO_INPUT, $ff ; end
 
 DudeAutoInput_DownA: ; 1de2af
-	db No_INPUT, $fe
-	db No_INPUT, $fe
-	db No_INPUT, $fe
-	db No_INPUT, $fe
+	db NO_INPUT, $fe
+	db NO_INPUT, $fe
+	db NO_INPUT, $fe
+	db NO_INPUT, $fe
 	db D_DOWN,   $00
-	db No_INPUT, $fe
-	db No_INPUT, $fe
-	db No_INPUT, $fe
-	db No_INPUT, $fe
+	db NO_INPUT, $fe
+	db NO_INPUT, $fe
+	db NO_INPUT, $fe
+	db NO_INPUT, $fe
 	db A_BUTTON, $00
-	db No_INPUT, $ff ; end
+	db NO_INPUT, $ff ; end
 
 TownMap_ConvertLineBreakCharacters: ; 1de2c5
 	ld hl, StringBuffer1

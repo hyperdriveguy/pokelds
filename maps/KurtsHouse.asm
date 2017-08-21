@@ -472,7 +472,7 @@ UnknownText_0x18e473:
 	para "TEAM ROCKET's an"
 	line "evil gang that"
 
-	para "uses #mon for"
+	para "uses #MON for"
 	line "their dirty work."
 
 	para "They're supposed"
@@ -562,7 +562,7 @@ UnknownText_0x18e82a:
 	line "out great."
 
 	para "Try catching"
-	line "#mon with it."
+	line "#MON with it."
 	done
 
 UnknownText_0x18e863:

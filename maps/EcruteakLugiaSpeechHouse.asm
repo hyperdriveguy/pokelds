@@ -30,7 +30,7 @@ UnknownText_0x9933d:
 	cont "out the sun."
 
 	para "I wonder what that"
-	line "#mon was? "
+	line "#MON was? "
 
 	para "It was like a bird"
 	line "and a dragon."
@@ -38,7 +38,7 @@ UnknownText_0x9933d:
 
 UnknownText_0x993ec:
 	text "Is there really a"
-	line "#mon that big?"
+	line "#MON that big?"
 
 	para "If it exists, it"
 	line "must be powerful."

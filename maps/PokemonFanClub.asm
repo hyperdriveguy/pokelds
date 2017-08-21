@@ -122,19 +122,19 @@ MapPokemonFanClubSignpost1Script:
 
 UnknownText_0x191881:
 	text "I'm the CHAIRMAN"
-	line "of the #mon FAN"
+	line "of the #MON FAN"
 	cont "CLUB."
 
 	para "I've raised over"
-	line "150 #mon."
+	line "150 #MON."
 
 	para "I'm very fussy"
 	line "when it comes to"
-	cont "#mon."
+	cont "#MON."
 
 	para "Did you visit just"
 	line "to hear about my"
-	cont "#mon?"
+	cont "#MON?"
 	done
 
 UnknownText_0x191911:
@@ -171,11 +171,11 @@ UnknownText_0x191a3d:
 
 UnknownText_0x191a72:
 	text "It's a RARE CANDY"
-	line "that makes #mon"
+	line "that makes #MON"
 	cont "stronger."
 
 	para "I prefer making my"
-	line "#mon stronger"
+	line "#MON stronger"
 
 	para "by battling, so"
 	line "you can have it."
@@ -202,7 +202,7 @@ UnknownText_0x191b38:
 UnknownText_0x191b6d:
 	text "Our CHAIRMAN is"
 	line "very vocal when it"
-	cont "comes to #mon…"
+	cont "comes to #MON…"
 	done
 
 UnknownText_0x191ba0:
@@ -212,7 +212,7 @@ UnknownText_0x191ba0:
 	para "its finger when"
 	line "it's trying to use"
 
-	para "METRONoME."
+	para "METRONOME."
 	line "It's so adorable!"
 	done
 

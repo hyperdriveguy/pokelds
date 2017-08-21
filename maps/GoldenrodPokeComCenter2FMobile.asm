@@ -164,7 +164,7 @@ UnknownText_0x62828:
 	text "There's a #COM"
 	line "CLUB upstairs in"
 
-	para "any #mon"
+	para "any #MON"
 	line "CENTER."
 
 	para "There, you can"
@@ -186,7 +186,7 @@ UnknownText_0x628f4:
 	text "To use the TRADE"
 	line "CORNER or read the"
 
-	para "#mon NEWS, you"
+	para "#MON NEWS, you"
 	line "need to phone the"
 	cont "MOBILE CENTER."
 
@@ -253,7 +253,7 @@ UnknownText_0x62b26:
 	para "Wireless communi-"
 	line "cation has enabled"
 
-	para "#mon trainers"
+	para "#MON trainers"
 	line "to interact across"
 
 	para "the nation. Let's"

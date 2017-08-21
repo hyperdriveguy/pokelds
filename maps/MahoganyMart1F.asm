@@ -193,7 +193,7 @@ UnknownText_0x6c501:
 	text "Urrgh…"
 
 	para "That guy's dragon"
-	line "#mon are tough…"
+	line "#MON are tough…"
 	done
 
 UnknownText_0x6c52a:

@@ -140,7 +140,7 @@ UnknownText_0x9c33a:
 
 UnknownText_0x9c354:
 	text "MINERALBADGE"
-	line "raises #mon's"
+	line "raises #MON's"
 	cont "DEFENSE."
 
 	para "…Um… Please take"
@@ -190,7 +190,7 @@ OlivineGymGuyPreText:
 	cont "LIGHTHOUSE."
 
 	para "She's been tending"
-	line "to a sick #mon."
+	line "to a sick #MON."
 
 	para "A strong trainer"
 	line "has to be compas-"

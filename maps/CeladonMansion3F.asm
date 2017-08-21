@@ -90,14 +90,14 @@ UnknownText_0x716ce:
 	line "DESIGNER!"
 
 	para "Filling up your"
-	line "#Dex is tough,"
+	line "#DEX is tough,"
 	cont "but don't give up!"
 	done
 
 UnknownText_0x71725:
 	text "Wow! Excellent!"
 	line "You completed your"
-	cont "#Dex!"
+	cont "#DEX!"
 
 	para "Congratulations!"
 	done
@@ -127,7 +127,7 @@ UnknownText_0x717d8:
 	line "ARTIST."
 
 	para "Oh, you completed"
-	line "your #Dex?"
+	line "your #DEX?"
 
 	para "Want me to print"
 	line "out your DIPLOMA?"

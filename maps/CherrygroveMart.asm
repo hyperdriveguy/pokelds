@@ -53,19 +53,19 @@ UnknownText_0x196834:
 UnknownText_0x196873:
 	text "# BALLS are in"
 	line "stock! Now I can"
-	cont "catch #mon!"
+	cont "catch #MON!"
 	done
 
 UnknownText_0x1968a0:
 	text "When I was walking"
 	line "in the grass, a"
 
-	para "bug #mon poi-"
-	line "soned my #mon!"
+	para "bug #MON poi-"
+	line "soned my #MON!"
 
 	para "I just kept going,"
 	line "but then my"
-	cont "#mon fainted."
+	cont "#MON fainted."
 
 	para "You should keep an"
 	line "ANTIDOTE with you."

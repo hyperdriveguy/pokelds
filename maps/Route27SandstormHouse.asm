@@ -43,11 +43,11 @@ SandstormHouseBookshelf:
 
 SandstormHouseWomanText1:
 	text "Where are you off"
-	line "to with #mon?"
+	line "to with #MON?"
 
-	para "#mon LEAGUE?"
+	para "#MON LEAGUE?"
 
-	para "Are your #mon"
+	para "Are your #MON"
 	line "loyal enough for"
 	cont "you to win?"
 
@@ -55,7 +55,7 @@ SandstormHouseWomanText1:
 	done
 
 SandstormHouseWomanLoyalText:
-	text "Ah! Your #mon"
+	text "Ah! Your #MON"
 	line "trusts you very"
 	cont "much."
 
@@ -89,7 +89,7 @@ SandstormHouseWomanDisloyalText:
 	line "tough going."
 
 	para "Trust is the tie"
-	line "that binds #mon"
+	line "that binds #MON"
 	cont "and trainers."
 	done
 

@@ -171,7 +171,7 @@ UnknownText_0x7455f:
 	text "Hold it."
 
 	para "…Are you going to"
-	line "take the #mon"
+	line "take the #MON"
 	cont "LEAGUE challenge?"
 
 	para "…Don't make me"
@@ -186,7 +186,7 @@ UnknownText_0x7455f:
 	para "I now have the"
 	line "best and strongest"
 
-	para "#mon with me."
+	para "#MON with me."
 	line "I'm invincible!"
 
 	para "<PLAYER>!"

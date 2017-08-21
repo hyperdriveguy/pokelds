@@ -86,7 +86,7 @@ MovementData_0x18052c:
 	step_end
 
 UnknownText_0x180531:
-	text "Welcome to #mon"
+	text "Welcome to #MON"
 	line "LEAGUE, <PLAYER>."
 
 	para "Allow me to intro-"
@@ -97,7 +97,7 @@ UnknownText_0x180531:
 	line "around the world,"
 
 	para "making my psychic"
-	line "#mon powerful."
+	line "#MON powerful."
 
 	para "And, at last, I've"
 	line "been accepted into"

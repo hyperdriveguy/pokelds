@@ -22,11 +22,11 @@ UnknownText_0x196aea:
 	text "You're trying to"
 	line "see how good you"
 
-	para "are as a #mon"
+	para "are as a #MON"
 	line "trainer?"
 
 	para "You better visit"
-	line "the #mon GYMS"
+	line "the #MON GYMS"
 
 	para "all over JOHTO and"
 	line "collect BADGES."
@@ -37,7 +37,7 @@ UnknownText_0x196b65:
 	line "I'm going to be a"
 	cont "GYM LEADER!"
 
-	para "I make my #mon"
+	para "I make my #MON"
 	line "battle with my"
 
 	para "friend's to make"

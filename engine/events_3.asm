@@ -618,7 +618,7 @@ TreeMons4: ; b836c
 
 TreeMons5: ; b8392
 	db 50, HOOTHOOT,   10
-	db 15, VENoNAT,    10
+	db 15, VENONAT,    10
 	db 15, HOOTHOOT,   10
 	db 10, EXEGGCUTE,  10
 	db  5, EXEGGCUTE,  10
@@ -637,7 +637,7 @@ TreeMons6: ; b83b8
 	db 50, HOOTHOOT,   10
 	db 15, PINECO,     10
 	db 15, PINECO,     10
-	db 10, NoCTOWL,    10
+	db 10, NOCTOWL,    10
 	db  5, BUTTERFREE, 10
 	db  5, BEEDRILL,   10
 	db -1

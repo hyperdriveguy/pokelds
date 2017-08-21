@@ -44,8 +44,8 @@ BattleCommand_Metronome: ; 37418
 
 
 MetronomeExcepts: ; 37454
-	db No_MOVE
-	db METRONoME
+	db NO_MOVE
+	db METRONOME
 	db STRUGGLE
 	db SKETCH
 	db MIMIC

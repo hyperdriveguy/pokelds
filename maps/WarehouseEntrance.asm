@@ -432,7 +432,7 @@ SupernerdEricSeenText:
 
 	para "I was trying to"
 	line "cheat using my"
-	cont "#mon…"
+	cont "#MON…"
 	done
 
 SupernerdEricBeatenText:
@@ -462,15 +462,15 @@ SupernerdTeruBeatenText:
 	done
 
 UnknownText_0x7c410:
-	text "I know my #mon"
+	text "I know my #MON"
 	line "type alignments."
 
 	para "But I only use one"
-	line "type of #mon."
+	line "type of #MON."
 	done
 
 PokemaniacIssacSeenText:
-	text "My #mon just"
+	text "My #MON just"
 	line "got a haircut!"
 
 	para "I'll show you how"
@@ -482,7 +482,7 @@ PokemaniacIssacBeatenText:
 	done
 
 UnknownText_0x7c498:
-	text "Your #mon will"
+	text "Your #MON will"
 	line "like you more if"
 
 	para "you give them"
@@ -491,7 +491,7 @@ UnknownText_0x7c498:
 
 PokemaniacDonaldSeenText:
 	text "I think you have"
-	line "some rare #mon"
+	line "some rare #MON"
 	cont "with you."
 
 	para "Let me see them!"
@@ -504,7 +504,7 @@ PokemaniacDonaldBeatenText:
 
 UnknownText_0x7c52f:
 	text "Are you making a"
-	line "#Dex? Here's a"
+	line "#DEX? Here's a"
 	cont "hot tip."
 
 	para "The HIKER on ROUTE"
@@ -513,7 +513,7 @@ UnknownText_0x7c52f:
 
 	para "He'll phone you if"
 	line "he sees any rare"
-	cont "#mon."
+	cont "#MON."
 	done
 
 UnknownText_0x7c5b0:
@@ -532,7 +532,7 @@ UnknownText_0x7c5d6:
 UnknownText_0x7c5f9:
 	text "Welcome!"
 
-	para "I run the #mon"
+	para "I run the #MON"
 	line "SALON!"
 
 	para "I'm the older and"
@@ -540,7 +540,7 @@ UnknownText_0x7c5f9:
 	cont "HAIRCUT BROTHERS."
 
 	para "I can make your"
-	line "#mon beautiful"
+	line "#MON beautiful"
 	cont "for just ¥500."
 
 	para "Would you like me"
@@ -548,7 +548,7 @@ UnknownText_0x7c5f9:
 	done
 
 UnknownText_0x7c69a:
-	text "Which #mon"
+	text "Which #MON"
 	line "should I work on?"
 	done
 
@@ -579,7 +579,7 @@ UnknownText_0x7c72b:
 
 UnknownText_0x7c75c:
 	text "Welcome to the"
-	line "#mon SALON!"
+	line "#MON SALON!"
 
 	para "I'm the younger"
 	line "and less expen-"
@@ -587,14 +587,14 @@ UnknownText_0x7c75c:
 	cont "HAIRCUT BROTHERS."
 
 	para "I'll spiff up your"
-	line "#mon for just"
+	line "#MON for just"
 	cont "¥300."
 
 	para "So? How about it?"
 	done
 
 UnknownText_0x7c7f1:
-	text "OK, which #mon"
+	text "OK, which #MON"
 	line "should I do?"
 	done
 
@@ -650,7 +650,7 @@ UnknownText_0x7c904:
 	done
 
 UnknownText_0x7c91a:
-	text "No ENTRY BEYOND"
+	text "NO ENTRY BEYOND"
 	line "THIS POINT"
 	done
 

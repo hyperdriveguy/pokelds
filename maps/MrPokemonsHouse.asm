@@ -123,7 +123,7 @@ MrPokemonsHouse_OakScript:
 	writetext MrPokemonText_ImDependingOnYou
 	waitbutton
 	closetext
-	setevent EVENT_RIVAL_BOUNTIFUL_TOWN
+	setevent EVENT_RIVAL_NEW_BARK_TOWN
 	setevent EVENT_KRISS_HOUSE_1F_NEIGHBOR
 	clearevent EVENT_KRISS_NEIGHBORS_HOUSE_NEIGHBOR
 	dotrigger $1
@@ -193,7 +193,7 @@ MrPokemonsHouse_GotEggText:
 
 MrPokemonIntroText3:
 	text "I know a couple"
-	line "who run a #mon"
+	line "who run a #MON"
 	cont "DAY-CARE service."
 
 	para "They gave me that"
@@ -203,7 +203,7 @@ MrPokemonIntroText3:
 	line "so I sent mail to"
 	cont "Bishop."
 
-	para "For #mon evolu-"
+	para "For #MON evolu-"
 	line "tion, Bishop is"
 	cont "the authority."
 	done
@@ -223,7 +223,7 @@ MrPokemonsHouse_MrPokemonHealText:
 	text "You are returning"
 	line "to Bishop?"
 
-	para "Here. Your #mon"
+	para "Here. Your #MON"
 	line "should have some"
 	cont "rest."
 	done
@@ -245,12 +245,12 @@ MrPokemonsHouse_OakText1:
 	text "OAK: Aha! So"
 	line "you're <PLAY_G>!"
 
-	para "I'm OAK! A #mon"
+	para "I'm OAK! A #MON"
 	line "researcher."
 
 	para "I was just visit-"
 	line "ing my old friend"
-	cont "MR.#mon."
+	cont "MR.#MON."
 
 	para "I heard you were"
 	line "running an errand"
@@ -259,7 +259,7 @@ MrPokemonsHouse_OakText1:
 	line "waited here."
 
 	para "Oh! What's this?"
-	line "A rare #mon!"
+	line "A rare #MON!"
 
 	para "Let's see…"
 
@@ -268,19 +268,19 @@ MrPokemonsHouse_OakText1:
 	para "I understand why"
 	line "Bishop gave you"
 
-	para "a #mon for this"
+	para "a #MON for this"
 	line "errand."
 
 	para "To researchers"
 	line "like Bishop and"
 
-	para "I, #mon are our"
+	para "I, #MON are our"
 	line "friends."
 
 	para "He saw that you"
 	line "would treat your"
 
-	para "#mon with love"
+	para "#MON with love"
 	line "and care."
 
 	para "…Ah!"
@@ -293,12 +293,12 @@ MrPokemonsHouse_OakText1:
 
 	para "See? This is the"
 	line "latest version of"
-	cont "#Dex."
+	cont "#DEX."
 
 	para "It automatically"
 	line "records data on"
 
-	para "#mon you've"
+	para "#MON you've"
 	line "seen or caught."
 
 	para "It's a hi-tech"
@@ -307,15 +307,15 @@ MrPokemonsHouse_OakText1:
 
 MrPokemonsHouse_GetDexText:
 	text "<PLAYER> received"
-	line "#Dex!"
+	line "#DEX!"
 	done
 
 MrPokemonsHouse_OakText2:
 	text "Go meet many kinds"
-	line "of #mon and"
+	line "of #MON and"
 
 	para "complete that"
-	line "#Dex!"
+	line "#DEX!"
 
 	para "But I've stayed"
 	line "too long."

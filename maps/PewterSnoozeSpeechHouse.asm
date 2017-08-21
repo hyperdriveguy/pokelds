@@ -1,5 +1,5 @@
 const_value set 2
-	const PEWTERSNoOZESPEECHHOUSE_GRAMPS
+	const PEWTERSNOOZESPEECHHOUSE_GRAMPS
 
 PewterSnoozeSpeechHouse_MapScriptHeader:
 .MapTriggers:

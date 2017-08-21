@@ -75,7 +75,7 @@ UnknownText_0x18c042:
 	line "PEWTER GYM?"
 
 	para "The LEADER uses"
-	line "rock-type #mon."
+	line "rock-type #MON."
 	done
 
 UnknownText_0x18c080:
@@ -125,11 +125,11 @@ PewterCitySignText:
 
 PewterGymSignText:
 	text "PEWTER CITY"
-	line "#mon GYM"
+	line "#MON GYM"
 	cont "LEADER: BROCK"
 
 	para "The Rock Solid"
-	line "#mon Trainer"
+	line "#MON Trainer"
 	done
 
 PewterMuseumSignText:
@@ -146,7 +146,7 @@ PewterCityMtMoonGiftShopSignText:
 	line "here…"
 
 	para "MT.MOON GIFT SHOP"
-	line "NoW OPEN!"
+	line "NOW OPEN!"
 	done
 
 PewterCityWelcomeSignText:
@@ -164,7 +164,7 @@ PewterCity_MapEventHeader:
 	warp_def $11, $10, 1, PEWTER_GYM
 	warp_def $11, $17, 2, PEWTER_MART
 	warp_def $19, $d, 1, PEWTER_POKECENTER_1F
-	warp_def $1d, $7, 1, PEWTER_SNoOZE_SPEECH_HOUSE
+	warp_def $1d, $7, 1, PEWTER_SNOOZE_SPEECH_HOUSE
 
 .XYTriggers:
 	db 0

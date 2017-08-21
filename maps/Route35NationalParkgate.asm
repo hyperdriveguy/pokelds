@@ -243,9 +243,9 @@ UnknownText_0x6a2eb:
 	line "ple."
 
 	para "Using one of your"
-	line "#mon, catch a"
+	line "#MON, catch a"
 
-	para "bug #mon to be"
+	para "bug #MON to be"
 	line "judged."
 
 	para "Would you like to"
@@ -266,7 +266,7 @@ UnknownText_0x6a3c7:
 UnknownText_0x6a3e2:
 	text "The person who"
 	line "gets the strong-"
-	cont "est bug #mon"
+	cont "est bug #MON"
 	cont "is the winner."
 
 	para "You have 20"
@@ -277,13 +277,13 @@ UnknownText_0x6a3e2:
 	cont "done."
 
 	para "You can keep the"
-	line "last #mon you"
+	line "last #MON you"
 	cont "catch as your own."
 
 	para "Go out and catch"
 	line "the strongest bug"
 
-	para "#mon you can"
+	para "#MON you can"
 	line "find!"
 	done
 
@@ -291,14 +291,14 @@ UnknownText_0x6a4c6:
 	text "Uh-oh…"
 
 	para "You have more than"
-	line "one #mon."
+	line "one #MON."
 
 	para "You'll have to use"
 	line "@"
 	text_from_ram StringBuffer3
 	text ", the"
 
-	para "first #mon in"
+	para "first #MON in"
 	line "your party."
 
 	para "Is that OK with"
@@ -307,19 +307,19 @@ UnknownText_0x6a4c6:
 
 UnknownText_0x6a537:
 	text "Fine, we'll hold"
-	line "your other #mon"
+	line "your other #MON"
 	cont "while you compete."
 	done
 
 UnknownText_0x6a56b:
-	text "<PLAYER>'s #mon"
+	text "<PLAYER>'s #MON"
 	line "were left with the"
 	cont "CONTEST HELPER."
 	done
 
 UnknownText_0x6a597:
 	text "Please choose the"
-	line "#mon to be used"
+	line "#MON to be used"
 
 	para "in the Contest,"
 	line "then come see me."
@@ -333,13 +333,13 @@ UnknownText_0x6a5dc:
 
 UnknownText_0x6a608:
 	text "Uh-oh…"
-	line "The first #mon"
+	line "The first #MON"
 
 	para "in your party"
 	line "can't battle."
 
 	para "Please switch it"
-	line "with the #mon"
+	line "with the #MON"
 
 	para "you want to use,"
 	line "then come see me."
@@ -354,7 +354,7 @@ UnknownText_0x6a67c:
 
 	para "You have no room"
 	line "to put the bug"
-	cont "#mon you catch."
+	cont "#MON you catch."
 
 	para "Please make room"
 	line "in your party or"
@@ -367,11 +367,11 @@ UnknownText_0x6a71f:
 	text "Uh-oh…"
 	line "You have an EGG as"
 
-	para "the first #mon"
+	para "the first #MON"
 	line "in your party."
 
 	para "Please switch it"
-	line "with the #mon"
+	line "with the #MON"
 
 	para "you want to use,"
 	line "then come see me."
@@ -437,7 +437,7 @@ UnknownText_0x6a90e:
 	line "you also get to"
 
 	para "keep the bug"
-	line "#mon you may"
+	line "#MON you may"
 
 	para "have at the end of"
 	line "the contest."
@@ -465,4 +465,4 @@ Route35NationalParkgate_MapEventHeader:
 	db 3
 	person_event SPRITE_OFFICER, 1, 2, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, (1 << 3) | PAL_OW_GREEN, PERSONTYPE_SCRIPT, 0, OfficerScript_0x6a204, EVENT_ROUTE_35_NATIONAL_PARK_GATE_OFFICER_CONTEST_DAY
 	person_event SPRITE_YOUNGSTER, 5, 6, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, (1 << 3) | PAL_OW_RED, PERSONTYPE_SCRIPT, 0, YoungsterScript_0x6a2d8, EVENT_ROUTE_35_NATIONAL_PARK_GATE_YOUNGSTER
-	person_event SPRITE_OFFICER, 3, 0, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, (1 << 3) | PAL_OW_GREEN, PERSONTYPE_SCRIPT, 0, OfficerScript_0x6a2ca, EVENT_ROUTE_35_NATIONAL_PARK_GATE_OFFICER_NoT_CONTEST_DAY
+	person_event SPRITE_OFFICER, 3, 0, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, (1 << 3) | PAL_OW_GREEN, PERSONTYPE_SCRIPT, 0, OfficerScript_0x6a2ca, EVENT_ROUTE_35_NATIONAL_PARK_GATE_OFFICER_NOT_CONTEST_DAY

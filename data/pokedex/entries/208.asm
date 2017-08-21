@@ -5,6 +5,6 @@
 	db   "The many small"
 	next "metal particles"
 	next "that cover this"
-	page "#mon's body"
+	page "#MON's body"
 	next "reflect bright"
 	next "light well.@"

@@ -34,7 +34,7 @@ UnknownText_0x19a362:
 	done
 
 UnknownText_0x19a3b3:
-	text "I stop my #mon"
+	text "I stop my #MON"
 	line "from evolving too"
 	cont "early."
 
@@ -45,7 +45,7 @@ UnknownText_0x19a3b3:
 	done
 
 UnknownText_0x19a418:
-	text "#mon do become"
+	text "#MON do become"
 	line "stronger when they"
 
 	para "evolve, but they"

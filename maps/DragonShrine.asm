@@ -430,7 +430,7 @@ UnknownText_0x18d2ea:
 	done
 
 UnknownText_0x18d3bc:
-	text "What are #mon"
+	text "What are #MON"
 	line "to you?"
 	done
 
@@ -448,12 +448,12 @@ UnknownText_0x18d3f3:
 UnknownText_0x18d420:
 	text "What is most"
 	line "important for"
-	cont "raising #mon?"
+	cont "raising #MON?"
 	done
 
 UnknownText_0x18d44a:
-	text "Strong #mon."
-	line "Weak #mon."
+	text "Strong #MON."
+	line "Weak #MON."
 
 	para "Which is more"
 	line "important?"
@@ -463,7 +463,7 @@ UnknownText_0x18d47c:
 	text "Hm… I see…"
 
 	para "You care deeply"
-	line "for #mon."
+	line "for #MON."
 
 	para "Very commendable."
 
@@ -475,7 +475,7 @@ UnknownText_0x18d47c:
 
 	para "It will see you"
 	line "through at the"
-	cont "#mon LEAGUE."
+	cont "#MON LEAGUE."
 	done
 
 UnknownText_0x18d520:
@@ -531,12 +531,12 @@ UnknownText_0x18d697:
 	done
 
 UnknownText_0x18d6ac:
-	text "Hm? Your #mon"
+	text "Hm? Your #MON"
 	line "party is full."
 	done
 
 UnknownText_0x18d6ca:
-	text "Dragon #mon are"
+	text "Dragon #MON are"
 	line "symbolic of our"
 	cont "clan."
 
@@ -652,11 +652,11 @@ UnknownText_0x18da0b:
 	text "RISINGBADGE will"
 	line "enable your"
 
-	para "#mon to use the"
+	para "#MON to use the"
 	line "move for climbing"
 	cont "waterfalls."
 
-	para "Also, all #mon"
+	para "Also, all #MON"
 	line "will recognize you"
 
 	para "as a trainer and"

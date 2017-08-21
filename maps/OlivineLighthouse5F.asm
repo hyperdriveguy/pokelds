@@ -73,7 +73,7 @@ Bird_keeperDenisSeenText:
 	text "We're pretty high"
 	line "up here. My bird"
 
-	para "#mon are in"
+	para "#MON are in"
 	line "prime form."
 	done
 
@@ -82,7 +82,7 @@ Bird_keeperDenisBeatenText:
 	done
 
 UnknownText_0x60ac3:
-	text "My #mon learned"
+	text "My #MON learned"
 	line "how to use FLY in"
 	cont "CIANWOOD."
 

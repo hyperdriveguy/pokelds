@@ -447,7 +447,7 @@ FloriaText1:
 	line "jumped right up!"
 
 	para "It just has to be"
-	line "a #mon."
+	line "a #MON."
 
 	para "I bet it would be"
 	line "shocked out of its"
@@ -522,7 +522,7 @@ UnknownText_0x1945b8:
 	cont "to GOLDENROD CITY."
 
 	para "I wanted to go see"
-	line "the huge #mon"
+	line "the huge #MON"
 
 	para "CENTER they just"
 	line "opened…"
@@ -546,7 +546,7 @@ UnknownText_0x19469e:
 	cont "trace."
 
 	para "Oh! That tree was"
-	line "really a #mon?"
+	line "really a #MON?"
 	done
 
 PsychicMarkSeenText:
@@ -569,7 +569,7 @@ UnknownText_0x19471e:
 SchoolboyAlan1SeenText:
 	text "Thanks to my stud-"
 	line "ies, I'm ready for"
-	cont "any #mon!"
+	cont "any #MON!"
 	done
 
 SchoolboyAlan1BeatenText:
@@ -600,7 +600,7 @@ ArthurGivesGiftText:
 	done
 
 ArthurGaveGiftText:
-	text "ARTHUR: A #mon"
+	text "ARTHUR: A #MON"
 	line "that uses rock-"
 
 	para "type moves should"
@@ -630,13 +630,13 @@ Route36SignText:
 
 RuinsOfAlphNorthSignText:
 	text "RUINS OF ALPH"
-	line "NoRTH ENTRANCE"
+	line "NORTH ENTRANCE"
 	done
 
 Route36TrainerTips1Text:
 	text "TRAINER TIPS"
 
-	para "#mon stats"
+	para "#MON stats"
 	line "vary--even within"
 	cont "the same species."
 
@@ -647,7 +647,7 @@ Route36TrainerTips1Text:
 	line "ences will become"
 
 	para "pronounced as the"
-	line "#mon grow."
+	line "#MON grow."
 	done
 
 Route36TrainerTips2Text:

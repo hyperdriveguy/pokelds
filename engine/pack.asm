@@ -1,6 +1,6 @@
 Pack: ; 10000
 	ld hl, Options
-	set No_TEXT_SCROLL, [hl]
+	set NO_TEXT_SCROLL, [hl]
 	call InitPackBuffers
 .loop
 	call JoyTextDelay
@@ -15,7 +15,7 @@ Pack: ; 10000
 	ld a, [wCurrPocket]
 	ld [wLastPocket], a
 	ld hl, Options
-	res No_TEXT_SCROLL, [hl]
+	res NO_TEXT_SCROLL, [hl]
 	ret
 ; 10026
 
@@ -199,7 +199,7 @@ Pack: ; 10000
 	ld hl, Options
 	ld a, [hl]
 	push af
-	res No_TEXT_SCROLL, [hl]
+	res NO_TEXT_SCROLL, [hl]
 	callba TeachTMHM
 	pop af
 	ld [Options], a
@@ -601,7 +601,7 @@ GiveItem: ; 103fd
 	jp z, .NoPokemon
 	ld a, [Options]
 	push af
-	res No_TEXT_SCROLL, a
+	res NO_TEXT_SCROLL, a
 	ld [Options], a
 	ld a, $8
 	ld [PartyMenuActionText], a
@@ -666,7 +666,7 @@ QuitItemSubmenu: ; 10492
 
 BattlePack: ; 10493
 	ld hl, Options
-	set No_TEXT_SCROLL, [hl]
+	set NO_TEXT_SCROLL, [hl]
 	call InitPackBuffers
 .loop
 	call JoyTextDelay
@@ -681,7 +681,7 @@ BattlePack: ; 10493
 	ld a, [wCurrPocket]
 	ld [wLastPocket], a
 	ld hl, Options
-	res No_TEXT_SCROLL, [hl]
+	res NO_TEXT_SCROLL, [hl]
 	ret
 ; 104b9
 
@@ -1277,7 +1277,7 @@ Pack_QuitRunScript: ; 1087e (4:487e)
 Pack_PrintTextNoScroll: ; 10889 (4:4889)
 	ld a, [Options]
 	push af
-	set No_TEXT_SCROLL, a
+	set NO_TEXT_SCROLL, a
 	ld [Options], a
 	call PrintText
 	pop af
@@ -1679,7 +1679,7 @@ Text_ThisIsntTheTime: ; 0x10af3
 ; 0x10af8
 
 TextJump_YouDontHaveAPkmn: ; 0x10af8
-	; You don't have a #mon!
+	; You don't have a #MON!
 	text_jump Text_YouDontHaveAPkmn
 	db "@"
 ; 0x10afd

@@ -38,7 +38,7 @@ UnknownText_0x9ae54:
 	line "of thought into"
 
 	para "naming your"
-	line "#mon?"
+	line "#MON?"
 
 	para "Giving them good"
 	line "nicknames adds to"

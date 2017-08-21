@@ -96,14 +96,14 @@ CamperDeanBeatenText:
 	done
 
 UnknownText_0x1aafd9:
-	text "My #mon were"
+	text "My #MON were"
 	line "hurt before even"
 
 	para "entering ROCK"
 	line "TUNNEL."
 
 	para "I'd better take"
-	line "them to a #mon"
+	line "them to a #MON"
 	cont "CENTER right away."
 	done
 

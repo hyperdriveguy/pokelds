@@ -272,14 +272,14 @@ Route31PokeBall:
 Route31CooltrainerMText:
 	text "DARK CAVE…"
 
-	para "If #mon could"
+	para "If #MON could"
 	line "light it up, I'd"
 	cont "explore it."
 	done
 
 Bug_catcherWade1SeenText:
 	text "I caught a bunch"
-	line "of #mon. Let me"
+	line "of #MON. Let me"
 	cont "battle with you!"
 	done
 
@@ -289,7 +289,7 @@ Bug_catcherWade1BeatenText:
 
 Bug_catcherWade1AfterText:
 	text "You can catch"
-	line "#mon even if"
+	line "#MON even if"
 
 	para "you have six with"
 	line "you."
@@ -304,13 +304,13 @@ Text_Route31SleepyMan:
 
 	para "I walked too far"
 	line "today looking for"
-	cont "#mon."
+	cont "#MON."
 
 	para "My feet hurt and"
 	line "I'm sleepy…"
 
 	para "If I were a wild"
-	line "#mon, I'd be"
+	line "#MON, I'd be"
 	cont "easy to catch…"
 
 	para "…Zzzz…"
@@ -325,7 +325,7 @@ Text_Route31SleepyManGotMail:
 
 Text_Route31HandOverMailMon:
 	text "<PLAYER> handed"
-	line "over the #mon"
+	line "over the #MON"
 	cont "holding the MAIL."
 	done
 
@@ -389,7 +389,7 @@ Text_Route31DeclinedToHandOverMail:
 
 Text_Route31CantTakeLastMon:
 	text "If I take that"
-	line "#mon from you,"
+	line "#MON from you,"
 
 	para "what are you going"
 	line "to use in battle?"
@@ -397,7 +397,7 @@ Text_Route31CantTakeLastMon:
 
 Route31YoungsterText:
 	text "I found a good"
-	line "#mon in DARK"
+	line "#MON in DARK"
 	cont "CAVE."
 
 	para "I'm going to raise"

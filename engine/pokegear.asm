@@ -2,7 +2,7 @@ PokeGear: ; 90b8d (24:4b8d)
 	ld hl, Options
 	ld a, [hl]
 	push af
-	set No_TEXT_SCROLL, [hl]
+	set NO_TEXT_SCROLL, [hl]
 	ld a, [hInMenu]
 	push af
 	ld a, $1
@@ -901,7 +901,7 @@ PokegearPhone_MakePhoneCall: ; 911eb (24:51eb)
 	and a
 	jr nz, .no_service
 	ld hl, Options
-	res No_TEXT_SCROLL, [hl]
+	res NO_TEXT_SCROLL, [hl]
 	xor a
 	ld [hInMenu], a
 	ld de, SFX_CALL
@@ -920,7 +920,7 @@ PokegearPhone_MakePhoneCall: ; 911eb (24:51eb)
 	ld c, 10
 	call DelayFrames
 	ld hl, Options
-	set No_TEXT_SCROLL, [hl]
+	set NO_TEXT_SCROLL, [hl]
 	ld a, $1
 	ld [hInMenu], a
 	call PokegearPhone_UpdateCursor
@@ -1283,9 +1283,9 @@ PokegearPhoneContactSubmenu: ; 91342 (24:5342)
 .CallDeleteCancelStrings: ; 9143f
 	dwcoord 10, 6
 	db 3
-	db   "Call"
-	next "Delete"
-	next "Cancel"
+	db   "CALL"
+	next "DELETE"
+	next "CANCEL"
 	db   "@"
 ; 91455
 
@@ -1299,8 +1299,8 @@ PokegearPhoneContactSubmenu: ; 91342 (24:5342)
 .CallCancelStrings: ; 9145b
 	dwcoord 10, 8
 	db 2
-	db   "Call"
-	next "Cancel"
+	db   "CALL"
+	next "CANCEL"
 	db   "@"
 ; 9146a
 
@@ -1681,7 +1681,7 @@ BuenasPasswordName:    db "BUENA'S PASSWORD@"
 NotBuenasPasswordName: db "@"
 
 LoadStation_UnownRadio: ; 917d5 (24:57d5)
-	ld a, UNoWN_RADIO
+	ld a, UNOWN_RADIO
 	ld [wd002], a
 	xor a
 	ld [wd005], a
@@ -1817,22 +1817,22 @@ NoRadioName: ; 918a9 (24:58a9)
 
 ; 918bf
 
-OaksPkmnTalkName:     db "Gid's <PK><MN> Talk@"
-PokedexShowName:      db "#Dex Show@"
-PokemonMusicName:     db "#mon Music@"
+OaksPkmnTalkName:     db "OAK's <PK><MN> Talk@"
+PokedexShowName:      db "#DEX Show@"
+PokemonMusicName:     db "#MON Music@"
 LuckyChannelName:     db "Lucky Channel@"
 UnknownStationName:   db "?????@"
 
 PlacesAndPeopleName:  db "Places & People@"
 LetsAllSingName:      db "Let's All Sing!@"
-PokeFluteStationName: db "# Flute@"
+PokeFluteStationName: db "# FLUTE@"
 ; 9191c
 
 _TownMap: ; 9191c
 	ld hl, Options
 	ld a, [hl]
 	push af
-	set No_TEXT_SCROLL, [hl]
+	set NO_TEXT_SCROLL, [hl]
 
 	ld a, [hInMenu]
 	push af

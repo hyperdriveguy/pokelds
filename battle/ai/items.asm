@@ -363,7 +363,7 @@ AI_Items: ; 39196
 	callab AICheckEnemyHalfHP
 	jp c, .DontUse
 	ld a, [bc]
-	bit UNKNoWN_USE_F, a
+	bit UNKNOWN_USE_F, a
 	jp nz, .CheckQuarterHP
 	callab AICheckEnemyQuarterHP
 	jp nc, .UseHealItem
@@ -441,7 +441,7 @@ AI_Items: ; 39196
 .check_50_percent
 	pop bc
 	ld a, [bc]
-	bit UNKNoWN_USE_F, a
+	bit UNKNOWN_USE_F, a
 	jp z, .Use
 	call Random
 	cp 1 + 50 percent
@@ -453,7 +453,7 @@ AI_Items: ; 39196
 .check_40_percent
 	pop bc
 	ld a, [bc]
-	bit UNKNoWN_USE_F, a
+	bit UNKNOWN_USE_F, a
 	jp z, .DontUse
 	call Random
 	cp 1 + 39 percent

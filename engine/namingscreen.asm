@@ -16,7 +16,7 @@ NamingScreen: ; 116c1
 	ld hl, Options
 	ld a, [hl]
 	push af
-	set No_TEXT_SCROLL, [hl]
+	set NO_TEXT_SCROLL, [hl]
 	ld a, [hMapAnims]
 	push af
 	xor a

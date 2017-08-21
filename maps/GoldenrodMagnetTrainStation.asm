@@ -159,7 +159,7 @@ UnknownText_0x552a3:
 	line "build a train that"
 
 	para "is faster than any"
-	line "#mon."
+	line "#MON."
 
 	para "It really brings"
 	line "JOHTO much closer"

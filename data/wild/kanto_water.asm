@@ -30,7 +30,7 @@
 	db 10, GOLDEEN
 	db 15, SEAKING
 
-	map ROUTE_10_NoRTH
+	map ROUTE_10_NORTH
 	db 4 percent ; encounter rate
 	db 15, GOLDEEN
 	db 10, GOLDEEN

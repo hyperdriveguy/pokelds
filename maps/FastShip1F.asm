@@ -232,7 +232,7 @@ UnknownText_0x7529b:
 UnknownText_0x752f9:
 	text "Here's your cabin."
 
-	para "If your #mon"
+	para "If your #MON"
 	line "are hurt, take a"
 	cont "nap in the bed."
 
@@ -244,7 +244,7 @@ UnknownText_0x7534f:
 	text "Here's your cabin."
 
 	para "You can heal your"
-	line "#mon by taking"
+	line "#MON by taking"
 	cont "a nap in the bed."
 
 	para "The ship will"

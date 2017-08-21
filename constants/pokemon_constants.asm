@@ -33,7 +33,7 @@ const_value set 1
 	const NIDORINA
 	const NIDOQUEEN
 	const NIDORAN_M
-	const NIDORINo
+	const NIDORINO
 	const NIDOKING
 	const CLEFAIRY
 	const CLEFABLE
@@ -48,8 +48,8 @@ const_value set 1
 	const VILEPLUME
 	const PARAS
 	const PARASECT
-	const VENoNAT
-	const VENoMOTH
+	const VENONAT
+	const VENOMOTH
 	const DIGLETT
 	const DUGTRIO
 	const MEOWTH
@@ -97,7 +97,7 @@ const_value set 1
 	const GENGAR
 	const ONIX
 	const DROWZEE
-	const HYPNo
+	const HYPNO
 	const KRABBY
 	const KINGLER
 	const VOLTORB
@@ -143,8 +143,8 @@ const_value set 1
 	const KABUTO
 	const KABUTOPS
 	const AERODACTYL
-	const SNoRLAX
-	const ARTICUNo
+	const SNORLAX
+	const ARTICUNO
 	const ZAPDOS
 	const MOLTRES
 	const DRATINI
@@ -164,7 +164,7 @@ const_value set 1
 	const SENTRET
 	const FURRET
 	const HOOTHOOT
-	const NoCTOWL
+	const NOCTOWL
 	const LEDYBA
 	const LEDIAN
 	const SPINARAK
@@ -201,7 +201,7 @@ const_value set 1
 	const MURKROW
 	const SLOWKING
 	const MISDREAVUS
-	const UNoWN
+	const UNOWN
 	const WOBBUFFET
 	const GIRAFARIG
 	const PINECO

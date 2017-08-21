@@ -99,7 +99,7 @@ UnknownText_0x9b11d:
 
 UnknownText_0x9b1c9:
 	text "Whew… I'm taking a"
-	line "rest from #mon"
+	line "rest from #MON"
 	cont "battles."
 	done
 

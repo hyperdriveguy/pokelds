@@ -838,7 +838,7 @@ Text_TradeReceptionistIntro:
 	line "TRADE CENTER."
 
 	para "You may trade your"
-	line "#mon here with"
+	line "#MON here with"
 	cont "a friend."
 
 	para "Would you like to"
@@ -851,7 +851,7 @@ Text_TimeCapsuleReceptionistIntro:
 
 	para "You can travel to"
 	line "the past and trade"
-	cont "your #mon."
+	cont "your #MON."
 
 	para "Would you like to"
 	line "trade across time?"
@@ -979,7 +979,7 @@ Text_MysteryGiftDeliveryGuy_NoRoom:
 	line "space for this."
 
 	para "Stop in at any"
-	line "#mon CENTER"
+	line "#MON CENTER"
 
 	para "across the country"
 	line "to pick it up."
@@ -1010,10 +1010,10 @@ Text_BrokeStadiumRules:
 	para "For STADIUM rules,"
 	line "please bring six"
 
-	para "different #mon,"
+	para "different #MON,"
 	line "excluding EGGS."
 
-	para "The six #mon"
+	para "The six #MON"
 	line "must be different."
 
 	para "Also, they must"

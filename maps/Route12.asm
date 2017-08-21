@@ -76,7 +76,7 @@ Route12HiddenElixer:
 FisherMartinSeenText:
 	text "Patience is the"
 	line "key to both fish-"
-	cont "ing and #mon."
+	cont "ing and #MON."
 	done
 
 FisherMartinBeatenText:
@@ -159,7 +159,7 @@ UnknownText_0x1a7238:
 Route12SignText:
 	text "ROUTE 12"
 
-	para "NoRTH TO LAVENDER"
+	para "NORTH TO LAVENDER"
 	line "TOWN"
 	done
 

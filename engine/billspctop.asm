@@ -15,7 +15,7 @@ _BillsPC: ; e3fd
 	ret
 
 .Text_GottaHavePokemon: ; 0xe417
-	; You gotta have #mon to call!
+	; You gotta have #MON to call!
 	text_jump UnknownText_0x1c1006
 	db "@"
 
@@ -27,7 +27,7 @@ _BillsPC: ; e3fd
 	ld hl, Options
 	ld a, [hl]
 	push af
-	set No_TEXT_SCROLL, [hl]
+	set NO_TEXT_SCROLL, [hl]
 	ld hl, .Text_What
 	call PrintText
 	pop af
@@ -130,7 +130,7 @@ BillsPC_MovePKMNMenu: ; e4cd
 	ret
 
 .Text_MonHoldingMail: ; 0xe4f9
-	; There is a #mon holding MAIL. Please remove the MAIL.
+	; There is a #MON holding MAIL. Please remove the MAIL.
 	text_jump UnknownText_0x1c102b
 	db "@"
 
@@ -165,12 +165,12 @@ Functione512: ; unused
 	ret
 
 .Text_NoPKMN: ; 0xe52e
-	; You don't have a single #mon!
+	; You don't have a single #MON!
 	text_jump UnknownText_0x1c1062
 	db "@"
 
 .Text_ItsYourLastPKMN: ; 0xe533
-	; You can't deposit your last #mon!
+	; You can't deposit your last #MON!
 	text_jump UnknownText_0x1c1080
 	db "@"
 
@@ -226,7 +226,7 @@ Functione56d: ; unused
 	ret
 
 UnknownText_0xe57e: ; 0xe57e
-	; You can't take any more #mon.
+	; You can't take any more #MON.
 	text_jump UnknownText_0x1c10a2
 	db "@"
 

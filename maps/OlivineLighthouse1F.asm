@@ -33,7 +33,7 @@ UnknownText_0x5aec2:
 
 	para "The LIGHTHOUSE was"
 	line "made in honor of"
-	cont "those #mon."
+	cont "those #MON."
 	done
 
 OlivineLighthouse1F_MapEventHeader:

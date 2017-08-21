@@ -246,7 +246,7 @@ Function4a94e: ; 4a94e
 ; 4a9be
 
 UnknownText_0x4a9be: ; 0x4a9be
-	; Pick three #mon for battle.
+	; Pick three #MON for battle.
 	text_jump UnknownText_0x1c51d7
 	db "@"
 ; 0x4a9c3
@@ -817,7 +817,7 @@ Function4ad17: ; 4ad17
 	ret
 
 UnknownText_0x4ad51: ; 0x4ad51
-	; Only three #mon may enter.
+	; Only three #MON may enter.
 	text_jump UnknownText_0x1c521c
 	db "@"
 ; 0x4ad56

@@ -256,7 +256,7 @@ UnknownText_0x188674:
 	cont "too lightly."
 
 	para "My water-type"
-	line "#mon are tough!"
+	line "#MON are tough!"
 	done
 
 UnknownText_0x18870c:

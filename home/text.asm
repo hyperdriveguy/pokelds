@@ -69,7 +69,7 @@ TextBox:: ; fe8
 	ld a, [PlayerState]
 	cp a, PLAYER_RUN
 	jr nz, .continue
-	ld a, PLAYER_NoRMAL
+	ld a, PLAYER_NORMAL
 	ld [PlayerState], a
 .continue
 	push bc
@@ -1162,12 +1162,12 @@ Text_TX_DAY:: ; 1582
 	dw .Fri
 	dw .Satur
 
-.Sun:    db "Sun@"
-.Mon:    db "Mon@"
-.Tues:   db "Tues@"
-.Wednes: db "Wednes@"
-.Thurs:  db "Thurs@"
-.Fri:    db "Fri@"
-.Satur:  db "Satur@"
-.Day:    db "day@"
+.Sun:    db "SUN@"
+.Mon:    db "MON@"
+.Tues:   db "TUES@"
+.Wednes: db "WEDNES@"
+.Thurs:  db "THURS@"
+.Fri:    db "FRI@"
+.Satur:  db "SATUR@"
+.Day:    db "DAY@"
 ; 15d8

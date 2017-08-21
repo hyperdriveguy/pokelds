@@ -189,7 +189,7 @@ SchoolboyBillyBeatenText:
 	done
 
 UnknownText_0x1aa8b0:
-	text "If #mon were a"
+	text "If #MON were a"
 	line "subject at school,"
 	cont "I'd be the best!"
 	done

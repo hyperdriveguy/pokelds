@@ -163,7 +163,7 @@ UnknownText_0x7f193:
 	para "I am the super"
 	line "MUSIC DIRECTOR!"
 
-	para "Huh? Your #Gear"
+	para "Huh? Your #GEAR"
 	line "can't tune into my"
 
 	para "music programs."
@@ -205,7 +205,7 @@ UnknownText_0x7f2e3:
 	done
 
 UnknownText_0x7f32d:
-	text "Perk Up #mon"
+	text "Perk Up #MON"
 	line "with Mellow Sounds"
 
 	para "of the # FLUTE"
@@ -214,7 +214,7 @@ UnknownText_0x7f32d:
 
 UnknownText_0x7f36b:
 	text "Wow! A full rack"
-	line "of #mon CDs and"
+	line "of #MON CDs and"
 	cont "videos."
 
 	para "This must be the"

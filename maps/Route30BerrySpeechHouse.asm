@@ -29,10 +29,10 @@ Route30BerrySpeechHouseBookshelf:
 	jumpstd magazinebookshelf
 
 UnknownText_0x196d82:
-	text "You know, #mon"
+	text "You know, #MON"
 	line "eat BERRIES."
 
-	para "Well, my #mon"
+	para "Well, my #MON"
 	line "got healthier by"
 	cont "eating a BERRY."
 

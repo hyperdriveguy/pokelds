@@ -31,7 +31,6 @@ and make sure your contributions are helpful.
   low priority. Use the issues page instead.)
 * Opening issues asking for how to do something in the game
 * Things that make a Travis-CI test fail (eg. a real buggy contribution)
-    * If it doesn't pass Travis-CI, I will still test the pull request manually.
 
 # Behavioral Expectations
 
@@ -67,7 +66,7 @@ Follow the instructions in [CREDITS.md](https://github.com/hyperdriveguy/pokelds
 
 # Submitting a Contribution
 
-## For something that is more than a small fix
+## For something that is for than a small fix
 
 1. Create your own fork of the code
 2. Do the changes in your fork

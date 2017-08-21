@@ -407,18 +407,18 @@ UnknownText_0x76497:
 
 PokefanmJeremySeenText:
 	text "What do you think?"
-	line "My #mon are"
+	line "My #MON are"
 	cont "beautiful, yes?"
 	done
 
 PokefanmJeremyBeatenText:
 	text "Oh, no! My beauti-"
-	line "ful #mon!"
+	line "ful #MON!"
 	done
 
 UnknownText_0x7651c:
 	text "I must go to the"
-	line "#mon SALON and"
+	line "#MON SALON and"
 	cont "fix them up nice!"
 	done
 
@@ -435,7 +435,7 @@ PokefanfGeorgiaBeatenText:
 
 UnknownText_0x76596:
 	text "Oh, yes! I have to"
-	line "get my #mon out"
+	line "get my #MON out"
 	cont "of DAY-CARE!"
 	done
 

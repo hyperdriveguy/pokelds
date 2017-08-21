@@ -63,7 +63,7 @@ MobileBattleRoom_EstablishingCommsText:
 	done
 
 MobileBattleRoom_HealText:
-	text "Your #mon will"
+	text "Your #MON will"
 	line "be fully healed"
 	cont "before battle."
 	done

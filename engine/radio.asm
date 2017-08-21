@@ -322,7 +322,7 @@ OPT_IntroText1:
 	db "@"
 
 OPT_IntroText2:
-	; #mon TALK!
+	; #MON TALK!
 	text_jump _OPT_IntroText2
 	db "@"
 
@@ -605,7 +605,7 @@ OaksPkmnTalk10:
 	ret
 
 OPT_PokemonChannelText:
-	; #mon
+	; #MON
 	text_jump _OPT_PokemonChannelText
 	db "@"
 
@@ -622,7 +622,7 @@ OaksPkmnTalk11:
 	jp PlaceRadioString
 
 .pokemon_string
-	db "#mon@"
+	db "#MON@"
 
 OaksPkmnTalk12:
 	ld hl, wRadioTextDelay
@@ -634,7 +634,7 @@ OaksPkmnTalk12:
 	jp PlaceRadioString
 
 .pokemon_channel_string
-	db "#mon Channel@"
+	db "#MON Channel@"
 
 OaksPkmnTalk13:
 	ld hl, wRadioTextDelay
@@ -927,7 +927,7 @@ StartPokemonMusicChannel:
 	ret
 
 BenIntroText1:
-	; BEN: #mon MUSIC
+	; BEN: #MON MUSIC
 	text_jump _BenIntroText1
 	db "@"
 
@@ -967,12 +967,12 @@ BenFernText2B:
 	db "@"
 
 BenFernText3A:
-	; #mon March!
+	; #MON March!
 	text_jump _BenFernText3A
 	db "@"
 
 BenFernText3B:
-	; #mon Lullaby!
+	; #MON Lullaby!
 	text_jump _BenFernText3B
 	db "@"
 
@@ -1203,7 +1203,7 @@ PeoplePlaces4: ; People
 	ld a, PLACES_AND_PEOPLE_5
 	jp NextRadioLine
 
-.E4Names:          db WILL, BRUNo, KAREN, KOGA, CHAMPION
+.E4Names:          db WILL, BRUNO, KAREN, KOGA, CHAMPION
 .KantoLeaderNames: db BROCK, MISTY, LT_SURGE, ERIKA, JANINE, SABRINA, BLAINE, BLUE
 .MiscNames:        db RIVAL1, POKEMON_PROF, CAL, RIVAL2, RED
                    db -1
@@ -1716,7 +1716,7 @@ PasswordTable:
 .Types:              db BUENA_STRING,  6, "FLYING@", "BUG@", "GRASS@"
 .Moves:              db BUENA_MOVE,   12, TACKLE, GROWL, MUD_SLAP
 .XItems:             db BUENA_ITEM,   12, X_ATTACK, X_DEFEND, X_SPEED
-.RadioStations:      db BUENA_STRING, 13, "#mon Talk@", "#mon Music@", "Lucky Channel@"
+.RadioStations:      db BUENA_STRING, 13, "#MON Talk@", "#MON Music@", "Lucky Channel@"
 
 BuenasPassword5:
 	ld hl, BuenaRadioText5

@@ -1,5 +1,5 @@
 const_value set 2
-	const BRUNoSROOM_BRUNo
+	const BRUNOSROOM_BRUNO
 
 BrunosRoom_MapScriptHeader:
 .MapTriggers:
@@ -24,11 +24,11 @@ BrunosRoom_MapScriptHeader:
 	end
 
 .BrunosRoomDoors:
-	checkevent EVENT_BRUNoS_ROOM_ENTRANCE_CLOSED
+	checkevent EVENT_BRUNOS_ROOM_ENTRANCE_CLOSED
 	iffalse .KeepDoorClosed
 	changeblock $4, $e, $2a
 .KeepDoorClosed:
-	checkevent EVENT_BRUNoS_ROOM_EXIT_OPEN
+	checkevent EVENT_BRUNOS_ROOM_EXIT_OPEN
 	iffalse .OpenDoor
 	changeblock $4, $2, $16
 .OpenDoor:
@@ -43,23 +43,23 @@ UnknownScript_0x1809ad:
 	reloadmappart
 	closetext
 	dotrigger $1
-	setevent EVENT_BRUNoS_ROOM_ENTRANCE_CLOSED
+	setevent EVENT_BRUNOS_ROOM_ENTRANCE_CLOSED
 	waitsfx
 	end
 
 BrunoScript_0x1809c5:
 	faceplayer
 	opentext
-	checkevent EVENT_BEAT_ELITE_4_BRUNo
+	checkevent EVENT_BEAT_ELITE_4_BRUNO
 	iftrue UnknownScript_0x1809f3
 	writetext UnknownText_0x1809fe
 	waitbutton
 	closetext
 	winlosstext UnknownText_0x180b23, 0
-	loadtrainer BRUNo, 1
+	loadtrainer BRUNO, 1
 	startbattle
 	reloadmapafterbattle
-	setevent EVENT_BEAT_ELITE_4_BRUNo
+	setevent EVENT_BEAT_ELITE_4_BRUNO
 	opentext
 	writetext UnknownText_0x180b3c
 	waitbutton
@@ -68,7 +68,7 @@ BrunoScript_0x1809c5:
 	changeblock $4, $2, $16
 	reloadmappart
 	closetext
-	setevent EVENT_BRUNoS_ROOM_EXIT_OPEN
+	setevent EVENT_BRUNOS_ROOM_EXIT_OPEN
 	waitsfx
 	end
 
@@ -86,7 +86,7 @@ MovementData_0x1809f9:
 	step_end
 
 UnknownText_0x1809fe:
-	text "I am BRUNo of the"
+	text "I am BRUNO of the"
 	line "ELITE FOUR."
 
 	para "I always train to"
@@ -148,4 +148,4 @@ BrunosRoom_MapEventHeader:
 
 .PersonEvents:
 	db 1
-	person_event SPRITE_BRUNo, 7, 5, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, (1 << 3) | PAL_OW_BROWN, PERSONTYPE_SCRIPT, 0, BrunoScript_0x1809c5, -1
+	person_event SPRITE_BRUNO, 7, 5, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, (1 << 3) | PAL_OW_BROWN, PERSONTYPE_SCRIPT, 0, BrunoScript_0x1809c5, -1

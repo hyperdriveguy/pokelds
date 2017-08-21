@@ -183,7 +183,7 @@ UnknownText_0x189ead:
 
 UnknownText_0x189f6c:
 	text "SABRINA: Your love"
-	line "for your #mon"
+	line "for your #MON"
 
 	para "overwhelmed my"
 	line "psychic power…"
@@ -277,7 +277,7 @@ SaffronGymGuyText:
 	line "told how to deal"
 
 	para "with psychic-type"
-	line "#mon, right?"
+	line "#MON, right?"
 
 	para "I expect great"
 	line "things from you!"

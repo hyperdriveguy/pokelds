@@ -1,4 +1,4 @@
-SLOTS_NoMATCH EQU -1
+SLOTS_NOMATCH EQU -1
 SLOTS_SEVEN EQU $00
 SLOTS_POKEBALL EQU $04
 SLOTS_CHERRY EQU $08
@@ -9,7 +9,7 @@ REEL_SIZE EQU 15
 
 _SlotMachine:
 	ld hl, Options
-	set No_TEXT_SCROLL, [hl]
+	set NO_TEXT_SCROLL, [hl]
 	call .InitGFX
 	call DelayFrame
 .loop
@@ -22,7 +22,7 @@ _SlotMachine:
 	call ClearBGPalettes
 	callba TrainerRankings_EndSlotsWinStreak
 	ld hl, Options
-	res No_TEXT_SCROLL, [hl]
+	res NO_TEXT_SCROLL, [hl]
 	ld hl, rLCDC ; $ff40
 	res 2, [hl]
 	ret
@@ -83,7 +83,7 @@ _SlotMachine:
 	ld [hl], $40
 	xor a
 	ld [wJumptableIndex], a
-	ld a, SLOTS_NoMATCH
+	ld a, SLOTS_NOMATCH
 	ld [wSlotBias], a
 	ld de, MUSIC_GAME_CORNER
 	call PlayMusic
@@ -514,7 +514,7 @@ Slots_StopReel2: ; 92a2e (24:6a2e)
 	ld a, [wSlotBias]
 	and a
 	jr z, .skip
-	cp SLOTS_NoMATCH
+	cp SLOTS_NOMATCH
 	jr nz, .dont_jump
 .skip
 	call .CheckReel1ForASeven
@@ -904,7 +904,7 @@ Slots_StopReelIgnoreJoypad: ; 92c4c
 
 ReelAction_StopReel1: ; 92c5e
 	ld a, [wSlotBias]
-	cp SLOTS_NoMATCH
+	cp SLOTS_NOMATCH
 	jr z, .NoBias
 	ld hl, wReel1Slot09 - wReel1
 	add hl, bc
@@ -945,7 +945,7 @@ ReelAction_StopReel2: ; 92c86
 	jr z, .NoBias
 .nope
 	ld a, [wSlotBias]
-	cp SLOTS_NoMATCH
+	cp SLOTS_NOMATCH
 	jr z, .NoBias
 	ld hl, wReel1Slot09 - wReel1
 	add hl, bc
@@ -977,7 +977,7 @@ ReelAction_StopReel3: ; 92ca9
 
 .NoMatch:
 	ld a, [wSlotBias]
-	cp SLOTS_NoMATCH
+	cp SLOTS_NOMATCH
 	jr z, .NoBias
 	ld hl, wReel1Slot09 - wReel1
 	add hl, bc
@@ -1628,7 +1628,7 @@ Slots_InitBias: ; 93002 (24:7002)
 	db $14, SLOTS_SQUIRTLE ; 5/128
 	db $28, SLOTS_PIKACHU  ; 5/64
 	db $30, SLOTS_CHERRY   ; 1/32
-	db $ff, SLOTS_NoMATCH  ; everything else
+	db $ff, SLOTS_NOMATCH  ; everything else
 ; 93031
 
 .Lucky: ; 93031
@@ -1638,7 +1638,7 @@ Slots_InitBias: ; 93002 (24:7002)
 	db $10, SLOTS_SQUIRTLE ;  1/32
 	db $1e, SLOTS_PIKACHU  ;  7/128
 	db $50, SLOTS_CHERRY   ; 25/128
-	db $ff, SLOTS_NoMATCH  ; everything else
+	db $ff, SLOTS_NOMATCH  ; everything else
 ; 9303f
 
 Slots_IlluminateBetLights: ; 9303f (24:703f)

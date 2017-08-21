@@ -453,7 +453,7 @@ GetSpriteAnimFrame: ; 8d132
 	ld a, [hl]
 	push hl
 	and $3f
-	ld hl, SPRITEANIMSTRUCT_DURATIONoFFSET
+	ld hl, SPRITEANIMSTRUCT_DURATIONOFFSET
 	add hl, bc
 	add [hl]
 	ld hl, SPRITEANIMSTRUCT_DURATION

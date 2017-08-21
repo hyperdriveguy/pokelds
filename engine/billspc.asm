@@ -2408,7 +2408,7 @@ BillsPC_PrintBoxCountAndCapacity: ; e3632
 ; e3663
 
 .Pokemon: ; e3663
-	db "#mon@"
+	db "#MON@"
 ; e3668
 
 .out_of_20 ; e3668
@@ -2614,7 +2614,7 @@ BillsPC_PlaceEmptyBoxString_SFX: ; e37be (38:77be)
 ; e37d3 (38:77d3)
 
 .NoMonString: ; e37d3
-	db "There's no #mon.@"
+	db "There's no #MON.@"
 ; e37e3
 
 BillsPC_PlaceChangeBoxString: ; e37e3 (38:77e3)

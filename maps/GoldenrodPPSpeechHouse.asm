@@ -28,7 +28,7 @@ UnknownText_0x55659:
 	text "Once while I was"
 	line "battling, my"
 
-	para "#mon couldn't"
+	para "#MON couldn't"
 	line "make any moves."
 
 	para "The POWER POINTS,"
@@ -40,7 +40,7 @@ UnknownText_0x55659:
 
 UnknownText_0x556ca:
 	text "Sometimes, a"
-	line "healthy #mon"
+	line "healthy #MON"
 
 	para "may be unable to"
 	line "use its moves."

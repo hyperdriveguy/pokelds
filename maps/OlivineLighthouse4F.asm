@@ -34,7 +34,7 @@ SailorKentScript:
 SailorKentSeenText:
 	text "JASMINE must be"
 	line "worried sick about"
-	cont "the #mon here."
+	cont "the #MON here."
 
 	para "She won't even"
 	line "smile these days."
@@ -65,17 +65,17 @@ LassConnie1SeenText:
 	done
 
 LassConnie1BeatenText:
-	text "Aaack! My #mon!"
+	text "Aaack! My #MON!"
 	done
 
 UnknownText_0x5b63c:
 	text "Right. Anybody"
 	line "would be worried"
 	cont "if his or her own"
-	cont "#mon were hurt."
+	cont "#MON were hurt."
 
 	para "I'll pray for the"
-	line "#mon here, so"
+	line "#MON here, so"
 
 	para "JASMINE can come"
 	line "back to the GYM."

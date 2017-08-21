@@ -335,13 +335,13 @@ TinTowerEusineSuicuneText:
 	line "mystic power"
 
 	para "summons a rainbow-"
-	line "colored #mon."
+	line "colored #MON."
 
 	para "Maybe, just maybe,"
 	line "what went on today"
 
 	para "will cause that"
-	line "#mon to appear."
+	line "#MON to appear."
 
 	para "I'm going to study"
 	line "the legends more."
@@ -358,16 +358,16 @@ UnknownText_0x185386:
 	line "legend…"
 
 	para "When the souls of"
-	line "#mon and humans"
+	line "#MON and humans"
 
 	para "commune, from the"
 	line "heavens descends a"
 
-	para "#mon of rainbow"
+	para "#MON of rainbow"
 	line "colors…"
 
 	para "Could it mean the"
-	line "legendary #mon"
+	line "legendary #MON"
 
 	para "are testing us"
 	line "humans?"
@@ -378,7 +378,7 @@ UnknownText_0x185433:
 	line "TOWER burned down,"
 
 	para "three nameless"
-	line "#mon were said"
+	line "#MON were said"
 
 	para "to have perished."
 	line "It was tragic."
@@ -386,7 +386,7 @@ UnknownText_0x185433:
 	para "However…"
 
 	para "A rainbow-colored"
-	line "#mon…"
+	line "#MON…"
 
 	para "In other words…"
 
@@ -394,7 +394,7 @@ UnknownText_0x185433:
 	line "from the sky and"
 
 	para "gave new life to"
-	line "the three #mon."
+	line "the three #MON."
 
 	para "They are…"
 
@@ -452,7 +452,7 @@ TinTowerEusineHoOhText:
 	text "I knew it."
 
 	para "I knew you'd get"
-	line "to see the #mon"
+	line "to see the #MON"
 
 	para "of rainbow colors,"
 	line "<PLAYER>."
@@ -464,7 +464,7 @@ TinTowerEusineHoOhText:
 	line "bad, I might say."
 
 	para "I'm going to keep"
-	line "studying #mon"
+	line "studying #MON"
 
 	para "to become a famous"
 	line "#MANIAC!"
@@ -472,7 +472,7 @@ TinTowerEusineHoOhText:
 
 UnknownText_0x185765:
 	text "The legendary"
-	line "#mon are said"
+	line "#MON are said"
 
 	para "to embody three"
 	line "powers…"
@@ -489,7 +489,7 @@ UnknownText_0x185765:
 
 UnknownText_0x185803:
 	text "When the legendary"
-	line "#mon appeared…"
+	line "#MON appeared…"
 
 	para "They struck terror"
 	line "in those who saw"
@@ -501,7 +501,7 @@ UnknownText_0x185803:
 	line "futile attacks."
 
 	para "The legendary"
-	line "#mon, knowing"
+	line "#MON, knowing"
 
 	para "their own power,"
 	line "fled, ignoring the"
@@ -510,7 +510,7 @@ UnknownText_0x185803:
 
 UnknownText_0x1858d0:
 	text "Of the legendary"
-	line "#mon, SUICUNE"
+	line "#MON, SUICUNE"
 
 	para "is said to be the"
 	line "closest to HO-OH."
@@ -518,10 +518,10 @@ UnknownText_0x1858d0:
 	para "I hear there may"
 	line "also be a link to"
 
-	para "#mon known as"
-	line "UNoWN."
+	para "#MON known as"
+	line "UNOWN."
 
-	para "The #mon UNoWN"
+	para "The #MON UNOWN"
 	line "must be sharing a"
 
 	para "cooperative bond"

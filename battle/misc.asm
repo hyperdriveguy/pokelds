@@ -238,7 +238,7 @@ DoBadgeTypeBoosts: ; fbe24
 .BadgeTypes:
 	db FLYING   ; zephyrbadge
 	db BUG      ; hivebadge
-	db NoRMAL   ; plainbadge
+	db NORMAL   ; plainbadge
 	db GHOST    ; fogbadge
 	db STEEL    ; mineralbadge
 	db FIGHTING ; stormbadge

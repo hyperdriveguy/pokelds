@@ -163,7 +163,7 @@ MovementData_0x60c79:
 
 UnknownText_0x60c81:
 	text "JASMINE: … This"
-	line "#mon always"
+	line "#MON always"
 
 	para "kept the sea lit"
 	line "at night."

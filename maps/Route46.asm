@@ -173,7 +173,7 @@ FruitTreeScript_0x1a9791:
 HikerBaileySeenText:
 	text "Awright! I'll show"
 	line "you the power of"
-	cont "mountain #mon!"
+	cont "mountain #MON!"
 	done
 
 HikerBaileyBeatenText:
@@ -208,7 +208,7 @@ UnknownText_0x1a9851:
 	done
 
 PicnickerErin1SeenText:
-	text "I raise #mon"
+	text "I raise #MON"
 	line "too!"
 
 	para "Will you battle"

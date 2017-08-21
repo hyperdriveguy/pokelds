@@ -34,7 +34,7 @@ CeladonMansion2FComputerText:
 	line "changed here."
 
 	para "You'll also see"
-	line "many #mon that"
+	line "many #MON that"
 
 	para "aren't native to"
 	line "JOHTO."

@@ -82,7 +82,7 @@ Route2HiddenRevive:
 	dwb EVENT_ROUTE_2_HIDDEN_REVIVE, REVIVE
 
 Bug_catcherRobSeenText:
-	text "My bug #mon are"
+	text "My bug #MON are"
 	line "tough. Prepare to"
 	cont "lose!"
 	done
@@ -94,7 +94,7 @@ Bug_catcherRobBeatenText:
 UnknownText_0x1ac34d:
 	text "I'm going to look"
 	line "for stronger bug"
-	cont "#mon."
+	cont "#MON."
 	done
 
 Bug_catcherEdSeenText:
@@ -117,7 +117,7 @@ UnknownText_0x1ac3cf:
 
 Bug_catcherDougSeenText:
 	text "Why don't girls"
-	line "like bug #mon?"
+	line "like bug #MON?"
 	done
 
 Bug_catcherDougBeatenText:
@@ -125,7 +125,7 @@ Bug_catcherDougBeatenText:
 	done
 
 UnknownText_0x1ac423:
-	text "Bug #mon squish"
+	text "Bug #MON squish"
 	line "like plush toys"
 
 	para "when you squeeze"

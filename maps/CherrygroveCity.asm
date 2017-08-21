@@ -359,10 +359,10 @@ GuideGentTourText1:
 	done
 
 GuideGentPokeCenterText:
-	text "This is a #mon"
+	text "This is a #MON"
 	line "CENTER. They heal"
 
-	para "your #mon in no"
+	para "your #MON in no"
 	line "time at all."
 
 	para "You'll be relying"
@@ -373,13 +373,13 @@ GuideGentPokeCenterText:
 	done
 
 GuideGentMartText:
-	text "This is a #mon"
+	text "This is a #MON"
 	line "MART."
 
 	para "They sell BALLS"
 	line "for catching wild"
 
-	para "#mon and other"
+	para "#MON and other"
 	line "useful items."
 	done
 
@@ -390,7 +390,7 @@ GuideGentRoute30Text:
 	para "Trainers will be"
 	line "battling their"
 
-	para "prized #mon"
+	para "prized #MON"
 	line "there."
 	done
 
@@ -398,7 +398,7 @@ GuideGentSeaText:
 	text "This is the sea,"
 	line "as you can see."
 
-	para "Some #mon are"
+	para "Some #MON are"
 	line "found only in"
 	cont "water."
 	done
@@ -415,12 +415,12 @@ GuideGentGiftText:
 	done
 
 GotMapCardText:
-	text "<PLAYER>'s #Gear"
+	text "<PLAYER>'s #GEAR"
 	line "now has a MAP!"
 	done
 
 GuideGentPokegearText:
-	text "#Gear becomes"
+	text "#GEAR becomes"
 	line "more useful as you"
 	cont "add CARDS."
 
@@ -439,7 +439,7 @@ GuideGentNoText:
 UnknownText_0x19c4e2:
 	text "<......> <......> <......>"
 
-	para "You got a #mon"
+	para "You got a #MON"
 	line "at the LAB."
 
 	para "What a waste."
@@ -451,7 +451,7 @@ UnknownText_0x19c4e2:
 	line "I'm saying?"
 
 	para "Well, I too, have"
-	line "a good #mon."
+	line "a good #MON."
 
 	para "I'll show you"
 	line "what I mean!"
@@ -469,7 +469,7 @@ CherrygroveRivalText_YouLost:
 
 	para "I'm going to be"
 	line "the world's great-"
-	cont "est #mon"
+	cont "est #MON"
 	cont "trainer."
 	done
 
@@ -485,28 +485,28 @@ CherrygroveRivalText_YouWon:
 
 	para "I'm going to be"
 	line "the world's great-"
-	cont "est #mon"
+	cont "est #MON"
 	cont "trainer."
 	done
 
 CherrygroveTeacherText_NoMapCard:
 	text "Did you talk to"
 	line "the old man by the"
-	cont "#mon CENTER?"
+	cont "#MON CENTER?"
 
 	para "He'll put a MAP of"
 	line "JOHTO on your"
-	cont "#Gear."
+	cont "#GEAR."
 	done
 
 CherrygroveTeacherText_HaveMapCard:
 	text "When you're with"
-	line "#mon, going"
+	line "#MON, going"
 	cont "anywhere is fun."
 	done
 
 CherrygroveYoungsterText_NoPokedex:
-	text "MR.#mon's house"
+	text "MR.#MON's house"
 	line "is still farther"
 	cont "up ahead."
 	done
@@ -516,15 +516,15 @@ CherrygroveYoungsterText_HavePokedex:
 	line "trainers on the"
 	cont "road."
 
-	para "My #mon lost."
+	para "My #MON lost."
 	line "They're a mess! I"
 
 	para "must take them to"
-	line "a #mon CENTER."
+	line "a #MON CENTER."
 	done
 
 MysticWaterGuyTextBefore:
-	text "A #mon I caught"
+	text "A #MON I caught"
 	line "had an item."
 
 	para "I think it's"

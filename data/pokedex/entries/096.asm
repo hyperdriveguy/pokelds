@@ -1,5 +1,5 @@
 ; DrowzeePokedexEntry: ; 0x1b8d0a
-	db "HYPNoSIS@" ; species name
+	db "HYPNOSIS@" ; species name
 	dw 303, 710 ; height, width
 
 	db   "When it twitches"

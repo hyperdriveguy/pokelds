@@ -955,7 +955,7 @@ TakePartyItem: ; 12c60
 	call GetPartyItemLocation
 	ld a, [hl]
 	ld [wd265], a
-	ld [hl], No_ITEM
+	ld [hl], NO_ITEM
 	call GetItemName
 	ld hl, TookFromText
 	call MenuTextBoxBackup
@@ -1455,7 +1455,7 @@ ChooseMoveToDelete: ; 12f5b
 	ld hl, Options
 	ld a, [hl]
 	push af
-	set No_TEXT_SCROLL, [hl]
+	set NO_TEXT_SCROLL, [hl]
 	call LoadFontsBattleExtra
 	call .ChooseMoveToDelete
 	pop bc
@@ -1523,7 +1523,7 @@ ManagePokemonMoves: ; 12fba
 	ld hl, Options
 	ld a, [hl]
 	push af
-	set No_TEXT_SCROLL, [hl]
+	set NO_TEXT_SCROLL, [hl]
 	call MoveScreenLoop
 	pop af
 	ld [Options], a

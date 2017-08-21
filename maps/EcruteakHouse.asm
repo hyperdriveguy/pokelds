@@ -265,7 +265,7 @@ UnknownText_0x9840b:
 
 UnknownText_0x9846f:
 	text "The TIN TOWER"
-	line "shook! A #mon"
+	line "shook! A #MON"
 
 	para "must have returned"
 	line "to the top!"
@@ -273,12 +273,12 @@ UnknownText_0x9846f:
 
 UnknownText_0x984ab:
 	text "Two towers…"
-	line "Two #mon…"
+	line "Two #MON…"
 
 	para "But when one"
 	line "burned down, both"
 
-	para "#mon flew away,"
+	para "#MON flew away,"
 	line "never to return."
 	done
 

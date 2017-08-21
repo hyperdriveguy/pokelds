@@ -367,7 +367,7 @@ UnknownText_0x704bb:
 
 FisherAndreSeenText:
 	text "Let me battle with"
-	line "the #mon I just"
+	line "the #MON I just"
 	cont "caught!"
 	done
 
@@ -382,7 +382,7 @@ FisherAndreBeatenText:
 UnknownText_0x7058f:
 	text "I won't lose as an"
 	line "angler! I catch"
-	cont "#mon all day."
+	cont "#MON all day."
 	done
 
 FisherRaymondSeenText:
@@ -400,7 +400,7 @@ FisherRaymondBeatenText:
 
 UnknownText_0x70611:
 	text "Why can't I catch"
-	line "any good #mon?"
+	line "any good #MON?"
 	done
 
 CooltrainermAaronSeenText:
@@ -420,7 +420,7 @@ CooltrainermAaronBeatenText:
 	done
 
 UnknownText_0x7069c:
-	text "#mon and their"
+	text "#MON and their"
 	line "trainer become"
 
 	para "powerful through"

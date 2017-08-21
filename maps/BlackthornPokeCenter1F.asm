@@ -27,7 +27,7 @@ UnknownText_0x195b85:
 	text "Deep inside far-"
 	line "off INDIGO PLATEAU"
 
-	para "is the #mon"
+	para "is the #MON"
 	line "LEAGUE."
 
 	para "I hear the best"

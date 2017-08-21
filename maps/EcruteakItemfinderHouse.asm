@@ -60,7 +60,7 @@ ItemFinderHouseRadio:
 UnknownText_0x9a63c:
 	text "Ah. You're on an"
 	line "adventure with"
-	cont "your #mon?"
+	cont "your #MON?"
 
 	para "Well, what's an"
 	line "adventure without"
@@ -125,13 +125,13 @@ UnknownText_0x9a84c:
 
 	para "Each tower was the"
 	line "roost of powerful"
-	cont "flying #mon."
+	cont "flying #MON."
 
 	para "But one of the"
 	line "towers burned to"
 	cont "the ground."
 
-	para "The two #mon"
+	para "The two #MON"
 	line "haven't been seen"
 	cont "since…"
 
@@ -142,7 +142,7 @@ UnknownText_0x9a902:
 	text "ECRUTEAK was also"
 	line "home to three"
 
-	para "#mon that raced"
+	para "#MON that raced"
 	line "around the town."
 
 	para "They were said to"

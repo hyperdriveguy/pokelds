@@ -48,7 +48,7 @@ PlaceDiplomaOnScreen: ; 1dd709
 	db   "This certifies"
 	next "that you have"
 	next "completed the"
-	next "new #Dex."
+	next "new #DEX."
 	next "Congratulations!"
 	db   "@"
 ; 1dd7ae

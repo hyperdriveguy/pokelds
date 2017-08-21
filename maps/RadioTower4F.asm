@@ -132,7 +132,7 @@ UnknownText_0x5ecab:
 
 UnknownText_0x5ecef:
 	text "MARY: It's just"
-	line "right for #mon"
+	line "right for #MON"
 
 	para "that know normal-"
 	line "type moves."
@@ -142,7 +142,7 @@ UnknownText_0x5ed2c:
 	text "MARY: Please tune"
 	line "into me on PROF."
 
-	para "OAK'S #mon TALK"
+	para "OAK'S #MON TALK"
 	line "show."
 	done
 
@@ -194,10 +194,10 @@ UnknownText_0x5ee69:
 
 GruntF4SeenText:
 	text "Don't I think"
-	line "#mon are cute?"
+	line "#MON are cute?"
 
 	para "I'll think my"
-	line "#mon are cute--"
+	line "#MON are cute--"
 
 	para "after they beat"
 	line "yours!"
@@ -213,7 +213,7 @@ UnknownText_0x5ef31:
 	line "beautiful self!"
 
 	para "Who cares about"
-	line "#mon?"
+	line "#MON?"
 	done
 
 ScientistRichSeenText:

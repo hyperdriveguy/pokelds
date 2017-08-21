@@ -113,7 +113,7 @@ PokemaniacAndrewSeenText:
 	text "Who's there?"
 
 	para "Leave me and my"
-	line "#mon alone!"
+	line "#MON alone!"
 	done
 
 PokemaniacAndrewBeatenText:
@@ -123,14 +123,14 @@ PokemaniacAndrewBeatenText:
 
 UnknownText_0x5a181:
 	text "Just me and my"
-	line "#mon. I'm de-"
+	line "#MON. I'm de-"
 	cont "lirious with joy."
 	done
 
 PokemaniacCalvinSeenText:
 	text "I came all the way"
 	line "here to conduct my"
-	cont "#mon research."
+	cont "#MON research."
 
 	para "Let me demonstrate"
 	line "my findings in a"

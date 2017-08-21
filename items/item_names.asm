@@ -164,7 +164,7 @@
 	db "FRIEND BALL@"
 	db "MOON BALL@"
 	db "LOVE BALL@"
-	db "NoRMAL BOX@"
+	db "NORMAL BOX@"
 	db "GORGEOUS BOX@"
 	db "SUN STONE@"
 	db "POLKADOT BOW@"

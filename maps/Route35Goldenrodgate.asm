@@ -30,7 +30,7 @@ OfficerScript_0x69d37:
 	writetext UnknownText_0x69eb8
 	playsound SFX_KEY_ITEM
 	waitsfx
-	givepoke SPEAROW, 10, No_ITEM, 1, GiftSpearowName, GiftSpearowOTName
+	givepoke SPEAROW, 10, NO_ITEM, 1, GiftSpearowName, GiftSpearowOTName
 	givepokeitem GiftSpearowMail
 	setevent EVENT_GOT_KENYA
 .alreadyhavekenya
@@ -100,7 +100,7 @@ UnknownText_0x69ddd:
 	cont "a favor?"
 
 	para "Can you take this"
-	line "#mon with MAIL"
+	line "#MON with MAIL"
 	cont "to my friend?"
 
 	para "He's on ROUTE 31."
@@ -120,7 +120,7 @@ UnknownText_0x69e48:
 
 UnknownText_0x69eb8:
 	text "<PLAYER> received a"
-	line "#mon with MAIL."
+	line "#MON with MAIL."
 	done
 
 UnknownText_0x69ed6:
@@ -138,7 +138,7 @@ UnknownText_0x69ed6:
 
 UnknownText_0x69f56:
 	text "You can't carry"
-	line "another #mon…"
+	line "another #MON…"
 	done
 
 UnknownText_0x69f74:
@@ -176,14 +176,14 @@ UnknownText_0x6a00a:
 	done
 
 UnknownText_0x6a09a:
-	text "I like the #mon"
+	text "I like the #MON"
 	line "Lullaby they play"
 	cont "on the radio."
 	done
 
 UnknownText_0x6a0cb:
 	text "I wonder how many"
-	line "kinds of #mon"
+	line "kinds of #MON"
 
 	para "there are in the"
 	line "world."

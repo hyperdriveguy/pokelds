@@ -45,7 +45,7 @@ HiddenPowerGuyText1:
 	para "Let me share my"
 	line "power with your"
 
-	para "#mon."
+	para "#MON."
 	line "Take this, child."
 	done
 
@@ -54,7 +54,7 @@ HiddenPowerGuyText2:
 	line "is HIDDEN POWER!"
 
 	para "It draws out the"
-	line "power of #mon"
+	line "power of #MON"
 	cont "for attacking."
 
 	para "Remember this: its"

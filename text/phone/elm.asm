@@ -5,7 +5,7 @@ BishopPhoneStartText: ; 0x1b46fc
 	line "it."
 
 	para "Be sure to heal"
-	line "your #mon if"
+	line "your #MON if"
 	cont "they are hurt."
 	done
 
@@ -13,7 +13,7 @@ BishopPhoneSawMrPokemonText: ; 0x1b4749
 	text "Hello, <PLAY_G>?"
 
 	para "Did you meet MR."
-	line "#mon? Great!"
+	line "#MON? Great!"
 	cont "Come back safely!"
 	done
 
@@ -21,7 +21,7 @@ BishopPhonePokemonStolenText: ; 0x1b4784
 	text "<PLAY_G>? I'm very"
 	line "upset now."
 
-	para "We had a #mon"
+	para "We had a #MON"
 	line "stolen from here."
 
 	para "How could anyone"
@@ -35,7 +35,7 @@ BishopPhoneCheckingEggText: ; 0x1b47d5
 	line "EGG now. It does"
 
 	para "appear to be a"
-	line "#mon EGG."
+	line "#MON EGG."
 	done
 
 BishopPhoneAssistantText: ; 0x1b481c
@@ -44,7 +44,7 @@ BishopPhoneAssistantText: ; 0x1b481c
 	para "Did you see my"
 	line "assistant? He's at"
 
-	para "the #mon CENTER"
+	para "the #MON CENTER"
 	line "in VIOLET CITY."
 	done
 
@@ -64,7 +64,7 @@ BishopPhoneEggHatchedText: ; 0x1b48bb
 
 	para "What? It hatched?"
 	line "Wow! What kind of"
-	cont "#mon is it?"
+	cont "#MON is it?"
 
 	para "Please come show"
 	line "me now!"
@@ -80,7 +80,7 @@ BishopPhoneDiscovery1Text: ; 0x1b491f
 	line "for an EGG to"
 
 	para "hatch depends on"
-	line "the #mon."
+	line "the #MON."
 	done
 
 BishopPhoneDiscovery2Text: ; 0x1b4982
@@ -90,7 +90,7 @@ BishopPhoneDiscovery2Text: ; 0x1b4982
 	line "mystery what kinds"
 
 	para "of moves hatched"
-	line "#mon have."
+	line "#MON have."
 
 	para "We're investigat-"
 	line "ing that now."
@@ -106,7 +106,7 @@ BishopPhonePokerusText: ; 0x1b49e7
 	line "something called"
 
 	para "#RUS that in-"
-	line "fects #mon."
+	line "fects #MON."
 
 	para "Yes, it's like a"
 	line "virus, so it's"
@@ -115,7 +115,7 @@ BishopPhonePokerusText: ; 0x1b49e7
 	para "It multiplies fast"
 	line "and infects other"
 
-	para "#mon too. But"
+	para "#MON too. But"
 	line "that's all."
 
 	para "It doesn't seem to"
@@ -151,7 +151,7 @@ BishopPhoneEggAssistantText: ; 0x1b4b87
 	line "EGG!"
 
 	para "My assistant is at"
-	line "the #mon CENTER"
+	line "the #MON CENTER"
 
 	para "in VIOLET CITY. "
 	line "Could you talk to"

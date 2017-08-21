@@ -6,7 +6,7 @@ const_value set 2
 	const ROUTE39_MILTANK2
 	const ROUTE39_MILTANK3
 	const ROUTE39_MILTANK4
-	const ROUTE39_PSYCHIC_NoRMAN
+	const ROUTE39_PSYCHIC_NORMAN
 	const ROUTE39_FRUIT_TREE
 	const ROUTE39_POKEFAN_F2
 
@@ -127,7 +127,7 @@ SailorEugeneScript:
 	end
 
 TrainerPsychicNorman:
-	trainer EVENT_BEAT_PSYCHIC_NoRMAN, PSYCHIC_T, NoRMAN, PsychicNormanSeenText, PsychicNormanBeatenText, 0, PsychicNormanScript
+	trainer EVENT_BEAT_PSYCHIC_NORMAN, PSYCHIC_T, NORMAN, PsychicNormanSeenText, PsychicNormanBeatenText, 0, PsychicNormanScript
 
 PsychicNormanScript:
 	end_if_just_battled
@@ -192,7 +192,7 @@ SailorEugeneSeenText:
 	line "OLIVINE."
 
 	para "So how about a"
-	line "#mon battle?"
+	line "#MON battle?"
 	done
 
 SailorEugeneBeatenText:
@@ -200,7 +200,7 @@ SailorEugeneBeatenText:
 	done
 
 UnknownText_0x1a5c4d:
-	text "My #mon were"
+	text "My #MON were"
 	line "caught and raised"
 	cont "overseas."
 
@@ -233,10 +233,10 @@ UnknownText_0x1a5cf8:
 
 PokefanfRuthSeenText:
 	text "Such darling"
-	line "#mon."
+	line "#MON."
 
 	para "Let's show our"
-	line "#mon together"
+	line "#MON together"
 	cont "at the same time."
 	done
 
@@ -247,7 +247,7 @@ PokefanfRuthBeatenText:
 
 UnknownText_0x1a5db2:
 	text "Do you know about"
-	line "baby #mon?"
+	line "baby #MON?"
 
 	para "I bet they're just"
 	line "adorable!"
@@ -260,12 +260,12 @@ UnknownText_0x1a5dec:
 
 PsychicNormanSeenText:
 	text "Let me see what"
-	line "your #mon are"
+	line "your #MON are"
 	cont "capable of."
 	done
 
 PsychicNormanBeatenText:
-	text "Ooh, your #mon"
+	text "Ooh, your #MON"
 	line "have potential."
 	done
 
@@ -334,10 +334,10 @@ Route39TrainerTipsText:
 
 	para "Use HEADBUTT on"
 	line "trees to shake"
-	cont "#mon out."
+	cont "#MON out."
 
 	para "Different kinds of"
-	line "#mon drop out"
+	line "#MON drop out"
 	cont "of trees."
 
 	para "Use HEADBUTT on"

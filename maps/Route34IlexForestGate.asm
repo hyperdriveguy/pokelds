@@ -93,10 +93,10 @@ MovementData_0x62d9a:
 
 UnknownText_0x62d9d:
 	text "Oh, honey. You're"
-	line "making a #Dex?"
+	line "making a #DEX?"
 
 	para "It must be hard if"
-	line "#mon won't"
+	line "#MON won't"
 
 	para "appear. Try using"
 	line "this TM."
@@ -106,9 +106,9 @@ UnknownText_0x62df6:
 	text "It's SWEET SCENT."
 
 	para "Use it wherever"
-	line "#mon appear."
+	line "#MON appear."
 
-	para "#mon will be"
+	para "#MON will be"
 	line "enticed by it."
 	done
 
@@ -135,7 +135,7 @@ UnknownText_0x62e97:
 
 	para "I think that it"
 	line "must be a grass-"
-	cont "type #mon."
+	cont "type #MON."
 	done
 
 Route34IlexForestGate_MapEventHeader:

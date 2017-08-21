@@ -705,7 +705,7 @@ UnknownText_0x6d6cf:
 	line "strange signal."
 
 	para "It's no fault of"
-	line "the #mon, so it"
+	line "the #MON, so it"
 
 	para "makes me feel"
 	line "guilty."
@@ -731,7 +731,7 @@ UnknownText_0x6d809:
 	line "Let me thank you"
 
 	para "on behalf of all"
-	line "the #mon."
+	line "the #MON."
 
 	para "Oh, yes. You"
 	line "should take this."
@@ -750,7 +750,7 @@ UnknownText_0x6d8f8:
 	text "That's WHIRLPOOL."
 	line "Teach it to a"
 
-	para "#mon to get"
+	para "#MON to get"
 	line "across wild water."
 
 	para "But keep this in"
@@ -767,7 +767,7 @@ UnknownText_0x6d994:
 	text "<PLAY_G>…"
 
 	para "The journey to be-"
-	line "coming the #mon"
+	line "coming the #MON"
 
 	para "MASTER is long and"
 	line "difficult."
@@ -797,7 +797,7 @@ LanceHealsText1:
 	text "LANCE: Are you all"
 	line "right?"
 
-	para "Your #mon are"
+	para "Your #MON are"
 	line "hurt and tired."
 
 	para "Here, give them"
@@ -808,7 +808,7 @@ LanceHealsText1:
 LanceHealsText2:
 	text "LANCE: <PLAY_G>,"
 	line "let's give it our"
-	cont "best for #mon."
+	cont "best for #MON."
 	done
 
 GruntM17SeenText:
@@ -853,7 +853,7 @@ UnknownText_0x6dc1a:
 	cont "by a kid too."
 
 	para "When we were ab-"
-	line "ducting #mon,"
+	line "ducting #MON,"
 
 	para "this kid with long"
 	line "red hair and mean-"
@@ -942,8 +942,8 @@ TeamRocketBaseB2F_MapEventHeader:
 
 .Signposts:
 	db 23
-	signpost 12, 14, SIGNPOST_IFNoTSET, MapTeamRocketBaseB2FSignpostPtr1
-	signpost 12, 15, SIGNPOST_IFNoTSET, MapTeamRocketBaseB2FSignpostPtr1
+	signpost 12, 14, SIGNPOST_IFNOTSET, MapTeamRocketBaseB2FSignpostPtr1
+	signpost 12, 15, SIGNPOST_IFNOTSET, MapTeamRocketBaseB2FSignpostPtr1
 	signpost 9, 17, SIGNPOST_READ, MapTeamRocketBaseB2FSignpost21Script
 	signpost 9, 16, SIGNPOST_READ, MapTeamRocketBaseB2FSignpost21Script
 	signpost 9, 15, SIGNPOST_READ, MapTeamRocketBaseB2FSignpost21Script

@@ -85,7 +85,7 @@ UnknownText_0x1a9f7d:
 
 	para "I wonder if it'll"
 	line "ever evolve into a"
-	cont "frog #mon."
+	cont "frog #MON."
 	done
 
 CeladonCityPoliwrathText:
@@ -169,7 +169,7 @@ UnknownText_0x1aa25b:
 	cont "buildings!"
 
 	para "Isn't it true that"
-	line "GOLDENROD #mon"
+	line "GOLDENROD #MON"
 
 	para "CENTER was made"
 	line "much, much bigger?"
@@ -198,7 +198,7 @@ CeladonCitySignText:
 
 CeladonGymSignText:
 	text "CELADON CITY"
-	line "#mon GYM"
+	line "#MON GYM"
 	cont "LEADER: ERIKA"
 
 	para "The Nature-Loving"
@@ -225,7 +225,7 @@ CeladonCityTrainerTipsText:
 	text "TRAINER TIPS"
 
 	para "GUARD SPEC."
-	line "protects #mon"
+	line "protects #MON"
 
 	para "against SPECIAL"
 	line "attacks such as"

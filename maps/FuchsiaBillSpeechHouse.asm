@@ -23,7 +23,7 @@ UnknownText_0x1963c3:
 
 UnknownText_0x1963f9:
 	text "I saw these weird,"
-	line "slow #mon on"
+	line "slow #MON on"
 	cont "CYCLING ROAD."
 	done
 

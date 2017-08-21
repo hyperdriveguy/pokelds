@@ -163,7 +163,7 @@ UnknownText_0x5e621:
 	text "We have recordings"
 	line "of the cries of"
 
-	para "all #mon that"
+	para "all #MON that"
 	line "have been found."
 
 	para "We must have about"
@@ -179,7 +179,7 @@ UnknownText_0x5e682:
 	line "TEAM ROCKET is"
 
 	para "trying to control"
-	line "#mon."
+	line "#MON."
 	done
 
 UnknownText_0x5e6eb:
@@ -256,7 +256,7 @@ UnknownText_0x5e8d0:
 
 GruntM8SeenText:
 	text "It feels great"
-	line "ordering #mon"
+	line "ordering #MON"
 	cont "to commit crimes."
 	done
 
@@ -269,7 +269,7 @@ UnknownText_0x5e944:
 	line "losing!"
 
 	para "Darn it! I hate"
-	line "useless #mon!"
+	line "useless #MON!"
 	done
 
 GruntM9SeenText:
@@ -327,7 +327,7 @@ UnknownText_0x5ead6:
 	done
 
 UnknownText_0x5eae4:
-	text "#mon MUSIC with"
+	text "#MON MUSIC with"
 	line "Host DJ BEN"
 	done
 

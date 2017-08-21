@@ -31,7 +31,7 @@ KrissNeighborsHouseRadio:
 	pause 45
 	writetext KrisNeighborRadioText3
 	pause 45
-	musicfadeout MUSIC_BOUNTIFUL_TOWN, $10
+	musicfadeout MUSIC_NEW_BARK_TOWN, $10
 	writetext KrisNeighborRadioText4
 	pause 45
 	closetext
@@ -48,7 +48,7 @@ KrissNeighborsHouseRadio:
 
 KrissNeighborsDaughterText:
 	text "PIKACHU is an"
-	line "evolved #mon."
+	line "evolved #MON."
 
 	para "I was amazed by"
 	line "Bishop's find-"
@@ -56,7 +56,7 @@ KrissNeighborsDaughterText:
 
 	para "He's so famous for"
 	line "his research on"
-	cont "#mon evolution."
+	cont "#MON evolution."
 
 	para "…sigh…"
 
@@ -73,19 +73,19 @@ KrissNeighborText:
 	line "BISHOP's assistant."
 
 	para "She really loves"
-	line "#mon!"
+	line "#MON!"
 
 	para "But then, so do I!"
 	done
 
 KrisNeighborRadioText1:
-	text "PROF.OAK'S #mon"
+	text "PROF.OAK'S #MON"
 	line "TALK! Please tune"
 	cont "in next time!"
 	done
 
 KrisNeighborRadioText2:
-	text "#mon CHANNEL!"
+	text "#MON CHANNEL!"
 	done
 
 KrisNeighborRadioText3:
@@ -94,8 +94,8 @@ KrisNeighborRadioText3:
 	done
 
 KrisNeighborRadioText4:
-	text "#mon!"
-	line "#mon CHANNEL…"
+	text "#MON!"
+	line "#MON CHANNEL…"
 	done
 
 KrissNeighborsHouse_MapEventHeader:: db 0, 0

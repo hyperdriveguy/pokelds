@@ -13,14 +13,14 @@ UnknownText_0x1c0043::
 	line "the NAME RATER."
 
 	para "I rate the names"
-	line "of #mon."
+	line "of #MON."
 
 	para "Would you like me"
 	line "to rate names?"
 	done
 
 UnknownText_0x1c00a0::
-	text "Which #mon's"
+	text "Which #MON's"
 	line "nickname should I"
 	cont "rate for you?"
 	prompt
@@ -88,7 +88,7 @@ UnknownText_0x1c0222::
 
 UnknownText_0x1c0272::
 	text "All right. This"
-	line "#mon is now"
+	line "#MON is now"
 	cont "named @"
 	text_from_ram StringBuffer1
 	text "."
@@ -170,7 +170,7 @@ UnknownText_0x1c0396::
 	para "Teach @"
 	text_from_ram StringBuffer2
 	text ""
-	line "to a #mon?"
+	line "to a #MON?"
 	done
 
 UnknownText_0x1c03c2::
@@ -214,7 +214,7 @@ UnknownText_0x1c0454::
 
 UnknownText_0x1c046a::
 	text "Must retrieve GIFT"
-	line "at #mon CENTER."
+	line "at #MON CENTER."
 	prompt
 
 UnknownText_0x1c048e::

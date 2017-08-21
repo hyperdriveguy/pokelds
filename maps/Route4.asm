@@ -56,7 +56,7 @@ Route4HiddenUltraBall:
 
 Bird_keeperHankSeenText:
 	text "I'm raising my"
-	line "#mon. Want to"
+	line "#MON. Want to"
 	cont "battle with me?"
 	done
 
@@ -67,7 +67,7 @@ Bird_keeperHankBeatenText:
 
 UnknownText_0x1ae258:
 	text "If you have a"
-	line "specific #mon"
+	line "specific #MON"
 
 	para "that you want to"
 	line "raise, put it out"

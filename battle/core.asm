@@ -833,14 +833,14 @@ SometimesFleeMons: ; 3c59a
 	db DRAGONAIR
 	db TOGETIC
 	db UMBREON
-	db UNoWN
+	db UNOWN
 	db SNUBBULL
 	db HERACROSS
 	db -1
 
 OftenFleeMons: ; 3c5a8
 	db CUBONE
-	db ARTICUNo
+	db ARTICUNO
 	db ZAPDOS
 	db MOLTRES
 	db QUAGSIRE
@@ -1758,7 +1758,7 @@ HandleScreens: ; 3cb36
 
 HandleWeather: ; 3cb9e
 	ld a, [Weather]
-	cp WEATHER_NoNE
+	cp WEATHER_NONE
 	ret z
 
 	ld hl, WeatherCount
@@ -2720,7 +2720,7 @@ JohtoGymLeaders:
 	db CHUCK
 	db CLAIR
 	db WILL
-	db BRUNo
+	db BRUNO
 	db KAREN
 	db KOGA
 ; fallthrough
@@ -2850,7 +2850,7 @@ AskUseNextPokemon: ; 3d1f8
 
 .pressed_b
 	ld a, [wMenuCursorY]
-	cp $1 ; Yes
+	cp $1 ; YES
 	jr z, .loop
 	ld hl, PartyMon1Speed
 	ld de, EnemyMonSpeed
@@ -3606,7 +3606,7 @@ LoadEnemyPkmnToSwitchTo: ; 3d6ca
 	call LoadEnemyMon
 
 	ld a, [CurPartySpecies]
-	cp UNoWN
+	cp UNOWN
 	jr nz, .skip_unown
 	ld a, [wFirstUnownSeen]
 	and a
@@ -6277,7 +6277,7 @@ LoadEnemyMon: ; 3e8eb
 ; 25% chance of getting an item
 	call BattleRandom
 	cp a, 1 + (75 percent)
-	ld a, No_ITEM
+	ld a, NO_ITEM
 	jr c, .UpdateItem
 
 ; From there, an 8% chance for Item2
@@ -6454,7 +6454,7 @@ LoadEnemyMon: ; 3e8eb
 
 ; Unown
 	ld a, [TempEnemyMonSpecies]
-	cp a, UNoWN
+	cp a, UNOWN
 	jr nz, .Magikarp
 
 ; Get letter based on DVs
@@ -6775,17 +6775,17 @@ CheckSleepingTreeMon: ; 3eb38
 	db -1 ; end
 
 .Day:
-	db VENoNAT
+	db VENONAT
 	db HOOTHOOT
-	db NoCTOWL
+	db NOCTOWL
 	db SPINARAK
 	db HERACROSS
 	db -1 ; end
 
 .Morn:
-	db VENoNAT
+	db VENONAT
 	db HOOTHOOT
-	db NoCTOWL
+	db NOCTOWL
 	db SPINARAK
 	db HERACROSS
 	db -1 ; end
@@ -8631,7 +8631,7 @@ InitEnemyWildmon: ; 3f607
 	ld hl, EnemyMonDVs
 	predef GetUnownLetter
 	ld a, [CurPartySpecies]
-	cp UNoWN
+	cp UNOWN
 	jr nz, .skip_unown
 	ld a, [wFirstUnownSeen]
 	and a
@@ -9578,7 +9578,7 @@ BattleStartMessage: ; 3fc8b
 
 	hlcoord 12, 0
 	ld d, $0
-	ld e, ANIM_MON_NoRMAL
+	ld e, ANIM_MON_NORMAL
 	predef AnimateFrontpic
 	jr .skip_cry ; cry is played during the animation
 

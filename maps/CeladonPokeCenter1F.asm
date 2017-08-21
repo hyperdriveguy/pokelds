@@ -74,7 +74,7 @@ CeladonEusine:
 
 UnknownText_0x71e70:
 	text "ERIKA is a master"
-	line "of grass #mon."
+	line "of grass #MON."
 
 	para "She'll make you"
 	line "pay if you don't"
@@ -110,7 +110,7 @@ EusineLeavesCeladonText:
 	line "fresh rumors of a"
 
 	para "rainbow-colored"
-	line "#mon appearing"
+	line "#MON appearing"
 	cont "at TIN TOWER."
 
 	para "I've just had my"
@@ -130,7 +130,7 @@ NoBeastsText:
 	para "Have you caught"
 	line "the legendary"
 
-	para "#mon RAIKOU and"
+	para "#MON RAIKOU and"
 	line "ENTEI?"
 
 	para $56, $56, $56

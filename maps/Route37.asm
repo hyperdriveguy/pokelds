@@ -135,7 +135,7 @@ UnknownText_0x1a8e62:
 	text "ANN: I can tell"
 	line "what my sister and"
 
-	para "my #mon are"
+	para "my #MON are"
 	line "thinking."
 	done
 
@@ -153,11 +153,11 @@ TwinsAnnandanne2BeatenText:
 UnknownText_0x1a8eec:
 	text "ANNE: We share the"
 	line "same feelings as"
-	cont "our #mon."
+	cont "our #MON."
 	done
 
 PsychicGregSeenText:
-	text "#mon can't do a"
+	text "#MON can't do a"
 	line "thing if they are"
 	cont "asleep."
 
@@ -171,7 +171,7 @@ PsychicGregBeatenText:
 	done
 
 UnknownText_0x1a8f80:
-	text "Putting #mon to"
+	text "Putting #MON to"
 	line "sleep or paralyz-"
 	cont "ing them are good"
 	cont "battle techniques."
@@ -209,7 +209,7 @@ SunnyGaveGiftText:
 	para "Oh! I remember"
 	line "now!"
 
-	para "A #mon that"
+	para "A #MON that"
 	line "knows electric"
 
 	para "moves should hold"

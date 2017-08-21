@@ -32,7 +32,7 @@ SailorScript_0x9c8dc:
 	jumptextfaceplayer UnknownText_0x9ca09
 
 UnknownText_0x9c8df:
-	text "Hah! Your #mon"
+	text "Hah! Your #MON"
 	line "sure look like"
 	cont "lightweights!"
 

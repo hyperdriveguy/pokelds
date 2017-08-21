@@ -145,7 +145,7 @@ GoldenrodDeptStore5FElevatorButton:
 
 UnknownText_0x56143:
 	text "Hello. Oh, your"
-	line "#mon…"
+	line "#MON…"
 	done
 
 UnknownText_0x5615a:
@@ -175,7 +175,7 @@ UnknownText_0x56202:
 	line "be TMs that are"
 
 	para "just perfect for"
-	line "your #mon."
+	line "your #MON."
 	done
 
 UnknownText_0x56241:
@@ -195,7 +195,7 @@ UnknownText_0x56279:
 UnknownText_0x562ad:
 	text "On Sundays, a lady"
 	line "comes to check out"
-	cont "#mon."
+	cont "#MON."
 
 	para "She even gives"
 	line "away TMs!"
@@ -203,7 +203,7 @@ UnknownText_0x562ad:
 
 UnknownText_0x562f3:
 	text "You can't rename a"
-	line "#mon you get in"
+	line "#MON you get in"
 	cont "a trade."
 
 	para "The name is a re-"
@@ -215,7 +215,7 @@ UnknownText_0x562f3:
 
 GoldenrodDeptStore5FDirectoryText:
 	text "Customize Your"
-	line "#mon"
+	line "#MON"
 
 	para "5F TM CORNER"
 	done

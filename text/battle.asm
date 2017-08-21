@@ -137,14 +137,14 @@ BattleText_SafeguardFaded: ; 0x808d2
 
 BattleText_PkmnLightScreenFell: ; 0x808e7
 	text_from_ram StringBuffer1
-	text " #mon's"
+	text " #MON's"
 	line "LIGHT SCREEN fell!"
 	prompt
 ; 0x80905
 
 BattleText_PkmnReflectFaded: ; 0x80905
 	text_from_ram StringBuffer1
-	text " #mon's"
+	text " #MON's"
 	line "REFLECT faded!"
 	prompt
 ; 0x8091f
@@ -230,7 +230,7 @@ SentAllToMomText:
 BattleText_0x80a4f: ; 0x80a4f
 	text "<RIVAL>: Huh? I"
 	line "should've chosen"
-	cont "your #mon!"
+	cont "your #MON!"
 	prompt
 ; 0x80a75
 
@@ -242,14 +242,14 @@ BattleText_PkmnFainted: ; 0x80a75
 ; 0x80a83
 
 BattleText_UseNextMon: ; 0x80a83
-	text "Use next #mon?"
+	text "Use next #MON?"
 	done
 ; 0x80a93
 
 BattleText_0x80a93: ; 0x80a93
 	text "<RIVAL>: Yes!"
 	line "I guess I chose a"
-	cont "good #mon!"
+	cont "good #MON!"
 	prompt
 ; 0x80ab9
 
@@ -267,7 +267,7 @@ BattleText_EnemyIsAboutToUseWillPlayerChangePkmn: ; 0x80aca
 	text "."
 
 	para "Will <PLAYER>"
-	line "change #mon?"
+	line "change #MON?"
 	done
 ; 0x80af8
 
@@ -1161,7 +1161,7 @@ IdentifiedText: ; 0x816b1
 ; 0x816c2
 
 StartPerishText: ; 0x816c2
-	text "Both #mon will"
+	text "Both #MON will"
 	line "faint in 3 turns!"
 	prompt
 ; 0x816e4

@@ -134,7 +134,7 @@ MomPhoneNoGymQuestScript: ; 0xbcfac
 MomPhoneLectureScript: ; 0xbcfb1
 	setevent EVENT_TALKED_TO_MOM_BEFORE_JOURNEY
 	setflag ENGINE_DST
-	specialphonecall SPECIALCALL_NoNE
+	specialphonecall SPECIALCALL_NONE
 	farwritetext MomPhoneLectureText
 	yesorno
 	iftrue MomPhoneSaveMoneyScript
@@ -246,7 +246,7 @@ BishopPhoneScript1: ; 0xbd00d
 
 .pokerus ; 0xbd079
 	farwritetext BishopPhonePokerusText
-	specialphonecall SPECIALCALL_NoNE
+	specialphonecall SPECIALCALL_NONE
 	end
 
 BishopPhoneScript2: ; 0xbd081
@@ -257,35 +257,35 @@ BishopPhoneScript2: ; 0xbd081
 	if_equal $5, .gift
 	if_equal $8, .gift
 	farwritetext BishopPhonePokerusText
-	specialphonecall SPECIALCALL_NoNE
+	specialphonecall SPECIALCALL_NONE
 	end
 
 .disaster ; 0xbd09f
 	farwritetext BishopPhoneDisasterText
-	specialphonecall SPECIALCALL_NoNE
+	specialphonecall SPECIALCALL_NONE
 	setevent EVENT_BISHOP_CALLED_ABOUT_STOLEN_POKEMON
 	end
 
 .assistant ; 0xbd0aa
 	farwritetext BishopPhoneEggAssistantText
-	specialphonecall SPECIALCALL_NoNE
+	specialphonecall SPECIALCALL_NONE
 	clearevent EVENT_BISHOPS_AIDE_IN_VIOLET_POKEMON_CENTER
 	setevent EVENT_BISHOPS_AIDE_IN_LAB
 	end
 
 .rocket ; 0xbd0b8
 	farwritetext BishopPhoneRocketText
-	specialphonecall SPECIALCALL_NoNE
+	specialphonecall SPECIALCALL_NONE
 	end
 
 .gift ; 0xbd0c0
 	farwritetext BishopPhoneGiftText
-	specialphonecall SPECIALCALL_NoNE
+	specialphonecall SPECIALCALL_NONE
 	end
 
 .unused ; 0xbd0c8
 	farwritetext BishopPhoneUnusedText
-	specialphonecall SPECIALCALL_NoNE
+	specialphonecall SPECIALCALL_NONE
 	end
 ; bd0d0
 
@@ -468,7 +468,7 @@ BethPhoneScript1:
 	checkflag ENGINE_BETH
 	iftrue UnknownScript_0xbd260
 	farscall PhoneScript_AnswerPhone_Female
-	checkflag ENGINE_BETH_FRIDAY_AFTERNoON
+	checkflag ENGINE_BETH_FRIDAY_AFTERNOON
 	iftrue UnknownScript_0xbd25c
 	checkcode VAR_WEEKDAY
 	if_not_equal FRIDAY, UnknownScript_0xbd25c
@@ -487,7 +487,7 @@ BethPhoneScript2:
 	farscall PhoneScript_GreetPhone_Female
 	checkflag ENGINE_BETH
 	iftrue UnknownScript_0xbd283
-	checkflag ENGINE_BETH_FRIDAY_AFTERNoON
+	checkflag ENGINE_BETH_FRIDAY_AFTERNOON
 	iftrue UnknownScript_0xbd283
 	farscall PhoneScript_Random2
 	if_equal $0, UnknownScript_0xbd28a
@@ -496,7 +496,7 @@ UnknownScript_0xbd283:
 	farjump UnknownScript_0xa0017
 
 UnknownScript_0xbd287:
-	setflag ENGINE_BETH_FRIDAY_AFTERNoON
+	setflag ENGINE_BETH_FRIDAY_AFTERNOON
 
 UnknownScript_0xbd28a:
 	landmarktotext ROUTE_26, $2
@@ -614,7 +614,7 @@ JoeyPhoneScript1:
 	checkflag ENGINE_JOEY
 	iftrue UnknownScript_0xbd399
 	farscall PhoneScript_AnswerPhone_Male
-	checkflag ENGINE_JOEY_MONDAY_AFTERNoON
+	checkflag ENGINE_JOEY_MONDAY_AFTERNOON
 	iftrue UnknownScript_0xbd392
 	checkcode VAR_WEEKDAY
 	if_not_equal MONDAY, UnknownScript_0xbd392
@@ -634,7 +634,7 @@ JoeyPhoneScript2:
 	farscall PhoneScript_GreetPhone_Male
 	checkflag ENGINE_JOEY
 	iftrue UnknownScript_0xbd3c0
-	checkflag ENGINE_JOEY_MONDAY_AFTERNoON
+	checkflag ENGINE_JOEY_MONDAY_AFTERNOON
 	iftrue UnknownScript_0xbd3c0
 	farscall PhoneScript_Random3
 	if_equal $0, UnknownScript_0xbd3c7
@@ -644,7 +644,7 @@ UnknownScript_0xbd3c0:
 	farjump UnknownScript_0xa0000
 
 UnknownScript_0xbd3c4:
-	setflag ENGINE_JOEY_MONDAY_AFTERNoON
+	setflag ENGINE_JOEY_MONDAY_AFTERNOON
 
 UnknownScript_0xbd3c7:
 	landmarktotext ROUTE_30, $2
@@ -836,7 +836,7 @@ LizPhoneScript1:
 	checkflag ENGINE_LIZ
 	iftrue UnknownScript_0xbd586
 	farscall PhoneScript_AnswerPhone_Female
-	checkflag ENGINE_LIZ_THURSDAY_AFTERNoON
+	checkflag ENGINE_LIZ_THURSDAY_AFTERNOON
 	iftrue UnknownScript_0xbd57f
 	checkcode VAR_WEEKDAY
 	if_not_equal THURSDAY, UnknownScript_0xbd57f
@@ -858,7 +858,7 @@ LizPhoneScript2:
 	farscall PhoneScript_GreetPhone_Female
 	checkflag ENGINE_LIZ
 	iftrue UnknownScript_0xbd5a9
-	checkflag ENGINE_LIZ_THURSDAY_AFTERNoON
+	checkflag ENGINE_LIZ_THURSDAY_AFTERNOON
 	iftrue UnknownScript_0xbd5a9
 
 UnknownScript_0xbd5a9:
@@ -873,7 +873,7 @@ UnknownScript_0xbd5bf:
 	farjump UnknownScript_0xa0017
 
 UnknownScript_0xbd5c3:
-	setflag ENGINE_LIZ_THURSDAY_AFTERNoON
+	setflag ENGINE_LIZ_THURSDAY_AFTERNOON
 
 UnknownScript_0xbd5c6:
 	landmarktotext ROUTE_32, $2
@@ -916,7 +916,7 @@ UnknownScript_0xbd612:
 	jump UnknownScript_0xbd630
 
 UnknownScript_0xbd618:
-	trainerclassname KIMONo_GIRL, $1
+	trainerclassname KIMONO_GIRL, $1
 	jump UnknownScript_0xbd630
 
 UnknownScript_0xbd61e:
@@ -1067,7 +1067,7 @@ GinaPhoneScript1:
 	checkflag ENGINE_GINA
 	iftrue UnknownScript_0xbd776
 	farscall PhoneScript_AnswerPhone_Female
-	checkflag ENGINE_GINA_SUNDAY_AFTERNoON
+	checkflag ENGINE_GINA_SUNDAY_AFTERNOON
 	iftrue UnknownScript_0xbd768
 	checkflag ENGINE_GINA_HAS_LEAF_STONE
 	iftrue UnknownScript_0xbd77d
@@ -1099,7 +1099,7 @@ GinaPhoneScript2:
 	iftrue UnknownScript_0xbd7d9
 	checkflag ENGINE_GINA
 	iftrue UnknownScript_0xbd7c8
-	checkflag ENGINE_GINA_SUNDAY_AFTERNoON
+	checkflag ENGINE_GINA_SUNDAY_AFTERNOON
 	iftrue UnknownScript_0xbd7c8
 	checkflag ENGINE_GINA_HAS_LEAF_STONE
 	iftrue UnknownScript_0xbd7c8
@@ -1120,7 +1120,7 @@ UnknownScript_0xbd7c8:
 	farjump UnknownScript_0xa0017
 
 UnknownScript_0xbd7cc:
-	setflag ENGINE_GINA_SUNDAY_AFTERNoON
+	setflag ENGINE_GINA_SUNDAY_AFTERNOON
 
 UnknownScript_0xbd7cf:
 	landmarktotext ROUTE_34, $2
@@ -1231,7 +1231,7 @@ AlanPhoneScript1:
 	checkflag ENGINE_ALAN
 	iftrue UnknownScript_0xbd8cf
 	farscall PhoneScript_AnswerPhone_Male
-	checkflag ENGINE_ALAN_WEDNESDAY_AFTERNoON
+	checkflag ENGINE_ALAN_WEDNESDAY_AFTERNOON
 	iftrue UnknownScript_0xbd8cb
 	checkflag ENGINE_ALAN_HAS_FIRE_STONE
 	iftrue UnknownScript_0xbd8d6
@@ -1256,7 +1256,7 @@ AlanPhoneScript2:
 	farscall PhoneScript_GreetPhone_Male
 	checkflag ENGINE_ALAN
 	iftrue UnknownScript_0xbd915
-	checkflag ENGINE_ALAN_WEDNESDAY_AFTERNoON
+	checkflag ENGINE_ALAN_WEDNESDAY_AFTERNOON
 	iftrue UnknownScript_0xbd915
 	checkflag ENGINE_ALAN_HAS_FIRE_STONE
 	iftrue UnknownScript_0xbd915
@@ -1275,7 +1275,7 @@ UnknownScript_0xbd915:
 	farjump UnknownScript_0xa0000
 
 UnknownScript_0xbd919:
-	setflag ENGINE_ALAN_WEDNESDAY_AFTERNoON
+	setflag ENGINE_ALAN_WEDNESDAY_AFTERNOON
 
 UnknownScript_0xbd91c:
 	landmarktotext ROUTE_36, $2
@@ -1567,7 +1567,7 @@ TiffanyPhoneScript1:
 	checkflag ENGINE_TIFFANY
 	iftrue UnknownScript_0xbdbc2
 	farscall PhoneScript_AnswerPhone_Female
-	checkflag ENGINE_TIFFANY_TUESDAY_AFTERNoON
+	checkflag ENGINE_TIFFANY_TUESDAY_AFTERNOON
 	iftrue UnknownScript_0xbdbbe
 	checkflag ENGINE_TIFFANY_HAS_PINK_BOW
 	iftrue UnknownScript_0xbdbc9
@@ -1594,7 +1594,7 @@ TiffanyPhoneScript2:
 	farscall PhoneScript_GreetPhone_Female
 	checkflag ENGINE_TIFFANY
 	iftrue UnknownScript_0xbdc10
-	checkflag ENGINE_TIFFANY_TUESDAY_AFTERNoON
+	checkflag ENGINE_TIFFANY_TUESDAY_AFTERNOON
 	iftrue UnknownScript_0xbdc10
 	checkflag ENGINE_TIFFANY_HAS_PINK_BOW
 	iftrue UnknownScript_0xbdc10
@@ -1613,7 +1613,7 @@ UnknownScript_0xbdc10:
 	farjump UnknownScript_0xa0017
 
 UnknownScript_0xbdc14:
-	setflag ENGINE_TIFFANY_TUESDAY_AFTERNoON
+	setflag ENGINE_TIFFANY_TUESDAY_AFTERNOON
 
 UnknownScript_0xbdc17:
 	landmarktotext ROUTE_43, $2
@@ -1799,7 +1799,7 @@ ParryPhoneScript1:
 	checkflag ENGINE_PARRY
 	iftrue UnknownScript_0xbddac
 	farscall PhoneScript_AnswerPhone_Male
-	checkflag ENGINE_PARRY_FRIDAY_AFTERNoON
+	checkflag ENGINE_PARRY_FRIDAY_AFTERNOON
 	iftrue UnknownScript_0xbdda8
 	checkcode VAR_WEEKDAY
 	if_not_equal FRIDAY, UnknownScript_0xbdda8
@@ -1818,7 +1818,7 @@ ParryPhoneScript2:
 	farscall PhoneScript_GreetPhone_Male
 	checkflag ENGINE_PARRY
 	iftrue UnknownScript_0xbddd3
-	checkflag ENGINE_PARRY_FRIDAY_AFTERNoON
+	checkflag ENGINE_PARRY_FRIDAY_AFTERNOON
 	iftrue UnknownScript_0xbddd3
 	farscall PhoneScript_Random2
 	if_equal $0, UnknownScript_0xbddda
@@ -1828,7 +1828,7 @@ UnknownScript_0xbddd3:
 	farjump UnknownScript_0xa0000
 
 UnknownScript_0xbddd7:
-	setflag ENGINE_PARRY_FRIDAY_AFTERNoON
+	setflag ENGINE_PARRY_FRIDAY_AFTERNOON
 
 UnknownScript_0xbddda:
 	landmarktotext ROUTE_45, $2

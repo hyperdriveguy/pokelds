@@ -192,7 +192,7 @@ TryWildEncounter:: ; 2a0e7
 	ret
 
 .no_battle
-	xor a ; BATTLETYPE_NoRMAL
+	xor a ; BATTLETYPE_NORMAL
 	ld [TempWildMonSpecies], a
 	ld [BattleType], a
 	ld a, 1
@@ -333,7 +333,7 @@ ChooseWildEncounter: ; 2a14f
 	jr c, .nowildbattle
 
 	ld a, b ; This is in the wrong place.
-	cp UNoWN
+	cp UNOWN
 	jr nz, .done
 
 	ld a, [UnlockedUnowns]
@@ -905,7 +905,7 @@ RandomPhoneRareWildMon: ; 2a4ab
 	ret
 
 .SawRareMonText:
-	; I just saw some rare @  in @ . I'll call you if I see another rare #mon, OK?
+	; I just saw some rare @  in @ . I'll call you if I see another rare #MON, OK?
 	text_jump UnknownText_0x1bd34b
 	db "@"
 ; 0x2a51f

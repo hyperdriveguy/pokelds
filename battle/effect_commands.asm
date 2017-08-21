@@ -196,7 +196,7 @@ CheckPlayerTurn:
 
 	; Snore and Sleep Talk bypass sleep.
 	ld a, [CurPlayerMove]
-	cp SNoRE
+	cp SNORE
 	jr z, .not_asleep
 	cp SLEEP_TALK
 	jr z, .not_asleep
@@ -444,7 +444,7 @@ CheckEnemyTurn: ; 3421f
 .fast_asleep
 	; Snore and Sleep Talk bypass sleep.
 	ld a, [CurEnemyMove]
-	cp SNoRE
+	cp SNORE
 	jr z, .not_asleep
 	cp SLEEP_TALK
 	jr z, .not_asleep
@@ -989,7 +989,7 @@ IgnoreSleepOnly: ; 3451f
 	ld a, BATTLE_VARS_MOVE_ANIM
 	call GetBattleVar
 
-	cp SNoRE
+	cp SNORE
 	jr z, .CheckSleep
 	cp SLEEP_TALK
 	jr z, .CheckSleep
@@ -3664,7 +3664,7 @@ BattleCommand_DamageCalc: ; 35612
 
 
 TypeBoostItems: ; 35703
-	db HELD_NoRMAL_BOOST,   NoRMAL   ; Pink/Polkadot Bow
+	db HELD_NORMAL_BOOST,   NORMAL   ; Pink/Polkadot Bow
 	db HELD_FIGHTING_BOOST, FIGHTING ; Blackbelt
 	db HELD_FLYING_BOOST,   FLYING   ; Sharp Beak
 	db HELD_POISON_BOOST,   POISON   ; Poison Barb
@@ -7661,7 +7661,7 @@ BattleCommand_FinishConfusingTarget: ; 36d70
 	call GetBattleVar
 	cp EFFECT_CONFUSE_HIT
 	jr z, .got_effect
-	cp EFFECT_SNoRE
+	cp EFFECT_SNORE
 	jr z, .got_effect
 	cp EFFECT_SWAGGER
 	jr z, .got_effect
@@ -7691,7 +7691,7 @@ BattleCommand_Confuse_CheckSnore_Swagger_ConfuseHit: ; 36db6
 	call GetBattleVar
 	cp EFFECT_CONFUSE_HIT
 	ret z
-	cp EFFECT_SNoRE
+	cp EFFECT_SNORE
 	ret z
 	cp EFFECT_SWAGGER
 	ret z
@@ -7800,7 +7800,7 @@ CheckMoveTypeMatchesTarget: ; 36e5b
 	ld a, BATTLE_VARS_MOVE_TYPE
 	call GetBattleVar
 	and $1F
-	cp NoRMAL
+	cp NORMAL
 	jr z, .normal
 
 	cp [hl]

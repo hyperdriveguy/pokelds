@@ -530,7 +530,7 @@ YoungsterSamuelMobileText:
 	line "by how they've"
 
 	para "changed the"
-	line "#mon CENTER?"
+	line "#MON CENTER?"
 	done
 
 YoungsterSamuelAfterText:
@@ -544,7 +544,7 @@ YoungsterSamuelAfterText:
 
 YoungsterIanSeenText:
 	text "I'm the best in my"
-	line "class at #mon."
+	line "class at #MON."
 	done
 
 YoungsterIanBeatenText:
@@ -561,7 +561,7 @@ YoungsterIanAfterText:
 CamperTodd1SeenText:
 	text "I'm confident in"
 	line "my ability to"
-	cont "raise #mon."
+	cont "raise #MON."
 
 	para "Want to see?"
 	done
@@ -632,7 +632,7 @@ OfficerKeithDaytimeText:
 
 PokefanmBrandonSeenText:
 	text "I just got my"
-	line "#mon back from"
+	line "#MON back from"
 	cont "DAY-CARE."
 
 	para "Let's see how much"
@@ -645,7 +645,7 @@ PokefanmBrandonBeatenText:
 	done
 
 PokefanmBrandonAfterText:
-	text "My #mon knew"
+	text "My #MON knew"
 	line "moves I didn't"
 	cont "know it had."
 
@@ -762,7 +762,7 @@ DayCareSignText:
 	text "DAY-CARE"
 
 	para "LET US RAISE YOUR"
-	line "#mon FOR YOU!"
+	line "#MON FOR YOU!"
 	done
 
 Route34_MapEventHeader:

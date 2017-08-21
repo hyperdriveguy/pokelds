@@ -154,13 +154,13 @@ BugsyText_INeverLose:
 	line "I never lose when"
 
 	para "it comes to bug"
-	line "#mon."
+	line "#MON."
 
 	para "My research is"
 	line "going to make me"
 
 	para "the authority on"
-	line "bug #mon!"
+	line "bug #MON!"
 
 	para "Let me demonstrate"
 	line "what I've learned"
@@ -170,7 +170,7 @@ BugsyText_INeverLose:
 BugsyText_ResearchIncomplete:
 	text "Whoa, amazing!"
 	line "You're an expert"
-	cont "on #mon!"
+	cont "on #MON!"
 
 	para "My research isn't"
 	line "complete yet."
@@ -190,12 +190,12 @@ BugsyText_HiveBadgeSpeech:
 	cont "BADGE?"
 
 	para "If you have it,"
-	line "#mon up to L30"
+	line "#MON up to L30"
 
 	para "will obey you,"
 	line "even traded ones."
 
-	para "#mon that know"
+	para "#MON that know"
 	line "CUT will be able"
 
 	para "to use it outside"
@@ -222,7 +222,7 @@ BugsyText_FuryCutterSpeech:
 	done
 
 BugsyText_BugMonsAreDeep:
-	text "Bug #mon are"
+	text "Bug #MON are"
 	line "deep. There are"
 
 	para "many mysteries to"
@@ -233,7 +233,7 @@ BugsyText_BugMonsAreDeep:
 	done
 
 Bug_catcherbennySeenText:
-	text "Bug #mon evolve"
+	text "Bug #MON evolve"
 	line "young. So they get"
 
 	para "stronger that much"
@@ -246,13 +246,13 @@ Bug_catcherbennyBeatenText:
 	done
 
 Bug_catcherbennyAfterBattleText:
-	text "#mon become"
+	text "#MON become"
 	line "stronger if they"
 	cont "evolve. Really!"
 	done
 
 Bug_catcherAlSeenText:
-	text "Bug #mon are"
+	text "Bug #MON are"
 	line "cool and tough!"
 
 	para "I'll prove it to"
@@ -269,7 +269,7 @@ Bug_catcherAlAfterBattleText:
 	line "but most girls"
 
 	para "don't like bug"
-	line "#mon."
+	line "#MON."
 
 	para "I don't know why…"
 	done
@@ -280,7 +280,7 @@ Bug_catcherJoshSeenText:
 	cont "you're mighty!"
 
 	para "But my grown-up"
-	line "#mon are pretty"
+	line "#MON are pretty"
 	cont "tough too!"
 	done
 
@@ -333,7 +333,7 @@ AzaleaGymGuyText:
 	para "BUGSY's young, but"
 	line "his knowledge of"
 
-	para "bug #mon is for"
+	para "bug #MON is for"
 	line "real."
 
 	para "It's going to be"
@@ -341,7 +341,7 @@ AzaleaGymGuyText:
 	cont "advice."
 
 	para "Let's see… Bug"
-	line "#mon don't like"
+	line "#MON don't like"
 	cont "fire."
 
 	para "Flying-type moves"
@@ -358,7 +358,7 @@ AzaleaGymGuyWinText:
 
 	para "With people like"
 	line "you, the future of"
-	cont "#mon is bright!"
+	cont "#MON is bright!"
 	done
 
 AzaleaGym_MapEventHeader:

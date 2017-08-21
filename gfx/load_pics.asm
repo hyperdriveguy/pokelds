@@ -94,7 +94,7 @@ GetFrontpicPointer: ; 510d7
 GLOBAL PicPointers, UnownPicPointers
 
 	ld a, [CurPartySpecies]
-	cp UNoWN
+	cp UNOWN
 	jr z, .unown
 	ld a, [CurPartySpecies]
 	ld d, BANK(PicPointers)
@@ -204,7 +204,7 @@ GetBackpic: ; 5116c
 	ld hl, PicPointers ; UnownPicPointers
 	ld a, b
 	ld d, BANK(PicPointers)
-	cp UNoWN
+	cp UNOWN
 	jr nz, .ok
 	ld a, c
 	ld d, BANK(UnownPicPointers)

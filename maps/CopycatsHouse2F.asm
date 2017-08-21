@@ -205,7 +205,7 @@ CopycatSpinAroundMovementData:
 
 CopycatText_Male_1:
 	text "<PLAYER>: Hi! Do"
-	line "you like #mon?"
+	line "you like #MON?"
 
 	para "<PLAYER>: Uh, no, I"
 	line "just asked you."
@@ -303,7 +303,7 @@ CopycatText_ItsAScream:
 
 CopycatText_Female_1:
 	text "<PLAYER>: Hi. You"
-	line "must like #mon."
+	line "must like #MON."
 
 	para "<PLAYER>: No, not"
 	line "me. I asked you."
@@ -358,7 +358,7 @@ CopycatsDodrioText2:
 
 CopycatsHouse2FDollText:
 	text "This is a rare"
-	line "#mon! Huh?"
+	line "#MON! Huh?"
 
 	para "It's only a doll…"
 	done

@@ -551,7 +551,7 @@ Function10ed51: ; 10ed51
 	ld b, a
 	and 1
 	jr nz, .done
-	call MoroniFrameIterator
+	call SuicuneFrameIterator
 	call DelayFrame
 	jr .loop
 .done
