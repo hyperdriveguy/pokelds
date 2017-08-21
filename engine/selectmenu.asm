@@ -1,10 +1,10 @@
 SelectMenu:: ; 13327
 
 	call CheckRegisteredItem
-	jr c, .NOtRegistered
+	jr c, .NotRegistered
 	jp UseRegisteredItem
 
-.NOtRegistered:
+.NotRegistered:
 	call OpenText
 	ld b, BANK(ItemMayBeRegisteredText)
 	ld hl, ItemMayBeRegisteredText
@@ -24,7 +24,7 @@ CheckRegisteredItem: ; 13345
 
 	ld a, [WhichRegisteredItem]
 	and a
-	jr z, .NORegisteredItem
+	jr z, .NoRegisteredItem
 	and REGISTERED_POCKET
 	rlca
 	rlca
@@ -40,15 +40,15 @@ CheckRegisteredItem: ; 13345
 
 .CheckItem:
 	ld hl, NumItems
-	call .CheckRegisteredNO
-	jr c, .NORegisteredItem
+	call .CheckRegisteredNo
+	jr c, .NoRegisteredItem
 	inc hl
 	ld e, a
 	ld d, 0
 	add hl, de
 	add hl, de
 	call .IsSameItem
-	jr c, .NORegisteredItem
+	jr c, .NoRegisteredItem
 	and a
 	ret
 
@@ -57,7 +57,7 @@ CheckRegisteredItem: ; 13345
 	ld hl, KeyItems
 	ld de, 1
 	call IsInArray
-	jr nc, .NORegisteredItem
+	jr nc, .NoRegisteredItem
 	ld a, [RegisteredItem]
 	ld [CurItem], a
 	and a
@@ -65,21 +65,21 @@ CheckRegisteredItem: ; 13345
 
 .CheckBall:
 	ld hl, NumBalls
-	call .CheckRegisteredNO
-	jr nc, .NORegisteredItem
+	call .CheckRegisteredNo
+	jr nc, .NoRegisteredItem
 	inc hl
 	ld e, a
 	ld d, 0
 	add hl, de
 	add hl, de
 	call .IsSameItem
-	jr c, .NORegisteredItem
+	jr c, .NoRegisteredItem
 	ret
 
 .CheckTMHM:
-	jr .NORegisteredItem
+	jr .NoRegisteredItem
 
-.NORegisteredItem:
+.NoRegisteredItem:
 	xor a
 	ld [WhichRegisteredItem], a
 	ld [RegisteredItem], a
@@ -88,17 +88,17 @@ CheckRegisteredItem: ; 13345
 ; 133a6
 
 
-.CheckRegisteredNO: ; 133a6
+.CheckRegisteredNo: ; 133a6
 	ld a, [WhichRegisteredItem]
 	and REGISTERED_NUMBER
 	dec a
 	cp [hl]
-	jr nc, .NOtEnoughItems
+	jr nc, .NotEnoughItems
 	ld [wd107], a
 	and a
 	ret
 
-.NOtEnoughItems:
+.NotEnoughItems:
 	scf
 	ret
 ; 133b6
@@ -107,12 +107,12 @@ CheckRegisteredItem: ; 13345
 .IsSameItem: ; 133b6
 	ld a, [RegisteredItem]
 	cp [hl]
-	jr nz, .NOtSameItem
+	jr nz, .NotSameItem
 	ld [CurItem], a
 	and a
 	ret
 
-.NOtSameItem:
+.NotSameItem:
 	scf
 	ret
 ; 133c3
@@ -128,15 +128,15 @@ UseRegisteredItem: ; 133c3
 
 .SwitchTo:
 	dw .CantUse
-	dw .NOFunction
-	dw .NOFunction
-	dw .NOFunction
+	dw .NoFunction
+	dw .NoFunction
+	dw .NoFunction
 	dw .Current
 	dw .Party
 	dw .Overworld
 ; 133df
 
-.NOFunction: ; 133df
+.NoFunction: ; 133df
 	call OpenText
 	call CantUseItem
 	call CloseText

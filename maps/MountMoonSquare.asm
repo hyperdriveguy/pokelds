@@ -31,11 +31,11 @@ MountMoonSquare_MapScriptHeader:
 
 ClefairyDance:
 	checkflag ENGINE_MT_MOON_SQUARE_CLEFAIRY
-	iftrue .NODancing
+	iftrue .NoDancing
 	checkcode VAR_WEEKDAY
-	if_not_equal MONDAY, .NODancing
+	if_not_equal MONDAY, .NoDancing
 	checknite
-	iffalse .NODancing
+	iffalse .NoDancing
 	appear MOUNTMOONSQUARE_FAIRY1
 	appear MOUNTMOONSQUARE_FAIRY2
 	applymovement PLAYER, PlayerWalksUpToDancingClefairies
@@ -76,7 +76,7 @@ ClefairyDance:
 	setflag ENGINE_MT_MOON_SQUARE_CLEFAIRY
 	end
 
-.NODancing:
+.NoDancing:
 	end
 
 MountMoonSquareHiddenMoonStone:

@@ -11,7 +11,7 @@ Special_CheckMagikarpLength: ; fbb32
 	cp MAGIKARP
 	jr nz, .not_magikarp
 
-	; NOw let's compute its length based on its DVs and ID.
+	; Now let's compute its length based on its DVs and ID.
 	ld a, [CurPartyMon]
 	ld hl, PartyMon1Species
 	ld bc, PARTYMON_STRUCT_LENGTH

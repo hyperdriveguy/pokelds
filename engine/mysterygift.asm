@@ -53,7 +53,7 @@ DoMysteryGift: ; 1048ba (41:48ba)
 	jp nz, .GiftWaiting
 	ld a, [wMysteryGiftPartnerBackupItem]
 	and a
-	jp nz, .FriendNOtReady
+	jp nz, .FriendNotReady
 	ld a, [wc900]
 	cp 3
 	jr z, .skip_append_save
@@ -111,8 +111,8 @@ DoMysteryGift: ; 1048ba (41:48ba)
 	ld hl, .Text_ReceiveGiftAtCounter ; receive gift at counter
 	jr .PrintTextAndExit
 
-.FriendNOtReady: ; 1049c2 (41:49c2)
-	ld hl, .Text_FriendNOtReady ; friend not ready
+.FriendNotReady: ; 1049c2 (41:49c2)
+	ld hl, .Text_FriendNotReady ; friend not ready
 
 .PrintTextAndExit: ; 1049c5 (41:49c5)
 	call PrintText
@@ -144,7 +144,7 @@ DoMysteryGift: ; 1048ba (41:48ba)
 	db "@"
 ; 104a0c
 
-.Text_FriendNOtReady: ; 104a0c
+.Text_FriendNotReady: ; 104a0c
 	text_jump UnknownText_0x1c048e
 	db "@"
 ; 104a11
@@ -187,7 +187,7 @@ DoMysteryGift: ; 1048ba (41:48ba)
 .loop
 	ld a, d
 	and a
-	jr z, .NO
+	jr z, .No
 	ld a, [hli]
 	cp b
 	jr nz, .skip
@@ -200,7 +200,7 @@ DoMysteryGift: ; 1048ba (41:48ba)
 	jr .loop
 .Yes:
 	scf
-.NO:
+.No:
 	jp CloseSRAM
 
 .AddMysteryGiftPartnerID: ; 104a56 (41:4a56)
@@ -1450,7 +1450,7 @@ Function105688: ; 105688 (41:5688)
 	callba Function8ac70
 	ld a, c
 	ld [wd265], a
-	ld hl, Text_CardNOtRegistered
+	ld hl, Text_CardNotRegistered
 	jr c, asm_105726
 	ld hl, Text_ListedCardAsNumber
 	jr asm_105726
@@ -1519,7 +1519,7 @@ Text_ListedCardAsNumber: ; 105763
 	text_jump UnknownText_0x1c0531
 	db "@"
 
-Text_CardNOtRegistered: ; 105768
+Text_CardNotRegistered: ; 105768
 	text_jump UnknownText_0x1c0555
 	db "@"
 

@@ -198,7 +198,7 @@ ItemDescriptions:
 	dw FriendBallDesc
 	dw MoonBallDesc
 	dw LoveBallDesc
-	dw NOrmalBoxDesc
+	dw NormalBoxDesc
 	dw GorgeousBoxDesc
 	dw SunStoneDesc
 	dw PolkadotBowDesc
@@ -925,7 +925,7 @@ LoveBallDesc:
 	db   "For catching the"
 	next "opposite gender.@"
 
-NOrmalBoxDesc:
+NormalBoxDesc:
 	db   "Open it and see"
 	next "what's inside.@"
 

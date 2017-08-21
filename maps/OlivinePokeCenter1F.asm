@@ -33,7 +33,7 @@ UnknownText_0x9c00e:
 	para "He taught my"
 	line "#mon STRENGTH."
 
-	para "NOw it can move"
+	para "Now it can move"
 	line "big boulders."
 	done
 

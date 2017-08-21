@@ -61,7 +61,7 @@ UnknownText_0x69be8:
 	text "Heh, that's good"
 	line "to hear."
 
-	para "NOw you're an"
+	para "Now you're an"
 	line "angler too!"
 	done
 

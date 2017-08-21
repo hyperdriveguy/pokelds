@@ -15,7 +15,7 @@
 	const DAYCARETEXT_WITHDRAW
 	const DAYCARETEXT_TOO_SOON
 	const DAYCARETEXT_PARTY_FULL
-	const DAYCARETEXT_NOT_ENOUGH_MONEY
+	const DAYCARETEXT_NoT_ENoUGH_MONEY
 	const DAYCARETEXT_OH_FINE
 	const DAYCARETEXT_COME_AGAIN
 	const DAYCARETEXT_13
@@ -106,14 +106,14 @@ DayCareLadyIntroText: ; 16781
 	inc a
 .okay
 	call PrintDayCareText
-	call YesNOBox
+	call YesNoBox
 	ret
 ; 1678f
 
 DayCareManIntroText: ; 1678f
 	set 7, [hl]
 	call PrintDayCareText
-	call YesNOBox
+	call YesNoBox
 	ret
 ; 16798
 
@@ -192,18 +192,18 @@ DayCare_AskWithdrawBreedMon: ; 16807
 	jr nz, .grew_at_least_one_level
 	ld a, DAYCARETEXT_PARTY_FULL
 	call PrintDayCareText
-	call YesNOBox
+	call YesNoBox
 	jr c, .refused
 	jr .check_money
 
 .grew_at_least_one_level
 	ld a, DAYCARETEXT_GENIUSES
 	call PrintDayCareText
-	call YesNOBox
+	call YesNoBox
 	jr c, .refused
 	ld a, DAYCARETEXT_ASK_WITHDRAW
 	call PrintDayCareText
-	call YesNOBox
+	call YesNoBox
 	jr c, .refused
 
 .check_money
@@ -228,7 +228,7 @@ DayCare_AskWithdrawBreedMon: ; 16807
 	ret
 
 .PartyFull:
-	ld a, DAYCARETEXT_NOT_ENOUGH_MONEY
+	ld a, DAYCARETEXT_NoT_ENoUGH_MONEY
 	scf
 	ret
 ; 16850
@@ -300,7 +300,7 @@ PrintDayCareText: ; 1689b
 	dw .GotBackMon ; 0e
 	dw .ImmediatelyWithdrawMon ; 0f
 	dw .PartyFull ; 10
-	dw .NOtEnoughMoney ; 11
+	dw .NotEnoughMoney ; 11
 	dw .OhFineThen ; 12
 	dw .ComeAgain ; 13
 ; 168d2
@@ -407,7 +407,7 @@ PrintDayCareText: ; 1689b
 	db "@"
 ; 0x16927
 
-.NOtEnoughMoney: ; 0x16927
+.NotEnoughMoney: ; 0x16927
 	; You don't have enough money.
 	text_jump UnknownText_0x1bdebc
 	db "@"
@@ -429,12 +429,12 @@ Special_DayCareManOutside: ; 16936
 	ld hl, wDaycareMan
 	bit 6, [hl]
 	jr nz, .AskGiveEgg
-	ld hl, .NOtYet
+	ld hl, .NotYet
 	call PrintText
 	ret
 
-.NOtYet: ; 0x16944
-	; NOt yet…
+.NotYet: ; 0x16944
+	; Not yet…
 	text_jump UnknownText_0x1bdef6
 	db "@"
 ; 0x16949
@@ -442,7 +442,7 @@ Special_DayCareManOutside: ; 16936
 .AskGiveEgg: ; 16949
 	ld hl, .IntroText
 	call PrintText
-	call YesNOBox
+	call YesNoBox
 	jr c, .Declined
 	ld a, [PartyCount]
 	cp PARTY_LENGTH
@@ -645,7 +645,7 @@ DayCare_InitBreeding: ; 16a3b
 	inc a
 
 .LoadWhichBreedmonIsTheMother:
-	ld [wBreedMotherOrNOnDitto], a
+	ld [wBreedMotherOrNonDitto], a
 	and a
 	ld a, [wBreedMon1Species]
 	jr z, .GotMother
@@ -732,7 +732,7 @@ DayCare_InitBreeding: ; 16a3b
 	ld bc, wBreedMon2DVs
 	jr c, .SkipDVs
 	jr z, .ParentCheck2
-	ld a, [wBreedMotherOrNOnDitto]
+	ld a, [wBreedMotherOrNonDitto]
 	and a
 	jr z, .GotDVs
 	ld d, b
@@ -740,7 +740,7 @@ DayCare_InitBreeding: ; 16a3b
 	jr .GotDVs
 
 .ParentCheck2:
-	ld a, [wBreedMotherOrNOnDitto]
+	ld a, [wBreedMotherOrNonDitto]
 	and a
 	jr nz, .GotDVs
 	ld d, b

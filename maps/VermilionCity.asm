@@ -3,7 +3,7 @@ const_value set 2
 	const VERMILIONCITY_GRAMPS
 	const VERMILIONCITY_MACHOP
 	const VERMILIONCITY_SUPER_NERD
-	const VERMILIONCITY_BIG_SNORLAX
+	const VERMILIONCITY_BIG_SNoRLAX
 	const VERMILIONCITY_POKEFAN_M
 
 VermilionCity_MapScriptHeader:
@@ -54,13 +54,13 @@ VermilionSnorlax:
 UnknownScript_0x1aa9ab:
 	writetext UnknownText_0x1aab84
 	pause 15
-	cry SNORLAX
+	cry SNoRLAX
 	closetext
 	writecode VAR_BATTLETYPE, BATTLETYPE_FORCEITEM
-	loadwildmon SNORLAX, 50
+	loadwildmon SNoRLAX, 50
 	startbattle
-	disappear VERMILIONCITY_BIG_SNORLAX
-	setevent EVENT_FOUGHT_SNORLAX
+	disappear VERMILIONCITY_BIG_SNoRLAX
+	setevent EVENT_FOUGHT_SNoRLAX
 	reloadmapafterbattle
 	end
 
@@ -168,18 +168,18 @@ UnknownText_0x1aab1a:
 	done
 
 UnknownText_0x1aab64:
-	text "SNORLAX is snoring"
+	text "SNoRLAX is snoring"
 	line "peacefully…"
 	done
 
 UnknownText_0x1aab84:
 	text "The #Gear was"
 	line "placed near the"
-	cont "sleeping SNORLAX…"
+	cont "sleeping SNoRLAX…"
 
 	para "…"
 
-	para "SNORLAX woke up!"
+	para "SNoRLAX woke up!"
 	done
 
 UnknownText_0x1aabc8:
@@ -306,5 +306,5 @@ VermilionCity_MapEventHeader:
 	person_event SPRITE_GRAMPS, 6, 23, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, VermilionMachopOwner, -1
 	person_event SPRITE_MACHOP, 7, 26, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, (1 << 3) | PAL_OW_BLUE, PERSONTYPE_SCRIPT, 0, VermilionMachop, -1
 	person_event SPRITE_SUPER_NERD, 16, 14, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, (1 << 3) | PAL_OW_GREEN, PERSONTYPE_SCRIPT, 0, SuperNerdScript_0x1aa99b, -1
-	person_event SPRITE_BIG_SNORLAX, 8, 34, SPRITEMOVEDATA_SNORLAX, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, VermilionSnorlax, EVENT_VERMILION_CITY_SNORLAX
+	person_event SPRITE_BIG_SNoRLAX, 8, 34, SPRITEMOVEDATA_SNoRLAX, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, VermilionSnorlax, EVENT_VERMILION_CITY_SNoRLAX
 	person_event SPRITE_POKEFAN_M, 12, 31, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, (1 << 3) | PAL_OW_RED, PERSONTYPE_SCRIPT, 0, VermilionGymBadgeGuy, -1

@@ -408,7 +408,7 @@ Function17d1f1: ; 17d1f1
 	call SetSeenAndCaughtMon
 
 	ld a, [CurPartySpecies]
-	cp UNOWN
+	cp UNoWN
 	jr nz, .asm_17d223
 
 	ld hl, PartyMon1DVs

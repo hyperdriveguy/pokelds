@@ -739,7 +739,7 @@ BattleAnimCmd_IncObj: ; cc4c0 (33:44c0)
 	ret
 
 .found
-	ld hl, BATTLEANIMSTRUCT_ANON_JT_INDEX
+	ld hl, BATTLEANIMSTRUCT_ANoN_JT_INDEX
 	add hl, bc
 	inc [hl]
 	ret
@@ -790,7 +790,7 @@ BattleAnimCmd_SetObj: ; cc506 (33:4506)
 
 .found
 	call GetBattleAnimByte
-	ld hl, BATTLEANIMSTRUCT_ANON_JT_INDEX
+	ld hl, BATTLEANIMSTRUCT_ANoN_JT_INDEX
 	add hl, bc
 	ld [hl], a
 	ret
@@ -1346,7 +1346,7 @@ PlayHitSound: ; cc881
 	ld de, SFX_SUPER_EFFECTIVE
 	jr nc, .play
 
-	ld de, SFX_NOT_VERY_EFFECTIVE
+	ld de, SFX_NoT_VERY_EFFECTIVE
 
 .play
 	call PlaySFX

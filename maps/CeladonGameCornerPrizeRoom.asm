@@ -21,7 +21,7 @@ GoldenrodGameCornerTMVendor:
 	writetext CeladonPrizeRoom_PrizeVendorIntroText
 	waitbutton
 	checkitem COIN_CASE
-	iffalse CeladonPrizeRoom_NOCoinCase
+	iffalse CeladonPrizeRoom_NoCoinCase
 	writetext CeladonPrizeRoom_AskWhichPrizeText
 CeladonPrizeRoom_tmcounterloop:
 	special Special_DisplayCoinCaseBalance
@@ -79,13 +79,13 @@ CeladonPrizeRoom_purchased:
 	jump CeladonPrizeRoom_tmcounterloop
 
 CeladonPrizeRoom_notenoughcoins:
-	writetext CeladonPrizeRoom_NOtEnoughCoinsText
+	writetext CeladonPrizeRoom_NotEnoughCoinsText
 	waitbutton
 	closetext
 	end
 
 CeladonPrizeRoom_notenoughroom:
-	writetext CeladonPrizeRoom_NOtEnoughRoomText
+	writetext CeladonPrizeRoom_NotEnoughRoomText
 	waitbutton
 	closetext
 	end
@@ -96,8 +96,8 @@ CeladonPrizeRoom_cancel:
 	closetext
 	end
 
-CeladonPrizeRoom_NOCoinCase:
-	writetext CeladonPrizeRoom_NOCoinCaseText
+CeladonPrizeRoom_NoCoinCase:
+	writetext CeladonPrizeRoom_NoCoinCaseText
 	waitbutton
 	closetext
 	end
@@ -125,7 +125,7 @@ GoldenrodGameCornerPokemonVendor:
 	writetext CeladonPrizeRoom_PrizeVendorIntroText
 	waitbutton
 	checkitem COIN_CASE
-	iffalse CeladonPrizeRoom_NOCoinCase
+	iffalse CeladonPrizeRoom_NoCoinCase
 .loop
 	writetext CeladonPrizeRoom_AskWhichPrizeText
 	special Special_DisplayCoinCaseBalance
@@ -249,12 +249,12 @@ CeladonPrizeRoom_HereYouGoText:
 	text "Here you go!"
 	done
 
-CeladonPrizeRoom_NOtEnoughCoinsText:
+CeladonPrizeRoom_NotEnoughCoinsText:
 	text "You don't have"
 	line "enough coins."
 	done
 
-CeladonPrizeRoom_NOtEnoughRoomText:
+CeladonPrizeRoom_NotEnoughRoomText:
 	text "You have no room"
 	line "for it."
 	done
@@ -264,7 +264,7 @@ CeladonPrizeRoom_ComeAgainText:
 	line "back with coins!"
 	done
 
-CeladonPrizeRoom_NOCoinCaseText:
+CeladonPrizeRoom_NoCoinCaseText:
 	text "Oh? You don't have"
 	line "a COIN CASE."
 	done

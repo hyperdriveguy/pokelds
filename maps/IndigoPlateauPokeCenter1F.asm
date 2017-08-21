@@ -26,7 +26,7 @@ UnknownScript_0x180009:
 UnknownScript_0x18000a:
 	domaptrigger WILLS_ROOM, $0
 	domaptrigger KOGAS_ROOM, $0
-	domaptrigger BRUNOS_ROOM, $0
+	domaptrigger BRUNoS_ROOM, $0
 	domaptrigger KARENS_ROOM, $0
 	domaptrigger LANCES_ROOM, $0
 	domaptrigger HALL_OF_FAME, $0
@@ -34,15 +34,15 @@ UnknownScript_0x18000a:
 	clearevent EVENT_WILLS_ROOM_EXIT_OPEN
 	clearevent EVENT_KOGAS_ROOM_ENTRANCE_CLOSED
 	clearevent EVENT_KOGAS_ROOM_EXIT_OPEN
-	clearevent EVENT_BRUNOS_ROOM_ENTRANCE_CLOSED
-	clearevent EVENT_BRUNOS_ROOM_EXIT_OPEN
+	clearevent EVENT_BRUNoS_ROOM_ENTRANCE_CLOSED
+	clearevent EVENT_BRUNoS_ROOM_EXIT_OPEN
 	clearevent EVENT_KARENS_ROOM_ENTRANCE_CLOSED
 	clearevent EVENT_KARENS_ROOM_EXIT_OPEN
 	clearevent EVENT_LANCES_ROOM_ENTRANCE_CLOSED
 	clearevent EVENT_LANCES_ROOM_EXIT_OPEN
 	clearevent EVENT_BEAT_ELITE_4_WILL
 	clearevent EVENT_BEAT_ELITE_4_KOGA
-	clearevent EVENT_BEAT_ELITE_4_BRUNO
+	clearevent EVENT_BEAT_ELITE_4_BRUNo
 	clearevent EVENT_BEAT_ELITE_4_KAREN
 	clearevent EVENT_BEAT_CHAMPION_LANCE
 	setevent EVENT_LANCES_ROOM_OAK_AND_MARY
@@ -158,7 +158,7 @@ TeleportGuyScript:
 	opentext
 	writetext TeleportGuyText1
 	yesorno
-	iffalse .NO
+	iffalse .No
 	writetext TeleportGuyYesText
 	waitbutton
 	closetext
@@ -168,8 +168,8 @@ TeleportGuyScript:
 	warp BOUNTIFUL_TOWN, 12, 11
 	end
 
-.NO:
-	writetext TeleportGuyNOText
+.No:
+	writetext TeleportGuyNoText
 	waitbutton
 	closetext
 	end
@@ -298,7 +298,7 @@ TeleportGuyYesText:
 	cont "mind…"
 	done
 
-TeleportGuyNOText:
+TeleportGuyNoText:
 	text "OK, OK. The best"
 	line "of luck to you!"
 	done

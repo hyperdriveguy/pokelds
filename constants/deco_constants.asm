@@ -88,7 +88,7 @@ __enum__ = 0
 	deco  VIRTUAL_BOY ; 18 (12)
 
 	const BIG_DOLLS
-	deco  BIG_SNORLAX_DOLL ; 1a (13)
+	deco  BIG_SNoRLAX_DOLL ; 1a (13)
 	deco  BIG_ONIX_DOLL ; 1b (14)
 	deco  BIG_LAPRAS_DOLL ; 1c (15)
 
@@ -110,12 +110,12 @@ __enum__ = 0
 	deco  GRIMER_DOLL ; 2c (24)
 	deco  VOLTORB_DOLL ; 2d (25)
 	deco  WEEDLE_DOLL ; 2e (26)
-	deco  UNOWN_DOLL ; 2f (27)
+	deco  UNoWN_DOLL ; 2f (27)
 	deco  GEODUDE_DOLL ; 30 (28)
 	deco  MACHOP_DOLL ; 31 (29)
 	deco  TENTACOOL_DOLL ; 32 (2a)
 	deco  GOLD_TROPHY_DOLL ; 33 (2b)
 	deco  SILVER_TROPHY_DOLL ; 34 (2c)
 
-NUM_NON_TROPHY_DECOS EQU $2b
+NUM_NoN_TROPHY_DECOS EQU $2b
 NUM_DECOS EQU $2d

@@ -3,12 +3,12 @@ RefreshScreen:: ; 2dba
 	call ClearWindowData
 	ld a, [hROMBank]
 	push af
-	ld a, BANK(ReanchorBGMap_NOOAMUpdate) ; and BANK(LoadFonts_NOOAMUpdate)
+	ld a, BANK(ReanchorBGMap_NoOAMUpdate) ; and BANK(LoadFonts_NoOAMUpdate)
 	rst Bankswitch
 
-	call ReanchorBGMap_NOOAMUpdate
+	call ReanchorBGMap_NoOAMUpdate
 	call _OpenAndCloseMenu_HDMATransferTileMapAndAttrMap
-	call LoadFonts_NOOAMUpdate
+	call LoadFonts_NoOAMUpdate
 
 	pop af
 	rst Bankswitch
@@ -52,13 +52,13 @@ OpenText:: ; 2e08
 	call ClearWindowData
 	ld a, [hROMBank]
 	push af
-	ld a, BANK(ReanchorBGMap_NOOAMUpdate) ; and BANK(LoadFonts_NOOAMUpdate)
+	ld a, BANK(ReanchorBGMap_NoOAMUpdate) ; and BANK(LoadFonts_NoOAMUpdate)
 	rst Bankswitch
 
-	call ReanchorBGMap_NOOAMUpdate ; clear bgmap
+	call ReanchorBGMap_NoOAMUpdate ; clear bgmap
 	call SpeechTextBox
 	call _OpenAndCloseMenu_HDMATransferTileMapAndAttrMap ; anchor bgmap
-	call LoadFonts_NOOAMUpdate ; load font
+	call LoadFonts_NoOAMUpdate ; load font
 	pop af
 	rst Bankswitch
 

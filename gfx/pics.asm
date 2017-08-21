@@ -131,7 +131,7 @@ HeracrossFrontpic:   INCBIN "gfx/pics/heracross/front.animated.2bpp.lz"
 SECTION "Pics 6", ROMX
 
 AriadosFrontpic:     INCBIN "gfx/pics/ariados/front.animated.2bpp.lz"
-NOctowlFrontpic:     INCBIN "gfx/pics/noctowl/front.animated.2bpp.lz"
+NoctowlFrontpic:     INCBIN "gfx/pics/noctowl/front.animated.2bpp.lz"
 WartortleFrontpic:   INCBIN "gfx/pics/wartortle/front.animated.2bpp.lz"
 LaprasFrontpic:      INCBIN "gfx/pics/lapras/front.animated.2bpp.lz"
 GolemFrontpic:       INCBIN "gfx/pics/golem/front.animated.2bpp.lz"
@@ -539,7 +539,7 @@ MagnemiteBackpic:    INCBIN "gfx/pics/magnemite/back.2bpp.lz"
 SECTION "Pics 16", ROMX
 
 HoothootBackpic:     INCBIN "gfx/pics/hoothoot/back.2bpp.lz"
-NOctowlBackpic:      INCBIN "gfx/pics/noctowl/back.2bpp.lz"
+NoctowlBackpic:      INCBIN "gfx/pics/noctowl/back.2bpp.lz"
 MortyPic:            INCBIN "gfx/trainers/morty.2bpp.lz"
 SlugmaBackpic:       INCBIN "gfx/pics/slugma/back.2bpp.lz"
 KabutoBackpic:       INCBIN "gfx/pics/kabuto/back.2bpp.lz"

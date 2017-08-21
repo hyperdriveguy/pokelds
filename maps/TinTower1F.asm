@@ -84,9 +84,9 @@ UnknownScript_0x185077:
 
 TinTowerStairsCallback:
 	checkevent EVENT_GOT_RAINBOW_WING
-	iftrue .NOChange
+	iftrue .NoChange
 	changeblock $a, $2, $9
-.NOChange:
+.NoChange:
 	return
 
 SuicuneBattle:
@@ -436,7 +436,7 @@ UnknownText_0x185629:
 	done
 
 UnknownText_0x18564a:
-	text "NOw, go."
+	text "Now, go."
 	done
 
 UnknownText_0x185654:
@@ -519,9 +519,9 @@ UnknownText_0x1858d0:
 	line "also be a link to"
 
 	para "#mon known as"
-	line "UNOWN."
+	line "UNoWN."
 
-	para "The #mon UNOWN"
+	para "The #mon UNoWN"
 	line "must be sharing a"
 
 	para "cooperative bond"

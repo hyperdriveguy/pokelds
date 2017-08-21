@@ -217,7 +217,7 @@ Route19FisherText2:
 	text "The roadwork is"
 	line "finally finished."
 
-	para "NOw I can go"
+	para "Now I can go"
 	line "fishing again."
 	done
 

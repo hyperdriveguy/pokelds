@@ -162,7 +162,7 @@ HandleMap: ; 96773
 	callba HandleCmdQueue ; no need to farcall
 	call MapEvents
 
-; NOt immediately entering a connected map will cause problems.
+; Not immediately entering a connected map will cause problems.
 	ld a, [MapStatus]
 	cp 2 ; HandleMap
 	ret nz
@@ -529,11 +529,11 @@ OWPlayerInput: ; 96974
 	call PlayerMovement
 	ret c
 	and a
-	jr nz, .NOAction
+	jr nz, .NoAction
 
 ; Can't perform button actions while sliding on ice.
 	callba CheckStandingOnIce
-	jr c, .NOAction
+	jr c, .NoAction
 
 	call CheckAPressOW
 	jr c, .Action
@@ -541,7 +541,7 @@ OWPlayerInput: ; 96974
 	call CheckMenuOW
 	jr c, .Action
 
-.NOAction:
+.NoAction:
 	xor a
 	ret
 
@@ -879,7 +879,7 @@ CheckMenuOW: ; 96b30
 	jr nz, .Select
 
 	bit 3, a ; START
-	jr z, .NOMenu
+	jr z, .NoMenu
 
 	ld a, BANK(StartMenuScript)
 	ld hl, StartMenuScript
@@ -887,7 +887,7 @@ CheckMenuOW: ; 96b30
 	scf
 	ret
 
-.NOMenu:
+.NoMenu:
 	xor a
 	ret
 

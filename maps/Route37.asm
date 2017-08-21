@@ -67,7 +67,7 @@ SunnyScript:
 	checkevent EVENT_GOT_MAGNET_FROM_SUNNY
 	iftrue SunnySundayScript
 	checkcode VAR_WEEKDAY
-	if_not_equal SUNDAY, SunnyNOtSundayScript
+	if_not_equal SUNDAY, SunnyNotSundayScript
 	checkevent EVENT_MET_SUNNY_OF_SUNDAY
 	iftrue .MetSunny
 	writetext MeetSunnyText
@@ -98,8 +98,8 @@ SunnyDoneScript:
 	closetext
 	end
 
-SunnyNOtSundayScript:
-	writetext SunnyNOtSundayText
+SunnyNotSundayScript:
+	writetext SunnyNotSundayText
 	waitbutton
 	closetext
 	end
@@ -231,7 +231,7 @@ SunnySundayText:
 	line "than me!"
 	done
 
-SunnyNOtSundayText:
+SunnyNotSundayText:
 	text "SUNNY: Isn't today"
 	line "Sunday?"
 	cont "Um… I forgot!"

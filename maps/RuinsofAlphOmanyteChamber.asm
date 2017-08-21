@@ -64,7 +64,7 @@ MapRuinsofAlphOmanyteChamberSignpost2Script:
 UnknownScript_0x58c36:
 	setevent EVENT_RUINS_OF_ALPH_INNER_CHAMBER_TOURISTS
 	setevent EVENT_SOLVED_OMANYTE_PUZZLE
-	setflag ENGINE_UNLOCKED_UNOWNS_2
+	setflag ENGINE_UNLOCKED_UNoWNS_2
 	domaptrigger RUINS_OF_ALPH_INNER_CHAMBER, $1
 	earthquake 30
 	showemote EMOTE_SHOCK, PLAYER, 15
@@ -122,7 +122,7 @@ UnknownText_0x58c8e:
 
 ; possibly unused.. this again?
 UnknownText_0x58caf:
-	text "It's UNOWN text!"
+	text "It's UNoWN text!"
 	done
 
 UnknownText_0x58cc0:

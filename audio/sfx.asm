@@ -474,8 +474,8 @@ Sfx_HangUp: ; f0b2d
 	musicheader 1, 5, Sfx_HangUp_Ch5
 ; f0b30
 
-Sfx_NOSignal: ; f0b30
-	musicheader 1, 5, Sfx_NOSignal_Ch5
+Sfx_NoSignal: ; f0b30
+	musicheader 1, 5, Sfx_NoSignal_Ch5
 ; f0b33
 
 Sfx_Elevator: ; f0b33
@@ -3792,11 +3792,11 @@ Sfx_DexFanfare230Plus_branch_f1b2b: ; f1b2b
 
 	togglesfx
 
-Sfx_NOtVeryEffective: ; f1b33
-	musicheader 1, 8, Sfx_NOtVeryEffective_Ch8
+Sfx_NotVeryEffective: ; f1b33
+	musicheader 1, 8, Sfx_NotVeryEffective_Ch8
 ; f1b36
 
-Sfx_NOtVeryEffective_Ch8: ; f1b36
+Sfx_NotVeryEffective_Ch8: ; f1b36
 	noise __,  5, $f1, $5f
 	noise __,  2, $a0, $42
 	noise C_,  1, $f1, $53
@@ -5485,8 +5485,8 @@ Sfx_HangUp_Ch5: ; f26f1
 	sound __,  3, $21, $077b
 	sound C_,  1, $0, 0
 Sfx_HangUp_branch_f26ff: ; f26ff
-Sfx_NOSignal_Ch5: ; f26ff
-Sfx_NOSignal_branch_f26ff: ; f26ff
+Sfx_NoSignal_Ch5: ; f26ff
+Sfx_NoSignal_branch_f26ff: ; f26ff
 	dutycycle $2
 	sound C_,  5, $e8, $070b
 	sound C_, 13, $0, 0

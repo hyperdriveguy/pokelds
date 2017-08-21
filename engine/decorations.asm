@@ -333,7 +333,7 @@ FindOwnedOrnaments: ; 26925
 	db DECO_GRIMER_DOLL ; 2c
 	db DECO_VOLTORB_DOLL ; 2d
 	db DECO_WEEDLE_DOLL ; 2e
-	db DECO_UNOWN_DOLL ; 2f
+	db DECO_UNoWN_DOLL ; 2f
 	db DECO_GEODUDE_DOLL ; 30
 	db DECO_MACHOP_DOLL ; 31
 	db DECO_TENTACOOL_DOLL ; 32
@@ -356,7 +356,7 @@ FindOwnedBigDolls: ; 2694d
 ; 26955
 
 .big_dolls ; 26955
-	db DECO_BIG_SNORLAX_DOLL ; 1a
+	db DECO_BIG_SNoRLAX_DOLL ; 1a
 	db DECO_BIG_ONIX_DOLL ; 1b
 	db DECO_BIG_LAPRAS_DOLL ; 1c
 	db -1
@@ -375,7 +375,7 @@ PopulateDecoCategoryMenu: ; 2695b
 	jr nc, .beyond_eight
 	xor a
 	ld [wWhichIndexSet], a
-	ld hl, .NOnscrollingMenuDataHeader
+	ld hl, .NonscrollingMenuDataHeader
 	call LoadMenuDataHeader
 	call DoNthMenu
 	jr c, .no_action_1
@@ -422,15 +422,15 @@ PopulateDecoCategoryMenu: ; 2695b
 	db "@"
 ; 0x269b5
 
-.NOnscrollingMenuDataHeader: ; 0x269b5
+.NonscrollingMenuDataHeader: ; 0x269b5
 	db $40 ; flags
 	db 00, 00 ; start coords
 	db 17, 19 ; end coords
-	dw .NOnscrollingMenuData2
+	dw .NonscrollingMenuData2
 	db 1 ; default option
 ; 0x269bd
 
-.NOnscrollingMenuData2: ; 0x269bd
+.NonscrollingMenuData2: ; 0x269bd
 	db $a0 ; flags
 	db 0 ; items
 	dw wd002
@@ -575,7 +575,7 @@ DecorationAttributes: ; 26a4f
 	decoration DECO_PLANT,    NINTENDO_64,       SET_UP_CONSOLE,     EVENT_DECO_N64,                    SPRITE_N64
 	decoration DECO_PLANT,    VIRTUAL_BOY,       SET_UP_CONSOLE,     EVENT_DECO_VIRTUAL_BOY,            SPRITE_VIRTUAL_BOY
 	decoration DECO_PLANT,    PUT_IT_AWAY,       PUT_AWAY_BIG_DOLL,  EVENT_GAVE_KURT_APRICORNS,                         $00
-	decoration DECO_BIGDOLL,  SNORLAX,           SET_UP_BIG_DOLL,    EVENT_DECO_BIG_SNORLAX_DOLL,       SPRITE_BIG_SNORLAX
+	decoration DECO_BIGDOLL,  SNoRLAX,           SET_UP_BIG_DOLL,    EVENT_DECO_BIG_SNoRLAX_DOLL,       SPRITE_BIG_SNoRLAX
 	decoration DECO_BIGDOLL,  ONIX,              SET_UP_BIG_DOLL,    EVENT_DECO_BIG_ONIX_DOLL,          SPRITE_BIG_ONIX
 	decoration DECO_BIGDOLL,  LAPRAS,            SET_UP_BIG_DOLL,    EVENT_DECO_BIG_LAPRAS_DOLL,        SPRITE_BIG_LAPRAS
 	decoration DECO_PLANT,    PUT_IT_AWAY,       PUT_AWAY_DOLL,      EVENT_GAVE_KURT_APRICORNS,                         $00
@@ -596,7 +596,7 @@ DecorationAttributes: ; 26a4f
 	decoration DECO_DOLL,     GRIMER,            SET_UP_DOLL,        EVENT_DECO_GRIMER_DOLL,            SPRITE_GRIMER
 	decoration DECO_DOLL,     VOLTORB,           SET_UP_DOLL,        EVENT_DECO_VOLTORB_DOLL,           SPRITE_VOLTORB
 	decoration DECO_DOLL,     WEEDLE,            SET_UP_DOLL,        EVENT_DECO_WEEDLE_DOLL,            SPRITE_WEEDLE
-	decoration DECO_DOLL,     UNOWN,             SET_UP_DOLL,        EVENT_DECO_UNOWN_DOLL,             SPRITE_UNOWN
+	decoration DECO_DOLL,     UNoWN,             SET_UP_DOLL,        EVENT_DECO_UNoWN_DOLL,             SPRITE_UNoWN
 	decoration DECO_DOLL,     GEODUDE,           SET_UP_DOLL,        EVENT_DECO_GEODUDE_DOLL,           SPRITE_GEODUDE
 	decoration DECO_DOLL,     MACHOP,            SET_UP_DOLL,        EVENT_DECO_MACHOP_DOLL,            SPRITE_MACHOP
 	decoration DECO_DOLL,     TENTACOOL,         SET_UP_DOLL,        EVENT_DECO_TENTACOOL_DOLL,         SPRITE_TENTACOOL
@@ -876,7 +876,7 @@ DecoAction_TryPutItAway: ; 26d86
 	ret
 
 .nothingthere
-	ld hl, DecoText_NOthingToPutAway
+	ld hl, DecoText_NothingToPutAway
 	call MenuTextBoxBackup
 	xor a
 	ret
@@ -990,7 +990,7 @@ DecoAction_PutItAway_Ornament: ; 26e46
 	ret
 
 .nothingthere
-	ld hl, DecoText_NOthingToPutAway
+	ld hl, DecoText_NothingToPutAway
 	call MenuTextBoxBackup
 	xor a
 	ret
@@ -1061,7 +1061,7 @@ DecoText_PutAwayTheDeco: ; 0x26ed1
 	db "@"
 ; 0x26ed6
 
-DecoText_NOthingToPutAway: ; 0x26ed6
+DecoText_NothingToPutAway: ; 0x26ed6
 	; There's nothing to put away.
 	text_jump UnknownText_0x1bc4ec
 	db "@"
@@ -1188,11 +1188,11 @@ DecorationIDs: ; 26f2b
 	db DECO_GRIMER_DOLL ; 2c
 	db DECO_VOLTORB_DOLL ; 2d
 	db DECO_WEEDLE_DOLL ; 2e
-	db DECO_UNOWN_DOLL ; 2f
+	db DECO_UNoWN_DOLL ; 2f
 	db DECO_GEODUDE_DOLL ; 30
 	db DECO_MACHOP_DOLL ; 31
 	db DECO_TENTACOOL_DOLL ; 32
-	db DECO_BIG_SNORLAX_DOLL ; 1a
+	db DECO_BIG_SNoRLAX_DOLL ; 1a
 	db DECO_BIG_ONIX_DOLL ; 1b
 	db DECO_BIG_LAPRAS_DOLL ; 1c
 Trophys:

@@ -1,4 +1,4 @@
-SLOTS_NOMATCH EQU -1
+SLOTS_NoMATCH EQU -1
 SLOTS_SEVEN EQU $00
 SLOTS_POKEBALL EQU $04
 SLOTS_CHERRY EQU $08
@@ -9,7 +9,7 @@ REEL_SIZE EQU 15
 
 _SlotMachine:
 	ld hl, Options
-	set NO_TEXT_SCROLL, [hl]
+	set No_TEXT_SCROLL, [hl]
 	call .InitGFX
 	call DelayFrame
 .loop
@@ -22,7 +22,7 @@ _SlotMachine:
 	call ClearBGPalettes
 	callba TrainerRankings_EndSlotsWinStreak
 	ld hl, Options
-	res NO_TEXT_SCROLL, [hl]
+	res No_TEXT_SCROLL, [hl]
 	ld hl, rLCDC ; $ff40
 	res 2, [hl]
 	ret
@@ -83,7 +83,7 @@ _SlotMachine:
 	ld [hl], $40
 	xor a
 	ld [wJumptableIndex], a
-	ld a, SLOTS_NOMATCH
+	ld a, SLOTS_NoMATCH
 	ld [wSlotBias], a
 	ld de, MUSIC_GAME_CORNER
 	call PlayMusic
@@ -514,7 +514,7 @@ Slots_StopReel2: ; 92a2e (24:6a2e)
 	ld a, [wSlotBias]
 	and a
 	jr z, .skip
-	cp SLOTS_NOMATCH
+	cp SLOTS_NoMATCH
 	jr nz, .dont_jump
 .skip
 	call .CheckReel1ForASeven
@@ -802,11 +802,11 @@ Function92bd4: ; 92bd4 (24:6bd4)
 
 .dw ; 92be4
 
-	dw ReelAction_DoNOthing                   ; 00
+	dw ReelAction_DoNothing                   ; 00
 	dw Slots_StopReelIgnoreJoypad             ; 01
 	dw ReelAction_QuadrupleRate               ; 02
 	dw ReelAction_DoubleRate                  ; 03
-	dw ReelAction_NOrmalRate                  ; 04
+	dw ReelAction_NormalRate                  ; 04
 	dw ReelAction_HalfRate                    ; 05
 	dw ReelAction_QuarterRate                 ; 06
 	dw ReelAction_StopReel1                   ; 07
@@ -829,7 +829,7 @@ Function92bd4: ; 92bd4 (24:6bd4)
 	dw ReelAction_DropReel                    ; 18
 ; 92c16
 
-ReelAction_DoNOthing: ; 92c16
+ReelAction_DoNothing: ; 92c16
 	ret
 
 ; 92c17
@@ -850,7 +850,7 @@ ReelAction_DoubleRate: ; 92c1e
 
 ; 92c25
 
-ReelAction_NOrmalRate: ; 92c25
+ReelAction_NormalRate: ; 92c25
 	ld hl, wReel1SpinRate - wReel1
 	add hl, bc
 	ld [hl], $4
@@ -904,17 +904,17 @@ Slots_StopReelIgnoreJoypad: ; 92c4c
 
 ReelAction_StopReel1: ; 92c5e
 	ld a, [wSlotBias]
-	cp SLOTS_NOMATCH
-	jr z, .NOBias
+	cp SLOTS_NoMATCH
+	jr z, .NoBias
 	ld hl, wReel1Slot09 - wReel1
 	add hl, bc
 	ld a, [hl]
 	and a
-	jr z, .NOBias
+	jr z, .NoBias
 	dec [hl]
 	call .CheckForBias
 	ret nz
-.NOBias:
+.NoBias:
 	call Slots_StopReel
 	ret
 
@@ -942,20 +942,20 @@ ReelAction_StopReel2: ; 92c86
 	ld a, [wSlotBuildingMatch]
 	ld hl, wSlotBias
 	cp [hl]
-	jr z, .NOBias
+	jr z, .NoBias
 .nope
 	ld a, [wSlotBias]
-	cp SLOTS_NOMATCH
-	jr z, .NOBias
+	cp SLOTS_NoMATCH
+	jr z, .NoBias
 	ld hl, wReel1Slot09 - wReel1
 	add hl, bc
 	ld a, [hl]
 	and a
-	jr z, .NOBias
+	jr z, .NoBias
 	dec [hl]
 	ret
 
-.NOBias:
+.NoBias:
 	call Slots_StopReel
 	ret
 
@@ -963,10 +963,10 @@ ReelAction_StopReel2: ; 92c86
 
 ReelAction_StopReel3: ; 92ca9
 	call Slots_CheckMatchedAllThreeReels
-	jr nc, .NOMatch
+	jr nc, .NoMatch
 	ld hl, wSlotBias
 	cp [hl]
-	jr z, .NOBias
+	jr z, .NoBias
 	ld hl, wReel1Slot09 - wReel1
 	add hl, bc
 	ld a, [hl]
@@ -975,19 +975,19 @@ ReelAction_StopReel3: ; 92ca9
 	dec [hl]
 	ret
 
-.NOMatch:
+.NoMatch:
 	ld a, [wSlotBias]
-	cp SLOTS_NOMATCH
-	jr z, .NOBias
+	cp SLOTS_NoMATCH
+	jr z, .NoBias
 	ld hl, wReel1Slot09 - wReel1
 	add hl, bc
 	ld a, [hl]
 	and a
-	jr z, .NOBias
+	jr z, .NoBias
 	dec [hl]
 	ret
 
-.NOBias:
+.NoBias:
 	call Slots_StopReel
 	ret
 
@@ -1599,7 +1599,7 @@ Slots_InitBias: ; 93002 (24:7002)
 	ld a, [wSlotBias]
 	and a
 	ret z
-	ld hl, .NOrmal
+	ld hl, .Normal
 	ld a, [ScriptVar]
 	and a
 	jr z, .okay
@@ -1621,14 +1621,14 @@ Slots_InitBias: ; 93002 (24:7002)
 
 ; 93023 (24:7023)
 
-.NOrmal: ; 93023
+.Normal: ; 93023
 	db $01, SLOTS_SEVEN    ; 1/256
 	db $03, SLOTS_POKEBALL ; 1/128
 	db $0a, SLOTS_STARYU   ; 7/256
 	db $14, SLOTS_SQUIRTLE ; 5/128
 	db $28, SLOTS_PIKACHU  ; 5/64
 	db $30, SLOTS_CHERRY   ; 1/32
-	db $ff, SLOTS_NOMATCH  ; everything else
+	db $ff, SLOTS_NoMATCH  ; everything else
 ; 93031
 
 .Lucky: ; 93031
@@ -1638,7 +1638,7 @@ Slots_InitBias: ; 93002 (24:7002)
 	db $10, SLOTS_SQUIRTLE ;  1/32
 	db $1e, SLOTS_PIKACHU  ;  7/128
 	db $50, SLOTS_CHERRY   ; 25/128
-	db $ff, SLOTS_NOMATCH  ; everything else
+	db $ff, SLOTS_NoMATCH  ; everything else
 ; 9303f
 
 Slots_IlluminateBetLights: ; 9303f (24:703f)
@@ -1702,7 +1702,7 @@ Slots_AskBet: ; 9307c (24:707c)
 	ld a, [hl]
 	cp c
 	jr nc, .Start
-	ld hl, .Text_NOtEnoughCoins
+	ld hl, .Text_NotEnoughCoins
 	call PrintText
 	jr .loop
 
@@ -1736,8 +1736,8 @@ Slots_AskBet: ; 9307c (24:707c)
 	db "@"
 ; 0x930d1
 
-.Text_NOtEnoughCoins: ; 0x930d1
-	; NOt enough coins.
+.Text_NotEnoughCoins: ; 0x930d1
+	; Not enough coins.
 	text_jump UnknownText_0x1c5066
 	db "@"
 ; 0x930d6
@@ -1774,7 +1774,7 @@ Slots_AskPlayAgain: ; 930e9 (24:70e9)
 	call PrintText
 	call LoadMenuTextBox
 	lb bc, 14, 12
-	call PlaceYesNOBox
+	call PlaceYesNoBox
 	ld a, [wMenuCursorY]
 	dec a
 	call CloseWindow

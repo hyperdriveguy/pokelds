@@ -161,7 +161,7 @@ Route6SaffronGate_BlockData:
 Route40BattleTowerGate_BlockData:
 Route2Gate_BlockData:
 Route5SaffronCityGate_BlockData:
-	INCBIN "maps/NOrthSouthGate.blk"
+	INCBIN "maps/NorthSouthGate.blk"
 
 CinnabarIsland_BlockData:
 	INCBIN "maps/CinnabarIsland.blk"
@@ -236,4 +236,4 @@ Route22_BlockData:
 	INCBIN "maps/Route22.blk"
 
 Route101PleasantGate_BlockData:
-	INCBIN "maps/NOrthWestGate.blk"
+	INCBIN "maps/NorthWestGate.blk"

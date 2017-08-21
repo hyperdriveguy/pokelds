@@ -73,7 +73,7 @@ ReceptionistScript_0x560ce:
 	buttonsound
 	if_greater_than $95, .VeryHappy
 	if_greater_than $31, .SomewhatHappy
-	jump .NOtVeryHappy
+	jump .NotVeryHappy
 
 .VeryHappy:
 	writetext UnknownText_0x5615a
@@ -90,7 +90,7 @@ ReceptionistScript_0x560ce:
 	closetext
 	end
 
-.NOtVeryHappy:
+.NotVeryHappy:
 	writetext UnknownText_0x561d8
 	buttonsound
 	verbosegiveitem TM_FRUSTRATION
@@ -110,14 +110,14 @@ Carrie:
 	faceplayer
 	opentext
 	special SpecialGameboyCheck
-	if_not_equal $2, .NOtGBC ; This is a dummy check from Gold and Silver.  In normal gameplay, this would not be checked.
+	if_not_equal $2, .NotGBC ; This is a dummy check from Gold and Silver.  In normal gameplay, this would not be checked.
 	writetext UnknownText_0x56241
 	waitbutton
 	closetext
 	special Special_UnlockMysteryGift
 	end
 
-.NOtGBC:
+.NotGBC:
 	writetext UnknownText_0x56279
 	waitbutton
 	closetext

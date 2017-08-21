@@ -111,7 +111,7 @@ Options_TextSpeed: ; e42f5
 	bit D_LEFT_F, a
 	jr nz, .LeftPressed
 	bit D_RIGHT_F, a
-	jr z, .NOnePressed
+	jr z, .NonePressed
 	ld a, c ; right pressed
 	cp INST_TEXT
 	jr c, .Increase
@@ -139,7 +139,7 @@ Options_TextSpeed: ; e42f5
 	or b
 	ld [Options], a
 
-.NOnePressed:
+.NonePressed:
 	ld b, 0
 	ld hl, .Strings
 rept 2
@@ -212,7 +212,7 @@ Options_BattleScene: ; e4365
 	bit D_LEFT_F, a
 	jr nz, .LeftPressed
 	bit D_RIGHT_F, a
-	jr z, .NOnePressed
+	jr z, .NonePressed
 	bit BATTLE_SCENE, [hl]
 	jr nz, .ToggleOn
 	jr .ToggleOff
@@ -222,7 +222,7 @@ Options_BattleScene: ; e4365
 	jr z, .ToggleOff
 	jr .ToggleOn
 
-.NOnePressed:
+.NonePressed:
 	bit BATTLE_SCENE, [hl]
 	jr z, .ToggleOn
 	jr .ToggleOff
@@ -256,7 +256,7 @@ Options_BattleStyle: ; e43a0
 	bit D_LEFT_F, a
 	jr nz, .LeftPressed
 	bit D_RIGHT_F, a
-	jr z, .NOnePressed
+	jr z, .NonePressed
 	bit BATTLE_SHIFT, [hl]
 	jr nz, .ToggleShift
 	jr .ToggleSet
@@ -266,7 +266,7 @@ Options_BattleStyle: ; e43a0
 	jr z, .ToggleSet
 	jr .ToggleShift
 
-.NOnePressed:
+.NonePressed:
 	bit BATTLE_SHIFT, [hl]
 	jr nz, .ToggleSet
 
@@ -336,7 +336,7 @@ Options_Print: ; e4424
 	bit D_LEFT_F, a
 	jr nz, .LeftPressed
 	bit D_RIGHT_F, a
-	jr z, .NOnePressed
+	jr z, .NonePressed
 	ld a, c
 	cp 4
 	jr c, .Increase
@@ -361,7 +361,7 @@ Options_Print: ; e4424
 	ld b, a
 	ld [GBPrinter], a
 
-.NOnePressed:
+.NonePressed:
 	ld b, $0
 	ld hl, .Strings
 	add hl, bc
@@ -378,7 +378,7 @@ Options_Print: ; e4424
 .Strings:
 	dw .Lightest
 	dw .Lighter
-	dw .NOrmal
+	dw .Normal
 	dw .Darker
 	dw .Darkest
 
@@ -386,8 +386,8 @@ Options_Print: ; e4424
 	db "Lightest@"
 .Lighter:
 	db "Lighter @"
-.NOrmal:
-	db "NOrmal  @"
+.Normal:
+	db "Normal  @"
 .Darker:
 	db "Darker  @"
 .Darkest:
@@ -416,12 +416,12 @@ GetPrinterSetting: ; e4491
 
 .IsLight:
 	ld c, 1
-	lb de, PRINT_LIGHTEST, PRINT_NORMAL ; the 2 values next to this setting
+	lb de, PRINT_LIGHTEST, PRINT_NoRMAL ; the 2 values next to this setting
 	ret
 
 .IsDark:
 	ld c, 3
-	lb de, PRINT_NORMAL, PRINT_DARKEST ; the 2 values next to this setting
+	lb de, PRINT_NoRMAL, PRINT_DARKEST ; the 2 values next to this setting
 	ret
 
 .IsDarkest:
@@ -436,7 +436,7 @@ Options_MenuAccount: ; e44c1
 	bit D_LEFT_F, a
 	jr nz, .LeftPressed
 	bit D_RIGHT_F, a
-	jr z, .NOnePressed
+	jr z, .NonePressed
 	bit MENU_ACCOUNT, [hl]
 	jr nz, .ToggleOff
 	jr .ToggleOn
@@ -446,7 +446,7 @@ Options_MenuAccount: ; e44c1
 	jr z, .ToggleOn
 	jr .ToggleOff
 
-.NOnePressed:
+.NonePressed:
 	bit MENU_ACCOUNT, [hl]
 	jr nz, .ToggleOn
 
@@ -548,12 +548,12 @@ OptionsControl: ; e452a
 .UpPressed:
 	ld a, [hl]
 	cp $6
-	jr nz, .NOtSix
+	jr nz, .NotSix
 	ld [hl], $5 ; Another thing where I'm not sure why it exists
 	scf
 	ret
 
-.NOtSix:
+.NotSix:
 	and a
 	jr nz, .Decrease
 	ld [hl], $8 ; number of option items +1

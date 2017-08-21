@@ -146,12 +146,12 @@ Route36RockSmashGuyScript:
 	writetext RockSmashGuyText2
 	buttonsound
 	verbosegiveitem TM_ROCK_SMASH
-	iffalse .NORoomForTM
+	iffalse .NoRoomForTM
 	setevent EVENT_GOT_TM08_ROCK_SMASH
 .AlreadyGotRockSmash:
 	writetext RockSmashGuyText3
 	waitbutton
-.NORoomForTM:
+.NoRoomForTM:
 	closetext
 	end
 
@@ -326,7 +326,7 @@ ArthurScript:
 	checkevent EVENT_GOT_HARD_STONE_FROM_ARTHUR
 	iftrue .AlreadyGotStone
 	checkcode VAR_WEEKDAY
-	if_not_equal THURSDAY, ArthurNOtThursdayScript
+	if_not_equal THURSDAY, ArthurNotThursdayScript
 	checkevent EVENT_MET_ARTHUR_OF_THURSDAY
 	iftrue .MetArthur
 	writetext MeetArthurText
@@ -350,8 +350,8 @@ ArthurScript:
 	closetext
 	end
 
-ArthurNOtThursdayScript:
-	writetext ArthurNOtThursdayText
+ArthurNotThursdayScript:
+	writetext ArthurNotThursdayText
 	waitbutton
 	closetext
 	end
@@ -359,8 +359,8 @@ ArthurNOtThursdayScript:
 Route36Sign:
 	jumptext Route36SignText
 
-RuinsOfAlphNOrthSign:
-	jumptext RuinsOfAlphNOrthSignText
+RuinsOfAlphNorthSign:
+	jumptext RuinsOfAlphNorthSignText
 
 Route36TrainerTips1:
 	jumptext Route36TrainerTips1Text
@@ -618,7 +618,7 @@ ArthurThursdayText:
 	line "of seven children."
 	done
 
-ArthurNOtThursdayText:
+ArthurNotThursdayText:
 	text "ARTHUR: Today's"
 	line "not Thursday. How"
 	cont "disappointing."
@@ -628,9 +628,9 @@ Route36SignText:
 	text "ROUTE 36"
 	done
 
-RuinsOfAlphNOrthSignText:
+RuinsOfAlphNorthSignText:
 	text "RUINS OF ALPH"
-	line "NORTH ENTRANCE"
+	line "NoRTH ENTRANCE"
 	done
 
 Route36TrainerTips1Text:
@@ -683,7 +683,7 @@ Route36_MapEventHeader:
 .Signposts:
 	db 4
 	signpost 1, 29, SIGNPOST_READ, Route36TrainerTips2
-	signpost 11, 45, SIGNPOST_READ, RuinsOfAlphNOrthSign
+	signpost 11, 45, SIGNPOST_READ, RuinsOfAlphNorthSign
 	signpost 7, 55, SIGNPOST_READ, Route36Sign
 	signpost 7, 21, SIGNPOST_READ, Route36TrainerTips1
 

@@ -66,7 +66,7 @@ ManiaScript:
 	end
 
 .wrong
-	writetext ManiaText_ShuckleNOtThere
+	writetext ManiaText_ShuckleNotThere
 	waitbutton
 	closetext
 	end
@@ -159,7 +159,7 @@ ManiaText_ThankYou:
 	text "Thank you!"
 	done
 
-ManiaText_ShuckleNOtThere:
+ManiaText_ShuckleNotThere:
 	text "Hey, you don't"
 	line "have my #mon"
 	cont "with you."

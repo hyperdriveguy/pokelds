@@ -325,8 +325,8 @@
 	add_pic FurretBackpic
 	add_pic HoothootFrontpic
 	add_pic HoothootBackpic
-	add_pic NOctowlFrontpic
-	add_pic NOctowlBackpic
+	add_pic NoctowlFrontpic
+	add_pic NoctowlBackpic
 	add_pic LedybaFrontpic
 	add_pic LedybaBackpic
 	add_pic LedianFrontpic

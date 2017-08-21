@@ -60,7 +60,7 @@ GoldenrodGmeCornerTMVendorScript:
 	writetext GoldenrodGameCornerPrizeVendorIntroText
 	waitbutton
 	checkitem COIN_CASE
-	iffalse GoldenrodGameCornerPrizeVendor_NOCoinCaseScript
+	iffalse GoldenrodGameCornerPrizeVendor_NoCoinCaseScript
 	writetext GoldenrodGameCornerPrizeVendorWhichPrizeText
 GoldenrodGmeCornerTMVendor_LoopScript: ; 056c36
 	special Special_DisplayCoinCaseBalance
@@ -74,34 +74,34 @@ GoldenrodGmeCornerTMVendor_LoopScript: ; 056c36
 
 .Thunder:
 	checkcoins 5500
-	if_equal $2, GoldenrodGameCornerPrizeVendor_NOtEnoughCoinsScript
+	if_equal $2, GoldenrodGameCornerPrizeVendor_NotEnoughCoinsScript
 	itemtotext TM_THUNDER, $0
 	scall GoldenrodGameCornerPrizeVendor_ConfirmPurchaseScript
 	iffalse GoldenrodGameCornerPrizeVendor_CancelPurchaseScript
 	giveitem TM_THUNDER
-	iffalse GoldenrodGameCornerPrizeMonVendor_NORoomForPrizeScript
+	iffalse GoldenrodGameCornerPrizeMonVendor_NoRoomForPrizeScript
 	takecoins 5500
 	jump GoldenrodGmeCornerTMVendor_FinishScript
 
 .Blizzard:
 	checkcoins 5500
-	if_equal $2, GoldenrodGameCornerPrizeVendor_NOtEnoughCoinsScript
+	if_equal $2, GoldenrodGameCornerPrizeVendor_NotEnoughCoinsScript
 	itemtotext TM_BLIZZARD, $0
 	scall GoldenrodGameCornerPrizeVendor_ConfirmPurchaseScript
 	iffalse GoldenrodGameCornerPrizeVendor_CancelPurchaseScript
 	giveitem TM_BLIZZARD
-	iffalse GoldenrodGameCornerPrizeMonVendor_NORoomForPrizeScript
+	iffalse GoldenrodGameCornerPrizeMonVendor_NoRoomForPrizeScript
 	takecoins 5500
 	jump GoldenrodGmeCornerTMVendor_FinishScript
 
 .FireBlast:
 	checkcoins 5500
-	if_equal $2, GoldenrodGameCornerPrizeVendor_NOtEnoughCoinsScript
+	if_equal $2, GoldenrodGameCornerPrizeVendor_NotEnoughCoinsScript
 	itemtotext TM_FIRE_BLAST, $0
 	scall GoldenrodGameCornerPrizeVendor_ConfirmPurchaseScript
 	iffalse GoldenrodGameCornerPrizeVendor_CancelPurchaseScript
 	giveitem TM_FIRE_BLAST
-	iffalse GoldenrodGameCornerPrizeMonVendor_NORoomForPrizeScript
+	iffalse GoldenrodGameCornerPrizeMonVendor_NoRoomForPrizeScript
 	takecoins 5500
 	jump GoldenrodGmeCornerTMVendor_FinishScript
 
@@ -117,14 +117,14 @@ GoldenrodGmeCornerTMVendor_FinishScript:
 	waitbutton
 	jump GoldenrodGmeCornerTMVendor_LoopScript
 
-GoldenrodGameCornerPrizeVendor_NOtEnoughCoinsScript:
+GoldenrodGameCornerPrizeVendor_NotEnoughCoinsScript:
 	writetext GoldenrodGameCornerPrizeVendorNeedMoreCoinsText
 	waitbutton
 	closetext
 	end
 
-GoldenrodGameCornerPrizeMonVendor_NORoomForPrizeScript:
-	writetext GoldenrodGameCornerPrizeVendorNOMoreRoomText
+GoldenrodGameCornerPrizeMonVendor_NoRoomForPrizeScript:
+	writetext GoldenrodGameCornerPrizeVendorNoMoreRoomText
 	waitbutton
 	closetext
 	end
@@ -135,8 +135,8 @@ GoldenrodGameCornerPrizeVendor_CancelPurchaseScript:
 	closetext
 	end
 
-GoldenrodGameCornerPrizeVendor_NOCoinCaseScript:
-	writetext GoldenrodGameCornerPrizeVendorNOCoinCaseText
+GoldenrodGameCornerPrizeVendor_NoCoinCaseScript:
+	writetext GoldenrodGameCornerPrizeVendorNoCoinCaseText
 	waitbutton
 	closetext
 	end
@@ -164,7 +164,7 @@ GoldenrodGameCornerPrizeMonVendorScript:
 	writetext GoldenrodGameCornerPrizeVendorIntroText
 	waitbutton
 	checkitem COIN_CASE
-	iffalse GoldenrodGameCornerPrizeVendor_NOCoinCaseScript
+	iffalse GoldenrodGameCornerPrizeVendor_NoCoinCaseScript
 .loop
 	writetext GoldenrodGameCornerPrizeVendorWhichPrizeText
 	special Special_DisplayCoinCaseBalance
@@ -178,9 +178,9 @@ GoldenrodGameCornerPrizeMonVendorScript:
 
 .abra
 	checkcoins 100
-	if_equal $2, GoldenrodGameCornerPrizeVendor_NOtEnoughCoinsScript
+	if_equal $2, GoldenrodGameCornerPrizeVendor_NotEnoughCoinsScript
 	checkcode VAR_PARTYCOUNT
-	if_equal $6, GoldenrodGameCornerPrizeMonVendor_NORoomForPrizeScript
+	if_equal $6, GoldenrodGameCornerPrizeMonVendor_NoRoomForPrizeScript
 	pokenamemem ABRA, $0
 	scall GoldenrodGameCornerPrizeVendor_ConfirmPurchaseScript
 	iffalse GoldenrodGameCornerPrizeVendor_CancelPurchaseScript
@@ -196,9 +196,9 @@ GoldenrodGameCornerPrizeMonVendorScript:
 
 .cubone
 	checkcoins 800
-	if_equal $2, GoldenrodGameCornerPrizeVendor_NOtEnoughCoinsScript
+	if_equal $2, GoldenrodGameCornerPrizeVendor_NotEnoughCoinsScript
 	checkcode VAR_PARTYCOUNT
-	if_equal $6, GoldenrodGameCornerPrizeMonVendor_NORoomForPrizeScript
+	if_equal $6, GoldenrodGameCornerPrizeMonVendor_NoRoomForPrizeScript
 	pokenamemem CUBONE, $0
 	scall GoldenrodGameCornerPrizeVendor_ConfirmPurchaseScript
 	iffalse GoldenrodGameCornerPrizeVendor_CancelPurchaseScript
@@ -214,9 +214,9 @@ GoldenrodGameCornerPrizeMonVendorScript:
 
 .wobbuffet
 	checkcoins 1500
-	if_equal $2, GoldenrodGameCornerPrizeVendor_NOtEnoughCoinsScript
+	if_equal $2, GoldenrodGameCornerPrizeVendor_NotEnoughCoinsScript
 	checkcode VAR_PARTYCOUNT
-	if_equal $6, GoldenrodGameCornerPrizeMonVendor_NORoomForPrizeScript
+	if_equal $6, GoldenrodGameCornerPrizeMonVendor_NoRoomForPrizeScript
 	pokenamemem WOBBUFFET, $0
 	scall GoldenrodGameCornerPrizeVendor_ConfirmPurchaseScript
 	iffalse GoldenrodGameCornerPrizeVendor_CancelPurchaseScript
@@ -351,7 +351,7 @@ GoldenrodGameCornerPrizeVendorNeedMoreCoinsText:
 	line "more coins."
 	done
 
-GoldenrodGameCornerPrizeVendorNOMoreRoomText:
+GoldenrodGameCornerPrizeVendorNoMoreRoomText:
 	text "Sorry. You can't"
 	line "carry any more."
 	done
@@ -362,7 +362,7 @@ GoldenrodGameCornerPrizeVendorQuitText:
 	cont "come again!"
 	done
 
-GoldenrodGameCornerPrizeVendorNOCoinCaseText:
+GoldenrodGameCornerPrizeVendorNoCoinCaseText:
 	text "Oh? You don't have"
 	line "a COIN CASE."
 	done

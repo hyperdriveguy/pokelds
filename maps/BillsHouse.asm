@@ -35,10 +35,10 @@ BillsGrandpa:
 	buttonsound
 	writetext BillsGrandpaAskToSeeMonText
 	yesorno
-	iffalse .SaidNO
+	iffalse .SaidNo
 	scall .ExcitedToSee
 	special Special_BillsGrandfather
-	iffalse .SaidNO
+	iffalse .SaidNo
 	if_not_equal LICKITUNG, .WrongPokemon
 	scall .CorrectPokemon
 	setevent EVENT_SHOWED_LICKITUNG_TO_BILLS_GRANDPA
@@ -49,10 +49,10 @@ BillsGrandpa:
 	buttonsound
 	writetext BillsGrandpaAskToSeeMonText
 	yesorno
-	iffalse .SaidNO
+	iffalse .SaidNo
 	scall .ExcitedToSee
 	special Special_BillsGrandfather
-	iffalse .SaidNO
+	iffalse .SaidNo
 	if_not_equal ODDISH, .WrongPokemon
 	scall .CorrectPokemon
 	setevent EVENT_SHOWED_ODDISH_TO_BILLS_GRANDPA
@@ -63,10 +63,10 @@ BillsGrandpa:
 	buttonsound
 	writetext BillsGrandpaAskToSeeMonText
 	yesorno
-	iffalse .SaidNO
+	iffalse .SaidNo
 	scall .ExcitedToSee
 	special Special_BillsGrandfather
-	iffalse .SaidNO
+	iffalse .SaidNo
 	if_not_equal STARYU, .WrongPokemon
 	scall .CorrectPokemon
 	setevent EVENT_SHOWED_STARYU_TO_BILLS_GRANDPA
@@ -79,10 +79,10 @@ BillsGrandpa:
 	buttonsound
 	writetext BillsGrandpaAskToSeeMonText
 	yesorno
-	iffalse .SaidNO
+	iffalse .SaidNo
 	scall .ExcitedToSee
 	special Special_BillsGrandfather
-	iffalse .SaidNO
+	iffalse .SaidNo
 	if_not_equal GROWLITHE, .WrongPokemon
 	scall .CorrectPokemon
 	setevent EVENT_SHOWED_GROWLITHE_VULPIX_TO_BILLS_GRANDPA
@@ -93,10 +93,10 @@ BillsGrandpa:
 	buttonsound
 	writetext BillsGrandpaAskToSeeMonText
 	yesorno
-	iffalse .SaidNO
+	iffalse .SaidNo
 	scall .ExcitedToSee
 	special Special_BillsGrandfather
-	iffalse .SaidNO
+	iffalse .SaidNo
 	if_not_equal VULPIX, .WrongPokemon
 	scall .CorrectPokemon
 	setevent EVENT_SHOWED_GROWLITHE_VULPIX_TO_BILLS_GRANDPA
@@ -107,10 +107,10 @@ BillsGrandpa:
 	buttonsound
 	writetext BillsGrandpaAskToSeeMonText
 	yesorno
-	iffalse .SaidNO
+	iffalse .SaidNo
 	scall .ExcitedToSee
 	special Special_BillsGrandfather
-	iffalse .SaidNO
+	iffalse .SaidNo
 	if_not_equal PICHU, .WrongPokemon
 	scall .CorrectPokemon
 	setevent EVENT_SHOWED_PICHU_TO_BILLS_GRANDPA
@@ -173,7 +173,7 @@ BillsGrandpa:
 	buttonsound
 	end
 
-.SaidNO:
+.SaidNo:
 	writetext BillsGrandpaYouDontHaveItTextText
 	waitbutton
 	closetext

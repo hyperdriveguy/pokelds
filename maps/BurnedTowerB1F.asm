@@ -32,9 +32,9 @@ UnknownScript_0x18615f:
 
 BurnedTowerB1FLadderCallback:
 	checkevent EVENT_RELEASED_THE_BEASTS
-	iftrue .NOChange
+	iftrue .NoChange
 	changeblock $6, $e, $2
-.NOChange:
+.NoChange:
 	return
 
 ReleaseTheBeasts:

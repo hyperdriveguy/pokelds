@@ -74,7 +74,7 @@ TrainerRankings_MagikarpLength: mobile ; 105f33
 	dec hl
 	jr z, .newRecordShortest
 
-	; NOw check if this Magikarp is the shortest
+	; Now check if this Magikarp is the shortest
 	ld a, [de]
 	cp [hl]
 	jr z, .isLowByteLower
@@ -146,7 +146,7 @@ TrainerRankings_AddToSlotsWinStreak: mobile ; 105f9f
 
 .noCarry
 	dec hl
-	; NOw check if this is a new record for longest streak
+	; Now check if this is a new record for longest streak
 	ld a, [sTrainerRankingLongestSlotsStreak]
 	cp [hl]
 	jr z, .isLowByteHigher
@@ -798,7 +798,7 @@ MobileFn_106314: mobile ; 106314
 	ret
 ; 10632f
 
-Mobile_AlwaysReturnNOtCarry: ; 10632f
+Mobile_AlwaysReturnNotCarry: ; 10632f
 	or a
 	ret
 
@@ -883,7 +883,7 @@ Function106392: ; 106392
 	ret
 
 .asm_1063a2
-	call Mobile_AlwaysReturnNOtCarry
+	call Mobile_AlwaysReturnNotCarry
 	ld a, c
 	and a
 	jr nz, .asm_1063b4
@@ -969,7 +969,7 @@ Function106403: ; 106403
 	ret
 
 .asm_106426
-	call Mobile_AlwaysReturnNOtCarry
+	call Mobile_AlwaysReturnNotCarry
 	ld a, c
 	and a
 	jr z, .asm_106435

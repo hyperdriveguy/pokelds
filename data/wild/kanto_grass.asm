@@ -211,10 +211,10 @@
 	db 3, HOOTHOOT
 	db 3, SPINARAK
 	db 5, HOOTHOOT
-	db 7, NOCTOWL
+	db 7, NoCTOWL
 	db 7, ARIADOS
-	db 4, NOCTOWL
-	db 4, NOCTOWL
+	db 4, NoCTOWL
+	db 4, NoCTOWL
 
 	map ROUTE_3
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
@@ -291,7 +291,7 @@
 	; nite
 	db 13, HOOTHOOT
 	db 13, MEOWTH
-	db 15, NOCTOWL
+	db 15, NoCTOWL
 	db 12, ABRA
 	db 14, JIGGLYPUFF
 	db 14, ABRA
@@ -371,7 +371,7 @@
 	db 18, KADABRA
 	; nite
 	db 17, MEOWTH
-	db 20, NOCTOWL
+	db 20, NoCTOWL
 	db 16, ABRA
 	db 17, HAUNTER
 	db 16, JIGGLYPUFF
@@ -398,14 +398,14 @@
 	db 18, MAROWAK
 	; nite
 	db 15, RATTATA
-	db 15, VENONAT
+	db 15, VENoNAT
 	db 15, RATICATE
-	db 15, VENOMOTH
+	db 15, VENoMOTH
 	db 15, ZUBAT
 	db 18, RATICATE
 	db 18, RATICATE
 
-	map ROUTE_10_NORTH
+	map ROUTE_10_NoRTH
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
 	db 15, SPEAROW
@@ -424,10 +424,10 @@
 	db 18, ELECTABUZZ
 	db 18, ELECTABUZZ
 	; nite
-	db 15, VENONAT
+	db 15, VENoNAT
 	db 17, VOLTORB
 	db 15, RATICATE
-	db 15, VENOMOTH
+	db 15, VENoMOTH
 	db 15, ZUBAT
 	db 16, ELECTABUZZ
 	db 16, ELECTABUZZ
@@ -454,15 +454,15 @@
 	db 14, DROWZEE
 	db 13, MEOWTH
 	db 15, MAGNEMITE
-	db 16, NOCTOWL
+	db 16, NoCTOWL
 	db 16, RATICATE
-	db 16, HYPNO
-	db 16, HYPNO
+	db 16, HYPNo
+	db 16, HYPNo
 
 	map ROUTE_13
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 23, NIDORINO
+	db 23, NIDORINo
 	db 23, NIDORINA
 	db 25, PIDGEOTTO
 	db 25, HOPPIP
@@ -470,7 +470,7 @@
 	db 27, HOPPIP
 	db 25, CHANSEY
 	; day
-	db 23, NIDORINO
+	db 23, NIDORINo
 	db 23, NIDORINA
 	db 25, PIDGEOTTO
 	db 25, HOPPIP
@@ -478,10 +478,10 @@
 	db 27, HOPPIP
 	db 25, CHANSEY
 	; nite
-	db 23, VENONAT
+	db 23, VENoNAT
 	db 23, QUAGSIRE
-	db 25, NOCTOWL
-	db 25, VENOMOTH
+	db 25, NoCTOWL
+	db 25, VENoMOTH
 	db 25, QUAGSIRE
 	db 25, QUAGSIRE
 	db 25, CHANSEY
@@ -489,7 +489,7 @@
 	map ROUTE_14
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 26, NIDORINO
+	db 26, NIDORINo
 	db 26, NIDORINA
 	db 28, PIDGEOTTO
 	db 28, HOPPIP
@@ -497,7 +497,7 @@
 	db 30, SKIPLOOM
 	db 28, CHANSEY
 	; day
-	db 26, NIDORINO
+	db 26, NIDORINo
 	db 26, NIDORINA
 	db 28, PIDGEOTTO
 	db 28, HOPPIP
@@ -505,10 +505,10 @@
 	db 30, SKIPLOOM
 	db 28, CHANSEY
 	; nite
-	db 26, VENONAT
+	db 26, VENoNAT
 	db 26, QUAGSIRE
-	db 28, NOCTOWL
-	db 28, VENOMOTH
+	db 28, NoCTOWL
+	db 28, VENoMOTH
 	db 28, QUAGSIRE
 	db 28, QUAGSIRE
 	db 28, CHANSEY
@@ -516,7 +516,7 @@
 	map ROUTE_15
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 23, NIDORINO
+	db 23, NIDORINo
 	db 23, NIDORINA
 	db 25, PIDGEOTTO
 	db 25, HOPPIP
@@ -524,7 +524,7 @@
 	db 27, HOPPIP
 	db 25, CHANSEY
 	; day
-	db 23, NIDORINO
+	db 23, NIDORINo
 	db 23, NIDORINA
 	db 25, PIDGEOTTO
 	db 25, HOPPIP
@@ -532,10 +532,10 @@
 	db 27, HOPPIP
 	db 25, CHANSEY
 	; nite
-	db 23, VENONAT
+	db 23, VENoNAT
 	db 23, QUAGSIRE
-	db 25, NOCTOWL
-	db 25, VENOMOTH
+	db 25, NoCTOWL
+	db 25, VENoMOTH
 	db 25, QUAGSIRE
 	db 25, QUAGSIRE
 	db 25, CHANSEY
@@ -694,7 +694,7 @@
 	db 14, BUTTERFREE
 	db 14, BUTTERFREE
 	; nite
-	db 10, VENONAT
+	db 10, VENoNAT
 	db 10, ODDISH
 	db 12, ODDISH
 	db 12, ABRA
@@ -723,11 +723,11 @@
 	; nite
 	db 10, ODDISH
 	db 10, HOOTHOOT
-	db 10, VENONAT
-	db 12, NOCTOWL
+	db 10, VENoNAT
+	db 12, NoCTOWL
 	db 10, BELLSPROUT
-	db 14, NOCTOWL
-	db 14, NOCTOWL
+	db 14, NoCTOWL
+	db 14, NoCTOWL
 
 	map ROUTE_26
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
@@ -748,9 +748,9 @@
 	db 30, ARBOK
 	db 30, ARBOK
 	; nite
-	db 28, NOCTOWL
+	db 28, NoCTOWL
 	db 28, RATICATE
-	db 32, NOCTOWL
+	db 32, NoCTOWL
 	db 30, RATICATE
 	db 30, QUAGSIRE
 	db 30, QUAGSIRE
@@ -776,12 +776,12 @@
 	db 30, DODRIO
 	; nite
 	db 28, QUAGSIRE
-	db 28, NOCTOWL
+	db 28, NoCTOWL
 	db 30, RATICATE
 	db 30, QUAGSIRE
-	db 32, NOCTOWL
-	db 32, NOCTOWL
-	db 32, NOCTOWL
+	db 32, NoCTOWL
+	db 32, NoCTOWL
+	db 32, NoCTOWL
 
 	map ROUTE_28
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite

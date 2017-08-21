@@ -106,20 +106,20 @@ CheckBreedmonCompatibility: ; 16e1d
 ; 16ed6
 
 .CheckBreedingGroupCompatibility: ; 16ed6
-; If either mon is in the NO Eggs group,
+; If either mon is in the No Eggs group,
 ; they are not compatible.
 	ld a, [wBreedMon2Species]
 	ld [CurSpecies], a
 	call GetBaseData
 	ld a, [BaseEggGroups]
-	cp NO_EGGS * $11
+	cp No_EGGS * $11
 	jr z, .Incompatible
 
 	ld a, [wBreedMon1Species]
 	ld [CurSpecies], a
 	call GetBaseData
 	ld a, [BaseEggGroups]
-	cp NO_EGGS * $11
+	cp No_EGGS * $11
 	jr z, .Incompatible
 
 ; Ditto is automatically compatible with everything.
@@ -327,7 +327,7 @@ HatchEggs: ; 16f70 (5:6f70)
 	push de
 	ld hl, .Text_NicknameHatchling
 	call PrintText
-	call YesNOBox
+	call YesNoBox
 	pop de
 	jr c, .nonickname
 
@@ -561,7 +561,7 @@ GetHeritableMoves: ; 17197
 	ld a, [wBreedMon2Species]
 	cp DITTO
 	jr z, .ditto2
-	ld a, [wBreedMotherOrNOnDitto]
+	ld a, [wBreedMotherOrNonDitto]
 	and a
 	ret z
 	ld hl, wBreedMon1Moves
@@ -619,7 +619,7 @@ GetBreedmonMovePointer: ; 1720b
 	ld a, [wBreedMon2Species]
 	cp DITTO
 	jr z, .ditto
-	ld a, [wBreedMotherOrNOnDitto]
+	ld a, [wBreedMotherOrNonDitto]
 	and a
 	ret z
 

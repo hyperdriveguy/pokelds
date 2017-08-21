@@ -68,7 +68,7 @@ UnknownScript_0x9cf08:
 PokefanFScript_0x9cf0e:
 	faceplayer
 	opentext
-	checkevent EVENT_GOT_TM13_SNORE_FROM_MOOMOO_FARM
+	checkevent EVENT_GOT_TM13_SNoRE_FROM_MOOMOO_FARM
 	iftrue UnknownScript_0x9cf2f
 	checkevent EVENT_HEALED_MOOMOO
 	iftrue UnknownScript_0x9cf22
@@ -80,9 +80,9 @@ PokefanFScript_0x9cf0e:
 UnknownScript_0x9cf22:
 	writetext UnknownText_0x9d156
 	buttonsound
-	verbosegiveitem TM_SNORE
+	verbosegiveitem TM_SNoRE
 	iffalse UnknownScript_0x9cf33
-	setevent EVENT_GOT_TM13_SNORE_FROM_MOOMOO_FARM
+	setevent EVENT_GOT_TM13_SNoRE_FROM_MOOMOO_FARM
 UnknownScript_0x9cf2f:
 	writetext UnknownText_0x9d1c7
 	waitbutton
@@ -132,7 +132,7 @@ UnknownText_0x9d05d:
 
 UnknownText_0x9d07c:
 	text "Sorry, there."
-	line "NO cash, no sale!"
+	line "No cash, no sale!"
 	done
 
 UnknownText_0x9d09d:
@@ -163,7 +163,7 @@ UnknownText_0x9d0f6:
 
 UnknownText_0x9d156:
 	text "You fixed our"
-	line "MILTANK, hon. NOw"
+	line "MILTANK, hon. Now"
 
 	para "it gives MOOMOO"
 	line "MILK again."
@@ -179,7 +179,7 @@ UnknownText_0x9d1b5:
 
 UnknownText_0x9d1c7:
 	text "That there's"
-	line "SNORE."
+	line "SNoRE."
 
 	para "It's a rare move"
 	line "that only works"

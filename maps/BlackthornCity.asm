@@ -95,7 +95,7 @@ SantosScript:
 	checkevent EVENT_GOT_SPELL_TAG_FROM_SANTOS
 	iftrue .Saturday
 	checkcode VAR_WEEKDAY
-	if_not_equal SATURDAY, .NOtSaturday
+	if_not_equal SATURDAY, .NotSaturday
 	checkevent EVENT_MET_SANTOS_OF_SATURDAY
 	iftrue .MetSantos
 	writetext MeetSantosText
@@ -119,8 +119,8 @@ SantosScript:
 	closetext
 	end
 
-.NOtSaturday:
-	writetext SantosNOtSaturdayText
+.NotSaturday:
+	writetext SantosNotSaturdayText
 	waitbutton
 	closetext
 	end
@@ -186,7 +186,7 @@ Text_ClairIsBeaten:
 	done
 
 BlackthornGrampsRefusesEntryText:
-	text "NO. Only chosen"
+	text "No. Only chosen"
 	line "trainers may train"
 
 	para "here."
@@ -263,7 +263,7 @@ SantosSaturdayText:
 	line "more gifts…"
 	done
 
-SantosNOtSaturdayText:
+SantosNotSaturdayText:
 	text "SANTOS: Today's"
 	line "not Saturday…"
 	done
@@ -345,9 +345,9 @@ BlackthornCity_MapEventHeader:
 .PersonEvents:
 	db 9
 	person_event SPRITE_SUPER_NERD, 12, 18, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, (1 << 3) | PAL_OW_RED, PERSONTYPE_SCRIPT, 0, BlackthornSuperNerdScript, EVENT_BLACKTHORN_CITY_SUPER_NERD_BLOCKS_GYM
-	person_event SPRITE_SUPER_NERD, 12, 19, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, (1 << 3) | PAL_OW_RED, PERSONTYPE_SCRIPT, 0, BlackthornSuperNerdScript, EVENT_BLACKTHORN_CITY_SUPER_NERD_DOES_NOT_BLOCK_GYM
+	person_event SPRITE_SUPER_NERD, 12, 19, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, (1 << 3) | PAL_OW_RED, PERSONTYPE_SCRIPT, 0, BlackthornSuperNerdScript, EVENT_BLACKTHORN_CITY_SUPER_NERD_DOES_NoT_BLOCK_GYM
 	person_event SPRITE_GRAMPS, 2, 20, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, BlackthornGramps1Script, EVENT_BLACKTHORN_CITY_GRAMPS_BLOCKS_DRAGONS_DEN
-	person_event SPRITE_GRAMPS, 2, 21, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, BlackthornGramps2Script, EVENT_BLACKTHORN_CITY_GRAMPS_NOT_BLOCKING_DRAGONS_DEN
+	person_event SPRITE_GRAMPS, 2, 21, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, BlackthornGramps2Script, EVENT_BLACKTHORN_CITY_GRAMPS_NoT_BLOCKING_DRAGONS_DEN
 	person_event SPRITE_BLACK_BELT, 31, 24, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, (1 << 3) | PAL_OW_BLUE, PERSONTYPE_SCRIPT, 0, BlackthornBlackBeltScript, -1
 	person_event SPRITE_COOLTRAINER_F, 25, 9, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 2, -1, -1, (1 << 3) | PAL_OW_RED, PERSONTYPE_SCRIPT, 0, BlackthornCooltrainerF1Script, -1
 	person_event SPRITE_YOUNGSTER, 15, 13, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, 0, PERSONTYPE_SCRIPT, 0, BlackthornYoungsterScript, -1

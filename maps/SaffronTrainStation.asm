@@ -30,9 +30,9 @@ OfficerScript_0x18a81e:
 .MagnetTrainToGoldenrod:
 	writetext UnknownText_0x18a8dd
 	yesorno
-	iffalse .DecidedNOtToRide
+	iffalse .DecidedNotToRide
 	checkitem PASS
-	iffalse .PassNOtInBag
+	iffalse .PassNotInBag
 	writetext UnknownText_0x18a917
 	waitbutton
 	closetext
@@ -50,13 +50,13 @@ OfficerScript_0x18a81e:
 	turn_head DOWN
 	step_end
 
-.PassNOtInBag:
+.PassNotInBag:
 	writetext UnknownText_0x18a956
 	waitbutton
 	closetext
 	end
 
-.DecidedNOtToRide:
+.DecidedNotToRide:
 	writetext UnknownText_0x18a978
 	waitbutton
 	closetext

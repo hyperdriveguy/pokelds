@@ -15,7 +15,7 @@ TeacherScript_0x7b125:
 	waitbutton
 	closetext
 	special Special_FadeBlackQuickly
-	special Special_ReloadSpritesNOPalettes
+	special Special_ReloadSpritesNoPalettes
 	special TrainerRankings_Healings
 	playmusic MUSIC_HEAL
 	special HealParty

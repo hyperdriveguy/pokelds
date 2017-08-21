@@ -36,7 +36,7 @@ HouseForSaleSignText:
 	text "What's this?"
 
 	para "House for Sale…"
-	line "NObody lives here."
+	line "Nobody lives here."
 	done
 
 Route5_MapEventHeader:

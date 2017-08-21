@@ -165,7 +165,7 @@ EcruteakPokeCenter1F_BillText2:
 	done
 
 EcruteakPokeCenter1FPokefanMText:
-	text "The way the KIMONO"
+	text "The way the KIMONo"
 	line "GIRLS dance is"
 
 	para "marvelous. Just"

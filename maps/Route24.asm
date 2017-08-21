@@ -29,7 +29,7 @@ RocketScript_0x1adbfa:
 	waitbutton
 	closetext
 	special Special_FadeBlackQuickly
-	special Special_ReloadSpritesNOPalettes
+	special Special_ReloadSpritesNoPalettes
 	disappear ROUTE24_ROCKET
 	pause 25
 	special Special_FadeInQuickly
@@ -66,7 +66,7 @@ UnknownText_0x1adc2e:
 	done
 
 UnknownText_0x1add67:
-	text "Ayieeeh! NO, no,"
+	text "Ayieeeh! No, no,"
 	line "no, believe it I"
 	cont "can't!"
 

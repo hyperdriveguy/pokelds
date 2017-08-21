@@ -29,10 +29,10 @@ TeamRocketBaseB1F_MapScriptHeader:
 
 SecurityCamera1a:
 	checkevent EVENT_SECURITY_CAMERA_1
-	iftrue NOSecurityCamera
+	iftrue NoSecurityCamera
 	scall PlaySecurityCameraSounds
 	checkevent EVENT_TEAM_ROCKET_BASE_POPULATION
-	iftrue NOSecurityCamera
+	iftrue NoSecurityCamera
 	showemote EMOTE_SHOCK, PLAYER, 15
 	playmusic MUSIC_ROCKET_ENCOUNTER
 	moveperson TEAMROCKETBASEB1F_ROCKET1, $13, $2
@@ -40,7 +40,7 @@ SecurityCamera1a:
 	spriteface PLAYER, LEFT
 	applymovement TEAMROCKETBASEB1F_ROCKET1, SecurityCameraMovement1
 	scall TrainerCameraGrunt1
-	if_equal $1, NOSecurityCamera
+	if_equal $1, NoSecurityCamera
 	scall PlaySecurityCameraSounds
 	showemote EMOTE_SHOCK, PLAYER, 15
 	playmusic MUSIC_ROCKET_ENCOUNTER
@@ -48,16 +48,16 @@ SecurityCamera1a:
 	appear TEAMROCKETBASEB1F_ROCKET1
 	applymovement TEAMROCKETBASEB1F_ROCKET1, SecurityCameraMovement1
 	scall TrainerCameraGrunt2
-	if_equal $1, NOSecurityCamera
+	if_equal $1, NoSecurityCamera
 	setevent EVENT_SECURITY_CAMERA_1
 	end
 
 SecurityCamera1b:
 	checkevent EVENT_SECURITY_CAMERA_1
-	iftrue NOSecurityCamera
+	iftrue NoSecurityCamera
 	scall PlaySecurityCameraSounds
 	checkevent EVENT_TEAM_ROCKET_BASE_POPULATION
-	iftrue NOSecurityCamera
+	iftrue NoSecurityCamera
 	showemote EMOTE_SHOCK, PLAYER, 15
 	playmusic MUSIC_ROCKET_ENCOUNTER
 	moveperson TEAMROCKETBASEB1F_ROCKET1, $13, $3
@@ -65,7 +65,7 @@ SecurityCamera1b:
 	spriteface PLAYER, LEFT
 	applymovement TEAMROCKETBASEB1F_ROCKET1, SecurityCameraMovement1
 	scall TrainerCameraGrunt1
-	if_equal $1, NOSecurityCamera
+	if_equal $1, NoSecurityCamera
 	scall PlaySecurityCameraSounds
 	showemote EMOTE_SHOCK, PLAYER, 15
 	playmusic MUSIC_ROCKET_ENCOUNTER
@@ -73,16 +73,16 @@ SecurityCamera1b:
 	appear TEAMROCKETBASEB1F_ROCKET1
 	applymovement TEAMROCKETBASEB1F_ROCKET1, SecurityCameraMovement1
 	scall TrainerCameraGrunt2
-	if_equal $1, NOSecurityCamera
+	if_equal $1, NoSecurityCamera
 	setevent EVENT_SECURITY_CAMERA_1
 	end
 
 SecurityCamera2a:
 	checkevent EVENT_SECURITY_CAMERA_2
-	iftrue NOSecurityCamera
+	iftrue NoSecurityCamera
 	scall PlaySecurityCameraSounds
 	checkevent EVENT_TEAM_ROCKET_BASE_POPULATION
-	iftrue NOSecurityCamera
+	iftrue NoSecurityCamera
 	showemote EMOTE_SHOCK, PLAYER, 15
 	playmusic MUSIC_ROCKET_ENCOUNTER
 	moveperson TEAMROCKETBASEB1F_ROCKET1, $4, $7
@@ -90,7 +90,7 @@ SecurityCamera2a:
 	spriteface PLAYER, LEFT
 	applymovement TEAMROCKETBASEB1F_ROCKET1, SecurityCameraMovement2
 	scall TrainerCameraGrunt1
-	if_equal $1, NOSecurityCamera
+	if_equal $1, NoSecurityCamera
 	scall PlaySecurityCameraSounds
 	showemote EMOTE_SHOCK, PLAYER, 15
 	playmusic MUSIC_ROCKET_ENCOUNTER
@@ -99,16 +99,16 @@ SecurityCamera2a:
 	appear TEAMROCKETBASEB1F_ROCKET1
 	applymovement TEAMROCKETBASEB1F_ROCKET1, SecurityCameraMovement3
 	scall TrainerCameraGrunt2
-	if_equal $1, NOSecurityCamera
+	if_equal $1, NoSecurityCamera
 	setevent EVENT_SECURITY_CAMERA_2
 	end
 
 SecurityCamera2b:
 	checkevent EVENT_SECURITY_CAMERA_2
-	iftrue NOSecurityCamera
+	iftrue NoSecurityCamera
 	scall PlaySecurityCameraSounds
 	checkevent EVENT_TEAM_ROCKET_BASE_POPULATION
-	iftrue NOSecurityCamera
+	iftrue NoSecurityCamera
 	showemote EMOTE_SHOCK, PLAYER, 15
 	playmusic MUSIC_ROCKET_ENCOUNTER
 	moveperson TEAMROCKETBASEB1F_ROCKET1, $4, $8
@@ -116,7 +116,7 @@ SecurityCamera2b:
 	spriteface PLAYER, LEFT
 	applymovement TEAMROCKETBASEB1F_ROCKET1, SecurityCameraMovement4
 	scall TrainerCameraGrunt1
-	if_equal $1, NOSecurityCamera
+	if_equal $1, NoSecurityCamera
 	scall PlaySecurityCameraSounds
 	showemote EMOTE_SHOCK, PLAYER, 15
 	playmusic MUSIC_ROCKET_ENCOUNTER
@@ -125,16 +125,16 @@ SecurityCamera2b:
 	appear TEAMROCKETBASEB1F_ROCKET1
 	applymovement TEAMROCKETBASEB1F_ROCKET1, SecurityCameraMovement5
 	scall TrainerCameraGrunt2
-	if_equal $1, NOSecurityCamera
+	if_equal $1, NoSecurityCamera
 	setevent EVENT_SECURITY_CAMERA_2
 	end
 
 SecurityCamera3a:
 	checkevent EVENT_SECURITY_CAMERA_3
-	iftrue NOSecurityCamera
+	iftrue NoSecurityCamera
 	scall PlaySecurityCameraSounds
 	checkevent EVENT_TEAM_ROCKET_BASE_POPULATION
-	iftrue NOSecurityCamera
+	iftrue NoSecurityCamera
 	showemote EMOTE_SHOCK, PLAYER, 15
 	playmusic MUSIC_ROCKET_ENCOUNTER
 	moveperson TEAMROCKETBASEB1F_ROCKET1, $13, $6
@@ -142,7 +142,7 @@ SecurityCamera3a:
 	spriteface PLAYER, LEFT
 	applymovement TEAMROCKETBASEB1F_ROCKET1, SecurityCameraMovement1
 	scall TrainerCameraGrunt1
-	if_equal $1, NOSecurityCamera
+	if_equal $1, NoSecurityCamera
 	scall PlaySecurityCameraSounds
 	showemote EMOTE_SHOCK, PLAYER, 15
 	playmusic MUSIC_ROCKET_ENCOUNTER
@@ -151,16 +151,16 @@ SecurityCamera3a:
 	appear TEAMROCKETBASEB1F_ROCKET1
 	applymovement TEAMROCKETBASEB1F_ROCKET1, SecurityCameraMovement6
 	scall TrainerCameraGrunt2
-	if_equal $1, NOSecurityCamera
+	if_equal $1, NoSecurityCamera
 	setevent EVENT_SECURITY_CAMERA_3
 	end
 
 SecurityCamera3b:
 	checkevent EVENT_SECURITY_CAMERA_3
-	iftrue NOSecurityCamera
+	iftrue NoSecurityCamera
 	scall PlaySecurityCameraSounds
 	checkevent EVENT_TEAM_ROCKET_BASE_POPULATION
-	iftrue NOSecurityCamera
+	iftrue NoSecurityCamera
 	showemote EMOTE_SHOCK, PLAYER, 15
 	playmusic MUSIC_ROCKET_ENCOUNTER
 	moveperson TEAMROCKETBASEB1F_ROCKET1, $13, $7
@@ -168,7 +168,7 @@ SecurityCamera3b:
 	spriteface PLAYER, LEFT
 	applymovement TEAMROCKETBASEB1F_ROCKET1, SecurityCameraMovement1
 	scall TrainerCameraGrunt1
-	if_equal $1, NOSecurityCamera
+	if_equal $1, NoSecurityCamera
 	scall PlaySecurityCameraSounds
 	showemote EMOTE_SHOCK, PLAYER, 15
 	playmusic MUSIC_ROCKET_ENCOUNTER
@@ -177,16 +177,16 @@ SecurityCamera3b:
 	appear TEAMROCKETBASEB1F_ROCKET1
 	applymovement TEAMROCKETBASEB1F_ROCKET1, SecurityCameraMovement7
 	scall TrainerCameraGrunt2
-	if_equal $1, NOSecurityCamera
+	if_equal $1, NoSecurityCamera
 	setevent EVENT_SECURITY_CAMERA_3
 	end
 
 SecurityCamera4:
 	checkevent EVENT_SECURITY_CAMERA_4
-	iftrue NOSecurityCamera
+	iftrue NoSecurityCamera
 	scall PlaySecurityCameraSounds
 	checkevent EVENT_TEAM_ROCKET_BASE_POPULATION
-	iftrue NOSecurityCamera
+	iftrue NoSecurityCamera
 	showemote EMOTE_SHOCK, PLAYER, 15
 	playmusic MUSIC_ROCKET_ENCOUNTER
 	moveperson TEAMROCKETBASEB1F_ROCKET1, $11, $10
@@ -194,7 +194,7 @@ SecurityCamera4:
 	spriteface PLAYER, LEFT
 	applymovement TEAMROCKETBASEB1F_ROCKET1, SecurityCameraMovement1
 	scall TrainerCameraGrunt1
-	if_equal $1, NOSecurityCamera
+	if_equal $1, NoSecurityCamera
 	scall PlaySecurityCameraSounds
 	showemote EMOTE_SHOCK, PLAYER, 15
 	playmusic MUSIC_ROCKET_ENCOUNTER
@@ -203,16 +203,16 @@ SecurityCamera4:
 	appear TEAMROCKETBASEB1F_ROCKET1
 	applymovement TEAMROCKETBASEB1F_ROCKET1, SecurityCameraMovement8
 	scall TrainerCameraGrunt2
-	if_equal $1, NOSecurityCamera
+	if_equal $1, NoSecurityCamera
 	setevent EVENT_SECURITY_CAMERA_4
 	end
 
 SecurityCamera5:
 	checkevent EVENT_SECURITY_CAMERA_5
-	iftrue NOSecurityCamera
+	iftrue NoSecurityCamera
 	scall PlaySecurityCameraSounds
 	checkevent EVENT_TEAM_ROCKET_BASE_POPULATION
-	iftrue NOSecurityCamera
+	iftrue NoSecurityCamera
 	showemote EMOTE_SHOCK, PLAYER, 15
 	playmusic MUSIC_ROCKET_ENCOUNTER
 	moveperson TEAMROCKETBASEB1F_ROCKET1, $3, $10
@@ -220,7 +220,7 @@ SecurityCamera5:
 	spriteface PLAYER, LEFT
 	applymovement TEAMROCKETBASEB1F_ROCKET1, SecurityCameraMovement1
 	scall TrainerCameraGrunt1
-	if_equal $1, NOSecurityCamera
+	if_equal $1, NoSecurityCamera
 	scall PlaySecurityCameraSounds
 	showemote EMOTE_SHOCK, PLAYER, 15
 	playmusic MUSIC_ROCKET_ENCOUNTER
@@ -229,11 +229,11 @@ SecurityCamera5:
 	appear TEAMROCKETBASEB1F_ROCKET1
 	applymovement TEAMROCKETBASEB1F_ROCKET1, SecurityCameraMovement9
 	scall TrainerCameraGrunt2
-	if_equal $1, NOSecurityCamera
+	if_equal $1, NoSecurityCamera
 	setevent EVENT_SECURITY_CAMERA_5
 	end
 
-NOSecurityCamera:
+NoSecurityCamera:
 	end
 
 TrainerCameraGrunt1:
@@ -278,7 +278,7 @@ PlaySecurityCameraSounds:
 
 ExplodingTrap1:
 	checkevent EVENT_EXPLODING_TRAP_1
-	iftrue NOExplodingTrap
+	iftrue NoExplodingTrap
 	scall KoffingExplodingTrap
 	reloadmapafterbattle
 	setevent EVENT_EXPLODING_TRAP_1
@@ -286,7 +286,7 @@ ExplodingTrap1:
 
 ExplodingTrap2:
 	checkevent EVENT_EXPLODING_TRAP_2
-	iftrue NOExplodingTrap
+	iftrue NoExplodingTrap
 	scall VoltorbExplodingTrap
 	reloadmapafterbattle
 	setevent EVENT_EXPLODING_TRAP_2
@@ -294,7 +294,7 @@ ExplodingTrap2:
 
 ExplodingTrap3:
 	checkevent EVENT_EXPLODING_TRAP_3
-	iftrue NOExplodingTrap
+	iftrue NoExplodingTrap
 	scall GeodudeExplodingTrap
 	reloadmapafterbattle
 	setevent EVENT_EXPLODING_TRAP_3
@@ -302,7 +302,7 @@ ExplodingTrap3:
 
 ExplodingTrap4:
 	checkevent EVENT_EXPLODING_TRAP_4
-	iftrue NOExplodingTrap
+	iftrue NoExplodingTrap
 	scall VoltorbExplodingTrap
 	reloadmapafterbattle
 	setevent EVENT_EXPLODING_TRAP_4
@@ -310,7 +310,7 @@ ExplodingTrap4:
 
 ExplodingTrap5:
 	checkevent EVENT_EXPLODING_TRAP_5
-	iftrue NOExplodingTrap
+	iftrue NoExplodingTrap
 	scall GeodudeExplodingTrap
 	reloadmapafterbattle
 	setevent EVENT_EXPLODING_TRAP_5
@@ -318,7 +318,7 @@ ExplodingTrap5:
 
 ExplodingTrap6:
 	checkevent EVENT_EXPLODING_TRAP_6
-	iftrue NOExplodingTrap
+	iftrue NoExplodingTrap
 	scall KoffingExplodingTrap
 	reloadmapafterbattle
 	setevent EVENT_EXPLODING_TRAP_6
@@ -326,7 +326,7 @@ ExplodingTrap6:
 
 ExplodingTrap7:
 	checkevent EVENT_EXPLODING_TRAP_7
-	iftrue NOExplodingTrap
+	iftrue NoExplodingTrap
 	scall VoltorbExplodingTrap
 	reloadmapafterbattle
 	setevent EVENT_EXPLODING_TRAP_7
@@ -334,7 +334,7 @@ ExplodingTrap7:
 
 ExplodingTrap8:
 	checkevent EVENT_EXPLODING_TRAP_8
-	iftrue NOExplodingTrap
+	iftrue NoExplodingTrap
 	scall KoffingExplodingTrap
 	reloadmapafterbattle
 	setevent EVENT_EXPLODING_TRAP_8
@@ -342,7 +342,7 @@ ExplodingTrap8:
 
 ExplodingTrap9:
 	checkevent EVENT_EXPLODING_TRAP_9
-	iftrue NOExplodingTrap
+	iftrue NoExplodingTrap
 	scall KoffingExplodingTrap
 	reloadmapafterbattle
 	setevent EVENT_EXPLODING_TRAP_9
@@ -350,7 +350,7 @@ ExplodingTrap9:
 
 ExplodingTrap10:
 	checkevent EVENT_EXPLODING_TRAP_10
-	iftrue NOExplodingTrap
+	iftrue NoExplodingTrap
 	scall VoltorbExplodingTrap
 	reloadmapafterbattle
 	setevent EVENT_EXPLODING_TRAP_10
@@ -358,7 +358,7 @@ ExplodingTrap10:
 
 ExplodingTrap11:
 	checkevent EVENT_EXPLODING_TRAP_11
-	iftrue NOExplodingTrap
+	iftrue NoExplodingTrap
 	scall GeodudeExplodingTrap
 	reloadmapafterbattle
 	setevent EVENT_EXPLODING_TRAP_11
@@ -366,7 +366,7 @@ ExplodingTrap11:
 
 ExplodingTrap12:
 	checkevent EVENT_EXPLODING_TRAP_12
-	iftrue NOExplodingTrap
+	iftrue NoExplodingTrap
 	scall GeodudeExplodingTrap
 	reloadmapafterbattle
 	setevent EVENT_EXPLODING_TRAP_12
@@ -374,7 +374,7 @@ ExplodingTrap12:
 
 ExplodingTrap13:
 	checkevent EVENT_EXPLODING_TRAP_13
-	iftrue NOExplodingTrap
+	iftrue NoExplodingTrap
 	scall GeodudeExplodingTrap
 	reloadmapafterbattle
 	setevent EVENT_EXPLODING_TRAP_13
@@ -382,7 +382,7 @@ ExplodingTrap13:
 
 ExplodingTrap14:
 	checkevent EVENT_EXPLODING_TRAP_14
-	iftrue NOExplodingTrap
+	iftrue NoExplodingTrap
 	scall KoffingExplodingTrap
 	reloadmapafterbattle
 	setevent EVENT_EXPLODING_TRAP_14
@@ -390,7 +390,7 @@ ExplodingTrap14:
 
 ExplodingTrap15:
 	checkevent EVENT_EXPLODING_TRAP_15
-	iftrue NOExplodingTrap
+	iftrue NoExplodingTrap
 	scall VoltorbExplodingTrap
 	reloadmapafterbattle
 	setevent EVENT_EXPLODING_TRAP_15
@@ -398,7 +398,7 @@ ExplodingTrap15:
 
 ExplodingTrap16:
 	checkevent EVENT_EXPLODING_TRAP_16
-	iftrue NOExplodingTrap
+	iftrue NoExplodingTrap
 	scall KoffingExplodingTrap
 	reloadmapafterbattle
 	setevent EVENT_EXPLODING_TRAP_16
@@ -406,7 +406,7 @@ ExplodingTrap16:
 
 ExplodingTrap17:
 	checkevent EVENT_EXPLODING_TRAP_17
-	iftrue NOExplodingTrap
+	iftrue NoExplodingTrap
 	scall VoltorbExplodingTrap
 	reloadmapafterbattle
 	setevent EVENT_EXPLODING_TRAP_17
@@ -414,7 +414,7 @@ ExplodingTrap17:
 
 ExplodingTrap18:
 	checkevent EVENT_EXPLODING_TRAP_18
-	iftrue NOExplodingTrap
+	iftrue NoExplodingTrap
 	scall GeodudeExplodingTrap
 	reloadmapafterbattle
 	setevent EVENT_EXPLODING_TRAP_18
@@ -422,7 +422,7 @@ ExplodingTrap18:
 
 ExplodingTrap19:
 	checkevent EVENT_EXPLODING_TRAP_19
-	iftrue NOExplodingTrap
+	iftrue NoExplodingTrap
 	scall GeodudeExplodingTrap
 	reloadmapafterbattle
 	setevent EVENT_EXPLODING_TRAP_19
@@ -430,7 +430,7 @@ ExplodingTrap19:
 
 ExplodingTrap20:
 	checkevent EVENT_EXPLODING_TRAP_20
-	iftrue NOExplodingTrap
+	iftrue NoExplodingTrap
 	scall VoltorbExplodingTrap
 	reloadmapafterbattle
 	setevent EVENT_EXPLODING_TRAP_20
@@ -438,7 +438,7 @@ ExplodingTrap20:
 
 ExplodingTrap21:
 	checkevent EVENT_EXPLODING_TRAP_21
-	iftrue NOExplodingTrap
+	iftrue NoExplodingTrap
 	scall KoffingExplodingTrap
 	reloadmapafterbattle
 	setevent EVENT_EXPLODING_TRAP_21
@@ -446,7 +446,7 @@ ExplodingTrap21:
 
 ExplodingTrap22:
 	checkevent EVENT_EXPLODING_TRAP_22
-	iftrue NOExplodingTrap
+	iftrue NoExplodingTrap
 	scall VoltorbExplodingTrap
 	reloadmapafterbattle
 	setevent EVENT_EXPLODING_TRAP_22
@@ -482,7 +482,7 @@ KoffingExplodingTrap:
 	startbattle
 	end
 
-NOExplodingTrap:
+NoExplodingTrap:
 	end
 
 TrainerScientistJed:

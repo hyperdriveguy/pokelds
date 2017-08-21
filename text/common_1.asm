@@ -22,7 +22,7 @@ _FruitPackIsFullText::
 	line "full…"
 	done
 
-_NOthingHereText::
+_NothingHereText::
 	text "There's nothing"
 	line "here…"
 	done
@@ -192,7 +192,7 @@ UnknownText_0x1bc336::
 
 UnknownText_0x1bc34f::
 	text "!"
-	line "NO wonder it's so"
+	line "No wonder it's so"
 	cont "dark!"
 	done
 
@@ -1095,7 +1095,7 @@ Text_EnemyUsedOn::
 	text "!"
 	prompt
 
-Text_ThatCantBeUsedRightNOw::
+Text_ThatCantBeUsedRightNow::
 	text "That can't be used"
 	line "right now."
 	prompt
@@ -1143,7 +1143,7 @@ UnknownText_0x1bd09a::
 	line "MON for breeding."
 	prompt
 
-Text_BreedingIsNOtPossible::
+Text_BreedingIsNotPossible::
 	text "Breeding is not"
 	line "possible."
 	prompt
@@ -1264,13 +1264,13 @@ UnknownText_0x1bd2bc::
 	done
 
 UnknownText_0x1bd2ca::
-	text "ANNOUNCER: BEEEP!"
+	text "ANNoUNCER: BEEEP!"
 
 	para "Time's up!"
 	done
 
 UnknownText_0x1bd2e7::
-	text "ANNOUNCER: The"
+	text "ANNoUNCER: The"
 	line "Contest is over!"
 	done
 
@@ -1542,7 +1542,7 @@ UnknownText_0x1bd88e::
 	line "friends. You need"
 	cont "to work as a team."
 
-	para "NOw, go on!"
+	para "Now, go on!"
 	done
 
 UnknownText_0x1bd8da::
@@ -1784,7 +1784,7 @@ UnknownText_0x1bdee9::
 	done
 
 UnknownText_0x1bdef6::
-	text "NOt yet…"
+	text "Not yet…"
 	done
 
 UnknownText_0x1bdf00::

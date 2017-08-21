@@ -668,7 +668,7 @@ GetForestTreeFrame: ; fc54c
 
 
 AnimateFlowerTile: ; fc56d
-; NO parameters.
+; No parameters.
 
 ; Save sp in bc (see WriteTile).
 	ld hl, sp+0
@@ -919,7 +919,7 @@ endr
 TileAnimationPalette: ; fc6d7
 ; Transition between color values 0-2 for color 0 in palette 3.
 
-; NO palette changes on DMG.
+; No palette changes on DMG.
 	ld a, [hCGB]
 	and a
 	ret z
@@ -985,7 +985,7 @@ TileAnimationPalette: ; fc6d7
 
 
 FlickeringCaveEntrancePalette: ; fc71e
-; NO palette changes on DMG.
+; No palette changes on DMG.
 	ld a, [hCGB]
 	and a
 	ret z

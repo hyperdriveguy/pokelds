@@ -305,7 +305,7 @@ CopycatText_Female_1:
 	text "<PLAYER>: Hi. You"
 	line "must like #mon."
 
-	para "<PLAYER>: NO, not"
+	para "<PLAYER>: No, not"
 	line "me. I asked you."
 
 	para "<PLAYER>: Pardon?"

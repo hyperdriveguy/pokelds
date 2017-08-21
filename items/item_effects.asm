@@ -180,7 +180,7 @@ ItemEffects: ; e73c
 	dw FriendBall
 	dw MoonBall
 	dw LoveBall
-	dw NOrmalBox
+	dw NormalBox
 	dw GorgeousBox
 	dw SunStone
 	dw PolkadotBow
@@ -230,7 +230,7 @@ ParkBall: ; e8a2
 	call nz, ReturnToBattle_UseBall
 
 	ld hl, Options
-	res NO_TEXT_SCROLL, [hl]
+	res No_TEXT_SCROLL, [hl]
 	ld hl, UsedItemText
 	call PrintText
 
@@ -419,7 +419,7 @@ ParkBall: ; e8a2
 	jr nz, .caught
 	ld a, [Buffer2]
 	cp $1
-	ld hl, Text_NOShake
+	ld hl, Text_NoShake
 	jp z, .shake_and_break_free
 	cp $2
 	ld hl, Text_OneShake
@@ -590,7 +590,7 @@ ParkBall: ; e8a2
 	ld a, [CurPartySpecies]
 	ld [wd265], a
 	call GetPokemonName
-	call YesNOBox
+	call YesNoBox
  	jp c, .return_from_capture
  
 	ld a, [PartyCount]
@@ -630,10 +630,10 @@ ParkBall: ; e8a2
 
 	ld a, [sBoxCount]
 	cp MONS_PER_BOX
-	jr nz, .BoxNOtFullYet
+	jr nz, .BoxNotFullYet
 	ld hl, wBattleResult
 	set 7, [hl]
-.BoxNOtFullYet:
+.BoxNotFullYet:
 	ld a, [CurItem]
 	cp FRIEND_BALL
 	jr nz, .SkipBoxMonFriendBall
@@ -650,7 +650,7 @@ ParkBall: ; e8a2
 	ld [wd265], a
 	call GetPokemonName
 
-	call YesNOBox
+	call YesNoBox
 	jr c, .SkipBoxMonNickname
 
 	xor a
@@ -945,7 +945,7 @@ GLOBAL EvosAttacksPointers
 	inc hl
 
 ; Moon Stone's constant from Pokémon Red is used.
-; NO Pokémon evolve with Burn Heal,
+; No Pokémon evolve with Burn Heal,
 ; so Moon Balls always have a catch rate of 1×.
 	push bc
 	ld a, BANK(EvosAttacks)
@@ -1100,13 +1100,13 @@ Text_RBY_CatchMarowak: ; 0xedab
 	db "@"
 ; 0xedb0
 
-Text_RBY_NOShake: ; 0xedb0
+Text_RBY_NoShake: ; 0xedb0
 	; You missed the #mon!
 	text_jump UnknownText_0x1c5a90
 	db "@"
 ; 0xedb5
 
-Text_NOShake: ; 0xedb5
+Text_NoShake: ; 0xedb5
 	; Oh no! The #mon broke free!
 	text_jump UnknownText_0x1c5aa6
 	db "@"
@@ -1195,14 +1195,14 @@ SunStone: ; ee0f
 	ld b, PARTYMENUACTION_EVO_STONE
 	call UseItem_SelectMon
 
-	jp c, .DecidedNOtToUse
+	jp c, .DecidedNotToUse
 
 	ld a, MON_ITEM
 	call GetPartyParamLocation
 
 	ld a, [hl]
 	cp EVERSTONE
-	jr z, .NOEffect
+	jr z, .NoEffect
 
 	ld a, $1
 	ld [wForceEvolution], a
@@ -1210,14 +1210,14 @@ SunStone: ; ee0f
 
 	ld a, [wMonTriedToEvolve]
 	and a
-	jr z, .NOEffect
+	jr z, .NoEffect
 
 	jp UseDisposableItem
 
-.NOEffect:
+.NoEffect:
 	call WontHaveAnyEffectMessage
 
-.DecidedNOtToUse:
+.DecidedNotToUse:
 	xor a
 	ld [wItemEffectSucceeded], a
 	ret
@@ -1265,7 +1265,7 @@ Calcium: ; ee3d
 	add hl, bc
 	ld a, [hl]
 	cp 100
-	jr nc, NOEffectMessage
+	jr nc, NoEffectMessage
 
 	add e
 	ld [hl], a
@@ -1293,7 +1293,7 @@ Calcium: ; ee3d
 	jp UseDisposableItem
 
 
-NOEffectMessage: ; ee83
+NoEffectMessage: ; ee83
 	ld hl, WontHaveAnyEffectText
 	call PrintText
 	jp ClearPalettes
@@ -1395,7 +1395,7 @@ RareCandy: ; ef14
 
 	ld a, [hl]
 	cp MAX_LEVEL
-	jp nc, NOEffectMessage
+	jp nc, NoEffectMessage
 
 	inc a
 	ld [hl], a
@@ -1640,7 +1640,7 @@ StatusHealer_Jumptable: ; f09e (3:709e)
 
 .dw ; f0a3 (3:70a3)
 	dw StatusHealer_ClearPalettes
-	dw StatusHealer_NOEffect
+	dw StatusHealer_NoEffect
 	dw StatusHealer_ExitMenu
 
 
@@ -1694,7 +1694,7 @@ RevivePokemon: ; f0d6
 
 	ld a, [CurPartyMon]
 	ld c, a
-	ld hl, wBattleParticipantsNOtFainted
+	ld hl, wBattleParticipantsNotFainted
 	ld b, SET_FLAG
 	predef FlagPredef
 
@@ -1728,14 +1728,14 @@ FullRestore: ; f128
 	jp c, StatusHealer_ExitMenu
 
 	call IsMonFainted
-	jp z, StatusHealer_NOEffect
+	jp z, StatusHealer_NoEffect
 
 	call IsMonAtFullHealth
-	jr c, .NOtAtFullHealth
+	jr c, .NotAtFullHealth
 
 	jp FullyHealStatus
 
-.NOtAtFullHealth:
+.NotAtFullHealth:
 	call .FullRestore
 	jp StatusHealer_Jumptable
 ; f144
@@ -1773,7 +1773,7 @@ BitterBerry: ; f16a
 	ld [hBattleTurn], a
 	call UseItemText
 
-	ld hl, ConfusedNOMoreText
+	ld hl, ConfusedNoMoreText
 	call StdBattleTextBox
 
 	ld a, 0
@@ -1944,7 +1944,7 @@ ItemActionTextWaitButton: ; f279 (3:7279)
 	call DelayFrames
 	jp WaitPressAorB_BlinkCursor
 
-StatusHealer_NOEffect: ; f299 (3:7299)
+StatusHealer_NoEffect: ; f299 (3:7299)
 	call WontHaveAnyEffectMessage
 	jr StatusHealer_ClearPalettes
 
@@ -2142,14 +2142,14 @@ GetHealingItemAmount: ; f395 (3:7395)
 .next
 	ld a, [hli]
 	cp -1
-	jr z, .NOtFound
+	jr z, .NotFound
 	cp d
 	jr z, .done
 	inc hl
 	inc hl
 	jr .next
 
-.NOtFound:
+.NotFound:
 	scf
 .done
 	ld e, [hl]
@@ -2297,7 +2297,7 @@ TextJump_RepelUsedEarlierIsStillInEffect: ; 0xf47d
 XAccuracy: ; f482
 	ld hl, PlayerSubStatus4
 	bit SUBSTATUS_X_ACCURACY, [hl]
-	jp nz, WontHaveAnyEffect_NOtUsedMessage
+	jp nz, WontHaveAnyEffect_NotUsedMessage
 	set SUBSTATUS_X_ACCURACY, [hl]
 	jp UseItemText
 ; f48f
@@ -2325,7 +2325,7 @@ PokeDoll: ; f48f
 GuardSpec: ; f4ab
 	ld hl, PlayerSubStatus4
 	bit SUBSTATUS_MIST, [hl]
-	jp nz, WontHaveAnyEffect_NOtUsedMessage
+	jp nz, WontHaveAnyEffect_NotUsedMessage
 	set SUBSTATUS_MIST, [hl]
 	jp UseItemText
 ; f4b8
@@ -2334,7 +2334,7 @@ GuardSpec: ; f4ab
 DireHit: ; f4b8
 	ld hl, PlayerSubStatus4
 	bit SUBSTATUS_FOCUS_ENERGY, [hl]
-	jp nz, WontHaveAnyEffect_NOtUsedMessage
+	jp nz, WontHaveAnyEffect_NotUsedMessage
 	set SUBSTATUS_FOCUS_ENERGY, [hl]
 	jp UseItemText
 ; f4c5
@@ -2452,7 +2452,7 @@ PokeFlute: ; f50c
 
 
 .CatchyTune: ; 0xf56c
-	; Played the # FLUTE. NOw, that's a catchy tune!
+	; Played the # FLUTE. Now, that's a catchy tune!
 	text_jump UnknownText_0x1c5bf9
 	db "@"
 ; 0xf571
@@ -2585,7 +2585,7 @@ Mysteryberry: ; f5bf
 
 	ld a, [wd002]
 	cp PP_UP
-	jp nz, NOt_PP_Up
+	jp nz, Not_PP_Up
 
 	ld a, [hl]
 	cp SKETCH
@@ -2677,10 +2677,10 @@ BattleRestorePP: ; f652
 	ret
 ; f6a7
 
-NOt_PP_Up: ; f6a7
+Not_PP_Up: ; f6a7
 	call RestorePP
 	jr nz, BattleRestorePP
-	jp PPRestoreItem_NOEffect
+	jp PPRestoreItem_NoEffect
 ; f6af
 
 Elixer_RestorePPofAllMoves: ; f6af
@@ -2713,7 +2713,7 @@ Elixer_RestorePPofAllMoves: ; f6af
 	and a
 	jp nz, BattleRestorePP
 
-PPRestoreItem_NOEffect: ; f6dd
+PPRestoreItem_NoEffect: ; f6dd
 	call WontHaveAnyEffectMessage
 
 PPRestoreItem_Cancel: ; f6e0
@@ -2828,7 +2828,7 @@ SacredAsh: ; f753
 ; f763
 
 
-NOrmalBox: ; f763
+NormalBox: ; f763
 	ld c, DECOFLAG_SILVER_TROPHY_DOLL
 	jr OpenBox
 ; f767
@@ -2984,7 +2984,7 @@ UseBallInTrainerBattle: ; f7a0
 	jr UseDisposableItem
 ; f7ca
 
-WontHaveAnyEffect_NOtUsedMessage: ; f7ca
+WontHaveAnyEffect_NotUsedMessage: ; f7ca
 	ld hl, WontHaveAnyEffectText
 	call PrintText
 
@@ -3179,10 +3179,10 @@ ComputeMaxPP: ; f881
 	ld c, a
 	; If this value is 0, we are done
 	and a
-	jr z, .NOPPUp
+	jr z, .NoPPUp
 
 .loop
-	; NOrmally, a move with 40 PP would have 64 PP with three PP Ups.
+	; Normally, a move with 40 PP would have 64 PP with three PP Ups.
 	; Since this would overflow into bit 6, we prevent that from happening
 	; by decreasing the extra amount of PP each PP Up provides, resulting
 	; in a maximum of 61.
@@ -3196,11 +3196,11 @@ ComputeMaxPP: ; f881
 	ld b, a
 	ld a, [wd265]
 	dec a
-	jr z, .NOPPUp
+	jr z, .NoPPUp
 	dec c
 	jr nz, .loop
 
-.NOPPUp:
+.NoPPUp:
 	ld [hl], b
 	pop bc
 	ret

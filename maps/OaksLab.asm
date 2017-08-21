@@ -46,7 +46,7 @@ Oak:
 	jump .CheckPokedex
 
 .Complain:
-	writetext OakNOKantoBadgesText
+	writetext OakNoKantoBadgesText
 	buttonsound
 	jump .CheckPokedex
 
@@ -147,7 +147,7 @@ OakOpenMtSilverText:
 	line "from there."
 	done
 
-OakNOKantoBadgesText:
+OakNoKantoBadgesText:
 	text "OAK: Hmm? You're"
 	line "not collecting"
 	cont "KANTO GYM BADGES?"

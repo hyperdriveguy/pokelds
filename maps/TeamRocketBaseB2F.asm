@@ -115,7 +115,7 @@ UnknownScript_0x6cfac:
 	waitbutton
 	closetext
 	special Special_FadeBlackQuickly
-	special Special_ReloadSpritesNOPalettes
+	special Special_ReloadSpritesNoPalettes
 	disappear TEAMROCKETBASEB2F_ROCKET1
 	disappear TEAMROCKETBASEB2F_ROCKET_GIRL
 	disappear TEAMROCKETBASEB2F_ROCKET2
@@ -587,7 +587,7 @@ UnknownText_0x6d2c3:
 	para "take both of us at"
 	line "the same time."
 
-	para "Sorry, baby. NOw"
+	para "Sorry, baby. Now"
 	line "get ready to be"
 	cont "thrashed."
 	done
@@ -677,7 +677,7 @@ UnknownText_0x6d64e:
 	para "were doing, so I"
 	line "just hung back."
 
-	para "NOw all there is"
+	para "Now all there is"
 	line "left to do is to"
 
 	para "turn off that odd"
@@ -777,7 +777,7 @@ UnknownText_0x6d994:
 
 	para "…"
 
-	para "I see. NO, you're"
+	para "I see. No, you're"
 	line "right."
 
 	para "If you would give"
@@ -942,8 +942,8 @@ TeamRocketBaseB2F_MapEventHeader:
 
 .Signposts:
 	db 23
-	signpost 12, 14, SIGNPOST_IFNOTSET, MapTeamRocketBaseB2FSignpostPtr1
-	signpost 12, 15, SIGNPOST_IFNOTSET, MapTeamRocketBaseB2FSignpostPtr1
+	signpost 12, 14, SIGNPOST_IFNoTSET, MapTeamRocketBaseB2FSignpostPtr1
+	signpost 12, 15, SIGNPOST_IFNoTSET, MapTeamRocketBaseB2FSignpostPtr1
 	signpost 9, 17, SIGNPOST_READ, MapTeamRocketBaseB2FSignpost21Script
 	signpost 9, 16, SIGNPOST_READ, MapTeamRocketBaseB2FSignpost21Script
 	signpost 9, 15, SIGNPOST_READ, MapTeamRocketBaseB2FSignpost21Script

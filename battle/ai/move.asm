@@ -11,7 +11,7 @@ AIChooseMove: ; 440ce
 	and a
 	ret nz
 
-; NO use picking a move if there's no choice.
+; No use picking a move if there's no choice.
 	callba CheckEnemyLockedIn
 	ret nz
 
@@ -212,10 +212,10 @@ AIScoringPointers: ; 441af
 	dw AI_Cautious
 	dw AI_Status
 	dw AI_Risky
-	dw AI_NOne
-	dw AI_NOne
-	dw AI_NOne
-	dw AI_NOne
-	dw AI_NOne
-	dw AI_NOne
+	dw AI_None
+	dw AI_None
+	dw AI_None
+	dw AI_None
+	dw AI_None
+	dw AI_None
 ; 441cf

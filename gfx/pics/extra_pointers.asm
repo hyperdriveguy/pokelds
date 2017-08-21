@@ -162,7 +162,7 @@ AnimationExtraPointers:
 	dw SentretAnimationExtra
 	dw FurretAnimationExtra
 	dw HoothootAnimationExtra
-	dw NOctowlAnimationExtra
+	dw NoctowlAnimationExtra
 	dw LedybaAnimationExtra
 	dw LedianAnimationExtra
 	dw SpinarakAnimationExtra

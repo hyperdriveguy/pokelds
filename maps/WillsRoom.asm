@@ -126,7 +126,7 @@ UnknownText_0x180644:
 	para "stand above all"
 	line "trainers!"
 
-	para "NOw, <PLAYER>, move"
+	para "Now, <PLAYER>, move"
 	line "on and experience"
 
 	para "the true ferocity"

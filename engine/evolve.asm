@@ -259,7 +259,7 @@ EvolveAfterBattle_MasterLoop
 	call DelayFrames
 
 	call ClearTileMap
-	call UpdateSpeciesNameIfNOtNicknamed
+	call UpdateSpeciesNameIfNotNicknamed
 	call GetBaseData
 
 	ld hl, TempMonExp + 2
@@ -307,7 +307,7 @@ EvolveAfterBattle_MasterLoop
 	call SetSeenAndCaughtMon
 
 	ld a, [wd265]
-	cp UNOWN
+	cp UNoWN
 	jr nz, .skip_unown
 
 	ld hl, TempMonDVs
@@ -351,10 +351,10 @@ EvolveAfterBattle_MasterLoop
 	ret
 ; 42414
 
-UpdateSpeciesNameIfNOtNicknamed: ; 42414
+UpdateSpeciesNameIfNotNicknamed: ; 42414
 	ld a, [CurSpecies]
 	push af
-	ld a, [BaseDexNO]
+	ld a, [BaseDexNo]
 	ld [wd265], a
 	call GetPokemonName
 	pop af

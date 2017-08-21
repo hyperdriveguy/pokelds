@@ -467,62 +467,62 @@ TurnHead: ; 52ee
 
 Movement_slow_step_down: ; 5300
 	ld a, STEP_SLOW << 2 | DOWN
-	jp NOrmalStep
+	jp NormalStep
 ; 5305
 
 Movement_slow_step_up: ; 5305
 	ld a, STEP_SLOW << 2 | UP
-	jp NOrmalStep
+	jp NormalStep
 ; 530a
 
 Movement_slow_step_left: ; 530a
 	ld a, STEP_SLOW << 2 | LEFT
-	jp NOrmalStep
+	jp NormalStep
 ; 530f
 
 Movement_slow_step_right: ; 530f
 	ld a, STEP_SLOW << 2 | RIGHT
-	jp NOrmalStep
+	jp NormalStep
 ; 5314
 
 Movement_step_down: ; 5314
 	ld a, STEP_WALK << 2 | DOWN
-	jp NOrmalStep
+	jp NormalStep
 ; 5319
 
 Movement_step_up: ; 5319
 	ld a, STEP_WALK << 2 | UP
-	jp NOrmalStep
+	jp NormalStep
 ; 531e
 
 Movement_step_left: ; 531e
 	ld a, STEP_WALK << 2 | LEFT
-	jp NOrmalStep
+	jp NormalStep
 ; 5323
 
 Movement_step_right: ; 5323
 	ld a, STEP_WALK << 2 | RIGHT
-	jp NOrmalStep
+	jp NormalStep
 ; 5328
 
 Movement_big_step_down: ; 5328
 	ld a, STEP_BIKE << 2 | DOWN
-	jp NOrmalStep
+	jp NormalStep
 ; 532d
 
 Movement_big_step_up: ; 532d
 	ld a, STEP_BIKE << 2 | UP
-	jp NOrmalStep
+	jp NormalStep
 ; 5332
 
 Movement_big_step_left: ; 5332
 	ld a, STEP_BIKE << 2 | LEFT
-	jp NOrmalStep
+	jp NormalStep
 ; 5337
 
 Movement_big_step_right: ; 5337
 	ld a, STEP_BIKE << 2 | RIGHT
-	jp NOrmalStep
+	jp NormalStep
 ; 533c
 
 
@@ -740,7 +740,7 @@ TurnStep: ; 5400
 	ret
 ; 5412
 
-NOrmalStep: ; 5412
+NormalStep: ; 5412
 	call InitStep
 	call UpdateTallGrassFlags
 	ld hl, OBJECT_ACTION

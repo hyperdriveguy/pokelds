@@ -87,10 +87,10 @@ Route35NationalParkgate_GoBackIn:
 
 OfficerScript_0x6a204:
 	checkcode VAR_WEEKDAY
-	if_equal SUNDAY, Route35NationalParkgate_NOContestToday
-	if_equal MONDAY, Route35NationalParkgate_NOContestToday
-	if_equal WEDNESDAY, Route35NationalParkgate_NOContestToday
-	if_equal FRIDAY, Route35NationalParkgate_NOContestToday
+	if_equal SUNDAY, Route35NationalParkgate_NoContestToday
+	if_equal MONDAY, Route35NationalParkgate_NoContestToday
+	if_equal WEDNESDAY, Route35NationalParkgate_NoContestToday
+	if_equal FRIDAY, Route35NationalParkgate_NoContestToday
 	faceplayer
 	opentext
 	checkflag ENGINE_DAILY_BUG_CONTEST
@@ -137,7 +137,7 @@ Route35NationalParkgate_LeaveTheRestBehind:
 	checkcode VAR_PARTYCOUNT
 	if_less_than 6, Route35NationalParkgate_LessThanFullParty
 	checkcode VAR_BOXSPACE
-	if_equal 0, Route35NationalParkgate_NORoomInBox
+	if_equal 0, Route35NationalParkgate_NoRoomInBox
 
 Route35NationalParkgate_LessThanFullParty: ; 6a27d
 	special CheckFirstMonIsEgg
@@ -174,7 +174,7 @@ Route35NationalParkgate_FirstMonIsFainted:
 	closetext
 	end
 
-Route35NationalParkgate_NORoomInBox:
+Route35NationalParkgate_NoRoomInBox:
 	writetext UnknownText_0x6a67c
 	waitbutton
 	closetext
@@ -192,7 +192,7 @@ Route35NationalParkgate_ContestIsOver:
 	closetext
 	end
 
-Route35NationalParkgate_NOContestToday:
+Route35NationalParkgate_NoContestToday:
 	jumptextfaceplayer UnknownText_0x6a894
 
 OfficerScript_0x6a2ca:
@@ -389,7 +389,7 @@ UnknownText_0x6a79a:
 
 UnknownText_0x6a7db:
 	text "OK. Please wait at"
-	line "the NOrth Gate for"
+	line "the North Gate for"
 
 	para "the announcement"
 	line "of the winners."
@@ -430,7 +430,7 @@ UnknownText_0x6a90e:
 	para "Tuesday, Thursday"
 	line "and Saturday."
 
-	para "NOt only do you"
+	para "Not only do you"
 	line "earn a prize just"
 
 	para "for participating,"
@@ -465,4 +465,4 @@ Route35NationalParkgate_MapEventHeader:
 	db 3
 	person_event SPRITE_OFFICER, 1, 2, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, (1 << 3) | PAL_OW_GREEN, PERSONTYPE_SCRIPT, 0, OfficerScript_0x6a204, EVENT_ROUTE_35_NATIONAL_PARK_GATE_OFFICER_CONTEST_DAY
 	person_event SPRITE_YOUNGSTER, 5, 6, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, (1 << 3) | PAL_OW_RED, PERSONTYPE_SCRIPT, 0, YoungsterScript_0x6a2d8, EVENT_ROUTE_35_NATIONAL_PARK_GATE_YOUNGSTER
-	person_event SPRITE_OFFICER, 3, 0, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, (1 << 3) | PAL_OW_GREEN, PERSONTYPE_SCRIPT, 0, OfficerScript_0x6a2ca, EVENT_ROUTE_35_NATIONAL_PARK_GATE_OFFICER_NOT_CONTEST_DAY
+	person_event SPRITE_OFFICER, 3, 0, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, (1 << 3) | PAL_OW_GREEN, PERSONTYPE_SCRIPT, 0, OfficerScript_0x6a2ca, EVENT_ROUTE_35_NATIONAL_PARK_GATE_OFFICER_NoT_CONTEST_DAY

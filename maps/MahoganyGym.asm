@@ -330,7 +330,7 @@ SkierClarissaSeenText:
 	done
 
 SkierClarissaBeatenText:
-	text "NO! You made me"
+	text "No! You made me"
 	line "wipe out!"
 	done
 

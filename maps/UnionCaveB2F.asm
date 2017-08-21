@@ -19,10 +19,10 @@ UnionCaveB2F_MapScriptHeader:
 
 .Lapras:
 	checkflag ENGINE_UNION_CAVE_LAPRAS
-	iftrue .NOAppear
+	iftrue .NoAppear
 	checkcode VAR_WEEKDAY
 	if_equal FRIDAY, .Appear
-.NOAppear:
+.NoAppear:
 	disappear UNIONCAVEB2F_LAPRAS
 	return
 

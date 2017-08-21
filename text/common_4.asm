@@ -1,5 +1,5 @@
 _OakText6::
-	text "NOw, what did you"
+	text "Now, what did you"
 	line "say your name was?"
 	prompt
 
@@ -165,7 +165,7 @@ UnknownText_0x1c44c0::
 	done
 
 UnknownText_0x1c44e7::
-	text "NO time left for"
+	text "No time left for"
 	line "linking today."
 	done
 
@@ -231,7 +231,7 @@ UnknownText_0x1c4693::
 	done
 
 UnknownText_0x1c46b7::
-	text "NO windows avail-"
+	text "No windows avail-"
 	line "able for popping."
 	done
 

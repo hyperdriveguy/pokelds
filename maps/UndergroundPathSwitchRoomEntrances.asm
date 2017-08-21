@@ -734,7 +734,7 @@ UndergroundSilverAfterText:
 	para "But it's not going"
 	line "to end here."
 
-	para "NOt now. NOt"
+	para "Not now. Not"
 	line "because of this."
 
 	para "I won't give up my"
@@ -890,7 +890,7 @@ SwitchRoomText_Switch1:
 	done
 
 GruntF3SeenText:
-	text "Are you lost? NO,"
+	text "Are you lost? No,"
 	line "you can't be."
 
 	para "You don't have"

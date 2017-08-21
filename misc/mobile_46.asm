@@ -517,7 +517,7 @@ Function118452: ; 118452
 	ld [hMobileReceive], a
 	ld [hMobile], a
 	ld [hVBlank], a
-	call NOrmalSpeed
+	call NormalSpeed
 	xor a
 	ld [rIF], a
 	ld a, [wcd32]
@@ -5681,7 +5681,7 @@ Text_CancelBattleRoomChallenge: ; 0x11ab4a
 
 Text_ExitGymLeaderHonorRoll: ; 0x11ab6e
 	text "Exit GYM LEADER"
-	line "HONOR ROLL?"
+	line "HONoR ROLL?"
 	done
 ; 0x11ab8b
 

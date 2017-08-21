@@ -27,14 +27,14 @@ UnknownScript_0x5800e:
 	end
 
 UnknownScript_0x5800f:
-	checkflag ENGINE_UNOWN_DEX
+	checkflag ENGINE_UNoWN_DEX
 	iftrue UnknownScript_0x5802c
-	checkevent EVENT_MADE_UNOWN_APPEAR_IN_RUINS
+	checkevent EVENT_MADE_UNoWN_APPEAR_IN_RUINS
 	iftrue UnknownScript_0x5801e
 	jump UnknownScript_0x5802c
 
 UnknownScript_0x5801e:
-	checkcode VAR_UNOWNCOUNT
+	checkcode VAR_UNoWNCOUNT
 	if_greater_than $2, UnknownScript_0x58027
 	jump UnknownScript_0x5802c
 
@@ -204,7 +204,7 @@ UnknownText_0x58250:
 	line "about 1500 years"
 	cont "ago."
 
-	para "NObody knows who"
+	para "Nobody knows who"
 	line "built them."
 
 	para "It's also not"
@@ -271,7 +271,7 @@ UnknownText_0x58420:
 
 UnknownText_0x58449:
 	text "There are many"
-	line "kinds of UNOWN, so"
+	line "kinds of UNoWN, so"
 
 	para "we use them for"
 	line "our secret codes."

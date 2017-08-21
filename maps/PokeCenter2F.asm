@@ -79,21 +79,21 @@ LinkReceptionistScript_Trade:
 	yesorno
 	iffalse .Cancel
 	special Mobile_DummyReturnFalse ; always returns false
-	iffalse .NOMobile
+	iffalse .NoMobile
 	writetext Text_TradeReceptionistMobile
 	special AskMobileOrCable
 	iffalse .Cancel
 	if_equal $1, .Mobile
-.NOMobile:
+.NoMobile:
 	special Special_SetBitsForLinkTradeRequest
 	writetext Text_PleaseWait
 	special Special_WaitForLinkedFriend
-	iffalse .FriendNOtReady
+	iffalse .FriendNotReady
 	writetext Text_MustSaveGame
 	yesorno
-	iffalse .DidNOtSave
+	iffalse .DidNotSave
 	special Special_TryQuickSave
-	iffalse .DidNOtSave
+	iffalse .DidNotSave
 	writetext Text_PleaseWait
 	special Special_CheckLinkTimeout
 	iffalse .LinkTimedOut
@@ -108,9 +108,9 @@ LinkReceptionistScript_Trade:
 	warpcheck
 	end
 
-.FriendNOtReady:
+.FriendNotReady:
 	special WaitForOtherPlayerToExit
-	writetext Text_FriendNOtReady
+	writetext Text_FriendNotReady
 	closetext
 	end
 
@@ -131,7 +131,7 @@ LinkReceptionistScript_Trade:
 	writetext Text_LinkTimedOut
 	jump .AbortLink
 
-.DidNOtSave:
+.DidNotSave:
 	writetext Text_PleaseComeAgain
 .AbortLink:
 	special WaitForOtherPlayerToExit
@@ -152,9 +152,9 @@ LinkReceptionistScript_Trade:
 .Mobile_TrySave:
 	writetext Text_MustSaveGame
 	yesorno
-	iffalse .Mobile_DidNOtSave
+	iffalse .Mobile_DidNotSave
 	special Special_TryQuickSave
-	iffalse .Mobile_DidNOtSave
+	iffalse .Mobile_DidNotSave
 	special Function1011f1
 	writetext Text_PleaseComeIn2
 	waitbutton
@@ -162,7 +162,7 @@ LinkReceptionistScript_Trade:
 	writebyte $0
 	end
 
-.Mobile_DidNOtSave:
+.Mobile_DidNotSave:
 	writetext Text_PleaseComeAgain
 	closetext
 	writebyte $1
@@ -181,21 +181,21 @@ LinkReceptionistScript_Battle:
 	yesorno
 	iffalse .Cancel
 	special Mobile_DummyReturnFalse ; always returns false
-	iffalse .NOMobile
+	iffalse .NoMobile
 	writetext Text_BattleReceptionistMobile
 	special AskMobileOrCable
 	iffalse .Cancel
 	if_equal $1, .Mobile
-.NOMobile:
+.NoMobile:
 	special Special_SetBitsForBattleRequest
 	writetext Text_PleaseWait
 	special Special_WaitForLinkedFriend
-	iffalse .FriendNOtReady
+	iffalse .FriendNotReady
 	writetext Text_MustSaveGame
 	yesorno
-	iffalse .DidNOtSave
+	iffalse .DidNotSave
 	special Special_TryQuickSave
-	iffalse .DidNOtSave
+	iffalse .DidNotSave
 	writetext Text_PleaseWait
 	special Special_CheckLinkTimeout
 	iffalse .LinkTimedOut
@@ -210,9 +210,9 @@ LinkReceptionistScript_Battle:
 	warpcheck
 	end
 
-.FriendNOtReady:
+.FriendNotReady:
 	special WaitForOtherPlayerToExit
-	writetext Text_FriendNOtReady
+	writetext Text_FriendNotReady
 	closetext
 	end
 
@@ -233,7 +233,7 @@ LinkReceptionistScript_Battle:
 	writetext Text_LinkTimedOut
 	jump .AbortLink
 
-.DidNOtSave:
+.DidNotSave:
 	writetext Text_PleaseComeAgain
 .AbortLink:
 	special WaitForOtherPlayerToExit
@@ -256,9 +256,9 @@ LinkReceptionistScript_Battle:
 .Mobile_TrySave:
 	writetext Text_MustSaveGame
 	yesorno
-	iffalse .Mobile_DidNOtSave
+	iffalse .Mobile_DidNotSave
 	special Function103780
-	iffalse .Mobile_DidNOtSave
+	iffalse .Mobile_DidNotSave
 	special Function1011f1
 	writetext Text_PleaseComeIn2
 	waitbutton
@@ -266,7 +266,7 @@ LinkReceptionistScript_Battle:
 	writebyte $0
 	end
 
-.Mobile_DidNOtSave:
+.Mobile_DidNotSave:
 	writetext Text_PleaseComeAgain
 	closetext
 	writebyte $1
@@ -274,16 +274,16 @@ LinkReceptionistScript_Battle:
 
 .SelectThreeMons:
 	special Mobile_SelectThreeMons
-	iffalse .Mobile_DidNOtSelect
+	iffalse .Mobile_DidNotSelect
 	if_equal $1, .Mobile_OK
 	if_equal $2, .Mobile_OK
 	if_equal $3, .Mobile_InvalidParty
-	jump .Mobile_DidNOtSelect
+	jump .Mobile_DidNotSelect
 
 .Mobile_InvalidParty:
 	writetext Text_BrokeStadiumRules
 	waitbutton
-.Mobile_DidNOtSelect:
+.Mobile_DidNotSelect:
 	closetext
 	writebyte $0
 	end
@@ -317,12 +317,12 @@ LinkReceptionistScript_TimeCapsule:
 	if_equal $3, .MonHasMail
 	writetext Text_PleaseWait
 	special Special_WaitForLinkedFriend
-	iffalse .FriendNOtReady
+	iffalse .FriendNotReady
 	writetext Text_MustSaveGame
 	yesorno
-	iffalse .DidNOtSave
+	iffalse .DidNotSave
 	special Special_TryQuickSave
-	iffalse .DidNOtSave
+	iffalse .DidNotSave
 	writetext Text_PleaseWait
 	special Special_CheckLinkTimeout
 	iffalse .LinkTimedOut
@@ -343,9 +343,9 @@ LinkReceptionistScript_TimeCapsule:
 	warpcheck
 	end
 
-.FriendNOtReady:
+.FriendNotReady:
 	special WaitForOtherPlayerToExit
-	writetext Text_FriendNOtReady
+	writetext Text_FriendNotReady
 	closetext
 	end
 
@@ -353,7 +353,7 @@ LinkReceptionistScript_TimeCapsule:
 	writetext Text_LinkTimedOut
 	jump .Cancel
 
-.DidNOtSave:
+.DidNotSave:
 	writetext Text_PleaseComeAgain
 .Cancel:
 	special WaitForOtherPlayerToExit
@@ -613,13 +613,13 @@ OfficerScript_0x192c9a:
 	end
 
 .BagIsFull:
-	writetext Text_MysteryGiftDeliveryGuy_NORoom
+	writetext Text_MysteryGiftDeliveryGuy_NoRoom
 	waitbutton
 	closetext
 	end
 
 .RefusedGift:
-	writetext Text_MysteryGiftDeliveryGuy_SaidNO
+	writetext Text_MysteryGiftDeliveryGuy_SaidNo
 	waitbutton
 	closetext
 	end
@@ -857,7 +857,7 @@ Text_TimeCapsuleReceptionistIntro:
 	line "trade across time?"
 	done
 
-Text_FriendNOtReady:
+Text_FriendNotReady:
 	text "Your friend is not"
 	line "ready."
 	prompt
@@ -974,7 +974,7 @@ Text_MysteryGiftDeliveryGuy_Outro:
 	line "you again."
 	done
 
-Text_MysteryGiftDeliveryGuy_NORoom:
+Text_MysteryGiftDeliveryGuy_NoRoom:
 	text "Oh, you have no"
 	line "space for this."
 
@@ -985,8 +985,8 @@ Text_MysteryGiftDeliveryGuy_NORoom:
 	line "to pick it up."
 	done
 
-Text_MysteryGiftDeliveryGuy_SaidNO:
-	text "NO? That's very"
+Text_MysteryGiftDeliveryGuy_SaidNo:
+	text "No? That's very"
 	line "strange…"
 	done
 

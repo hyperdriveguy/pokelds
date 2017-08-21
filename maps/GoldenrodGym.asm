@@ -352,7 +352,7 @@ BeautySamanthaSeenText:
 	done
 
 BeautySamanthaBeatenText:
-	text "NO! Oh, MEOWTH,"
+	text "No! Oh, MEOWTH,"
 	line "I'm so sorry!"
 	done
 

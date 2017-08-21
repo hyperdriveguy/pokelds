@@ -165,7 +165,7 @@ GentlemanGregorySeenText:
 	text "You're here to"
 	line "defeat LT.SURGE?"
 
-	para "NOt if I can help"
+	para "Not if I can help"
 	line "it!"
 	done
 
@@ -256,7 +256,7 @@ VermilionGymGuyWinText:
 	done
 
 UnknownText_0x19261e:
-	text "NOpe! NOthing here"
+	text "Nope! Nothing here"
 	line "but trash."
 	done
 

@@ -157,7 +157,7 @@ CutFunction: ; c785
 	ret
 
 .FailCut: ; c7bb (3:47bb)
-	ld hl, Text_NOthingToCut
+	ld hl, Text_NothingToCut
 	call MenuTextBoxBackup
 	ld a, $80
 	ret
@@ -167,7 +167,7 @@ Text_UsedCut: ; 0xc7c4
 	text_jump UnknownText_0x1c05dd
 	db "@"
 
-Text_NOthingToCut: ; 0xc7c9
+Text_NothingToCut: ; 0xc7c9
 	; There's nothing to CUT here.
 	text_jump UnknownText_0x1c05ec
 	db "@"
@@ -670,7 +670,7 @@ FlyFunction: ; ca3b
 	farscall Script_AbortBugContest
 	special WarpToSpawnPoint
 	callasm DelayLoadingNewSprites
-	writecode VAR_MOVEMENT, PLAYER_NORMAL
+	writecode VAR_MOVEMENT, PLAYER_NoRMAL
 	newloadmap MAPSETUP_FLY
 	callasm FlyToAnim
 	special WaitSFX
@@ -917,7 +917,7 @@ dig_incave
 	applymovement PLAYER, .DigOut
 	farscall Script_AbortBugContest
 	special WarpToSpawnPoint
-	writecode VAR_MOVEMENT, PLAYER_NORMAL
+	writecode VAR_MOVEMENT, PLAYER_NoRMAL
 	newloadmap MAPSETUP_DOOR
 	playsound SFX_WARP_FROM
 	applymovement PLAYER, .DigReturn
@@ -1004,7 +1004,7 @@ TeleportFunction: ; cc61
 	applymovement PLAYER, .TeleportFrom
 	farscall Script_AbortBugContest
 	special WarpToSpawnPoint
-	writecode VAR_MOVEMENT, PLAYER_NORMAL
+	writecode VAR_MOVEMENT, PLAYER_NoRMAL
 	newloadmap MAPSETUP_TELEPORT
 	playsound SFX_WARP_FROM
 	applymovement PLAYER, .TeleportTo
@@ -1323,7 +1323,7 @@ UnknownText_0xce9d: ; 0xce9d
 	db "@"
 
 UnknownText_0xcea2: ; 0xcea2
-	; NOpe. NOthing…
+	; Nope. Nothing…
 	text_jump UnknownText_0x1c08ac
 	db "@"
 
@@ -1509,10 +1509,10 @@ FishFunction: ; cf8e
 
 .FishTable: ; cfa5
 	dw .TryFish
-	dw .FishNOBite
+	dw .FishNoBite
 	dw .FishGotSomething
 	dw .FailFish
-	dw .FishNOFish
+	dw .FishNoFish
 
 .TryFish: ; cfaf
 	ld a, [PlayerState]
@@ -1567,32 +1567,32 @@ FishFunction: ; cf8e
 	ld a, $81
 	ret
 
-.FishNOBite: ; d002
+.FishNoBite: ; d002
 	ld a, $2
 	ld [Buffer6], a
-	ld hl, Script_NOtEvenANibble
+	ld hl, Script_NotEvenANibble
 	call QueueScript
 	ld a, $81
 	ret
 
-.FishNOFish: ; d010
+.FishNoFish: ; d010
 	ld a, $0
 	ld [Buffer6], a
-	ld hl, Script_NOtEvenANibble2
+	ld hl, Script_NotEvenANibble2
 	call QueueScript
 	ld a, $81
 	ret
 
-Script_NOtEvenANibble: ; 0xd01e
+Script_NotEvenANibble: ; 0xd01e
 	scall Script_FishCastRod
 	writetext UnknownText_0xd0a9
-	jump Script_NOtEvenANibble_FallThrough
+	jump Script_NotEvenANibble_FallThrough
 
-Script_NOtEvenANibble2: ; 0xd027
+Script_NotEvenANibble2: ; 0xd027
 	scall Script_FishCastRod
 	writetext UnknownText_0xd0a9
 
-Script_NOtEvenANibble_FallThrough: ; 0xd02d
+Script_NotEvenANibble_FallThrough: ; 0xd02d
 	loademote EMOTE_SHADOW
 	callasm PutTheRodAway
 	closetext
@@ -1601,12 +1601,12 @@ Script_NOtEvenANibble_FallThrough: ; 0xd02d
 Script_GotABite: ; 0xd035
 	scall Script_FishCastRod
 	callasm Fishing_CheckFacingUp
-	iffalse .NOtFacingUp
+	iffalse .NotFacingUp
 	applymovement PLAYER, .Movement_FacingUp
 	jump .FightTheHookedPokemon
 
-.NOtFacingUp: ; 0xd046
-	applymovement PLAYER, .Movement_NOtFacingUp
+.NotFacingUp: ; 0xd046
+	applymovement PLAYER, .Movement_NotFacingUp
 
 .FightTheHookedPokemon: ; 0xd04a
 	pause 40
@@ -1619,7 +1619,7 @@ Script_GotABite: ; 0xd035
 	reloadmapafterbattle
 	end
 
-.Movement_NOtFacingUp: ; d05c
+.Movement_NotFacingUp: ; d05c
 	fish_got_bite
 	fish_got_bite
 	fish_got_bite
@@ -1683,7 +1683,7 @@ UnknownText_0xd0a4: ; 0xd0a4
 	db "@"
 
 UnknownText_0xd0a9: ; 0xd0a9
-	; NOt even a nibble!
+	; Not even a nibble!
 	text_jump UnknownText_0x1c0965
 	db "@"
 
@@ -1702,7 +1702,7 @@ BikeFunction: ; d0b3
 	call .CheckEnvironment
 	jr c, .CannotUseBike
 	ld a, [PlayerState]
-	cp PLAYER_NORMAL
+	cp PLAYER_NoRMAL
 	jr z, .GetOnBike
 	cp PLAYER_BIKE
 	jr z, .GetOffBike
@@ -1801,7 +1801,7 @@ Script_GetOnBike_Register: ; 0xd14e
 Script_GetOffBike: ; 0xd158
 	reloadmappart
 	special UpdateTimePals
-	writecode VAR_MOVEMENT, PLAYER_NORMAL
+	writecode VAR_MOVEMENT, PLAYER_NoRMAL
 	writetext GotOffTheBikeText
 	waitbutton
 
@@ -1812,7 +1812,7 @@ FinishGettingOffBike:
 	end
 
 Script_GetOffBike_Register: ; 0xd16b
-	writecode VAR_MOVEMENT, PLAYER_NORMAL
+	writecode VAR_MOVEMENT, PLAYER_NoRMAL
 	jump FinishGettingOffBike
 
 Script_CantGetOffBike: ; 0xd171

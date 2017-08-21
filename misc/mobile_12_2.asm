@@ -297,7 +297,7 @@ Function4a9d7: ; 4a9d7
 	call CopyBytes
 	ld hl, UnknownText_0x4aa1d
 	call PrintText
-	call YesNOBox
+	call YesNoBox
 	ret
 ; 4aa1d
 
@@ -434,7 +434,7 @@ Function4aad3: ; 4aad3
 	ld hl, PartyCount
 	ld a, [hli]
 	and a
-	ret z ; NOthing in your party
+	ret z ; Nothing in your party
 
 	ld c, a
 	xor a
@@ -478,10 +478,10 @@ Function4ab06: ; 4ab06
 	ld b, a
 	ld a, [hl]
 	or b
-	jr nz, .NOtFainted
+	jr nz, .NotFainted
 	scf
 
-.NOtFainted:
+.NotFainted:
 	ret
 ; 4ab1a
 

@@ -1,7 +1,7 @@
 MoveDeletion:
 	ld hl, .IntroText
 	call PrintText
-	call YesNOBox
+	call YesNoBox
 	jr c, .declined
 	ld hl, .AskWhichMonText
 	call PrintText
@@ -32,7 +32,7 @@ MoveDeletion:
 	call GetMoveName
 	ld hl, .ConfirmDeleteText
 	call PrintText
-	call YesNOBox
+	call YesNoBox
 	pop bc
 	jr c, .declined
 	call .DeleteMove
@@ -84,7 +84,7 @@ MoveDeletion:
 ; 0x2c5e5
 
 .DeclinedDeletionText: ; 0x2c5e5
-	; NO? Come visit me again.
+	; No? Come visit me again.
 	text_jump UnknownText_0x1c5f36
 	db "@"
 ; 0x2c5ea

@@ -42,8 +42,8 @@ WardensHomeSign:
 SafariZoneClosedSign:
 	jumptext SafariZoneClosedSignText
 
-NOLitteringSign:
-	jumptext NOLitteringSignText
+NoLitteringSign:
+	jumptext NoLitteringSignText
 
 FuchsiaCityPokeCenterSign:
 	jumpstd pokecentersign
@@ -119,8 +119,8 @@ SafariZoneClosedSignText:
 	cont "closed."
 	done
 
-NOLitteringSignText:
-	text "NO littering."
+NoLitteringSignText:
+	text "No littering."
 
 	para "Please take your"
 	line "waste with you."
@@ -153,7 +153,7 @@ FuchsiaCity_MapEventHeader:
 	signpost 15, 25, SIGNPOST_READ, SafariZoneOfficeSign
 	signpost 29, 27, SIGNPOST_READ, WardensHomeSign
 	signpost 5, 17, SIGNPOST_READ, SafariZoneClosedSign
-	signpost 15, 13, SIGNPOST_READ, NOLitteringSign
+	signpost 15, 13, SIGNPOST_READ, NoLitteringSign
 	signpost 27, 20, SIGNPOST_READ, FuchsiaCityPokeCenterSign
 	signpost 13, 6, SIGNPOST_READ, FuchsiaCityMartSign
 

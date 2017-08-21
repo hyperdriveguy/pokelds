@@ -196,7 +196,7 @@ CheckPlayerTurn:
 
 	; Snore and Sleep Talk bypass sleep.
 	ld a, [CurPlayerMove]
-	cp SNORE
+	cp SNoRE
 	jr z, .not_asleep
 	cp SLEEP_TALK
 	jr z, .not_asleep
@@ -253,7 +253,7 @@ CheckPlayerTurn:
 
 	ld [hl], a
 	ld [DisabledMove], a
-	ld hl, DisabledNOMoreText
+	ld hl, DisabledNoMoreText
 	call StdBattleTextBox
 
 .not_disabled
@@ -268,7 +268,7 @@ CheckPlayerTurn:
 
 	ld hl, PlayerSubStatus3
 	res SUBSTATUS_CONFUSED, [hl]
-	ld hl, ConfusedNOMoreText
+	ld hl, ConfusedNoMoreText
 	call StdBattleTextBox
 	jr .not_confused
 
@@ -444,7 +444,7 @@ CheckEnemyTurn: ; 3421f
 .fast_asleep
 	; Snore and Sleep Talk bypass sleep.
 	ld a, [CurEnemyMove]
-	cp SNORE
+	cp SNoRE
 	jr z, .not_asleep
 	cp SLEEP_TALK
 	jr z, .not_asleep
@@ -498,7 +498,7 @@ CheckEnemyTurn: ; 3421f
 	ld [hl], a
 	ld [EnemyDisabledMove], a
 
-	ld hl, DisabledNOMoreText
+	ld hl, DisabledNoMoreText
 	call StdBattleTextBox
 
 .not_disabled
@@ -514,7 +514,7 @@ CheckEnemyTurn: ; 3421f
 
 	ld hl, EnemySubStatus3
 	res SUBSTATUS_CONFUSED, [hl]
-	ld hl, ConfusedNOMoreText
+	ld hl, ConfusedNoMoreText
 	call StdBattleTextBox
 	jr .not_confused
 
@@ -700,7 +700,7 @@ BattleCommand_CheckObedience: ; 343db
 	xor a
 	ld [AlreadyDisobeyed], a
 
-	; NO obedience in link battles
+	; No obedience in link battles
 	; (since no handling exists for enemy)
 	ld a, [wLinkMode]
 	and a
@@ -766,7 +766,7 @@ BattleCommand_CheckObedience: ; 343db
 	add b
 	ld b, a
 
-; NO overflow (this should never happen)
+; No overflow (this should never happen)
 	jr nc, .checklevel
 	ld b, $ff
 
@@ -807,7 +807,7 @@ BattleCommand_CheckObedience: ; 343db
 	jr c, .UseInstead
 
 
-; NO hope of using a move now.
+; No hope of using a move now.
 
 ; b = number of levels the monster is above the obedience level
 	ld a, d
@@ -822,7 +822,7 @@ BattleCommand_CheckObedience: ; 343db
 
 ; The chance of not hitting itself is the same.
 	cp b
-	jr nc, .DoNOthing
+	jr nc, .DoNothing
 
 	ld hl, WontObeyText
 	call StdBattleTextBox
@@ -843,7 +843,7 @@ BattleCommand_CheckObedience: ; 343db
 	jr .Print
 
 
-.DoNOthing:
+.DoNothing:
 	call BattleRandom
 	and 3
 
@@ -871,12 +871,12 @@ BattleCommand_CheckObedience: ; 343db
 ; Can't use another move if the monster only has one!
 	ld a, [BattleMonMoves + 1]
 	and a
-	jr z, .DoNOthing
+	jr z, .DoNothing
 
 ; Don't bother trying to handle Disable.
 	ld a, [DisabledMove]
 	and a
-	jr nz, .DoNOthing
+	jr nz, .DoNothing
 
 
 	ld hl, BattleMonPP
@@ -911,7 +911,7 @@ BattleCommand_CheckObedience: ; 343db
 	ld a, [hl]
 	and $3f
 	cp b
-	jr z, .DoNOthing
+	jr z, .DoNothing
 
 
 ; Make sure we can actually use the move once we get there.
@@ -934,7 +934,7 @@ BattleCommand_CheckObedience: ; 343db
 	cp b
 	jr nc, .RandomMove
 
-; NOt the move we were trying to use.
+; Not the move we were trying to use.
 	cp c
 	jr z, .RandomMove
 
@@ -989,7 +989,7 @@ IgnoreSleepOnly: ; 3451f
 	ld a, BATTLE_VARS_MOVE_ANIM
 	call GetBattleVar
 
-	cp SNORE
+	cp SNoRE
 	jr z, .CheckSleep
 	cp SLEEP_TALK
 	jr z, .CheckSleep
@@ -1152,10 +1152,10 @@ BattleCommand_DoTurn: ; 34555
 	call IsInArray
 
 ; 'has no pp left for [move]'
-	ld hl, HasNOPPLeftText
+	ld hl, HasNoPPLeftText
 	jr c, .print
 ; 'but no pp is left for the move'
-	ld hl, NOPPLeftText
+	ld hl, NoPPLeftText
 .print
 	call StdBattleTextBox
 	ld b, 1
@@ -1328,7 +1328,7 @@ BattleCommand_TripleKick: ; 346b2
 	adc d
 	ld [hli], a
 
-; NO overflow.
+; No overflow.
 	jr nc, .next_kick
 	ld a, $ff
 	ld [hld], a
@@ -1468,11 +1468,11 @@ BattleCommand_Stab: ; 346d2
 ; If the target is immune to the move, treat it as a miss and calculate the damage as 0
 	ld a, [hl]
 	and a
-	jr nz, .NOtImmune
+	jr nz, .NotImmune
 	inc a
 	ld [AttackMissed], a
 	xor a
-.NOtImmune:
+.NotImmune:
 	ld [hMultiplier], a
 	add b
 	ld [TypeModifier], a
@@ -1571,17 +1571,17 @@ CheckTypeMatchup: ; 347d3
 
 .Next:
 	cp d
-	jr nz, .NOpe
+	jr nz, .Nope
 	ld a, [hli]
 	cp b
 	jr z, .Yup
 	cp c
 	jr z, .Yup
-	jr .NOpe2
+	jr .Nope2
 
-.NOpe:
+.Nope:
 	inc hl
-.NOpe2:
+.Nope2:
 	inc hl
 	jr .TypesLoop
 
@@ -1652,7 +1652,7 @@ BattleCommand_DamageVariation: ; 34cfd
 ; rarer than normal.
 
 
-; NO point in reducing 1 or 0 damage.
+; No point in reducing 1 or 0 damage.
 	ld hl, CurDamage
 	ld a, [hli]
 	and a
@@ -2114,7 +2114,7 @@ BattleCommand_LowerSub: ; 34eee
 	jp LoadAnim
 
 .mimic_anims
-	call BattleCommand_LowerSubNOAnim
+	call BattleCommand_LowerSubNoAnim
 	jp BattleCommand_MoveDelay
 
 .Rampage:
@@ -2142,13 +2142,13 @@ BattleCommand_LowerSub: ; 34eee
 BattleCommand_HitTarget: ; 34f57
 ; hittarget
 	call BattleCommand_LowerSub
-	call BattleCommand_HitTargetNOSub
+	call BattleCommand_HitTargetNoSub
 	jp BattleCommand_RaiseSub
 
 ; 34f60
 
 
-BattleCommand_HitTargetNOSub: ; 34f60
+BattleCommand_HitTargetNoSub: ; 34f60
 	ld a, [AttackMissed]
 	and a
 	jp nz, BattleCommand_MoveDelay
@@ -2280,7 +2280,7 @@ BattleCommand_RaiseSub: ; 35004
 	ret z
 
 	call _CheckBattleScene
-	jp c, BattleCommand_RaiseSubNOAnim
+	jp c, BattleCommand_RaiseSubNoAnim
 
 	xor a
 	ld [wNumHits], a
@@ -2584,7 +2584,7 @@ BattleCommand_SuperEffectiveText: ; 351ad
 	ret z
 	ld hl, SuperEffectiveText
 	jr nc, .print
-	ld hl, NOtVeryEffectiveText
+	ld hl, NotVeryEffectiveText
 .print
 	jp StdBattleTextBox
 
@@ -2874,12 +2874,12 @@ PlayerAttackDamage: ; 352e2
 	ld hl, PlayerSpAtk
 
 .lightball
-; NOte: Returns player special attack at hl in hl.
+; Note: Returns player special attack at hl in hl.
 	call LightBallBoost
 	jr .done
 
 .thickclub
-; NOte: Returns player attack at hl in hl.
+; Note: Returns player attack at hl in hl.
 	call ThickClubBoost
 
 .done
@@ -3083,7 +3083,7 @@ SpeciesItemBoost: ; 353d1
 EnemyAttackDamage: ; 353f6
 	call ResetDamage
 
-; NO damage dealt with 0 power.
+; No damage dealt with 0 power.
 	ld hl, wEnemyMoveStructPower
 	ld a, [hli] ; hl = wEnemyMoveStructType
 	ld d, a
@@ -3454,7 +3454,7 @@ BattleCommand_DamageCalc: ; 35612
 	cp EFFECT_CONVERSION
 	jr z, .skip_zero_damage_check
 
-; NO damage if move power is 0.
+; No damage if move power is 0.
 	ld a, d
 	and a
 	ret z
@@ -3664,7 +3664,7 @@ BattleCommand_DamageCalc: ; 35612
 
 
 TypeBoostItems: ; 35703
-	db HELD_NORMAL_BOOST,   NORMAL   ; Pink/Polkadot Bow
+	db HELD_NoRMAL_BOOST,   NoRMAL   ; Pink/Polkadot Bow
 	db HELD_FIGHTING_BOOST, FIGHTING ; Blackbelt
 	db HELD_FLYING_BOOST,   FLYING   ; Sharp Beak
 	db HELD_POISON_BOOST,   POISON   ; Poison Barb
@@ -4253,7 +4253,7 @@ BattleCommand_Sketch: ; 35a74
 	and a
 	jr z, .not_linked
 	call AnimateFailedMove
-	jp PrintNOthingHappened
+	jp PrintNothingHappened
 
 .not_linked
 ; If the opponent has a substitute up, fail.
@@ -4908,7 +4908,7 @@ SelfInflictDamageToSubstitute: ; 35de0
 	call StdBattleTextBox
 
 	call BattleCommand_SwitchTurn
-	call BattleCommand_LowerSubNOAnim
+	call BattleCommand_LowerSubNoAnim
 	ld a, BATTLE_VARS_SUBSTATUS3
 	call GetBattleVar
 	and 1 << SUBSTATUS_FLYING | 1 << SUBSTATUS_UNDERGROUND
@@ -5037,7 +5037,7 @@ BattleCommand_SleepTarget: ; 35e5c
 	and a
 	jr z, .dont_fail
 
-	; NOt in link battle
+	; Not in link battle
 	ld a, [wLinkMode]
 	and a
 	jr nz, .dont_fail
@@ -5046,7 +5046,7 @@ BattleCommand_SleepTarget: ; 35e5c
 	and a
 	jr nz, .dont_fail
 
-	; NOt locked-on by the enemy
+	; Not locked-on by the enemy
 	ld a, [PlayerSubStatus5]
 	bit SUBSTATUS_LOCK_ON, a
 	jr nz, .dont_fail
@@ -6298,7 +6298,7 @@ BattleCommand_Curl: ; 365a7
 ; 365af
 
 
-BattleCommand_RaiseSubNOAnim: ; 365af
+BattleCommand_RaiseSubNoAnim: ; 365af
 	ld hl, GetMonBackpic
 	ld a, [hBattleTurn]
 	and a
@@ -6313,7 +6313,7 @@ BattleCommand_RaiseSubNOAnim: ; 365af
 ; 365c3
 
 
-BattleCommand_LowerSubNOAnim: ; 365c3
+BattleCommand_LowerSubNoAnim: ; 365c3
 	ld hl, DropPlayerSub
 	ld a, [hBattleTurn]
 	and a
@@ -6595,7 +6595,7 @@ BattleCommand_CheckRampage: ; 3671a
 BattleCommand_Rampage: ; 36751
 ; rampage
 
-; NO rampage during Sleep Talk.
+; No rampage during Sleep Talk.
 	ld a, BATTLE_VARS_STATUS
 	call GetBattleVar
 	and SLP
@@ -7661,7 +7661,7 @@ BattleCommand_FinishConfusingTarget: ; 36d70
 	call GetBattleVar
 	cp EFFECT_CONFUSE_HIT
 	jr z, .got_effect
-	cp EFFECT_SNORE
+	cp EFFECT_SNoRE
 	jr z, .got_effect
 	cp EFFECT_SWAGGER
 	jr z, .got_effect
@@ -7691,7 +7691,7 @@ BattleCommand_Confuse_CheckSnore_Swagger_ConfuseHit: ; 36db6
 	call GetBattleVar
 	cp EFFECT_CONFUSE_HIT
 	ret z
-	cp EFFECT_SNORE
+	cp EFFECT_SNoRE
 	ret z
 	cp EFFECT_SWAGGER
 	ret z
@@ -7786,7 +7786,7 @@ BattleCommand_Paralyze: ; 36dc7
 CheckMoveTypeMatchesTarget: ; 36e5b
 ; Compare move type to opponent type.
 ; Return z if matching the opponent type,
-; unless the move is NOrmal (Tri Attack).
+; unless the move is Normal (Tri Attack).
 
 	push hl
 
@@ -7800,7 +7800,7 @@ CheckMoveTypeMatchesTarget: ; 36e5b
 	ld a, BATTLE_VARS_MOVE_TYPE
 	call GetBattleVar
 	and $1F
-	cp NORMAL
+	cp NoRMAL
 	jr z, .normal
 
 	cp [hl]
@@ -7892,7 +7892,7 @@ BattleCommand_Substitute: ; 36e7c
 	jr .finish
 
 .no_anim
-	call BattleCommand_RaiseSubNOAnim
+	call BattleCommand_RaiseSubNoAnim
 .finish
 	ld hl, MadeSubstituteText
 	call StdBattleTextBox
@@ -8083,7 +8083,7 @@ BattleCommand_LeechSeed: ; 36f9d
 BattleCommand_Splash: ; 36fe1
 	call AnimateCurrentMove
 	callba TrainerRankings_Splash
-	jp PrintNOthingHappened
+	jp PrintNothingHappened
 
 ; 36fed
 
@@ -8531,9 +8531,9 @@ PrintDoesntAffect: ; 3733d
 ; 37343
 
 
-PrintNOthingHappened: ; 37343
+PrintNothingHappened: ; 37343
 ; 'but nothing happened!'
-	ld hl, NOthingHappenedText
+	ld hl, NothingHappenedText
 	jp StdBattleTextBox
 
 ; 37349
@@ -8712,7 +8712,7 @@ BattleCommand_ArenaTrap: ; 37517
 
 	set SUBSTATUS_CANT_RUN, [hl]
 	call AnimateCurrentMove
-	ld hl, CantEscapeNOwText
+	ld hl, CantEscapeNowText
 	jp StdBattleTextBox
 
 .failed
@@ -8817,7 +8817,7 @@ BattleCommand_FuryCutter: ; 37792
 	rl [hl]
 	jr nc, .checkdouble
 
-; NO overflow
+; No overflow
 	ld a, $ff
 	ld [hli], a
 	ld [hl], a
@@ -9033,7 +9033,7 @@ BattleCommand_BatonPass: ; 379c9
 
 ; Transition into switchmon menu
 	call LoadStandardMenuDataHeader
-	callba SetUpBattlePartyMenu_NOLoop
+	callba SetUpBattlePartyMenu_NoLoop
 
 	callba ForcePickSwitchMonInBattle
 

@@ -8,7 +8,7 @@ FruitTreeScript:: ; 44000
 	callasm TryResetFruitTrees
 	callasm CheckFruitTree
 	iffalse .fruit
-	writetext NOthingHereText
+	writetext NothingHereText
 	waitbutton
 	jump .end
 
@@ -155,7 +155,7 @@ FruitPackIsFullText: ; 440c4
 	db "@"
 ; 440c9
 
-NOthingHereText: ; 440c9
-	text_jump _NOthingHereText
+NothingHereText: ; 440c9
+	text_jump _NothingHereText
 	db "@"
 ; 440ce

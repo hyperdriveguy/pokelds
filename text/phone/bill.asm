@@ -38,7 +38,7 @@ BillPhoneGeneriText: ; 0x1b44fe
 	line $56
 	done
 
-BillPhoneNOtFullText: ; 0x1b452a
+BillPhoneNotFullText: ; 0x1b452a
 	text "Thanks for"
 	line "waiting!"
 

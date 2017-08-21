@@ -11,7 +11,7 @@ FishGroups: ; 92488
 	dbwww 50 percent + 1, .WhirlIslands_Old,     .WhirlIslands_Good,     .WhirlIslands_Super
 	dbwww 50 percent + 1, .Qwilfish_Old,         .Qwilfish_Good,         .Qwilfish_Super
 	dbwww 50 percent + 1, .Remoraid_Old,         .Remoraid_Good,         .Remoraid_Super
-	dbwww 50 percent + 1, .Qwilfish_NOSwarm_Old, .Qwilfish_NOSwarm_Good, .Qwilfish_NOSwarm_Super
+	dbwww 50 percent + 1, .Qwilfish_NoSwarm_Old, .Qwilfish_NoSwarm_Good, .Qwilfish_NoSwarm_Super
 
 .Shore_Old: ; 924e3
 	db  70 percent + 1, MAGIKARP,   10
@@ -163,18 +163,18 @@ FishGroups: ; 92488
 	db  90 percent + 1, KINGLER,    40
 	db 100 percent,     SEADRA,     40
 
-.Qwilfish_NOSwarm_Old:
+.Qwilfish_NoSwarm_Old:
 .Qwilfish_Old: ; 9262d
 	db  70 percent + 1, MAGIKARP,   10
 	db  85 percent + 1, MAGIKARP,   10
 	db 100 percent,     TENTACOOL,  10
-.Qwilfish_NOSwarm_Good:
+.Qwilfish_NoSwarm_Good:
 .Qwilfish_Good: ; 92636
 	db  35 percent,     MAGIKARP,   20
 	db  70 percent,     TENTACOOL,  20
 	db  90 percent + 1, TENTACOOL,  20
 	db 100 percent,     0, 20
-.Qwilfish_NOSwarm_Super:
+.Qwilfish_NoSwarm_Super:
 .Qwilfish_Super: ; 92642
 	db  40 percent,     TENTACOOL,  40
 	db  70 percent,     0, 21

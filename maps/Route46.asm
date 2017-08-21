@@ -203,7 +203,7 @@ UnknownText_0x1a9851:
 	text "I did my best but"
 	line "came up short."
 
-	para "NO excuses--I"
+	para "No excuses--I"
 	line "admit I lost."
 	done
 

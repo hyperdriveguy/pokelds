@@ -410,7 +410,7 @@ UnknownText_0x18d2ea:
 	text "Hm… Good to see"
 	line "you here."
 
-	para "NO need to explain"
+	para "No need to explain"
 	line "why you came."
 
 	para "CLAIR sent you"
@@ -422,7 +422,7 @@ UnknownText_0x18d2ea:
 	para "I am sorry, but I"
 	line "must test you."
 
-	para "NOt to worry, you"
+	para "Not to worry, you"
 	line "are to answer only"
 	cont "a few questions."
 

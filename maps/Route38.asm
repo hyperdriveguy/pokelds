@@ -130,12 +130,12 @@ TrainerLassDana1:
 .TryGiveThunderstone:
 	scall .Gift
 	verbosegiveitem THUNDERSTONE
-	iffalse .NORoomForThunderstone
+	iffalse .NoRoomForThunderstone
 	clearflag ENGINE_DANA_HAS_THUNDERSTONE
 	setevent EVENT_DANA_GAVE_THUNDERSTONE
 	jump .NumberAccepted
 
-.NORoomForThunderstone:
+.NoRoomForThunderstone:
 	jump .PackFull
 
 .AskNumber1F:
@@ -198,7 +198,7 @@ TrainerSchoolboyChad1:
 .AskToRegisterNumber:
 	askforphonenumber PHONE_SCHOOLBOY_CHAD
 	if_equal $1, .PhoneFull
-	if_equal $2, .SaidNO
+	if_equal $2, .SaidNo
 	trainertotext SCHOOLBOY, CHAD1, $0
 	scall .RegisteredChad
 	jump .HaveChadsNumber
@@ -279,7 +279,7 @@ TrainerSchoolboyChad1:
 	jumpstd numberacceptedm
 	end
 
-.SaidNO:
+.SaidNo:
 	jumpstd numberdeclinedm
 	end
 

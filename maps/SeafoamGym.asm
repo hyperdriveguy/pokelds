@@ -18,7 +18,7 @@ UnknownScript_0x1ab4fa:
 BlaineScript_0x1ab4fb:
 	faceplayer
 	opentext
-	checkflag ENGINE_VOLCANOBADGE
+	checkflag ENGINE_VOLCANoBADGE
 	iftrue .FightDone
 	writetext UnknownText_0x1ab548
 	waitbutton
@@ -35,7 +35,7 @@ BlaineScript_0x1ab4fb:
 	writetext UnknownText_0x1ab683
 	playsound SFX_GET_BADGE
 	waitsfx
-	setflag ENGINE_VOLCANOBADGE
+	setflag ENGINE_VOLCANoBADGE
 	writetext UnknownText_0x1ab69d
 	waitbutton
 	closetext
@@ -97,12 +97,12 @@ UnknownText_0x1ab646:
 	line "I've burned out…"
 
 	para "You've earned"
-	line "VOLCANOBADGE!"
+	line "VOLCANoBADGE!"
 	done
 
 UnknownText_0x1ab683:
 	text "<PLAYER> received"
-	line "VOLCANOBADGE."
+	line "VOLCANoBADGE."
 	done
 
 UnknownText_0x1ab69d:

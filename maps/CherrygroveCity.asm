@@ -34,7 +34,7 @@ CherrygroveCityGuideGent:
 	opentext
 	writetext GuideGentIntroText
 	yesorno
-	iffalse .NO
+	iffalse .No
 	jump .Yes
 .Yes:
 	writetext GuideGentTourText1
@@ -98,15 +98,15 @@ CherrygroveCityGuideGent:
 .mapcardname
 	db "MAP CARD@"
 
-.NO:
-	writetext GuideGentNOText
+.No:
+	writetext GuideGentNoText
 	waitbutton
 	closetext
 	end
 
 CherrygroveSilverTriggerSouth:
 	moveperson CHERRYGROVECITY_SILVER, $27, $7
-CherrygroveSilverTriggerNOrth:
+CherrygroveSilverTriggerNorth:
 	spriteface PLAYER, RIGHT
 	showemote EMOTE_SHOCK, PLAYER, 15
 	special Special_FadeOutMusic
@@ -185,7 +185,7 @@ CherrygroveTeacherScript:
 	opentext
 	checkflag ENGINE_MAP_CARD
 	iftrue .HaveMapCard
-	writetext CherrygroveTeacherText_NOMapCard
+	writetext CherrygroveTeacherText_NoMapCard
 	waitbutton
 	closetext
 	end
@@ -201,7 +201,7 @@ CherrygroveYoungsterScript:
 	opentext
 	checkflag ENGINE_POKEDEX
 	iftrue .HavePokedex
-	writetext CherrygroveYoungsterText_NOPokedex
+	writetext CherrygroveYoungsterText_NoPokedex
 	waitbutton
 	closetext
 	end
@@ -428,7 +428,7 @@ GuideGentPokegearText:
 	line "your journey!"
 	done
 
-GuideGentNOText:
+GuideGentNoText:
 	text "Oh… It's something"
 	line "I enjoy doing…"
 
@@ -489,7 +489,7 @@ CherrygroveRivalText_YouWon:
 	cont "trainer."
 	done
 
-CherrygroveTeacherText_NOMapCard:
+CherrygroveTeacherText_NoMapCard:
 	text "Did you talk to"
 	line "the old man by the"
 	cont "#mon CENTER?"
@@ -505,7 +505,7 @@ CherrygroveTeacherText_HaveMapCard:
 	cont "anywhere is fun."
 	done
 
-CherrygroveYoungsterText_NOPokedex:
+CherrygroveYoungsterText_NoPokedex:
 	text "MR.#mon's house"
 	line "is still farther"
 	cont "up ahead."
@@ -564,7 +564,7 @@ CherrygroveCity_MapEventHeader:
 
 .XYTriggers:
 	db 2
-	xy_trigger 1, $6, $21, $0, CherrygroveSilverTriggerNOrth, $0, $0
+	xy_trigger 1, $6, $21, $0, CherrygroveSilverTriggerNorth, $0, $0
 	xy_trigger 1, $7, $21, $0, CherrygroveSilverTriggerSouth, $0, $0
 
 .Signposts:

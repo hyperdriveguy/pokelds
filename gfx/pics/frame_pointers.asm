@@ -162,7 +162,7 @@ FramesPointers:
 	dw SentretFrames
 	dw FurretFrames
 	dw HoothootFrames
-	dw NOctowlFrames
+	dw NoctowlFrames
 	dw LedybaFrames
 	dw LedianFrames
 	dw SpinarakFrames

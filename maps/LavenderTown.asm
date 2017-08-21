@@ -82,7 +82,7 @@ UnknownText_0x1ad7ac:
 LavenderTownSignText:
 	text "LAVENDER TOWN"
 
-	para "The NOble Purple"
+	para "The Noble Purple"
 	line "Town"
 	done
 

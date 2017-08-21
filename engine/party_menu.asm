@@ -331,7 +331,7 @@ PlacePartyMonTMHMCompatibility: ; 501e0
 	ld [CurPartySpecies], a
 	predef CanLearnTMHMMove
 	pop hl
-	call .PlaceAbleNOtAble
+	call .PlaceAbleNotAble
 	call PlaceString
 
 .next
@@ -345,7 +345,7 @@ PlacePartyMonTMHMCompatibility: ; 501e0
 	ret
 ; 50215
 
-.PlaceAbleNOtAble: ; 50215
+.PlaceAbleNotAble: ; 50215
 	ld a, c
 	and a
 	jr nz, .able
@@ -362,7 +362,7 @@ PlacePartyMonTMHMCompatibility: ; 501e0
 ; 50226
 
 .string_not_able ; 50226
-	db "NOT ABLE@"
+	db "NoT ABLE@"
 ; 5022f
 
 
@@ -446,7 +446,7 @@ PlacePartyMonEvoStoneCompatibility: ; 5022f
 	db "ABLE@"
 ; 502a8
 .string_not_able ; 502a8
-	db "NOT ABLE@"
+	db "NoT ABLE@"
 ; 502b1
 
 
@@ -499,7 +499,7 @@ PlacePartyMonGender: ; 502b1
 ; 502fe
 
 .unknown ; 502fe
-	db "…UNKNOWN@"
+	db "…UNKNoWN@"
 ; 50307
 
 
@@ -694,7 +694,7 @@ InitPartyMenuWithCancel: ; 50405
 	ret
 ; 5042d
 
-InitPartyMenuNOCancel: ; 0x5042d
+InitPartyMenuNoCancel: ; 0x5042d
 ; no cancel
 	ld de, PartyMenuAttributes
 	call SetMenuAttributes
@@ -779,7 +779,7 @@ PrintPartyMenuText: ; 5049a
 	ld a, [PartyCount]
 	and a
 	jr nz, .haspokemon
-	ld de, YouHaveNOPKMNString
+	ld de, YouHaveNoPKMNString
 	jr .gotstring
 .haspokemon ; 504ae
 	ld a, [PartyMenuActionText]
@@ -832,7 +832,7 @@ ChooseAMalePKMNString: ; 0x5053b    ; UNUSED
 ToWhichPKMNString: ; 0x50549
 	db "To which <PK><MN>?@"
 
-YouHaveNOPKMNString: ; 0x50556
+YouHaveNoPKMNString: ; 0x50556
 	db "You have no <PK><MN>!@"
 
 
@@ -931,7 +931,7 @@ PrintPartyMenuActionText: ; 50566
 	ld l, a
 	ld a, [Options]
 	push af
-	set NO_TEXT_SCROLL, a
+	set No_TEXT_SCROLL, a
 	ld [Options], a
 	call PrintText
 	pop af

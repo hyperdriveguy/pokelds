@@ -70,7 +70,7 @@ FastShipBed:
 	waitbutton
 	closetext
 	special Special_FadeBlackQuickly
-	special Special_ReloadSpritesNOPalettes
+	special Special_ReloadSpritesNoPalettes
 	special TrainerRankings_Healings
 	special HealParty
 	playmusic MUSIC_HEAL
@@ -110,7 +110,7 @@ UnknownScript_0x75af7:
 	setevent EVENT_FAST_SHIP_HAS_ARRIVED
 	end
 
-FastShipCabinsNOrthwestCabinTrashcan:
+FastShipCabinsNorthwestCabinTrashcan:
 	jumpstd trashcan
 
 FirebreatherLyleSeenText:
@@ -241,7 +241,7 @@ FastShipCabins_SW_SSW_NW_MapEventHeader:
 	db 3
 	signpost 1, 7, SIGNPOST_READ, FastShipBed
 	signpost 2, 7, SIGNPOST_READ, FastShipBed
-	signpost 7, 7, SIGNPOST_READ, FastShipCabinsNOrthwestCabinTrashcan
+	signpost 7, 7, SIGNPOST_READ, FastShipCabinsNorthwestCabinTrashcan
 
 .PersonEvents:
 	db 4

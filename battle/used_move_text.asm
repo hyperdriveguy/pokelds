@@ -206,7 +206,7 @@ MoveGrammar: ; 105e7a
 	db SHARPEN
 	db SUBSTITUTE
 	db MIND_READER
-	db SNORE
+	db SNoRE
 	db PROTECT
 	db SPIKES
 	db ENDURE
@@ -263,7 +263,7 @@ MoveGrammar: ; 105e7a
 	db DIG
 	db TOXIC
 	db SCREECH
-	db METRONOME
+	db METRONoME
 	db LICK
 	db CLAMP
 	db CONSTRICT

@@ -253,14 +253,14 @@ IsInArray:: ; 30e1
 .loop
 	ld a, [hl]
 	cp -1
-	jr z, .NOtInArray
+	jr z, .NotInArray
 	cp c
 	jr z, .InArray
 	inc b
 	add hl, de
 	jr .loop
 
-.NOtInArray:
+.NotInArray:
 	and a
 	ret
 
@@ -295,7 +295,7 @@ PrintLetterDelay:: ; 313d
 ; Options[4] and TextBoxFlags[!1] disable the delay.
 
 	ld a, [Options]
-	bit NO_TEXT_SCROLL, a
+	bit No_TEXT_SCROLL, a
 	ret nz
 
 ; non-scrolling text?
@@ -789,7 +789,7 @@ GetName:: ; 33c3
 
 	ld a, [wNamedObjectTypeBuffer]
 	cp PKMN_NAME
-	jr nz, .NOtPokeName
+	jr nz, .NotPokeName
 
 	ld a, [CurSpecies]
 	ld [wd265], a
@@ -800,7 +800,7 @@ GetName:: ; 33c3
 	ld d, h
 	jr .done
 
-.NOtPokeName:
+.NotPokeName:
 	ld a, [wNamedObjectTypeBuffer]
 	dec a
 	ld e, a
@@ -1029,10 +1029,10 @@ GetTMHMName:: ; 3487
 
 IsHM:: ; 34df
 	cp HM01
-	jr c, .NOtHM
+	jr c, .NotHM
 	scf
 	ret
-.NOtHM:
+.NotHM:
 	and a
 	ret
 ; 34e7
@@ -1448,7 +1448,7 @@ FacingPlayerDistance:: ; 36ad
 .CheckY:
 	ld a, [PlayerStandingMapY]
 	sub e
-	jr z, .NOtFacing
+	jr z, .NotFacing
 	jr nc, .Above
 
 ; Below
@@ -1466,7 +1466,7 @@ FacingPlayerDistance:: ; 36ad
 .CheckX:
 	ld a, [PlayerStandingMapX]
 	sub d
-	jr z, .NOtFacing
+	jr z, .NotFacing
 	jr nc, .Left
 
 ; Right
@@ -1483,11 +1483,11 @@ FacingPlayerDistance:: ; 36ad
 .CheckFacing:
 	call GetSpriteDirection
 	cp e
-	jr nz, .NOtFacing
+	jr nz, .NotFacing
 	scf
 	ret
 
-.NOtFacing:
+.NotFacing:
 	and a
 	ret
 ; 36f5
@@ -1547,13 +1547,13 @@ PrintWinLossText:: ; 3718
 IsAPokemon:: ; 3741
 ; Return carry if species a is not a Pokemon.
 	and a
-	jr z, .NOtAPokemon
+	jr z, .NotAPokemon
 	cp EGG
 	jr z, .Pokemon
 	cp NUM_POKEMON + 1
 	jr c, .Pokemon
 
-.NOtAPokemon:
+.NotAPokemon:
 	scf
 	ret
 
@@ -1744,7 +1744,7 @@ GetBaseData:: ; 3856
 .end
 ; Replace Pokedex # with species
 	ld a, [CurSpecies]
-	ld [BaseDexNO], a
+	ld [BaseDexNo], a
 
 	pop af
 	rst Bankswitch
@@ -1791,7 +1791,7 @@ PrintBCDNumber:: ; 38bb
 ; bit 5: if set, print currency symbol at the beginning of the string
 ;        if unset, do not print the currency symbol
 ; bits 0-4: length of BCD number in bytes
-; NOte that bits 5 and 7 are modified during execution. The above reflects
+; Note that bits 5 and 7 are modified during execution. The above reflects
 ; their meaning at the beginning of the functions's execution.
 	ld b, c ; save flags in b
 	res 7, c
@@ -1884,7 +1884,7 @@ Function392d:: ; 392d
 ; XXX
 ; GetDexNumber
 ; Probably used in gen 1 to convert index number to dex number
-; NOt required in gen 2 because index number == dex number
+; Not required in gen 2 because index number == dex number
 	push hl
 	ld a, b
 	dec a

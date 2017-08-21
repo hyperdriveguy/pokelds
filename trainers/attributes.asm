@@ -363,7 +363,7 @@ TrainerClassAttributes: ; 3959c
 ; Twins
 	db 0, 0 ; items
 	db 5 ; base reward
-	dw NO_AI
+	dw No_AI
 	dw CONTEXT_USE + SWITCH_OFTEN
 
 ; Pokefanf

@@ -160,7 +160,7 @@ GruntM10SeenText:
 	done
 
 GruntM10BeatenText:
-	text "NO! Unbelievable!"
+	text "No! Unbelievable!"
 	done
 
 UnknownText_0x5ede2:

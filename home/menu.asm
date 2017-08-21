@@ -126,20 +126,20 @@ CopyNameFromMenu::
 ; 0x1dcf
 
 
-YesNOBox:: ; 1dcf
+YesNoBox:: ; 1dcf
 	lb bc, SCREEN_WIDTH - 6, 7
 
-PlaceYesNOBox:: ; 1dd2
-	jr _YesNOBox
+PlaceYesNoBox:: ; 1dd2
+	jr _YesNoBox
 
 PlaceGenericTwoOptionBox:: ; 1dd4
 	call LoadMenuDataHeader
 	jr InterpretTwoOptionMenu
 
-_YesNOBox:: ; 1dd9
+_YesNoBox:: ; 1dd9
 ; Return nc (yes) or c (no).
 	push bc
-	ld hl, YesNOMenuDataHeader
+	ld hl, YesNoMenuDataHeader
 	call CopyMenuDataHeader
 	pop bc
 ; This seems to be an overflow prevention, but
@@ -182,7 +182,7 @@ InterpretTwoOptionMenu:: ; 1dfe
 	ret
 ; 1e1d
 
-YesNOMenuDataHeader:: ; 1e1d
+YesNoMenuDataHeader:: ; 1e1d
 	db $40 ; tile backup
 	db 5, 10 ; start coords
 	db 9, 15 ; end coords

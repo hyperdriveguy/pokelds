@@ -317,7 +317,7 @@ CooltrainerfJoyceSeenText:
 	done
 
 CooltrainerfJoyceBeatenText:
-	text "NO! I don't"
+	text "No! I don't"
 	line "believe this!"
 	done
 
@@ -393,7 +393,7 @@ FisherScottSeenText:
 	done
 
 FisherScottBeatenText:
-	text "NO! NOt in this"
+	text "No! Not in this"
 	line "battle!"
 	done
 

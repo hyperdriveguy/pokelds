@@ -64,14 +64,14 @@ SpecialsPointers:: ; c029
 	add_special Special_UnownPuzzle
 	add_special Special_SlotMachine
 	add_special Special_CardFlip
-	add_special Special_DummyNOnfunctionalGameCornerGame
+	add_special Special_DummyNonfunctionalGameCornerGame
 	add_special Special_ClearBGPalettesBufferScreen
 	add_special FadeOutPalettes
 	add_special Special_BattleTowerFade
 	add_special Special_FadeBlackQuickly
 	add_special FadeInPalettes
 	add_special Special_FadeInQuickly
-	add_special Special_ReloadSpritesNOPalettes
+	add_special Special_ReloadSpritesNoPalettes
 	add_special ClearBGPalettes
 	add_special UpdateTimePals
 	add_special ClearTileMap
@@ -190,10 +190,10 @@ SpecialsPointers:: ; c029
 	add_special FindItemInPCOrBag
 	add_special Special_InitialSetDSTFlag
 	add_special Special_InitialClearDSTFlag
-	add_special SpecialNOne
+	add_special SpecialNone
 
 ; c224
-SpecialNOne: ; c224
+SpecialNone: ; c224
 	ret
 ; c225
 
@@ -231,28 +231,28 @@ Special_FindGreaterThanThatLevel: ; c25a
 	ld a, [ScriptVar]
 	ld b, a
 	callba _FindGreaterThanThatLevel
-	jr z, FoundNOne
+	jr z, FoundNone
 	jr FoundOne
 
 Special_FindAtLeastThatHappy: ; c268
 	ld a, [ScriptVar]
 	ld b, a
 	callba _FindAtLeastThatHappy
-	jr z, FoundNOne
+	jr z, FoundNone
 	jr FoundOne
 
 Special_FindThatSpecies: ; c276
 	ld a, [ScriptVar]
 	ld b, a
 	callba _FindThatSpecies
-	jr z, FoundNOne
+	jr z, FoundNone
 	jr FoundOne
 
 Special_FindThatSpeciesYourTrainerID: ; c284
 	ld a, [ScriptVar]
 	ld b, a
 	callba _FindThatSpeciesYourTrainerID
-	jr z, FoundNOne
+	jr z, FoundNone
 	jr FoundOne
 
 FoundOne: ; c292
@@ -260,7 +260,7 @@ FoundOne: ; c292
 	ld [ScriptVar], a
 	ret
 
-FoundNOne: ; c298
+FoundNone: ; c298
 	xor a
 	ld [ScriptVar], a
 	ret
@@ -405,7 +405,7 @@ Special_CardFlip: ; c380
 	ret
 ; c38d
 
-Special_DummyNOnfunctionalGameCornerGame: ; c38d
+Special_DummyNonfunctionalGameCornerGame: ; c38d
 	call Special_CheckCoins
 	ret c
 	ld a, BANK(_DummyGame)
@@ -443,11 +443,11 @@ Special_CheckCoins: ; c3ae
 	ret
 
 .no_coins
-	ld hl, .NOCoinsText
+	ld hl, .NoCoinsText
 	jr .print
 
 .no_coin_case
-	ld hl, .NOCoinCaseText
+	ld hl, .NoCoinCaseText
 
 .print
 	call PrintText
@@ -455,13 +455,13 @@ Special_CheckCoins: ; c3ae
 	ret
 ; c3d1
 
-.NOCoinsText: ; 0xc3d1
+.NoCoinsText: ; 0xc3d1
 	; You have no coins.
 	text_jump UnknownText_0x1bd3d7
 	db "@"
 ; 0xc3d6
 
-.NOCoinCaseText: ; 0xc3d6
+.NoCoinCaseText: ; 0xc3d6
 	; You don't have a COIN CASE.
 	text_jump UnknownText_0x1bd3eb
 	db "@"

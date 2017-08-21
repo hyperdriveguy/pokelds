@@ -139,7 +139,7 @@ BattleCommand_Transform: ; 371cd
 
 .mimic_anims
 	call BattleCommand_MoveDelay
-	call BattleCommand_RaiseSubNOAnim
+	call BattleCommand_RaiseSubNoAnim
 .after_anim
 	xor a
 	ld [wNumHits], a

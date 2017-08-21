@@ -2,7 +2,7 @@
 BattleCore:
 DoBattle: ; 3c000
 	xor a
-	ld [wBattleParticipantsNOtFainted], a
+	ld [wBattleParticipantsNotFainted], a
 	ld [wBattleParticipantsIncludingFainted], a
 	ld [wPlayerAction], a
 	ld [BattleEnded], a
@@ -267,7 +267,7 @@ HandleBetweenTurnEffects: ; 3c1d6
 	call HandlePerishSong
 	call CheckFaint_PlayerThenEnemy
 	ret c
-	jr .NOMoreFaintingConditions
+	jr .NoMoreFaintingConditions
 
 .CheckEnemyFirst:
 	call CheckFaint_EnemyThenPlayer
@@ -285,7 +285,7 @@ HandleBetweenTurnEffects: ; 3c1d6
 	call CheckFaint_EnemyThenPlayer
 	ret c
 
-.NOMoreFaintingConditions:
+.NoMoreFaintingConditions:
 	call HandleLeftovers
 	call HandleMysteryberry
 	call HanleDefrost
@@ -300,13 +300,13 @@ HandleBetweenTurnEffects: ; 3c1d6
 
 CheckFaint_PlayerThenEnemy: ; 3c23c
 	call HasPlayerFainted
-	jr nz, .PlayerNOtFainted
+	jr nz, .PlayerNotFainted
 	call HandlePlayerMonFaint
 	ld a, [BattleEnded]
 	and a
 	jr nz, .BattleIsOver
 
-.PlayerNOtFainted:
+.PlayerNotFainted:
 	call HasEnemyFainted
 	jr nz, .BattleContinues
 	call HandleEnemyMonFaint
@@ -325,13 +325,13 @@ CheckFaint_PlayerThenEnemy: ; 3c23c
 
 CheckFaint_EnemyThenPlayer: ; 3c25c
 	call HasEnemyFainted
-	jr nz, .EnemyNOtFainted
+	jr nz, .EnemyNotFainted
 	call HandleEnemyMonFaint
 	ld a, [BattleEnded]
 	and a
 	jr nz, .BattleIsOver
 
-.EnemyNOtFainted:
+.EnemyNotFainted:
 	call HasPlayerFainted
 	jr nz, .BattleContinues
 	call HandlePlayerMonFaint
@@ -833,14 +833,14 @@ SometimesFleeMons: ; 3c59a
 	db DRAGONAIR
 	db TOGETIC
 	db UMBREON
-	db UNOWN
+	db UNoWN
 	db SNUBBULL
 	db HERACROSS
 	db -1
 
 OftenFleeMons: ; 3c5a8
 	db CUBONE
-	db ARTICUNO
+	db ARTICUNo
 	db ZAPDOS
 	db MOLTRES
 	db QUAGSIRE
@@ -1758,7 +1758,7 @@ HandleScreens: ; 3cb36
 
 HandleWeather: ; 3cb9e
 	ld a, [Weather]
-	cp WEATHER_NONE
+	cp WEATHER_NoNE
 	ret z
 
 	ld hl, WeatherCount
@@ -2261,10 +2261,10 @@ UpdateBattleStateAndExperienceAfterEnemyFaint: ; 3ce01
 	call IsAnyMonHoldingExpShare
 	ret z
 
-	ld a, [wBattleParticipantsNOtFainted]
+	ld a, [wBattleParticipantsNotFainted]
 	push af
 	ld a, d
-	ld [wBattleParticipantsNOtFainted], a
+	ld [wBattleParticipantsNotFainted], a
 	ld hl, wBackupEnemyMonBaseStats
 	ld de, EnemyMonBaseStats
 	ld bc, EnemyMonEnd - EnemyMonBaseStats
@@ -2273,7 +2273,7 @@ UpdateBattleStateAndExperienceAfterEnemyFaint: ; 3ce01
 	ld [wGivingExperienceToExpShareHolders], a
 	call GiveExperiencePoints
 	pop af
-	ld [wBattleParticipantsNOtFainted], a
+	ld [wBattleParticipantsNotFainted], a
 	ret
 ; 3ceaa
 
@@ -2667,7 +2667,7 @@ PlayVictoryMusic: ; 3d0ea
 	ld a, [hli]
 	or [hl]
 	jr nz, .play_music
-	ld a, [wBattleParticipantsNOtFainted]
+	ld a, [wBattleParticipantsNotFainted]
 	and a
 	jr z, .lost
 	jr .play_music
@@ -2689,7 +2689,7 @@ PlayVictoryMusic: ; 3d0ea
 ; These functions check if the current opponent is a gym leader or one of a
 ; few other special trainers.
 
-; NOte: KantoGymLeaders is a subset of JohtoGymLeaders. If you wish to
+; Note: KantoGymLeaders is a subset of JohtoGymLeaders. If you wish to
 ; differentiate between the two, call IsKantoGymLeader first.
 
 ; The Lance and Red entries are unused for music checks; those trainers are
@@ -2720,7 +2720,7 @@ JohtoGymLeaders:
 	db CHUCK
 	db CLAIR
 	db WILL
-	db BRUNO
+	db BRUNo
 	db KAREN
 	db KOGA
 ; fallthrough
@@ -2792,7 +2792,7 @@ HandlePlayerMonFaint: ; 3d14e
 PlayerMonFaintHappinessMod: ; 3d1aa
 	ld a, [CurBattleMon]
 	ld c, a
-	ld hl, wBattleParticipantsNOtFainted
+	ld hl, wBattleParticipantsNotFainted
 	ld b, RESET_FLAG
 	predef FlagPredef
 	ld hl, EnemySubStatus3
@@ -2842,7 +2842,7 @@ AskUseNextPokemon: ; 3d1f8
 	call StdBattleTextBox
 .loop
 	lb bc, 1, 7
-	call PlaceYesNOBox
+	call PlaceYesNoBox
 	ld a, [wMenuCursorY]
 	jr c, .pressed_b
 	and a
@@ -2860,7 +2860,7 @@ AskUseNextPokemon: ; 3d1f8
 ForcePlayerMonChoice: ; 3d227
 	call EmptyBattleTextBox
 	call LoadStandardMenuDataHeader
-	call SetUpBattlePartyMenu_NOLoop
+	call SetUpBattlePartyMenu_NoLoop
 	call ForcePickPartyMonInBattle
 	ld a, [wLinkMode]
 	and a
@@ -2963,7 +2963,7 @@ IsMobileBattle: ; 3d2f1
 	ret
 ; 3d2f7
 
-SetUpBattlePartyMenu_NOLoop: ; 3d2f7
+SetUpBattlePartyMenu_NoLoop: ; 3d2f7
 	call ClearBGPalettes
 SetUpBattlePartyMenu: ; switch to fullscreen menu?
 	callba LoadPartyMenuGFX
@@ -3305,7 +3305,7 @@ EnemySwitch: ; 3d4e1
 	ret c
 	; If we're here, then we're switching too
 	xor a
-	ld [wBattleParticipantsNOtFainted], a
+	ld [wBattleParticipantsNotFainted], a
 	ld [wBattleParticipantsIncludingFainted], a
 	ld [wPlayerAction], a
 	inc a
@@ -3383,12 +3383,12 @@ ResetEnemyBattleVars: ; 3d557
 
 ResetBattleParticipants: ; 3d57a
 	xor a
-	ld [wBattleParticipantsNOtFainted], a
+	ld [wBattleParticipantsNotFainted], a
 	ld [wBattleParticipantsIncludingFainted], a
 AddBattleParticipant: ; 3d581
 	ld a, [CurBattleMon]
 	ld c, a
-	ld hl, wBattleParticipantsNOtFainted
+	ld hl, wBattleParticipantsNotFainted
 	ld b, SET_FLAG
 	push bc
 	predef FlagPredef
@@ -3606,7 +3606,7 @@ LoadEnemyPkmnToSwitchTo: ; 3d6ca
 	call LoadEnemyMon
 
 	ld a, [CurPartySpecies]
-	cp UNOWN
+	cp UNoWN
 	jr nz, .skip_unown
 	ld a, [wFirstUnownSeen]
 	and a
@@ -3662,11 +3662,11 @@ OfferSwitch: ; 3d74b
 	ld hl, BattleText_EnemyIsAboutToUseWillPlayerChangePkmn
 	call StdBattleTextBox
 	lb bc, 1, 7
-	call PlaceYesNOBox
+	call PlaceYesNoBox
 	ld a, [wMenuCursorY]
 	dec a
 	jr nz, .said_no
-	call SetUpBattlePartyMenu_NOLoop
+	call SetUpBattlePartyMenu_NoLoop
 	call PickSwitchMonInBattle
 	jr c, .canceled_switch
 	ld a, [CurBattleMon]
@@ -3838,7 +3838,7 @@ CheckIfCurPartyMonIsFitToFight: ; 3d887
 	ld hl, BattleText_AnEGGCantBattle
 	jr z, .print_textbox
 
-	ld hl, BattleText_TheresNOWillToBattle
+	ld hl, BattleText_TheresNoWillToBattle
 
 .print_textbox
 	call StdBattleTextBox
@@ -3970,7 +3970,7 @@ TryToRunAwayFromBattle: ; 3d8b3
 	jr .print_inescapable_text
 
 .cant_run_from_trainer
-	ld hl, BattleText_TheresNOEscapeFromTrainerBattle
+	ld hl, BattleText_TheresNoEscapeFromTrainerBattle
 
 .print_inescapable_text
 	call StdBattleTextBox
@@ -4382,7 +4382,7 @@ PursuitSwitch: ; 3dc5b
 	call PlayStereoCry
 	ld a, [LastPlayerMon]
 	ld c, a
-	ld hl, wBattleParticipantsNOtFainted
+	ld hl, wBattleParticipantsNotFainted
 	ld b, RESET_FLAG
 	predef FlagPredef
 	call PlayerMonFaintedAnimation
@@ -4915,7 +4915,7 @@ PrintPlayerHUD: ; 3dfbf
 	push af ; back up gender
 	push hl
 	ld de, BattleMonStatus
-	predef PlaceNOnFaintStatus
+	predef PlaceNonFaintStatus
 	pop hl
 	pop bc
 	ret nz
@@ -5003,7 +5003,7 @@ DrawEnemyHUD: ; 3e043
 	push af
 	push hl
 	ld de, EnemyMonStatus
-	predef PlaceNOnFaintStatus
+	predef PlaceNonFaintStatus
 	pop hl
 	pop bc
 	jr nz, .skip_level
@@ -5765,7 +5765,7 @@ MoveSelectionScreen: ; 3e4bc
 	jr .place_textbox_start_over
 
 .no_pp_left
-	ld hl, BattleText_TheresNOPPLeftForThisMove
+	ld hl, BattleText_TheresNoPPLeftForThisMove
 
 .place_textbox_start_over
 	call StdBattleTextBox
@@ -6024,7 +6024,7 @@ CheckPlayerHasUsableMoves: ; 3e786
 	ret nz
 
 .force_struggle
-	ld hl, BattleText_PkmnHasNOMovesLeft
+	ld hl, BattleText_PkmnHasNoMovesLeft
 	call StdBattleTextBox
 	ld c, 60
 	call DelayFrames
@@ -6216,7 +6216,7 @@ LoadEnemyMon: ; 3e8eb
 ; Initialize enemy monster parameters
 ; To do this we pull the species from TempEnemyMonSpecies
 
-; NOtes:
+; Notes:
 ;   BattleRandom is used to ensure sync between Game Boys
 
 ; Clear the whole EnemyMon struct
@@ -6270,14 +6270,14 @@ LoadEnemyMon: ; 3e8eb
 
 ; Failing that, it's all up to chance
 ;  Effective chances:
-;    75% NOne
+;    75% None
 ;    23% Item1
 ;     2% Item2
 
 ; 25% chance of getting an item
 	call BattleRandom
 	cp a, 1 + (75 percent)
-	ld a, NO_ITEM
+	ld a, No_ITEM
 	jr c, .UpdateItem
 
 ; From there, an 8% chance for Item2
@@ -6341,7 +6341,7 @@ LoadEnemyMon: ; 3e8eb
 	
 	ld a, [BattleType]
 	cp a, BATTLETYPE_ROAMING
-	jr nz, .NOtRoaming
+	jr nz, .NotRoaming
 
 ; Grab HP
 	call GetRoamMonHP
@@ -6398,7 +6398,7 @@ LoadEnemyMon: ; 3e8eb
 ; We're done with DVs
 	jr .UpdateDVs
 
-.NOtRoaming:
+.NotRoaming:
 ; Register a contains BattleType
 
 .GenerateDVs:
@@ -6454,7 +6454,7 @@ LoadEnemyMon: ; 3e8eb
 
 ; Unown
 	ld a, [TempEnemyMonSpecies]
-	cp a, UNOWN
+	cp a, UNoWN
 	jr nz, .Magikarp
 
 ; Get letter based on DVs
@@ -6738,7 +6738,7 @@ CheckSleepingTreeMon: ; 3eb38
 ; Don't do anything if this isn't a tree encounter
 	ld a, [BattleType]
 	cp a, BATTLETYPE_TREE
-	jr nz, .NOtSleeping
+	jr nz, .NotSleeping
 
 ; Get list for the time of day
 	ld hl, .Morn
@@ -6756,7 +6756,7 @@ CheckSleepingTreeMon: ; 3eb38
 ; If it's a match, the opponent is asleep
 	ret c
 
-.NOtSleeping:
+.NotSleeping:
 	and a
 	ret
 
@@ -6775,17 +6775,17 @@ CheckSleepingTreeMon: ; 3eb38
 	db -1 ; end
 
 .Day:
-	db VENONAT
+	db VENoNAT
 	db HOOTHOOT
-	db NOCTOWL
+	db NoCTOWL
 	db SPINARAK
 	db HERACROSS
 	db -1 ; end
 
 .Morn:
-	db VENONAT
+	db VENoNAT
 	db HOOTHOOT
-	db NOCTOWL
+	db NoCTOWL
 	db SPINARAK
 	db HERACROSS
 	db -1 ; end
@@ -7399,7 +7399,7 @@ GiveExperiencePoints: ; 3ee3b
 	jp z, .skip_stats ; fainted
 
 	push bc
-	ld hl, wBattleParticipantsNOtFainted
+	ld hl, wBattleParticipantsNotFainted
 	ld a, [CurPartyMon]
 	ld c, a
 	ld b, CHECK_FLAG
@@ -7766,7 +7766,7 @@ GiveExperiencePoints: ; 3ee3b
 
 .EvenlyDivideExpAmongParticipants:
 ; count number of battle participants
-	ld a, [wBattleParticipantsNOtFainted]
+	ld a, [wBattleParticipantsNotFainted]
 	ld b, a
 	ld c, PARTY_LENGTH
 	ld d, 0
@@ -7879,15 +7879,15 @@ AnimateExpBar: ; 3f136
 	ld a, [wd003]
 	adc [hl]
 	ld [hld], a
-	jr nc, .NOOverflow
+	jr nc, .NoOverflow
 	inc [hl]
-	jr nz, .NOOverflow
+	jr nz, .NoOverflow
 	ld a, $ff
 	ld [hli], a
 	ld [hli], a
 	ld [hl], a
 
-.NOOverflow:
+.NoOverflow:
 	ld d, MAX_LEVEL
 	callab CalcExpAtLevel
 	ld a, [hProduct + 1]
@@ -8631,7 +8631,7 @@ InitEnemyWildmon: ; 3f607
 	ld hl, EnemyMonDVs
 	predef GetUnownLetter
 	ld a, [CurPartySpecies]
-	cp UNOWN
+	cp UNoWN
 	jr nz, .skip_unown
 	ld a, [wFirstUnownSeen]
 	and a
@@ -9012,7 +9012,7 @@ ReadAndPrintLinkBattleRecord: ; 3f85f
 
 	hlcoord 6, 4
 	ld de, sLinkBattleWins
-	call .PrintZerosIfNOSaveFileExists
+	call .PrintZerosIfNoSaveFileExists
 	jr c, .quit
 
 	lb bc, 2, 4
@@ -9020,14 +9020,14 @@ ReadAndPrintLinkBattleRecord: ; 3f85f
 
 	hlcoord 11, 4
 	ld de, sLinkBattleLosses
-	call .PrintZerosIfNOSaveFileExists
+	call .PrintZerosIfNoSaveFileExists
 
 	lb bc, 2, 4
 	call PrintNum
 
 	hlcoord 16, 4
 	ld de, sLinkBattleDraws
-	call .PrintZerosIfNOSaveFileExists
+	call .PrintZerosIfNoSaveFileExists
 
 	lb bc, 2, 4
 	call PrintNum
@@ -9035,7 +9035,7 @@ ReadAndPrintLinkBattleRecord: ; 3f85f
 .quit
 	ret
 
-.PrintZerosIfNOSaveFileExists:
+.PrintZerosIfNoSaveFileExists:
 	ld a, [wSavedAtLeastOnce]
 	and a
 	ret nz
@@ -9578,7 +9578,7 @@ BattleStartMessage: ; 3fc8b
 
 	hlcoord 12, 0
 	ld d, $0
-	ld e, ANIM_MON_NORMAL
+	ld e, ANIM_MON_NoRMAL
 	predef AnimateFrontpic
 	jr .skip_cry ; cry is played during the animation
 
@@ -9591,14 +9591,14 @@ BattleStartMessage: ; 3fc8b
 .skip_cry
 	ld a, [BattleType]
 	cp BATTLETYPE_FISH
-	jr nz, .NOtFishing
+	jr nz, .NotFishing
 
 	callba TrainerRankings_HookedEncounters
 
 	ld hl, HookedPokemonAttackedText
 	jr .PlaceBattleStartText
 
-.NOtFishing:
+.NotFishing:
 	ld hl, PokemonFellFromTreeText
 	cp BATTLETYPE_TREE
 	jr z, .PlaceBattleStartText

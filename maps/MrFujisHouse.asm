@@ -2,7 +2,7 @@ const_value set 2
 	const MRFUJISHOUSE_SUPER_NERD
 	const MRFUJISHOUSE_LASS
 	const MRFUJISHOUSE_PSYDUCK
-	const MRFUJISHOUSE_NIDORINO
+	const MRFUJISHOUSE_NIDORINo
 	const MRFUJISHOUSE_PIDGEY
 
 MrFujisHouse_MapScriptHeader:
@@ -29,7 +29,7 @@ MrFujisPsyduck:
 MrFujisNidorino:
 	opentext
 	writetext MrFujisNidorinoText
-	cry NIDORINO
+	cry NIDORINo
 	waitbutton
 	closetext
 	end
@@ -72,7 +72,7 @@ MrFujisPsyduckText:
 	done
 
 MrFujisNidorinoText:
-	text "NIDORINO: Gyun!"
+	text "NIDORINo: Gyun!"
 	done
 
 MrFujisPidgeyText:

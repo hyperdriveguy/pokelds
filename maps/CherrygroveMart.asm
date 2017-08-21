@@ -52,7 +52,7 @@ UnknownText_0x196834:
 
 UnknownText_0x196873:
 	text "# BALLS are in"
-	line "stock! NOw I can"
+	line "stock! Now I can"
 	cont "catch #mon!"
 	done
 

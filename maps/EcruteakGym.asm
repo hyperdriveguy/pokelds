@@ -316,7 +316,7 @@ UnknownText_0x9a2b7:
 	text "We use only ghost-"
 	line "type #mon."
 
-	para "NO normal-type"
+	para "No normal-type"
 	line "attack can harm"
 	cont "them!"
 	done

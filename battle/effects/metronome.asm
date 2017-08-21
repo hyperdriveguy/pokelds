@@ -17,11 +17,11 @@ BattleCommand_Metronome: ; 37418
 .GetMove:
 	call BattleRandom
 
-; NO invalid moves.
+; No invalid moves.
 	cp NUM_ATTACKS + 1
 	jr nc, .GetMove
 
-; NOne of the moves in MetronomeExcepts.
+; None of the moves in MetronomeExcepts.
 	push af
 	ld de, 1
 	ld hl, MetronomeExcepts
@@ -29,7 +29,7 @@ BattleCommand_Metronome: ; 37418
 	pop bc
 	jr c, .GetMove
 
-; NO moves the user already has.
+; No moves the user already has.
 	ld a, b
 	call CheckUserMove
 	jr z, .GetMove
@@ -44,8 +44,8 @@ BattleCommand_Metronome: ; 37418
 
 
 MetronomeExcepts: ; 37454
-	db NO_MOVE
-	db METRONOME
+	db No_MOVE
+	db METRONoME
 	db STRUGGLE
 	db SKETCH
 	db MIMIC

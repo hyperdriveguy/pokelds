@@ -100,13 +100,13 @@ _CardFlip: ; e00ee (38:40ee)
 .AskPlayWithThree: ; e01b5
 	ld hl, .PlayWithThreeCoinsText
 	call CardFlip_UpdateCoinBalanceDisplay
-	call YesNOBox
-	jr c, .SaidNO
+	call YesNoBox
+	jr c, .SaidNo
 	call CardFlip_ShuffleDeck
 	call .Increment
 	ret
 
-.SaidNO:
+.SaidNo:
 	ld a, 7
 	ld [wJumptableIndex], a
 	ret
@@ -129,7 +129,7 @@ _CardFlip: ; e00ee (38:40ee)
 	ld a, l
 	cp 3
 	jr nc, .deduct ; You have at least 3 coins.
-	ld hl, .NOtEnoughCoinsText
+	ld hl, .NotEnoughCoinsText
 	call CardFlip_UpdateCoinBalanceDisplay
 	ld a, 7
 	ld [wJumptableIndex], a
@@ -154,8 +154,8 @@ _CardFlip: ; e00ee (38:40ee)
 	ret
 ; e0212
 
-.NOtEnoughCoinsText: ; 0xe0212
-	; NOt enough coins…
+.NotEnoughCoinsText: ; 0xe0212
+	; Not enough coins…
 	text_jump UnknownText_0x1c57ab
 	db "@"
 ; 0xe0217
@@ -304,7 +304,7 @@ _CardFlip: ; e00ee (38:40ee)
 	call ClearSprites
 	ld hl, .PlayAgainText
 	call CardFlip_UpdateCoinBalanceDisplay
-	call YesNOBox
+	call YesNoBox
 	jr nc, .Continue
 	call .Increment
 	ret

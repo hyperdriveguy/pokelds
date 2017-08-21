@@ -121,7 +121,7 @@ Bug_catcherDougSeenText:
 	done
 
 Bug_catcherDougBeatenText:
-	text "NO good!"
+	text "No good!"
 	done
 
 UnknownText_0x1ac423:

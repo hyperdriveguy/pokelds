@@ -1,5 +1,5 @@
 ReenaAskNumber1Text:
-	text "NOt bad…"
+	text "Not bad…"
 	line "It's something to"
 
 	para "beat me, even by"

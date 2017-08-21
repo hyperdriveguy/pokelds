@@ -26,7 +26,7 @@ Red:
 	waitbutton
 	closetext
 	special Special_FadeBlackQuickly
-	special Special_ReloadSpritesNOPalettes
+	special Special_ReloadSpritesNoPalettes
 	disappear SILVERCAVEROOM3_RED
 	pause 15
 	special Special_FadeInQuickly

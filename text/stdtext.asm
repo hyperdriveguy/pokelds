@@ -230,7 +230,7 @@ ContestResults_ReadyToJudgeText:
 	done
 
 ContestResults_PlayerWonAPrizeText:
-	text "<PLAYER>, the NO.@"
+	text "<PLAYER>, the No.@"
 	text_from_ram StringBuffer3
 	text ""
 	line "finisher, wins"
@@ -257,7 +257,7 @@ ContestResults_ConsolationPrizeText:
 	cont "solation prize!"
 	done
 
-ContestResults_DidNOtWinText:
+ContestResults_DidNotWinText:
 	text "We hope you do"
 	line "better next time."
 	done
@@ -297,7 +297,7 @@ CoinVendor_WelcomeText:
 	line "GAME CORNER."
 	done
 
-CoinVendor_NOCoinCaseText:
+CoinVendor_NoCoinCaseText:
 	text "Do you need game"
 	line "coins?"
 
@@ -325,7 +325,7 @@ CoinVendor_Buy500CoinsText:
 	line "are 500 coins."
 	done
 
-CoinVendor_NOtEnoughMoneyText:
+CoinVendor_NotEnoughMoneyText:
 	text "You don't have"
 	line "enough money."
 	done
@@ -336,11 +336,11 @@ CoinVendor_CoinCaseFullText:
 	done
 
 CoinVendor_CancelText:
-	text "NO coins for you?"
+	text "No coins for you?"
 	line "Come again!"
 	done
 
-BugContestPrizeNORoomText:
+BugContestPrizeNoRoomText:
 	text "Oh? Your PACK is"
 	line "full."
 

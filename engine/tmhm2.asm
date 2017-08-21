@@ -45,10 +45,10 @@ AskTeachTMHM: ; 2c7bf (b:47bf)
 	ld hl, Options
 	ld a, [hl]
 	push af
-	res NO_TEXT_SCROLL, [hl]
+	res No_TEXT_SCROLL, [hl]
 	ld a, [CurItem]
 	cp TM01
-	jr c, .NOtTMHM
+	jr c, .NotTMHM
 	call GetTMHMItemMove
 	ld a, [wCurTMHM]
 	ld [wPutativeTMHMMove], a
@@ -63,8 +63,8 @@ AskTeachTMHM: ; 2c7bf (b:47bf)
 	call PrintText
 	ld hl, Text_ItContained
 	call PrintText
-	call YesNOBox
-.NOtTMHM:
+	call YesNoBox
+.NotTMHM:
 	pop bc
 	ld a, b
 	ld [Options], a
@@ -76,7 +76,7 @@ ChooseMonToLearnTMHM: ; 2c7fb
 	ld bc, 12
 	call CopyBytes
 	call ClearBGPalettes
-ChooseMonToLearnTMHM_NORefresh: ; 2c80a
+ChooseMonToLearnTMHM_NoRefresh: ; 2c80a
 	callba LoadPartyMenuGFX
 	callba InitPartyMenuWithCancel
 	callba InitPartyMenuGFX
@@ -133,7 +133,7 @@ TeachTMHM: ; 2c867
 	ld de, SFX_WRONG
 	call PlaySFX
 	pop de
-	ld hl, Text_TMHMNOtCompatible
+	ld hl, Text_TMHMNotCompatible
 	call PrintText
 	jr .nope
 
@@ -186,7 +186,7 @@ Text_ItContained: ; 0x2c8c9
 	db "@"
 ; 0x2c8ce
 
-Text_TMHMNOtCompatible: ; 0x2c8ce
+Text_TMHMNotCompatible: ; 0x2c8ce
 	; is not compatible with @ . It can't learn @ .
 	text_jump UnknownText_0x1c03c2
 	db "@"
@@ -354,7 +354,7 @@ TMHM_DisplayPocketItems: ; 2c9e2 (b:49e2)
 	inc c
 	ld a, c
 	cp NUM_TMS + NUM_HMS + 1
-	jr nc, .NOtTMHM
+	jr nc, .NotTMHM
 	ld a, [hli]
 	and a
 	jr z, .loop2
@@ -421,7 +421,7 @@ TMHM_DisplayPocketItems: ; 2c9e2 (b:49e2)
 	jr nz, .loop2
 	jr .done
 
-.NOtTMHM:
+.NotTMHM:
 	call TMHMPocket_GetCurrentLineCoord
 	inc hl
 	inc hl
@@ -503,14 +503,14 @@ Function2cadf: ; 2cadf
 ; unreferenced
 	call ConvertCurItemIntoCurTMHM
 	call .CheckHaveRoomForTMHM
-	ld hl, .NORoomText
+	ld hl, .NoRoomText
 	jr nc, .print
 	ld hl, .ReceivedText
 .print
 	jp PrintText
 ; 2caf0
 
-.NORoomText: ; 0x2caf0
+.NoRoomText: ; 0x2caf0
 	; You have no room for any more @ S.
 	text_jump UnknownText_0x1c03fa
 	db "@"

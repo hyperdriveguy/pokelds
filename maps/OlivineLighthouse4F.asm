@@ -60,7 +60,7 @@ LassConnie1SeenText:
 	para "I mean to bring"
 	line "her back with me."
 
-	para "NObody had better"
+	para "Nobody had better"
 	line "get in my way!"
 	done
 

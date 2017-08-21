@@ -2,7 +2,7 @@ MobileTradeAnimation_SendGivemonToGTS: ; 108000
 	ld a, $80
 	ld [wcf65], a
 	ld de, .TradeAnimScript
-	jp RunMobileTradeAnim_NOFrontpics
+	jp RunMobileTradeAnim_NoFrontpics
 ; 10800b
 
 .TradeAnimScript:
@@ -23,7 +23,7 @@ MobileTradeAnimation_ReceiveGetmonFromGTS: ; 108016
 asm_108018:
 	ld [wcf65], a
 	ld de, .TradeAnimScript
-	jp RunMobileTradeAnim_NOFrontpics
+	jp RunMobileTradeAnim_NoFrontpics
 ; 108021
 
 .TradeAnimScript:
@@ -60,7 +60,7 @@ Function10803d: ; 10803d
 	ld a, $0
 	ld [wcf65], a
 	ld de, .TradeAnimScript
-	jp RunMobileTradeAnim_NOFrontpics
+	jp RunMobileTradeAnim_NoFrontpics
 ; 108048
 
 .TradeAnimScript:
@@ -74,7 +74,7 @@ Function10804d: ; 10804d
 	ld a, $0
 	ld [wcf65], a
 	ld de, .TradeAnimScript
-	jp RunMobileTradeAnim_NOFrontpics
+	jp RunMobileTradeAnim_NoFrontpics
 ; 108058
 
 .TradeAnimScript:
@@ -98,7 +98,7 @@ RunMobileTradeAnim_Frontpics: ; 10805b
 	ld hl, Options
 	ld a, [hl]
 	push af
-	set NO_TEXT_SCROLL, [hl]
+	set No_TEXT_SCROLL, [hl]
 	call Function1080b7
 .loop
 	call MobileTradeAnim_JumptableLoop
@@ -112,7 +112,7 @@ RunMobileTradeAnim_Frontpics: ; 10805b
 	ret
 ; 108089
 
-RunMobileTradeAnim_NOFrontpics: ; 108089
+RunMobileTradeAnim_NoFrontpics: ; 108089
 	ld hl, wTradeAnimPointer
 	ld [hl], e
 	inc hl
@@ -128,7 +128,7 @@ RunMobileTradeAnim_NOFrontpics: ; 108089
 	ld hl, Options
 	ld a, [hl]
 	push af
-	set NO_TEXT_SCROLL, [hl]
+	set No_TEXT_SCROLL, [hl]
 	call Function108157
 .loop
 	call MobileTradeAnim_JumptableLoop

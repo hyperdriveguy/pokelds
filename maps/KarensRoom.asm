@@ -143,8 +143,8 @@ KarensRoom_MapEventHeader:
 
 .Warps:
 	db 4
-	warp_def $11, $4, 3, BRUNOS_ROOM
-	warp_def $11, $5, 4, BRUNOS_ROOM
+	warp_def $11, $4, 3, BRUNoS_ROOM
+	warp_def $11, $5, 4, BRUNoS_ROOM
 	warp_def $2, $4, 1, LANCES_ROOM
 	warp_def $2, $5, 2, LANCES_ROOM
 

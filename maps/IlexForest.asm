@@ -795,7 +795,7 @@ Text_CharcoalMasterIntro:
 
 	para "Thanks, kid!"
 
-	para "NOw, how can I"
+	para "Now, how can I"
 	line "thank you…"
 
 	para "I know! Here, take"

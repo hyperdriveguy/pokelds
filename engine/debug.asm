@@ -1123,7 +1123,7 @@ Function81f5e: ; 81f5e
 String_81fcd: ; 81fcd
 	db   "おわりますか?" ; Are you finished?
 	next "はい", $f2, $f2, $f2, $7a ; Yes (A)
-	next "いいえ",    $f2, $f2, $7b ; NO  (B)
+	next "いいえ",    $f2, $f2, $7b ; No  (B)
 	db   "@"
 ; 81fe3
 

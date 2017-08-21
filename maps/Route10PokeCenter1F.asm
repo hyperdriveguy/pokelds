@@ -86,8 +86,8 @@ Route10PokeCenter1F_MapEventHeader:
 
 .Warps:
 	db 3
-	warp_def $7, $3, 1, ROUTE_10_NORTH
-	warp_def $7, $4, 1, ROUTE_10_NORTH
+	warp_def $7, $3, 1, ROUTE_10_NoRTH
+	warp_def $7, $4, 1, ROUTE_10_NoRTH
 	warp_def $7, $0, 1, POKECENTER_2F
 
 .XYTriggers:

@@ -64,7 +64,7 @@ MapRuinsofAlphHoOhChamberSignpost2Script:
 UnknownScript_0x585ba:
 	setevent EVENT_RUINS_OF_ALPH_INNER_CHAMBER_TOURISTS
 	setevent EVENT_SOLVED_HO_OH_PUZZLE
-	setflag ENGINE_UNLOCKED_UNOWNS_4
+	setflag ENGINE_UNLOCKED_UNoWNS_4
 	domaptrigger RUINS_OF_ALPH_INNER_CHAMBER, $1
 	earthquake 30
 	showemote EMOTE_SHOCK, PLAYER, 15
@@ -122,7 +122,7 @@ UnknownText_0x58612:
 
 ; possibly unused
 UnknownText_0x58633:
-	text "It's UNOWN text!"
+	text "It's UNoWN text!"
 	done
 
 UnknownText_0x58644:

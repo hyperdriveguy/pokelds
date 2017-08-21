@@ -188,7 +188,7 @@ UnknownText_0x191ae0:
 	line "me about my #-"
 	cont "MON again?"
 
-	para "NO? Oh… I had more"
+	para "No? Oh… I had more"
 	line "tales to tell…"
 	done
 
@@ -212,7 +212,7 @@ UnknownText_0x191ba0:
 	para "its finger when"
 	line "it's trying to use"
 
-	para "METRONOME."
+	para "METRONoME."
 	line "It's so adorable!"
 	done
 
@@ -243,7 +243,7 @@ UnknownText_0x191c5a:
 	line "real CLEFAIRY on"
 
 	para "my own one day."
-	line "NO worries!"
+	line "No worries!"
 	done
 
 UnknownText_0x191d0a:

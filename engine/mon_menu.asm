@@ -141,14 +141,14 @@ GetMonMenuString: ; 24db0
 	dec hl
 	ld a, [hli]
 	cp 1
-	jr z, .NOtMove
+	jr z, .NotMove
 	inc hl
 	ld a, [hl]
 	ld [wd265], a
 	call GetMoveName
 	ret
 
-.NOtMove:
+.NotMove:
 	inc hl
 	ld a, [hl]
 	dec a

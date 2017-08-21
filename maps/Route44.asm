@@ -380,7 +380,7 @@ Bird_keeperVance1BeatenText:
 	done
 
 UnknownText_0x19dbf3:
-	text "ARTICUNO, ZAPDOS"
+	text "ARTICUNo, ZAPDOS"
 	line "and MOLTRES are"
 
 	para "the three legend-"
@@ -459,7 +459,7 @@ UnknownText_0x19de66:
 	text "Wow. You have a"
 	line "lot of BADGES."
 
-	para "NO wonder you're"
+	para "No wonder you're"
 	line "so tough."
 
 	para "I wonder if"
@@ -481,7 +481,7 @@ CooltrainerfCybilSeenText:
 	done
 
 CooltrainerfCybilBeatenText:
-	text "NOpe! This won't"
+	text "Nope! This won't"
 	line "do at all."
 	done
 

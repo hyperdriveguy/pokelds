@@ -34,12 +34,12 @@ ENDC
 SetDstScript:
 	writetext IsItDst
 	yesorno
-	iffalse NODstScript
+	iffalse NoDstScript
 	special Special_InitialSetDSTFlag
 	yesorno
 	iffalse SetDstScript
 	jump ContMomIntroScript
-NODstScript:
+NoDstScript:
 	special Special_InitialClearDSTFlag
 	yesorno
 	iffalse SetDstScript
@@ -47,7 +47,7 @@ ContMomIntroScript:
 	writetext MomIntroText3
 	yesorno
 	iffalse PhoneIntstructionsScript
-	writetext NOInstructionsText
+	writetext NoInstructionsText
 	jump EndMomIntro
 PhoneIntstructionsScript:
 	writetext PhoneInstructionsText
@@ -128,7 +128,7 @@ PhoneInstructionsText:
 	line "convenient?"
 	done
 
-NOInstructionsText:
+NoInstructionsText:
 	text "Okay. Good luck"
 	line "<PLAYER>!"
 	done
@@ -208,7 +208,7 @@ DoGreatThingsText:
 	
 	para "…"
 	
-	para "Good. NOw go on."
+	para "Good. Now go on."
 	line "I know you'll do"
 	cont "great things!"
 	done

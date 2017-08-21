@@ -53,7 +53,7 @@ INCLUDE "engine/map_objects.asm"
 
 INCLUDE "engine/intro_menu.asm"
 
-ReanchorBGMap_NOOAMUpdate:: ; 6454
+ReanchorBGMap_NoOAMUpdate:: ; 6454
 	call DelayFrame
 	ld a, [hOAMUpdate]
 	push af
@@ -111,7 +111,7 @@ ReanchorBGMap_NOOAMUpdate:: ; 6454
 	ld [hBGMapAddress], a
 	ret
 
-LoadFonts_NOOAMUpdate:: ; 64bf
+LoadFonts_NoOAMUpdate:: ; 64bf
 	ld a, [hOAMUpdate]
 	push af
 	ld a, $1
@@ -321,7 +321,7 @@ BugContest_SetCaughtContestMon: ; e6ce
 	callba DisplayAlreadyCaughtText
 	callba DisplayCaughtContestMonStats
 	lb bc, 14, 7
-	call PlaceYesNOBox
+	call PlaceYesNoBox
 	ret c
 
 .firstcatch
@@ -439,12 +439,12 @@ BugCatchingContestReturnToGateScript: ; 0x1360b
 	jumpstd bugcontestresultswarp
 
 BugCatchingContestText_BeeepTimesUp: ; 0x1360f
-	; ANNOUNCER: BEEEP! Time's up!
+	; ANNoUNCER: BEEEP! Time's up!
 	text_jump UnknownText_0x1bd2ca
 	db "@"
 
 BugCatchingContestText_ContestIsOver: ; 0x13614
-	; ANNOUNCER: The Contest is over!
+	; ANNoUNCER: The Contest is over!
 	text_jump UnknownText_0x1bd2e7
 	db "@"
 
@@ -862,7 +862,7 @@ Function24b8f: ; 24b8f
 	ld hl, Options
 	ld a, [hl]
 	push af
-	set NO_TEXT_SCROLL, [hl]
+	set No_TEXT_SCROLL, [hl]
 	hlcoord 0, 0
 	ld b, 3
 	ld c, 7
@@ -901,7 +901,7 @@ StartMenu_PrintBugContestStatus: ; 24be7
 	ld hl, Options
 	ld a, [hl]
 	push af
-	set NO_TEXT_SCROLL, [hl]
+	set No_TEXT_SCROLL, [hl]
 	call StartMenu_DrawBugContestStatusBox
 	hlcoord 1, 5
 	ld de, .Balls_EN
@@ -915,7 +915,7 @@ StartMenu_PrintBugContestStatus: ; 24be7
 	call PlaceString
 	ld a, [wContestMon]
 	and a
-	ld de, .NOne
+	ld de, .None
 	jr z, .no_contest_mon
 	ld [wd265], a
 	call GetPokemonName
@@ -947,8 +947,8 @@ StartMenu_PrintBugContestStatus: ; 24be7
 	db "CAUGHT@"
 .Balls_EN: ; 24c52
 	db "BALLS:@"
-.NOne: ; 24c59
-	db "NOne@"
+.None: ; 24c59
+	db "None@"
 .LEVEL: ; 24c5e
 	db "LEVEL@"
 
@@ -1456,7 +1456,7 @@ PlayBattleMusic: ; 2ee6c
 	cp CHAMPION
 	jr z, .done
 	
-	ld de, MUSIC_CHAMPION_BATTLE_SINNOH
+	ld de, MUSIC_CHAMPION_BATTLE_SINNoH
 	cp RED
 	jr z, .done
 
@@ -1531,7 +1531,7 @@ ClearBattleRAM: ; 2ef18
 	ld [wMenuScrollPosition], a
 	ld [CriticalHit], a
 	ld [BattleMonSpecies], a
-	ld [wBattleParticipantsNOtFainted], a
+	ld [wBattleParticipantsNotFainted], a
 	ld [CurBattleMon], a
 	ld [wForcedSwitch], a
 	ld [TimeOfDayPal], a
@@ -1826,7 +1826,7 @@ DisplayDexEntry: ; 4424d
 	push de
 ; Print dex number
 	hlcoord 2, 8
-	ld a, $5c ; NO
+	ld a, $5c ; No
 	ld [hli], a
 	ld a, $5d ; .
 	ld [hli], a
@@ -1996,7 +1996,7 @@ Special_MoveTutor: ; 4925b
 	jr .enter_loop
 
 .loop
-	callba ChooseMonToLearnTMHM_NORefresh
+	callba ChooseMonToLearnTMHM_NoRefresh
 	jr c, .cancel
 .enter_loop
 	call CheckCanLearnMoveTutorMove
@@ -2048,8 +2048,8 @@ CheckCanLearnMoveTutorMove: ; 492b9
 	ld de, SFX_WRONG
 	call PlaySFX
 	pop de
-	ld a, BANK(Text_TMHMNOtCompatible)
-	ld hl, Text_TMHMNOtCompatible
+	ld a, BANK(Text_TMHMNotCompatible)
+	ld hl, Text_TMHMNotCompatible
 	call FarPrintText
 	jr .didnt_learn
 
@@ -2113,7 +2113,7 @@ AskRememberPassword: ; 4ae12
 .DoMenu: ; 4ae1f
 	lb bc, 14, 7
 	push bc
-	ld hl, YesNOMenuDataHeader
+	ld hl, YesNoMenuDataHeader
 	call CopyMenuDataHeader
 	pop bc
 	ld a, b
@@ -2711,7 +2711,7 @@ CheckPokerus: ; 4d860
 ; Get number of monsters to iterate over
 	ld a, [PartyCount]
 	and a
-	jr z, .NOPokerus
+	jr z, .NoPokerus
 	ld b, a
 ; Check each monster in the party for Pokerus
 	ld hl, PartyMon1PokerusStatus
@@ -2724,7 +2724,7 @@ CheckPokerus: ; 4d860
 	add hl, de
 	dec b
 	jr nz, .Check
-.NOPokerus:
+.NoPokerus:
 	and a
 	ret
 .HasPokerus:
@@ -3004,7 +3004,7 @@ CheckPartyFullAfterContest: ; 4d9e5
 	ld de, wMonOrItemNameBuffer
 	ld bc, PKMN_NAME_LENGTH
 	call CopyBytes
-	call GiveANickname_YesNO
+	call GiveANickname_YesNo
 	jr c, .Party_SkipNickname
 	ld a, [PartyCount]
 	dec a
@@ -3067,7 +3067,7 @@ CheckPartyFullAfterContest: ; 4d9e5
 	ld a, [CurPartySpecies]
 	ld [wd265], a
 	call GetPokemonName
-	call GiveANickname_YesNO
+	call GiveANickname_YesNo
 	ld hl, StringBuffer1
 	jr c, .Box_SkipNickname
 	ld a, BOXMON
@@ -3111,10 +3111,10 @@ CheckPartyFullAfterContest: ; 4d9e5
 	ld [ScriptVar], a
 	ret
 
-GiveANickname_YesNO: ; 4db3b
+GiveANickname_YesNo: ; 4db3b
 	ld hl, TextJump_GiveANickname
 	call PrintText
-	jp YesNOBox
+	jp YesNoBox
 
 TextJump_GiveANickname: ; 0x4db44
 	; Give a nickname to the @  you received?
@@ -3140,17 +3140,17 @@ SetBoxmonOrEggmonCaughtData: ; 4db53
 	ld a, [MapNumber]
 	ld c, a
 	cp MAP_POKECENTER_2F
-	jr nz, .NOtPokeCenter2F
+	jr nz, .NotPokeCenter2F
 	ld a, b
 	cp GROUP_POKECENTER_2F
-	jr nz, .NOtPokeCenter2F
+	jr nz, .NotPokeCenter2F
 
 	ld a, [BackupMapGroup]
 	ld b, a
 	ld a, [BackupMapNumber]
 	ld c, a
 
-.NOtPokeCenter2F:
+.NotPokeCenter2F:
 	call GetWorldMapLocation
 	ld b, a
 	ld a, [PlayerGender]
@@ -3289,7 +3289,7 @@ CatchTutorial:: ; 4e554
 	db "DUDE@"
 
 .AutoInput: ; 4e5df
-	db NO_INPUT, $ff ; end
+	db No_INPUT, $ff ; end
 
 INCLUDE "engine/evolution_animation.asm"
 
@@ -3455,7 +3455,7 @@ FemaleTrainers: ; 4e976
 	db TEACHER
 	db SWIMMERF
 	db PICNICKER
-	db KIMONO_GIRL
+	db KIMONo_GIRL
 	db POKEFANF
 	db COOLTRAINERF
 FemaleTrainersEnd:
@@ -4155,7 +4155,7 @@ PlaceStatusString: ; 50d0a
 	ld a, [de]
 	or b
 	pop de
-	jr nz, PlaceNOnFaintStatus
+	jr nz, PlaceNonFaintStatus
 	push de
 	ld de, FntString
 	call CopyStatusString
@@ -4178,7 +4178,7 @@ CopyStatusString: ; 50d25
 	ld [hl], a
 	ret
 
-PlaceNOnFaintStatus: ; 50d2e
+PlaceNonFaintStatus: ; 50d2e
 	push de
 	ld a, [de]
 	ld de, PsnString
@@ -5848,29 +5848,29 @@ _DudeAutoInput: ; 1de299
 DudeAutoInputs:
 
 DudeAutoInput_A: ; 1de29f
-	db NO_INPUT, $50
+	db No_INPUT, $50
 	db A_BUTTON, $00
-	db NO_INPUT, $ff ; end
+	db No_INPUT, $ff ; end
 
 DudeAutoInput_RightA: ; 1de2a5
-	db NO_INPUT, $08
+	db No_INPUT, $08
 	db D_RIGHT,  $00
-	db NO_INPUT, $08
+	db No_INPUT, $08
 	db A_BUTTON, $00
-	db NO_INPUT, $ff ; end
+	db No_INPUT, $ff ; end
 
 DudeAutoInput_DownA: ; 1de2af
-	db NO_INPUT, $fe
-	db NO_INPUT, $fe
-	db NO_INPUT, $fe
-	db NO_INPUT, $fe
+	db No_INPUT, $fe
+	db No_INPUT, $fe
+	db No_INPUT, $fe
+	db No_INPUT, $fe
 	db D_DOWN,   $00
-	db NO_INPUT, $fe
-	db NO_INPUT, $fe
-	db NO_INPUT, $fe
-	db NO_INPUT, $fe
+	db No_INPUT, $fe
+	db No_INPUT, $fe
+	db No_INPUT, $fe
+	db No_INPUT, $fe
 	db A_BUTTON, $00
-	db NO_INPUT, $ff ; end
+	db No_INPUT, $ff ; end
 
 TownMap_ConvertLineBreakCharacters: ; 1de2c5
 	ld hl, StringBuffer1

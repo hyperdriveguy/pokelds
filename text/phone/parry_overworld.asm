@@ -24,7 +24,7 @@ ParryNumberAcceptedText:
 	done
 
 ParryNumberDeclinedText:
-	text "NO? That's fine."
+	text "No? That's fine."
 
 	para "A definite no is"
 	line "easy to take!"

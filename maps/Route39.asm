@@ -6,7 +6,7 @@ const_value set 2
 	const ROUTE39_MILTANK2
 	const ROUTE39_MILTANK3
 	const ROUTE39_MILTANK4
-	const ROUTE39_PSYCHIC_NORMAN
+	const ROUTE39_PSYCHIC_NoRMAN
 	const ROUTE39_FRUIT_TREE
 	const ROUTE39_POKEFAN_F2
 
@@ -126,10 +126,10 @@ SailorEugeneScript:
 	closetext
 	end
 
-TrainerPsychicNOrman:
-	trainer EVENT_BEAT_PSYCHIC_NORMAN, PSYCHIC_T, NORMAN, PsychicNOrmanSeenText, PsychicNOrmanBeatenText, 0, PsychicNOrmanScript
+TrainerPsychicNorman:
+	trainer EVENT_BEAT_PSYCHIC_NoRMAN, PSYCHIC_T, NoRMAN, PsychicNormanSeenText, PsychicNormanBeatenText, 0, PsychicNormanScript
 
-PsychicNOrmanScript:
+PsychicNormanScript:
 	end_if_just_battled
 	opentext
 	writetext UnknownText_0x1a5e57
@@ -258,13 +258,13 @@ UnknownText_0x1a5dec:
 	line "Don't you agree?"
 	done
 
-PsychicNOrmanSeenText:
+PsychicNormanSeenText:
 	text "Let me see what"
 	line "your #mon are"
 	cont "capable of."
 	done
 
-PsychicNOrmanBeatenText:
+PsychicNormanBeatenText:
 	text "Ooh, your #mon"
 	line "have potential."
 	done
@@ -372,6 +372,6 @@ Route39_MapEventHeader:
 	person_event SPRITE_TAUROS, 11, 6, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, Route39Miltank, -1
 	person_event SPRITE_TAUROS, 15, 4, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, Route39Miltank, -1
 	person_event SPRITE_TAUROS, 13, 8, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, Route39Miltank, -1
-	person_event SPRITE_STANDING_YOUNGSTER, 7, 13, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, (1 << 3) | PAL_OW_BLUE, PERSONTYPE_TRAINER, 1, TrainerPsychicNOrman, -1
+	person_event SPRITE_STANDING_YOUNGSTER, 7, 13, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, (1 << 3) | PAL_OW_BLUE, PERSONTYPE_TRAINER, 1, TrainerPsychicNorman, -1
 	person_event SPRITE_FRUIT_TREE, 3, 9, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, FruitTreeScript_0x1a5bf4, -1
 	person_event SPRITE_POKEFAN_F, 22, 4, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, (1 << 3) | PAL_OW_RED, PERSONTYPE_SCRIPT, 0, PokefanFScript_0x1a5bbe, -1

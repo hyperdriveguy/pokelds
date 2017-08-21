@@ -46,7 +46,7 @@ MonMenuIcons: ; 8eac4
 	db ICON_FOX          ; NIDORINA
 	db ICON_MONSTER      ; NIDOQUEEN
 	db ICON_FOX          ; NIDORAN_M
-	db ICON_FOX          ; NIDORINO
+	db ICON_FOX          ; NIDORINo
 	db ICON_MONSTER      ; NIDOKING
 	db ICON_CLEFAIRY     ; CLEFAIRY
 	db ICON_CLEFAIRY     ; CLEFABLE
@@ -61,8 +61,8 @@ MonMenuIcons: ; 8eac4
 	db ICON_ODDISH       ; VILEPLUME
 	db ICON_BUG          ; PARAS
 	db ICON_BUG          ; PARASECT
-	db ICON_CATERPILLAR  ; VENONAT
-	db ICON_MOTH         ; VENOMOTH
+	db ICON_CATERPILLAR  ; VENoNAT
+	db ICON_MOTH         ; VENoMOTH
 	db ICON_DIGLETT      ; DIGLETT
 	db ICON_DIGLETT      ; DUGTRIO
 	db ICON_FOX          ; MEOWTH
@@ -110,7 +110,7 @@ MonMenuIcons: ; 8eac4
 	db ICON_GHOST        ; GENGAR
 	db ICON_SERPENT      ; ONIX
 	db ICON_HUMANSHAPE   ; DROWZEE
-	db ICON_HUMANSHAPE   ; HYPNO
+	db ICON_HUMANSHAPE   ; HYPNo
 	db ICON_SHELL        ; KRABBY
 	db ICON_SHELL        ; KINGLER
 	db ICON_VOLTORB      ; VOLTORB
@@ -156,8 +156,8 @@ MonMenuIcons: ; 8eac4
 	db ICON_SHELL        ; KABUTO
 	db ICON_SHELL        ; KABUTOPS
 	db ICON_BIRD         ; AERODACTYL
-	db ICON_SNORLAX      ; SNORLAX
-	db ICON_BIRD         ; ARTICUNO
+	db ICON_SNoRLAX      ; SNoRLAX
+	db ICON_BIRD         ; ARTICUNo
 	db ICON_BIRD         ; ZAPDOS
 	db ICON_BIRD         ; MOLTRES
 	db ICON_SERPENT      ; DRATINI
@@ -177,7 +177,7 @@ MonMenuIcons: ; 8eac4
 	db ICON_FOX          ; SENTRET
 	db ICON_FOX          ; FURRET
 	db ICON_BIRD         ; HOOTHOOT
-	db ICON_BIRD         ; NOCTOWL
+	db ICON_BIRD         ; NoCTOWL
 	db ICON_BUG          ; LEDYBA
 	db ICON_BUG          ; LEDIAN
 	db ICON_BUG          ; SPINARAK
@@ -214,7 +214,7 @@ MonMenuIcons: ; 8eac4
 	db ICON_BIRD         ; MURKROW
 	db ICON_SLOWPOKE     ; SLOWKING
 	db ICON_GHOST        ; MISDREAVUS
-	db ICON_UNOWN        ; UNOWN
+	db ICON_UNoWN        ; UNoWN
 	db ICON_GHOST        ; WOBBUFFET
 	db ICON_EQUINE       ; GIRAFARIG
 	db ICON_BUG          ; PINECO

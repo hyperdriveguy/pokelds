@@ -235,7 +235,7 @@ PokedexDataPointerTable: ; 0x44378
 	dw SentretPokedexEntry
 	dw FurretPokedexEntry
 	dw HoothootPokedexEntry
-	dw NOctowlPokedexEntry
+	dw NoctowlPokedexEntry
 	dw LedybaPokedexEntry
 	dw LedianPokedexEntry
 	dw SpinarakPokedexEntry

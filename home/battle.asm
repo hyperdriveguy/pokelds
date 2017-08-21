@@ -105,7 +105,7 @@ UpdateBattleMon:: ; 399f
 UpdateEnemyMonInParty:: ; 39b0
 ; Update level, status, current HP
 
-; NO wildmons.
+; No wildmons.
 	ld a, [wBattleMode]
 	dec a
 	ret z

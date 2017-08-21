@@ -56,10 +56,10 @@ Predef_StartBattle: ; 8c20f
 	ld a, [wLinkMode]
 	cp LINK_MOBILE
 	jr z, .mobile
-	callba ReanchorBGMap_NOOAMUpdate
+	callba ReanchorBGMap_NoOAMUpdate
 	call UpdateSprites
 	call DelayFrame
-	call .NOnMobile_LoadPokeballTiles
+	call .NonMobile_LoadPokeballTiles
 	call BattleStart_LoadEDTile
 	jr .resume
 
@@ -81,7 +81,7 @@ Predef_StartBattle: ; 8c20f
 	ret
 ; 8c2a0
 
-.NOnMobile_LoadPokeballTiles: ; 8c2a0
+.NonMobile_LoadPokeballTiles: ; 8c2a0
 	call LoadTrainerBattlePokeballTiles
 	hlbgcoord 0, 0
 	call ConvertTrainerBattlePokeballTilesTo2bpp

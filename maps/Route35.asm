@@ -350,7 +350,7 @@ Bird_keeperBryanSeenText:
 	done
 
 Bird_keeperBryanBeatenText:
-	text "Yikes! NOt fast"
+	text "Yikes! Not fast"
 	line "enough!"
 	done
 
@@ -401,7 +401,7 @@ Bug_catcherArnie1BeatenText:
 	done
 
 UnknownText_0x19cdf6:
-	text "My VENONAT won me"
+	text "My VENoNAT won me"
 	line "the Bug-Catching"
 
 	para "Contest at the"

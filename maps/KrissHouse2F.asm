@@ -58,7 +58,7 @@ KrissHousePoster:
 
 KrissHouseRadio:
 	checkevent EVENT_GOT_A_POKEMON_FROM_BISHOP
-	iftrue .NOrmalRadio
+	iftrue .NormalRadio
 	checkevent EVENT_LISTENED_TO_INITIAL_RADIO
 	iftrue .AbbreviatedRadio
 	playmusic MUSIC_POKEMON_TALK
@@ -76,7 +76,7 @@ KrissHouseRadio:
 	setevent EVENT_LISTENED_TO_INITIAL_RADIO
 	end
 
-.NOrmalRadio:
+.NormalRadio:
 	jumpstd radio1
 
 .AbbreviatedRadio:
@@ -96,7 +96,7 @@ KrissHousePC:
 	closetext
 	end
 .Warp:
-	warp NONE, $0, $0
+	warp NoNE, $0, $0
 	end
 
 KrisRadioText1:

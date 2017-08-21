@@ -3,7 +3,7 @@ UnknownText_0x1c505e::
 	done
 
 UnknownText_0x1c5066::
-	text "NOt enough"
+	text "Not enough"
 	line "coins."
 	prompt
 
@@ -311,7 +311,7 @@ UnknownText_0x1c5793::
 	done
 
 UnknownText_0x1c57ab::
-	text "NOt enough coins…"
+	text "Not enough coins…"
 	prompt
 
 UnknownText_0x1c57be::
@@ -406,7 +406,7 @@ UnknownText_0x1c5937::
 	para ""
 	done
 
-Text_ExcuseMeYoureNOtReady::
+Text_ExcuseMeYoureNotReady::
 	text "Excuse me."
 	line "You're not ready."
 	para ""
@@ -444,7 +444,7 @@ Text_ThePkmnMustAllBeDifferentKinds::
 	para ""
 	done
 
-Text_ThePkmnMustNOtHoldTheSameItems::
+Text_ThePkmnMustNotHoldTheSameItems::
 	text "The @"
 	text_from_ram StringBuffer2
 	text " #mon"
@@ -549,7 +549,7 @@ UnknownText_0x1c5bf9::
 	text "Played the #"
 	line "FLUTE."
 
-	para "NOw, that's a"
+	para "Now, that's a"
 	line "catchy tune!"
 	prompt
 
@@ -728,7 +728,7 @@ UnknownText_0x1c5f17::
 	done
 
 UnknownText_0x1c5f36::
-	text "NO? Come visit me"
+	text "No? Come visit me"
 	line "again."
 	done
 

@@ -28,9 +28,9 @@ OfficerScript_0x550ec:
 .MagnetTrainToSaffron:
 	writetext UnknownText_0x551b7
 	yesorno
-	iffalse .DecidedNOtToRide
+	iffalse .DecidedNotToRide
 	checkitem PASS
-	iffalse .PassNOtInBag
+	iffalse .PassNotInBag
 	writetext UnknownText_0x551ed
 	waitbutton
 	closetext
@@ -48,13 +48,13 @@ OfficerScript_0x550ec:
 	turn_head DOWN
 	step_end
 
-.PassNOtInBag:
+.PassNotInBag:
 	writetext UnknownText_0x5522c
 	waitbutton
 	closetext
 	end
 
-.DecidedNOtToRide:
+.DecidedNotToRide:
 	writetext UnknownText_0x5524f
 	waitbutton
 	closetext

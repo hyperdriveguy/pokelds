@@ -69,7 +69,7 @@ TextBox:: ; fe8
 	ld a, [PlayerState]
 	cp a, PLAYER_RUN
 	jr nz, .continue
-	ld a, PLAYER_NORMAL
+	ld a, PLAYER_NoRMAL
 	ld [PlayerState], a
 .continue
 	push bc

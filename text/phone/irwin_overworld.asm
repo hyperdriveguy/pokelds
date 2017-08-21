@@ -24,7 +24,7 @@ IrwinAskNumber2Text:
 
 IrwinNumberAcceptedText:
 	text "Wow! Gee, thanks!"
-	line "NOw I can call you"
+	line "Now I can call you"
 
 	para "anytime, whether"
 	line "anything's up or"

@@ -5,6 +5,6 @@
 	db   "These DIGLETT"
 	next "triplets dig over"
 	next "60 miles below sea"
-	page "level. NO one"
+	page "level. No one"
 	next "knows what it's"
 	next "like underground.@"

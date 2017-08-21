@@ -38,7 +38,7 @@ UnknownText_0x1ab40a:
 	done
 
 UnknownText_0x1ab48a:
-	text "NO CINNABAR citi-"
+	text "No CINNABAR citi-"
 	line "zens were injured"
 
 	para "by the eruption."

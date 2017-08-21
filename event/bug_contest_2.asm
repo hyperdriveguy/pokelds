@@ -19,7 +19,7 @@ Special_SelectRandomBugContestContestants: ; 139a8
 	dec c
 	jr nz, .loop1
 
-; NOw that that's out of the way, we can get on to the good stuff.
+; Now that that's out of the way, we can get on to the good stuff.
 	ld c, 5
 .loop2
 	push bc

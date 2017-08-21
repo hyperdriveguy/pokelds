@@ -1,7 +1,7 @@
 	const_def
 	const MARTTEXT_HOW_MANY
 	const MARTTEXT_COSTS_THIS_MUCH
-	const MARTTEXT_NOT_ENOUGH_MONEY
+	const MARTTEXT_NoT_ENoUGH_MONEY
 	const MARTTEXT_BAG_FULL
 	const MARTTEXT_HERE_YOU_GO
 	const MARTTEXT_SOLD_OUT
@@ -531,7 +531,7 @@ BuyMenuLoop: ; 15cef
 	ret
 
 .insufficient_funds
-	ld a, MARTTEXT_NOT_ENOUGH_MONEY
+	ld a, MARTTEXT_NoT_ENoUGH_MONEY
 	call LoadBuyMenuText
 	call JoyWaitAorB
 	and a
@@ -552,7 +552,7 @@ MartConfirmPurchase: ; 15d97
 	predef PartyMonItemName
 	ld a, MARTTEXT_COSTS_THIS_MUCH
 	call LoadBuyMenuText
-	call YesNOBox
+	call YesNoBox
 	ret
 ; 15da5
 
@@ -821,14 +821,14 @@ SellMenu: ; 15eb3
 	ret
 ; 15ed3
 
-.NOthingToSell: ; unreferenced
-	ld hl, .NOthingToSellText
+.NothingToSell: ; unreferenced
+	ld hl, .NothingToSellText
 	call MenuTextBoxBackup
 	and a
 	ret
 ; 15edb
 
-.NOthingToSellText: ; 0x15edb
+.NothingToSellText: ; 0x15edb
 	; You don't have anything to sell.
 	text_jump UnknownText_0x1c4f12
 	db "@"
@@ -880,7 +880,7 @@ SellMenu: ; 15eb3
 	call ClearBox
 	ld hl, Text_Mart_ICanPayThisMuch
 	call PrintTextBoxText
-	call YesNOBox
+	call YesNoBox
 	jr c, .declined
 	ld de, Money
 	ld bc, hMoneyTemp

@@ -144,7 +144,7 @@ Function78a:: ; 78a
 	ld a, [hLinkPlayerNumber]
 	cp $1
 	jr nz, .not_player_1_or_wLinkTimeoutFrames_zero
-	call CheckwLinkTimeoutFramesNOnzero
+	call CheckwLinkTimeoutFramesNonzero
 	jr z, .not_player_1_or_wLinkTimeoutFrames_zero
 	call .delay_15_cycles
 	push hl
@@ -156,7 +156,7 @@ Function78a:: ; 78a
 
 .no_rollover_up
 	pop hl
-	call CheckwLinkTimeoutFramesNOnzero
+	call CheckwLinkTimeoutFramesNonzero
 	jr nz, .loop2
 	jp SerialDisconnected
 
@@ -198,7 +198,7 @@ Function78a:: ; 78a
 	ld a, [hSerialReceive]
 	cp $fe
 	ret nz
-	call CheckwLinkTimeoutFramesNOnzero
+	call CheckwLinkTimeoutFramesNonzero
 	jr z, .wLinkTimeoutFrames_zero
 	push hl
 	ld hl, wLinkTimeoutFrames + 1
@@ -211,7 +211,7 @@ Function78a:: ; 78a
 
 .no_rollover
 	pop hl
-	call CheckwLinkTimeoutFramesNOnzero
+	call CheckwLinkTimeoutFramesNonzero
 	jr z, SerialDisconnected
 
 .wLinkTimeoutFrames_zero
@@ -233,7 +233,7 @@ Function78a:: ; 78a
 	ret
 ; 82b
 
-CheckwLinkTimeoutFramesNOnzero:: ; 82b
+CheckwLinkTimeoutFramesNonzero:: ; 82b
 	push hl
 	ld hl, wLinkTimeoutFrames
 	ld a, [hli]
@@ -297,7 +297,7 @@ WaitLinkTransfer:: ; 87d
 .loop
 	call LinkTransfer
 	call DelayFrame
-	call CheckwLinkTimeoutFramesNOnzero
+	call CheckwLinkTimeoutFramesNonzero
 	jr z, .check
 	push hl
 	ld hl, wLinkTimeoutFrames + 1

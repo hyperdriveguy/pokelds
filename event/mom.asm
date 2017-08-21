@@ -64,7 +64,7 @@ Special_BankOfMom: ; 16218
 .InitializeBank: ; 1626a
 	ld hl, UnknownText_0x16649
 	call PrintText
-	call YesNOBox
+	call YesNoBox
 	jr c, .DontSaveMoney
 	ld hl, UnknownText_0x1664e
 	call PrintText
@@ -86,7 +86,7 @@ Special_BankOfMom: ; 16218
 .IsThisAboutYourMoney: ; 16290
 	ld hl, UnknownText_0x16658
 	call PrintText
-	call YesNOBox
+	call YesNoBox
 	jr c, .nope
 	ld a, $3
 	jr .done_2
@@ -237,7 +237,7 @@ Special_BankOfMom: ; 16218
 	ld bc, Money
 	ld de, StringBuffer2
 	callba GiveMoney
-	jr c, .NOtEnoughRoomInWallet
+	jr c, .NotEnoughRoomInWallet
 	ld bc, StringBuffer2 + 3
 	ld de, wMomsMoney
 	callba TakeMoney
@@ -258,7 +258,7 @@ Special_BankOfMom: ; 16218
 	call PrintText
 	ret
 
-.NOtEnoughRoomInWallet:
+.NotEnoughRoomInWallet:
 	ld hl, UnknownText_0x16676
 	call PrintText
 	ret
@@ -274,7 +274,7 @@ Special_BankOfMom: ; 16218
 .StopOrStartSavingMoney: ; 16406
 	ld hl, UnknownText_0x1666c
 	call PrintText
-	call YesNOBox
+	call YesNoBox
 	jr c, .StopSavingMoney
 	ld a, $81
 	ld [wMomSavingMoney], a
@@ -307,12 +307,12 @@ DSTChecks: ; 16439
 	ld a, [wDST]
 	bit 7, a
 	ld a, [hHours]
-	jr z, .NOtDST
+	jr z, .NotDST
 	and a ; within one hour of 00:00?
 	jr z, .LostBooklet
 	jr .loop
 
-.NOtDST:
+.NotDST:
 	cp 23 ; within one hour of 23:00?
 	jr nz, .loop
 	; fallthrough
@@ -322,7 +322,7 @@ DSTChecks: ; 16439
 	bccoord 1, 14
 	ld hl, .Text_AdjustClock
 	call PlaceHLTextAtBC
-	call YesNOBox
+	call YesNoBox
 	ret c
 	call .ClearBox
 	bccoord 1, 14
@@ -338,7 +338,7 @@ DSTChecks: ; 16439
 	jr z, .SetDST
 	ld hl, .Text_IsDSTOver
 	call PlaceHLTextAtBC
-	call YesNOBox
+	call YesNoBox
 	ret c
 	ld a, [wDST]
 	res 7, a
@@ -353,7 +353,7 @@ DSTChecks: ; 16439
 .SetDST:
 	ld hl, .Text_SwitchToDST
 	call PlaceHLTextAtBC
-	call YesNOBox
+	call YesNoBox
 	ret c
 	ld a, [wDST]
 	set 7, a
@@ -628,7 +628,7 @@ UnknownText_0x1664e: ; 0x1664e
 ; 0x16653
 
 UnknownText_0x16653: ; 0x16653
-	; Be careful. #mon are your friends. You need to work as a team. NOw, go on!
+	; Be careful. #mon are your friends. You need to work as a team. Now, go on!
 	text_jump UnknownText_0x1bd88e
 	db "@"
 ; 0x16658

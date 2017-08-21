@@ -110,7 +110,7 @@ UnknownText_0xa0efb: ; 0xa0efb
 	para "with DJ BEN!"
 	line "Isn't it great?"
 
-	para "NOt only that, he"
+	para "Not only that, he"
 	line "said the music on"
 
 	para "my program is"
@@ -313,7 +313,7 @@ UnknownText_0xa15de: ; 0xa15de
 	para "said that black"
 	line "suits were in."
 
-	para "NOw all he wears"
+	para "Now all he wears"
 	line "are black suits."
 
 	para "But it's a secret"

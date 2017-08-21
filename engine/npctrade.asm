@@ -34,7 +34,7 @@ NPCTrade:: ; fcba8
 	ld a, TRADE_INTRO
 	call PrintTradeText
 
-	call YesNOBox
+	call YesNoBox
 	ld a, TRADE_CANCEL
 	jr c, .done
 

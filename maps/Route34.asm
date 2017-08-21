@@ -357,7 +357,7 @@ OfficerKeithScript:
 	faceplayer
 	opentext
 	checknite
-	iffalse .NOFight
+	iffalse .NoFight
 	checkevent EVENT_BEAT_OFFICER_KEITH
 	iftrue .AfterScript
 	playmusic MUSIC_OFFICER_ENCOUNTER
@@ -378,7 +378,7 @@ OfficerKeithScript:
 	closetext
 	end
 
-.NOFight:
+.NoFight:
 	writetext OfficerKeithDaytimeText
 	waitbutton
 	closetext
@@ -548,7 +548,7 @@ YoungsterIanSeenText:
 	done
 
 YoungsterIanBeatenText:
-	text "NO! There are bet-"
+	text "No! There are bet-"
 	line "ter trainers…"
 	done
 
@@ -707,7 +707,7 @@ CooltrainerfKateSeenText:
 	done
 
 CooltrainerfKateBeatenText:
-	text "KATE: NO! I can't"
+	text "KATE: No! I can't"
 	line "believe I lost."
 	done
 

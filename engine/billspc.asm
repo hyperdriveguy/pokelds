@@ -196,7 +196,7 @@ BillsPCDepositFuncRelease: ; e24e0 (38:64e0)
 	call BillsPC_PlaceString
 	call LoadStandardMenuDataHeader
 	lb bc, 14, 11
-	call PlaceYesNOBox
+	call PlaceYesNoBox
 	ld a, [wMenuCursorY]
 	dec a
 	call ExitMenu
@@ -460,7 +460,7 @@ BillsPC_Withdraw: ; e2675 (38:6675)
 	call BillsPC_PlaceString
 	call LoadStandardMenuDataHeader
 	lb bc, 14, 11
-	call PlaceYesNOBox
+	call PlaceYesNoBox
 	ld a, [wMenuCursorY]
 	dec a
 	call ExitMenu
@@ -852,7 +852,7 @@ _StatsScreenDPad: ; e2998 (38:6998)
 	and D_DOWN
 	jr nz, BillsPC_PressDown
 .empty
-	jp BillsPC_JoypadDidNOthing
+	jp BillsPC_JoypadDidNothing
 
 Withdraw_UpDown: ; e29b5 (38:69b5)
 	ld hl, hJoyLast
@@ -869,7 +869,7 @@ Withdraw_UpDown: ; e29b5 (38:69b5)
 	and D_DOWN
 	jr nz, BillsPC_PressDown
 .empty
-	jp BillsPC_JoypadDidNOthing
+	jp BillsPC_JoypadDidNothing
 ; e29d0 (38:69d0)
 
 MovePkmnWithoutMail_DPad: ; e29d0
@@ -894,7 +894,7 @@ MovePkmnWithoutMail_DPad: ; e29d0
 	ld a, [hl]
 	and D_RIGHT
 	jr nz, BillsPC_PressRight
-	jr BillsPC_JoypadDidNOthing
+	jr BillsPC_JoypadDidNothing
 
 MovePkmnWithoutMail_DPad_2: ; e29f4
 	ld hl, hJoyLast
@@ -919,7 +919,7 @@ MovePkmnWithoutMail_DPad_2: ; e29f4
 	ld a, [hl]
 	and D_RIGHT
 	jr nz, BillsPC_PressRight
-	jr BillsPC_JoypadDidNOthing
+	jr BillsPC_JoypadDidNothing
 
 BillsPC_PressUp: ; e2a18 (38:6a18)
 	ld hl, wBillsPC_CursorPosition
@@ -933,7 +933,7 @@ BillsPC_PressUp: ; e2a18 (38:6a18)
 	ld hl, wBillsPC_ScrollPosition
 	ld a, [hl]
 	and a
-	jr z, BillsPC_JoypadDidNOthing
+	jr z, BillsPC_JoypadDidNothing
 	dec [hl]
 	jr BillsPC_UpDownDidSomething
 
@@ -943,7 +943,7 @@ BillsPC_PressDown: ; e2a2c (38:6a2c)
 	add [hl]
 	inc a
 	cp e
-	jr nc, BillsPC_JoypadDidNOthing
+	jr nc, BillsPC_JoypadDidNothing
 
 	ld hl, wBillsPC_CursorPosition
 	ld a, [hl]
@@ -983,7 +983,7 @@ BillsPC_PressRight: ; e2a56
 	ld [hl], 0
 	jr BillsPC_LeftRightDidSomething
 
-BillsPC_JoypadDidNOthing: ; e2a65 (38:6a65)
+BillsPC_JoypadDidNothing: ; e2a65 (38:6a65)
 	xor a
 	and a
 	ret
@@ -1634,7 +1634,7 @@ BillsPC_CheckSpaceInDestination: ; e2ee5
 	ret
 
 .no_room
-	ld de, PCString_TheresNORoom
+	ld de, PCString_TheresNoRoom
 	call BillsPC_PlaceString
 	ld de, SFX_WRONG
 	call WaitPlaySFX
@@ -1667,15 +1667,15 @@ BillsPC_CheckMail_PreventBlackout: ; e2f18 (38:6f18)
 
 .HasMail:
 	ld de, PCString_RemoveMail
-	jr .NOtOkay
+	jr .NotOkay
 
 .AllOthersFainted:
-	ld de, PCString_NOMoreUsablePKMN
-	jr .NOtOkay
+	ld de, PCString_NoMoreUsablePKMN
+	jr .NotOkay
 
 .ItsYourLastPokemon:
 	ld de, PCString_ItsYourLastPKMN
-.NOtOkay:
+.NotOkay:
 	call BillsPC_PlaceString
 	ld de, SFX_WRONG
 	call WaitPlaySFX
@@ -1693,7 +1693,7 @@ BillsPC_IsMonAnEgg: ; e2f5f (38:6f5f)
 	ret
 
 .egg
-	ld de, PCString_NOReleasingEGGS
+	ld de, PCString_NoReleasingEGGS
 	call BillsPC_PlaceString
 	ld de, SFX_WRONG
 	call WaitPlaySFX
@@ -2289,17 +2289,17 @@ PCString_WhatsUp: db "What's up?@"
 PCString_ReleasePKMN: db "Release <PK><MN>?@"
 PCString_MoveToWhere: db "Move to where?@"
 PCString_ItsYourLastPKMN: db "It's your last <PK><MN>!@"
-PCString_TheresNORoom: db "There's no room!@"
-PCString_NOMoreUsablePKMN: db "NO more usable <PK><MN>!@"
+PCString_TheresNoRoom: db "There's no room!@"
+PCString_NoMoreUsablePKMN: db "No more usable <PK><MN>!@"
 PCString_RemoveMail: db "Remove MAIL.@"
 PCString_ReleasedPKMN: db "Released <PK><MN>.@"
 PCString_Bye: db "Bye,@"
 PCString_Stored: db "Stored @"
 PCString_Got: db "Got @"
-PCString_NOn: db "NOn.@"
+PCString_Non: db "Non.@"
 PCString_BoxFull: db "The BOX is full.@"
 PCString_PartyFull: db "The party's full!@"
-PCString_NOReleasingEGGS: db "NO releasing EGGS!@"
+PCString_NoReleasingEGGS: db "No releasing EGGS!@"
 ; e35aa
 
 
@@ -2603,7 +2603,7 @@ BillsPC_PlaceWhatsUpString: ; e37af (38:77af)
 ; e37be
 
 BillsPC_PlaceEmptyBoxString_SFX: ; e37be (38:77be)
-	ld de, .NOMonString
+	ld de, .NoMonString
 	call BillsPC_PlaceChangeBoxString
 	ld de, SFX_WRONG
 	call WaitPlaySFX
@@ -2613,7 +2613,7 @@ BillsPC_PlaceEmptyBoxString_SFX: ; e37be (38:77be)
 	ret
 ; e37d3 (38:77d3)
 
-.NOMonString: ; e37d3
+.NoMonString: ; e37d3
 	db "There's no #mon.@"
 ; e37e3
 

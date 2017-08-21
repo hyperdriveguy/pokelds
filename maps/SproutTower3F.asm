@@ -57,7 +57,7 @@ UnknownScript_0x184947:
 	closetext
 	playsound SFX_WARP_TO
 	special Special_FadeBlackQuickly
-	special Special_ReloadSpritesNOPalettes
+	special Special_ReloadSpritesNoPalettes
 	disappear SPROUTTOWER3F_SILVER
 	waitsfx
 	special Special_FadeInQuickly
@@ -279,7 +279,7 @@ UnknownText_0x184dfa:
 	line "stronger, so does"
 	cont "the trainer."
 
-	para "NO, wait. As the"
+	para "No, wait. As the"
 	line "trainer grows"
 
 	para "stronger, so do"

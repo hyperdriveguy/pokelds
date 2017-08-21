@@ -6,7 +6,7 @@ AI_Redundant: ; 2c41a
 	ld de, 3
 	ld hl, .Moves
 	call IsInArray
-	jp nc, .NOtRedundant
+	jp nc, .NotRedundant
 	inc hl
 	ld a, [hli]
 	ld h, [hl]
@@ -26,7 +26,7 @@ AI_Redundant: ; 2c41a
 	dbw EFFECT_LEECH_SEED,   .LeechSeed
 	dbw EFFECT_DISABLE,      .Disable
 	dbw EFFECT_ENCORE,       .Encore
-	dbw EFFECT_SNORE,        .Snore
+	dbw EFFECT_SNoRE,        .Snore
 	dbw EFFECT_SLEEP_TALK,   .SleepTalk
 	dbw EFFECT_MEAN_LOOK,    .MeanLook
 	dbw EFFECT_NIGHTMARE,    .Nightmare
@@ -104,7 +104,7 @@ AI_Redundant: ; 2c41a
 	ld a, [EnemyMonStatus]
 	and SLP
 	jr z, .Redundant
-	jr .NOtRedundant
+	jr .NotRedundant
 
 .MeanLook: ; 2c4d1
 	ld a, [EnemySubStatus5]
@@ -138,7 +138,7 @@ AI_Redundant: ; 2c41a
 	ld a, [Weather]
 	cp WEATHER_SANDSTORM
 	jr z, .Redundant
-	jr .NOtRedundant
+	jr .NotRedundant
 
 .Attract: ; 2c4fe
 	callba CheckOppositeGender
@@ -156,19 +156,19 @@ AI_Redundant: ; 2c41a
 	ld a, [Weather]
 	cp WEATHER_RAIN
 	jr z, .Redundant
-	jr .NOtRedundant
+	jr .NotRedundant
 
 .SunnyDay: ; 2c51b
 	ld a, [Weather]
 	cp WEATHER_SUN
 	jr z, .Redundant
-	jr .NOtRedundant
+	jr .NotRedundant
 
 .DreamEater: ; 2c524
 	ld a, [BattleMonStatus]
 	and SLP
 	jr z, .Redundant
-	jr .NOtRedundant
+	jr .NotRedundant
 
 .Swagger: ; 2c52d
 	ld a, [PlayerSubStatus3]
@@ -185,7 +185,7 @@ AI_Redundant: ; 2c41a
 .Synthesis:
 .Moonlight: ; 2c539
 	callba AICheckEnemyMaxHP
-	jr nc, .NOtRedundant
+	jr nc, .NotRedundant
 
 .Teleport:
 .Redundant: ; 2c541
@@ -193,6 +193,6 @@ AI_Redundant: ; 2c41a
 	and a
 	ret
 
-.NOtRedundant: ; 2c545
+.NotRedundant: ; 2c545
 	xor a
 	ret

@@ -56,7 +56,7 @@ ChuckScript_0x9d60f:
 	iftrue .AlreadyGotTM
 	setevent EVENT_BEAT_BLACKBELT_YOSHI
 	setevent EVENT_BEAT_BLACKBELT_LAO
-	setevent EVENT_BEAT_BLACKBELT_NOB
+	setevent EVENT_BEAT_BLACKBELT_NoB
 	setevent EVENT_BEAT_BLACKBELT_LUNG
 	writetext ChuckExplainBadgeText
 	buttonsound
@@ -108,13 +108,13 @@ TrainerBlackbeltLao:
 	closetext
 	end
 
-TrainerBlackbeltNOb:
-	trainer EVENT_BEAT_BLACKBELT_NOB, BLACKBELT_T, NOB, BlackbeltNObSeenText, BlackbeltNObBeatenText, 0, .Script
+TrainerBlackbeltNob:
+	trainer EVENT_BEAT_BLACKBELT_NoB, BLACKBELT_T, NoB, BlackbeltNobSeenText, BlackbeltNobBeatenText, 0, .Script
 
 .Script:
 	end_if_just_battled
 	opentext
-	writetext BlackbeltNObAfterText
+	writetext BlackbeltNobAfterText
 	waitbutton
 	closetext
 	end
@@ -274,17 +274,17 @@ BlackbeltLaoAfterText:
 	cont "chics…"
 	done
 
-BlackbeltNObSeenText:
+BlackbeltNobSeenText:
 	text "Words are useless."
 	line "Let your fists do"
 	cont "the talking!"
 	done
 
-BlackbeltNObBeatenText:
+BlackbeltNobBeatenText:
 	text "…"
 	done
 
-BlackbeltNObAfterText:
+BlackbeltNobAfterText:
 	text "I lost! "
 	line "I'm speechless!"
 	done
@@ -327,7 +327,7 @@ CianwoodGym_MapEventHeader:
 	person_event SPRITE_CHUCK, 1, 4, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, (1 << 3) | PAL_OW_BROWN, PERSONTYPE_SCRIPT, 0, ChuckScript_0x9d60f, -1
 	person_event SPRITE_BLACK_BELT, 12, 2, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, (1 << 3) | PAL_OW_BROWN, PERSONTYPE_TRAINER, 3, TrainerBlackbeltYoshi, -1
 	person_event SPRITE_BLACK_BELT, 12, 7, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, (1 << 3) | PAL_OW_BROWN, PERSONTYPE_TRAINER, 3, TrainerBlackbeltLao, -1
-	person_event SPRITE_BLACK_BELT, 9, 3, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, (1 << 3) | PAL_OW_BROWN, PERSONTYPE_TRAINER, 2, TrainerBlackbeltNOb, -1
+	person_event SPRITE_BLACK_BELT, 9, 3, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, (1 << 3) | PAL_OW_BROWN, PERSONTYPE_TRAINER, 2, TrainerBlackbeltNob, -1
 	person_event SPRITE_BLACK_BELT, 5, 5, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, (1 << 3) | PAL_OW_BROWN, PERSONTYPE_TRAINER, 1, TrainerBlackbeltLung, -1
 	person_event SPRITE_BOULDER, 1, 5, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, CianwoodGymBoulder, -1
 	person_event SPRITE_BOULDER, 7, 3, SPRITEMOVEDATA_STRENGTH_BOULDER, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, CianwoodGymBoulder, -1

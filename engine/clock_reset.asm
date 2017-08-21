@@ -37,7 +37,7 @@ RestartClock: ; 20021 (8:4021)
 	ld hl, Options
 	ld a, [hl]
 	push af
-	set NO_TEXT_SCROLL, [hl]
+	set No_TEXT_SCROLL, [hl]
 	call LoadStandardMenuDataHeader
 	call ClearTileMap
 	ld hl, .Text_SetWithControlPad
@@ -85,7 +85,7 @@ RestartClock: ; 20021 (8:4021)
 	call .PrintTime
 	ld hl, .Text_IsThisOK
 	call PrintText
-	call YesNOBox
+	call YesNoBox
 	jr c, .cancel
 	ld a, [Buffer4]
 	ld [StringBuffer2], a

@@ -192,7 +192,7 @@ TryWildEncounter:: ; 2a0e7
 	ret
 
 .no_battle
-	xor a ; BATTLETYPE_NORMAL
+	xor a ; BATTLETYPE_NoRMAL
 	ld [TempWildMonSpecies], a
 	ld [BattleType], a
 	ld a, 1
@@ -333,7 +333,7 @@ ChooseWildEncounter: ; 2a14f
 	jr c, .nowildbattle
 
 	ld a, b ; This is in the wrong place.
-	cp UNOWN
+	cp UNoWN
 	jr nz, .done
 
 	ld a, [UnlockedUnowns]
@@ -418,7 +418,7 @@ _GrassWildmonLookup: ; 2a205
 	ld de, KantoGrassWildMons
 	call _JohtoWildmonCheck
 	ld bc, GRASS_WILDDATA_LENGTH
-	jr _NOrmalWildmonOK
+	jr _NormalWildmonOK
 
 _WaterWildmonLookup: ; 2a21d
 	ld hl, SwarmWaterWildMons
@@ -429,7 +429,7 @@ _WaterWildmonLookup: ; 2a21d
 	ld de, KantoWaterWildMons
 	call _JohtoWildmonCheck
 	ld bc, WATER_WILDDATA_LENGTH
-	jr _NOrmalWildmonOK
+	jr _NormalWildmonOK
 
 _JohtoWildmonCheck
 	call IsInJohto
@@ -453,7 +453,7 @@ _SwarmWildmonCheck
 	cp e
 	jr nz, .CheckYanma
 	call LookUpWildmonsForMapDE
-	jr nc, _NOSwarmWildmon
+	jr nc, _NoSwarmWildmon
 	scf
 	ret
 
@@ -462,23 +462,23 @@ _SwarmWildmonCheck
 	ld hl, SwarmFlags
 	bit 3, [hl]
 	pop hl
-	jr z, _NOSwarmWildmon
+	jr z, _NoSwarmWildmon
 	ld a, [wYanmaMapGroup]
 	cp d
-	jr nz, _NOSwarmWildmon
+	jr nz, _NoSwarmWildmon
 	ld a, [wYanmaMapNumber]
 	cp e
-	jr nz, _NOSwarmWildmon
+	jr nz, _NoSwarmWildmon
 	call LookUpWildmonsForMapDE
-	jr nc, _NOSwarmWildmon
+	jr nc, _NoSwarmWildmon
 	scf
 	ret
 
-_NOSwarmWildmon
+_NoSwarmWildmon
 	and a
 	ret
 
-_NOrmalWildmonOK
+_NormalWildmonOK
 	call CopyCurrMapDE
 	jr LookUpWildmonsForMapDE
 ; 2a27f
@@ -801,7 +801,7 @@ _BackUpMapIndices: ; 2a3f6
 RoamMaps: ; 2a40f
 ; Maps that roaming monsters can be on,
 ; and possible maps they can jump to.
-; NOtably missing are Route 40 and
+; Notably missing are Route 40 and
 ; Route 41, which are water routes.
 	roam_map ROUTE_101, 2, ROUTE_30, ROUTE_46
 	roam_map ROUTE_30, 2, ROUTE_101, ROUTE_31

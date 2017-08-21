@@ -279,7 +279,7 @@ SetFacingBigDollAsym: ; 45be
 SetFacingBigDoll: ; 45c5
 	ld a, [VariableSprites + SPRITE_BIG_DOLL - SPRITE_VARS]
 	ld d, FACING_BIG_DOLL_SYM ; symmetric
-	cp SPRITE_BIG_SNORLAX
+	cp SPRITE_BIG_SNoRLAX
 	jr z, .ok
 	cp SPRITE_BIG_LAPRAS
 	jr z, .ok

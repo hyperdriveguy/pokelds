@@ -21,7 +21,7 @@ ENDM
 	object_gfx 10, AnimObjPokeBallGFX
 	object_gfx  9, AnimObjPoisonGFX
 	object_gfx 13, AnimObjBubbleGFX
-	object_gfx 16, AnimObjNOiseGFX
+	object_gfx 16, AnimObjNoiseGFX
 	object_gfx  2, AnimObjPowderGFX
 	object_gfx 11, AnimObjBeamGFX
 	object_gfx  9, AnimObjSpeedGFX

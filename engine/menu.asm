@@ -760,14 +760,14 @@ Function24423: ; 24423
 ; 2445d
 
 Error_Cant_ExitMenu: ; 2445d
-	ld hl, .Text_NOWindowsAvailableForPopping
+	ld hl, .Text_NoWindowsAvailableForPopping
 	call PrintText
 	call WaitBGMap
 .InfiniteLoop:
 	jr .InfiniteLoop
 ; 24468
 
-.Text_NOWindowsAvailableForPopping: ; 24468
+.Text_NoWindowsAvailableForPopping: ; 24468
 	text_jump UnknownText_0x1c46b7
 	db "@"
 ; 2446d

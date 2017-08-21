@@ -53,6 +53,6 @@ RalphPhoneFullText:
 RalphRematchText:
 	text "Hey, kid!"
 
-	para "NO losing for me"
+	para "No losing for me"
 	line "this day!"
 	done

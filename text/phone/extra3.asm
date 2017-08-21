@@ -1345,7 +1345,7 @@ UnknownText_0x176424: ; 0x176424
 	line "to get a hold of a"
 
 	para "SURF PIKACHU DOLL."
-	line "NOne of my friends"
+	line "None of my friends"
 
 	para "have it. It must"
 	line "be totally rare!"
@@ -1683,7 +1683,7 @@ UnknownText_0x176e5d: ; 0x176e5d
 UnknownText_0x176e9c: ; 0x176e9c
 	text "And, you know?"
 
-	para "NOw we can KO"
+	para "Now we can KO"
 	line "@"
 	text_from_ram StringBuffer4
 	text " easily."

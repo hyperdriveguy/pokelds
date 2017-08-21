@@ -56,7 +56,7 @@ JoeyRematchGiftText:
 	text "And yet another"
 	line "loss…"
 
-	para "NO doubt about"
+	para "No doubt about"
 	line "it--you're tough."
 
 	para "Being beaten this"

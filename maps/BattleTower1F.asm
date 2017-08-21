@@ -65,7 +65,7 @@ ReceptionistScript_0x9e3e2:
 	writebyte BATTLETOWERACTION_00 ; if new save file: bit 1, [s1_be4f]
 	special BattleTowerAction
 	if_not_equal $0, Script_Menu_ChallengeExplanationCancel
-	jump Script_BattleTowerIntroductionYesNO
+	jump Script_BattleTowerIntroductionYesNo
 
 Script_Menu_ChallengeExplanationCancel: ; 0x9e3fc
 	writetext Text_WantToGoIntoABattleRoom
@@ -141,7 +141,7 @@ Script_YourPackIsStuffedFull: ; 0x9e498
 	closetext
 	end
 
-Script_BattleTowerIntroductionYesNO: ; 0x9e49e
+Script_BattleTowerIntroductionYesNo: ; 0x9e49e
 	writetext Text_WouldYouLikeToHearAboutTheBattleTower
 	yesorno
 	iffalse Script_BattleTowerSkipExplanation
@@ -193,7 +193,7 @@ UnreferencedScript_0x9e4ea:
 	if_not_equal $0, Script_APkmnLevelExceeds
 	writebyte BATTLETOWERACTION_19
 	special BattleTowerAction
-	if_not_equal $0, Script_MayNOtEnterABattleRoomUnderL70
+	if_not_equal $0, Script_MayNotEnterABattleRoomUnderL70
 	special SpecialCheckForBattleTowerRules
 	if_not_equal $0, Script_WaitButton
 	writebyte BATTLETOWERACTION_05
@@ -232,8 +232,8 @@ Script_APkmnLevelExceeds: ; 0x9e542
 	waitbutton
 	jump Script_Menu_ChallengeExplanationCancel
 
-Script_MayNOtEnterABattleRoomUnderL70: ; 0x9e549
-	writetext Text_MayNOtEnterABattleRoomUnderL70
+Script_MayNotEnterABattleRoomUnderL70: ; 0x9e549
+	writetext Text_MayNotEnterABattleRoomUnderL70
 	waitbutton
 	jump Script_Menu_ChallengeExplanationCancel
 
@@ -401,7 +401,7 @@ Text_BattleTowerIntroduction_1: ; 0x9e62f
 	para "All LEADERS will"
 	line "be recorded in the"
 
-	para "HONOR ROLL for"
+	para "HONoR ROLL for"
 	line "posterity."
 
 	para "You may challenge"
@@ -467,7 +467,7 @@ Text_BattleTowerIntroduction_2: ; 0x9e886
 Text_ReceivedAListOfLeadersOnTheHonorRoll: ; 0x9e9eb
 	text "Received a list of"
 	line "LEADERS on the"
-	cont "HONOR ROLL."
+	cont "HONoR ROLL."
 
 	para ""
 	done
@@ -588,7 +588,7 @@ Text_CantBeRegistered_PreviousRecordDeleted:
 
 Text_CheckTheLeaderHonorRoll: ; 0x9ed1e
 	text "Check the LEADER"
-	line "HONOR ROLL?"
+	line "HONoR ROLL?"
 	done
 
 Text_ReadBattleTowerRules: ; 0x9ed3c
@@ -636,7 +636,7 @@ Text_YourPkmnWillBeHealedToFullHealth: ; 0x9ee92
 	cont "health."
 	done
 
-Text_NextUpOpponentNO: ; 0x9eebc
+Text_NextUpOpponentNo: ; 0x9eebc
 	text "Next up, opponent"
 	line "no.@"
 	text_from_ram StringBuffer3
@@ -703,7 +703,7 @@ Text_FiveDayBattleLimit_Mobile:
 	line "tomorrow."
 	done
 
-Text_TooMuchTimeElapsedNORegister: ; 0x9f0c1
+Text_TooMuchTimeElapsedNoRegister: ; 0x9f0c1
 	text "Sorry, but it's"
 	line "not possible to"
 
@@ -742,7 +742,7 @@ Text_APkmnLevelExceeds: ; 0x9f1e5
 	text "."
 	done
 
-Text_MayNOtEnterABattleRoomUnderL70: ; 0x9f217
+Text_MayNotEnterABattleRoomUnderL70: ; 0x9f217
 	text_from_ram wcd49
 	text " may not"
 	line "enter a BATTLE"

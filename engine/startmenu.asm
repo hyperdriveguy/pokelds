@@ -5,7 +5,7 @@ StartMenu:: ; 125cd
 	ld de, SFX_MENU
 	call PlaySFX
 
-	callba ReanchorBGMap_NOOAMUpdate
+	callba ReanchorBGMap_NoOAMUpdate
 
 	ld hl, StatusFlags2
 	bit 2, [hl] ; bug catching contest
@@ -23,7 +23,7 @@ StartMenu:: ; 125cd
 	call .DrawBugContestStatusBox
 	call SafeUpdateSprites
 	call _OpenAndCloseMenu_HDMATransferTileMapAndAttrMap
-	callba LoadFonts_NOOAMUpdate
+	callba LoadFonts_NoOAMUpdate
 	call .DrawBugContestStatus
 	call UpdateTimePals
 	jr .Select
@@ -420,7 +420,7 @@ StartMenu_Quit: ; 128f0
 ; Retire from the bug catching contest.
 
 	ld hl, .EndTheContestText
-	call StartMenuYesNO
+	call StartMenuYesNo
 	jr c, .DontEndContest
 	ld a, BANK(BugCatchingContestReturnToGateScript)
 	ld hl, BugCatchingContestReturnToGateScript
@@ -567,7 +567,7 @@ StartMenu_Pokemon: ; 12976
 	ret
 ; 129d5
 
-HasNOItems: ; 129d5
+HasNoItems: ; 129d5
 	ld a, [NumItems]
 	and a
 	ret nz
@@ -608,7 +608,7 @@ TossItemFromPC: ; 129f4
 	jr c, .quit
 	ld hl, .ConfirmToss
 	call MenuTextBox
-	call YesNOBox
+	call YesNoBox
 	push af
 	call ExitMenu
 	pop af
@@ -743,7 +743,7 @@ SwitchPartyMons: ; 12aec
 	ld [wSwitchMon], a
 
 	callba HoldSwitchmonIcon
-	callba InitPartyMenuNOCancel
+	callba InitPartyMenuNoCancel
 
 	ld a, 4
 	ld [PartyMenuActionText], a
@@ -892,7 +892,7 @@ TryGiveItemToPartymon: ; 12bd9
 	ld [wd265], a
 	call GetItemName
 	ld hl, SwitchAlreadyHoldingText
-	call StartMenuYesNO
+	call StartMenuYesNo
 	jr c, .abort
 
 	call GiveItemToPokemon
@@ -955,7 +955,7 @@ TakePartyItem: ; 12c60
 	call GetPartyItemLocation
 	ld a, [hl]
 	ld [wd265], a
-	ld [hl], NO_ITEM
+	ld [hl], No_ITEM
 	call GetItemName
 	ld hl, TookFromText
 	call MenuTextBoxBackup
@@ -1054,9 +1054,9 @@ GiveItemToPokemon: ; 12cea (4:6cea)
 	ld hl, NumItems
 	jp TossItem
 
-StartMenuYesNO: ; 12cf5
+StartMenuYesNo: ; 12cf5
 	call MenuTextBox
-	call YesNOBox
+	call YesNoBox
 	jp ExitMenu
 ; 12cfe
 
@@ -1122,7 +1122,7 @@ MonMailAction: ; 12d45
 
 .take
 	ld hl, .sendmailtopctext
-	call StartMenuYesNO
+	call StartMenuYesNo
 	jr c, .RemoveMailToBag
 	ld a, [CurPartyMon]
 	ld b, a
@@ -1139,7 +1139,7 @@ MonMailAction: ; 12d45
 
 .RemoveMailToBag:
 	ld hl, .mailwilllosemessagetext
-	call StartMenuYesNO
+	call StartMenuYesNo
 	jr c, .done
 	call GetPartyItemLocation
 	ld a, [hl]
@@ -1373,12 +1373,12 @@ MonMenu_Dig: ; 12ed1
 
 MonMenu_Softboiled_MilkDrink: ; 12ee6
 	call .CheckMonHasEnoughHP
-	jr nc, .NOtEnoughHP
+	jr nc, .NotEnoughHP
 	callba Softboiled_MilkDrinkFunction
 	jr .finish
 
-.NOtEnoughHP:
-	ld hl, .Text_NOtEnoughHP
+.NotEnoughHP:
+	ld hl, .Text_NotEnoughHP
 	call PrintText
 
 .finish
@@ -1388,8 +1388,8 @@ MonMenu_Softboiled_MilkDrink: ; 12ee6
 	ret
 ; 12f00
 
-.Text_NOtEnoughHP:
-	; NOt enough HP!
+.Text_NotEnoughHP:
+	; Not enough HP!
 	text_jump UnknownText_0x1c1ce3
 	db "@"
 ; 0x12f05
@@ -1455,7 +1455,7 @@ ChooseMoveToDelete: ; 12f5b
 	ld hl, Options
 	ld a, [hl]
 	push af
-	set NO_TEXT_SCROLL, [hl]
+	set No_TEXT_SCROLL, [hl]
 	call LoadFontsBattleExtra
 	call .ChooseMoveToDelete
 	pop bc
@@ -1523,7 +1523,7 @@ ManagePokemonMoves: ; 12fba
 	ld hl, Options
 	ld a, [hl]
 	push af
-	set NO_TEXT_SCROLL, [hl]
+	set No_TEXT_SCROLL, [hl]
 	call MoveScreenLoop
 	pop af
 	ld [Options], a

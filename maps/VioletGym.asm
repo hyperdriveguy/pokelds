@@ -41,7 +41,7 @@ FalknerScript_0x683c2:
 	writetext UnknownText_0x685c8
 	buttonsound
 	verbosegiveitem TM_MUD_SLAP
-	iffalse .NORoomForMudSlap
+	iffalse .NoRoomForMudSlap
 	setevent EVENT_GOT_TM31_MUD_SLAP
 	writetext UnknownText_0x68648
 	waitbutton
@@ -51,7 +51,7 @@ FalknerScript_0x683c2:
 .SpeechAfterTM:
 	writetext UnknownText_0x68735
 	waitbutton
-.NORoomForMudSlap:
+.NoRoomForMudSlap:
 	closetext
 	end
 

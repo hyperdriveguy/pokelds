@@ -162,7 +162,7 @@ AnimationPointers:
 	dw SentretAnimation
 	dw FurretAnimation
 	dw HoothootAnimation
-	dw NOctowlAnimation
+	dw NoctowlAnimation
 	dw LedybaAnimation
 	dw LedianAnimation
 	dw SpinarakAnimation

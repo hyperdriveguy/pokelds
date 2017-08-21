@@ -200,7 +200,7 @@ WesleyScript:
 	checkevent EVENT_GOT_BLACKBELT_FROM_WESLEY
 	iftrue WesleyWednesdayScript
 	checkcode VAR_WEEKDAY
-	if_not_equal WEDNESDAY, WesleyNOtWednesdayScript
+	if_not_equal WEDNESDAY, WesleyNotWednesdayScript
 	checkevent EVENT_MET_WESLEY_OF_WEDNESDAY
 	iftrue .MetWesley
 	writetext MeetWesleyText
@@ -224,8 +224,8 @@ WesleyDoneScript:
 	closetext
 	end
 
-WesleyNOtWednesdayScript:
-	writetext WesleyNOtWednesdayText
+WesleyNotWednesdayScript:
+	writetext WesleyNotWednesdayText
 	waitbutton
 	closetext
 	end
@@ -386,7 +386,7 @@ UnknownText_0x7058f:
 	done
 
 FisherRaymondSeenText:
-	text "NO matter what I"
+	text "No matter what I"
 	line "do, all I catch"
 
 	para "are the same #-"
@@ -484,7 +484,7 @@ WesleyWednesdayText:
 	line "get lucky?"
 	done
 
-WesleyNOtWednesdayText:
+WesleyNotWednesdayText:
 	text "WESLEY: Today's"
 	line "not Wednesday."
 	cont "That's too bad."

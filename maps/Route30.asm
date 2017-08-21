@@ -297,7 +297,7 @@ YoungsterJoey1AfterText:
 	para "order to battle"
 	line "better?"
 
-	para "NO! I'm sticking"
+	para "No! I'm sticking"
 	line "with this one no"
 	cont "matter what!"
 	done
@@ -384,7 +384,7 @@ MrPokemonsHouseSignText:
 Route30TrainerTipsText:
 	text "TRAINER TIPS"
 
-	para "NO stealing other"
+	para "No stealing other"
 	line "people's #mon!"
 
 	para "# BALLS are to"

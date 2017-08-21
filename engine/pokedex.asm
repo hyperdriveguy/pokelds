@@ -10,8 +10,8 @@
 	const DEXSTATE_UPDATE_OPTION_SCR
 	const DEXSTATE_SEARCH_RESULTS_SCR
 	const DEXSTATE_UPDATE_SEARCH_RESULTS_SCR
-	const DEXSTATE_UNOWN_MODE
-	const DEXSTATE_UPDATE_UNOWN_MODE
+	const DEXSTATE_UNoWN_MODE
+	const DEXSTATE_UPDATE_UNoWN_MODE
 	const DEXSTATE_EXIT
 
 Pokedex: ; 40000
@@ -26,7 +26,7 @@ Pokedex: ; 40000
 	ld hl, Options
 	ld a, [hl]
 	push af
-	set NO_TEXT_SCROLL, [hl]
+	set No_TEXT_SCROLL, [hl]
 	ld a, [VramState]
 	push af
 	xor a
@@ -498,7 +498,7 @@ Pokedex_UpdateOptionScreen: ; 403be (10:43be)
 	ld a, [wUnlockedUnownMode]
 	and a
 	jr nz, .okay
-	ld de, .NOUnownModeArrowCursorData
+	ld de, .NoUnownModeArrowCursorData
 	jr .okay2
 .okay
 	ld de, .ArrowCursorData
@@ -526,7 +526,7 @@ Pokedex_UpdateOptionScreen: ; 403be (10:43be)
 	ld [wJumptableIndex], a
 	ret
 
-.NOUnownModeArrowCursorData: ; 403f3
+.NoUnownModeArrowCursorData: ; 403f3
 	db D_UP | D_DOWN, 3
 	dwcoord 2,  4
 	dwcoord 2,  6
@@ -578,7 +578,7 @@ Pokedex_UpdateOptionScreen: ; 403be (10:43be)
 
 .MenuAction_UnownMode: ; 4043a (10:443a)
 	call Pokedex_BlackOutBG
-	ld a, DEXSTATE_UNOWN_MODE
+	ld a, DEXSTATE_UNoWN_MODE
 	ld [wJumptableIndex], a
 	ret
 
@@ -588,7 +588,7 @@ Pokedex_InitSearchScreen: ; 40443 (10:4443)
 	call ClearSprites
 	call Pokedex_DrawSearchScreenBG
 	call Pokedex_InitArrowCursor
-	ld a, NORMAL + 1
+	ld a, NoRMAL + 1
 	ld [wDexSearchMonType1], a
 	xor a
 	ld [wDexSearchMonType2], a
@@ -653,9 +653,9 @@ Pokedex_UpdateSearchScreen: ; 40471 (10:4471)
 	and a
 	jr nz, .show_search_results
 
-; NO mon with matching types was found.
+; No mon with matching types was found.
 	call Pokedex_OrderMonsByMode
-	call Pokedex_DisplayTypeNOtFoundMessage
+	call Pokedex_DisplayTypeNotFoundMessage
 	xor a
 	ld [hBGMapMode], a
 	call Pokedex_DrawSearchScreenBG
@@ -776,7 +776,7 @@ Pokedex_InitUnownMode: ; 405bd (10:45bd)
 	call Pokedex_UnownModePlaceCursor
 	callba PrintUnownWord
 	call WaitBGMap
-	ld a, SCGB_POKEDEX_UNOWN_MODE
+	ld a, SCGB_POKEDEX_UNoWN_MODE
 	call Pokedex_GetSGBLayout
 	call Pokedex_IncrementDexPointer
 	ret
@@ -1139,7 +1139,7 @@ Pokedex_DrawDexEntryScreenBG: ; 407fd
 	ret
 
 .Unused: ; 4084f
-	db $5c, $5d, $ff ; NO.
+	db $5c, $5d, $ff ; No.
 .Height: ; 40852
 	db "HT  ?", $5e, "??", $5f, $ff ; HT  ?'??"
 .Weight: ; 4085c
@@ -1179,7 +1179,7 @@ Pokedex_DrawOptionScreenBG: ; 4087c (10:487c)
 	db "@"
 
 .UnownMode: ; 408e5
-	db "UNOWN MODE@"
+	db "UNoWN MODE@"
 
 Pokedex_DrawSearchScreenBG: ; 408f0 (10:48f0)
 	call Pokedex_FillBackgroundColor2
@@ -1485,7 +1485,7 @@ Pokedex_PrintListing: ; 40b0f (10:4b0f)
 	and a
 	ret z
 	call Pokedex_PrintNumberIfOldMode
-	call Pokedex_PlaceDefaultStringIfNOtSeen
+	call Pokedex_PlaceDefaultStringIfNotSeen
 	ret c
 	call Pokedex_PlaceCaughtSymbolIfCaught
 	push hl
@@ -1521,16 +1521,16 @@ Pokedex_PlaceCaughtSymbolIfCaught: ; 40b82 (10:4b82)
 	ld [hli], a
 	ret
 
-Pokedex_PlaceDefaultStringIfNOtSeen: ; 40b8d (10:4b8d)
+Pokedex_PlaceDefaultStringIfNotSeen: ; 40b8d (10:4b8d)
 	call Pokedex_CheckSeen
 	ret nz
 	inc hl
-	ld de, .NameNOtSeen
+	ld de, .NameNotSeen
 	call PlaceString
 	scf
 	ret
 
-.NameNOtSeen: ; 40b9a
+.NameNotSeen: ; 40b9a
 	db "-----@"
 
 Pokedex_DrawFootprint: ; 40ba0
@@ -1723,7 +1723,7 @@ Pokedex_DisplayModeDescription: ; 40e5b
 	next "alphabetically.@"
 
 .UnownMode: ; 40ee4
-	db   "UNOWN are listed"
+	db   "UNoWN are listed"
 	next "in catching order.@"
 
 Pokedex_DisplayChangingModesMessage: ; 40f08 (10:4f08)
@@ -1853,7 +1853,7 @@ endr
 
 .TypeStrings: ; 40fe4
 	db "  ----  @"
-	db " NORMAL @"
+	db " NoRMAL @"
 	db "  FIRE  @"
 	db " WATER  @"
 	db " GRASS  @"
@@ -1948,7 +1948,7 @@ Pokedex_SearchForMons: ; 41086
 	ret
 
 .TypeConversionTable: ; 410f6
-	db NORMAL
+	db NoRMAL
 	db FIRE
 	db WATER
 	db GRASS
@@ -1967,13 +1967,13 @@ Pokedex_SearchForMons: ; 41086
 	db STEEL
 	db FAIRY
 
-Pokedex_DisplayTypeNOtFoundMessage: ; 41107
+Pokedex_DisplayTypeNotFoundMessage: ; 41107
 	xor a
 	ld [hBGMapMode], a
 	hlcoord 0, 12
 	lb bc, 4, 18
 	call Pokedex_PlaceBorder
-	ld de, .TypeNOtFound
+	ld de, .TypeNotFound
 	hlcoord 1, 14
 	call PlaceString
 	ld a, $1
@@ -1982,7 +1982,7 @@ Pokedex_DisplayTypeNOtFoundMessage: ; 41107
 	call DelayFrames
 	ret
 
-.TypeNOtFound: ; 41126
+.TypeNotFound: ; 41126
 	db   "The specified type"
 	next "was not found.@"
 
@@ -2426,7 +2426,7 @@ Pokedex_LoadAnyFootprint: ; 4147b
 	pop hl
 
 	; Whoever was editing footprints forgot to fix their
-	; tile editor. NOw each bottom half is 8 tiles off.
+	; tile editor. Now each bottom half is 8 tiles off.
 	ld de, 8 tiles
 	add hl, de
 
@@ -2527,7 +2527,7 @@ Pokedex_LoadUnownFrontpicTiles: ; 41a58 (10:5a58)
 	add hl, de
 	ld a, [hl]
 	ld [UnownLetter], a
-	ld a, UNOWN
+	ld a, UNoWN
 	ld [CurPartySpecies], a
 	call GetBaseData
 	ld de, VTiles2 tile $00

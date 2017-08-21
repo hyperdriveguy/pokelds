@@ -230,7 +230,7 @@ MainMenu_PrintCurrentTimeAndDay: ; 49e09
 	ld hl, Options
 	ld a, [hl]
 	push af
-	set NO_TEXT_SCROLL, [hl]
+	set No_TEXT_SCROLL, [hl]
 	call .PlaceTime
 	pop af
 	ld [Options], a
@@ -262,7 +262,7 @@ MainMenu_PrintCurrentTimeAndDay: ; 49e09
 	ret z
 	call CheckRTCStatus
 	and $80
-	jp nz, .PrintTimeNOtSet
+	jp nz, .PrintTimeNotSet
 	call UpdateTime
 	call GetWeekday
 	ld b, a
@@ -284,14 +284,14 @@ MainMenu_PrintCurrentTimeAndDay: ; 49e09
 	db "min.@"
 ; 49e75
 
-.PrintTimeNOtSet: ; 49e75
+.PrintTimeNotSet: ; 49e75
 	hlcoord 1, 14
-	ld de, .TimeNOtSet
+	ld de, .TimeNotSet
 	call PlaceString
 	ret
 ; 49e7f
 
-.TimeNOtSet: ; 49e7f
+.TimeNotSet: ; 49e7f
 	db "Time not set@"
 ; 49e8c
 

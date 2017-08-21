@@ -226,7 +226,7 @@ TrainerCard_PrintTopHalfOfCard: ; 25299 (9:5299)
 	ld de, .Name_Money
 	call PlaceString
 	hlcoord 2, 4
-	ld de, .ID_NO
+	ld de, .ID_No
 	call TrainerCardSetup_PlaceTilemapString
 	hlcoord 7, 2
 	ld de, PlayerName
@@ -256,8 +256,8 @@ TrainerCard_PrintTopHalfOfCard: ; 25299 (9:5299)
 	next ""
 	next "MONEY@"
 
-.ID_NO: ; 252f9
-	db $27, $28, $ff ; ID NO
+.ID_No: ; 252f9
+	db $27, $28, $ff ; ID No
 
 .HorizontalDivider: ; 252fc
 	db $25, $25, $25, $25, $25, $25, $25, $25, $25, $25, $25, $25, $26, $ff ; ____________>
