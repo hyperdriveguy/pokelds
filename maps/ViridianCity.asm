@@ -104,7 +104,7 @@ UnknownText_0x1a9aa5:
 	line "like much now, but"
 
 	para "I was an expert at"
-	line "catching #MON."
+	line "catching #mon."
 
 	para "Do you believe me?"
 	done
@@ -195,7 +195,7 @@ ViridianCitySignText:
 
 ViridianGymSignText:
 	text "VIRIDIAN CITY"
-	line "#MON GYM"
+	line "#mon GYM"
 	cont "LEADER: …"
 
 	para "The rest of the"

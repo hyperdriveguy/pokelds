@@ -1507,7 +1507,7 @@ Function100902: ; 100902
 	ld de, .string_10095a
 	hlcoord 4, 11
 	call PlaceString
-	ld de, SFX_4_NOTE_DITTY
+	ld de, SFX_4_NoTE_DITTY
 	call PlaySFX
 	callba ReloadMapPart
 	ld c, 120
@@ -6787,7 +6787,7 @@ Function102d48: ; 102d48
 
 .asm_102d6d
 	ld a, [wd265]
-	cp UNOWN
+	cp UNoWN
 	jr nz, .asm_102d98
 	ld a, [wcd4c]
 	dec a

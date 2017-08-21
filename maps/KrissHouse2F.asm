@@ -69,7 +69,7 @@ KrissHouseRadio:
 	pause 45
 	writetext KrisRadioText3
 	pause 45
-	musicfadeout MUSIC_NEW_BARK_TOWN, 16
+	musicfadeout MUSIC_BOUNTIFUL_TOWN, 16
 	writetext KrisRadioText4
 	pause 45
 	closetext
@@ -96,17 +96,17 @@ KrissHousePC:
 	closetext
 	end
 .Warp:
-	warp NONE, $0, $0
+	warp NoNE, $0, $0
 	end
 
 KrisRadioText1:
-	text "PROF.OAK'S #MON"
+	text "PROF.OAK'S #mon"
 	line "TALK! Please tune"
 	cont "in next time!"
 	done
 
 KrisRadioText2:
-	text "#MON CHANNEL!"
+	text "#mon CHANNEL!"
 	done
 
 KrisRadioText3:
@@ -115,8 +115,8 @@ KrisRadioText3:
 	done
 
 KrisRadioText4:
-	text "#MON!"
-	line "#MON CHANNEL…"
+	text "#mon!"
+	line "#mon CHANNEL…"
 	done
 
 KrissHouse2F_MapEventHeader:: db 0, 0

@@ -670,7 +670,7 @@ FlyFunction: ; ca3b
 	farscall Script_AbortBugContest
 	special WarpToSpawnPoint
 	callasm DelayLoadingNewSprites
-	writecode VAR_MOVEMENT, PLAYER_NORMAL
+	writecode VAR_MOVEMENT, PLAYER_NoRMAL
 	newloadmap MAPSETUP_FLY
 	callasm FlyToAnim
 	special WaitSFX
@@ -917,7 +917,7 @@ dig_incave
 	applymovement PLAYER, .DigOut
 	farscall Script_AbortBugContest
 	special WarpToSpawnPoint
-	writecode VAR_MOVEMENT, PLAYER_NORMAL
+	writecode VAR_MOVEMENT, PLAYER_NoRMAL
 	newloadmap MAPSETUP_DOOR
 	playsound SFX_WARP_FROM
 	applymovement PLAYER, .DigReturn
@@ -984,7 +984,7 @@ TeleportFunction: ; cc61
 	ret
 
 .Text_ReturnToLastMonCenter: ; 0xccb1
-	; Return to the last #MON CENTER.
+	; Return to the last #mon CENTER.
 	text_jump UnknownText_0x1c071a
 	db "@"
 
@@ -1004,7 +1004,7 @@ TeleportFunction: ; cc61
 	applymovement PLAYER, .TeleportFrom
 	farscall Script_AbortBugContest
 	special WarpToSpawnPoint
-	writecode VAR_MOVEMENT, PLAYER_NORMAL
+	writecode VAR_MOVEMENT, PLAYER_NoRMAL
 	newloadmap MAPSETUP_TELEPORT
 	playsound SFX_WARP_FROM
 	applymovement PLAYER, .TeleportTo
@@ -1107,7 +1107,7 @@ AskStrengthScript:
 	end
 
 UnknownText_0xcd69: ; 0xcd69
-	; A #MON may be able to move this. Want to use STRENGTH?
+	; A #mon may be able to move this. Want to use STRENGTH?
 	text_jump UnknownText_0x1c07a0
 	db "@"
 
@@ -1117,7 +1117,7 @@ UnknownText_0xcd6e: ; 0xcd6e
 	db "@"
 
 UnknownText_0xcd73: ; 0xcd73
-	; A #MON may be able to move this.
+	; A #mon may be able to move this.
 	text_jump UnknownText_0x1c07f4
 	db "@"
 
@@ -1376,7 +1376,7 @@ AskHeadbuttScript: ; 0xcedc
 	end
 
 UnknownText_0xcee6: ; 0xcee6
-	; A #MON could be in this tree. Want to HEADBUTT it?
+	; A #mon could be in this tree. Want to HEADBUTT it?
 	text_jump UnknownText_0x1c08bc
 	db "@"
 
@@ -1470,7 +1470,7 @@ AskRockSmashScript: ; 0xcf5d
 	jumptext UnknownText_0xcf72
 
 UnknownText_0xcf72: ; 0xcf72
-	; Maybe a #MON can break this.
+	; Maybe a #mon can break this.
 	text_jump UnknownText_0x1c0906
 	db "@"
 
@@ -1702,7 +1702,7 @@ BikeFunction: ; d0b3
 	call .CheckEnvironment
 	jr c, .CannotUseBike
 	ld a, [PlayerState]
-	cp PLAYER_NORMAL
+	cp PLAYER_NoRMAL
 	jr z, .GetOnBike
 	cp PLAYER_BIKE
 	jr z, .GetOffBike
@@ -1801,7 +1801,7 @@ Script_GetOnBike_Register: ; 0xd14e
 Script_GetOffBike: ; 0xd158
 	reloadmappart
 	special UpdateTimePals
-	writecode VAR_MOVEMENT, PLAYER_NORMAL
+	writecode VAR_MOVEMENT, PLAYER_NoRMAL
 	writetext GotOffTheBikeText
 	waitbutton
 
@@ -1812,7 +1812,7 @@ FinishGettingOffBike:
 	end
 
 Script_GetOffBike_Register: ; 0xd16b
-	writecode VAR_MOVEMENT, PLAYER_NORMAL
+	writecode VAR_MOVEMENT, PLAYER_NoRMAL
 	jump FinishGettingOffBike
 
 Script_CantGetOffBike: ; 0xd171

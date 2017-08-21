@@ -9,7 +9,7 @@ UnownPrinter: ; 16be4
 	ld [hInMenu], a
 	ld a, [Options]
 	push af
-	set NO_TEXT_SCROLL, a
+	set No_TEXT_SCROLL, a
 	ld [Options], a
 	call ClearBGPalettes
 	call ClearTileMap
@@ -53,7 +53,7 @@ UnownPrinter: ; 16be4
 	call .UpdateUnownFrontpic
 	call WaitBGMap
 
-	ld a, UNOWN
+	ld a, UNoWN
 	ld [CurPartySpecies], a
 	xor a
 	ld [TempMonDVs], a
@@ -135,7 +135,7 @@ UnownPrinter: ; 16be4
 	jr z, .vacant
 	inc a
 	ld [UnownLetter], a
-	ld a, UNOWN
+	ld a, UNoWN
 	ld [CurPartySpecies], a
 	xor a
 	ld [wBoxAlignment], a
@@ -265,7 +265,7 @@ PhotoStudio: ; 16dc7
 ; 16e04
 
 .Text_AskWhichMon: ; 0x16e04
-	; Which #MON should I photo- graph?
+	; Which #mon should I photo- graph?
 	text_jump UnknownText_0x1be024
 	db "@"
 ; 0x16e09

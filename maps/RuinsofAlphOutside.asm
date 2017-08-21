@@ -27,14 +27,14 @@ UnknownScript_0x5800e:
 	end
 
 UnknownScript_0x5800f:
-	checkflag ENGINE_UNOWN_DEX
+	checkflag ENGINE_UNoWN_DEX
 	iftrue UnknownScript_0x5802c
-	checkevent EVENT_MADE_UNOWN_APPEAR_IN_RUINS
+	checkevent EVENT_MADE_UNoWN_APPEAR_IN_RUINS
 	iftrue UnknownScript_0x5801e
 	jump UnknownScript_0x5802c
 
 UnknownScript_0x5801e:
-	checkcode VAR_UNOWNCOUNT
+	checkcode VAR_UNoWNCOUNT
 	if_greater_than $2, UnknownScript_0x58027
 	jump UnknownScript_0x5802c
 
@@ -162,12 +162,12 @@ UnknownText_0x580c7:
 	cont "May I see it?"
 
 	para "There are so many"
-	line "kinds of #MON."
+	line "kinds of #mon."
 
 	para "Hm? What's this?"
 
 	para "What is this"
-	line "#MON?"
+	line "#mon?"
 
 	para "It looks like the"
 	line "strange writing on"
@@ -271,7 +271,7 @@ UnknownText_0x58420:
 
 UnknownText_0x58449:
 	text "There are many"
-	line "kinds of UNOWN, so"
+	line "kinds of UNoWN, so"
 
 	para "we use them for"
 	line "our secret codes."

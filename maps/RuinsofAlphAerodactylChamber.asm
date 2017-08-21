@@ -63,7 +63,7 @@ MapRuinsofAlphAerodactylChamberSignpost2Script:
 UnknownScript_0x58df7:
 	setevent EVENT_RUINS_OF_ALPH_INNER_CHAMBER_TOURISTS
 	setevent EVENT_SOLVED_AERODACTYL_PUZZLE
-	setflag ENGINE_UNLOCKED_UNOWNS_3
+	setflag ENGINE_UNLOCKED_UNoWNS_3
 	domaptrigger RUINS_OF_ALPH_INNER_CHAMBER, $1
 	earthquake 30
 	showemote EMOTE_SHOCK, PLAYER, 15
@@ -121,7 +121,7 @@ UnknownText_0x58e4f:
 
 ; possibly unused.. again?
 UnknownText_0x58e70:
-	text "It's UNOWN text!"
+	text "It's UNoWN text!"
 	done
 
 UnknownText_0x58e81:

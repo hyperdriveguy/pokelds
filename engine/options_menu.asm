@@ -416,12 +416,12 @@ GetPrinterSetting: ; e4491
 
 .IsLight:
 	ld c, 1
-	lb de, PRINT_LIGHTEST, PRINT_NORMAL ; the 2 values next to this setting
+	lb de, PRINT_LIGHTEST, PRINT_NoRMAL ; the 2 values next to this setting
 	ret
 
 .IsDark:
 	ld c, 3
-	lb de, PRINT_NORMAL, PRINT_DARKEST ; the 2 values next to this setting
+	lb de, PRINT_NoRMAL, PRINT_DARKEST ; the 2 values next to this setting
 	ret
 
 .IsDarkest:

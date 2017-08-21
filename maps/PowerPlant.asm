@@ -171,13 +171,13 @@ UnknownScript_0x188e93:
 	setevent EVENT_RESTORED_POWER_TO_KANTO
 	clearevent EVENT_GOLDENROD_TRAIN_STATION_GENTLEMAN
 UnknownScript_0x188eac:
-	checkevent EVENT_GOT_TM07_ZAP_CANNON
+	checkevent EVENT_GOT_TM07_ZAP_CANNoN
 	iftrue UnknownScript_0x188ec5
 	writetext UnknownText_0x1893c4
 	buttonsound
-	verbosegiveitem TM_ZAP_CANNON
+	verbosegiveitem TM_ZAP_CANNoN
 	iffalse UnknownScript_0x188ec3
-	setevent EVENT_GOT_TM07_ZAP_CANNON
+	setevent EVENT_GOT_TM07_ZAP_CANNoN
 	writetext UnknownText_0x1893f4
 	waitbutton
 UnknownScript_0x188ec3:
@@ -336,7 +336,7 @@ UnknownText_0x189264:
 	line "he's going to get"
 
 	para "a taste of my ZAP"
-	line "CANNON!"
+	line "CANNoN!"
 	done
 
 UnknownText_0x189308:
@@ -370,7 +370,7 @@ UnknownText_0x1893c4:
 
 UnknownText_0x1893f4:
 	text "MANAGER: TM07 is"
-	line "my ZAP CANNON."
+	line "my ZAP CANNoN."
 
 	para "It's a powerful"
 	line "technique!"
@@ -396,8 +396,8 @@ PowerPlant_MapEventHeader:
 
 .Warps:
 	db 2
-	warp_def $11, $2, 2, ROUTE_10_NORTH
-	warp_def $11, $3, 2, ROUTE_10_NORTH
+	warp_def $11, $2, 2, ROUTE_10_NoRTH
+	warp_def $11, $3, 2, ROUTE_10_NoRTH
 
 .XYTriggers:
 	db 1

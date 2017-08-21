@@ -354,7 +354,7 @@ CheckReplaceKrisSprite: ; 154f7
 
 .CheckSurfing2: ; 1551a (5:551a)
 	ld a, [PlayerState]
-	cp PLAYER_NORMAL
+	cp PLAYER_NoRMAL
 	jr z, .nope
 	cp PLAYER_RUN
 	jr z, .nope
@@ -377,7 +377,7 @@ CheckReplaceKrisSprite: ; 154f7
 	cp PLAYER_BIKE
 	jr nz, .nope
 .surfing
-	ld a, PLAYER_NORMAL
+	ld a, PLAYER_NoRMAL
 	ld [PlayerState], a
 	scf
 	ret

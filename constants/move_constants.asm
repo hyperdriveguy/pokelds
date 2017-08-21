@@ -1,6 +1,6 @@
 
 	const_def
-	const NO_MOVE      ; $00
+	const No_MOVE      ; $00
 	const POUND        ; $01
 	const KARATE_CHOP  ; $02
 	const DOUBLESLAP   ; $03
@@ -95,7 +95,7 @@
 	const TOXIC        ; $5c
 	const CONFUSION    ; $5d
 	const PSYCHIC_M    ; $5e
-	const HYPNOSIS     ; $5f
+	const HYPNoSIS     ; $5f
 	const MEDITATE     ; $60
 	const AGILITY      ; $61
 	const QUICK_ATTACK ; $62
@@ -118,7 +118,7 @@
 	const REFLECT      ; $73
 	const FOCUS_ENERGY ; $74
 	const BIDE         ; $75
-	const METRONOME    ; $76
+	const METRONoME    ; $76
 	const MIRROR_MOVE  ; $77
 	const SELFDESTRUCT ; $78
 	const EGG_BOMB     ; $79
@@ -131,7 +131,7 @@
 	const CLAMP        ; $80
 	const SWIFT        ; $81
 	const SKULL_BASH   ; $82
-	const SPIKE_CANNON ; $83
+	const SPIKE_CANNoN ; $83
 	const CONSTRICT    ; $84
 	const AMNESIA      ; $85
 	const KINESIS      ; $86
@@ -173,7 +173,7 @@
 	const MIND_READER  ; $aa
 	const NIGHTMARE    ; $ab
 	const FLAME_WHEEL  ; $ac
-	const SNORE        ; $ad
+	const SNoRE        ; $ad
 	const CURSE        ; $ae
 	const FLAIL        ; $af
 	const CONVERSION2  ; $b0
@@ -181,7 +181,7 @@
 	const COTTON_SPORE ; $b2
 	const REVERSAL     ; $b3
 	const SPITE        ; $b4
-	const POWDER_SNOW  ; $b5
+	const POWDER_SNoW  ; $b5
 	const PROTECT      ; $b6
 	const MACH_PUNCH   ; $b7
 	const SCARY_FACE   ; $b8
@@ -192,7 +192,7 @@
 	const MUD_SLAP     ; $bd
 	const OCTAZOOKA    ; $be
 	const SPIKES       ; $bf
-	const ZAP_CANNON   ; $c0
+	const ZAP_CANNoN   ; $c0
 	const FORESIGHT    ; $c1
 	const DESTINY_BOND ; $c2
 	const PERISH_SONG  ; $c3
@@ -289,7 +289,7 @@ const_value SET const_value + -1
 
 ; wNumHits uses offsets from ANIM_MISS
 	const_def
-	const BATTLEANIM_NONE
+	const BATTLEANIM_NoNE
 	const BATTLEANIM_ENEMY_DAMAGE
 	const BATTLEANIM_ENEMY_STAT_DOWN
 	const BATTLEANIM_PLAYER_STAT_DOWN

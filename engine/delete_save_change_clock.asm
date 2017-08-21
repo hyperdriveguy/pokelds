@@ -56,8 +56,8 @@ _ResetClock: ; 4d3b1
 .NoYes_MenuData2: ; 0x4d415
 	db $c0 ; flags
 	db 2 ; items
-	db "NO@"
-	db "YES@"
+	db "No@"
+	db "Yes@"
 
 ClockResetPassword: ; 4d41e
 	call .CalculatePassword
@@ -294,5 +294,5 @@ _DeleteSaveData: ; 4d54c
 .MenuData2: ; 0x4d58d
 	db $c0 ; flags
 	db 2 ; items
-	db "NO@"
-	db "YES@"
+	db "No@"
+	db "Yes@"

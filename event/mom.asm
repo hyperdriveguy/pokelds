@@ -616,7 +616,7 @@ Mom_WithdrawDepositMenuJoypad: ; 16571
 ; 16649
 
 UnknownText_0x16649: ; 0x16649
-	; Wow, that's a cute #MON. Where did you get it? … So, you're leaving on an adventure… OK! I'll help too. But what can I do for you? I know! I'll save money for you. On a long journey, money's important. Do you want me to save your money?
+	; Wow, that's a cute #mon. Where did you get it? … So, you're leaving on an adventure… OK! I'll help too. But what can I do for you? I know! I'll save money for you. On a long journey, money's important. Do you want me to save your money?
 	text_jump UnknownText_0x1bd77f
 	db "@"
 ; 0x1664e
@@ -628,7 +628,7 @@ UnknownText_0x1664e: ; 0x1664e
 ; 0x16653
 
 UnknownText_0x16653: ; 0x16653
-	; Be careful. #MON are your friends. You need to work as a team. Now, go on!
+	; Be careful. #mon are your friends. You need to work as a team. Now, go on!
 	text_jump UnknownText_0x1bd88e
 	db "@"
 ; 0x16658

@@ -34,7 +34,7 @@ DoPlayerMovement:: ; 80000
 
 .TranslateIntoMovement:
 	ld a, [PlayerState]
-	cp PLAYER_NORMAL
+	cp PLAYER_NoRMAL
 	jr z, .Normal
 	cp PLAYER_RUN
 	jr z, .Normal
@@ -384,7 +384,7 @@ DoPlayerMovement:: ; 80000
 
 	ld de, SFX_JUMP_OVER_LEDGE
 	call PlaySFX
-	ld a, PLAYER_NORMAL
+	ld a, PLAYER_NoRMAL
 	ld [PlayerState], a
 	ld a, STEP_LEDGE
 	call .DoStep
@@ -764,7 +764,7 @@ DoPlayerMovement:: ; 80000
 .RunCheck:
 
 	ld a, [PlayerState]
-	cp PLAYER_NORMAL
+	cp PLAYER_NoRMAL
 	jr nz, .running
 	ld a, [hJoypadDown]
 	and B_BUTTON
@@ -781,7 +781,7 @@ DoPlayerMovement:: ; 80000
 	and B_BUTTON
 	cp B_BUTTON
 	ret z
-	ld a, PLAYER_NORMAL
+	ld a, PLAYER_NoRMAL
 	ld [PlayerState], a
 	ret
 	
@@ -834,7 +834,7 @@ DoPlayerMovement:: ; 80000
 
 .GetOutOfWater: ; 803f9
 	push bc
-	ld a, PLAYER_NORMAL
+	ld a, PLAYER_NoRMAL
 	ld [PlayerState], a
 	call ReplaceKrisSprite ; UpdateSprites
 	pop bc

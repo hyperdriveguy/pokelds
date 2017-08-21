@@ -341,7 +341,7 @@ BattleAnimFunction_PokeBall: ; cd15c (33:515c)
 .six
 	ld a, BATTLEANIMFRAMESET_0D
 	call ReinitBattleAnimFrameset
-	ld hl, BATTLEANIMSTRUCT_ANON_JT_INDEX
+	ld hl, BATTLEANIMSTRUCT_ANoN_JT_INDEX
 	add hl, bc
 	dec [hl]
 .two
@@ -478,7 +478,7 @@ BattleAnimFunction_10: ; cd284 (33:5284)
 	ld a, [hl]
 	swap a
 	and $f
-	ld hl, BATTLEANIMSTRUCT_ANON_JT_INDEX
+	ld hl, BATTLEANIMSTRUCT_ANoN_JT_INDEX
 	add hl, bc
 	ld [hl], a
 	ret
@@ -622,7 +622,7 @@ BattleAnimFunction_08: ; cd306 (33:5306)
 	and $f
 	or d
 	ld [hl], a
-	ld hl, BATTLEANIMSTRUCT_ANON_JT_INDEX
+	ld hl, BATTLEANIMSTRUCT_ANoN_JT_INDEX
 	add hl, bc
 	dec [hl]
 	ret
@@ -730,7 +730,7 @@ BattleAnimFunction_0A: ; cd3f2 (33:53f2)
 	ld hl, BATTLEANIMSTRUCT_0B
 	add hl, bc
 	ld a, [hl]
-	ld hl, BATTLEANIMSTRUCT_ANON_JT_INDEX
+	ld hl, BATTLEANIMSTRUCT_ANoN_JT_INDEX
 	add hl, bc
 	ld [hl], a
 	cp $7
@@ -1509,7 +1509,7 @@ Functioncd88f: ; cd88f (33:588f)
 	ret
 
 Functioncd893: ; cd893 (33:5893)
-	ld hl, BATTLEANIMSTRUCT_ANON_JT_INDEX
+	ld hl, BATTLEANIMSTRUCT_ANoN_JT_INDEX
 	add hl, bc
 	ld [hl], $1
 	ret
@@ -1577,7 +1577,7 @@ Functioncd8f5: ; cd8f5 (33:58f5)
 	ret
 
 Functioncd8f9: ; cd8f9 (33:58f9)
-	ld hl, BATTLEANIMSTRUCT_ANON_JT_INDEX
+	ld hl, BATTLEANIMSTRUCT_ANoN_JT_INDEX
 	add hl, bc
 	ld [hl], $1
 	ret
@@ -1955,7 +1955,7 @@ Functioncdb14: ; cdb14 (33:5b14)
 	ld a, [hl]
 	cp $30
 	jr c, .asm_cdb24
-	ld hl, BATTLEANIMSTRUCT_ANON_JT_INDEX
+	ld hl, BATTLEANIMSTRUCT_ANoN_JT_INDEX
 	add hl, bc
 	ld [hl], $0
 	ret
@@ -2046,7 +2046,7 @@ Functioncdb9f: ; cdb9f (33:5b9f)
 	ld hl, BATTLEANIMSTRUCT_0B
 	add hl, bc
 	ld a, [hl]
-	ld hl, BATTLEANIMSTRUCT_ANON_JT_INDEX
+	ld hl, BATTLEANIMSTRUCT_ANoN_JT_INDEX
 	add hl, bc
 	ld [hl], a
 	ret
@@ -2102,7 +2102,7 @@ Functioncdbeb: ; cdbeb (33:5beb)
 	ret
 
 .asm_cdbf5
-	ld hl, BATTLEANIMSTRUCT_ANON_JT_INDEX
+	ld hl, BATTLEANIMSTRUCT_ANoN_JT_INDEX
 	add hl, bc
 	dec [hl]
 asm_cdbfa: ; cdbfa (33:5bfa)
@@ -2884,7 +2884,7 @@ BattleAnimFunction_Horn: ; ce063 (33:6063)
 	ld hl, BATTLEANIMSTRUCT_0B
 	add hl, bc
 	ld a, [hl]
-	ld hl, BATTLEANIMSTRUCT_ANON_JT_INDEX
+	ld hl, BATTLEANIMSTRUCT_ANoN_JT_INDEX
 	add hl, bc
 	ld [hl], a
 	ld hl, BATTLEANIMSTRUCT_YCOORD
@@ -2951,7 +2951,7 @@ Functionce0ce: ; ce0ce (33:60ce)
 	ld a, [hl]
 	and $f0
 	swap a
-	ld hl, BATTLEANIMSTRUCT_ANON_JT_INDEX
+	ld hl, BATTLEANIMSTRUCT_ANoN_JT_INDEX
 	add hl, bc
 	ld [hl], a
 	ret
@@ -3910,7 +3910,7 @@ Functionce63a: ; ce63a (33:663a)
 	ld hl, BATTLEANIMSTRUCT_0B
 	add hl, bc
 	ld a, [hl]
-	ld hl, BATTLEANIMSTRUCT_ANON_JT_INDEX
+	ld hl, BATTLEANIMSTRUCT_ANoN_JT_INDEX
 	add hl, bc
 	ld [hl], a
 	call BattleAnim_IncAnonJumptableIndex
@@ -4076,7 +4076,7 @@ Functionce70a: ; ce70a (33:670a)
 
 BattleAnim_AnonJumptable: ; ce71e (33:671e)
 	pop de
-	ld hl, BATTLEANIMSTRUCT_ANON_JT_INDEX
+	ld hl, BATTLEANIMSTRUCT_ANoN_JT_INDEX
 	add hl, bc
 	ld l, [hl]
 	ld h, $0
@@ -4088,7 +4088,7 @@ BattleAnim_AnonJumptable: ; ce71e (33:671e)
 	jp hl
 
 BattleAnim_IncAnonJumptableIndex: ; ce72c (33:672c)
-	ld hl, BATTLEANIMSTRUCT_ANON_JT_INDEX
+	ld hl, BATTLEANIMSTRUCT_ANoN_JT_INDEX
 	add hl, bc
 	inc [hl]
 	ret

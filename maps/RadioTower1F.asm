@@ -230,7 +230,7 @@ UnknownText_0x5ceba:
 
 	para "Want me to check"
 	line "the ID numbers of"
-	cont "your #MON?"
+	cont "your #mon?"
 
 	para "If you get lucky,"
 	line "you win a prize."
@@ -313,7 +313,7 @@ UnknownText_0x5d12d:
 	cont "win a RADIO CARD."
 
 	para "Slide it into your"
-	line "#GEAR to play"
+	line "#Gear to play"
 
 	para "the radio anytime,"
 	line "anywhere."
@@ -325,7 +325,7 @@ UnknownText_0x5d12d:
 UnknownText_0x5d1f2:
 	text "Question 1:"
 
-	para "Is there a #MON"
+	para "Is there a #mon"
 	line "that appears only"
 	cont "in the morning?"
 	done
@@ -357,7 +357,7 @@ UnknownText_0x5d2bc:
 	line "VIOLET GYM LEADER"
 
 	para "who uses bird"
-	line "#MON?"
+	line "#mon?"
 	done
 
 UnknownText_0x5d30e:
@@ -381,7 +381,7 @@ UnknownText_0x5d37b:
 	done
 
 UnknownText_0x5d3c0:
-	text "<PLAYER>'s #GEAR"
+	text "<PLAYER>'s #Gear"
 	line "can now double as"
 	cont "a radio!"
 	done
@@ -415,7 +415,7 @@ UnknownText_0x5d476:
 
 UnknownText_0x5d4ac:
 	text "I love MARY, from"
-	line "#MON TALK."
+	line "#mon TALK."
 
 	para "I only know what"
 	line "she sounds like,"
@@ -464,10 +464,10 @@ UnknownText_0x5d5e7:
 UnknownText_0x5d631:
 	text "LUCKY CHANNEL!"
 
-	para "Win with #MON"
+	para "Win with #mon"
 	line "ID numbers!"
 
-	para "Trade your #MON"
+	para "Trade your #mon"
 	line "to collect differ-"
 	cont "ent ID numbers!"
 	done

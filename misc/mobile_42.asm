@@ -98,7 +98,7 @@ RunMobileTradeAnim_Frontpics: ; 10805b
 	ld hl, Options
 	ld a, [hl]
 	push af
-	set NO_TEXT_SCROLL, [hl]
+	set No_TEXT_SCROLL, [hl]
 	call Function1080b7
 .loop
 	call MobileTradeAnim_JumptableLoop
@@ -128,7 +128,7 @@ RunMobileTradeAnim_NoFrontpics: ; 108089
 	ld hl, Options
 	ld a, [hl]
 	push af
-	set NO_TEXT_SCROLL, [hl]
+	set No_TEXT_SCROLL, [hl]
 	call Function108157
 .loop
 	call MobileTradeAnim_JumptableLoop

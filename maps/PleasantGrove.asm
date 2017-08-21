@@ -141,7 +141,7 @@ PleasantGroveUnknownText_0x6f019:
 	text "Wow! Thanks a"
 	line "whole bunch!"
 
-	para "My boss's #MON"
+	para "My boss's #mon"
 	line "won't obey me be-"
 	cont "cause I don't have"
 	cont "a BADGE."
@@ -149,7 +149,7 @@ PleasantGroveUnknownText_0x6f019:
 
 PleasantGroveText_ItsTheMissingPokemon:
 	text "It's the missing"
-	line "#MON!"
+	line "#mon!"
 	done
 
 PleasantGroveText_Kwaaaa:
@@ -181,7 +181,7 @@ PleasantGroveText_CharcoalMasterOutro:
 	text "That's the CUT HM."
 	line "Teach that to a"
 
-	para "#MON to clear"
+	para "#mon to clear"
 	line "small trees."
 
 	para "Of course, you"
@@ -216,7 +216,7 @@ PleasantGroveText_HeadbuttOutro:
 	text "Rattle trees with"
 	line "HEADBUTT. Some-"
 	cont "times, sleeping"
-	cont "#MON fall out."
+	cont "#mon fall out."
 	done
 
 Text_PleasantGroveLass:
@@ -264,16 +264,16 @@ PleasantGroveBug_catcherWayneSeenText:
 	line "me like that!"
 
 	para "You frightened a"
-	line "#MON away!"
+	line "#mon away!"
 	done
 
 PleasantGroveBug_catcherWayneBeatenText:
 	text "I hadn't seen that"
-	line "#MON before…"
+	line "#mon before…"
 	done
 
 PleasantGroveBug_catcherWayneAfterText:
-	text "A #MON I've"
+	text "A #mon I've"
 	line "never seen before"
 
 	para "fell out of the"

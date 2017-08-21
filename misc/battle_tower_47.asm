@@ -100,7 +100,7 @@ BTTrainerClassGenders: ; 11f2f0
 	db MALE   ; POKEMON_PROF
 	db FEMALE ; WILL
 	db MALE   ; CAL
-	db MALE   ; BRUNO
+	db MALE   ; BRUNo
 	db FEMALE ; KAREN
 	db MALE   ; KOGA
 	db MALE   ; CHAMPION
@@ -147,7 +147,7 @@ BTTrainerClassGenders: ; 11f2f0
 	db FEMALE ; MEDIUM
 	db MALE   ; BOARDER
 	db MALE   ; POKEFANM
-	db FEMALE ; KIMONO_GIRL
+	db FEMALE ; KIMONo_GIRL
 	db FEMALE ; TWINS
 	db FEMALE ; POKEFANF
 	db MALE   ; RED

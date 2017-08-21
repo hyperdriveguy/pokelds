@@ -23,7 +23,7 @@ const_value SET 1
 	const FISH         ; c
 	const LADIES_MAN   ; d
 	const REPTILE      ; e
-	const NO_EGGS      ; f
+	const No_EGGS      ; f
 
 
 ; menu sprites
@@ -52,14 +52,14 @@ const_value SET 1
 	const ICON_BULBASAUR
 	const ICON_CHARMANDER
 	const ICON_CATERPILLAR
-	const ICON_UNOWN
+	const ICON_UNoWN
 	const ICON_GEODUDE
 	const ICON_FIGHTER
 	const ICON_EGG
 	const ICON_JELLYFISH
 	const ICON_MOTH
 	const ICON_BAT
-	const ICON_SNORLAX
+	const ICON_SNoRLAX
 	const ICON_HO_OH
 	const ICON_LUGIA
 	const ICON_GYARADOS

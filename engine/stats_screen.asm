@@ -887,7 +887,7 @@ StatsScreen_PlaceFrontpic: ; 4e226 (13:6226)
 	ld hl, wcf64
 	set 5, [hl]
 	ld a, [CurPartySpecies]
-	cp UNOWN
+	cp UNoWN
 	jr z, .unown
 	hlcoord 0, 0
 	call PrepMonFrontpic
@@ -902,7 +902,7 @@ StatsScreen_PlaceFrontpic: ; 4e226 (13:6226)
 
 .AnimateEgg: ; 4e271 (13:6271)
 	ld a, [CurPartySpecies]
-	cp UNOWN
+	cp UNoWN
 	jr z, .unownegg
 	ld a, TRUE
 	ld [wBoxAlignment], a

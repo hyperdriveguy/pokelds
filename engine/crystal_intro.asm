@@ -540,7 +540,7 @@ IntroScene2: ; e49d6 (39:49d6)
 	push af
 	depixel 11, 11
 	call CrystalIntro_InitUnownAnim
-	ld de, SFX_INTRO_UNOWN_1
+	ld de, SFX_INTRO_UNoWN_1
 	call PlaySFX
 	pop af
 .DontPlaySound:
@@ -686,7 +686,7 @@ IntroScene6: ; e4af7 (39:4af7)
 	push af
 	depixel 7, 15
 	call CrystalIntro_InitUnownAnim
-	ld de, SFX_INTRO_UNOWN_2
+	ld de, SFX_INTRO_UNoWN_2
 	call PlaySFX
 	pop af
 .NoUnown:
@@ -699,7 +699,7 @@ IntroScene6: ; e4af7 (39:4af7)
 	push af
 	depixel 14, 6
 	call CrystalIntro_InitUnownAnim
-	ld de, SFX_INTRO_UNOWN_1
+	ld de, SFX_INTRO_UNoWN_1
 	call PlaySFX
 	pop af
 .StopUnown:
@@ -997,14 +997,14 @@ IntroScene12: ; e4cfa (39:4cfa)
 ; e4d54 (39:4d54)
 
 .UnownSounds: ; e4d54
-	dbw $00, SFX_INTRO_UNOWN_3
-	dbw $20, SFX_INTRO_UNOWN_2
-	dbw $40, SFX_INTRO_UNOWN_1
-	dbw $60, SFX_INTRO_UNOWN_2
-	dbw $80, SFX_INTRO_UNOWN_3
-	dbw $90, SFX_INTRO_UNOWN_2
-	dbw $a0, SFX_INTRO_UNOWN_1
-	dbw $b0, SFX_INTRO_UNOWN_2
+	dbw $00, SFX_INTRO_UNoWN_3
+	dbw $20, SFX_INTRO_UNoWN_2
+	dbw $40, SFX_INTRO_UNoWN_1
+	dbw $60, SFX_INTRO_UNoWN_2
+	dbw $80, SFX_INTRO_UNoWN_3
+	dbw $90, SFX_INTRO_UNoWN_2
+	dbw $a0, SFX_INTRO_UNoWN_1
+	dbw $b0, SFX_INTRO_UNoWN_2
 	db -1 ; e4d6d
 
 IntroScene13: ; e4d6d (39:4d6d)
@@ -1523,7 +1523,7 @@ IntroScene28: ; e5152 (39:5152)
 	cp $8
 	ret nz
 
-	ld de, SFX_UNKNOWN_CB
+	ld de, SFX_UNKNoWN_CB
 	call PlaySFX
 	ret
 

@@ -136,7 +136,7 @@ CamperLloydScript:
 	end
 
 TrainerLassShannon:
-	trainer EVENT_BEAT_LASS_SHANNON, LASS, SHANNON, LassShannonSeenText, LassShannonBeatenText, 0, LassShannonScript
+	trainer EVENT_BEAT_LASS_SHANNoN, LASS, SHANNoN, LassShannonSeenText, LassShannonBeatenText, 0, LassShannonScript
 
 LassShannonScript:
 	end_if_just_battled

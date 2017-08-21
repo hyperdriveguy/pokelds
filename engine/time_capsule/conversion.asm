@@ -179,7 +179,7 @@ KantoMonSpecials: ; fb656
 	db  55 ; NIDORINA
 	db  75 ; NIDOQUEEN
 	db  40 ; NIDORAN_M
-	db  55 ; NIDORINO
+	db  55 ; NIDORINo
 	db  75 ; NIDOKING
 	db  60 ; CLEFAIRY
 	db  85 ; CLEFABLE
@@ -194,8 +194,8 @@ KantoMonSpecials: ; fb656
 	db 100 ; VILEPLUME
 	db  55 ; PARAS
 	db  80 ; PARASECT
-	db  40 ; VENONAT
-	db  90 ; VENOMOTH
+	db  40 ; VENoNAT
+	db  90 ; VENoMOTH
 	db  45 ; DIGLETT
 	db  70 ; DUGTRIO
 	db  40 ; MEOWTH
@@ -243,7 +243,7 @@ KantoMonSpecials: ; fb656
 	db 130 ; GENGAR
 	db  30 ; ONIX
 	db  90 ; DROWZEE
-	db 115 ; HYPNO
+	db 115 ; HYPNo
 	db  25 ; KRABBY
 	db  50 ; KINGLER
 	db  55 ; VOLTORB
@@ -289,8 +289,8 @@ KantoMonSpecials: ; fb656
 	db  45 ; KABUTO
 	db  70 ; KABUTOPS
 	db  60 ; AERODACTYL
-	db  65 ; SNORLAX
-	db 125 ; ARTICUNO
+	db  65 ; SNoRLAX
+	db 125 ; ARTICUNo
 	db 125 ; ZAPDOS
 	db 125 ; MOLTRES
 	db  50 ; DRATINI
@@ -491,7 +491,7 @@ Pokered_MonIndices: ; fb91c
 	db URSARING
 	db SLUGMA
 	db FARFETCH_D
-	db VENONAT
+	db VENoNAT
 	db DRAGONITE
 	db MAGCARGO
 	db SWINUB
@@ -500,7 +500,7 @@ Pokered_MonIndices: ; fb91c
 	db POLIWAG
 	db JYNX
 	db MOLTRES
-	db ARTICUNO
+	db ARTICUNo
 	db ZAPDOS
 	db DITTO
 	db MEOWTH
@@ -545,7 +545,7 @@ Pokered_MonIndices: ; fb91c
 	db DODRIO
 	db PRIMEAPE
 	db DUGTRIO
-	db VENOMOTH
+	db VENoMOTH
 	db DEWGONG
 	db KINGDRA
 	db PHANPY
@@ -555,10 +555,10 @@ Pokered_MonIndices: ; fb91c
 	db MACHAMP
 	db DONPHAN
 	db GOLDUCK
-	db HYPNO
+	db HYPNo
 	db GOLBAT
 	db MEWTWO
-	db SNORLAX
+	db SNoRLAX
 	db MAGIKARP
 	db PORYGON2
 	db STANTLER
@@ -593,7 +593,7 @@ Pokered_MonIndices: ; fb91c
 	db RAPIDASH
 	db RATTATA
 	db RATICATE
-	db NIDORINO
+	db NIDORINo
 	db NIDORINA
 	db GEODUDE
 	db PORYGON
@@ -629,7 +629,7 @@ Pokered_MonIndices: ; fb91c
 	db SENTRET
 	db FURRET
 	db HOOTHOOT
-	db NOCTOWL
+	db NoCTOWL
 	db LEDYBA
 	db LEDIAN
 	db SPINARAK
@@ -666,7 +666,7 @@ Pokered_MonIndices: ; fb91c
 	db MURKROW
 	db SLOWKING
 	db MISDREAVUS
-	db UNOWN
+	db UNoWN
 	db WOBBUFFET
 	db GIRAFARIG
 	db PINECO

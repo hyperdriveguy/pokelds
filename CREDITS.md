@@ -1,5 +1,11 @@
 # Credits
 
+### Game Freak inc.
+Everything unmodified
+No Explicit License Given
+> The usage in this project is believed to constitute fair use.
+> See [LICENSE.md](https://github.com/hyperdriveguy/pokelds/blob/master/LICENSE.md)
+
 ### FroggestSpirit  
 Code, Music  
 Custom License (Music, unsure for other code)  

@@ -68,7 +68,7 @@ UnknownScript_0x9cf08:
 PokefanFScript_0x9cf0e:
 	faceplayer
 	opentext
-	checkevent EVENT_GOT_TM13_SNORE_FROM_MOOMOO_FARM
+	checkevent EVENT_GOT_TM13_SNoRE_FROM_MOOMOO_FARM
 	iftrue UnknownScript_0x9cf2f
 	checkevent EVENT_HEALED_MOOMOO
 	iftrue UnknownScript_0x9cf22
@@ -80,9 +80,9 @@ PokefanFScript_0x9cf0e:
 UnknownScript_0x9cf22:
 	writetext UnknownText_0x9d156
 	buttonsound
-	verbosegiveitem TM_SNORE
+	verbosegiveitem TM_SNoRE
 	iffalse UnknownScript_0x9cf33
-	setevent EVENT_GOT_TM13_SNORE_FROM_MOOMOO_FARM
+	setevent EVENT_GOT_TM13_SNoRE_FROM_MOOMOO_FARM
 UnknownScript_0x9cf2f:
 	writetext UnknownText_0x9d1c7
 	waitbutton
@@ -118,7 +118,7 @@ UnknownText_0x9cfe1:
 	para "It's my pride and"
 	line "joy, there."
 
-	para "Give it to #MON"
+	para "Give it to #mon"
 	line "to restore HP!"
 
 	para "I'll give it to ya"
@@ -179,12 +179,12 @@ UnknownText_0x9d1b5:
 
 UnknownText_0x9d1c7:
 	text "That there's"
-	line "SNORE."
+	line "SNoRE."
 
 	para "It's a rare move"
 	line "that only works"
 
-	para "while the #MON"
+	para "while the #mon"
 	line "is asleep."
 
 	para "You best think how"

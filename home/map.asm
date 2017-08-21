@@ -469,7 +469,7 @@ GetMapConnections:: ; 2368
 	ld a, [MapConnections]
 	ld b, a
 
-	bit NORTH_F, b
+	bit NoRTH_F, b
 	jr z, .no_north
 	ld de, NorthMapConnection
 	call GetMapConnection

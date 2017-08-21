@@ -48,7 +48,7 @@ PokemaniacEthanScript:
 	end
 
 TrainerHikerNoland:
-	trainer EVENT_BEAT_HIKER_NOLAND, HIKER, NOLAND, HikerNolandSeenText, HikerNolandBeatenText, 0, HikerNolandScript
+	trainer EVENT_BEAT_HIKER_NoLAND, HIKER, NoLAND, HikerNolandSeenText, HikerNolandBeatenText, 0, HikerNolandScript
 
 HikerNolandScript:
 	end_if_just_battled

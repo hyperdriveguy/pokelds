@@ -794,7 +794,7 @@ MapObjectMovementPattern: ; 47dd
 	ld [hl], STANDING
 	ld hl, OBJECT_ACTION
 	add hl, bc
-	ld [hl], PERSON_ACTION_BIG_SNORLAX
+	ld [hl], PERSON_ACTION_BIG_SNoRLAX
 	ld hl, OBJECT_STEP_TYPE
 	add hl, bc
 	ld [hl], STEP_TYPE_04
@@ -2878,12 +2878,12 @@ ApplyBGMapAnchorToObjects: ; 5958
 
 InitSprites: ; 5991
 PRIORITY_LOW  EQU $10
-PRIORITY_NORM EQU $20
+PRIORITY_NoRM EQU $20
 PRIORITY_HIGH EQU $30
 	call .DeterminePriorities
 	ld c, PRIORITY_HIGH
 	call .InitSpritesByPriority
-	ld c, PRIORITY_NORM
+	ld c, PRIORITY_NoRM
 	call .InitSpritesByPriority
 	ld c, PRIORITY_LOW
 	call .InitSpritesByPriority
@@ -2912,7 +2912,7 @@ PRIORITY_HIGH EQU $30
 	add hl, bc
 	bit 0, [hl]
 	jr nz, .add
-	ld e, PRIORITY_NORM
+	ld e, PRIORITY_NoRM
 	bit 1, [hl]
 	jr z, .add
 	ld e, PRIORITY_HIGH
