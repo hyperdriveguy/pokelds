@@ -3,7 +3,7 @@ Music_RedeemerOfIsrael:
 	musicheader 1, 2, Music_RedeemerOfIsrael_Ch2
 	
 Music_RedeemerOfIsrael_Ch1:
-	tempo 170
+	tempo 150
 	volume $70
 	dutycycle $1
 	tone $0004
