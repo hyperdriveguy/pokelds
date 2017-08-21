@@ -236,7 +236,7 @@
 	connection east, ROUTE_9, Route9, 9, 0, 9, CERULEAN_CITY
 
 	map_header_2 Route9, ROUTE_9, $2c, SOUTH | WEST
-	connection south, ROUTE_10_NORTH, Route10North, 20, 0, 10, ROUTE_9
+	connection south, ROUTE_10_NORTH, Route10NOrth, 20, 0, 10, ROUTE_9
 	connection west, CERULEAN_CITY, CeruleanCity, -3, 6, 12, ROUTE_9
 
 	map_header_2 Route24, ROUTE_24, $2c, NORTH | SOUTH
@@ -258,12 +258,12 @@
 	connection west, SAFFRON_CITY, SaffronCity, -3, 6, 12, ROUTE_8
 	connection east, LAVENDER_TOWN, LavenderTown, 0, 0, 9, ROUTE_8
 
-	map_header_2 Route10North, ROUTE_10_NORTH, $2c, NORTH | SOUTH
+	map_header_2 Route10NOrth, ROUTE_10_NORTH, $2c, NORTH | SOUTH
 	connection north, ROUTE_9, Route9, -3, 17, 13, ROUTE_10_NORTH
 	connection south, ROUTE_10_SOUTH, Route10South, 0, 0, 10, ROUTE_10_NORTH
 
 	map_header_2 Route10South, ROUTE_10_SOUTH, $2c, NORTH | SOUTH
-	connection north, ROUTE_10_NORTH, Route10North, 0, 0, 10, ROUTE_10_SOUTH
+	connection north, ROUTE_10_NORTH, Route10NOrth, 0, 0, 10, ROUTE_10_SOUTH
 	connection south, LAVENDER_TOWN, LavenderTown, 0, 0, 10, ROUTE_10_SOUTH
 
 	map_header_2 Route23, ROUTE_23, $f, 0

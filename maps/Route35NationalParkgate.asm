@@ -389,7 +389,7 @@ UnknownText_0x6a79a:
 
 UnknownText_0x6a7db:
 	text "OK. Please wait at"
-	line "the North Gate for"
+	line "the NOrth Gate for"
 
 	para "the announcement"
 	line "of the winners."

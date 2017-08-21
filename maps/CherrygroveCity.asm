@@ -106,7 +106,7 @@ CherrygroveCityGuideGent:
 
 CherrygroveSilverTriggerSouth:
 	moveperson CHERRYGROVECITY_SILVER, $27, $7
-CherrygroveSilverTriggerNorth:
+CherrygroveSilverTriggerNOrth:
 	spriteface PLAYER, RIGHT
 	showemote EMOTE_SHOCK, PLAYER, 15
 	special Special_FadeOutMusic
@@ -564,7 +564,7 @@ CherrygroveCity_MapEventHeader:
 
 .XYTriggers:
 	db 2
-	xy_trigger 1, $6, $21, $0, CherrygroveSilverTriggerNorth, $0, $0
+	xy_trigger 1, $6, $21, $0, CherrygroveSilverTriggerNOrth, $0, $0
 	xy_trigger 1, $7, $21, $0, CherrygroveSilverTriggerSouth, $0, $0
 
 .Signposts:
