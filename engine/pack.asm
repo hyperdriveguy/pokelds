@@ -1,6 +1,6 @@
 Pack: ; 10000
 	ld hl, Options
-	set No_TEXT_SCROLL, [hl]
+	set NO_TEXT_SCROLL, [hl]
 	call InitPackBuffers
 .loop
 	call JoyTextDelay
@@ -15,7 +15,7 @@ Pack: ; 10000
 	ld a, [wCurrPocket]
 	ld [wLastPocket], a
 	ld hl, Options
-	res No_TEXT_SCROLL, [hl]
+	res NO_TEXT_SCROLL, [hl]
 	ret
 ; 10026
 
@@ -38,7 +38,7 @@ Pack: ; 10000
 	dw .KeyItemsPocketMenu ;  6
 	dw .InitTMHMPocket     ;  7
 	dw .TMHMPocketMenu     ;  8
-	dw Pack_QuitNoScript   ;  9
+	dw Pack_QuitNOScript   ;  9
 	dw Pack_QuitRunScript  ; 10
 
 .InitGFX: ; 10046 (4:4046)
@@ -199,7 +199,7 @@ Pack: ; 10000
 	ld hl, Options
 	ld a, [hl]
 	push af
-	res No_TEXT_SCROLL, [hl]
+	res NO_TEXT_SCROLL, [hl]
 	callba TeachTMHM
 	pop af
 	ld [Options], a
@@ -475,7 +475,7 @@ UseItem: ; 10311
 
 .Oak: ; 1032d (4:432d)
 	ld hl, Text_ThisIsntTheTime
-	call Pack_PrintTextNoScroll
+	call Pack_PrintTextNOScroll
 	ret
 
 .Current: ; 10334 (4:4334)
@@ -485,7 +485,7 @@ UseItem: ; 10311
 .Party: ; 10338 (4:4338)
 	ld a, [PartyCount]
 	and a
-	jr z, .NoPokemon
+	jr z, .NOPokemon
 	call DoItemEffect
 	xor a
 	ld [hBGMapMode], a
@@ -494,9 +494,9 @@ UseItem: ; 10311
 	call Pack_InitColors
 	ret
 
-.NoPokemon:
+.NOPokemon:
 	ld hl, TextJump_YouDontHaveAPkmn
-	call Pack_PrintTextNoScroll
+	call Pack_PrintTextNOScroll
 	ret
 
 .Field: ; 10355 (4:4355)
@@ -511,7 +511,7 @@ UseItem: ; 10311
 
 TossMenu: ; 10364
 	ld hl, Text_ThrowAwayHowMany
-	call Pack_PrintTextNoScroll
+	call Pack_PrintTextNOScroll
 	callba SelectQuantityToToss
 	push af
 	call ExitMenu
@@ -530,7 +530,7 @@ TossMenu: ; 10364
 	call TossItem
 	call Pack_GetItemName
 	ld hl, Text_ThrewAway
-	call Pack_PrintTextNoScroll
+	call Pack_PrintTextNOScroll
 .finish
 	ret
 ; 1039d
@@ -586,22 +586,22 @@ RegisterItem: ; 103c2
 	ld de, SFX_FULL_HEAL
 	call WaitPlaySFX
 	ld hl, Text_RegisteredItem
-	call Pack_PrintTextNoScroll
+	call Pack_PrintTextNOScroll
 	ret
 
 .cant_register
 	ld hl, Text_CantRegister
-	call Pack_PrintTextNoScroll
+	call Pack_PrintTextNOScroll
 	ret
 ; 103fd
 
 GiveItem: ; 103fd
 	ld a, [PartyCount]
 	and a
-	jp z, .NoPokemon
+	jp z, .NOPokemon
 	ld a, [Options]
 	push af
-	res No_TEXT_SCROLL, a
+	res NO_TEXT_SCROLL, a
 	ld [Options], a
 	ld a, $8
 	ld [PartyMenuActionText], a
@@ -649,9 +649,9 @@ GiveItem: ; 103fd
 	call Pack_InitColors
 	ret
 
-.NoPokemon: ; 10486 (4:4486)
+.NOPokemon: ; 10486 (4:4486)
 	ld hl, TextJump_YouDontHaveAPkmn
-	call Pack_PrintTextNoScroll
+	call Pack_PrintTextNOScroll
 	ret
 ; 1048d (4:448d)
 .Egg: ; 0x1048d
@@ -666,7 +666,7 @@ QuitItemSubmenu: ; 10492
 
 BattlePack: ; 10493
 	ld hl, Options
-	set No_TEXT_SCROLL, [hl]
+	set NO_TEXT_SCROLL, [hl]
 	call InitPackBuffers
 .loop
 	call JoyTextDelay
@@ -681,7 +681,7 @@ BattlePack: ; 10493
 	ld a, [wCurrPocket]
 	ld [wLastPocket], a
 	ld hl, Options
-	res No_TEXT_SCROLL, [hl]
+	res NO_TEXT_SCROLL, [hl]
 	ret
 ; 104b9
 
@@ -704,7 +704,7 @@ BattlePack: ; 10493
 	dw .KeyItemsPocketMenu ;  6
 	dw .InitTMHMPocket     ;  7
 	dw .TMHMPocketMenu     ;  8
-	dw Pack_QuitNoScript   ;  9
+	dw Pack_QuitNOScript   ;  9
 	dw Pack_QuitRunScript  ; 10
 
 .InitGFX: ; 104d9 (4:44d9)
@@ -781,7 +781,7 @@ BattlePack: ; 10493
 	ld [hBGMapMode], a
 	call WaitBGMap_DrawPackGFX
 	ld hl, Text_PackEmptyString
-	call Pack_PrintTextNoScroll
+	call Pack_PrintTextNOScroll
 	call Pack_JumptableNext
 	ret
 
@@ -828,12 +828,12 @@ ItemSubmenu: ; 105d3 (4:45d3)
 	ld a, [wItemAttributeParamBuffer]
 TMHMSubmenu: ; 105dc (4:45dc)
 	and a
-	jr z, .NoUse
+	jr z, .NOUse
 	ld hl, .UsableMenuDataHeader
 	ld de, .UsableJumptable
 	jr .proceed
 
-.NoUse:
+.NOUse:
 	ld hl, .UnusableMenuDataHeader
 	ld de, .UnusableJumptable
 .proceed
@@ -908,7 +908,7 @@ TMHMSubmenu: ; 105dc (4:45dc)
 
 .Oak: ; 10645 (4:4645)
 	ld hl, Text_ThisIsntTheTime
-	call Pack_PrintTextNoScroll
+	call Pack_PrintTextNOScroll
 	ret
 
 .Unused: ; 1064c (4:464c)
@@ -1260,7 +1260,7 @@ Pack_GetJumptablePointer: ; 1086b
 	ret
 ; 10874
 
-Pack_QuitNoScript: ; 10874 (4:4874)
+Pack_QuitNOScript: ; 10874 (4:4874)
 	ld hl, wJumptableIndex
 	set 7, [hl]
 	xor a
@@ -1274,10 +1274,10 @@ Pack_QuitRunScript: ; 1087e (4:487e)
 	ld [wcf66], a
 	ret
 
-Pack_PrintTextNoScroll: ; 10889 (4:4889)
+Pack_PrintTextNOScroll: ; 10889 (4:4889)
 	ld a, [Options]
 	push af
-	set No_TEXT_SCROLL, a
+	set NO_TEXT_SCROLL, a
 	ld [Options], a
 	call PrintText
 	pop af
@@ -1379,7 +1379,7 @@ Pack_InterpretJoypad: ; 108d4 (4:48d4)
 .select
 	callba SwitchItemsInBag
 	ld hl, Text_MoveItemWhere
-	call Pack_PrintTextNoScroll
+	call Pack_PrintTextNOScroll
 	scf
 	ret
 
@@ -1648,8 +1648,8 @@ PC_Mart_BallsPocketMenuDataHeader: ; 0x10ac7
 	dba UpdateItemDescription
 ; 10adf
 
-Text_PackNoItems: ; 0x10adf
-	; No items.
+Text_PackNOItems: ; 0x10adf
+	; NO items.
 	text_jump UnknownText_0x1c0b9a
 	db "@"
 ; 0x10ae4

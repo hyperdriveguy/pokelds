@@ -96,7 +96,7 @@ KrissHousePC:
 	closetext
 	end
 .Warp:
-	warp NoNE, $0, $0
+	warp NONE, $0, $0
 	end
 
 KrisRadioText1:

@@ -728,7 +728,7 @@ UnknownText_0x1c5f17::
 	done
 
 UnknownText_0x1c5f36::
-	text "No? Come visit me"
+	text "NO? Come visit me"
 	line "again."
 	done
 

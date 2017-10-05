@@ -8,7 +8,7 @@ Music_LoveAtHome_Ch1:
 	dutycycle $2
 	tone $0002
 	intensity $8a
-	volume $77
+	volume $70
 	stereopanning $f7
 	vibrato $12, $23
 	notetype $c, $87
@@ -128,7 +128,7 @@ Music_LoveAtHome_Ch1_main:
 	loopchannel 0, Music_LoveAtHome_Ch1_main
 
 Music_LoveAtHome_Ch2:
-	volume $6a
+	volume $76
 	dutycycle $1
 	tone $0002
 	stereopanning $7f

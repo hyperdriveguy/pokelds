@@ -7178,7 +7178,7 @@ Function1178aa: ; 1178aa (45:78aa)
 	call MenuBoxCoord2Tile
 	callba ReloadMapPart
 	hlcoord 16, 8
-	ld de, YessNoString_1179c5
+	ld de, YessNOString_1179c5
 	call PlaceString
 	hlcoord 15, 10
 	ld a, "▶"
@@ -7314,7 +7314,7 @@ MenuDataHeader_1179bd: ; 1179bd
 ; 1179c5
 
 
-YessNoString_1179c5: ; 1179c5
+YessNOString_1179c5: ; 1179c5
 	db   "はい"
 	next "いいえ@"
 ; 1179cc
@@ -7457,7 +7457,7 @@ Function117b31:
 	call MenuBox
 	call MenuBoxCoord2Tile
 	hlcoord 16, 8
-	ld de, YesNo117ccc
+	ld de, YesNO117ccc
 	call PlaceString
 	hlcoord 15, 8
 	ld a, "▶"
@@ -7672,7 +7672,7 @@ MenuDataHeader_117cc4: ; 0x117cc4
 	dw NULL   ; menu data 2
 	db 0      ; default item
 
-YesNo117ccc: ; 0x117ccc
+YesNO117ccc: ; 0x117ccc
 	db   "はい"
 	next "いいえ@"
 

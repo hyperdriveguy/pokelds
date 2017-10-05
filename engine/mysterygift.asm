@@ -187,7 +187,7 @@ DoMysteryGift: ; 1048ba (41:48ba)
 .loop
 	ld a, d
 	and a
-	jr z, .No
+	jr z, .NO
 	ld a, [hli]
 	cp b
 	jr nz, .skip
@@ -200,7 +200,7 @@ DoMysteryGift: ; 1048ba (41:48ba)
 	jr .loop
 .Yes:
 	scf
-.No:
+.NO:
 	jp CloseSRAM
 
 .AddMysteryGiftPartnerID: ; 104a56 (41:4a56)

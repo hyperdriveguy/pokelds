@@ -122,7 +122,7 @@ TypeNames: ; 5097b
 	dw Fairy
 	dw CurseType
 
-Normal:    db "NoRMAL@"
+Normal:    db "NORMAL@"
 Fighting:  db "FIGHTING@"
 Flying:    db "FLYING@"
 Poison:    db "POISON@"

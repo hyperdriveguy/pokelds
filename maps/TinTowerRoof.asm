@@ -14,16 +14,16 @@ TinTowerRoof_MapScriptHeader:
 
 .HoOh:
 	checkevent EVENT_FOUGHT_HO_OH
-	iftrue .NoAppear
+	iftrue .NOAppear
 	checkitem RAINBOW_WING
 	iftrue .Appear
-	jump .NoAppear
+	jump .NOAppear
 
 .Appear:
 	appear TINTOWERROOF_HO_OH
 	return
 
-.NoAppear:
+.NOAppear:
 	disappear TINTOWERROOF_HO_OH
 	return
 

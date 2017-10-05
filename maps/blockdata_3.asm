@@ -144,8 +144,8 @@ MountMoon_BlockData:
 SeafoamGym_BlockData:
 	INCBIN "maps/SeafoamGym.blk"
 
-MrPokemonsHouse_BlockData:
-	INCBIN "maps/MrPokemonsHouse.blk"
+ClerksHouse_BlockData:
+	INCBIN "maps/ClerksHouse.blk"
 
 VictoryRoadGate_BlockData:
 	INCBIN "maps/VictoryRoadGate.blk"

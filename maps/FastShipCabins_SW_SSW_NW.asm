@@ -45,7 +45,7 @@ BeautyCassieScript:
 	end
 
 TrainerGuitaristClyde:
-	trainer EVENT_BEAT_GUITARIST_CLYDE, GUITARIST, CLYDE, GuitaristClydeSeenText, GuitaristClydeBeatenText, 0, GuitaristClydeScript
+	trainer EVENT_BEAT_GUITARIST_JIMMYA, GUITARIST, JIMMYA, GuitaristClydeSeenText, GuitaristClydeBeatenText, 0, GuitaristClydeScript
 
 GuitaristClydeScript:
 	end_if_just_battled

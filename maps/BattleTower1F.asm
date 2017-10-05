@@ -65,7 +65,7 @@ ReceptionistScript_0x9e3e2:
 	writebyte BATTLETOWERACTION_00 ; if new save file: bit 1, [s1_be4f]
 	special BattleTowerAction
 	if_not_equal $0, Script_Menu_ChallengeExplanationCancel
-	jump Script_BattleTowerIntroductionYesNo
+	jump Script_BattleTowerIntroductionYesNO
 
 Script_Menu_ChallengeExplanationCancel: ; 0x9e3fc
 	writetext Text_WantToGoIntoABattleRoom
@@ -141,7 +141,7 @@ Script_YourPackIsStuffedFull: ; 0x9e498
 	closetext
 	end
 
-Script_BattleTowerIntroductionYesNo: ; 0x9e49e
+Script_BattleTowerIntroductionYesNO: ; 0x9e49e
 	writetext Text_WouldYouLikeToHearAboutTheBattleTower
 	yesorno
 	iffalse Script_BattleTowerSkipExplanation
@@ -401,7 +401,7 @@ Text_BattleTowerIntroduction_1: ; 0x9e62f
 	para "All LEADERS will"
 	line "be recorded in the"
 
-	para "HONoR ROLL for"
+	para "HONOR ROLL for"
 	line "posterity."
 
 	para "You may challenge"
@@ -467,7 +467,7 @@ Text_BattleTowerIntroduction_2: ; 0x9e886
 Text_ReceivedAListOfLeadersOnTheHonorRoll: ; 0x9e9eb
 	text "Received a list of"
 	line "LEADERS on the"
-	cont "HONoR ROLL."
+	cont "HONOR ROLL."
 
 	para ""
 	done
@@ -588,7 +588,7 @@ Text_CantBeRegistered_PreviousRecordDeleted:
 
 Text_CheckTheLeaderHonorRoll: ; 0x9ed1e
 	text "Check the LEADER"
-	line "HONoR ROLL?"
+	line "HONOR ROLL?"
 	done
 
 Text_ReadBattleTowerRules: ; 0x9ed3c
@@ -636,7 +636,7 @@ Text_YourPkmnWillBeHealedToFullHealth: ; 0x9ee92
 	cont "health."
 	done
 
-Text_NextUpOpponentNo: ; 0x9eebc
+Text_NextUpOpponentNO: ; 0x9eebc
 	text "Next up, opponent"
 	line "no.@"
 	text_from_ram StringBuffer3
@@ -703,7 +703,7 @@ Text_FiveDayBattleLimit_Mobile:
 	line "tomorrow."
 	done
 
-Text_TooMuchTimeElapsedNoRegister: ; 0x9f0c1
+Text_TooMuchTimeElapsedNORegister: ; 0x9f0c1
 	text "Sorry, but it's"
 	line "not possible to"
 

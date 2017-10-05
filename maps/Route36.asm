@@ -146,12 +146,12 @@ Route36RockSmashGuyScript:
 	writetext RockSmashGuyText2
 	buttonsound
 	verbosegiveitem TM_ROCK_SMASH
-	iffalse .NoRoomForTM
+	iffalse .NORoomForTM
 	setevent EVENT_GOT_TM08_ROCK_SMASH
 .AlreadyGotRockSmash:
 	writetext RockSmashGuyText3
 	waitbutton
-.NoRoomForTM:
+.NORoomForTM:
 	closetext
 	end
 
@@ -630,7 +630,7 @@ Route36SignText:
 
 RuinsOfAlphNorthSignText:
 	text "RUINS OF ALPH"
-	line "NoRTH ENTRANCE"
+	line "NORTH ENTRANCE"
 	done
 
 Route36TrainerTips1Text:

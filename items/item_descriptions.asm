@@ -100,7 +100,7 @@ ItemDescriptions:
 	dw RedScaleDesc
 	dw SecretPotionDesc
 	dw SSTicketDesc
-	dw MysteryEggDesc
+	dw ClerksPapersDesc
 	dw ClearBellDesc
 	dw SilverWingDesc
 	dw MoomooMilkDesc
@@ -555,9 +555,9 @@ SSTicketDesc:
 	db   "A ticket for the"
 	next "S.S.AQUA.@"
 
-MysteryEggDesc:
-	db   "An EGG obtained"
-	next "from MR.#mon.@"
+ClerksPapersDesc:
+	db   "A bunch of papers"
+	next "for the Bishop.@"
 
 ClearBellDesc:
 	db   "Makes a gentle"

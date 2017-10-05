@@ -162,7 +162,7 @@ UnknownText_0x1ec36c: ; 0x1ec36c
 ; 0x1ec389
 
 UnknownText_0x1ec389: ; 0x1ec389
-	text "No way! There has"
+	text "NO way! There has"
 	line "to be a mistake!"
 	done
 ; 0x1ec3ad
@@ -225,7 +225,7 @@ UnknownText_0x1ec4a0: ; 0x1ec4a0
 	text "You're incredibly"
 	line "talented."
 
-	para "No one can touch"
+	para "NO one can touch"
 	line "you now!"
 	done
 ; 0x1ec4d6
@@ -286,7 +286,7 @@ UnknownText_0x1ec5b5: ; 0x1ec5b5
 
 UnknownText_0x1ec5d3: ; 0x1ec5d3
 	text "Let's go!"
-	line "No holds barred!"
+	line "NO holds barred!"
 	done
 ; 0x1ec5ee
 
@@ -486,7 +486,7 @@ UnknownText_0x1ec9d9: ; 0x1ec9d9
 ; 0x1ec9f7
 
 UnknownText_0x1ec9f7: ; 0x1ec9f7
-	text "No!"
+	text "NO!"
 	line "Like, no way!"
 	done
 ; 0x1eca0a
@@ -649,7 +649,7 @@ UnknownText_0x1eccef: ; 0x1eccef
 
 UnknownText_0x1ecd0e: ; 0x1ecd0e
 	text "I won't accept"
-	line "this… No way!"
+	line "this… NO way!"
 	done
 ; 0x1ecd2b
 
@@ -738,7 +738,7 @@ UnknownText_0x1ecec9: ; 0x1ecec9
 ; 0x1ecee8
 
 UnknownText_0x1ecee8: ; 0x1ecee8
-	text "No! This did not"
+	text "NO! This did not"
 	line "happen!"
 	done
 ; 0x1ecf02

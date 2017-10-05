@@ -261,11 +261,11 @@ ContestMons: ; 97d87
 	db 10, KAKUNA,      9, 18
 	db  5, BUTTERFREE, 12, 15
 	db  5, BEEDRILL,   12, 15
-	db 10, VENoNAT,    10, 16
+	db 10, VENONAT,    10, 16
 	db 10, PARAS,      10, 17
 	db  5, SCYTHER,    13, 14
 	db  5, PINSIR,     13, 14
-	db -1, VENoMOTH,   30, 40
+	db -1, VENOMOTH,   30, 40
 ; 97db3
 
 DoBikeStep:: ; 97db3
@@ -276,18 +276,18 @@ DoBikeStep:: ; 97db3
 	; be here.
 	ld hl, StatusFlags2
 	bit 4, [hl] ; bike shop call
-	jr z, .NoCall
+	jr z, .NOCall
 
 	; If we're not on the bike, we don't have to be here.
 	ld a, [PlayerState]
 	cp PLAYER_BIKE
-	jr nz, .NoCall
+	jr nz, .NOCall
 
 	; If we're not in an area of phone service, we don't
 	; have to be here.
 	call GetMapHeaderPhoneServiceNybble
 	and a
-	jr nz, .NoCall
+	jr nz, .NOCall
 
 	; Check the bike step count and check whether we've
 	; taken 65536 of them yet.
@@ -312,13 +312,13 @@ DoBikeStep:: ; 97db3
 	;  shop owner try to call us.
 	ld a, d
 	cp 1024 >> 8
-	jr c, .NoCall
+	jr c, .NOCall
 
 	; If a call has already been queued, don't overwrite
 	; that call.
 	ld a, [wSpecialPhoneCallID]
 	and a
-	jr nz, .NoCall
+	jr nz, .NOCall
 
 	; Queue the call.
 	ld a, SPECIALCALL_BIKESHOP
@@ -330,7 +330,7 @@ DoBikeStep:: ; 97db3
 	scf
 	ret
 
-.NoCall:
+.NOCall:
 	xor a
 	ret
 ; 97df9

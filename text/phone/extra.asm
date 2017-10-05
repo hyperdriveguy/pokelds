@@ -170,7 +170,7 @@ UnknownText_0x6455b: ; 0x6455b
 	text "I saw, I saw!"
 
 	para "You waking up"
-	line "SNoRLAX!"
+	line "SNORLAX!"
 
 	para "I was watching you"
 	line "from afar, so I"
@@ -1296,7 +1296,7 @@ UnknownText_0x664dd: ; 0x664dd
 	line "BILL's mother is"
 
 	para "said to have been"
-	line "a KIMONo GIRL."
+	line "a KIMONO GIRL."
 	done
 ; 0x6651e
 

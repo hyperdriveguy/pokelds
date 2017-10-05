@@ -196,7 +196,7 @@ CheckPlayerTurn:
 
 	; Snore and Sleep Talk bypass sleep.
 	ld a, [CurPlayerMove]
-	cp SNoRE
+	cp SNORE
 	jr z, .not_asleep
 	cp SLEEP_TALK
 	jr z, .not_asleep
@@ -444,7 +444,7 @@ CheckEnemyTurn: ; 3421f
 .fast_asleep
 	; Snore and Sleep Talk bypass sleep.
 	ld a, [CurEnemyMove]
-	cp SNoRE
+	cp SNORE
 	jr z, .not_asleep
 	cp SLEEP_TALK
 	jr z, .not_asleep
@@ -700,7 +700,7 @@ BattleCommand_CheckObedience: ; 343db
 	xor a
 	ld [AlreadyDisobeyed], a
 
-	; No obedience in link battles
+	; NO obedience in link battles
 	; (since no handling exists for enemy)
 	ld a, [wLinkMode]
 	and a
@@ -766,7 +766,7 @@ BattleCommand_CheckObedience: ; 343db
 	add b
 	ld b, a
 
-; No overflow (this should never happen)
+; NO overflow (this should never happen)
 	jr nc, .checklevel
 	ld b, $ff
 
@@ -807,7 +807,7 @@ BattleCommand_CheckObedience: ; 343db
 	jr c, .UseInstead
 
 
-; No hope of using a move now.
+; NO hope of using a move now.
 
 ; b = number of levels the monster is above the obedience level
 	ld a, d
@@ -989,7 +989,7 @@ IgnoreSleepOnly: ; 3451f
 	ld a, BATTLE_VARS_MOVE_ANIM
 	call GetBattleVar
 
-	cp SNoRE
+	cp SNORE
 	jr z, .CheckSleep
 	cp SLEEP_TALK
 	jr z, .CheckSleep
@@ -1328,7 +1328,7 @@ BattleCommand_TripleKick: ; 346b2
 	adc d
 	ld [hli], a
 
-; No overflow.
+; NO overflow.
 	jr nc, .next_kick
 	ld a, $ff
 	ld [hld], a
@@ -1652,7 +1652,7 @@ BattleCommand_DamageVariation: ; 34cfd
 ; rarer than normal.
 
 
-; No point in reducing 1 or 0 damage.
+; NO point in reducing 1 or 0 damage.
 	ld hl, CurDamage
 	ld a, [hli]
 	and a
@@ -3083,7 +3083,7 @@ SpeciesItemBoost: ; 353d1
 EnemyAttackDamage: ; 353f6
 	call ResetDamage
 
-; No damage dealt with 0 power.
+; NO damage dealt with 0 power.
 	ld hl, wEnemyMoveStructPower
 	ld a, [hli] ; hl = wEnemyMoveStructType
 	ld d, a
@@ -3454,7 +3454,7 @@ BattleCommand_DamageCalc: ; 35612
 	cp EFFECT_CONVERSION
 	jr z, .skip_zero_damage_check
 
-; No damage if move power is 0.
+; NO damage if move power is 0.
 	ld a, d
 	and a
 	ret z
@@ -3664,7 +3664,7 @@ BattleCommand_DamageCalc: ; 35612
 
 
 TypeBoostItems: ; 35703
-	db HELD_NoRMAL_BOOST,   NoRMAL   ; Pink/Polkadot Bow
+	db HELD_NORMAL_BOOST,   NORMAL   ; Pink/Polkadot Bow
 	db HELD_FIGHTING_BOOST, FIGHTING ; Blackbelt
 	db HELD_FLYING_BOOST,   FLYING   ; Sharp Beak
 	db HELD_POISON_BOOST,   POISON   ; Poison Barb
@@ -6595,7 +6595,7 @@ BattleCommand_CheckRampage: ; 3671a
 BattleCommand_Rampage: ; 36751
 ; rampage
 
-; No rampage during Sleep Talk.
+; NO rampage during Sleep Talk.
 	ld a, BATTLE_VARS_STATUS
 	call GetBattleVar
 	and SLP
@@ -7661,7 +7661,7 @@ BattleCommand_FinishConfusingTarget: ; 36d70
 	call GetBattleVar
 	cp EFFECT_CONFUSE_HIT
 	jr z, .got_effect
-	cp EFFECT_SNoRE
+	cp EFFECT_SNORE
 	jr z, .got_effect
 	cp EFFECT_SWAGGER
 	jr z, .got_effect
@@ -7691,7 +7691,7 @@ BattleCommand_Confuse_CheckSnore_Swagger_ConfuseHit: ; 36db6
 	call GetBattleVar
 	cp EFFECT_CONFUSE_HIT
 	ret z
-	cp EFFECT_SNoRE
+	cp EFFECT_SNORE
 	ret z
 	cp EFFECT_SWAGGER
 	ret z
@@ -7800,7 +7800,7 @@ CheckMoveTypeMatchesTarget: ; 36e5b
 	ld a, BATTLE_VARS_MOVE_TYPE
 	call GetBattleVar
 	and $1F
-	cp NoRMAL
+	cp NORMAL
 	jr z, .normal
 
 	cp [hl]
@@ -8817,7 +8817,7 @@ BattleCommand_FuryCutter: ; 37792
 	rl [hl]
 	jr nc, .checkdouble
 
-; No overflow
+; NO overflow
 	ld a, $ff
 	ld [hli], a
 	ld [hl], a

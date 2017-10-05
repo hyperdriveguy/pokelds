@@ -303,7 +303,7 @@ BattleAnim_SweetScent2: ; c929c
 ; c92c1
 
 BattleAnim_ThrowPokeBall
-	anim_if_param_equal No_ITEM, .TheTrainerBlockedTheBall
+	anim_if_param_equal NO_ITEM, .TheTrainerBlockedTheBall
 	anim_if_param_equal MASTER_BALL, .MasterBall
 	anim_if_param_equal ULTRA_BALL, .UltraBall
 	anim_if_param_equal GREAT_BALL, .GreatBall
@@ -1518,7 +1518,7 @@ BattleAnim_RockSlide: ; c9cd2
 ; c9d0c
 
 BattleAnim_Sing: ; c9d0c
-	anim_1gfx ANIM_GFX_NoISE
+	anim_1gfx ANIM_GFX_NOISE
 	anim_sound 16, 2, SFX_SING
 .loop
 	anim_obj ANIM_OBJ_23,   8, 0,  11, 4, $0
@@ -1819,7 +1819,7 @@ BattleAnim_Softboiled: ; c9f85
 	anim_obj ANIM_OBJ_46,   9, 4,  13, 0, $b
 	anim_wait 16
 	anim_bgeffect ANIM_BG_18, $0, $1, $40
-	anim_sound 0, 0, SFX_METRONoME
+	anim_sound 0, 0, SFX_METRONOME
 .loop
 	anim_obj ANIM_OBJ_2C,   5, 4,  11, 0, $20
 	anim_wait 8
@@ -1952,7 +1952,7 @@ BattleAnim_Fissure: ; ca098
 ; ca0ab
 
 BattleAnim_Growl: ; ca0ab
-	anim_1gfx ANIM_GFX_NoISE
+	anim_1gfx ANIM_GFX_NOISE
 	anim_enemyfeetobj
 	anim_bgeffect ANIM_BG_06, $0, $2, $0
 	anim_cry $0
@@ -1975,7 +1975,7 @@ BattleAnim_Growl: ; ca0ab
 ; ca0d7
 
 BattleAnim_Roar: ; ca0d7
-	anim_1gfx ANIM_GFX_NoISE
+	anim_1gfx ANIM_GFX_NOISE
 	anim_bgeffect ANIM_BG_06, $0, $2, $0
 	anim_cry $1
 .loop
@@ -2585,7 +2585,7 @@ BattleAnim_Bonemerang: ; ca5f6
 
 BattleAnim_Swift: ; ca60c
 	anim_1gfx ANIM_GFX_OBJECTS
-	anim_sound 6, 2, SFX_METRONoME
+	anim_sound 6, 2, SFX_METRONOME
 	anim_obj ANIM_OBJ_6A,   8, 0,  11, 0, $4
 	anim_wait 4
 	anim_obj ANIM_OBJ_6A,   8, 0,   9, 0, $4
@@ -2627,7 +2627,7 @@ BattleAnim_SkullBash: ; ca63f
 ; ca66a
 
 BattleAnim_Kinesis: ; ca66a
-	anim_2gfx ANIM_GFX_MISC, ANIM_GFX_NoISE
+	anim_2gfx ANIM_GFX_MISC, ANIM_GFX_NOISE
 	anim_bgeffect ANIM_BG_06, $0, $2, $0
 	anim_obj ANIM_OBJ_6B,  10, 0,   9, 4, $0
 	anim_wait 32
@@ -3200,7 +3200,7 @@ BattleAnim_Toxic: ; cab42
 
 BattleAnim_Metronome: ; cab52
 	anim_2gfx ANIM_GFX_MISC, ANIM_GFX_SPEED
-	anim_sound 0, 0, SFX_METRONoME
+	anim_sound 0, 0, SFX_METRONOME
 	anim_obj ANIM_OBJ_7A,   9, 0,  11, 0, $0
 .loop
 	anim_obj ANIM_OBJ_7B,   9, 0,  10, 0, $0
@@ -3434,11 +3434,11 @@ BattleAnim_FlameWheel: ; cad30
 ; cad6b
 
 BattleAnim_Snore: ; cad6b
-	anim_2gfx ANIM_GFX_STATUS, ANIM_GFX_NoISE
+	anim_2gfx ANIM_GFX_STATUS, ANIM_GFX_NOISE
 	anim_obj ANIM_OBJ_54,   8, 0,  10, 0, $0
 	anim_wait 32
 	anim_bgeffect ANIM_BG_1F, $60, $2, $0
-	anim_sound 0, 0, SFX_SNoRE
+	anim_sound 0, 0, SFX_SNORE
 .loop
 	anim_call BattleAnim_Snore_branch_cbbbc
 	anim_wait 16
@@ -3688,7 +3688,7 @@ BattleAnim_SweetKiss: ; cafb4
 ; cafcf
 
 BattleAnim_BellyDrum: ; cafcf
-	anim_2gfx ANIM_GFX_HIT, ANIM_GFX_NoISE
+	anim_2gfx ANIM_GFX_HIT, ANIM_GFX_NOISE
 	anim_sound 0, 0, SFX_BELLY_DRUM
 	anim_obj ANIM_OBJ_AA,   8, 0,  13, 0, $0
 	anim_obj ANIM_OBJ_AB,   8, 0,  11, 4, $f8
@@ -3781,7 +3781,7 @@ BattleAnim_ZapCannon: ; cb0b0
 	anim_2gfx ANIM_GFX_LIGHTNING, ANIM_GFX_EXPLOSION
 	anim_bgp $1b
 	anim_obp0 $30
-	anim_sound 6, 2, SFX_ZAP_CANNoN
+	anim_sound 6, 2, SFX_ZAP_CANNON
 	anim_obj ANIM_OBJ_A3,   8, 0,  11, 4, $2
 	anim_wait 40
 	anim_sound 0, 1, SFX_THUNDERSHOCK
@@ -3827,7 +3827,7 @@ BattleAnim_DestinyBond_branch_cb104: ; cb104
 ; cb113
 
 BattleAnim_PerishSong: ; cb113
-	anim_1gfx ANIM_GFX_NoISE
+	anim_1gfx ANIM_GFX_NOISE
 	anim_bgeffect ANIM_BG_06, $0, $2, $0
 	anim_bgeffect ANIM_BG_ALTERNATE_HUES, $0, $2, $0
 	anim_sound 0, 2, SFX_PERISH_SONG
@@ -3958,7 +3958,7 @@ BattleAnim_GigaDrain: ; cb22d
 	anim_1gfx ANIM_GFX_SHINE
 	anim_bgeffect ANIM_BG_07, $0, $0, $0
 .loop
-	anim_sound 0, 0, SFX_METRONoME
+	anim_sound 0, 0, SFX_METRONOME
 	anim_obj ANIM_OBJ_9D,   3, 0,   8, 0, $0
 	anim_wait 5
 	anim_obj ANIM_OBJ_9D,   7, 0,  13, 0, $0
@@ -4073,7 +4073,7 @@ BattleAnim_MilkDrink: ; cb328
 
 BattleAnim_Spark: ; cb34d
 	anim_2gfx ANIM_GFX_LIGHTNING, ANIM_GFX_EXPLOSION
-	anim_sound 0, 0, SFX_ZAP_CANNoN
+	anim_sound 0, 0, SFX_ZAP_CANNON
 	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $4, $3
 	anim_obj ANIM_OBJ_30,   6, 0,  11, 4, $0
 	anim_wait 24
@@ -4175,7 +4175,7 @@ BattleAnim_SleepTalk: ; cb417
 ; cb428
 
 BattleAnim_HealBell: ; cb428
-	anim_2gfx ANIM_GFX_MISC, ANIM_GFX_NoISE
+	anim_2gfx ANIM_GFX_MISC, ANIM_GFX_NOISE
 	anim_obj ANIM_OBJ_84,   9, 0,   7, 0, $0
 	anim_wait 32
 .loop
@@ -4236,7 +4236,7 @@ BattleAnim_Present: ; cb488
 	anim_ret
 
 .heal
-	anim_sound 0, 1, SFX_METRONoME
+	anim_sound 0, 1, SFX_METRONOME
 .loop2
 	anim_obj ANIM_OBJ_2C, -16, 4,   6, 0, $24
 	anim_wait 8
@@ -5046,13 +5046,13 @@ BattleAnim_SludgeBomb_branch_cbc15: ; cbc15
 BattleAnim_Sludge_branch_cbc15: ; cbc15
 BattleAnim_Toxic_branch_cbc15: ; cbc15
 .loop
-	anim_sound 0, 1, SFX_UNKNoWN_7F
+	anim_sound 0, 1, SFX_UNKNOWN_7F
 	anim_obj ANIM_OBJ_1A, -16, 4,   9, 0, $0
 	anim_wait 8
-	anim_sound 0, 1, SFX_UNKNoWN_7F
+	anim_sound 0, 1, SFX_UNKNOWN_7F
 	anim_obj ANIM_OBJ_1A,  14, 4,   9, 0, $0
 	anim_wait 8
-	anim_sound 0, 1, SFX_UNKNoWN_7F
+	anim_sound 0, 1, SFX_UNKNOWN_7F
 	anim_obj ANIM_OBJ_1A, -14, 4,   9, 0, $0
 	anim_wait 8
 	anim_loop 5, .loop
@@ -5098,7 +5098,7 @@ BattleAnim_SandAttack_branch_cbc5b: ; cbc5b
 BattleAnim_Moonlight_branch_cbc6a: ; cbc6a
 BattleAnim_MorningSun_branch_cbc6a: ; cbc6a
 BattleAnim_Synthesis_branch_cbc6a: ; cbc6a
-	anim_sound 0, 0, SFX_METRONoME
+	anim_sound 0, 0, SFX_METRONOME
 	anim_obj ANIM_OBJ_9D,   5, 4,   8, 0, $0
 	anim_wait 5
 	anim_obj ANIM_OBJ_9D,   3, 0,  12, 0, $0
@@ -5111,7 +5111,7 @@ BattleAnim_Synthesis_branch_cbc6a: ; cbc6a
 BattleAnim_Moonlight_branch_cbc80: ; cbc80
 BattleAnim_MorningSun_branch_cbc80: ; cbc80
 BattleAnim_Synthesis_branch_cbc80: ; cbc80
-	anim_sound 0, 0, SFX_METRONoME
+	anim_sound 0, 0, SFX_METRONOME
 .loop
 	anim_obj ANIM_OBJ_9D,   3, 0,   8, 0, $0
 	anim_wait 5

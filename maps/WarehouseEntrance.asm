@@ -609,7 +609,7 @@ UnknownText_0x7c82a:
 	done
 
 UnknownText_0x7c842:
-	text "No? "
+	text "NO? "
 	line "How disappointing!"
 	done
 
@@ -650,7 +650,7 @@ UnknownText_0x7c904:
 	done
 
 UnknownText_0x7c91a:
-	text "No ENTRY BEYOND"
+	text "NO ENTRY BEYOND"
 	line "THIS POINT"
 	done
 

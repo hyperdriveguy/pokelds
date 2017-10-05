@@ -32,12 +32,12 @@ MrPokemonsHouse_MapScriptHeader:
 	writetext MrPokemonIntroText2
 	buttonsound
 	waitsfx
-	giveitem MYSTERY_EGG
+	giveitem CLERKSPAPERS
 	writetext MrPokemonsHouse_GotEggText
 	playsound SFX_KEY_ITEM
 	waitsfx
 	itemnotify
-	setevent EVENT_GOT_PACKAGE_FROM_WARD_CLERK
+	setevent EVENT_GOT_PAPERS_FROM_WARD_CLERK
 	writetext MrPokemonIntroText3
 	buttonsound
 	spriteface MRPOKEMONSHOUSE_GENTLEMAN, RIGHT

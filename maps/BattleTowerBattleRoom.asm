@@ -56,7 +56,7 @@ Script_BattleRoomLoop: ; 0x9f425
 	special FadeInPalettes
 	special RestartMapMusic
 	opentext
-	writetext Text_NextUpOpponentNo
+	writetext Text_NextUpOpponentNO
 	yesorno
 	iffalse Script_DontBattleNextOpponent
 Script_ContinueAndBattleNextOpponent: ; 0x9f477
@@ -118,7 +118,7 @@ UnreferencedScript_0x9f4eb:
 	writebyte BATTLETOWERACTION_CHALLENGECANCELED
 	special BattleTowerAction
 	opentext
-	writetext Text_TooMuchTimeElapsedNoRegister
+	writetext Text_TooMuchTimeElapsedNORegister
 	waitbutton
 	closetext
 	end

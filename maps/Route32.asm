@@ -859,7 +859,7 @@ Text_RoarIntro:
 	line "CAME LOOKING!"
 
 	para "THAT PLEASES ME!"
-	line "NoW TAKE THIS!"
+	line "NOW TAKE THIS!"
 	done
 
 Text_RoarOutro:
@@ -903,7 +903,7 @@ FriedaFridayText:
 	text "FRIEDA: Hiya! What"
 	line "day do you like?"
 
-	para "I love Friday. No"
+	para "I love Friday. NO"
 	line "doubt about it!"
 
 	para "Don't you think"

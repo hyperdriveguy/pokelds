@@ -47,7 +47,7 @@ UnownPuzzle: ; e1190
 	ld a, $93
 	ld [rLCDC], a
 	call WaitBGMap
-	ld b, SCGB_UNoWN_PUZZLE
+	ld b, SCGB_UNOWN_PUZZLE
 	call GetSGBLayout
 	ld a, $e4
 	call DmgToCgbBGPals
@@ -541,11 +541,11 @@ RedrawUnownPuzzlePieces: ; e14d9
 	ld c, a
 	ld a, [wd002]
 	cp $e0
-	jr z, .NoPiece
+	jr z, .NOPiece
 	ld hl, .OAM_HoldingPiece
 	jr .load
 
-.NoPiece:
+.NOPiece:
 	ld hl, .OAM_NotHoldingPiece
 
 .load

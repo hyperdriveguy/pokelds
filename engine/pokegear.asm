@@ -2,7 +2,7 @@ PokeGear: ; 90b8d (24:4b8d)
 	ld hl, Options
 	ld a, [hl]
 	push af
-	set No_TEXT_SCROLL, [hl]
+	set NO_TEXT_SCROLL, [hl]
 	ld a, [hInMenu]
 	push af
 	ld a, $1
@@ -901,7 +901,7 @@ PokegearPhone_MakePhoneCall: ; 911eb (24:51eb)
 	and a
 	jr nz, .no_service
 	ld hl, Options
-	res No_TEXT_SCROLL, [hl]
+	res NO_TEXT_SCROLL, [hl]
 	xor a
 	ld [hInMenu], a
 	ld de, SFX_CALL
@@ -920,7 +920,7 @@ PokegearPhone_MakePhoneCall: ; 911eb (24:51eb)
 	ld c, 10
 	call DelayFrames
 	ld hl, Options
-	set No_TEXT_SCROLL, [hl]
+	set NO_TEXT_SCROLL, [hl]
 	ld a, $1
 	ld [hInMenu], a
 	call PokegearPhone_UpdateCursor
@@ -1475,7 +1475,7 @@ UpdateRadioStation: ; 9166f (24:566f)
 	jr .loop
 
 .nostation
-	call NoRadioStation
+	call NORadioStation
 	ret
 
 .foundstation
@@ -1597,7 +1597,7 @@ RadioChannels:
 	jp LoadStation_EvolutionRadio
 
 .NoSignal:
-	call NoRadioStation
+	call NORadioStation
 	ret
 
 .InJohto:
@@ -1681,7 +1681,7 @@ BuenasPasswordName:    db "BUENA'S PASSWORD@"
 NotBuenasPasswordName: db "@"
 
 LoadStation_UnownRadio: ; 917d5 (24:57d5)
-	ld a, UNoWN_RADIO
+	ld a, UNOWN_RADIO
 	ld [wd002], a
 	xor a
 	ld [wd005], a
@@ -1786,9 +1786,9 @@ Radio_BackUpFarCallParams: ; 9187c (24:587c)
 	ld [wPokegearRadioChannelAddr + 1], a
 	ret
 
-NoRadioStation: ; 91888 (24:5888)
-	call NoRadioMusic
-	call NoRadioName
+NORadioStation: ; 91888 (24:5888)
+	call NORadioMusic
+	call NORadioName
 	xor a
 	ld [wPokegearRadioChannelBank], a
 	ld [wPokegearRadioChannelAddr], a
@@ -1797,14 +1797,14 @@ NoRadioStation: ; 91888 (24:5888)
 	ld [hBGMapMode], a
 	ret
 
-NoRadioMusic: ; 9189d (24:589d)
+NORadioMusic: ; 9189d (24:589d)
 	ld de, MUSIC_NONE
 	call PlayMusic
 	ld a, $ff
 	ld [wPokegearRadioMusicPlaying], a
 	ret
 
-NoRadioName: ; 918a9 (24:58a9)
+NORadioName: ; 918a9 (24:58a9)
 	xor a
 	ld [hBGMapMode], a
 	hlcoord 1, 8
@@ -1832,7 +1832,7 @@ _TownMap: ; 9191c
 	ld hl, Options
 	ld a, [hl]
 	push af
-	set No_TEXT_SCROLL, [hl]
+	set NO_TEXT_SCROLL, [hl]
 
 	ld a, [hInMenu]
 	push af
@@ -2402,7 +2402,7 @@ FlyMap: ; 91c90
 	cp KANTO_LANDMARK
 	jr nc, .KantoFlyMap
 .JohtoFlyMap:
-; Note that .NoKanto should be modified in tandem with this branch
+; Note that .NOKanto should be modified in tandem with this branch
 	push af
 ; Start from Bountiful Town
 	ld a, FLY_BOUNTIFUL
@@ -2436,7 +2436,7 @@ FlyMap: ; 91c90
 	ld c, SPAWN_INDIGO
 	call HasVisitedSpawn
 	and a
-	jr z, .NoKanto
+	jr z, .NOKanto
 ; Kanto's map is only loaded if we've visited Indigo Plateau
 
 ; Flypoints begin at Pallet Town...
@@ -2456,7 +2456,7 @@ FlyMap: ; 91c90
 	call TownMapPlayerIcon
 	ret
 
-.NoKanto:
+.NOKanto:
 ; If Indigo Plateau hasn't been visited, we use Johto's map instead
 
 ; Start from Bountiful Town
@@ -2631,7 +2631,7 @@ _Area: ; 91d11
 ; 91e16
 
 .String_SNest:
-	db "'S NEST@"
+	db "'s Nest@"
 ; 91e1e
 
 .GetAndPlaceNest: ; 91e1e

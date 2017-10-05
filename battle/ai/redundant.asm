@@ -26,7 +26,7 @@ AI_Redundant: ; 2c41a
 	dbw EFFECT_LEECH_SEED,   .LeechSeed
 	dbw EFFECT_DISABLE,      .Disable
 	dbw EFFECT_ENCORE,       .Encore
-	dbw EFFECT_SNoRE,        .Snore
+	dbw EFFECT_SNORE,        .Snore
 	dbw EFFECT_SLEEP_TALK,   .SleepTalk
 	dbw EFFECT_MEAN_LOOK,    .MeanLook
 	dbw EFFECT_NIGHTMARE,    .Nightmare

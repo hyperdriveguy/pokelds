@@ -110,7 +110,7 @@ CeladonCafeTrashcan:
 	itemtotext LEFTOVERS, $0
 	writetext FoundLeftoversText
 	buttonsound
-	writetext NoRoomForLeftoversText
+	writetext NORoomForLeftoversText
 	waitbutton
 	closetext
 	end
@@ -167,7 +167,7 @@ UnknownText_0x73201:
 	done
 
 UnknownText_0x73212:
-	text "Nobody here will"
+	text "NObody here will"
 	line "give you a COIN"
 
 	para "CASE. You should"
@@ -186,7 +186,7 @@ UnknownText_0x73278:
 
 EatathonContestPosterText:
 	text "Eatathon Contest!"
-	line "No time limit!"
+	line "NO time limit!"
 
 	para "A battle without"
 	line "end! The biggest"
@@ -202,7 +202,7 @@ FoundLeftoversText:
 	text "!"
 	done
 
-NoRoomForLeftoversText:
+NORoomForLeftoversText:
 	text "But <PLAYER> can't"
 	line "hold another item…"
 	done

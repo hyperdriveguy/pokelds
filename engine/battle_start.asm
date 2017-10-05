@@ -56,7 +56,7 @@ Predef_StartBattle: ; 8c20f
 	ld a, [wLinkMode]
 	cp LINK_MOBILE
 	jr z, .mobile
-	callba ReanchorBGMap_NoOAMUpdate
+	callba ReanchorBGMap_NOOAMUpdate
 	call UpdateSprites
 	call DelayFrame
 	call .NonMobile_LoadPokeballTiles

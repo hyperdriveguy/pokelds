@@ -1634,7 +1634,7 @@ BillsPC_CheckSpaceInDestination: ; e2ee5
 	ret
 
 .no_room
-	ld de, PCString_TheresNoRoom
+	ld de, PCString_TheresNORoom
 	call BillsPC_PlaceString
 	ld de, SFX_WRONG
 	call WaitPlaySFX
@@ -1693,7 +1693,7 @@ BillsPC_IsMonAnEgg: ; e2f5f (38:6f5f)
 	ret
 
 .egg
-	ld de, PCString_NoReleasingEGGS
+	ld de, PCString_NOReleasingEGGS
 	call BillsPC_PlaceString
 	ld de, SFX_WRONG
 	call WaitPlaySFX
@@ -2289,8 +2289,8 @@ PCString_WhatsUp: db "What's up?@"
 PCString_ReleasePKMN: db "Release <PK><MN>?@"
 PCString_MoveToWhere: db "Move to where?@"
 PCString_ItsYourLastPKMN: db "It's your last <PK><MN>!@"
-PCString_TheresNoRoom: db "There's no room!@"
-PCString_NoMoreUsablePKMN: db "No more usable <PK><MN>!@"
+PCString_TheresNORoom: db "There's no room!@"
+PCString_NoMoreUsablePKMN: db "NO more usable <PK><MN>!@"
 PCString_RemoveMail: db "Remove MAIL.@"
 PCString_ReleasedPKMN: db "Released <PK><MN>.@"
 PCString_Bye: db "Bye,@"
@@ -2299,7 +2299,7 @@ PCString_Got: db "Got @"
 PCString_Non: db "Non.@"
 PCString_BoxFull: db "The BOX is full.@"
 PCString_PartyFull: db "The party's full!@"
-PCString_NoReleasingEGGS: db "No releasing EGGS!@"
+PCString_NOReleasingEGGS: db "NO releasing EGGS!@"
 ; e35aa
 
 
@@ -2603,7 +2603,7 @@ BillsPC_PlaceWhatsUpString: ; e37af (38:77af)
 ; e37be
 
 BillsPC_PlaceEmptyBoxString_SFX: ; e37be (38:77be)
-	ld de, .NoMonString
+	ld de, .NOMonString
 	call BillsPC_PlaceChangeBoxString
 	ld de, SFX_WRONG
 	call WaitPlaySFX
@@ -2613,7 +2613,7 @@ BillsPC_PlaceEmptyBoxString_SFX: ; e37be (38:77be)
 	ret
 ; e37d3 (38:77d3)
 
-.NoMonString: ; e37d3
+.NOMonString: ; e37d3
 	db "There's no #mon.@"
 ; e37e3
 

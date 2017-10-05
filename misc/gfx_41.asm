@@ -100,11 +100,11 @@ Mobile_ReloadMapPart: ; 104099
 	ld a, $1
 	ld [rVBK], a
 	ld hl, wScratchAttrMap
-	call HDMATransfer_NoDI
+	call HDMATransfer_NODI
 	ld a, $0
 	ld [rVBK], a
 	ld hl, wScratchTileMap
-	call HDMATransfer_NoDI
+	call HDMATransfer_NODI
 	pop af
 	ld [rVBK], a
 	ei
@@ -281,7 +281,7 @@ HDMATransfer_Wait123Scanlines_toBGMap: ; 1041b7 (41:41b7)
 	jr HDMATransfer_Wait123Scanlines
 ; 1041c1 (41:41c1)
 
-HDMATransfer_NoDI: ; 1041c1
+HDMATransfer_NODI: ; 1041c1
 ; HDMA transfer from hl to [hBGMapAddress]
 ; [hBGMapAddress] --> de
 ; 2 * SCREEN_HEIGHT --> c

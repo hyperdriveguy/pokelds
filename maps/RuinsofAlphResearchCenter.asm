@@ -55,7 +55,7 @@ UnknownScript_0x59192:
 	writetext UnknownText_0x592fa
 	playsound SFX_ITEM
 	waitsfx
-	setflag ENGINE_UNoWN_DEX
+	setflag ENGINE_UNOWN_DEX
 	writetext UnknownText_0x59311
 	waitbutton
 	closetext
@@ -67,7 +67,7 @@ UnknownScript_0x59192:
 ScientistScript_0x591d1:
 	faceplayer
 	opentext
-	checkcode VAR_UNoWNCOUNT
+	checkcode VAR_UNOWNCOUNT
 	if_equal 26, UnknownScript_0x591df
 	writetext UnknownText_0x59311
 	waitbutton
@@ -83,11 +83,11 @@ UnknownScript_0x591df:
 ScientistScript_0x591e5:
 	faceplayer
 	opentext
-	checkcode VAR_UNoWNCOUNT
+	checkcode VAR_UNOWNCOUNT
 	if_equal 26, UnknownScript_0x5920b
-	checkflag ENGINE_UNoWN_DEX
+	checkflag ENGINE_UNOWN_DEX
 	iftrue UnknownScript_0x59205
-	checkevent EVENT_MADE_UNoWN_APPEAR_IN_RUINS
+	checkevent EVENT_MADE_UNOWN_APPEAR_IN_RUINS
 	iftrue UnknownScript_0x591ff
 	writetext UnknownText_0x593ed
 	waitbutton
@@ -116,9 +116,9 @@ UnknownScript_0x5920b:
 ScientistScript_0x59214:
 	faceplayer
 	opentext
-	checkcode VAR_UNoWNCOUNT
+	checkcode VAR_UNOWNCOUNT
 	if_equal 26, UnknownScript_0x5922e
-	checkevent EVENT_MADE_UNoWN_APPEAR_IN_RUINS
+	checkevent EVENT_MADE_UNOWN_APPEAR_IN_RUINS
 	iftrue UnknownScript_0x59228
 	writetext UnknownText_0x5954f
 	waitbutton
@@ -141,7 +141,7 @@ MapRuinsofAlphResearchCenterSignpost1Script:
 	opentext
 	checkevent EVENT_RUINS_OF_ALPH_RESEARCH_CENTER_SCIENTIST
 	iftrue UnknownScript_0x59241
-	checkcode VAR_UNoWNCOUNT
+	checkcode VAR_UNOWNCOUNT
 	if_equal 26, UnknownScript_0x59247
 UnknownScript_0x59241:
 	writetext UnknownText_0x597b6
@@ -159,7 +159,7 @@ MapRuinsofAlphResearchCenterSignpost2Script:
 	opentext
 	checkevent EVENT_RUINS_OF_ALPH_RESEARCH_CENTER_SCIENTIST
 	iftrue UnknownScript_0x5925a
-	checkcode VAR_UNoWNCOUNT
+	checkcode VAR_UNOWNCOUNT
 	if_equal 26, UnknownScript_0x59260
 UnknownScript_0x5925a:
 	writetext UnknownText_0x5980e
@@ -204,7 +204,7 @@ UnknownText_0x59278:
 	para "I added an"
 	line "optional #Dex"
 
-	para "to store UNoWN"
+	para "to store UNOWN"
 	line "data."
 
 	para "It records them in"
@@ -218,7 +218,7 @@ UnknownText_0x592fa:
 	done
 
 UnknownText_0x59311:
-	text "The UNoWN you"
+	text "The UNOWN you"
 	line "catch will all be"
 	cont "recorded."
 
@@ -228,14 +228,14 @@ UnknownText_0x59311:
 
 UnknownText_0x5935f:
 	text "You caught all the"
-	line "UNoWN variations?"
+	line "UNOWN variations?"
 
 	para "That's a great"
 	line "achievement!"
 
 	para "I've set up the"
 	line "printer here for"
-	cont "handling UNoWN."
+	cont "handling UNOWN."
 
 	para "Feel free to use"
 	line "it anytime."
@@ -363,7 +363,7 @@ UnknownText_0x597b6:
 
 UnknownText_0x597d9:
 	text "Mystery #mon"
-	line "Name: UNoWN"
+	line "Name: UNOWN"
 
 	para "A total of 26"
 	line "kinds found."
@@ -375,7 +375,7 @@ UnknownText_0x5980e:
 	done
 
 UnknownText_0x5982d:
-	text "UNoWN may be"
+	text "UNOWN may be"
 	line "printed out."
 	done
 

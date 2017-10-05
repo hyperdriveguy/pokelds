@@ -11,7 +11,7 @@ AIChooseMove: ; 440ce
 	and a
 	ret nz
 
-; No use picking a move if there's no choice.
+; NO use picking a move if there's no choice.
 	callba CheckEnemyLockedIn
 	ret nz
 

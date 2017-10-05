@@ -76,7 +76,7 @@ DragonsDenB1F_ClairTrigger:
 	jump .FinishClair
 
 .BagFull:
-	writetext ClairText_NoRoom
+	writetext ClairText_NORoom
 	waitbutton
 	closetext
 .FinishClair:
@@ -153,7 +153,7 @@ PokeBallScript_0x18c95a:
 	itemtotext DRAGON_FANG, $0
 	writetext Text_FoundDragonFang
 	buttonsound
-	writetext Text_NoRoomForDragonFang
+	writetext Text_NORoomForDragonFang
 	waitbutton
 	closetext
 	end
@@ -231,7 +231,7 @@ ClairText_DescribeDragonbreathDragonDen:
 	text "That contains"
 	line "DRAGONBREATH."
 
-	para "No, it doesn't"
+	para "NO, it doesn't"
 	line "have anything to"
 	cont "do with my breath."
 
@@ -240,7 +240,7 @@ ClairText_DescribeDragonbreathDragonDen:
 	cont "to take it."
 	done
 
-ClairText_NoRoom:
+ClairText_NORoom:
 	text "Oh? You don't have"
 	line "any room for this."
 
@@ -298,7 +298,7 @@ SilverText_Training1:
 	text "…"
 	line "What? <PLAYER>?"
 
-	para "…No, I won't"
+	para "…NO, I won't"
 	line "battle you now…"
 
 	para "My #mon aren't"
@@ -405,7 +405,7 @@ Text_FoundDragonFang:
 	text "!"
 	done
 
-Text_NoRoomForDragonFang:
+Text_NORoomForDragonFang:
 	text "But <PLAYER> can't"
 	line "carry any more"
 	cont "items."

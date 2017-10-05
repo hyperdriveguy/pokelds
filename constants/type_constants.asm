@@ -1,7 +1,7 @@
 	const_def
 
 PHYSICAL EQU const_value
-	const NoRMAL
+	const NORMAL
 	const FIGHTING
 	const FLYING
 	const POISON

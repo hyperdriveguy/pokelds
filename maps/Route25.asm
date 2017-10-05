@@ -136,7 +136,7 @@ CamperLloydScript:
 	end
 
 TrainerLassShannon:
-	trainer EVENT_BEAT_LASS_SHANNoN, LASS, SHANNoN, LassShannonSeenText, LassShannonBeatenText, 0, LassShannonScript
+	trainer EVENT_BEAT_LASS_SHANNON, LASS, SHANNON, LassShannonSeenText, LassShannonBeatenText, 0, LassShannonScript
 
 LassShannonScript:
 	end_if_just_battled
@@ -307,7 +307,7 @@ UnknownText_0x19f208:
 	done
 
 SchoolboyJoeSeenText:
-	text "Here's No. 3!"
+	text "Here's NO. 3!"
 	line "I won't be easy."
 	done
 
@@ -321,7 +321,7 @@ UnknownText_0x19f25c:
 	done
 
 LassLauraSeenText:
-	text "I'm No. 4!"
+	text "I'm NO. 4!"
 	line "Getting tired?"
 	done
 
@@ -335,7 +335,7 @@ UnknownText_0x19f2a6:
 	done
 
 CamperLloydSeenText:
-	text "OK! I'm No. 5."
+	text "OK! I'm NO. 5."
 	line "I'll stomp you!"
 	done
 

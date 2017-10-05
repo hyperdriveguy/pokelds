@@ -14,16 +14,16 @@ WhirlIslandLugiaChamber_MapScriptHeader:
 
 .Lugia:
 	checkevent EVENT_FOUGHT_LUGIA
-	iftrue .NoAppear
+	iftrue .NOAppear
 	checkitem SILVER_WING
 	iftrue .Appear
-	jump .NoAppear
+	jump .NOAppear
 
 .Appear:
 	appear WHIRLISLANDLUGIACHAMBER_LUGIA
 	return
 
-.NoAppear:
+.NOAppear:
 	disappear WHIRLISLANDLUGIACHAMBER_LUGIA
 	return
 

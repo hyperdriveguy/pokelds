@@ -79,12 +79,12 @@ LinkReceptionistScript_Trade:
 	yesorno
 	iffalse .Cancel
 	special Mobile_DummyReturnFalse ; always returns false
-	iffalse .NoMobile
+	iffalse .NOMobile
 	writetext Text_TradeReceptionistMobile
 	special AskMobileOrCable
 	iffalse .Cancel
 	if_equal $1, .Mobile
-.NoMobile:
+.NOMobile:
 	special Special_SetBitsForLinkTradeRequest
 	writetext Text_PleaseWait
 	special Special_WaitForLinkedFriend
@@ -181,12 +181,12 @@ LinkReceptionistScript_Battle:
 	yesorno
 	iffalse .Cancel
 	special Mobile_DummyReturnFalse ; always returns false
-	iffalse .NoMobile
+	iffalse .NOMobile
 	writetext Text_BattleReceptionistMobile
 	special AskMobileOrCable
 	iffalse .Cancel
 	if_equal $1, .Mobile
-.NoMobile:
+.NOMobile:
 	special Special_SetBitsForBattleRequest
 	writetext Text_PleaseWait
 	special Special_WaitForLinkedFriend
@@ -613,13 +613,13 @@ OfficerScript_0x192c9a:
 	end
 
 .BagIsFull:
-	writetext Text_MysteryGiftDeliveryGuy_NoRoom
+	writetext Text_MysteryGiftDeliveryGuy_NORoom
 	waitbutton
 	closetext
 	end
 
 .RefusedGift:
-	writetext Text_MysteryGiftDeliveryGuy_SaidNo
+	writetext Text_MysteryGiftDeliveryGuy_SaidNO
 	waitbutton
 	closetext
 	end
@@ -974,7 +974,7 @@ Text_MysteryGiftDeliveryGuy_Outro:
 	line "you again."
 	done
 
-Text_MysteryGiftDeliveryGuy_NoRoom:
+Text_MysteryGiftDeliveryGuy_NORoom:
 	text "Oh, you have no"
 	line "space for this."
 
@@ -985,8 +985,8 @@ Text_MysteryGiftDeliveryGuy_NoRoom:
 	line "to pick it up."
 	done
 
-Text_MysteryGiftDeliveryGuy_SaidNo:
-	text "No? That's very"
+Text_MysteryGiftDeliveryGuy_SaidNO:
+	text "NO? That's very"
 	line "strange…"
 	done
 

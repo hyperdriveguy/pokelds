@@ -359,13 +359,13 @@ PlayerComeBackMovement:
 	step_end
 ; Event End
 
-; Non Event Scripts
+; Non-Event Scripts
 BishopScript:
 	faceplayer
 	opentext
 	checkevent EVENT_GOT_A_POKEMON_FROM_BISHOP
 	iffalse .ChooseOneScript
-	checkevent EVENT_FINISHED_BISHOPS_ERRAND
+	checkevent EVENT_GOT_PAPERS_FROM_WARD_CLERK
 	iffalse .GoFinishErrandScript
 	checkevent EVENT_TALKED_TO_MOM_BEFORE_JOURNEY
 	iffalse .GoTalkToMomScript
@@ -403,6 +403,12 @@ BishopsLabAideScript:
 	writetext BishopsLabAideText
 	waitbutton
 	closetext
+IF DEF(DEBUG)
+	winlosstext BishopsLabHealingMachineText1, BishopsLabHealingMachineText1
+	loadtrainer GUITARIST, JIMMYA
+	startbattle
+	reloadmapafterbattle
+ENDC
 	end
 
 BishopsLabHealingMachine:

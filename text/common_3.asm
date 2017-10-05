@@ -312,7 +312,7 @@ Text_AnEGGCantHoldAnItem::
 	prompt
 
 UnknownText_0x1c0b9a::
-	text "No items."
+	text "NO items."
 	done
 
 UnknownText_0x1c0ba5::
@@ -596,7 +596,7 @@ UnknownText_0x1c0fb3::
 	prompt
 
 UnknownText_0x1c0fb8::
-	text "No"
+	text "NO"
 	prompt
 
 UnknownText_0x1c0fbc::
@@ -808,13 +808,13 @@ _KrissPCWithdrewItemsText::
 	text "(S)."
 	prompt
 
-_KrissPCNoRoomWithdrawText::
+_KrissPCNORoomWithdrawText::
 	text "There's no room"
 	line "for more items."
 	prompt
 
 UnknownText_0x1c13df::
-	text "No items here!"
+	text "NO items here!"
 	prompt
 
 _KrissPCHowManyDepositText::
@@ -831,7 +831,7 @@ _KrissPCDepositItemsText::
 	text "(S)."
 	prompt
 
-_KrissPCNoRoomDepositText::
+_KrissPCNORoomDepositText::
 	text "There's no room to"
 	line "store items."
 	prompt

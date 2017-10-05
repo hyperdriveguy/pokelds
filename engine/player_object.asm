@@ -684,7 +684,7 @@ FollowNotExact:: ; 839e
 	ld [hl], a
 	ld hl, OBJECT_MOVEMENTTYPE
 	add hl, de
-	ld [hl], SPRITEMOVEDATA_FOLLOWNoTEXACT
+	ld [hl], SPRITEMOVEDATA_FOLLOWNOTEXACT
 	ld hl, OBJECT_STEP_TYPE
 	add hl, de
 	ld [hl], STEP_TYPE_00

@@ -220,7 +220,7 @@ UnknownText_0x1a637b:
 	done
 
 SwimmerfPaulaSeenText:
-	text "No inner tube for"
+	text "NO inner tube for"
 	line "me."
 
 	para "I'm hanging on to"

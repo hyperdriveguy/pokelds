@@ -5,7 +5,7 @@ StartMenu:: ; 125cd
 	ld de, SFX_MENU
 	call PlaySFX
 
-	callba ReanchorBGMap_NoOAMUpdate
+	callba ReanchorBGMap_NOOAMUpdate
 
 	ld hl, StatusFlags2
 	bit 2, [hl] ; bug catching contest
@@ -23,7 +23,7 @@ StartMenu:: ; 125cd
 	call .DrawBugContestStatusBox
 	call SafeUpdateSprites
 	call _OpenAndCloseMenu_HDMATransferTileMapAndAttrMap
-	callba LoadFonts_NoOAMUpdate
+	callba LoadFonts_NOOAMUpdate
 	call .DrawBugContestStatus
 	call UpdateTimePals
 	jr .Select
@@ -420,7 +420,7 @@ StartMenu_Quit: ; 128f0
 ; Retire from the bug catching contest.
 
 	ld hl, .EndTheContestText
-	call StartMenuYesNo
+	call StartMenuYesNO
 	jr c, .DontEndContest
 	ld a, BANK(BugCatchingContestReturnToGateScript)
 	ld hl, BugCatchingContestReturnToGateScript
@@ -567,7 +567,7 @@ StartMenu_Pokemon: ; 12976
 	ret
 ; 129d5
 
-HasNoItems: ; 129d5
+HasNOItems: ; 129d5
 	ld a, [NumItems]
 	and a
 	ret nz
@@ -743,7 +743,7 @@ SwitchPartyMons: ; 12aec
 	ld [wSwitchMon], a
 
 	callba HoldSwitchmonIcon
-	callba InitPartyMenuNoCancel
+	callba InitPartyMenuNOCancel
 
 	ld a, 4
 	ld [PartyMenuActionText], a
@@ -892,7 +892,7 @@ TryGiveItemToPartymon: ; 12bd9
 	ld [wd265], a
 	call GetItemName
 	ld hl, SwitchAlreadyHoldingText
-	call StartMenuYesNo
+	call StartMenuYesNO
 	jr c, .abort
 
 	call GiveItemToPokemon
@@ -955,7 +955,7 @@ TakePartyItem: ; 12c60
 	call GetPartyItemLocation
 	ld a, [hl]
 	ld [wd265], a
-	ld [hl], No_ITEM
+	ld [hl], NO_ITEM
 	call GetItemName
 	ld hl, TookFromText
 	call MenuTextBoxBackup
@@ -1054,7 +1054,7 @@ GiveItemToPokemon: ; 12cea (4:6cea)
 	ld hl, NumItems
 	jp TossItem
 
-StartMenuYesNo: ; 12cf5
+StartMenuYesNO: ; 12cf5
 	call MenuTextBox
 	call YesNoBox
 	jp ExitMenu
@@ -1122,7 +1122,7 @@ MonMailAction: ; 12d45
 
 .take
 	ld hl, .sendmailtopctext
-	call StartMenuYesNo
+	call StartMenuYesNO
 	jr c, .RemoveMailToBag
 	ld a, [CurPartyMon]
 	ld b, a
@@ -1139,7 +1139,7 @@ MonMailAction: ; 12d45
 
 .RemoveMailToBag:
 	ld hl, .mailwilllosemessagetext
-	call StartMenuYesNo
+	call StartMenuYesNO
 	jr c, .done
 	call GetPartyItemLocation
 	ld a, [hl]
@@ -1455,7 +1455,7 @@ ChooseMoveToDelete: ; 12f5b
 	ld hl, Options
 	ld a, [hl]
 	push af
-	set No_TEXT_SCROLL, [hl]
+	set NO_TEXT_SCROLL, [hl]
 	call LoadFontsBattleExtra
 	call .ChooseMoveToDelete
 	pop bc
@@ -1523,7 +1523,7 @@ ManagePokemonMoves: ; 12fba
 	ld hl, Options
 	ld a, [hl]
 	push af
-	set No_TEXT_SCROLL, [hl]
+	set NO_TEXT_SCROLL, [hl]
 	call MoveScreenLoop
 	pop af
 	ld [Options], a

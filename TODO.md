@@ -1,15 +1,15 @@
 ## Bugs
 
 - [ ] The Town Map still uses Johto's layout, rather than the new region's layout.
+    * Graphics show Town Map correctly, but more engine fixes need to happen for every town's name to be displayed. This is an ongoing effort.
 - [x] Burn/Poison/Paralyze don't improve catch rate. (Fixed)
 - [ ] Experience underflow at level 1.
+    * Need to still double check that it actually still exists
 - [x] HP bar does not lower at the same speed for high HP. (Fixed)
 See the [Issues](issues/) page for things not listed here.  
 As far as I know, it also inherits all the bugs not listed here from vanilla Pokémon Crystal.
 
 # Specific to Pokémon LDS
-
-IMPORTANT NOTE: Suggestions and Pull Requests may be turned down if I find them to not be appropriate.
 
 ## Maps
 
@@ -22,7 +22,7 @@ IMPORTANT NOTE: Suggestions and Pull Requests may be turned down if I find them 
 
 ### Bountiful Town
 
-- [ ] Remove Rival by the lab
+- [x] Remove Rival by the lab
 
 ### Route 101
 
@@ -36,22 +36,24 @@ IMPORTANT NOTE: Suggestions and Pull Requests may be turned down if I find them 
 
 ### Route 102
 
-- [ ] Rebase on Route 30
+- [ ] Rebase on Route 31
 
 ## Story - Warning! Spoilers!
 
 - [ ] Errand from the local Professor/Reworked Character
 - [x] Make Bishop in Bountiful Town
-- [ ] Replace Rival with a friendly Missionary/Mission President
+- [ ] Replace Rival
 - [ ] Book of Mormon people mixed with modern day people
 - [ ] Story involving Korihor (See Alma Chapter 30)
 - [ ] Gadianton Robbers (Replaces Team Rocket)
 - [ ] Rescue kidnapped missionaries
 - [ ] Leaders to battle in each city (Replacing Gym Leaders, may replace with an Area authority or Book of Mormon Prophet)
-- [ ] Preach?
+- [ ] Ideas and characters inspired by "Saturday's Warrior", "Johnny Lingo", and other 
 - [ ] Final battles on Mt. Zion (Replacing the Elite Four and Champion)
 - [ ] Post Story? (Mission Call)
 - [ ] Better method to obtain money?
+
+See "materials" folder for more of the concepts.
 
 ## Battle Mechanics
 
@@ -77,7 +79,7 @@ IMPORTANT NOTE: Suggestions and Pull Requests may be turned down if I find them 
 - [ ] Added Elder trainer class (Broken)
 - [x] Get rid of Nuzlocke mode
 
-## Music (Much help needed, improvements are welcomd)
+## Music (Much help needed, improvements are welcome)
 
 - [ ] "I Hope They Call Me On a Mission" for the intro music
     * Channels are out of sync, probably needs to be completely redone
@@ -90,6 +92,8 @@ IMPORTANT NOTE: Suggestions and Pull Requests may be turned down if I find them 
 - [ ] "For the Strength of the Hills" for route music
 - [ ] "How Firm a Foundation" for route music
 - [x] "Book of Mormon Stories" for Zarahemla
+- [ ] "Redeemer of Israel" for title screen
+	* Basic groundwork done
 - [ ] Port other popular Hymns to the audio engine
 
 ## Graphics
@@ -99,6 +103,7 @@ IMPORTANT NOTE: Suggestions and Pull Requests may be turned down if I find them 
 - [ ] Make Sister, Deacon, Teacher, Priest, High Priest, Beehive, Miamaid, Laurel, Nephite, Lamanite, Ammonite, and Apostate trainer sprites
 - [x] Made Elder overworld and trainer sprites
 - [ ] Custom title screen
+    * Graphics changed, need a new opening movie, and other engine changes
 
 # Feature backport from other hacks (Like Polished Crystal) - These aren't as high priority, but may be easier to implement.
 
@@ -111,7 +116,7 @@ IMPORTANT NOTE: Suggestions and Pull Requests may be turned down if I find them 
 - [ ] Make eggs hatch at level 1. (And fix experience underflow bug)
 - [ ] Make trees randomly give 1, 2, or 3 Berries.
 - [ ] Ability to surf at Bicycle/Running Shoes speed.
-- [ ] Make a new maximum of $9,999,999 money and 50,000 coins.
+- [ ] Make a new maximum of $9,999,999 money and 50,000 coins (or just eliminate the coin case).
 - [ ] New maximum of 30 items and 16 Balls in your bag pocket.
 - [ ] Make Bill (Or some new PC guy) call to switch boxes when one is full.
 

@@ -297,7 +297,7 @@ YoungsterJoey1AfterText:
 	para "order to battle"
 	line "better?"
 
-	para "No! I'm sticking"
+	para "NO! I'm sticking"
 	line "with this one no"
 	cont "matter what!"
 	done
@@ -384,7 +384,7 @@ MrPokemonsHouseSignText:
 Route30TrainerTipsText:
 	text "TRAINER TIPS"
 
-	para "No stealing other"
+	para "NO stealing other"
 	line "people's #mon!"
 
 	para "# BALLS are to"
@@ -414,7 +414,7 @@ Route30_MapEventHeader:
 .Warps:
 	db 2
 	warp_def $27, $7, 1, ROUTE_30_BERRY_SPEECH_HOUSE
-	warp_def $5, $11, 1, MR_POKEMONS_HOUSE
+	warp_def $5, $11, 1, CLERKS_HOUSE
 
 .XYTriggers:
 	db 0

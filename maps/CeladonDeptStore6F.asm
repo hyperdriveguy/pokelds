@@ -73,12 +73,12 @@ CeladonVendingMachine:
 	jump .Start
 
 .NotEnoughMoney:
-	writetext CeladonVendingNoMoneyText
+	writetext CeladonVendingNOMoneyText
 	waitbutton
 	jump .Start
 
 .NotEnoughSpace:
-	writetext CeladonVendingNoSpaceText
+	writetext CeladonVendingNOSpaceText
 	waitbutton
 	jump .Start
 
@@ -118,12 +118,12 @@ CeladonClangText:
 	line "popped out."
 	done
 
-CeladonVendingNoMoneyText:
+CeladonVendingNOMoneyText:
 	text "Oops, not enough"
 	line "money…"
 	done
 
-CeladonVendingNoSpaceText:
+CeladonVendingNOSpaceText:
 	text "There's no more"
 	line "room for stuff…"
 	done

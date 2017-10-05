@@ -517,7 +517,7 @@ SaveOptions: ; 14dbb
 	ld bc, OptionsEnd - Options
 	call CopyBytes
 	ld a, [Options]
-	and $ff ^ (1 << No_TEXT_SCROLL)
+	and $ff ^ (1 << NO_TEXT_SCROLL)
 	ld [sOptions], a
 	jp CloseSRAM
 ; 14dd7
@@ -667,7 +667,7 @@ TryLoadSaveFile: ; 14ea5 (5:4ea5)
 .corrupt
 	ld a, [Options]
 	push af
-	set No_TEXT_SCROLL, a
+	set NO_TEXT_SCROLL, a
 	ld [Options], a
 	ld hl, Text_SaveFileCorrupted
 	call PrintText

@@ -56,7 +56,7 @@ BlackthornGymClairScript:
 	setevent EVENT_BEAT_COOLTRAINERF_LOLA
 	clearevent EVENT_MAHOGANY_MART_OWNERS
 	setevent EVENT_BLACKTHORN_CITY_GRAMPS_BLOCKS_DRAGONS_DEN
-	clearevent EVENT_BLACKTHORN_CITY_GRAMPS_NoT_BLOCKING_DRAGONS_DEN
+	clearevent EVENT_BLACKTHORN_CITY_GRAMPS_NOT_BLOCKING_DRAGONS_DEN
 	end
 
 .FightDone:
@@ -242,7 +242,7 @@ BlackthornGymClairText_DescribeTM24:
 	text "That contains"
 	line "DRAGONBREATH."
 
-	para "No, it doesn't"
+	para "NO, it doesn't"
 	line "have anything to"
 	cont "do with my breath."
 

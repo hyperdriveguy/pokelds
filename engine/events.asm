@@ -529,11 +529,11 @@ OWPlayerInput: ; 96974
 	call PlayerMovement
 	ret c
 	and a
-	jr nz, .NoAction
+	jr nz, .NOAction
 
 ; Can't perform button actions while sliding on ice.
 	callba CheckStandingOnIce
-	jr c, .NoAction
+	jr c, .NOAction
 
 	call CheckAPressOW
 	jr c, .Action
@@ -541,7 +541,7 @@ OWPlayerInput: ; 96974
 	call CheckMenuOW
 	jr c, .Action
 
-.NoAction:
+.NOAction:
 	xor a
 	ret
 
@@ -879,7 +879,7 @@ CheckMenuOW: ; 96b30
 	jr nz, .Select
 
 	bit 3, a ; START
-	jr z, .NoMenu
+	jr z, .NOMenu
 
 	ld a, BANK(StartMenuScript)
 	ld hl, StartMenuScript
@@ -887,7 +887,7 @@ CheckMenuOW: ; 96b30
 	scf
 	ret
 
-.NoMenu:
+.NOMenu:
 	xor a
 	ret
 

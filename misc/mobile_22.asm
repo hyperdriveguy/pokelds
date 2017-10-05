@@ -10,7 +10,7 @@ String_89135: ; 89135
 ; 89153
 
 String_89153: ; 89153
-	db   "メッセージは ありません@"    ; No message
+	db   "メッセージは ありません@"    ; NO message
 ; 89160
 
 OpenSRAMBank4: ; 89160

@@ -210,7 +210,7 @@ GetJoypad:: ; 984
 ; The current input is overwritten.
 	dec hl
 	dec hl
-	ld b, No_INPUT
+	ld b, NO_INPUT
 	jr .finishauto
 
 .next
@@ -223,7 +223,7 @@ GetJoypad:: ; 984
 
 .stopauto
 	call StopAutoInput
-	ld b, No_INPUT
+	ld b, NO_INPUT
 
 .finishauto
 	pop af

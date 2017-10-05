@@ -433,7 +433,7 @@ Function4a28a: ; 4a28a (12:628a)
 	ld c, 4
 	call TextBox
 	callba Mobile_OpenAndCloseMenu_HDMATransferTileMapAndAttrMap
-	ld hl, DeletePassword_YesNo_MenuDataHeader
+	ld hl, DeletePassword_YesNO_MenuDataHeader
 	call LoadMenuDataHeader
 	call VerticalMenu
 	bit B_BUTTON_F, a
@@ -483,7 +483,7 @@ UnknownText_0x4a35d: ; 0x4a35d
 	db "@"
 ; 0x4a362
 
-DeletePassword_YesNo_MenuDataHeader: ; 0x4a362
+DeletePassword_YesNO_MenuDataHeader: ; 0x4a362
 	db $40 ; flags
 	db 07, 14 ; start coords
 	db 11, 19 ; end coords

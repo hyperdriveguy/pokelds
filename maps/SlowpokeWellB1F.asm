@@ -203,7 +203,7 @@ GruntM29SeenText:
 	done
 
 GruntM29BeatenText:
-	text "Arrgh! This is NoT"
+	text "Arrgh! This is NOT"
 	line "my day!"
 	done
 

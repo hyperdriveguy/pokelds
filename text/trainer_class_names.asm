@@ -57,7 +57,7 @@
 	db "MEDIUM@"
 	db "BOARDER@"
 	db "#FAN@"
-	db "KIMONo GIRL@"
+	db "KIMONO GIRL@"
 	db "TWINS@"
 	db "#FAN@"
 	db "<PKMN> TRAINER@"

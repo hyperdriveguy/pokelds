@@ -139,7 +139,7 @@ PlaceGenericTwoOptionBox:: ; 1dd4
 _YesNoBox:: ; 1dd9
 ; Return nc (yes) or c (no).
 	push bc
-	ld hl, YesNoMenuDataHeader
+	ld hl, YesNOMenuDataHeader
 	call CopyMenuDataHeader
 	pop bc
 ; This seems to be an overflow prevention, but
@@ -182,7 +182,7 @@ InterpretTwoOptionMenu:: ; 1dfe
 	ret
 ; 1e1d
 
-YesNoMenuDataHeader:: ; 1e1d
+YesNOMenuDataHeader:: ; 1e1d
 	db $40 ; tile backup
 	db 5, 10 ; start coords
 	db 9, 15 ; end coords

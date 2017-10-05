@@ -2123,7 +2123,7 @@ UnownLetter:: ; d234
 wMoveSelectionMenuType:: ds 1
 
 CurBaseData:: ; d236
-BaseDexNo:: ; d236
+BaseDexNO:: ; d236
 	ds 2
 BaseStats:: ; d237
 BaseHP:: ; d237
@@ -2559,11 +2559,11 @@ wLancesRoomTrigger::                         ds 1 ; d983
 wHallOfFameTrigger::                         ds 1 ; d984
 wRoute27Trigger::                            ds 1 ; d985
 wBountifulTownTrigger::                      ds 1 ; d986
-wBishopsLabTrigger::                            ds 1 ; d987
+wBishopsLabTrigger::                         ds 1 ; d987
 wKrissHouse1FTrigger::                       ds 1 ; d988
 wRoute101Trigger::                           ds 1 ; d989
 wPleasantGroveTrigger::                      ds 1 ; d98a
-wMrPokemonsHouseTrigger::                    ds 1 ; d98b
+wClerksHouseTrigger::                        ds 1 ; d98b
 wRoute32Trigger::                            ds 1 ; d98c
 wRoute35NationalParkGateTrigger::            ds 1 ; d98d
 wRoute36Trigger::                            ds 1 ; d98e

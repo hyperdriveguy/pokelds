@@ -670,7 +670,7 @@ FlyFunction: ; ca3b
 	farscall Script_AbortBugContest
 	special WarpToSpawnPoint
 	callasm DelayLoadingNewSprites
-	writecode VAR_MOVEMENT, PLAYER_NoRMAL
+	writecode VAR_MOVEMENT, PLAYER_NORMAL
 	newloadmap MAPSETUP_FLY
 	callasm FlyToAnim
 	special WaitSFX
@@ -917,7 +917,7 @@ dig_incave
 	applymovement PLAYER, .DigOut
 	farscall Script_AbortBugContest
 	special WarpToSpawnPoint
-	writecode VAR_MOVEMENT, PLAYER_NoRMAL
+	writecode VAR_MOVEMENT, PLAYER_NORMAL
 	newloadmap MAPSETUP_DOOR
 	playsound SFX_WARP_FROM
 	applymovement PLAYER, .DigReturn
@@ -1004,7 +1004,7 @@ TeleportFunction: ; cc61
 	applymovement PLAYER, .TeleportFrom
 	farscall Script_AbortBugContest
 	special WarpToSpawnPoint
-	writecode VAR_MOVEMENT, PLAYER_NoRMAL
+	writecode VAR_MOVEMENT, PLAYER_NORMAL
 	newloadmap MAPSETUP_TELEPORT
 	playsound SFX_WARP_FROM
 	applymovement PLAYER, .TeleportTo
@@ -1509,10 +1509,10 @@ FishFunction: ; cf8e
 
 .FishTable: ; cfa5
 	dw .TryFish
-	dw .FishNoBite
+	dw .FishNOBite
 	dw .FishGotSomething
 	dw .FailFish
-	dw .FishNoFish
+	dw .FishNOFish
 
 .TryFish: ; cfaf
 	ld a, [PlayerState]
@@ -1567,7 +1567,7 @@ FishFunction: ; cf8e
 	ld a, $81
 	ret
 
-.FishNoBite: ; d002
+.FishNOBite: ; d002
 	ld a, $2
 	ld [Buffer6], a
 	ld hl, Script_NotEvenANibble
@@ -1575,7 +1575,7 @@ FishFunction: ; cf8e
 	ld a, $81
 	ret
 
-.FishNoFish: ; d010
+.FishNOFish: ; d010
 	ld a, $0
 	ld [Buffer6], a
 	ld hl, Script_NotEvenANibble2
@@ -1702,7 +1702,7 @@ BikeFunction: ; d0b3
 	call .CheckEnvironment
 	jr c, .CannotUseBike
 	ld a, [PlayerState]
-	cp PLAYER_NoRMAL
+	cp PLAYER_NORMAL
 	jr z, .GetOnBike
 	cp PLAYER_BIKE
 	jr z, .GetOffBike
@@ -1801,7 +1801,7 @@ Script_GetOnBike_Register: ; 0xd14e
 Script_GetOffBike: ; 0xd158
 	reloadmappart
 	special UpdateTimePals
-	writecode VAR_MOVEMENT, PLAYER_NoRMAL
+	writecode VAR_MOVEMENT, PLAYER_NORMAL
 	writetext GotOffTheBikeText
 	waitbutton
 
@@ -1812,7 +1812,7 @@ FinishGettingOffBike:
 	end
 
 Script_GetOffBike_Register: ; 0xd16b
-	writecode VAR_MOVEMENT, PLAYER_NoRMAL
+	writecode VAR_MOVEMENT, PLAYER_NORMAL
 	jump FinishGettingOffBike
 
 Script_CantGetOffBike: ; 0xd171

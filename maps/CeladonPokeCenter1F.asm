@@ -34,7 +34,7 @@ CeladonEusine:
 	iffalse .NoSuicune
 	special SpecialBeastsCheck
 	iftrue .HoOh
-	writetext NoBeastsText
+	writetext NOBeastsText
 	waitbutton
 .NoSuicune:
 	closetext
@@ -123,7 +123,7 @@ EusineLeavesCeladonText:
 	line "you, <PLAYER>!"
 	done
 
-NoBeastsText:
+NOBeastsText:
 	text "Oh, by the way,"
 	line "<PLAYER>."
 

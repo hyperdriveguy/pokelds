@@ -1,7 +1,7 @@
 	const_def
 	const MARTTEXT_HOW_MANY
 	const MARTTEXT_COSTS_THIS_MUCH
-	const MARTTEXT_NoT_ENoUGH_MONEY
+	const MARTTEXT_NOT_ENOUGH_MONEY
 	const MARTTEXT_BAG_FULL
 	const MARTTEXT_HERE_YOU_GO
 	const MARTTEXT_SOLD_OUT
@@ -531,7 +531,7 @@ BuyMenuLoop: ; 15cef
 	ret
 
 .insufficient_funds
-	ld a, MARTTEXT_NoT_ENoUGH_MONEY
+	ld a, MARTTEXT_NOT_ENOUGH_MONEY
 	call LoadBuyMenuText
 	call JoyWaitAorB
 	and a

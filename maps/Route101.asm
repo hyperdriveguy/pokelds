@@ -9,10 +9,11 @@ const_value set 2
 
 Route101_MapScriptHeader:
 .MapTriggers:
-	db 2
+	db 3
 
 	; triggers
 	maptrigger .Trigger0
+	maptrigger .Trigger1
 	maptrigger .Trigger2
 
 .MapCallbacks:
@@ -321,16 +322,17 @@ MissedWardClerksHouseText:
 	done
 
 Route101SignText:
-	text "ROUTE 101"
+	text "Route 101"
 
-	para "BOUNTIUFL TOWN -"
-	line "PLEASANT GROVE"
+	para "Bountiful Town -"
+	line "Pleasant Grove"
 	done
 
 Route101_MapEventHeader:: db 0, 0
 
-.Warps: db 1
+.Warps: db 2
 	warp_def 3, 19, 3, ROUTE_101_PLEASANT_GATE
+	warp_def 19, 17, 1, CLERKS_HOUSE
 
 .CoordEvents: db 3
 	xy_trigger 1, 45, 18, 0, Route101Tutorial1, 0, 0
@@ -341,7 +343,7 @@ Route101_MapEventHeader:: db 0, 0
 	signpost 41, 17, SIGNPOST_READ, Route101Sign1
 	signpost 6, 20, SIGNPOST_READ, Route101Sign2
 
-.ObjectEvents: db 8
+.ObjectEvents: db 7
 	person_event SPRITE_COOLTRAINER_M, 42, 20, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, (1 << 3) | PAL_OW_RED, PERSONTYPE_SCRIPT, 0, CatchingTutorialDudeScript, -1
 	person_event SPRITE_YOUNGSTER, 23, 11, SPRITEMOVEDATA_WALK_UP_DOWN, 1, 0, -1, -1, (1 << 3) | PAL_OW_GREEN, PERSONTYPE_SCRIPT, 0, Route101YoungsterScript, -1
 	person_event SPRITE_TEACHER, 38, 15, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, (1 << 3) | PAL_OW_GREEN, PERSONTYPE_SCRIPT, 0, Route101TeacherScript, -1
@@ -349,4 +351,3 @@ Route101_MapEventHeader:: db 0, 0
 	person_event SPRITE_FISHER, 13, 14, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, (1 << 3) | PAL_OW_BLUE, PERSONTYPE_SCRIPT, 0, Route101FisherScript, -1
 	person_event SPRITE_COOLTRAINER_M, 7, 26, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, (1 << 3) | PAL_OW_RED, PERSONTYPE_SCRIPT, 0, CooltrainerMScript_0x1a1031, -1
 	person_event SPRITE_POKE_BALL, 20, 6, SPRITEMOVEDATA_ITEM_TREE, 0, 0, -1, -1, 0, PERSONTYPE_ITEMBALL, 0, Route101Potion, EVENT_ROUTE_101_POTION
-

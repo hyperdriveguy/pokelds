@@ -146,7 +146,7 @@ PewterCityMtMoonGiftShopSignText:
 	line "here…"
 
 	para "MT.MOON GIFT SHOP"
-	line "NoW OPEN!"
+	line "NOW OPEN!"
 	done
 
 PewterCityWelcomeSignText:
@@ -164,7 +164,7 @@ PewterCity_MapEventHeader:
 	warp_def $11, $10, 1, PEWTER_GYM
 	warp_def $11, $17, 2, PEWTER_MART
 	warp_def $19, $d, 1, PEWTER_POKECENTER_1F
-	warp_def $1d, $7, 1, PEWTER_SNoOZE_SPEECH_HOUSE
+	warp_def $1d, $7, 1, PEWTER_SNOOZE_SPEECH_HOUSE
 
 .XYTriggers:
 	db 0

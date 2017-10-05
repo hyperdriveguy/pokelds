@@ -23,17 +23,17 @@ ENDM
 	trigger_def INDIGO_PLATEAU_POKECENTER_1F,           wIndigoPlateauPokecenter1FTrigger
 	trigger_def WILLS_ROOM,                             wWillsRoomTrigger
 	trigger_def KOGAS_ROOM,                             wKogasRoomTrigger
-	trigger_def BRUNoS_ROOM,                            wBrunosRoomTrigger
+	trigger_def BRUNOS_ROOM,                            wBrunosRoomTrigger
 	trigger_def KARENS_ROOM,                            wKarensRoomTrigger
 	trigger_def LANCES_ROOM,                            wLancesRoomTrigger
 	trigger_def HALL_OF_FAME,                           wHallOfFameTrigger
 	trigger_def ROUTE_27,                               wRoute27Trigger
 	trigger_def BOUNTIFUL_TOWN,                         wBountifulTownTrigger
-	trigger_def BISHOPS_LAB,                               wBishopsLabTrigger
+	trigger_def BISHOPS_LAB,                            wBishopsLabTrigger
 	trigger_def KRISS_HOUSE_1F,                         wKrissHouse1FTrigger
 	trigger_def ROUTE_101,                              wRoute101Trigger
 	trigger_def PLEASANT_GROVE,                         wPleasantGroveTrigger
-	trigger_def MR_POKEMONS_HOUSE,                      wMrPokemonsHouseTrigger
+	trigger_def CLERKS_HOUSE,                           wClerksHouseTrigger
 	trigger_def ROUTE_32,                               wRoute32Trigger
 	trigger_def ROUTE_35_NATIONAL_PARK_GATE,            wRoute35NationalParkGateTrigger
 	trigger_def ROUTE_36,                               wRoute36Trigger

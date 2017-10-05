@@ -386,7 +386,7 @@ UnknownText_0x7058f:
 	done
 
 FisherRaymondSeenText:
-	text "No matter what I"
+	text "NO matter what I"
 	line "do, all I catch"
 
 	para "are the same #-"

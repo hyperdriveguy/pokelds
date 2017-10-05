@@ -41,7 +41,7 @@ PrintDayOfWeek: ; 5b05
 ; 5b40
 
 .Day: ; 5b40
-	db "DAY@"
+	db "day@"
 ; 5b44
 
 NewGame_ClearTileMapEtc: ; 5b44
@@ -545,7 +545,7 @@ Continue_LoadMenuHeader: ; 5ebf
 	ld a, [StatusFlags]
 	bit 0, a ; pokedex
 	jr nz, .pokedex_header
-	ld hl, .MenuDataHeader_NoDex
+	ld hl, .MenuDataHeader_NODex
 
 .pokedex_header
 	call _OffsetMenuDataHeader
@@ -571,15 +571,15 @@ Continue_LoadMenuHeader: ; 5ebf
 	db "Time@"
 ; 5efb
 
-.MenuDataHeader_NoDex: ; 5efb
+.MenuDataHeader_NODex: ; 5efb
 	db $40 ; flags
 	db 00, 00 ; start coords
 	db 09, 15 ; end coords
-	dw .MenuData2_NoDex
+	dw .MenuData2_NODex
 	db 1 ; default option
 ; 5f03
 
-.MenuData2_NoDex: ; 5f03
+.MenuData2_NODex: ; 5f03
 	db $00 ; flags
 	db 4 ; items
 	db "Player <PLAYER>@"

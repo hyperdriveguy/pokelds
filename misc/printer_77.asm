@@ -218,7 +218,7 @@ PrintPartyMonPage1: ; 1dc381
 	xor a
 	ld [hl], a
 	ld a, [CurPartySpecies]
-	cp UNoWN
+	cp UNOWN
 	jr z, .asm_1dc469
 	inc [hl]
 

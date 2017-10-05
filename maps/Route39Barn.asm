@@ -67,7 +67,7 @@ MooMoo:
 	yesorno
 	iffalse .Refused
 	checkitem BERRY
-	iffalse .NoBerriesInBag
+	iffalse .NOBerriesInBag
 	takeitem BERRY
 	copybytetovar MooMooBerries
 	addvar 1
@@ -108,8 +108,8 @@ MooMoo:
 	setevent EVENT_HEALED_MOOMOO
 	end
 
-.NoBerriesInBag:
-	writetext Text_NoBerries
+.NOBerriesInBag:
+	writetext Text_NOBerries
 	waitbutton
 	closetext
 	end
@@ -176,7 +176,7 @@ Text_TotallyHealthy:
 	line "totally healthy!"
 	done
 
-Text_NoBerries:
+Text_NOBerries:
 	text "<PLAYER> has no"
 	line "BERRIES…"
 	done

@@ -230,7 +230,7 @@ MainMenu_PrintCurrentTimeAndDay: ; 49e09
 	ld hl, Options
 	ld a, [hl]
 	push af
-	set No_TEXT_SCROLL, [hl]
+	set NO_TEXT_SCROLL, [hl]
 	call .PlaceTime
 	pop af
 	ld [Options], a

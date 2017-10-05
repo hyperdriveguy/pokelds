@@ -101,12 +101,12 @@ _CardFlip: ; e00ee (38:40ee)
 	ld hl, .PlayWithThreeCoinsText
 	call CardFlip_UpdateCoinBalanceDisplay
 	call YesNoBox
-	jr c, .SaidNo
+	jr c, .SaidNO
 	call CardFlip_ShuffleDeck
 	call .Increment
 	ret
 
-.SaidNo:
+.SaidNO:
 	ld a, 7
 	ld [wJumptableIndex], a
 	ret

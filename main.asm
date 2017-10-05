@@ -53,7 +53,7 @@ INCLUDE "engine/map_objects.asm"
 
 INCLUDE "engine/intro_menu.asm"
 
-ReanchorBGMap_NoOAMUpdate:: ; 6454
+ReanchorBGMap_NOOAMUpdate:: ; 6454
 	call DelayFrame
 	ld a, [hOAMUpdate]
 	push af
@@ -111,7 +111,7 @@ ReanchorBGMap_NoOAMUpdate:: ; 6454
 	ld [hBGMapAddress], a
 	ret
 
-LoadFonts_NoOAMUpdate:: ; 64bf
+LoadFonts_NOOAMUpdate:: ; 64bf
 	ld a, [hOAMUpdate]
 	push af
 	ld a, $1
@@ -439,12 +439,12 @@ BugCatchingContestReturnToGateScript: ; 0x1360b
 	jumpstd bugcontestresultswarp
 
 BugCatchingContestText_BeeepTimesUp: ; 0x1360f
-	; ANNoUNCER: BEEEP! Time's up!
+	; ANNOUNCER: BEEEP! Time's up!
 	text_jump UnknownText_0x1bd2ca
 	db "@"
 
 BugCatchingContestText_ContestIsOver: ; 0x13614
-	; ANNoUNCER: The Contest is over!
+	; ANNOUNCER: The Contest is over!
 	text_jump UnknownText_0x1bd2e7
 	db "@"
 
@@ -862,7 +862,7 @@ Function24b8f: ; 24b8f
 	ld hl, Options
 	ld a, [hl]
 	push af
-	set No_TEXT_SCROLL, [hl]
+	set NO_TEXT_SCROLL, [hl]
 	hlcoord 0, 0
 	ld b, 3
 	ld c, 7
@@ -901,7 +901,7 @@ StartMenu_PrintBugContestStatus: ; 24be7
 	ld hl, Options
 	ld a, [hl]
 	push af
-	set No_TEXT_SCROLL, [hl]
+	set NO_TEXT_SCROLL, [hl]
 	call StartMenu_DrawBugContestStatusBox
 	hlcoord 1, 5
 	ld de, .Balls_EN
@@ -1456,7 +1456,7 @@ PlayBattleMusic: ; 2ee6c
 	cp CHAMPION
 	jr z, .done
 	
-	ld de, MUSIC_CHAMPION_BATTLE_SINNoH
+	ld de, MUSIC_CHAMPION_BATTLE_SINNOH
 	cp RED
 	jr z, .done
 
@@ -1826,7 +1826,7 @@ DisplayDexEntry: ; 4424d
 	push de
 ; Print dex number
 	hlcoord 2, 8
-	ld a, $5c ; No
+	ld a, $5c ; NO
 	ld [hli], a
 	ld a, $5d ; .
 	ld [hli], a
@@ -1996,7 +1996,7 @@ Special_MoveTutor: ; 4925b
 	jr .enter_loop
 
 .loop
-	callba ChooseMonToLearnTMHM_NoRefresh
+	callba ChooseMonToLearnTMHM_NORefresh
 	jr c, .cancel
 .enter_loop
 	call CheckCanLearnMoveTutorMove
@@ -2113,7 +2113,7 @@ AskRememberPassword: ; 4ae12
 .DoMenu: ; 4ae1f
 	lb bc, 14, 7
 	push bc
-	ld hl, YesNoMenuDataHeader
+	ld hl, YesNOMenuDataHeader
 	call CopyMenuDataHeader
 	pop bc
 	ld a, b
@@ -2711,7 +2711,7 @@ CheckPokerus: ; 4d860
 ; Get number of monsters to iterate over
 	ld a, [PartyCount]
 	and a
-	jr z, .NoPokerus
+	jr z, .NOPokerus
 	ld b, a
 ; Check each monster in the party for Pokerus
 	ld hl, PartyMon1PokerusStatus
@@ -2724,7 +2724,7 @@ CheckPokerus: ; 4d860
 	add hl, de
 	dec b
 	jr nz, .Check
-.NoPokerus:
+.NOPokerus:
 	and a
 	ret
 .HasPokerus:
@@ -3004,7 +3004,7 @@ CheckPartyFullAfterContest: ; 4d9e5
 	ld de, wMonOrItemNameBuffer
 	ld bc, PKMN_NAME_LENGTH
 	call CopyBytes
-	call GiveANickname_YesNo
+	call GiveANickname_YesNO
 	jr c, .Party_SkipNickname
 	ld a, [PartyCount]
 	dec a
@@ -3067,7 +3067,7 @@ CheckPartyFullAfterContest: ; 4d9e5
 	ld a, [CurPartySpecies]
 	ld [wd265], a
 	call GetPokemonName
-	call GiveANickname_YesNo
+	call GiveANickname_YesNO
 	ld hl, StringBuffer1
 	jr c, .Box_SkipNickname
 	ld a, BOXMON
@@ -3111,7 +3111,7 @@ CheckPartyFullAfterContest: ; 4d9e5
 	ld [ScriptVar], a
 	ret
 
-GiveANickname_YesNo: ; 4db3b
+GiveANickname_YesNO: ; 4db3b
 	ld hl, TextJump_GiveANickname
 	call PrintText
 	jp YesNoBox
@@ -3286,10 +3286,10 @@ CatchTutorial:: ; 4e554
 	ret
 
 .Dude: ; 4e5da
-	db "DUDE@"
+	db "Dude@"
 
 .AutoInput: ; 4e5df
-	db No_INPUT, $ff ; end
+	db NO_INPUT, $ff ; end
 
 INCLUDE "engine/evolution_animation.asm"
 
@@ -3455,7 +3455,7 @@ FemaleTrainers: ; 4e976
 	db TEACHER
 	db SWIMMERF
 	db PICNICKER
-	db KIMONo_GIRL
+	db KIMONO_GIRL
 	db POKEFANF
 	db COOLTRAINERF
 FemaleTrainersEnd:
@@ -3685,99 +3685,6 @@ GetPkmnSpecies: ; 508d5
 
 INCLUDE "text/types.asm"
 
-Function50a28: ; 50a28
-; XXX
-	ld hl, .Strings
-	ld a, [TrainerClass]
-	dec a
-	ld c, a
-	ld b, 0
-	add hl, bc
-	add hl, bc
-	ld a, [hli]
-	ld h, [hl]
-	ld l, a
-	ld de, StringBuffer1
-.copy
-	ld a, [hli]
-	ld [de], a
-	inc de
-	cp "@"
-	jr nz, .copy
-	ret
-
-.Strings: ; 50a42
-; Untranslated trainer class names from Red.
-	dw .Youngster
-	dw .BugCatcher
-	dw .Lass
-	dw OTClassName
-	dw .JrTrainerM
-	dw .JrTrainerF
-	dw .Pokemaniac
-	dw .SuperNerd
-	dw OTClassName
-	dw OTClassName
-	dw .Burglar
-	dw .Engineer
-	dw .Jack
-	dw OTClassName
-	dw .Swimmer
-	dw OTClassName
-	dw OTClassName
-	dw .Beauty
-	dw OTClassName
-	dw .Rocker
-	dw .Juggler
-	dw OTClassName
-	dw OTClassName
-	dw .Blackbelt
-	dw OTClassName
-	dw .ProfOak
-	dw .Chief
-	dw .Scientist
-	dw OTClassName
-	dw .Rocket
-	dw .CooltrainerM
-	dw .CooltrainerF
-	dw OTClassName
-	dw OTClassName
-	dw OTClassName
-	dw OTClassName
-	dw OTClassName
-	dw OTClassName
-	dw OTClassName
-	dw OTClassName
-	dw OTClassName
-	dw OTClassName
-	dw OTClassName
-	dw OTClassName
-	dw OTClassName
-	dw OTClassName
-	dw OTClassName
-
-.Youngster:    db "たんパン@"
-.BugCatcher:   db "むしとり@"
-.Lass:         db "ミニスカ@"
-.JrTrainerM:   db "ボーイ@"
-.JrTrainerF:   db "ガール@"
-.Pokemaniac:   db "マニア@"
-.SuperNerd:    db "りかけい@"
-.Burglar:      db "どろぼう@"
-.Engineer:     db "ォヤジ@"
-.Jack:         db "ジャック@"
-.Swimmer:      db "かいパン@"
-.Beauty:       db "おねえさん@"
-.Rocker:       db "グループ@"
-.Juggler:      db "ジャグラー@"
-.Blackbelt:    db "からて@"
-.ProfOak:      db "ォーキド@"
-.Chief:        db "チーフ@"
-.Scientist:    db "けんきゅういん@"
-.Rocket:       db "だんいん@"
-.CooltrainerM: db "エりート♂@"
-.CooltrainerF: db "エりート♀@"
-
 DrawPlayerHP: ; 50b0a
 	ld a, $1
 	jr DrawHP
@@ -3895,11 +3802,11 @@ PrintTempMonStats: ; 50b7b
 	ret
 
 .StatNames: ; 50bb5
-	db   "ATTACK"
-	next "DEFENSE"
-	next "SPCL.ATK"
-	next "SPCL.DEF"
-	next "SPEED"
+	db   "Attack"
+	next "Defense"
+	next "Sp. Atk"
+	next "Sp. Def"
+	next "Speed"
 	next "@"
 
 GetGender: ; 50bdd
@@ -4165,7 +4072,7 @@ PlaceStatusString: ; 50d0a
 	ret
 
 FntString: ; 50d22
-	db "FNT@"
+	db "Fnt@"
 
 CopyStatusString: ; 50d25
 	ld a, [de]
@@ -4206,11 +4113,11 @@ PlaceNonFaintStatus: ; 50d2e
 	pop de
 	ret
 
-SlpString: db "SLP@"
-PsnString: db "PSN@"
-BrnString: db "BRN@"
-FrzString: db "FRZ@"
-ParString: db "PAR@"
+SlpString: db "Slp@"
+PsnString: db "Psn@"
+BrnString: db "Brn@"
+FrzString: db "Frz@"
+ParString: db "Par@"
 
 ListMoves: ; 50d6f
 ; List moves at hl, spaced every [Buffer1] tiles.
@@ -4654,20 +4561,6 @@ INCLUDE "engine/move_mon_wo_mail.asm"
 PokemonNames::
 INCLUDE "data/pokemon_names.asm"
 
-Unknown_53d84: ; unreferenced
-	db $1a, $15
-	db $33, $16
-	db $4b, $17
-	db $62, $18
-	db $79, $19
-	db $90, $1a
-	db $a8, $1b
-	db $c4, $1c
-	db $e0, $1d
-	db $f6, $1e
-	db $ff, $1f
-	db $ff, $20
-
 UnknownEggPic:: ; 53d9c
 ; Another egg pic. This is shifted up a few pixels.
 INCBIN "gfx/misc/unknown_egg.5x5.2bpp.lz"
@@ -4785,14 +4678,14 @@ ChrisNameMenuHeader: ; 882b5
 .MaleNames: ; 882be
 	db $91 ; flags
 	db 5 ; items
-	db "NEW NAME@"
+	db "New Name@"
 MalePlayerNameArray: ; 882c9
-	db "AMMON@"
-	db "NEPHI@"
-	db "JACOB@"
-	db "JAROM@"
+	db "Ammon@"
+	db "Ishmael@"
+	db "Jacob@"
+	db "Isaiah@"
 	db 2 ; displacement
-	db " NAME @" ; title
+	db " Name @" ; title
 
 KrisNameMenuHeader: ; 882e5
 	db $40 ; flags
@@ -4805,14 +4698,14 @@ KrisNameMenuHeader: ; 882e5
 .FemaleNames: ; 882ee
 	db $91 ; flags
 	db 5 ; items
-	db "NEW NAME@"
+	db "New Name@"
 FemalePlayerNameArray: ; 882f9
-	db "SARIAH@"
-	db "RUTH@"
-	db "ESTHER@"
-	db "EMMA@"
+	db "Sariah@"
+	db "Ruth@"
+	db "Esther@"
+	db "Emma@"
 	db 2 ; displacement
-	db " NAME @" ; title
+	db " Name @" ; title
 
 GetPlayerNameArray: ; 88318 This Function is never called
 	ld hl, PlayerName
@@ -5848,29 +5741,29 @@ _DudeAutoInput: ; 1de299
 DudeAutoInputs:
 
 DudeAutoInput_A: ; 1de29f
-	db No_INPUT, $50
+	db NO_INPUT, $50
 	db A_BUTTON, $00
-	db No_INPUT, $ff ; end
+	db NO_INPUT, $ff ; end
 
 DudeAutoInput_RightA: ; 1de2a5
-	db No_INPUT, $08
+	db NO_INPUT, $08
 	db D_RIGHT,  $00
-	db No_INPUT, $08
+	db NO_INPUT, $08
 	db A_BUTTON, $00
-	db No_INPUT, $ff ; end
+	db NO_INPUT, $ff ; end
 
 DudeAutoInput_DownA: ; 1de2af
-	db No_INPUT, $fe
-	db No_INPUT, $fe
-	db No_INPUT, $fe
-	db No_INPUT, $fe
+	db NO_INPUT, $fe
+	db NO_INPUT, $fe
+	db NO_INPUT, $fe
+	db NO_INPUT, $fe
 	db D_DOWN,   $00
-	db No_INPUT, $fe
-	db No_INPUT, $fe
-	db No_INPUT, $fe
-	db No_INPUT, $fe
+	db NO_INPUT, $fe
+	db NO_INPUT, $fe
+	db NO_INPUT, $fe
+	db NO_INPUT, $fe
 	db A_BUTTON, $00
-	db No_INPUT, $ff ; end
+	db NO_INPUT, $ff ; end
 
 TownMap_ConvertLineBreakCharacters: ; 1de2c5
 	ld hl, StringBuffer1

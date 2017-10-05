@@ -192,7 +192,7 @@ TryWildEncounter:: ; 2a0e7
 	ret
 
 .no_battle
-	xor a ; BATTLETYPE_NoRMAL
+	xor a ; BATTLETYPE_NORMAL
 	ld [TempWildMonSpecies], a
 	ld [BattleType], a
 	ld a, 1
@@ -333,7 +333,7 @@ ChooseWildEncounter: ; 2a14f
 	jr c, .nowildbattle
 
 	ld a, b ; This is in the wrong place.
-	cp UNoWN
+	cp UNOWN
 	jr nz, .done
 
 	ld a, [UnlockedUnowns]
@@ -453,7 +453,7 @@ _SwarmWildmonCheck
 	cp e
 	jr nz, .CheckYanma
 	call LookUpWildmonsForMapDE
-	jr nc, _NoSwarmWildmon
+	jr nc, _NOSwarmWildmon
 	scf
 	ret
 
@@ -462,19 +462,19 @@ _SwarmWildmonCheck
 	ld hl, SwarmFlags
 	bit 3, [hl]
 	pop hl
-	jr z, _NoSwarmWildmon
+	jr z, _NOSwarmWildmon
 	ld a, [wYanmaMapGroup]
 	cp d
-	jr nz, _NoSwarmWildmon
+	jr nz, _NOSwarmWildmon
 	ld a, [wYanmaMapNumber]
 	cp e
-	jr nz, _NoSwarmWildmon
+	jr nz, _NOSwarmWildmon
 	call LookUpWildmonsForMapDE
-	jr nc, _NoSwarmWildmon
+	jr nc, _NOSwarmWildmon
 	scf
 	ret
 
-_NoSwarmWildmon
+_NOSwarmWildmon
 	and a
 	ret
 

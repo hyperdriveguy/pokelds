@@ -84,7 +84,7 @@ MoveDeletion:
 ; 0x2c5e5
 
 .DeclinedDeletionText: ; 0x2c5e5
-	; No? Come visit me again.
+	; NO? Come visit me again.
 	text_jump UnknownText_0x1c5f36
 	db "@"
 ; 0x2c5ea

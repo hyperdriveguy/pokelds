@@ -203,7 +203,7 @@ Route31MailRecipientScript:
 	checkpokeitem ReceivedSpearowMailText
 	if_equal $0, .WrongMail
 	if_equal $2, .Refused
-	if_equal $3, .NoMail
+	if_equal $3, .NOMail
 	if_equal $4, .LastMon
 	writetext Text_Route31HandOverMailMon
 	buttonsound
@@ -211,12 +211,12 @@ Route31MailRecipientScript:
 	buttonsound
 	setevent EVENT_GAVE_KENYA
 	verbosegiveitem TM_NIGHTMARE
-	iffalse .NoRoomForItems
+	iffalse .NORoomForItems
 	setevent EVENT_GOT_TM50_NIGHTMARE
 .DescribeNightmare:
 	writetext Text_Route31DescribeNightmare
 	waitbutton
-.NoRoomForItems:
+.NORoomForItems:
 	closetext
 	end
 
@@ -226,7 +226,7 @@ Route31MailRecipientScript:
 	closetext
 	end
 
-.NoMail:
+.NOMail:
 	writetext Text_Route31MissingMail
 	waitbutton
 	closetext

@@ -33,7 +33,7 @@ SwimmerfNikkiScript:
 	end
 
 TrainerFisherArnold:
-	trainer EVENT_BEAT_FISHER_ARNoLD, FISHER, ARNoLD, FisherArnoldSeenText, FisherArnoldBeatenText, 0, FisherArnoldScript
+	trainer EVENT_BEAT_FISHER_ARNOLD, FISHER, ARNOLD, FisherArnoldSeenText, FisherArnoldBeatenText, 0, FisherArnoldScript
 
 FisherArnoldScript:
 	end_if_just_battled

@@ -410,7 +410,7 @@ UnknownText_0x18d2ea:
 	text "Hm… Good to see"
 	line "you here."
 
-	para "No need to explain"
+	para "NO need to explain"
 	line "why you came."
 
 	para "CLAIR sent you"

@@ -443,11 +443,11 @@ Special_CheckCoins: ; c3ae
 	ret
 
 .no_coins
-	ld hl, .NoCoinsText
+	ld hl, .NOCoinsText
 	jr .print
 
 .no_coin_case
-	ld hl, .NoCoinCaseText
+	ld hl, .NOCoinCaseText
 
 .print
 	call PrintText
@@ -455,13 +455,13 @@ Special_CheckCoins: ; c3ae
 	ret
 ; c3d1
 
-.NoCoinsText: ; 0xc3d1
+.NOCoinsText: ; 0xc3d1
 	; You have no coins.
 	text_jump UnknownText_0x1bd3d7
 	db "@"
 ; 0xc3d6
 
-.NoCoinCaseText: ; 0xc3d6
+.NOCoinCaseText: ; 0xc3d6
 	; You don't have a COIN CASE.
 	text_jump UnknownText_0x1bd3eb
 	db "@"

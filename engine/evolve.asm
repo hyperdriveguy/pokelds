@@ -307,7 +307,7 @@ EvolveAfterBattle_MasterLoop
 	call SetSeenAndCaughtMon
 
 	ld a, [wd265]
-	cp UNoWN
+	cp UNOWN
 	jr nz, .skip_unown
 
 	ld hl, TempMonDVs
@@ -354,7 +354,7 @@ EvolveAfterBattle_MasterLoop
 UpdateSpeciesNameIfNotNicknamed: ; 42414
 	ld a, [CurSpecies]
 	push af
-	ld a, [BaseDexNo]
+	ld a, [BaseDexNO]
 	ld [wd265], a
 	call GetPokemonName
 	pop af

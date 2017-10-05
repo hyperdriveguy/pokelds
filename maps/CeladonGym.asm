@@ -216,7 +216,7 @@ PicnickerTanyaBeatenText:
 
 UnknownText_0x72e8e:
 	text "Oh, look at all"
-	line "your BADGES. No"
+	line "your BADGES. NO"
 
 	para "wonder I couldn't"
 	line "win!"

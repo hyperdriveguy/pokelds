@@ -297,8 +297,8 @@ BattleText_CantEscape2: ; 0x80b3b
 	prompt
 ; 0x80b49
 
-BattleText_TheresNoEscapeFromTrainerBattle: ; 0x80b49
-	text "No! There's no"
+BattleText_TheresNOEscapeFromTrainerBattle: ; 0x80b49
+	text "NO! There's no"
 	line "running from a"
 	cont "trainer battle!"
 	prompt

@@ -206,7 +206,7 @@ UnknownText_0x1884fb:
 	cont "okay?"
 
 	para "I very busy."
-	line "No time for talk-"
+	line "NO time for talk-"
 	cont "ing with you. Not"
 	cont "good for me if"
 	cont "seen by somebody."

@@ -19,7 +19,7 @@ FlowerShopTeacherScript:
 	checkevent EVENT_TALKED_TO_FLORIA_AT_FLOWER_SHOP
 	iffalse .Lalala
 	checkflag ENGINE_PLAINBADGE
-	iffalse .NoPlainBadge
+	iffalse .NOPlainBadge
 	faceplayer
 	opentext
 	writetext UnknownText_0x554c2
@@ -42,7 +42,7 @@ FlowerShopTeacherScript:
 .GotSquirtbottle:
 	jumptextfaceplayer UnknownText_0x5550d
 
-.NoPlainBadge:
+.NOPlainBadge:
 	jumptextfaceplayer UnknownText_0x55463
 
 .HaventMetFloria:

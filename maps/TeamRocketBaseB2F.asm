@@ -777,7 +777,7 @@ UnknownText_0x6d994:
 
 	para "…"
 
-	para "I see. No, you're"
+	para "I see. NO, you're"
 	line "right."
 
 	para "If you would give"
@@ -942,8 +942,8 @@ TeamRocketBaseB2F_MapEventHeader:
 
 .Signposts:
 	db 23
-	signpost 12, 14, SIGNPOST_IFNoTSET, MapTeamRocketBaseB2FSignpostPtr1
-	signpost 12, 15, SIGNPOST_IFNoTSET, MapTeamRocketBaseB2FSignpostPtr1
+	signpost 12, 14, SIGNPOST_IFNOTSET, MapTeamRocketBaseB2FSignpostPtr1
+	signpost 12, 15, SIGNPOST_IFNOTSET, MapTeamRocketBaseB2FSignpostPtr1
 	signpost 9, 17, SIGNPOST_READ, MapTeamRocketBaseB2FSignpost21Script
 	signpost 9, 16, SIGNPOST_READ, MapTeamRocketBaseB2FSignpost21Script
 	signpost 9, 15, SIGNPOST_READ, MapTeamRocketBaseB2FSignpost21Script

@@ -59,12 +59,12 @@ GoldenrodVendingMachine:
 	jump .Start
 
 .NotEnoughMoney:
-	writetext GoldenrodVendingNoMoneyText
+	writetext GoldenrodVendingNOMoneyText
 	waitbutton
 	jump .Start
 
 .NotEnoughSpace:
-	writetext GoldenrodVendingNoSpaceText
+	writetext GoldenrodVendingNOSpaceText
 	waitbutton
 	jump .Start
 
@@ -109,12 +109,12 @@ GoldenrodClangText:
 	db "popped out!"
 	done
 
-GoldenrodVendingNoMoneyText:
+GoldenrodVendingNOMoneyText:
 	text "Oops, not enough"
 	line "money."
 	done
 
-GoldenrodVendingNoSpaceText:
+GoldenrodVendingNOSpaceText:
 	text "There's no more"
 	line "room for stuff."
 	done

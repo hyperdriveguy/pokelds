@@ -2,7 +2,7 @@ ReturnFromMapSetupScript:: ; b8000
 	xor a
 	ld [hBGMapMode], a
 	; For some reson, GameFreak chose to use a callba here instead of just falling through.
-	; No other function in the game references the function at 2E:400A, here labeled
+	; NO other function in the game references the function at 2E:400A, here labeled
 	; ReturnFromMapSetupScript.inefficientcallba.
 	callba .inefficientcallba ; this is a waste of 6 ROM bytes and 6 stack bytes
 	ret
@@ -618,7 +618,7 @@ TreeMons4: ; b836c
 
 TreeMons5: ; b8392
 	db 50, HOOTHOOT,   10
-	db 15, VENoNAT,    10
+	db 15, VENONAT,    10
 	db 15, HOOTHOOT,   10
 	db 10, EXEGGCUTE,  10
 	db  5, EXEGGCUTE,  10
@@ -637,7 +637,7 @@ TreeMons6: ; b83b8
 	db 50, HOOTHOOT,   10
 	db 15, PINECO,     10
 	db 15, PINECO,     10
-	db 10, NoCTOWL,    10
+	db 10, NOCTOWL,    10
 	db  5, BUTTERFREE, 10
 	db  5, BEEDRILL,   10
 	db -1
@@ -672,21 +672,21 @@ GetTreeMon: ; b83e5
 	ld a, 10
 	call RandomRange
 	and a
-	jr nz, NoTreeMon
+	jr nz, NOTreeMon
 	jr SelectTreeMon
 
 .good
 	ld a, 10
 	call RandomRange
 	cp 5
-	jr nc, NoTreeMon
+	jr nc, NOTreeMon
 	jr SelectTreeMon
 
 .rare
 	ld a, 10
 	call RandomRange
 	cp 8
-	jr nc, NoTreeMon
+	jr nc, NOTreeMon
 	jr .skip
 .skip
 	ld a, [hli]
@@ -712,7 +712,7 @@ SelectTreeMon: ; b841f
 .ok
 	ld a, [hli]
 	cp $ff
-	jr z, NoTreeMon
+	jr z, NOTreeMon
 
 	ld a, [hli]
 	ld [TempWildMonSpecies], a
@@ -721,7 +721,7 @@ SelectTreeMon: ; b841f
 	scf
 	ret
 
-NoTreeMon: ; b843b
+NOTreeMon: ; b843b
 	xor a
 	ld [TempWildMonSpecies], a
 	ld [CurPartyLevel], a

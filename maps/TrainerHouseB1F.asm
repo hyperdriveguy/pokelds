@@ -45,14 +45,14 @@ TrainerHouseReceptionistScript:
 	waitbutton
 	closetext
 	special SpecialTrainerHouse
-	iffalse .NoSpecialBattle
+	iffalse .NOSpecialBattle
 	winlosstext TrainerHouseB1FCalBeatenText, 0
 	setlasttalked TRAINERHOUSEB1F_CHRIS
 	loadtrainer CAL, CAL2
 	startbattle
 	reloadmapafterbattle
 	iffalse .End
-.NoSpecialBattle:
+.NOSpecialBattle:
 	winlosstext TrainerHouseB1FCalBeatenText, 0
 	setlasttalked TRAINERHOUSEB1F_CHRIS
 	loadtrainer CAL, CAL3

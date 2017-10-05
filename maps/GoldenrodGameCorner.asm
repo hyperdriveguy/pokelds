@@ -60,7 +60,7 @@ GoldenrodGmeCornerTMVendorScript:
 	writetext GoldenrodGameCornerPrizeVendorIntroText
 	waitbutton
 	checkitem COIN_CASE
-	iffalse GoldenrodGameCornerPrizeVendor_NoCoinCaseScript
+	iffalse GoldenrodGameCornerPrizeVendor_NOCoinCaseScript
 	writetext GoldenrodGameCornerPrizeVendorWhichPrizeText
 GoldenrodGmeCornerTMVendor_LoopScript: ; 056c36
 	special Special_DisplayCoinCaseBalance
@@ -79,7 +79,7 @@ GoldenrodGmeCornerTMVendor_LoopScript: ; 056c36
 	scall GoldenrodGameCornerPrizeVendor_ConfirmPurchaseScript
 	iffalse GoldenrodGameCornerPrizeVendor_CancelPurchaseScript
 	giveitem TM_THUNDER
-	iffalse GoldenrodGameCornerPrizeMonVendor_NoRoomForPrizeScript
+	iffalse GoldenrodGameCornerPrizeMonVendor_NORoomForPrizeScript
 	takecoins 5500
 	jump GoldenrodGmeCornerTMVendor_FinishScript
 
@@ -90,7 +90,7 @@ GoldenrodGmeCornerTMVendor_LoopScript: ; 056c36
 	scall GoldenrodGameCornerPrizeVendor_ConfirmPurchaseScript
 	iffalse GoldenrodGameCornerPrizeVendor_CancelPurchaseScript
 	giveitem TM_BLIZZARD
-	iffalse GoldenrodGameCornerPrizeMonVendor_NoRoomForPrizeScript
+	iffalse GoldenrodGameCornerPrizeMonVendor_NORoomForPrizeScript
 	takecoins 5500
 	jump GoldenrodGmeCornerTMVendor_FinishScript
 
@@ -101,7 +101,7 @@ GoldenrodGmeCornerTMVendor_LoopScript: ; 056c36
 	scall GoldenrodGameCornerPrizeVendor_ConfirmPurchaseScript
 	iffalse GoldenrodGameCornerPrizeVendor_CancelPurchaseScript
 	giveitem TM_FIRE_BLAST
-	iffalse GoldenrodGameCornerPrizeMonVendor_NoRoomForPrizeScript
+	iffalse GoldenrodGameCornerPrizeMonVendor_NORoomForPrizeScript
 	takecoins 5500
 	jump GoldenrodGmeCornerTMVendor_FinishScript
 
@@ -123,7 +123,7 @@ GoldenrodGameCornerPrizeVendor_NotEnoughCoinsScript:
 	closetext
 	end
 
-GoldenrodGameCornerPrizeMonVendor_NoRoomForPrizeScript:
+GoldenrodGameCornerPrizeMonVendor_NORoomForPrizeScript:
 	writetext GoldenrodGameCornerPrizeVendorNoMoreRoomText
 	waitbutton
 	closetext
@@ -135,8 +135,8 @@ GoldenrodGameCornerPrizeVendor_CancelPurchaseScript:
 	closetext
 	end
 
-GoldenrodGameCornerPrizeVendor_NoCoinCaseScript:
-	writetext GoldenrodGameCornerPrizeVendorNoCoinCaseText
+GoldenrodGameCornerPrizeVendor_NOCoinCaseScript:
+	writetext GoldenrodGameCornerPrizeVendorNOCoinCaseText
 	waitbutton
 	closetext
 	end
@@ -164,7 +164,7 @@ GoldenrodGameCornerPrizeMonVendorScript:
 	writetext GoldenrodGameCornerPrizeVendorIntroText
 	waitbutton
 	checkitem COIN_CASE
-	iffalse GoldenrodGameCornerPrizeVendor_NoCoinCaseScript
+	iffalse GoldenrodGameCornerPrizeVendor_NOCoinCaseScript
 .loop
 	writetext GoldenrodGameCornerPrizeVendorWhichPrizeText
 	special Special_DisplayCoinCaseBalance
@@ -180,7 +180,7 @@ GoldenrodGameCornerPrizeMonVendorScript:
 	checkcoins 100
 	if_equal $2, GoldenrodGameCornerPrizeVendor_NotEnoughCoinsScript
 	checkcode VAR_PARTYCOUNT
-	if_equal $6, GoldenrodGameCornerPrizeMonVendor_NoRoomForPrizeScript
+	if_equal $6, GoldenrodGameCornerPrizeMonVendor_NORoomForPrizeScript
 	pokenamemem ABRA, $0
 	scall GoldenrodGameCornerPrizeVendor_ConfirmPurchaseScript
 	iffalse GoldenrodGameCornerPrizeVendor_CancelPurchaseScript
@@ -198,7 +198,7 @@ GoldenrodGameCornerPrizeMonVendorScript:
 	checkcoins 800
 	if_equal $2, GoldenrodGameCornerPrizeVendor_NotEnoughCoinsScript
 	checkcode VAR_PARTYCOUNT
-	if_equal $6, GoldenrodGameCornerPrizeMonVendor_NoRoomForPrizeScript
+	if_equal $6, GoldenrodGameCornerPrizeMonVendor_NORoomForPrizeScript
 	pokenamemem CUBONE, $0
 	scall GoldenrodGameCornerPrizeVendor_ConfirmPurchaseScript
 	iffalse GoldenrodGameCornerPrizeVendor_CancelPurchaseScript
@@ -216,7 +216,7 @@ GoldenrodGameCornerPrizeMonVendorScript:
 	checkcoins 1500
 	if_equal $2, GoldenrodGameCornerPrizeVendor_NotEnoughCoinsScript
 	checkcode VAR_PARTYCOUNT
-	if_equal $6, GoldenrodGameCornerPrizeMonVendor_NoRoomForPrizeScript
+	if_equal $6, GoldenrodGameCornerPrizeMonVendor_NORoomForPrizeScript
 	pokenamemem WOBBUFFET, $0
 	scall GoldenrodGameCornerPrizeVendor_ConfirmPurchaseScript
 	iffalse GoldenrodGameCornerPrizeVendor_CancelPurchaseScript
@@ -362,7 +362,7 @@ GoldenrodGameCornerPrizeVendorQuitText:
 	cont "come again!"
 	done
 
-GoldenrodGameCornerPrizeVendorNoCoinCaseText:
+GoldenrodGameCornerPrizeVendorNOCoinCaseText:
 	text "Oh? You don't have"
 	line "a COIN CASE."
 	done

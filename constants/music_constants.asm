@@ -1,7 +1,7 @@
 	const_def
 
 	const MUSIC_NONE                         ; 00
-	const MUSIC_TITLE                        ; 01
+	const MUSIC_OLD_TITLE                    ; 01
 	const MUSIC_ROUTE_1                      ; 02
 	const MUSIC_ROUTE_3                      ; 03
 	const MUSIC_ROUTE_12                     ; 04
@@ -39,7 +39,7 @@
 	const MUSIC_CREDITS                      ; 24
 	const MUSIC_AZALEA_TOWN                  ; 25
 	const MUSIC_CHERRYGROVE_CITY             ; 26
-	const MUSIC_KIMONo_ENCOUNTER             ; 27
+	const MUSIC_KIMONO_ENCOUNTER             ; 27
 	const MUSIC_UNION_CAVE                   ; 28
 	const MUSIC_JOHTO_WILD_BATTLE            ; 29
 	const MUSIC_JOHTO_TRAINER_BATTLE         ; 2a
@@ -60,7 +60,7 @@
 	const MUSIC_ROCKET_ENCOUNTER             ; 39
 	const MUSIC_POKEMANIAC_ENCOUNTER         ; 3a
 	const MUSIC_SAGE_ENCOUNTER               ; 3b
-	const MUSIC_BOUNTIFUL_TOWN                ; 3c
+	const MUSIC_BOUNTIFUL_TOWN               ; 3c
 	const MUSIC_GOLDENROD_CITY               ; 3d
 	const MUSIC_VERMILION_CITY               ; 3e
 	const MUSIC_POKEMON_CHANNEL              ; 3f
@@ -111,27 +111,29 @@
 	const MUSIC_NUGGET_BRIDGE                ; 68
 	const MUSIC_CERULEAN                     ; 69
 	const MUSIC_CINNABAR                     ; 6a
-	const MUSIC_SINNoH_WILD                  ; 6b
+	const MUSIC_SINNOH_WILD                  ; 6b
 	const MUSIC_ROUTE_225                    ; 6c
 	const MUSIC_ROUTE_228                    ; 6d
-	const MUSIC_POKEMON_CENTER_SINNoH        ; 6e        
+	const MUSIC_POKEMON_CENTER_SINNOH        ; 6e        
 	const MUSIC_FOLLOW_ME                    ; 6f
-	const MUSIC_SINNoH_BIKE                  ; 70
-	const MUSIC_WIN_TRAINER_SINNoH           ; 71   
-	const MUSIC_WIN_POKE_SINNoH              ; 72
-	const MUSIC_SINNoH_SURFING               ; 73
+	const MUSIC_SINNOH_BIKE                  ; 70
+	const MUSIC_WIN_TRAINER_SINNOH           ; 71   
+	const MUSIC_WIN_POKE_SINNOH              ; 72
+	const MUSIC_SINNOH_SURFING               ; 73
 	const MUSIC_JOHTO_TRAINER_BATTLE_NIGHT   ; 74           
 	const MUSIC_ROUTE_205                    ; 75
-	const MUSIC_CHAMPION_BATTLE_SINNoH       ; 76       
+	const MUSIC_CHAMPION_BATTLE_SINNOH       ; 76       
 	const MUSIC_ROUTE_203                    ; 77
 	const MUSIC_ROUTE_209                    ; 78
 	const MUSIC_ROUTE_206                    ; 79
-	const MUSIC_CATCH_POKE_SINNoH            ; 7a  
+	const MUSIC_CATCH_POKE_SINNOH            ; 7a  
 	const MUSIC_ROUTE_210                    ; 7b
 
 ; Songs added by Hyperdriveguy	
 	const MUSIC_BOOK_OF_MORMON_STORIES       ; 7c
 	const MUSIC_I_HOPE_THEY_CALL_ME          ; 7d
 	const MUSIC_LOVE_AT_HOME                 ; 7e
+	const MUSIC_TITLE                        ; 7f
+	const MUSIC_BOOK_OF_MORMON_STORIES_TITLE ; 80
 
 MUSIC_MAHOGANY_MART EQU $64 ; leftover from gold

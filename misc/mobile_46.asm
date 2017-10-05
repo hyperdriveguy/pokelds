@@ -5681,7 +5681,7 @@ Text_CancelBattleRoomChallenge: ; 0x11ab4a
 
 Text_ExitGymLeaderHonorRoll: ; 0x11ab6e
 	text "Exit GYM LEADER"
-	line "HONoR ROLL?"
+	line "HONOR ROLL?"
 	done
 ; 0x11ab8b
 

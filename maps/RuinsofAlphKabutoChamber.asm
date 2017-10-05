@@ -72,7 +72,7 @@ MapRuinsofAlphKabutoChamberSignpost2Script:
 UnknownScript_0x58778:
 	setevent EVENT_RUINS_OF_ALPH_INNER_CHAMBER_TOURISTS
 	setevent EVENT_SOLVED_KABUTO_PUZZLE
-	setflag ENGINE_UNLOCKED_UNoWNS_1
+	setflag ENGINE_UNLOCKED_UNOWNS_1
 	setevent EVENT_RUINS_OF_ALPH_KABUTO_CHAMBER_RECEPTIONIST
 	domaptrigger RUINS_OF_ALPH_INNER_CHAMBER, $1
 	earthquake 30
@@ -92,7 +92,7 @@ UnknownScript_0x58778:
 ScientistScript_0x587a8:
 	faceplayer
 	opentext
-	checkcode VAR_UNoWNCOUNT
+	checkcode VAR_UNOWNCOUNT
 	if_equal 26, UnknownScript_0x587cf
 	checkevent EVENT_WALL_OPENED_IN_KABUTO_CHAMBER
 	iftrue UnknownScript_0x587c9
@@ -235,7 +235,7 @@ UnknownText_0x58aa7:
 
 ; possibly unused
 UnknownText_0x58ac8:
-	text "It's UNoWN text!"
+	text "It's UNOWN text!"
 	done
 
 UnknownText_0x58ad9:

@@ -179,6 +179,8 @@ INCLUDE "audio/music/custom/ihopetheycallmeonamission.asm"
 SECTION "Extra Songs 7", ROMX
 
 INCLUDE "audio/music/custom/loveathome.asm"
+INCLUDE "audio/music/custom/redeemerofisrael.asm"
+INCLUDE "audio/music/custom/bookofmormonstoriestitle.asm"
 
 SECTION "Sound Effects", ROMX
 

@@ -1,9 +1,9 @@
 const_value set 2
-	const DANCETHEATRE_KIMONo_GIRL1
-	const DANCETHEATRE_KIMONo_GIRL2
-	const DANCETHEATRE_KIMONo_GIRL3
-	const DANCETHEATRE_KIMONo_GIRL4
-	const DANCETHEATRE_KIMONo_GIRL5
+	const DANCETHEATRE_KIMONO_GIRL1
+	const DANCETHEATRE_KIMONO_GIRL2
+	const DANCETHEATRE_KIMONO_GIRL3
+	const DANCETHEATRE_KIMONO_GIRL4
+	const DANCETHEATRE_KIMONO_GIRL5
 	const DANCETHEATRE_GENTLEMAN
 	const DANCETHEATRE_RHYDON
 	const DANCETHEATRE_COOLTRAINER_M
@@ -17,7 +17,7 @@ DanceTheatre_MapScriptHeader:
 	db 0
 
 TrainerKimono_girlNaoko2:
-	trainer EVENT_BEAT_KIMONo_GIRL_NAOKO, KIMONo_GIRL, NAOKO2, Kimono_girlNaoko2SeenText, Kimono_girlNaoko2BeatenText, 0, Kimono_girlNaoko2Script
+	trainer EVENT_BEAT_KIMONO_GIRL_NAOKO, KIMONO_GIRL, NAOKO2, Kimono_girlNaoko2SeenText, Kimono_girlNaoko2BeatenText, 0, Kimono_girlNaoko2Script
 
 Kimono_girlNaoko2Script:
 	end_if_just_battled
@@ -28,7 +28,7 @@ Kimono_girlNaoko2Script:
 	end
 
 TrainerKimono_girlSayo:
-	trainer EVENT_BEAT_KIMONo_GIRL_SAYO, KIMONo_GIRL, SAYO, Kimono_girlSayoSeenText, Kimono_girlSayoBeatenText, 0, Kimono_girlSayoScript
+	trainer EVENT_BEAT_KIMONO_GIRL_SAYO, KIMONO_GIRL, SAYO, Kimono_girlSayoSeenText, Kimono_girlSayoBeatenText, 0, Kimono_girlSayoScript
 
 Kimono_girlSayoScript:
 	end_if_just_battled
@@ -39,7 +39,7 @@ Kimono_girlSayoScript:
 	end
 
 TrainerKimono_girlZuki:
-	trainer EVENT_BEAT_KIMONo_GIRL_ZUKI, KIMONo_GIRL, ZUKI, Kimono_girlZukiSeenText, Kimono_girlZukiBeatenText, 0, Kimono_girlZukiScript
+	trainer EVENT_BEAT_KIMONO_GIRL_ZUKI, KIMONO_GIRL, ZUKI, Kimono_girlZukiSeenText, Kimono_girlZukiBeatenText, 0, Kimono_girlZukiScript
 
 Kimono_girlZukiScript:
 	end_if_just_battled
@@ -50,7 +50,7 @@ Kimono_girlZukiScript:
 	end
 
 TrainerKimono_girlKuni:
-	trainer EVENT_BEAT_KIMONo_GIRL_KUNI, KIMONo_GIRL, KUNI, Kimono_girlKuniSeenText, Kimono_girlKuniBeatenText, 0, Kimono_girlKuniScript
+	trainer EVENT_BEAT_KIMONO_GIRL_KUNI, KIMONO_GIRL, KUNI, Kimono_girlKuniSeenText, Kimono_girlKuniBeatenText, 0, Kimono_girlKuniScript
 
 Kimono_girlKuniScript:
 	end_if_just_battled
@@ -61,7 +61,7 @@ Kimono_girlKuniScript:
 	end
 
 TrainerKimono_girlMiki:
-	trainer EVENT_BEAT_KIMONo_GIRL_MIKI, KIMONo_GIRL, MIKI, Kimono_girlMikiSeenText, Kimono_girlMikiBeatenText, 0, Kimono_girlMikiScript
+	trainer EVENT_BEAT_KIMONO_GIRL_MIKI, KIMONO_GIRL, MIKI, Kimono_girlMikiSeenText, Kimono_girlMikiBeatenText, 0, Kimono_girlMikiScript
 
 Kimono_girlMikiScript:
 	end_if_just_battled
@@ -78,15 +78,15 @@ GentlemanScript_0x994c6:
 	buttonsound
 	checkevent EVENT_GOT_HM03_SURF
 	iftrue UnknownScript_0x99515
-	checkevent EVENT_BEAT_KIMONo_GIRL_NAOKO
+	checkevent EVENT_BEAT_KIMONO_GIRL_NAOKO
 	iffalse UnknownScript_0x994f3
-	checkevent EVENT_BEAT_KIMONo_GIRL_SAYO
+	checkevent EVENT_BEAT_KIMONO_GIRL_SAYO
 	iffalse UnknownScript_0x994f3
-	checkevent EVENT_BEAT_KIMONo_GIRL_ZUKI
+	checkevent EVENT_BEAT_KIMONO_GIRL_ZUKI
 	iffalse UnknownScript_0x994f3
-	checkevent EVENT_BEAT_KIMONo_GIRL_KUNI
+	checkevent EVENT_BEAT_KIMONO_GIRL_KUNI
 	iffalse UnknownScript_0x994f3
-	checkevent EVENT_BEAT_KIMONo_GIRL_MIKI
+	checkevent EVENT_BEAT_KIMONO_GIRL_MIKI
 	iffalse UnknownScript_0x994f3
 	jump UnknownScript_0x99505
 
@@ -237,7 +237,7 @@ UnknownText_0x997a8:
 
 UnknownText_0x9980a:
 	text "Not only are the"
-	line "KIMONo GIRLS great"
+	line "KIMONO GIRLS great"
 
 	para "dancers, they're"
 	line "also skilled at"
@@ -254,7 +254,7 @@ UnknownText_0x99891:
 	text "Lad! If you can"
 	line "defeat all the"
 
-	para "KIMONo GIRLS, I'll"
+	para "KIMONO GIRLS, I'll"
 	line "give you a gift."
 	done
 
@@ -262,7 +262,7 @@ UnknownText_0x998d4:
 	text "Lassie, if you can"
 	line "defeat all the"
 
-	para "KIMONo GIRLS, I'll"
+	para "KIMONO GIRLS, I'll"
 	line "give you a gift."
 	done
 
@@ -290,7 +290,7 @@ UnknownText_0x9999b:
 UnknownText_0x999d5:
 	text "I wish my #mon"
 	line "were as elegant as"
-	cont "the KIMONo GIRLS…"
+	cont "the KIMONO GIRLS…"
 	done
 
 UnknownText_0x99a0a:
@@ -313,7 +313,7 @@ UnknownText_0x99a24:
 	done
 
 UnknownText_0x99aaa:
-	text "The KIMONo GIRLS"
+	text "The KIMONO GIRLS"
 	line "are so beautiful…"
 
 	para "But they have to"
@@ -356,11 +356,11 @@ DanceTheatre_MapEventHeader:
 
 .PersonEvents:
 	db 9
-	person_event SPRITE_KIMONo_GIRL, 2, 0, SPRITEMOVEDATA_SPINCOUNTERCLOCKWISE, 0, 0, -1, -1, (1 << 3) | PAL_OW_GREEN, PERSONTYPE_TRAINER, 0, TrainerKimono_girlNaoko2, -1
-	person_event SPRITE_KIMONo_GIRL, 1, 2, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, (1 << 3) | PAL_OW_BLUE, PERSONTYPE_TRAINER, 0, TrainerKimono_girlSayo, -1
-	person_event SPRITE_KIMONo_GIRL, 2, 6, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, (1 << 3) | PAL_OW_RED, PERSONTYPE_TRAINER, 0, TrainerKimono_girlZuki, -1
-	person_event SPRITE_KIMONo_GIRL, 1, 9, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, (1 << 3) | PAL_OW_BLUE, PERSONTYPE_TRAINER, 0, TrainerKimono_girlKuni, -1
-	person_event SPRITE_KIMONo_GIRL, 2, 11, SPRITEMOVEDATA_SPINCLOCKWISE, 0, 0, -1, -1, (1 << 3) | PAL_OW_GREEN, PERSONTYPE_TRAINER, 0, TrainerKimono_girlMiki, -1
+	person_event SPRITE_KIMONO_GIRL, 2, 0, SPRITEMOVEDATA_SPINCOUNTERCLOCKWISE, 0, 0, -1, -1, (1 << 3) | PAL_OW_GREEN, PERSONTYPE_TRAINER, 0, TrainerKimono_girlNaoko2, -1
+	person_event SPRITE_KIMONO_GIRL, 1, 2, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, (1 << 3) | PAL_OW_BLUE, PERSONTYPE_TRAINER, 0, TrainerKimono_girlSayo, -1
+	person_event SPRITE_KIMONO_GIRL, 2, 6, SPRITEMOVEDATA_SPINRANDOM_SLOW, 0, 0, -1, -1, (1 << 3) | PAL_OW_RED, PERSONTYPE_TRAINER, 0, TrainerKimono_girlZuki, -1
+	person_event SPRITE_KIMONO_GIRL, 1, 9, SPRITEMOVEDATA_SPINRANDOM_FAST, 0, 0, -1, -1, (1 << 3) | PAL_OW_BLUE, PERSONTYPE_TRAINER, 0, TrainerKimono_girlKuni, -1
+	person_event SPRITE_KIMONO_GIRL, 2, 11, SPRITEMOVEDATA_SPINCLOCKWISE, 0, 0, -1, -1, (1 << 3) | PAL_OW_GREEN, PERSONTYPE_TRAINER, 0, TrainerKimono_girlMiki, -1
 	person_event SPRITE_GENTLEMAN, 10, 7, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, PERSONTYPE_SCRIPT, 0, GentlemanScript_0x994c6, -1
 	person_event SPRITE_RHYDON, 8, 6, SPRITEMOVEDATA_POKEMON, 0, 0, -1, -1, (1 << 3) | PAL_OW_BLUE, PERSONTYPE_SCRIPT, 0, RhydonScript_0x9951b, -1
 	person_event SPRITE_COOLTRAINER_M, 10, 10, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, (1 << 3) | PAL_OW_RED, PERSONTYPE_SCRIPT, 0, CooltrainerMScript_0x99525, -1

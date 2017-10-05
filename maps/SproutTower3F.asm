@@ -279,7 +279,7 @@ UnknownText_0x184dfa:
 	line "stronger, so does"
 	cont "the trainer."
 
-	para "No, wait. As the"
+	para "NO, wait. As the"
 	line "trainer grows"
 
 	para "stronger, so do"

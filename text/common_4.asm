@@ -165,7 +165,7 @@ UnknownText_0x1c44c0::
 	done
 
 UnknownText_0x1c44e7::
-	text "No time left for"
+	text "NO time left for"
 	line "linking today."
 	done
 
@@ -231,7 +231,7 @@ UnknownText_0x1c4693::
 	done
 
 UnknownText_0x1c46b7::
-	text "No windows avail-"
+	text "NO windows avail-"
 	line "able for popping."
 	done
 

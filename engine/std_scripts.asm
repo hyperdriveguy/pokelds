@@ -271,19 +271,19 @@ DayToTextScript:
 	stringtotext .SaturdayText, 0
 	end
 .SundayText:
-	db "SUNDAY@"
+	db "Sunday@"
 .MondayText:
-	db "MONDAY@"
+	db "Monday@"
 .TuesdayText:
-	db "TUESDAY@"
+	db "Tuesday@"
 .WednesdayText:
-	db "WEDNESDAY@"
+	db "Wednesday@"
 .ThursdayText:
-	db "THURSDAY@"
+	db "Thursday@"
 .FridayText:
-	db "FRIDAY@"
+	db "Friday@"
 .SaturdayText:
-	db "SATURDAY@"
+	db "Saturday@"
 
 GoldenrodRocketsScript:
 	clearevent EVENT_GOLDENROD_CITY_ROCKET_TAKEOVER
@@ -304,7 +304,7 @@ BugContestResultsWarpScript:
 	special ClearBGPalettes
 	scall BugContestResults_CopyContestantsToResults
 	setevent EVENT_ROUTE_36_NATIONAL_PARK_GATE_OFFICER_CONTEST_DAY
-	clearevent EVENT_ROUTE_36_NATIONAL_PARK_GATE_OFFICER_NoT_CONTEST_DAY
+	clearevent EVENT_ROUTE_36_NATIONAL_PARK_GATE_OFFICER_NOT_CONTEST_DAY
 	setevent EVENT_WARPED_FROM_ROUTE_35_NATIONAL_PARK_GATE
 	warp ROUTE_36_NATIONAL_PARK_GATE, $0, $4
 	applymovement PLAYER, Movement_ContestResults_WalkAfterWarp
@@ -328,7 +328,7 @@ BugContestResultsScript:
 	buttonsound
 	waitsfx
 	verbosegiveitem BERRY
-	iffalse BugContestResults_NoRoomForBerry
+	iffalse BugContestResults_NORoomForBerry
 
 BugContestResults_DidNotWin
 	farwritetext ContestResults_DidNotWinText
@@ -387,7 +387,7 @@ BugContestResults_FirstPlace ; 0xbc31e
 	farwritetext ContestResults_PlayerWonAPrizeText
 	waitbutton
 	verbosegiveitem SUN_STONE
-	iffalse BugContestResults_NoRoomForSunStone
+	iffalse BugContestResults_NORoomForSunStone
 	jump BugContestResults_ReturnAfterWinnersPrize
 ; 0xbc332
 
@@ -396,7 +396,7 @@ BugContestResults_SecondPlace ; 0xbc332
 	farwritetext ContestResults_PlayerWonAPrizeText
 	waitbutton
 	verbosegiveitem EVERSTONE
-	iffalse BugContestResults_NoRoomForEverstone
+	iffalse BugContestResults_NORoomForEverstone
 	jump BugContestResults_ReturnAfterWinnersPrize
 ; 0xbc343
 
@@ -405,33 +405,33 @@ BugContestResults_ThirdPlace ; 0xbc343
 	farwritetext ContestResults_PlayerWonAPrizeText
 	waitbutton
 	verbosegiveitem GOLD_BERRY
-	iffalse BugContestResults_NoRoomForGoldBerry
+	iffalse BugContestResults_NORoomForGoldBerry
 	jump BugContestResults_ReturnAfterWinnersPrize
 ; 0xbc354
 
-BugContestResults_NoRoomForSunStone ; 0xbc354
-	farwritetext BugContestPrizeNoRoomText
+BugContestResults_NORoomForSunStone ; 0xbc354
+	farwritetext BugContestPrizeNORoomText
 	buttonsound
 	setevent EVENT_CONTEST_OFFICER_HAS_SUN_STONE
 	jump BugContestResults_ReturnAfterWinnersPrize
 ; 0xbc35f
 
-BugContestResults_NoRoomForEverstone ; 0xbc35f
-	farwritetext BugContestPrizeNoRoomText
+BugContestResults_NORoomForEverstone ; 0xbc35f
+	farwritetext BugContestPrizeNORoomText
 	buttonsound
 	setevent EVENT_CONTEST_OFFICER_HAS_EVERSTONE
 	jump BugContestResults_ReturnAfterWinnersPrize
 ; 0xbc36a
 
-BugContestResults_NoRoomForGoldBerry ; 0xbc36a
-	farwritetext BugContestPrizeNoRoomText
+BugContestResults_NORoomForGoldBerry ; 0xbc36a
+	farwritetext BugContestPrizeNORoomText
 	buttonsound
 	setevent EVENT_CONTEST_OFFICER_HAS_GOLD_BERRY
 	jump BugContestResults_ReturnAfterWinnersPrize
 ; 0xbc375
 
-BugContestResults_NoRoomForBerry ; 0xbc375
-	farwritetext BugContestPrizeNoRoomText
+BugContestResults_NORoomForBerry ; 0xbc375
+	farwritetext BugContestPrizeNORoomText
 	buttonsound
 	setevent EVENT_CONTEST_OFFICER_HAS_BERRY
 	jump BugContestResults_DidNotWin
@@ -493,7 +493,7 @@ InitializeEventsScript:
 	setevent EVENT_TEAM_ROCKET_BASE_B2F_EXECUTIVE
 	setevent EVENT_TEAM_ROCKET_BASE_B2F_DRAGONITE
 	setevent EVENT_RIVAL_TEAM_ROCKET_BASE
-	setevent EVENT_BLACKTHORN_CITY_SUPER_NERD_DOES_NoT_BLOCK_GYM
+	setevent EVENT_BLACKTHORN_CITY_SUPER_NERD_DOES_NOT_BLOCK_GYM
 	setevent EVENT_USED_THE_CARD_KEY_IN_THE_RADIO_TOWER
 	setevent EVENT_RIVAL_CHERRYGROVE_CITY
 	setevent EVENT_RIVAL_AZALEA_TOWN
@@ -545,7 +545,7 @@ InitializeEventsScript:
 	setevent EVENT_DECO_PLANT_4
 	setevent EVENT_GOLDENROD_TRAIN_STATION_GENTLEMAN
 	setevent EVENT_OLIVINE_GYM_JASMINE
-	setevent EVENT_BLACKTHORN_CITY_GRAMPS_NoT_BLOCKING_DRAGONS_DEN
+	setevent EVENT_BLACKTHORN_CITY_GRAMPS_NOT_BLOCKING_DRAGONS_DEN
 	setevent EVENT_MET_BILL
 	setevent EVENT_ECRUTEAK_POKE_CENTER_BILL
 	setevent EVENT_MYSTERY_GIFT_DELIVERY_GUY
@@ -1797,7 +1797,7 @@ GameCornerCoinVendorScript: ; 0xbcdcd
 	buttonsound
 	checkitem COIN_CASE
 	iftrue CoinVendor_IntroScript
-	farwritetext CoinVendor_NoCoinCaseText
+	farwritetext CoinVendor_NOCoinCaseText
 	waitbutton
 	closetext
 	end

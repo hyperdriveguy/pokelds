@@ -387,7 +387,7 @@ INCLUDE "maps/CherrygroveGymSpeechHouse.asm"
 INCLUDE "maps/GuideGentsHouse.asm"
 INCLUDE "maps/CherrygroveEvolutionSpeechHouse.asm"
 INCLUDE "maps/Route30BerrySpeechHouse.asm"
-INCLUDE "maps/MrPokemonsHouse.asm"
+INCLUDE "maps/ClerksHouse.asm"
 INCLUDE "maps/Route31VioletGate.asm"
 
 

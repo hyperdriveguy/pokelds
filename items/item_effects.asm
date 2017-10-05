@@ -82,7 +82,7 @@ ItemEffects: ; e73c
 	dw RedScale
 	dw Secretpotion
 	dw SSTicket
-	dw MysteryEgg
+	dw ClerksPapers
 	dw ClearBell
 	dw SilverWing
 	dw MoomooMilk
@@ -230,7 +230,7 @@ ParkBall: ; e8a2
 	call nz, ReturnToBattle_UseBall
 
 	ld hl, Options
-	res No_TEXT_SCROLL, [hl]
+	res NO_TEXT_SCROLL, [hl]
 	ld hl, UsedItemText
 	call PrintText
 
@@ -419,7 +419,7 @@ ParkBall: ; e8a2
 	jr nz, .caught
 	ld a, [Buffer2]
 	cp $1
-	ld hl, Text_NoShake
+	ld hl, Text_NOShake
 	jp z, .shake_and_break_free
 	cp $2
 	ld hl, Text_OneShake
@@ -945,7 +945,7 @@ GLOBAL EvosAttacksPointers
 	inc hl
 
 ; Moon Stone's constant from Pokémon Red is used.
-; No Pokémon evolve with Burn Heal,
+; NO Pokémon evolve with Burn Heal,
 ; so Moon Balls always have a catch rate of 1×.
 	push bc
 	ld a, BANK(EvosAttacks)
@@ -1100,13 +1100,13 @@ Text_RBY_CatchMarowak: ; 0xedab
 	db "@"
 ; 0xedb0
 
-Text_RBY_NoShake: ; 0xedb0
+Text_RBY_NOShake: ; 0xedb0
 	; You missed the #mon!
 	text_jump UnknownText_0x1c5a90
 	db "@"
 ; 0xedb5
 
-Text_NoShake: ; 0xedb5
+Text_NOShake: ; 0xedb5
 	; Oh no! The #mon broke free!
 	text_jump UnknownText_0x1c5aa6
 	db "@"
@@ -1202,7 +1202,7 @@ SunStone: ; ee0f
 
 	ld a, [hl]
 	cp EVERSTONE
-	jr z, .NoEffect
+	jr z, .NOEffect
 
 	ld a, $1
 	ld [wForceEvolution], a
@@ -1210,11 +1210,11 @@ SunStone: ; ee0f
 
 	ld a, [wMonTriedToEvolve]
 	and a
-	jr z, .NoEffect
+	jr z, .NOEffect
 
 	jp UseDisposableItem
 
-.NoEffect:
+.NOEffect:
 	call WontHaveAnyEffectMessage
 
 .DecidedNotToUse:
@@ -1265,7 +1265,7 @@ Calcium: ; ee3d
 	add hl, bc
 	ld a, [hl]
 	cp 100
-	jr nc, NoEffectMessage
+	jr nc, NOEffectMessage
 
 	add e
 	ld [hl], a
@@ -1293,7 +1293,7 @@ Calcium: ; ee3d
 	jp UseDisposableItem
 
 
-NoEffectMessage: ; ee83
+NOEffectMessage: ; ee83
 	ld hl, WontHaveAnyEffectText
 	call PrintText
 	jp ClearPalettes
@@ -1395,7 +1395,7 @@ RareCandy: ; ef14
 
 	ld a, [hl]
 	cp MAX_LEVEL
-	jp nc, NoEffectMessage
+	jp nc, NOEffectMessage
 
 	inc a
 	ld [hl], a
@@ -1640,7 +1640,7 @@ StatusHealer_Jumptable: ; f09e (3:709e)
 
 .dw ; f0a3 (3:70a3)
 	dw StatusHealer_ClearPalettes
-	dw StatusHealer_NoEffect
+	dw StatusHealer_NOEffect
 	dw StatusHealer_ExitMenu
 
 
@@ -1728,7 +1728,7 @@ FullRestore: ; f128
 	jp c, StatusHealer_ExitMenu
 
 	call IsMonFainted
-	jp z, StatusHealer_NoEffect
+	jp z, StatusHealer_NOEffect
 
 	call IsMonAtFullHealth
 	jr c, .NotAtFullHealth
@@ -1944,7 +1944,7 @@ ItemActionTextWaitButton: ; f279 (3:7279)
 	call DelayFrames
 	jp WaitPressAorB_BlinkCursor
 
-StatusHealer_NoEffect: ; f299 (3:7299)
+StatusHealer_NOEffect: ; f299 (3:7299)
 	call WontHaveAnyEffectMessage
 	jr StatusHealer_ClearPalettes
 
@@ -2680,7 +2680,7 @@ BattleRestorePP: ; f652
 Not_PP_Up: ; f6a7
 	call RestorePP
 	jr nz, BattleRestorePP
-	jp PPRestoreItem_NoEffect
+	jp PPRestoreItem_NOEffect
 ; f6af
 
 Elixer_RestorePPofAllMoves: ; f6af
@@ -2713,7 +2713,7 @@ Elixer_RestorePPofAllMoves: ; f6af
 	and a
 	jp nz, BattleRestorePP
 
-PPRestoreItem_NoEffect: ; f6dd
+PPRestoreItem_NOEffect: ; f6dd
 	call WontHaveAnyEffectMessage
 
 PPRestoreItem_Cancel: ; f6e0
@@ -2862,7 +2862,7 @@ SilverLeaf:
 RedScale:
 Secretpotion:
 SSTicket:
-MysteryEgg:
+ClerksPapers:
 ClearBell:
 SilverWing:
 QuickClaw:

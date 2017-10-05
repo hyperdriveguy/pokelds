@@ -34,12 +34,12 @@ ENDC
 SetDstScript:
 	writetext IsItDst
 	yesorno
-	iffalse NoDstScript
+	iffalse NODstScript
 	special Special_InitialSetDSTFlag
 	yesorno
 	iffalse SetDstScript
 	jump ContMomIntroScript
-NoDstScript:
+NODstScript:
 	special Special_InitialClearDSTFlag
 	yesorno
 	iffalse SetDstScript
@@ -47,7 +47,7 @@ ContMomIntroScript:
 	writetext MomIntroText3
 	yesorno
 	iffalse PhoneIntstructionsScript
-	writetext NoInstructionsText
+	writetext NOInstructionsText
 	jump EndMomIntro
 PhoneIntstructionsScript:
 	writetext PhoneInstructionsText
@@ -128,7 +128,7 @@ PhoneInstructionsText:
 	line "convenient?"
 	done
 
-NoInstructionsText:
+NOInstructionsText:
 	text "Okay. Good luck"
 	line "<PLAYER>!"
 	done

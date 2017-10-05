@@ -45,7 +45,7 @@ AskTeachTMHM: ; 2c7bf (b:47bf)
 	ld hl, Options
 	ld a, [hl]
 	push af
-	res No_TEXT_SCROLL, [hl]
+	res NO_TEXT_SCROLL, [hl]
 	ld a, [CurItem]
 	cp TM01
 	jr c, .NotTMHM
@@ -76,7 +76,7 @@ ChooseMonToLearnTMHM: ; 2c7fb
 	ld bc, 12
 	call CopyBytes
 	call ClearBGPalettes
-ChooseMonToLearnTMHM_NoRefresh: ; 2c80a
+ChooseMonToLearnTMHM_NORefresh: ; 2c80a
 	callba LoadPartyMenuGFX
 	callba InitPartyMenuWithCancel
 	callba InitPartyMenuGFX
@@ -503,14 +503,14 @@ Function2cadf: ; 2cadf
 ; unreferenced
 	call ConvertCurItemIntoCurTMHM
 	call .CheckHaveRoomForTMHM
-	ld hl, .NoRoomText
+	ld hl, .NORoomText
 	jr nc, .print
 	ld hl, .ReceivedText
 .print
 	jp PrintText
 ; 2caf0
 
-.NoRoomText: ; 0x2caf0
+.NORoomText: ; 0x2caf0
 	; You have no room for any more @ S.
 	text_jump UnknownText_0x1c03fa
 	db "@"

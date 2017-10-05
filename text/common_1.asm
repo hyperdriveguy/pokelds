@@ -192,7 +192,7 @@ UnknownText_0x1bc336::
 
 UnknownText_0x1bc34f::
 	text "!"
-	line "No wonder it's so"
+	line "NO wonder it's so"
 	cont "dark!"
 	done
 
@@ -1264,13 +1264,13 @@ UnknownText_0x1bd2bc::
 	done
 
 UnknownText_0x1bd2ca::
-	text "ANNoUNCER: BEEEP!"
+	text "ANNOUNCER: BEEEP!"
 
 	para "Time's up!"
 	done
 
 UnknownText_0x1bd2e7::
-	text "ANNoUNCER: The"
+	text "ANNOUNCER: The"
 	line "Contest is over!"
 	done
 

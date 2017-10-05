@@ -890,7 +890,7 @@ SwitchRoomText_Switch1:
 	done
 
 GruntF3SeenText:
-	text "Are you lost? No,"
+	text "Are you lost? NO,"
 	line "you can't be."
 
 	para "You don't have"

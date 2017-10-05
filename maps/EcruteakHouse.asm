@@ -39,9 +39,9 @@ EcruteakHouse_MapScriptHeader:
 	setevent EVENT_RANG_CLEAR_BELL_2
 	setevent EVENT_ECRUTEAK_HOUSE_WANDERING_SAGE
 	checkitem CLEAR_BELL
-	iftrue .NoClearBell
+	iftrue .NOClearBell
 	dotrigger $0
-.NoClearBell:
+.NOClearBell:
 	return
 
 .DontBlockTower:

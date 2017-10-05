@@ -33,7 +33,7 @@ UnknownText_0x19ab1f:
 	done
 
 UnknownText_0x19ab65:
-	text "Nobody goes up to"
+	text "NObody goes up to"
 	line "LAKE OF RAGE these"
 	cont "days."
 	done

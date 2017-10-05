@@ -106,20 +106,20 @@ CheckBreedmonCompatibility: ; 16e1d
 ; 16ed6
 
 .CheckBreedingGroupCompatibility: ; 16ed6
-; If either mon is in the No Eggs group,
+; If either mon is in the NO Eggs group,
 ; they are not compatible.
 	ld a, [wBreedMon2Species]
 	ld [CurSpecies], a
 	call GetBaseData
 	ld a, [BaseEggGroups]
-	cp No_EGGS * $11
+	cp NO_EGGS * $11
 	jr z, .Incompatible
 
 	ld a, [wBreedMon1Species]
 	ld [CurSpecies], a
 	call GetBaseData
 	ld a, [BaseEggGroups]
-	cp No_EGGS * $11
+	cp NO_EGGS * $11
 	jr z, .Incompatible
 
 ; Ditto is automatically compatible with everything.

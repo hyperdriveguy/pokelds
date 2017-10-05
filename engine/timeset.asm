@@ -391,7 +391,7 @@ OakText_ResponseToSetTime: ; 0x908b8
 ; 0x908f6
 
 .sodark ; 0x908f6
-	; ! No wonder it's so dark!
+	; ! NO wonder it's so dark!
 	text_jump UnknownText_0x1bc34f
 	db "@"
 ; 0x908fb

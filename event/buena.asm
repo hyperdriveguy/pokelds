@@ -126,7 +126,7 @@ SpecialBuenaPrize: ; 8afd4
 	jr .print
 
 .BagFull:
-	ld hl, .Text_NoRoom
+	ld hl, .Text_NORoom
 	jr .print
 
 .Purchase:
@@ -171,7 +171,7 @@ SpecialBuenaPrize: ; 8afd4
 	db "@"
 ; 0x8b086
 
-.Text_NoRoom: ; 0x8b086
+.Text_NORoom: ; 0x8b086
 	; You have no room for it.
 	text_jump UnknownText_0x1c58ff
 	db "@"

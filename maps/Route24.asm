@@ -66,7 +66,7 @@ UnknownText_0x1adc2e:
 	done
 
 UnknownText_0x1add67:
-	text "Ayieeeh! No, no,"
+	text "Ayieeeh! NO, no,"
 	line "no, believe it I"
 	cont "can't!"
 
