@@ -1,9 +1,9 @@
 Music_RedeemerOfIsrael:
 	musicheader 2, 1, Music_RedeemerOfIsrael_Ch1
 	musicheader 1, 2, Music_RedeemerOfIsrael_Ch2
-	
+
 Music_RedeemerOfIsrael_Ch1:
-	tempo 170
+	tempo 190
 	volume $70
 	dutycycle $1
 	tone $0004
@@ -18,68 +18,68 @@ Music_RedeemerOfIsrael_Ch1_Main:
 	note D_, 2
 	note E_, 2
 	note F#, 2
-	
+
 	note G_, 2
 	note A_, 4
 	note B_, 1
 	note A_, 1
-	
+
 	note G_, 2
 	note F#, 4
 	note E_, 2
-	
+
 	note E_, 2
 	note D_, 6
-	
+
 	note A_, 2
 	octave 5
 	note D_, 4
 	note D_, 2
-	
+
 	note D_, 2
 	note C#, 2
 	octave 4
 	note A_, 2
 	note B_, 2
-	
+
 	note B_, 2
 	note A_, 6
-	
+
 	note A_, 2
 	octave 5
 	note D_, 4
 	note D_, 1
 	note C#, 1
-	
+
 	octave 4
 	note B_, 2
 	note A_, 4
 	note F#, 2
-	
+
 	note A_, 2
 	note B_, 4
 	note B_, 1
 	note A_, 1
-	
+
 	note G_, 1
 	note F#, 1
 	note E_, 4
 	note D_, 2
-	
+
 	note F#, 2
 	note A_, 3
 	note B_, 1
 	note A_, 2
-	
+
 	note D_, 2
 	note F#, 4
 	note E_, 2
-	
+
 	note E_, 2
 	note D_, 8
-	
+
 	loopchannel 0, Music_RedeemerOfIsrael_Ch1_Main
-	
+
 Music_RedeemerOfIsrael_Ch2:
 	dutycycle $3
 	tone $0004
@@ -95,63 +95,63 @@ Music_RedeemerOfIsrael_Ch2_Main:
 	note F#, 2
 	note A_, 2
 	note A_, 2
-	
+
 	octave 4
 	note D_, 2
 	note D_, 4
 	note D_, 2
-	
+
 	octave 3
 	note B_, 2
 	note A_, 4
 	note G_, 2
-	
+
 	note G_, 2
 	note F#, 6
-	
+
 	octave 4
 	note D_, 2
 	octave 3
 	note A_, 4
 	note A_, 2
-	
+
 	note A_, 2
 	note A_, 4
 	note G#, 2
-	
+
 	note G#, 2
 	note A_, 6
-	
+
 	note A_, 2
 	note A_, 4
 	note A_, 2
-	
+
 	octave 4
 	note D_, 2
 	note D_, 4
 	octave 3
 	note A_, 2
-	
+
 	octave 4
 	note D_, 2
 	note D_, 4
 	note D_, 2
-	
+
 	octave 3
 	note B_, 2
 	note A_, 4
 	note F#, 2
-	
+
 	note A_, 2
 	note F#, 3
 	note G_, 1
 	note F#, 2
-	
+
 	note F#, 2
 	note A_, 4
 	note G_, 2
-	
+
 	note G_, 2
 	note F#, 8
-	
+
 	loopchannel 0, Music_RedeemerOfIsrael_Ch2_Main
