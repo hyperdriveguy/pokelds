@@ -118,8 +118,8 @@ NamingScreen: ; 116c1
 ; 11780 (4:5780)
 
 .NicknameStrings: ; 11780
-	db "'S@"
-	db "NICKNAME?@"
+	db "'s@"
+	db "Nickname?@"
 
 ; 1178d
 
@@ -152,7 +152,7 @@ NamingScreen: ; 116c1
 ; 117c3 (4:57c3)
 
 .RivalNameString: ; 117c3
-	db "RIVAL'S NAME?@"
+	db "Rival's Name?@"
 
 ; 117d1
 
@@ -169,7 +169,7 @@ NamingScreen: ; 116c1
 ; 117e6 (4:57e6)
 
 .MomNameString: ; 117e6
-	db "MOTHER'S NAME?@"
+	db "Mother's Name?@"
 
 ; 117f5
 
@@ -197,7 +197,7 @@ NamingScreen: ; 116c1
 ; 11822 (4:5822)
 
 .BoxNameString: ; 11822
-	db "BOX NAME?@"
+	db "Box Name?@"
 
 ; 1182c
 
