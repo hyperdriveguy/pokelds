@@ -34,6 +34,8 @@ pokecrystal.txt
 .*.swp
 # swap files for gedit
 *~
+# Geany Project configuration
+*.project
 
 *.dimensions
 *.gbcpal
@@ -46,3 +48,6 @@ gfx/pics/*/frames.asm
 
 # Crowdmap conflict
 crowdmap
+
+# NO PNGs IN GFX FOLDER
+gfx/*/*.png
