@@ -15,7 +15,7 @@ Social interactions should be positive in the Pokémon LDS project.
 > Perceptions and assumptions can be very dangerous and unfair...Surely
 > good neighbors should put forth every effort to understand each other and to
 > be kind to one another regardless of religion, nationality, race, or culture.
-> 
+>
 > M. Russell Ballard, [The Doctrine of Inclusion](https://www.lds.org/general-conference/2001/10/doctrine-of-inclusion?lang=eng)
 
 Do your best to be fair and kind to one another. Try to understand where the
@@ -29,7 +29,7 @@ issues, pull requests, code comments, and especially map text.
 > Speak kindly and positively about others. Choose not to insult others or put
 > them down, even in joking...Avoid speaking in anger. When you are tempted to
 > say harsh or hurtful things, leave them unsaid.
-> 
+>
 > For the Strength of Youth, Language section
 
 ## Dealing with Conflict
@@ -53,9 +53,11 @@ You are still able to contribute, even if you have been removed as a core develo
 However, they will be very carefully observed (Specifically for CoC violations in
 the code, along with code quality) by a core developer before the contribution is
 accepted. You can ask to become a core developer again after three months have passed.
-However, you may not be reaccepted because of previous violations.
+However, your likelihood of being reaccepted in less probable because of previous
+violations.
 
 ## Changes to This Code
 
 Anyone is welcome to make changes to this Code of Conduct and make a pull request.
 It must be approved by **all core developers** for changes to take effect.
+Notifications must be made on all community pages as well.

@@ -49,9 +49,12 @@ See the [Code of Conduct](https://github.com/hyperdriveguy/pokelds/blob/master/C
 
 ## If You Do Not Want Your Changes to Assume the MIT License
 
+Note that if you don't want your changes under the MIT License, they are less likely
+to be
+
 ### Code
 
-If you have added a whole file or more than 200 lines of code:
+If you have added a whole file or more than 200 lines of code in a row:
 
 ```assembly
 ; Made by <your name>
@@ -59,7 +62,8 @@ If you have added a whole file or more than 200 lines of code:
 ; Custom license text if applicable
 ```
 
-This is not nessecary for smaller contributions (<200 LoC)
+For smaller contributions (<200 LoC), state the license for your contribution in the
+Git commit message.
 
 ### All Other Changes
 
@@ -88,7 +92,7 @@ Follow the instructions in [CREDITS.md](https://github.com/hyperdriveguy/pokelds
     * Type of issue
     * path/to/file.asm
     * line in file where the issue is
-    
+
 ## Material Submissions
 
 1. Create your own fork of the code
@@ -97,10 +101,10 @@ Follow the instructions in [CREDITS.md](https://github.com/hyperdriveguy/pokelds
     * Material __must__ be under a license where it can be used in the
       project, or permission from the copyright holder must be given
     * A Creative Commons license (Other than the "No Derivative") is
-      preferable
-4. Create a Pull Request on Github 
+      preferable, but not required
+4. Create a Pull Request on Github
 5. Pull Request will be accepted or rejected accordingly
-    
+
 # Reporting a Bug
 
 Open an issue on the Issues page answering the following questions:
@@ -154,7 +158,7 @@ with the following (or something like it):
 > I am interested in becoming a core developer for Pokémon LDS!
 > I can help with (Code, Maps, Music, etc. Whatever you specialize in.)
 > I have also read the Code of Conduct and agree to it's terms.
-> 
+>
 > -- Github User Name or What you wish to be called
 
 You may be accepted depending on your activity with the project.

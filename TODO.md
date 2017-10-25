@@ -6,7 +6,7 @@
 - [ ] Experience underflow at level 1.
     * Need to still double check that it actually still exists
 - [x] HP bar does not lower at the same speed for high HP. (Fixed)
-See the [Issues](issues/) page for things not listed here.  
+See the [Issues](issues/) page for things not listed here.
 As far as I know, it also inherits all the bugs not listed here from vanilla Pokémon Crystal.
 
 # Specific to Pokémon LDS
@@ -26,7 +26,7 @@ As far as I know, it also inherits all the bugs not listed here from vanilla Pok
 
 ### Route 101
 
-- [ ] Add House for errand completion
+- [x] Add House for errand completion
 
 ### Pleasant Grove
 
@@ -48,7 +48,7 @@ As far as I know, it also inherits all the bugs not listed here from vanilla Pok
 - [ ] Gadianton Robbers (Replaces Team Rocket)
 - [ ] Rescue kidnapped missionaries
 - [ ] Leaders to battle in each city (Replacing Gym Leaders, may replace with an Area authority or Book of Mormon Prophet)
-- [ ] Ideas and characters inspired by "Saturday's Warrior", "Johnny Lingo", and other 
+- [ ] Ideas and characters inspired by "Saturday's Warrior", "Johnny Lingo", and other
 - [ ] Final battles on Mt. Zion (Replacing the Elite Four and Champion)
 - [ ] Post Story? (Mission Call)
 - [ ] Better method to obtain money?
