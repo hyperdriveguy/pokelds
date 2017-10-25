@@ -50,7 +50,7 @@ See the [Code of Conduct](https://github.com/hyperdriveguy/pokelds/blob/master/C
 ## If You Do Not Want Your Changes to Assume the MIT License
 
 Note that if you don't want your changes under the MIT License, they are less likely
-to be
+to be accepted than if if they simply assume the MIT License.
 
 ### Code
 
