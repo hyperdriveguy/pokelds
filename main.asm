@@ -4701,9 +4701,9 @@ KrisNameMenuHeader: ; 882e5
 	db "New Name@"
 FemalePlayerNameArray: ; 882f9
 	db "Sariah@"
-	db "Ruth@"
 	db "Esther@"
 	db "Emma@"
+	db "Ruth@"
 	db 2 ; displacement
 	db " Name @" ; title
 
