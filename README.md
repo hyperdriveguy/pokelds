@@ -1,4 +1,5 @@
-# Pokémon LDS
+# Legacy Repository - Not actively maintained
+## Pokémon LDS
 
 Hack based on the disassembly of Pokémon Crystal.
 Currently just a concept. Some of the first few maps have been done.
